@@ -131,8 +131,8 @@ test("the import boundary resolves TypeScript specifiers, scans each source exte
             resolve(root, "tsconfig.json"),
             JSON.stringify({
                 compilerOptions: {
-                    module: "ESNext",
-                    moduleResolution: "Bundler",
+                    module: "nodenext",
+                    moduleResolution: "nodenext",
                     target: "ESNext",
                     noEmit: true,
                     strict: true,
