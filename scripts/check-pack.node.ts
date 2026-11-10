@@ -176,7 +176,7 @@ test("the npm package contains only declared files and required consumers", asyn
         "src/core/rendering/capture.ts",
         "src/extras/text/Inter-Regular.ttf",
         "src/extras/text/Inter-OFL.txt",
-        "dist/cli/shallot.js",
+        "bin/shallot.ts",
         "src/cli/skill.md",
         "MIGRATION.md",
         "src/project/assets.js",

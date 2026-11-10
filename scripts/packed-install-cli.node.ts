@@ -69,7 +69,7 @@ test("the installed bin runs in a hand-written Node project and without Node und
             expect(Bun.which(runtime === "node" ? "bun" : "node", { PATH: path })).toBeNull();
         }
         const bin = windows
-            ? join(cliProject, "node_modules/@dylanebert/shallot/dist/cli/shallot.js")
+            ? join(cliProject, "node_modules/@dylanebert/shallot/bin/shallot.ts")
             : join(cliProject, "node_modules/.bin/shallot");
         const run = (runtime: "node" | "bun", args: string[], success = true) => {
             const path = join(scratch, runtime);

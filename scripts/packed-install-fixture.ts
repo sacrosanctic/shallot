@@ -139,7 +139,7 @@ export function createExample(name: string): void {
     const project = join(scratch, name);
     const args = [
         process.execPath,
-        join(installedPackage, "dist/cli/shallot.js"),
+        join(installedPackage, "bin/shallot.ts"),
         "create",
         project,
     ];

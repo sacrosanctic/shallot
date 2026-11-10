@@ -101,7 +101,7 @@ for (const trial of ["personal", "CI"] as const) {
                     installer,
                     "publish oracle CLI install",
                 );
-                const cli = join(installer, "node_modules/@dylanebert/shallot/dist/cli/shallot.js");
+                const cli = join(installer, "node_modules/@dylanebert/shallot/bin/shallot.ts");
                 run([cli, "create", project], installer);
                 const path = join(project, "package.json");
                 const manifest = JSON.parse(readFileSync(path, "utf8"));
@@ -118,7 +118,7 @@ for (const trial of ["personal", "CI"] as const) {
                 writeFileSync(html, `${readFileSync(html, "utf8")}\n${marker}\n`);
                 const projectCli = join(
                     project,
-                    "node_modules/@dylanebert/shallot/dist/cli/shallot.js",
+                    "node_modules/@dylanebert/shallot/bin/shallot.ts",
                 );
                 const workers = new Set<string>();
                 let passed = false;
@@ -236,7 +236,7 @@ for (const trial of ["personal", "CI"] as const) {
                     workers.add(collisionManifest.name);
                     const refused = Bun.spawnSync({
                         ...bunChild([
-                            join(collision, "node_modules/@dylanebert/shallot/dist/cli/shallot.js"),
+                            join(collision, "node_modules/@dylanebert/shallot/bin/shallot.ts"),
                             "publish",
                         ]),
                         cwd: collision,
@@ -408,7 +408,7 @@ for (const trial of ["personal", "CI"] as const) {
                 );
                 run(
                     [
-                        join(installer, "node_modules/@dylanebert/shallot/dist/cli/shallot.js"),
+                        join(installer, "node_modules/@dylanebert/shallot/bin/shallot.ts"),
                         "create",
                         project,
                     ],
@@ -425,7 +425,7 @@ for (const trial of ["personal", "CI"] as const) {
                     project,
                     "itch oracle scaffold install",
                 );
-                const cli = join(project, "node_modules/@dylanebert/shallot/dist/cli/shallot.js");
+                const cli = join(project, "node_modules/@dylanebert/shallot/bin/shallot.ts");
                 const url = "https://individualkex.itch.io/shallot-publish-test";
                 const html = join(project, "index.html");
                 const marker = `<!-- publish oracle ${crypto.randomUUID()} -->`;
