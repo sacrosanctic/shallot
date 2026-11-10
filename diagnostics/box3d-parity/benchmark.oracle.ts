@@ -9,7 +9,7 @@ import { sampleGold } from "../../examples/physics/tests/gold.ts";
 import { setLinearVelocity } from "@dylanebert/shallot/standard/physics";
 import { digestMismatch, drawingDigest, eventRecord, recordDigest } from "../../examples/physics/tests/digest.ts";
 import { sensorEvents } from "./records.ts";
-import "./village.oracle";
+import "./village.oracle.ts";
 import { VillagePlugin } from "../../examples/physics/src/village.ts";
 import { manualParityScenes } from "../../examples/physics/tests/manual-parity.ts";
 import { expectSwitchesEqualFresh } from "../../examples/physics/tests/switch.ts";
