@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
-import { Body, BodyType, PhysicsPlugin, Shape, ShapeKind } from "../../core/physics";
-import { GlobalTransform, Transform, TransformPlugin } from "../../core/transform";
-import { createApp, Time, World } from "../../engine";
+import { Body, BodyType, PhysicsPlugin, Shape, ShapeKind } from "../../core/physics/index.ts";
+import { GlobalTransform, Transform, TransformPlugin } from "../../core/transform/index.ts";
+import { createApp, Time, World } from "../../engine/index.ts";
 import { characterScratch } from "./character.ts";
 import {
     Character,

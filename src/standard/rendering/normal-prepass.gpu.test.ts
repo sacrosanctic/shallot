@@ -1,11 +1,11 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { MeshInstance } from "../../core/mesh";
-import { attachTexture, Camera, DepthPrepass, NormalPrepass, Views } from "../../core/rendering";
+import { MeshInstance } from "../../core/mesh/index.ts";
+import { attachTexture, Camera, DepthPrepass, NormalPrepass, Views } from "../../core/rendering/index.ts";
 import { viewTargetsKey } from "../../core/rendering/targets.ts";
-import { Transform } from "../../core/transform";
-import { lookAtRotation, probeTexture, type World } from "../../engine";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation, probeTexture, type World } from "../../engine/index.ts";
 import { StandardRenderer } from "./forward.ts";
 import { StandardRenderingPlugin } from "./index.ts";
 import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";

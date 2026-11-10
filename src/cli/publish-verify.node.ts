@@ -5,7 +5,7 @@ import { join } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { publishTestChromium } from "../../scripts/publish-browser.ts";
 import { removeTestDirectory } from "../../scripts/test-directory.ts";
-import { CROSS_ORIGIN_ISOLATION } from "../project";
+import { CROSS_ORIGIN_ISOLATION } from "../project/index.ts";
 import { verifyPublishedGame } from "./publish-verify.ts";
 
 setDefaultTimeout(TIMEOUT.node);

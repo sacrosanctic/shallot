@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { Anchor, attachTexture, Camera, captureTexture } from "../../core/rendering";
-import { Transform } from "../../core/transform";
+import { Anchor, attachTexture, Camera, captureTexture } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
 import { isolationFont } from "./font.fixture";
 import { internText, Justify, registerFont, Text, TextPlugin } from "./index.ts";
 

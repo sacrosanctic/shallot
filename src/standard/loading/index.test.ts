@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import * as engine from "../../engine";
-import { UnsupportedError } from "../../engine";
+import * as engine from "../../engine/index.ts";
+import { UnsupportedError } from "../../engine/index.ts";
 import { requestGPU } from "../../engine/runtime/gpu.ts";
 import { shallotDark } from "./index.ts";
 

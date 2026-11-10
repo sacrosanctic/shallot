@@ -1,7 +1,7 @@
 import { beforeAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { ImageAddressMode, ImageFilterMode, registerImage } from "../../core/rendering";
+import { ImageAddressMode, ImageFilterMode, registerImage } from "../../core/rendering/index.ts";
 import { MeshRenderPlugin, StandardRenderingPlugin } from "./index.ts";
 import {
     capturePlane,

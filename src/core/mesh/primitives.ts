@@ -1,4 +1,4 @@
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import { Meshes, type MeshHandle } from "./mesh.ts";
 
 /**

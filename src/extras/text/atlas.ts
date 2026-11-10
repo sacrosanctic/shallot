@@ -140,7 +140,7 @@ function computeGlyphMetrics(atlas: GlyphAtlas, char: string): PendingGlyphEntry
 }
 
 export function ensureString(
-    world: import("../../engine").World,
+    world: import("../../engine/index.ts").World,
     atlas: GlyphAtlas,
     text: string,
 ): void {

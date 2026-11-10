@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { MeshInstance, MeshPlugin } from "../../core/mesh";
-import { Body, BodyType } from "../../core/physics";
+import { MeshInstance, MeshPlugin } from "../../core/mesh/index.ts";
+import { Body, BodyType } from "../../core/physics/index.ts";
 import {
     attachCanvas,
     Camera,
@@ -11,9 +11,9 @@ import {
     SpotLight,
     Views,
     viewportToWorld,
-} from "../../core/rendering";
-import * as engine from "../../engine";
-import { probeBuffer, u32 } from "../../engine";
+} from "../../core/rendering/index.ts";
+import * as engine from "../../engine/index.ts";
+import { probeBuffer, u32 } from "../../engine/index.ts";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
 import { component } from "../../engine/ecs/component.ts";
 import type { System } from "../../engine/ecs/scheduler.ts";
@@ -23,8 +23,8 @@ import {
     StepPhysicsSystem,
     setTargetTransform,
     setTransform,
-} from "../../standard/physics";
-import * as transform from "../transform";
+} from "../../standard/physics/index.ts";
+import * as transform from "../transform/index.ts";
 import {
     GlobalTransform,
     GlobalTransformTickEndSystem,
@@ -33,7 +33,7 @@ import {
     resetInterpolation,
     Transform,
     TransformPlugin,
-} from "../transform";
+} from "../transform/index.ts";
 import {
     globalTransformTable,
     prepareGlobalTransformFrame,

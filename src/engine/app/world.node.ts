@@ -5,19 +5,19 @@ import {
     disposeGpuApps,
     expectAdapterNotice,
 } from "../../../scripts/gpu.fixture";
-import { component } from "../ecs";
+import { component } from "../ecs/index.ts";
 import { classifyAdapter } from "../runtime/adapter.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 
 import * as d from "typegpu/data";
-import { Meshes } from "../../core/mesh";
-import { Images, registerImage } from "../../core/rendering";
+import { Meshes } from "../../core/mesh/index.ts";
+import { Images, registerImage } from "../../core/rendering/index.ts";
 import { GlobalTransformHistory } from "../../core/rendering/global-transform.ts";
-import { GlobalTransform, Transform } from "../../core/transform";
-import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "../../extras/lines";
+import { GlobalTransform, Transform } from "../../core/transform/index.ts";
+import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "../../extras/lines/index.ts";
 import { segmentState } from "../../extras/lines/segments.ts";
-import { Sprite, SpritePlugin } from "../../extras/sprite";
+import { Sprite, SpritePlugin } from "../../extras/sprite/index.ts";
 import { SpriteSource } from "../../extras/sprite/material.ts";
 import {
     Content,
@@ -27,11 +27,11 @@ import {
     Text,
     TextPlugin,
     textStateKey,
-} from "../../extras/text";
+} from "../../extras/text/index.ts";
 import { isolationFont } from "../../extras/text/font.fixture";
-import { Draws } from "../../standard/rendering";
+import { Draws } from "../../standard/rendering/index.ts";
 import { f32, probeBuffer, requestGPU, Time, World } from "../index.ts";
-import "../../standard";
+import "../../standard/index.ts";
 
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 

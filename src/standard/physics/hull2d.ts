@@ -1,4 +1,4 @@
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import { kernel } from "./kernel/kernel.ts";
 
 /** Box3D's b3Point2D: planar coordinates, contact separation metadata and original input identity. */

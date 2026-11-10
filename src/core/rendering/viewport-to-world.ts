@@ -1,5 +1,5 @@
-import { type Ray, Viewports, type World } from "../../engine";
-import { composeGlobalTransform, GlobalTransform } from "../transform";
+import { type Ray, Viewports, type World } from "../../engine/index.ts";
+import { composeGlobalTransform, GlobalTransform } from "../transform/index.ts";
 import { Camera, CameraMode, computeViewFromWorld } from "./camera.ts";
 import { type CameraRect, cameraRect } from "./camera-viewport.ts";
 import { cameraView } from "./view.ts";

@@ -1,5 +1,5 @@
-import type { Plugin, System, World } from "../../engine";
-import { Diagnostic, DiagnosticsStore, mountOverlay } from "../../engine";
+import type { Plugin, System, World } from "../../engine/index.ts";
+import { Diagnostic, DiagnosticsStore, mountOverlay } from "../../engine/index.ts";
 import { cpuTotal } from "./cpu.ts";
 import { EmptyFrames } from "./empty.ts";
 import { FrameTimings, TIMING_FLOOR_MS } from "./frames.ts";

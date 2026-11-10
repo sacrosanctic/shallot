@@ -1,9 +1,9 @@
-import { component } from "../../engine";
+import { component } from "../../engine/index.ts";
 // Placement changes do not rebuild glyph geometry; the vertex shader resolves GlobalTransform rows.
 
 import type { StorageFlag, TgpuBuffer } from "typegpu";
 import * as d from "typegpu/data";
-import { Meshes, type MeshHandle, MeshPlugin } from "../../core/mesh";
+import { Meshes, type MeshHandle, MeshPlugin } from "../../core/mesh/index.ts";
 import {
     Anchor,
     Billboard,
@@ -18,8 +18,8 @@ import {
     type TransparentPhase,
     type View,
     type Xform,
-} from "../../core/rendering";
-import { composeGlobalTransform, GlobalTransform } from "../../core/transform";
+} from "../../core/rendering/index.ts";
+import { composeGlobalTransform, GlobalTransform } from "../../core/transform/index.ts";
 import {
     ClearChangeMarksSystem,
     f32,
@@ -29,8 +29,8 @@ import {
     type System,
     u32,
     type World,
-} from "../../engine";
-import { packColor } from "../../engine/utils";
+} from "../../engine/index.ts";
+import { packColor } from "../../engine/utils/index.ts";
 import {
     createGlyphAtlas,
     disposeAtlases,

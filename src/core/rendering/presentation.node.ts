@@ -1,13 +1,13 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { createTestGpuApp } from "../../../scripts/gpu.fixture";
-import type { createApp } from "../../engine/app";
+import type { createApp } from "../../engine/app/index.ts";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
-import { probeTexture } from "../../engine/runtime";
-import { EffectStackPlugin, Vignette } from "../../extras/effect-stack";
-import { StandardRenderer } from "../../standard/rendering";
-import { Transform } from "../transform";
-import "../../standard";
+import { probeTexture } from "../../engine/runtime/index.ts";
+import { EffectStackPlugin, Vignette } from "../../extras/effect-stack/index.ts";
+import { StandardRenderer } from "../../standard/rendering/index.ts";
+import { Transform } from "../transform/index.ts";
+import "../../standard/index.ts";
 import {
     attachCanvas,
     attachTexture,

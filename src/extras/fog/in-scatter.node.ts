@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { MeshInstance } from "../../core/mesh";
+import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     AmbientLight,
     attachTexture,
@@ -11,11 +11,11 @@ import {
     Exposure,
     PointLight,
     VolumetricLight,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { precompile, precompileScope, probeTexture, type World } from "../../engine";
-import { DEFAULT_PLUGINS } from "../../standard";
-import { StandardRenderer } from "../../standard/rendering";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { precompile, precompileScope, probeTexture, type World } from "../../engine/index.ts";
+import { DEFAULT_PLUGINS } from "../../standard/index.ts";
+import { StandardRenderer } from "../../standard/rendering/index.ts";
 import {
     Fog,
     FogPlugin,

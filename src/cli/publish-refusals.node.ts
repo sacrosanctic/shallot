@@ -4,7 +4,7 @@ import { tmpdir } from "node:os";
 import { join, relative } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { expectError } from "../../scripts/test-console.ts";
-import { normalizePath } from "../project";
+import { normalizePath } from "../project/index.ts";
 import { publishHeaders, publishProject, readPublishLink } from "./publish.ts";
 import { projectChromium } from "./publish-verify.ts";
 

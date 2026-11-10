@@ -6,8 +6,8 @@ import {
     fullscreenVertex,
     TonemappingSystem,
     Views,
-} from "../../core/rendering";
-import { component, f32, type Plugin, u32, vec2, type World } from "../../engine";
+} from "../../core/rendering/index.ts";
+import { component, f32, type Plugin, u32, vec2, type World } from "../../engine/index.ts";
 import {
     beginRenderPass,
     draw,
@@ -15,7 +15,7 @@ import {
     precompile,
     setRenderBindGroup,
     setRenderPipeline,
-} from "../../engine/runtime";
+} from "../../engine/runtime/index.ts";
 import { composite, down, first, layout, Settings, up } from "./shaders.ts";
 import { BloomCompositeMode, blendFactor, type CameraState, type State, stateKey } from "./state.ts";
 

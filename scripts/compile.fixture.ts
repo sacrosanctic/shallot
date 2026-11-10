@@ -23,8 +23,8 @@ import {
     StandardRenderer,
     Transform,
 } from "@dylanebert/shallot";
-import { attachTexture, Views } from "../src/core/rendering";
-import { rawDevice } from "../src/engine/runtime";
+import { attachTexture, Views } from "../src/core/rendering/index.ts";
+import { rawDevice } from "../src/engine/runtime/index.ts";
 import { createTestGpuApp, disposeGpuApps, gpuRequirements } from "./gpu.fixture";
 
 export const compileSubjects = [

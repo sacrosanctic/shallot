@@ -1,4 +1,4 @@
-import type { Plugin } from "../../engine";
+import type { Plugin } from "../../engine/index.ts";
 import {
     type ComponentStorage,
     component,
@@ -7,8 +7,8 @@ import {
     vec3,
     vec4,
     type World,
-} from "../../engine/ecs";
-import { composeMat4 } from "../../engine/utils";
+} from "../../engine/ecs/index.ts";
+import { composeMat4 } from "../../engine/utils/index.ts";
 
 /** Derived fixed-tick world placement, never authored. Gameplay and physics read these
  * columns; rendering owns interpolated GPU rows in core/rendering. */

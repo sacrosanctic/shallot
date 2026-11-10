@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import { ensureString, type GlyphAtlas, layoutText } from "./atlas.ts";
 import { DEFAULT_FONT, loadFont } from "./font.ts";
 import { Justify } from "./index.ts";

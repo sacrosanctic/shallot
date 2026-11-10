@@ -6,10 +6,10 @@ import {
     imageTextures,
     prepareImages,
     registerImage,
-} from "../../../core/rendering";
-import { Transform } from "../../../core/transform";
-import { type App, createApp } from "../../../engine/app";
-import type { World } from "../../../engine/ecs";
+} from "../../../core/rendering/index.ts";
+import { Transform } from "../../../core/transform/index.ts";
+import { type App, createApp } from "../../../engine/app/index.ts";
+import type { World } from "../../../engine/ecs/index.ts";
 import {
     Materials,
     MeshMaterial,
@@ -17,7 +17,7 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "../../../standard/rendering";
+} from "../../../standard/rendering/index.ts";
 import { type Gltf, loadGltfScene, spawnGltfScene } from "../scene.ts";
 
 const source = new URL("../fixtures/BoxTextured/glTF/BoxTextured.gltf", import.meta.url);

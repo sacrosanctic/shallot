@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { World } from "../../../engine";
+import { World } from "../../../engine/index.ts";
 import { StandardPhysicsPlugin } from "../index.ts";
 import { physicsState } from "../runtime.ts";
 import { createSphereShape } from "../shapes/shape.ts";

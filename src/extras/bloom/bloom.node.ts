@@ -9,11 +9,11 @@ import {
     EffectPasses,
     TonemappingSystem,
     Views,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { type Plugin, precompile, type World } from "../../engine";
-import { probeTexture } from "../../engine/runtime";
-import { EffectStackPlugin, Vignette } from "../effect-stack";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { type Plugin, precompile, type World } from "../../engine/index.ts";
+import { probeTexture } from "../../engine/runtime/index.ts";
+import { EffectStackPlugin, Vignette } from "../effect-stack/index.ts";
 import { compare } from "../effect-stack/parity.fixture";
 import { Bloom, BloomCompositeMode, BloomPlugin } from ".";
 import { bevyPipelines, renderBevy } from "./bevy.fixture";

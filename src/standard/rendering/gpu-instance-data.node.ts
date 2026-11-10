@@ -4,12 +4,12 @@ import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { MeshInstance } from "../../core/mesh";
-import { attachTexture, Camera, captureTexture, DirectionalLight } from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { ClearChangeMarksSystem, lookAtRotation, precompile, type World } from "../../engine";
-import { probeBuffer } from "../../engine/runtime";
-import { DEFAULT_PLUGINS } from "../../standard";
+import { MeshInstance } from "../../core/mesh/index.ts";
+import { attachTexture, Camera, captureTexture, DirectionalLight } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { ClearChangeMarksSystem, lookAtRotation, precompile, type World } from "../../engine/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
+import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import { sunShadowView } from "./atlas.ts";
 import {
     MeshInstanceInput,

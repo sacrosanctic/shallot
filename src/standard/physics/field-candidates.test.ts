@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { World } from "../../engine";
+import { World } from "../../engine/index.ts";
 import { fieldMarked, shapeBinding } from "./authoring.ts";
 import {
     clearFieldCandidates,

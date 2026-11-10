@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { Meshes, MeshInstance } from "../../core/mesh";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
@@ -12,9 +12,9 @@ import {
     NormalPrepass,
     Tonemapping,
     TonemappingMethod,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import type { World } from "../../engine";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import type { World } from "../../engine/index.ts";
 import {
     AlphaMode,
     extendedMaterial,

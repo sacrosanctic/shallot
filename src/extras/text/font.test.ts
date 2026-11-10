@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { MeshPlugin } from "../../core/mesh";
-import type { World } from "../../engine";
+import { MeshPlugin } from "../../core/mesh/index.ts";
+import type { World } from "../../engine/index.ts";
 import { DEFAULT_FONT, loadFont, parseFont } from "./font.ts";
 import { isolationFont } from "./font.fixture";
 import { Fonts, TextPlugin } from "./index.ts";

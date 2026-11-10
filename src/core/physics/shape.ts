@@ -1,4 +1,4 @@
-import { component, entity, f32, i32, u32, vec3, vec4 } from "../../engine";
+import { component, entity, f32, i32, u32, vec3, vec4 } from "../../engine/index.ts";
 
 /** Box3D collision-shape kinds. A box is a scaled hull. */
 export const ShapeKind = {

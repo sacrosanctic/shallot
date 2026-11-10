@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { Meshes, MeshInstance } from "../../core/mesh";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
@@ -12,9 +12,9 @@ import {
     Exposure,
     Tonemapping,
     TonemappingMethod,
-} from "../../core/rendering";
+} from "../../core/rendering/index.ts";
 import { imageTextures } from "../../core/rendering/image.ts";
-import { Transform } from "../../core/transform";
+import { Transform } from "../../core/transform/index.ts";
 import {
     extendedMaterial,
     MaterialPlugin,
@@ -122,7 +122,7 @@ const apps = gpuApps(import.meta.path, [
 // Linear data encodes a coordinate ramp; color textures store the same ramp in sRGB.
 const encode = (v: number) =>
     Math.round((v <= 0.0031308 ? 12.92 * v : 1.055 * v ** (1 / 2.4) - 0.055) * 255);
-function upload(world: import("../../engine").World) {
+function upload(world: import("../../engine/index.ts").World) {
     const bindings = world.resource(imageTextures).textures;
     for (const field of ["images", "dataImages"] as const) {
         const size = 128;

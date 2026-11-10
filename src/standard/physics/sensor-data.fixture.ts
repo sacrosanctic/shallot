@@ -1,6 +1,6 @@
-import { Body, BodyType, Shape, ShapeKind } from "../../core/physics";
-import { Transform } from "../../core/transform";
-import type { World } from "../../engine";
+import { Body, BodyType, Shape, ShapeKind } from "../../core/physics/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import type { World } from "../../engine/index.ts";
 
 export function sensorVisitors(world: World): number[] {
     const shapes: number[] = [];

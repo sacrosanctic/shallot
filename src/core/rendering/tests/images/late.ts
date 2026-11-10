@@ -1,5 +1,5 @@
-import { createApp } from "../../../../engine/app";
-import { probeTexture, rawDevice } from "../../../../engine/runtime";
+import { createApp } from "../../../../engine/app/index.ts";
+import { probeTexture, rawDevice } from "../../../../engine/runtime/index.ts";
 import { imageTexture, imageTextures, prepareImages, registerImage } from "../../image.ts";
 import { RenderingPlugin } from "../../substrate.ts";
 

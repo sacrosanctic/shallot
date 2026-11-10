@@ -1,9 +1,9 @@
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { fullscreenVertex } from "../../core/rendering";
-import { precompile, type World } from "../../engine";
-import { probeTexture } from "../../engine/runtime";
-import { DEFAULT_PLUGINS } from "../../standard";
+import { fullscreenVertex } from "../../core/rendering/index.ts";
+import { precompile, type World } from "../../engine/index.ts";
+import { probeTexture } from "../../engine/runtime/index.ts";
+import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import { OutlinePlugin } from ".";
 import {
     compositeHalfKernel,

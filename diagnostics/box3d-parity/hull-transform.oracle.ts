@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { World } from "../../src/engine";
-import { StandardPhysicsPlugin } from "../../src/standard/physics";
+import { World } from "../../src/engine/index.ts";
+import { StandardPhysicsPlugin } from "../../src/standard/physics/index.ts";
 import { cloneAndTransformHull } from "../../src/standard/physics/shapes/build-hull.ts";
 import { hullImage } from "../../src/standard/physics/shapes/hullbytes.ts";
 import { drawHull } from "../../src/standard/physics/shapes/readgeometry.ts";

@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { MeshInstance } from "../../core/mesh";
+import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
@@ -14,10 +14,10 @@ import {
     RenderLayers,
     SpotLight,
     Views,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { lookAtRotation } from "../../engine";
-import { probeBuffer } from "../../engine/runtime";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation } from "../../engine/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
 import { StandardRenderer, StandardRenderingPlugin } from "./forward.ts";
 import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";
 import { EntityMeshInstanceInput, MeshInstanceInput } from "./material-data.ts";

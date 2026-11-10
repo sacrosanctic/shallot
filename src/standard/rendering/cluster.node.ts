@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { expectWarning } from "../../../scripts/test-console.ts";
-import { MeshInstance } from "../../core/mesh";
+import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     AmbientLight,
     attachCanvas,
@@ -17,11 +17,11 @@ import {
     PointLight,
     RenderContext,
     Views,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { invertMat4, lookAtRotation, type World } from "../../engine";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { invertMat4, lookAtRotation, type World } from "../../engine/index.ts";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
-import { probeBuffer } from "../../engine/runtime";
+import { probeBuffer } from "../../engine/runtime/index.ts";
 import {
     CLUSTER_COUNT,
     CLUSTER_X,

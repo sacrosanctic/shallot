@@ -1,5 +1,5 @@
-import { component, f32, type Plugin, type Resource, u32, vec3 } from "../../engine";
-import { Transform, TransformPlugin } from "../transform";
+import { component, f32, type Plugin, type Resource, u32, vec3 } from "../../engine/index.ts";
+import { Transform, TransformPlugin } from "../transform/index.ts";
 import { PhysicsAssets } from "./assets.ts";
 import { Compounds } from "./compound.ts";
 import { HeightFields } from "./height-field.ts";

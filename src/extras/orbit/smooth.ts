@@ -1,4 +1,4 @@
-import { f32, u8 } from "../../engine";
+import { f32, u8 } from "../../engine/index.ts";
 
 // Membership marks the initial pose snap. Derived display state is not authored or serialized.
 export const OrbitSmooth = {

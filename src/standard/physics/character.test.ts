@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
-import { Body, PhysicsPlugin, Shape, ShapeKind } from "../../core/physics";
-import { Transform, TransformPlugin } from "../../core/transform";
-import { Time, World } from "../../engine";
+import { Body, PhysicsPlugin, Shape, ShapeKind } from "../../core/physics/index.ts";
+import { Transform, TransformPlugin } from "../../core/transform/index.ts";
+import { Time, World } from "../../engine/index.ts";
 import {
     BodyType,
     createHeightField,
@@ -10,7 +10,7 @@ import {
     type HullData,
     type MeshData,
     makeBoxHull,
-} from "./api";
+} from "./api/index.ts";
 import { characterScratch } from "./character.ts";
 import { defaultBodyDef } from "./common/types.ts";
 import {

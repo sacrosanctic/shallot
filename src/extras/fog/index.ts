@@ -14,9 +14,9 @@ import {
     SAMPLE_COUNT,
     VIEW_BYTES,
     Views,
-} from "../../core/rendering";
-import type { Plugin, System, World } from "../../engine";
-import { component, f32 } from "../../engine";
+} from "../../core/rendering/index.ts";
+import type { Plugin, System, World } from "../../engine/index.ts";
+import { component, f32 } from "../../engine/index.ts";
 import {
     beginComputePass,
     dispatchWorkgroups2,
@@ -25,7 +25,7 @@ import {
     precompile,
     setComputeBindGroup,
     setComputePipeline,
-} from "../../engine/runtime";
+} from "../../engine/runtime/index.ts";
 import {
     FogInput,
     indirectLightSlot,
@@ -43,7 +43,7 @@ import {
     shadowSampler,
     sunShadowParams,
     sunShadowView,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import { FOG_FLOATS, FOG_HEIGHT, FOG_SLICES, FOG_WIDTH, FogGpu, WORKGROUP } from "./medium.ts";
 import { packFog } from "./pack.ts";
 import {

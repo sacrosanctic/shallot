@@ -5,10 +5,10 @@ import {
     imageTextures,
     TonemappingSystem,
     Views,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import type { Plugin, World } from "../../engine";
-import { probeTexture } from "../../engine/runtime";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import type { Plugin, World } from "../../engine/index.ts";
+import { probeTexture } from "../../engine/runtime/index.ts";
 import { ChromaticAberration, EffectStackPlugin, LensDistortion, Vignette } from ".";
 
 export const width = 192;

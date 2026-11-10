@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { createApp } from "../../engine/app";
+import { createApp } from "../../engine/app/index.ts";
 
 await setupGlobals();
 

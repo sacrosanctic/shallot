@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { Meshes, MeshInstance } from "../../core/mesh";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     AmbientLight,
     attachTexture,
@@ -14,10 +14,10 @@ import {
     Exposure,
     Tonemapping,
     TonemappingMethod,
-} from "../../core/rendering";
+} from "../../core/rendering/index.ts";
 import { imageTextures } from "../../core/rendering/image.ts";
-import { Transform } from "../../core/transform";
-import { lookAtRotation } from "../../engine/utils";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation } from "../../engine/utils/index.ts";
 import {
     AlphaMode,
     applyPbrLighting,
@@ -225,7 +225,7 @@ const apps = gpuApps(import.meta.path, [
         ],
     },
 ]);
-function upload(world: import("../../engine").World) {
+function upload(world: import("../../engine/index.ts").World) {
     const bindings = world.resource(imageTextures).textures;
     for (const [field, format] of [
         ["images", "rgba8unorm-srgb"],

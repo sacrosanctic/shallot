@@ -5,16 +5,16 @@ import * as d from "typegpu/data";
 setDefaultTimeout(TIMEOUT.node);
 
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { MeshInstance } from "../../core/mesh";
-import { globalTransformTable } from "../../core/rendering";
-import { Transform } from "../../core/transform";
+import { MeshInstance } from "../../core/mesh/index.ts";
+import { globalTransformTable } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
 import { StandardRenderingPlugin } from "./forward.ts";
 import { MaterialPlugin, Materials, MeshMaterial, StandardMaterial } from "./material.ts";
 import { materialType, materialTypeId } from "./material-type.ts";
 import { MeshRenderPlugin } from "./mesh-render.ts";
 import { MeshDrawBuffers, meshInstanceTable } from "./preprocess.ts";
 import { Draws } from "./registry.ts";
-import "../../standard";
+import "../../standard/index.ts";
 
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 

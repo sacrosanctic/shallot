@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
-import { AudioOutput, Clips, Listener, play, registerClip, Sound } from "../../core/audio";
-import { Devices } from "../../core/input";
-import { GlobalTransform, Transform } from "../../core/transform";
-import { World } from "../../engine";
+import { AudioOutput, Clips, Listener, play, registerClip, Sound } from "../../core/audio/index.ts";
+import { Devices } from "../../core/input/index.ts";
+import { GlobalTransform, Transform } from "../../core/transform/index.ts";
+import { World } from "../../engine/index.ts";
 import {
     AudioRuntime,
     disposeAudio,

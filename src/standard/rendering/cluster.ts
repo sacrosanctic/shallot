@@ -20,8 +20,8 @@ import {
     VolumetricLight,
     Xform,
     xformQuat,
-} from "../../core/rendering";
-import { ClearChangeMarksSystem, type System, type World } from "../../engine";
+} from "../../core/rendering/index.ts";
+import { ClearChangeMarksSystem, type System, type World } from "../../engine/index.ts";
 import {
     beginComputePass,
     beginRenderPass,
@@ -38,8 +38,8 @@ import {
     setRenderBindGroup,
     setRenderPipeline,
     setViewport,
-} from "../../engine/runtime";
-import { idiv, octEncodeNormal, srgbToLinear1 } from "../../engine/utils";
+} from "../../engine/runtime/index.ts";
+import { idiv, octEncodeNormal, srgbToLinear1 } from "../../engine/utils/index.ts";
 import {
     MAX_POINT_LIGHTS,
     PointLightGpu,
@@ -411,7 +411,7 @@ export interface Clusters {
     commitOnSubmit?: () => void;
 }
 
-export const Clusters: import("../../engine").Resource<Clusters> = {
+export const Clusters: import("../../engine/index.ts").Resource<Clusters> = {
     create: (world) => {
         const clusters = world.resource(clusterGpuKey).clusters;
         clusters.commitOnSubmit = () => {
@@ -701,7 +701,7 @@ export interface LightCull {
     viewStaging: Float32Array;
 }
 
-export const LightCull: import("../../engine").Resource<LightCull> = {
+export const LightCull: import("../../engine/index.ts").Resource<LightCull> = {
     create: (world) => world.resource(clusterGpuKey).lightCull,
 };
 

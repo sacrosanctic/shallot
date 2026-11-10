@@ -1,6 +1,6 @@
 import { basename, relative } from "node:path";
-import { bundleNativeLinux, bundleNativeMac, bundleNativeWindows, nativeOutDir } from "../native";
-import { buildWeb, normalizePath, requireBackend } from "../project";
+import { bundleNativeLinux, bundleNativeMac, bundleNativeWindows, nativeOutDir } from "../native/index.ts";
+import { buildWeb, normalizePath, requireBackend } from "../project/index.ts";
 
 export type NativeTarget = "windows" | "mac" | "linux";
 

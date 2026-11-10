@@ -2,7 +2,7 @@ import { afterAll, beforeAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import { Meshes, type MeshHandle, MeshInstance } from "../../core/mesh";
+import { Meshes, type MeshHandle, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
@@ -10,10 +10,10 @@ import {
     DepthPrepass,
     DirectionalLight,
     Views,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { type App, lookAtRotation, precompile, type World } from "../../engine";
-import { probeBuffer } from "../../engine/runtime";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { type App, lookAtRotation, precompile, type World } from "../../engine/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
 import { openGpuApp } from "../../project/testing-gpu.ts";
 import {
     Materials,
@@ -22,7 +22,7 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import { sunShadowView } from "../../standard/rendering/atlas.ts";
 import { loadGltf } from "./load.ts";
 import { morphFixture, morphFixtureUrl } from "./morph.fixture";

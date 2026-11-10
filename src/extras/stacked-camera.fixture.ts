@@ -1,15 +1,15 @@
 import { expect } from "bun:test";
-import { MeshInstance } from "../core/mesh";
+import { MeshInstance } from "../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
     captureTexture,
     Tonemapping,
     TonemappingMethod,
-} from "../core/rendering";
-import { Transform } from "../core/transform";
-import type { World } from "../engine";
-import { Materials, MeshMaterial, StandardMaterial, StandardRenderer } from "../standard/rendering";
+} from "../core/rendering/index.ts";
+import { Transform } from "../core/transform/index.ts";
+import type { World } from "../engine/index.ts";
+import { Materials, MeshMaterial, StandardMaterial, StandardRenderer } from "../standard/rendering/index.ts";
 
 export const SIZE = 48;
 /** The lower camera's clear, presented unmapped, as sRGB bytes. */

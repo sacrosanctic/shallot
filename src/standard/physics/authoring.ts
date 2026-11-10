@@ -12,8 +12,8 @@ import {
     SphericalJoint,
     WeldJoint,
     WheelJoint,
-} from "../../core/physics";
-import type { Component, FieldType, ScalarField, Vector4Field, World } from "../../engine";
+} from "../../core/physics/index.ts";
+import type { Component, FieldType, ScalarField, Vector4Field, World } from "../../engine/index.ts";
 import type {
     BaseJointConfig,
     DistanceJointConfig,

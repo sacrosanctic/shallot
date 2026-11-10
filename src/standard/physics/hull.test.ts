@@ -7,9 +7,9 @@ import {
     Shape,
     ShapeKind,
     UNIT_CUBE_ID,
-} from "../../core/physics";
-import { Transform, TransformPlugin } from "../../core/transform";
-import { World } from "../../engine";
+} from "../../core/physics/index.ts";
+import { Transform, TransformPlugin } from "../../core/transform/index.ts";
+import { World } from "../../engine/index.ts";
 import { buildHull } from "./geometry-builds.ts";
 import { marshalShape, shapeHullGeometry } from "./marshal-shape.ts";
 import { makeBoxHull } from "./shapes/build-hull.ts";

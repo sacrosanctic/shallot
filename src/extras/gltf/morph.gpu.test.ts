@@ -5,17 +5,17 @@ import * as std from "typegpu/std";
 import animationGold from "../../../examples/gltf/tests/animations.gold.json";
 import modelGold from "../../../examples/gltf/tests/models.gold.json";
 import { assets, fileFetch, syncAssets } from "../../../examples/gltf/tests/setup.ts";
-import { Meshes, type MeshHandle, MeshInstance } from "../../core/mesh";
+import { Meshes, type MeshHandle, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
     captureTexture,
     Tonemapping,
     TonemappingMethod,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import type { App, World } from "../../engine";
-import { probeTexture } from "../../engine/runtime";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import type { App, World } from "../../engine/index.ts";
+import { probeTexture } from "../../engine/runtime/index.ts";
 import { openGpuApp } from "../../project/testing-gpu.ts";
 import {
     AlphaMode,
@@ -26,7 +26,7 @@ import {
     materialType,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import type { GltfScene } from "./gltf.ts";
 import { loadGltf } from "./load.ts";
 import { morphFixture, morphFixtureUrl } from "./morph.fixture";

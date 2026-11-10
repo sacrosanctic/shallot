@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Vignette as LegacyVignette, VignettePlugin } from "@dylanebert/shallot/vignette";
 import { gpuApps, gpuScene } from "../../../scripts/gpu.fixture";
-import { MeshInstance } from "../../core/mesh";
+import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
@@ -10,21 +10,21 @@ import {
     Tonemapping,
     TonemappingMethod,
     Views,
-} from "../../core/rendering";
+} from "../../core/rendering/index.ts";
 import { imageTextures } from "../../core/rendering/image.ts";
 import { tonemappingStateKey } from "../../core/rendering/tonemapping-state.ts";
 import { offscreenTexture } from "../../core/rendering/view.ts";
-import { Transform } from "../../core/transform";
-import { precompile, type World } from "../../engine";
-import { probeTexture } from "../../engine/runtime";
-import { DEFAULT_PLUGINS } from "../../standard";
+import { Transform } from "../../core/transform/index.ts";
+import { precompile, type World } from "../../engine/index.ts";
+import { probeTexture } from "../../engine/runtime/index.ts";
+import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import {
     AlphaMode,
     Materials,
     MeshMaterial,
     StandardMaterial,
     StandardRenderer,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import { corners, LOWER, pixel, SIZE, stackedFrame, stackedScene } from "../stacked-camera.fixture";
 import { ChromaticAberration, EffectStackPlugin, LensDistortion, Vignette } from ".";
 

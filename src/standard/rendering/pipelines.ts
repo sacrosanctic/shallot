@@ -19,7 +19,7 @@ import {
     Meshes,
     MeshQuant,
     meshIdOf,
-} from "../../core/mesh";
+} from "../../core/mesh/index.ts";
 import {
     Camera,
     DEPTH_FORMAT,
@@ -35,9 +35,9 @@ import {
     xformNormal,
     xformPoint,
     xformQuat,
-} from "../../core/rendering";
-import { precompile, precompileScope, type World } from "../../engine";
-import { octDecodeNormal } from "../../engine/utils";
+} from "../../core/rendering/index.ts";
+import { precompile, precompileScope, type World } from "../../engine/index.ts";
+import { octDecodeNormal } from "../../engine/utils/index.ts";
 import { cascadeLayout, pointLayout, shadowLayout } from "./atlas.ts";
 import { validateBindingLimits } from "./binding-limits.ts";
 import { LightCull } from "./cluster.ts";

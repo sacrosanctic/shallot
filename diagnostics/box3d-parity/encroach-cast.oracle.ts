@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { World } from "../../src/engine";
+import { World } from "../../src/engine/index.ts";
 import { shapeCast } from "../../src/standard/physics/collision/queries.ts";
 import { init } from "../../src/standard/physics/kernel/kernel.ts";
 import { nativeSseOutput } from "./native-evidence.ts";

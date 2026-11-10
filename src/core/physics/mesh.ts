@@ -1,4 +1,4 @@
-import type { Resource } from "../../engine";
+import type { Resource } from "../../engine/index.ts";
 import { PhysicsAssets } from "./assets.ts";
 
 /**

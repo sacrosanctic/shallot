@@ -14,7 +14,7 @@ import {
 import { Transform } from "@dylanebert/shallot/transform";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import type { PhysicsSnapshot } from "./api";
+import type { PhysicsSnapshot } from "./api/index.ts";
 import { restore, snapshot } from "./api/snapshot.ts";
 import { physicsCounters, physicsState } from "./runtime.ts";
 

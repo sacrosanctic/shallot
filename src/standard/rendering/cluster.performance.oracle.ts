@@ -1,8 +1,8 @@
 import { test } from "bun:test";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { attachCanvas, Camera, PointLight } from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { createApp } from "../../engine/app";
+import { attachCanvas, Camera, PointLight } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { createApp } from "../../engine/app/index.ts";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
 import { StandardRenderer, StandardRenderingPlugin } from "./index.ts";
 

@@ -10,7 +10,7 @@ import {
     RenderContext,
     type View,
     Views,
-} from "../../core/rendering";
+} from "../../core/rendering/index.ts";
 import {
     component,
     f32,
@@ -19,14 +19,14 @@ import {
     type System,
     u32,
     type World,
-} from "../../engine";
+} from "../../engine/index.ts";
 import {
     beginComputePass,
     dispatchWorkgroups2,
     endComputePass,
     setComputeBindGroup,
     setComputePipeline,
-} from "../../engine/runtime";
+} from "../../engine/runtime/index.ts";
 import {
     aoKernel,
     aoLayout,

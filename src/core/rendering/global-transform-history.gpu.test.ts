@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { attachCanvas, Camera, PointLight, RenderingPlugin } from "../../core/rendering";
+import { attachCanvas, Camera, PointLight, RenderingPlugin } from "../../core/rendering/index.ts";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
 import {
     type createApp,
@@ -16,7 +16,7 @@ import {
 setDefaultTimeout(TIMEOUT.gpu);
 
 import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture";
-import { deriveTransforms } from "../transform";
+import { deriveTransforms } from "../transform/index.ts";
 import {
     GlobalTransformHistoryEndSystem,
     GlobalTransformHistoryStartSystem,

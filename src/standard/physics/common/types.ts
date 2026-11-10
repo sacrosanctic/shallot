@@ -1,7 +1,7 @@
 // Box3D types.h and b3Default* factories in types.c (Erin Catto, MIT).
 // Definitions are reusable creation data; length units are fixed at one per meter.
 
-import type { SurfaceMaterial } from "../../../core/physics";
+import type { SurfaceMaterial } from "../../../core/physics/index.ts";
 import { DEFAULT_CATEGORY_BITS, DEFAULT_MASK_BITS, LENGTH_UNITS_PER_METER } from "./constants.ts";
 import type { Pos, Quat, Vec3 } from "./records.ts";
 

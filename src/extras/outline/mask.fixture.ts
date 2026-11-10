@@ -1,5 +1,5 @@
-import type { World } from "../../engine";
-import { probeTexture } from "../../engine/runtime";
+import type { World } from "../../engine/index.ts";
+import { probeTexture } from "../../engine/runtime/index.ts";
 import { sampleDistance } from "./reference.fixture";
 
 /** Copies the real mask before the first flood, and exposes the production final seed field. */

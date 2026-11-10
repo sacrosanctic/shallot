@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import type { Plugin } from "../../engine";
-import { Transform } from "../transform";
+import type { Plugin } from "../../engine/index.ts";
+import { Transform } from "../transform/index.ts";
 import {
     attachTexture,
     Camera,

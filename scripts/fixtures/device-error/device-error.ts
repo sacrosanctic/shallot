@@ -1,6 +1,6 @@
 import { setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { observedDeviceError } from "../../../src/engine/runtime";
+import { observedDeviceError } from "../../../src/engine/runtime/index.ts";
 import { gpuApps } from "../../gpu.fixture";
 
 setDefaultTimeout(TIMEOUT.gpu);

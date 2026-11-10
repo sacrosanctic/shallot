@@ -3,16 +3,16 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { encodePos } from "../../core/mesh";
-import { Billboard, globalTransformTable, RenderingPlugin } from "../../core/rendering";
+import { encodePos } from "../../core/mesh/index.ts";
+import { Billboard, globalTransformTable, RenderingPlugin } from "../../core/rendering/index.ts";
 import {
     prepareGlobalTransformFrame,
     GlobalTransformHistory as TransformRuntime,
 } from "../../core/rendering/global-transform.ts";
 import { VIEW_BYTES } from "../../core/rendering/view.ts";
-import { Transform } from "../../core/transform";
-import { precompile } from "../../engine";
-import { probeTexture } from "../../engine/runtime";
+import { Transform } from "../../core/transform/index.ts";
+import { precompile } from "../../engine/index.ts";
+import { probeTexture } from "../../engine/runtime/index.ts";
 import { maskLayoutPlain, maskVertex } from "../outline/passes.ts";
 import { GLYPH_AT, GLYPH_BYTES } from "./glyph.ts";
 import { TextVertex } from "./pipeline.ts";

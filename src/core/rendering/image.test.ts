@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { World } from "../../engine";
+import { World } from "../../engine/index.ts";
 import { DataImages, ImageAddressMode, ImageFilterMode, Images, registerImage } from "./image.ts";
 
 test("image registration accepts a source without a name", () => {

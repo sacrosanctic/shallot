@@ -1,5 +1,5 @@
 import { type Plugin, runApp, ScreenSpaceAmbientOcclusionPlugin } from "@dylanebert/shallot";
-import { probeTexture } from "../../src/engine/runtime";
+import { probeTexture } from "../../src/engine/runtime/index.ts";
 import { ssaoState } from "../../src/standard/rendering/ssao.ts";
 import { EXAMPLE_CONTROLS, PALETTES, type PaletteName } from "./palette.ts";
 import { DIAGNOSTIC_PLUGINS, SCENES, type SceneDefinition } from "./scenes.ts";

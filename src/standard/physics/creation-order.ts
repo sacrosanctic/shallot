@@ -1,4 +1,4 @@
-import type { Component, World } from "../../engine";
+import type { Component, World } from "../../engine/index.ts";
 
 /** Internal membership journal: component index, eid, entity reference, presence. */
 export const PhysicsCreationOrder = {

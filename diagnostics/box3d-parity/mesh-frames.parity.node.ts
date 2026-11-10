@@ -1,5 +1,5 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import { createApp } from "../../src";
+import { createApp } from "../../src/index.ts";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { MeshSamplePlugin } from "../../examples/physics/src/mesh.ts";
 import { type Controls, controlValues, createScene, scenes } from "../../examples/physics/src/scenes.ts";

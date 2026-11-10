@@ -1,6 +1,6 @@
 import { afterAll, beforeAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { type App, createApp } from "../../engine";
+import { type App, createApp } from "../../engine/index.ts";
 import { hull2D, type Point2D, simplifyHull2D } from "./hull2d.ts";
 import { kernel } from "./kernel/kernel.ts";
 import { StandardPhysicsPlugin } from "./runtime.ts";

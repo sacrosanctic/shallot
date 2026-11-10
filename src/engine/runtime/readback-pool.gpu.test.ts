@@ -1,8 +1,8 @@
 import { afterAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import type { createApp } from "../app";
-import type { World } from "../ecs";
+import type { createApp } from "../app/index.ts";
+import type { World } from "../ecs/index.ts";
 import { rawDevice } from "./gpu.ts";
 import { probeBuffer } from "./probe.ts";
 import { countStaging } from "./readback.fixture";

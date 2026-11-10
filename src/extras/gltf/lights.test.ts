@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
-import { DirectionalLight, PointLight, SpotLight } from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { World } from "../../engine/ecs";
+import { DirectionalLight, PointLight, SpotLight } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { World } from "../../engine/ecs/index.ts";
 import { type GltfJson, parseGltf } from "./gltf.ts";
 import { loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene.ts";
 

@@ -1,4 +1,4 @@
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import { CameraViewport } from "./camera.ts";
 
 export interface CameraRect {

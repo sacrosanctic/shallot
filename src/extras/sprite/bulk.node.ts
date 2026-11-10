@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { expectWarning } from "../../../scripts/test-console.ts";
-import { MeshInstance } from "../../core/mesh";
-import { Transform } from "../../core/transform";
-import { MaterialAssets, MeshMaterial } from "../../standard/rendering";
+import { MeshInstance } from "../../core/mesh/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { MaterialAssets, MeshMaterial } from "../../standard/rendering/index.ts";
 import { Sprite, SpritePlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);

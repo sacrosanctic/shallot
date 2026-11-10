@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import { Body, BodyType, GlobalTransform, HeightFields, Shape, ShapeKind, Transform, createApp } from "../../src";
-import { castRayClosest, emptyQueryHit, hashPhysics, isAwake, StandardPhysicsPlugin } from "../../src/standard/physics";
+import { Body, BodyType, GlobalTransform, HeightFields, Shape, ShapeKind, Transform, createApp } from "../../src/index.ts";
+import { castRayClosest, emptyQueryHit, hashPhysics, isAwake, StandardPhysicsPlugin } from "../../src/standard/physics/index.ts";
 import { physicsState } from "../../src/standard/physics/runtime.ts";
 import { worldCounters } from "../../src/standard/physics/world/world.ts";
 import { nativeBinary, run } from "./native.ts";

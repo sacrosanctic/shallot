@@ -15,8 +15,8 @@ import {
     renderLayers,
     SpotLight,
     Views,
-} from "../../core/rendering";
-import { composeGlobalTransform, GlobalTransform } from "../../core/transform";
+} from "../../core/rendering/index.ts";
+import { composeGlobalTransform, GlobalTransform } from "../../core/transform/index.ts";
 import {
     lookAt,
     lookAtRotation,
@@ -25,8 +25,8 @@ import {
     perspective,
     type Resource,
     type World,
-} from "../../engine";
-import { lookAtPacked } from "../../engine/utils";
+} from "../../engine/index.ts";
+import { lookAtPacked } from "../../engine/utils/index.ts";
 import { directionalTravelDirection, shadowDirectionalLight, spotOuterAngle } from "./lighting.ts";
 
 /** the directional shadow's cascade ceiling: each cascade takes one of the depth view slots reserved out

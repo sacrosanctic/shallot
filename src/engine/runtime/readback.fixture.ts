@@ -1,4 +1,4 @@
-import { World } from "../ecs";
+import { World } from "../ecs/index.ts";
 
 export function countStaging(device: GPUDevice) {
     const original = device.createBuffer.bind(device);

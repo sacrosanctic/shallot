@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
-import { Body, BodyType, Shape } from "../../core/physics";
-import { GlobalTransform, Transform } from "../../core/transform";
-import { createApp, Time } from "../../engine";
+import { Body, BodyType, Shape } from "../../core/physics/index.ts";
+import { GlobalTransform, Transform } from "../../core/transform/index.ts";
+import { createApp, Time } from "../../engine/index.ts";
 import { StandardPhysicsPlugin, setTargetTransform } from ".";
 
 test("a dynamic box turns with a rotating kinematic platform", async () => {

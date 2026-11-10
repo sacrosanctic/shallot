@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture";
-import { PointLight, SpotLight, VolumetricLight } from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { probeBuffer } from "../../engine/runtime";
+import { PointLight, SpotLight, VolumetricLight } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
 import { lightInputKey } from "./cluster.ts";
 import { StandardRenderingPlugin } from "./index.ts";
 import { spotParams } from "./lighting.ts";

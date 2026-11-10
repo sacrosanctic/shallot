@@ -1,4 +1,4 @@
-import type { Resource, World } from "../ecs";
+import type { Resource, World } from "../ecs/index.ts";
 
 /** CSS display size and device-pixel ratio for one bound canvas. */
 export interface Viewport {

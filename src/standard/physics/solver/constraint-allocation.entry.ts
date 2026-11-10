@@ -6,7 +6,7 @@ import {
     SphericalJoint,
     StandardPhysicsPlugin,
 } from "@dylanebert/shallot";
-import { Transform } from "../../../core/transform";
+import { Transform } from "../../../core/transform/index.ts";
 import { BodyType } from "../common/types.ts";
 import { init, shutdown } from "../kernel/kernel.ts";
 import { quaternion } from "../kernel/math.ts";

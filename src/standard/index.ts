@@ -12,14 +12,14 @@ export {
     SphericalJoint,
     WeldJoint,
     WheelJoint,
-} from "../core/physics";
-export { composeGlobalTransform, GlobalTransform, Transform } from "../core/transform";
-export { loadClip, StandardAudioPlugin } from "./audio";
+} from "../core/physics/index.ts";
+export { composeGlobalTransform, GlobalTransform, Transform } from "../core/transform/index.ts";
+export { loadClip, StandardAudioPlugin } from "./audio/index.ts";
 export {
     type SplashOptions,
     type SplashProfile,
     shallotDark,
-} from "./loading";
+} from "./loading/index.ts";
 export {
     applyAngularImpulse,
     applyForce,
@@ -41,7 +41,7 @@ export {
     setTransform,
     shapeEdges,
     shapeMesh,
-} from "./physics";
+} from "./physics/index.ts";
 export {
     AlphaMode,
     AlphaModeCode,
@@ -71,14 +71,14 @@ export {
     SurfaceOcclusion,
     surfaceOcclusion,
     VertexMaterialType,
-} from "./rendering";
+} from "./rendering/index.ts";
 
-import { BrowserInputPlugin, InputPlugin } from "../core/input";
-import { CorePipelinePlugin, RenderingPlugin } from "../core/rendering";
-import type { Plugin } from "../engine";
-import { setDefaultLoading, setDefaultPlugins } from "../engine/app";
-import { shallotDark } from "./loading";
-import { MeshRenderPlugin, StandardRenderingPlugin } from "./rendering";
+import { BrowserInputPlugin, InputPlugin } from "../core/input/index.ts";
+import { CorePipelinePlugin, RenderingPlugin } from "../core/rendering/index.ts";
+import type { Plugin } from "../engine/index.ts";
+import { setDefaultLoading, setDefaultPlugins } from "../engine/app/index.ts";
+import { shallotDark } from "./loading/index.ts";
+import { MeshRenderPlugin, StandardRenderingPlugin } from "./rendering/index.ts";
 
 export const DEFAULT_PLUGINS: readonly Plugin[] = [
     InputPlugin,

@@ -14,8 +14,8 @@ import {
     type PhysicsAssets,
     type PhysicsMesh,
     PhysicsMeshes,
-} from "../../core/physics";
-import type { Resource, World } from "../../engine";
+} from "../../core/physics/index.ts";
+import type { Resource, World } from "../../engine/index.ts";
 import { MAX_HULL_VERTICES } from "./common/constants.ts";
 import type { Transform } from "./common/records.ts";
 import { defaultSurfaceMaterial } from "./common/types.ts";

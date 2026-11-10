@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { Body, BodyType, Shape, ShapeKind } from "../../core/physics";
-import { GlobalTransform, Transform } from "../../core/transform";
-import { createApp } from "../../engine";
+import { Body, BodyType, Shape, ShapeKind } from "../../core/physics/index.ts";
+import { GlobalTransform, Transform } from "../../core/transform/index.ts";
+import { createApp } from "../../engine/index.ts";
 import {
     defaultExplosionDef,
     explode,

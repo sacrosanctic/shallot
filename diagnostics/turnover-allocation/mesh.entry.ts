@@ -1,6 +1,6 @@
-import { cube, Meshes, MeshInstance } from "../../src/core/mesh";
-import { Transform } from "../../src/core/transform";
-import { createApp } from "../../src/engine";
+import { cube, Meshes, MeshInstance } from "../../src/core/mesh/index.ts";
+import { Transform } from "../../src/core/transform/index.ts";
+import { createApp } from "../../src/engine/index.ts";
 import { gpuAllocationExpressions } from "../../src/engine/runtime/allocation-site.ts";
 import {
     Materials,
@@ -8,7 +8,7 @@ import {
     MeshRenderPlugin,
     StandardMaterial,
     StandardRenderingPlugin,
-} from "../../src/standard/rendering";
+} from "../../src/standard/rendering/index.ts";
 
 let grow: () => void;
 export const control = () => grow();

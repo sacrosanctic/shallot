@@ -1,7 +1,7 @@
 // A long textured ground plane under a camera looking along it: the receding minification case.
 // Inputs are generated here so the regression and the diagnostic need no assets or image decoder.
 
-import { Meshes, MeshInstance } from "../../core/mesh";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
@@ -9,9 +9,9 @@ import {
     imageTextures,
     Tonemapping,
     TonemappingMethod,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import type { World } from "../../engine";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import type { World } from "../../engine/index.ts";
 import {
     type MaterialHandle,
     Materials,

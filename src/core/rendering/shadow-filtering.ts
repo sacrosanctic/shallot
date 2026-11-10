@@ -1,4 +1,4 @@
-import { component, u32 } from "../../engine";
+import { component, u32 } from "../../engine/index.ts";
 
 /** The available standard shadow filters. Hardware2x2 uses one comparison sample; Gaussian is the default. */
 export const ShadowFilteringMethodMode = {

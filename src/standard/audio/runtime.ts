@@ -1,12 +1,12 @@
 import loadAudioWasm from "../../../crates/audio/pkg/shallot_audio.js";
-import { AudioOutput, AudioPlugin, Clips, Listener, registerClip, Sound } from "../../core/audio";
-import { type AudioContextState, Devices } from "../../core/input";
+import { AudioOutput, AudioPlugin, Clips, Listener, registerClip, Sound } from "../../core/audio/index.ts";
+import { type AudioContextState, Devices } from "../../core/input/index.ts";
 import {
     composeGlobalTransform,
     GlobalTransform,
     PrepareGlobalTransformSystem,
-} from "../../core/transform";
-import type { EntityRef, Plugin, Resource, System, World } from "../../engine";
+} from "../../core/transform/index.ts";
+import type { EntityRef, Plugin, Resource, System, World } from "../../engine/index.ts";
 import {
     createWorkletURL,
     FINISHED_OFFSET,

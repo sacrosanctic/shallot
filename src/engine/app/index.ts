@@ -1,7 +1,7 @@
 /// <reference types="@webgpu/types" />
 
-import { HANDOFF_MARK, UI_MOUNT_MEASURE, userTimingMark, userTimingSpan } from "../diagnostics";
-import { type Component, type System, World } from "../ecs";
+import { HANDOFF_MARK, UI_MOUNT_MEASURE, userTimingMark, userTimingSpan } from "../diagnostics/index.ts";
+import { type Component, type System, World } from "../ecs/index.ts";
 import {
     type AdapterVerdict,
     deviceLost,
@@ -16,7 +16,7 @@ import {
     requestGPU,
     validateGpu,
     withPipelineOwner,
-} from "../runtime";
+} from "../runtime/index.ts";
 import { resolvePlugins } from "./compose.ts";
 import { frameDelta } from "./frame-delta.ts";
 
@@ -40,7 +40,7 @@ export interface Plugin {
      * per-call reconstruction hold it all; registration refusal is not a completeness proof. Images are independent
      * and reusable; restore sees recovered ECS identity, fields and fixedTick.
      * Host handles and presentation are outside capture; live device reads are not replay inputs. */
-    readonly recovery?: ((world: World) => import("../ecs").Recovery) | "stateless";
+    readonly recovery?: ((world: World) => import("../ecs/index.ts").Recovery) | "stateless";
     /** systems this plugin adds to the scheduler */
     readonly systems?: readonly System[];
     /** components registered under exact stable keys, with their defaults and requirements */
@@ -50,7 +50,7 @@ export interface Plugin {
     /** Required and preferred features and required limits for this plugin's GPU use. Presence, including `{}`, declares a device need; an unmet requirement refuses before initialization with this plugin and the cause named. */
     readonly gpu?: GpuRequirements;
     /** @internal Observes the World-owned GPU context at acquisition, before plugin initialization. */
-    readonly prepareGpu?: (world: World, gpu: import("../runtime").WorldGpu) => void;
+    readonly prepareGpu?: (world: World, gpu: import("../runtime/index.ts").WorldGpu) => void;
     /** Initial setup, run before warm-up. Nothing paints while this hook runs synchronously, until it awaits. Split long setup into awaited slices and report each through `onProgress`. */
     readonly initialize?: (
         world: World,
@@ -430,7 +430,7 @@ async function buildNow(config: AppConfig, beforeHandoff?: (world: World) => voi
 
 /** Overlay roots and their owning canvases for one World. Host adapters use this ownership to
  * route UI engagement to the same canvas; it does not forward pointer input to the canvas. */
-export const OverlayCanvases: import("../ecs").Resource<Map<HTMLElement, HTMLElement>> = {
+export const OverlayCanvases: import("../ecs/index.ts").Resource<Map<HTMLElement, HTMLElement>> = {
     create: () => new Map(),
 };
 

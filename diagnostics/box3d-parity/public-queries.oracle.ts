@@ -13,10 +13,10 @@ import {
     PhysicsPlugin as CorePhysicsPlugin,
     Shape as EcsShape,
     ShapeKind,
-} from "../../src/core/physics";
-import { Time, World } from "../../src/engine";
+} from "../../src/core/physics/index.ts";
+import { Time, World } from "../../src/engine/index.ts";
 import { quaternion, vector } from "../../src/standard/physics/kernel/math.ts";
-import { Transform, TransformPlugin } from "../../src/core/transform";
+import { Transform, TransformPlugin } from "../../src/core/transform/index.ts";
 import { BodyType, defaultSurfaceMaterial } from "../../src/standard/physics/common/types.ts";
 import { createBoxMesh } from "../../src/standard/physics/shapes/mesh.ts";
 import { createCompound } from "../../src/standard/physics/shapes/compound.ts";
@@ -66,7 +66,7 @@ import {
     overlapShape,
     PhysicsWorldDefinition,
     StandardPhysicsPlugin,
-} from "../../src/standard/physics";
+} from "../../src/standard/physics/index.ts";
 import { BodyField, bodyField } from "../../src/standard/physics/kernel/bodyrecords.ts";
 import { setQueryCallback } from "../../src/standard/physics/kernel/kernel.ts";
 import { queryColumns } from "../../src/standard/physics/kernel/querycolumns.ts";

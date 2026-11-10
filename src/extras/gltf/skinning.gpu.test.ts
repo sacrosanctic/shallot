@@ -4,7 +4,7 @@ import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import gold from "../../../examples/gltf/tests/animations.gold.json";
 import { fileFetch, syncAssets } from "../../../examples/gltf/tests/setup.ts";
-import { Meshes, MeshInstance } from "../../core/mesh";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
@@ -14,10 +14,10 @@ import {
     Tonemapping,
     TonemappingMethod,
     Views,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import type { App, World } from "../../engine";
-import { probeBuffer, probeTexture } from "../../engine/runtime";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import type { App, World } from "../../engine/index.ts";
+import { probeBuffer, probeTexture } from "../../engine/runtime/index.ts";
 import { openGpuApp } from "../../project/testing-gpu.ts";
 import {
     AlphaMode,
@@ -29,7 +29,7 @@ import {
     materialType,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import { sunShadowView } from "../../standard/rendering/atlas.ts";
 import type { GltfScene } from "./gltf.ts";
 import { loadGltf } from "./load.ts";

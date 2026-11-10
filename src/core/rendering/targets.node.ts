@@ -4,10 +4,10 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { lookAtRotation, type Plugin } from "../../engine";
-import { Fog, FogPlugin, NoFog } from "../../extras/fog";
-import { Outline, OutlinePlugin } from "../../extras/outline";
-import { DEFAULT_PLUGINS } from "../../standard";
+import { lookAtRotation, type Plugin } from "../../engine/index.ts";
+import { Fog, FogPlugin, NoFog } from "../../extras/fog/index.ts";
+import { Outline, OutlinePlugin } from "../../extras/outline/index.ts";
+import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import {
     BackgroundContext,
     backgroundLayout,
@@ -17,9 +17,9 @@ import {
     registerBackground,
     StandardMaterial,
     StandardRenderer,
-} from "../../standard/rendering";
-import { MeshInstance } from "../mesh";
-import { Transform } from "../transform";
+} from "../../standard/rendering/index.ts";
+import { MeshInstance } from "../mesh/index.ts";
+import { Transform } from "../transform/index.ts";
 import {
     AmbientLight,
     attachTexture,

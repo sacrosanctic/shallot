@@ -1,5 +1,5 @@
-export type { DebugDraw, ShapeProxy } from "./api";
-export { defaultDebugDraw } from "./api";
+export type { DebugDraw, ShapeProxy } from "./api/index.ts";
+export { defaultDebugDraw } from "./api/index.ts";
 export { Character, CharacterPlugin, GroundState } from "./character.ts";
 export {
     collideCapsuleAndSphere,

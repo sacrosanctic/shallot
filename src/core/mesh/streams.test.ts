@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import * as d from "typegpu/data";
 import { pack2x16unorm } from "typegpu/std";
-import { World } from "../../engine";
-import { packUnorm2 } from "../../engine/utils";
+import { World } from "../../engine/index.ts";
+import { packUnorm2 } from "../../engine/utils/index.ts";
 import { Meshes, packMeshStreams, type QuantStreams } from "./mesh.ts";
 import {
     decodeColor,

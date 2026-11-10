@@ -1,4 +1,4 @@
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import {
     component,
     f32,
@@ -8,8 +8,8 @@ import {
     orthographic,
     perspective,
     u32,
-} from "../../engine";
-import { composeGlobalTransform } from "../transform";
+} from "../../engine/index.ts";
+import { composeGlobalTransform } from "../transform/index.ts";
 
 /** Camera projection mode; defaults to Perspective. */
 export const CameraMode = {

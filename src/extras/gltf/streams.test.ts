@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
-import { generateTangents } from "../../core/mesh";
+import { generateTangents } from "../../core/mesh/index.ts";
 import { type GltfJson, generateSceneTangents, parseGltf } from "./gltf.ts";
 import { loadGltf } from "./load.ts";
 

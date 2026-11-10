@@ -1,9 +1,9 @@
 import { test } from "bun:test";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import * as d from "typegpu/data";
-import { cube, Meshes, MeshInstance } from "../../core/mesh";
-import { Transform } from "../../core/transform";
-import { createApp } from "../../engine/app";
+import { cube, Meshes, MeshInstance } from "../../core/mesh/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { createApp } from "../../engine/app/index.ts";
 import {
     MaterialPlugin,
     Materials,

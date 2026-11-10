@@ -1,7 +1,7 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import { cross, select } from "typegpu/std";
-import { chunk } from "../../engine/utils";
+import { chunk } from "../../engine/utils/index.ts";
 
 /** 48-byte AoS placement record (position, quaternion, scale) for scattered per-instance vertex reads.
  * Transforms are reconstructed on read rather than stored as matrices. */

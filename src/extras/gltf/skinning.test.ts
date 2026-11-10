@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
-import { composeMat4 } from "../../engine/utils";
+import { composeMat4 } from "../../engine/utils/index.ts";
 import { type GltfJson, generateSceneTangents, parseGltf } from "./gltf.ts";
 import { loadGltf } from "./load.ts";
 

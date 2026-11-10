@@ -12,7 +12,7 @@ import {
     type MeshHandle,
     MeshInstance,
     meshResourcesKey,
-} from "../../core/mesh";
+} from "../../core/mesh/index.ts";
 import {
     BeginFrameSystem,
     globalTransformTable,
@@ -20,8 +20,8 @@ import {
     NotShadowCaster,
     RenderContext,
     RenderLayers,
-} from "../../core/rendering";
-import { ClearChangeMarksSystem, type System, type World } from "../../engine";
+} from "../../core/rendering/index.ts";
+import { ClearChangeMarksSystem, type System, type World } from "../../engine/index.ts";
 import {
     beginComputePass,
     dispatchWorkgroups,
@@ -30,7 +30,7 @@ import {
     precompile,
     setComputeBindGroup,
     setComputePipeline,
-} from "../../engine/runtime";
+} from "../../engine/runtime/index.ts";
 import { uploadInstanceData } from "./instance-data.ts";
 import { MaterialTypes } from "./material.ts";
 import { MaterialBatches, materialBatch, syncMaterialBatches } from "./material-batch.ts";
@@ -451,7 +451,7 @@ export function initializeMeshPreprocess(world: World): void {
     for (const eid of world.query([MeshInstance])) seedDefault(eid);
 }
 
-export const MeshDrawBuffers: import("../../engine").Resource<MeshDrawBuffers> = {
+export const MeshDrawBuffers: import("../../engine/index.ts").Resource<MeshDrawBuffers> = {
     create: (world) => world.resource(meshPreprocessKey).meshDraws,
 };
 

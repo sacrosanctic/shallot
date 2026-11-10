@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { expectWarning } from "../../../scripts/test-console.ts";
-import { drawLine, LinesPlugin } from "../../extras/lines";
-import { TextPlugin } from "../../extras/text";
-import { Transform } from "../transform";
+import { drawLine, LinesPlugin } from "../../extras/lines/index.ts";
+import { TextPlugin } from "../../extras/text/index.ts";
+import { Transform } from "../transform/index.ts";
 import { attachTexture, Camera, CameraViewport } from ".";
 
 setDefaultTimeout(TIMEOUT.gpu);

@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { createCompound, defaultSurfaceMaterial } from "../api";
+import { createCompound, defaultSurfaceMaterial } from "../api/index.ts";
 import { restore, snapshot } from "../api/snapshot.ts";
 import { BodyType } from "../common/types.ts";
 import {

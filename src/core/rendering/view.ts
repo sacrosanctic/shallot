@@ -1,9 +1,9 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import type { EntityRef, World } from "../../engine";
-import { resizeViewport, Viewports } from "../../engine";
-import { rawDevice } from "../../engine/runtime";
+import type { EntityRef, World } from "../../engine/index.ts";
+import { resizeViewport, Viewports } from "../../engine/index.ts";
+import { rawDevice } from "../../engine/runtime/index.ts";
 import { Camera, CameraViewport, Resolution } from "./camera.ts";
 import { type CameraRect, cameraRect } from "./camera-viewport.ts";
 import { CULL_VOLUME_FLOATS } from "./frustum.ts";
@@ -223,7 +223,7 @@ export function initializeViewState(world: World): void {
 }
 
 /** every camera with a view, keyed by eid: canvas-bound ({@link attachCanvas}) or off-screen ({@link attachView}) */
-export const Views: import("../../engine").Resource<Map<number, View>> = {
+export const Views: import("../../engine/index.ts").Resource<Map<number, View>> = {
     create: (world) => world.resource(viewResourcesKey).views,
 };
 

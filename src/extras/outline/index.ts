@@ -1,4 +1,4 @@
-import { component } from "../../engine";
+import { component } from "../../engine/index.ts";
 // Jump-flood outlines: Ben Golus, "The Quest for Very Wide Outlines".
 
 import type { TgpuBuffer, TgpuComputePipeline, TgpuRenderPipeline, UniformFlag } from "typegpu";
@@ -9,7 +9,7 @@ import {
     type MeshHandle,
     MeshInstance,
     meshResourcesKey,
-} from "../../core/mesh";
+} from "../../core/mesh/index.ts";
 import {
     Camera,
     DepthPrepassRequests,
@@ -25,9 +25,9 @@ import {
     TonemappingSystem,
     type View,
     Views,
-} from "../../core/rendering";
-import type { Plugin, System, World } from "../../engine";
-import { f32 } from "../../engine";
+} from "../../core/rendering/index.ts";
+import type { Plugin, System, World } from "../../engine/index.ts";
+import { f32 } from "../../engine/index.ts";
 import {
     beginComputePass,
     beginRenderPass,
@@ -40,9 +40,9 @@ import {
     setComputePipeline,
     setRenderBindGroup,
     setRenderPipeline,
-} from "../../engine/runtime";
-import { unpackColorInto } from "../../engine/utils";
-import { MeshRenderPlugin, StandardRenderer } from "../../standard/rendering";
+} from "../../engine/runtime/index.ts";
+import { unpackColorInto } from "../../engine/utils/index.ts";
+import { MeshRenderPlugin, StandardRenderer } from "../../standard/rendering/index.ts";
 import {
     compositeHalfKernel,
     compositeKernel,

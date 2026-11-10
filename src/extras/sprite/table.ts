@@ -1,21 +1,21 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { Anchor } from "../../core/rendering";
-import type { World } from "../../engine";
+import { Anchor } from "../../core/rendering/index.ts";
+import type { World } from "../../engine/index.ts";
 import {
     beginComputePass,
     dispatchWorkgroups,
     precompile,
     setComputeBindGroup,
     setComputePipeline,
-} from "../../engine/runtime";
+} from "../../engine/runtime/index.ts";
 import {
     AlphaModeCode,
     AlphaPipelineKey,
     MeshInstanceInput,
     meshInstanceTable,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import type { SpriteMaterialInput, spriteOffset } from "./material.ts";
 import { Sprite } from "./pack.ts";
 

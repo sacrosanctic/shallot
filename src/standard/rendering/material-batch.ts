@@ -1,6 +1,6 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import type { GpuTable, World } from "../../engine";
+import type { GpuTable, World } from "../../engine/index.ts";
 import { type MaterialBinding, type MaterialType, MaterialTypes } from "./material-type.ts";
 
 type ImageField = { name: string; sampler: string; isSrgb: boolean; offset: number };

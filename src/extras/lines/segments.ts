@@ -1,7 +1,7 @@
 import type { StorageFlag, TgpuBuffer } from "typegpu";
 import * as d from "typegpu/data";
-import type { World } from "../../engine";
-import { packColor } from "../../engine/utils";
+import type { World } from "../../engine/index.ts";
+import { packColor } from "../../engine/utils/index.ts";
 import { SEGMENT_BYTES, SEGMENT_FLOATS, Segment } from "./pipeline.ts";
 
 // initial segment capacity; the CPU staging + GPU buffer double on demand for large wireframe workloads
@@ -58,7 +58,7 @@ interface Lines {
     buffer: (TgpuBuffer<d.WgslArray<typeof Segment>> & StorageFlag) | null;
 }
 
-export const Lines: import("../../engine").Resource<Lines> = {
+export const Lines: import("../../engine/index.ts").Resource<Lines> = {
     create: (world) => world.resource(segmentStateKey),
 };
 

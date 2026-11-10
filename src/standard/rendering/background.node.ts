@@ -3,9 +3,9 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { attachTexture, Camera, captureTexture } from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { DEFAULT_PLUGINS } from "../../standard";
+import { attachTexture, Camera, captureTexture } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import {
     BackgroundContext,
     Backgrounds,

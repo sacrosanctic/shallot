@@ -14,15 +14,15 @@ import {
     Exposure,
     Tonemapping,
     TonemappingMethod,
-} from "../../core/rendering";
+} from "../../core/rendering/index.ts";
 import { imageTextures } from "../../core/rendering/image.ts";
-import { Transform } from "../../core/transform";
-import { lookAtRotation } from "../../engine/utils";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation } from "../../engine/utils/index.ts";
 import {
     MeshRenderPlugin,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import { brdf, Pbr } from "../../standard/rendering/shade.ts";
 import { loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene.ts";
 import { GltfPlugin } from "./skinning.ts";
@@ -79,7 +79,7 @@ const apps = gpuApps(import.meta.path, [
     },
 ]);
 
-function upload(world: import("../../engine").World) {
+function upload(world: import("../../engine/index.ts").World) {
     // Dawn has no bitmap decoder: preserve the importer's normal-texture registration and
     // replace only decoding with the fixture PNG's single RGBA texel.
     const texture = world.gpu.device.createTexture({

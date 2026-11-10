@@ -1,6 +1,6 @@
 /// <reference types="@webgpu/types" />
 
-export { ShadowFilteringMethod, ShadowFilteringMethodMode } from "../../core/rendering";
+export { ShadowFilteringMethod, ShadowFilteringMethodMode } from "../../core/rendering/index.ts";
 export {
     pointAtlasView,
     pointShadowCasters,

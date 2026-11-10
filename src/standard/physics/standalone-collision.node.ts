@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { createApp } from "../../engine";
+import { createApp } from "../../engine/index.ts";
 import {
     getSweepTransform,
     StandardPhysicsPlugin,

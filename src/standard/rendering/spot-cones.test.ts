@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { lookAtRotation, perspective } from "../../engine/utils";
+import { lookAtRotation, perspective } from "../../engine/utils/index.ts";
 import { spotOuterAngle, spotParams } from "./lighting.ts";
 import { EDGE_TEXELS, type PointShadowFrame, spotBasis } from "./shadows.ts";
 

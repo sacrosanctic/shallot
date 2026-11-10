@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { cube, Meshes, MeshInstance } from "../../core/mesh";
-import { Transform } from "../../core/transform";
-import { probeBuffer } from "../../engine/runtime";
+import { cube, Meshes, MeshInstance } from "../../core/mesh/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
 import {
     Materials,
     MeshMaterial,

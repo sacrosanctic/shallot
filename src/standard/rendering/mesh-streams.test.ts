@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import * as d from "typegpu/data";
-import type { Mesh } from "../../core/mesh";
-import type { World } from "../../engine";
+import type { Mesh } from "../../core/mesh/index.ts";
+import type { World } from "../../engine/index.ts";
 import { type MaterialType, materialType } from "./material-type.ts";
 import { compileMaterial, meshStreamMask } from "./pipelines.ts";
 

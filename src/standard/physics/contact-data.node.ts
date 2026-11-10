@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { Transform } from "../../core/transform";
-import { createApp, type EntityRef } from "../../engine";
+import { Transform } from "../../core/transform/index.ts";
+import { createApp, type EntityRef } from "../../engine/index.ts";
 import type { PhysicsContactData } from "./contact.ts";
 import { contactPair } from "./contact-data.fixture";
 import gold from "./contact-data.gold.json";

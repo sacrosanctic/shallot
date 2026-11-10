@@ -12,7 +12,7 @@ import {
 import { homedir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { inflateRawSync } from "node:zlib";
-import { CROSS_ORIGIN_ISOLATION } from "../project";
+import { CROSS_ORIGIN_ISOLATION } from "../project/index.ts";
 import { publishProgress } from "./publish-output.ts";
 import type { PublishHost } from "./publish-verify.ts";
 

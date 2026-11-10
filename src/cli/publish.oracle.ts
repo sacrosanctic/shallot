@@ -8,7 +8,7 @@ import { bunChild } from "../../scripts/bun-child.ts";
 import { packedInstall } from "../../scripts/packed-install-spawn.ts";
 import { browserSessionPath } from "../../scripts/publish-browser-session.ts";
 import { cleanupOracleWorkers } from "../../scripts/publish-oracle-cleanup.ts";
-import { normalizePath } from "../project";
+import { normalizePath } from "../project/index.ts";
 import { cloudflareConfig, type WranglerResult, workerExists } from "./publish-cloudflare.ts";
 import { BUTLER_VERSION } from "./publish-itch.ts";
 

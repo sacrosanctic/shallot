@@ -1,6 +1,6 @@
-import { Billboard } from "../../core/rendering";
-import { component, f32, u32, vec2 } from "../../engine";
-import { AlphaModeCode } from "../../standard/rendering";
+import { Billboard } from "../../core/rendering/index.ts";
+import { component, f32, u32, vec2 } from "../../engine/index.ts";
+import { AlphaModeCode } from "../../standard/rendering/index.ts";
 
 /** Sprite alpha as [AlphaModeCode, cutoff], stored in Sprite.alphaMode's two lanes. */
 export const SpriteAlphaMode = {

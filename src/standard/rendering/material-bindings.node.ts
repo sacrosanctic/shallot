@@ -2,16 +2,16 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { Meshes, MeshInstance } from "../../core/mesh";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
     captureTexture,
     Tonemapping,
     TonemappingMethod,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { DEFAULT_PLUGINS } from "../../standard";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import { MeshMaterial, materialLayout, materialType, StandardRenderer } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
@@ -33,7 +33,7 @@ const subject = gpuScene(
 );
 const Color = d.struct({ value: d.vec3f });
 const OwnedColor = {
-    create: (world: import("../../engine").World) => ({
+    create: (world: import("../../engine/index.ts").World) => ({
         color: world.gpu.root.createBuffer(Color, { value: d.vec3f(1, 0, 0) }).$usage("uniform"),
     }),
 };
@@ -51,7 +51,7 @@ const material = materialType({
     },
 });
 
-function initialize(world: import("../../engine").World) {
+function initialize(world: import("../../engine/index.ts").World) {
     const mesh = world.resource(Meshes).add({
         name: "owned-color-quad",
         vertices: new Float32Array([

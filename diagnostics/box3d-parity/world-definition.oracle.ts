@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import { createApp } from "../../src/engine";
-import { hashPhysics, PhysicsWorldDefinition, StandardPhysicsPlugin } from "../../src/standard/physics";
-import { BodyType, init } from "../../src/standard/physics/api";
+import { createApp } from "../../src/engine/index.ts";
+import { hashPhysics, PhysicsWorldDefinition, StandardPhysicsPlugin } from "../../src/standard/physics/index.ts";
+import { BodyType, init } from "../../src/standard/physics/api/index.ts";
 import { createSphereShape } from "../../src/standard/physics/shapes/shape.ts";
 import { bodyIsAwake, setMassData } from "../../src/standard/physics/world/body.ts";
 import { hashWorldState } from "../../src/standard/physics/world/hash.ts";

@@ -1,16 +1,16 @@
-import type { World } from "../../engine";
-import { component } from "../../engine";
+import type { World } from "../../engine/index.ts";
+import { component } from "../../engine/index.ts";
 // Sky reads directional lights without changing them; atmosphere does not own the light state.
 
-import { BeginFrameSystem, MainPassSystem, RenderingPlugin, SunDisk } from "../../core/rendering";
-import type { Plugin, System } from "../../engine";
-import { f32 } from "../../engine";
+import { BeginFrameSystem, MainPassSystem, RenderingPlugin, SunDisk } from "../../core/rendering/index.ts";
+import type { Plugin, System } from "../../engine/index.ts";
+import { f32 } from "../../engine/index.ts";
 import {
     type Background,
     type BackgroundHandle,
     registerBackground,
     StandardRenderingPlugin,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import { packSky } from "./pack.ts";
 import { SKY_BYTES, SKY_FLOATS, SkyGpu, skyBackground } from "./shader.ts";
 

@@ -1,4 +1,4 @@
-import type { World } from "../ecs";
+import type { World } from "../ecs/index.ts";
 import { deviceFailure, deviceLost } from "./gpu.ts";
 
 interface Slot {

@@ -1,4 +1,4 @@
-import type { World } from "../../../engine";
+import type { World } from "../../../engine/index.ts";
 // Views over the kernel's resident b3BodyState and b3BodySim arrays. Flags are inline in state.
 //
 // Each World owns its columns. A reserve can reallocate a column without growing memory, so

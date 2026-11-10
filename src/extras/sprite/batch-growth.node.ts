@@ -1,11 +1,11 @@
 import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { attachTexture, Camera, registerImage } from "../../core/rendering";
+import { attachTexture, Camera, registerImage } from "../../core/rendering/index.ts";
 import { imageTextures } from "../../core/rendering/image.ts";
-import { Transform } from "../../core/transform";
-import { rawDevice } from "../../engine/runtime";
-import { Draws, StandardRenderer } from "../../standard/rendering";
+import { Transform } from "../../core/transform/index.ts";
+import { rawDevice } from "../../engine/runtime/index.ts";
+import { Draws, StandardRenderer } from "../../standard/rendering/index.ts";
 import { MaterialBatches } from "../../standard/rendering/material-batch.ts";
 import { Sprite, SpritePlugin } from "./index.ts";
 

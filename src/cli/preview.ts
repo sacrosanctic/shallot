@@ -2,8 +2,8 @@ import { execSync, spawn } from "node:child_process";
 import { existsSync } from "node:fs";
 import { constants } from "node:os";
 import { basename, posix, relative, resolve } from "node:path";
-import { nativeOutDir } from "../native";
-import { normalizePath } from "../project";
+import { nativeOutDir } from "../native/index.ts";
+import { normalizePath } from "../project/index.ts";
 
 export type PreviewTarget =
     | { kind: "mac" }

@@ -7,23 +7,23 @@ import {
     gpuApps,
 } from "../../../scripts/gpu.fixture";
 import { expectWarning } from "../../../scripts/test-console.ts";
-import type { createApp, Plugin, System, World } from "../../engine";
-import { rawDevice } from "../../engine/runtime";
+import type { createApp, Plugin, System, World } from "../../engine/index.ts";
+import { rawDevice } from "../../engine/runtime/index.ts";
 import { classifyAdapter } from "../../engine/runtime/adapter.ts";
 import {
     MeshPreprocessSystem,
     MeshRenderPlugin,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import {
     AmbientLight,
     attachTexture,
     BeginFrameSystem,
     Camera,
     captureTexture,
-} from "../rendering";
-import { Transform } from "../transform";
+} from "../rendering/index.ts";
+import { Transform } from "../transform/index.ts";
 import { type Mesh, Meshes, type MeshHandle, MeshInstance, MeshPlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);

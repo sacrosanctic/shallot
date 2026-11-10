@@ -1,4 +1,4 @@
-import type { System, World } from "../../engine";
+import type { System, World } from "../../engine/index.ts";
 import { encodeFrameCapture } from "./capture.ts";
 import { encodeUpscaling } from "./upscaling.ts";
 import { INITIAL_VIEW_CAPACITY, type View, Views } from "./view.ts";

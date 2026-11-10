@@ -17,7 +17,7 @@ import type {
 // Box3D physics_world.c (Erin Catto, MIT). World ids include a generation so a recycled
 // registry slot cannot validate a destroyed world's handle.
 
-import { clamp } from "../../../engine/utils";
+import { clamp } from "../../../engine/utils/index.ts";
 import { type BroadPhase, createBroadPhase } from "../collision/broadphase.ts";
 import { contactCount } from "../collision/contact.ts";
 import { createManifoldStore, type ManifoldStore } from "../collision/manifoldstore.ts";
@@ -62,7 +62,7 @@ export type Counters = {
 /** Simulation world state (b3World). */
 export type WorldState = {
     /** ECS owner; undefined only for the standalone solver API. */
-    ecsState: import("../../../engine").World | undefined;
+    ecsState: import("../../../engine/index.ts").World | undefined;
     broadPhase: BroadPhase;
 
     /** Public body records are the authoring/handle bridge; lifecycle lives in wasm. */
@@ -159,7 +159,7 @@ function makeCapacity(c?: Capacity): Capacity {
 }
 
 function makeWorldState(
-    world: import("../../../engine").World | undefined,
+    world: import("../../../engine/index.ts").World | undefined,
     def: WorldDef,
     worldId: number,
     generation: number,
@@ -235,7 +235,7 @@ function makeWorldState(
 
 /** Create a simulation world (b3CreateWorld). @returns its id. */
 export function createWorld(
-    world: import("../../../engine").World | undefined,
+    world: import("../../../engine/index.ts").World | undefined,
     def: WorldDef,
 ): WorldId {
     const owner = kernel(world);

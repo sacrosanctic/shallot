@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { Meshes, MeshInstance } from "../../core/mesh";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import { meshResourcesKey } from "../../core/mesh/mesh.ts";
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import {
     AlphaMode,
     Draws,

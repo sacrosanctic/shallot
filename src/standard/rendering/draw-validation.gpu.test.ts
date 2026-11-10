@@ -4,7 +4,7 @@ import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import { gpuScene } from "../../../scripts/gpu.fixture";
 import { expectError } from "../../../scripts/test-console.ts";
-import { MeshInstance } from "../../core/mesh";
+import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachCanvas,
     attachTexture,
@@ -13,9 +13,9 @@ import {
     captureTexture,
     Tonemapping,
     TonemappingMethod,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import type { World } from "../../engine";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import type { World } from "../../engine/index.ts";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
 import {
     MaterialPlugin,

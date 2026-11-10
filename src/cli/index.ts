@@ -1,7 +1,7 @@
 import { readFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";
-import { nativeHostDiagnostic } from "../native";
-import { resolveViteCli, startViteDev } from "../project";
+import { nativeHostDiagnostic } from "../native/index.ts";
+import { resolveViteCli, startViteDev } from "../project/index.ts";
 import { buildProject, type NativeTarget } from "./build.ts";
 import { previewProject } from "./preview.ts";
 

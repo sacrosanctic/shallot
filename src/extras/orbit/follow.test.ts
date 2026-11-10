@@ -8,7 +8,7 @@ import {
     Transform,
 } from "@dylanebert/shallot";
 import { Orbit, OrbitPlugin } from "@dylanebert/shallot/extras";
-import { TransformRuntime } from "../../core/transform";
+import { TransformRuntime } from "../../core/transform/index.ts";
 
 test("the first frame follows an authored target before any fixed tick", async () => {
     const app = await createApp({ defaults: false, plugins: [OrbitPlugin] });

@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import { World } from "../../engine";
+import { World } from "../../engine/index.ts";
 import { FogInput, fogSource, registerFogSource, sealFogSource } from "./fog.ts";
 
 const source = tgpu.fn(

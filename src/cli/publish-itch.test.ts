@@ -3,7 +3,7 @@ import { existsSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync 
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { deflateRawSync } from "node:zlib";
-import * as projectBuild from "../project";
+import * as projectBuild from "../project/index.ts";
 import { parseCliArgs } from "./index.ts";
 import { preflightPublish, publishProject, readPublishLink } from "./publish.ts";
 import * as itch from "./publish-itch.ts";

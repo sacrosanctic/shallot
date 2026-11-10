@@ -9,10 +9,10 @@ import {
     SunDisk,
     Tonemapping,
     TonemappingMethod,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { lookAtRotation, type World } from "../../engine";
-import { CameraBackground, StandardRenderer } from "../../standard/rendering";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation, type World } from "../../engine/index.ts";
+import { CameraBackground, StandardRenderer } from "../../standard/rendering/index.ts";
 import { Sky, SkyPlugin, skyBackgroundHandle } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);

@@ -11,7 +11,7 @@ import {
 } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import * as project from "../project";
+import * as project from "../project/index.ts";
 import { normalizePath } from "../project/paths.ts";
 import { parseCliArgs } from "./index.ts";
 import {

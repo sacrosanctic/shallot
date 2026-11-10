@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { readFileSync } from "node:fs";
-import { createApp, PhysicsMeshes, Shape, ShapeKind } from "../../src";
-import { StandardPhysicsPlugin } from "../../src/standard/physics";
+import { createApp, PhysicsMeshes, Shape, ShapeKind } from "../../src/index.ts";
+import { StandardPhysicsPlugin } from "../../src/standard/physics/index.ts";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { createScene } from "../../examples/physics/src/scenes.ts";
 import { meshRecords } from "./mesh-records.ts";

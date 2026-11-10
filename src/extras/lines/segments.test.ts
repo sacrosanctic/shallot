@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { World } from "../../engine";
+import { World } from "../../engine/index.ts";
 import { SEGMENT_FLOATS } from "./pipeline.ts";
 import {
     drawArrow,

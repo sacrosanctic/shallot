@@ -1,5 +1,5 @@
 // Village's composed sample, with the hash and phase records ab.ts consumes.
-import { createApp, hashPhysics } from "../../src";
+import { createApp, hashPhysics } from "../../src/index.ts";
 import { PhysicsWorldDefinition } from "../../src/standard/physics/world-definition.ts";
 import { physicsState } from "../../src/standard/physics/runtime.ts";
 import { worldProfile } from "../../src/standard/physics/world/world.ts";

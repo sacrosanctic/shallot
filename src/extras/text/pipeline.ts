@@ -1,7 +1,7 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { decodePos, MeshQuant, meshIdOf } from "../../core/mesh";
+import { decodePos, MeshQuant, meshIdOf } from "../../core/mesh/index.ts";
 import {
     biasClipDepth,
     billboardCorner,
@@ -9,9 +9,9 @@ import {
     ViewUniforms,
     Xform,
     xformMat,
-} from "../../core/rendering";
-import { precompile, type World } from "../../engine";
-import { unpackLdrColor } from "../../engine/utils";
+} from "../../core/rendering/index.ts";
+import { precompile, type World } from "../../engine/index.ts";
+import { unpackLdrColor } from "../../engine/utils/index.ts";
 import { Glyph, sdfToSignedDistance } from "./glyph.ts";
 
 const viewLayout = tgpu

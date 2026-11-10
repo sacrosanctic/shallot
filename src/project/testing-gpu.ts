@@ -1,6 +1,6 @@
-import { type App, createApp } from "../engine/app";
+import { type App, createApp } from "../engine/app/index.ts";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { adapterNotice } from "../engine/runtime";
+import { adapterNotice } from "../engine/runtime/index.ts";
 
 /**
  * Install WebGPU globals and open a check's app. Missing and null-backend adapters are refused

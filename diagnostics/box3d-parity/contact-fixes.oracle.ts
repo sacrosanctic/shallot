@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import { createApp } from "../../src/engine";
+import { createApp } from "../../src/engine/index.ts";
 import { TIMEOUT } from "../../src/project/testing.js";
-import { StandardPhysicsPlugin } from "../../src/standard/physics";
+import { StandardPhysicsPlugin } from "../../src/standard/physics/index.ts";
 import { BodyType } from "../../src/standard/physics/common/types.ts";
 import { makeBoxHull } from "../../src/standard/physics/shapes/build-hull.ts";
 import { createHullShape, createSphereShape } from "../../src/standard/physics/shapes/shape.ts";

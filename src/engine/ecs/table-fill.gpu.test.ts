@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture";
 import { f32, vec2 } from "../index.ts";
-import { probeBuffer } from "../runtime";
+import { probeBuffer } from "../runtime/index.ts";
 import { component } from "./component.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);

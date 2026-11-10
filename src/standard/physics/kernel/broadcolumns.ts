@@ -1,4 +1,4 @@
-import type { World } from "../../../engine";
+import type { World } from "../../../engine/index.ts";
 // crates/physics/src/broad.rs owns the resident broad phase. Reserves can move its columns;
 // refresh tree views after grow-capable calls, not per iteration.
 

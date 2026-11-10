@@ -3,10 +3,10 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { MeshInstance } from "../../core/mesh";
-import { attachTexture, Camera, DirectionalLight, NormalPrepass } from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { lookAtRotation, probeTexture, type World } from "../../engine";
+import { MeshInstance } from "../../core/mesh/index.ts";
+import { attachTexture, Camera, DirectionalLight, NormalPrepass } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation, probeTexture, type World } from "../../engine/index.ts";
 import {
     AlphaMode,
     type MaterialBinding,

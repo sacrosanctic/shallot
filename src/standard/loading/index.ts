@@ -1,9 +1,9 @@
 // Keep the JSON attribute and default import: Node ≥26 refuses this module without the attribute,
 // and Node JSON modules expose only a default export, not named exports (Bun adds named exports).
 import pkg from "../../../package.json" with { type: "json" };
-import { GpuError, UnsupportedError } from "../../engine";
-import type { Loading } from "../../engine/app";
-import type { AdapterVerdict } from "../../engine/runtime";
+import { GpuError, UnsupportedError } from "../../engine/index.ts";
+import type { Loading } from "../../engine/app/index.ts";
+import type { AdapterVerdict } from "../../engine/runtime/index.ts";
 import { DARK, END_TICK, type Palette, type Splash, splash, toSvg } from "./brand.ts";
 import {
     initialPresentation,

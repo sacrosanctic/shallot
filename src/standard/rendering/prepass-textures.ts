@@ -1,15 +1,15 @@
 import tgpu, { type TgpuComputePipeline } from "typegpu";
 import * as d from "typegpu/data";
 import * as s from "typegpu/std";
-import { Camera, MainPassSystem, PrepassSystem, type View, Views } from "../../core/rendering";
-import { precompile, type System, type World } from "../../engine";
+import { Camera, MainPassSystem, PrepassSystem, type View, Views } from "../../core/rendering/index.ts";
+import { precompile, type System, type World } from "../../engine/index.ts";
 import {
     beginComputePass,
     dispatchWorkgroups2,
     endComputePass,
     setComputeBindGroup,
     setComputePipeline,
-} from "../../engine/runtime";
+} from "../../engine/runtime/index.ts";
 
 const layout = tgpu.bindGroupLayout({
     depth: { texture: d.textureDepthMultisampled2d() },

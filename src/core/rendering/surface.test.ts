@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import { acquireCanvasTexture, type View } from "./view.ts";
 
 function surface() {

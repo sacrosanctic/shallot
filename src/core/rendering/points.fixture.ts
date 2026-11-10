@@ -1,4 +1,4 @@
-import { type Plugin, precompile } from "../../engine";
+import { type Plugin, precompile } from "../../engine/index.ts";
 import {
     Camera,
     CorePipelinePlugin,

@@ -4,8 +4,8 @@ import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import { createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import type { Plugin } from "../app";
-import { probeBuffer } from "../runtime";
+import type { Plugin } from "../app/index.ts";
+import { probeBuffer } from "../runtime/index.ts";
 import type { World } from "./world.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);

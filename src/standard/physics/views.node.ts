@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { Body, Shape, ShapeKind } from "../../core/physics";
-import { Transform } from "../../core/transform";
-import { createApp, type Plugin, type System, World } from "../../engine";
+import { Body, Shape, ShapeKind } from "../../core/physics/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { createApp, type Plugin, type System, World } from "../../engine/index.ts";
 import {
     castShape,
     type PhysicsQueryHit,

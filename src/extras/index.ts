@@ -2,14 +2,14 @@
 
 // the extras barrel lists each module's author names explicitly; extension names stay on the module.
 
-export { Bloom, BloomCompositeMode, BloomPlugin } from "./bloom";
+export { Bloom, BloomCompositeMode, BloomPlugin } from "./bloom/index.ts";
 export {
     ChromaticAberration,
     EffectStackPlugin,
     LensDistortion,
     Vignette,
     VignettePlugin,
-} from "./effect-stack";
+} from "./effect-stack/index.ts";
 export {
     Fog,
     FogPlugin,
@@ -18,7 +18,7 @@ export {
     NoFog,
     readFog,
     readFogInScatter,
-} from "./fog";
+} from "./fog/index.ts";
 export {
     deformationBindings,
     deformationVertex,
@@ -35,7 +35,7 @@ export {
     SkinPalette,
     spawnGltfScene,
     VertexDeformation,
-} from "./gltf";
+} from "./gltf/index.ts";
 export {
     drawArrow,
     drawLine,
@@ -44,33 +44,33 @@ export {
     GizmoAsset,
     LinesPlugin,
     registerGizmo,
-} from "./lines";
+} from "./lines/index.ts";
 export {
     Orbit,
     OrbitMode,
     OrbitPlugin,
-} from "./orbit";
+} from "./orbit/index.ts";
 export {
     Outline,
     OutlinePlugin,
-} from "./outline";
+} from "./outline/index.ts";
 export {
     DiagnosticsOverlayPlugin,
     ProfilePlugin,
     profilerBounds,
     showProfiler,
-} from "./profile";
+} from "./profile/index.ts";
 export {
     Sky,
     SkyPlugin,
     skyBackgroundHandle,
-} from "./sky";
+} from "./sky/index.ts";
 export {
     Sprite,
     SpriteAlphaMode,
     SpriteFill,
     SpritePlugin,
-} from "./sprite";
+} from "./sprite/index.ts";
 export {
     Content,
     Fonts,
@@ -79,4 +79,4 @@ export {
     registerFont,
     Text,
     TextPlugin,
-} from "./text";
+} from "./text/index.ts";

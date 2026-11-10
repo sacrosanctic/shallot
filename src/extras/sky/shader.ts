@@ -7,7 +7,7 @@ import {
     backgroundLayout,
     engineLayout,
     LightingGpu,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 
 /** Procedural sky colors and atmosphere controls; sun disks come from the directional-light table. */
 export const SkyGpu = d

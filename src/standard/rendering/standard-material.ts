@@ -1,7 +1,7 @@
 import tgpu, { type TgpuFn } from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import { engineLayout, litPbr } from "./engine.ts";
 import { type InstanceData, instanceData } from "./instance-data.ts";
 import { BaseColor, StandardMaterial, StandardMaterialInput } from "./material-data.ts";

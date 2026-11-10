@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { MeshPlugin } from "../../core/mesh";
-import { GlobalTransform, TransformPlugin } from "../../core/transform";
+import { MeshPlugin } from "../../core/mesh/index.ts";
+import { GlobalTransform, TransformPlugin } from "../../core/transform/index.ts";
 import { openGpuApp as createApp } from "../../project/testing-gpu.ts";
 import type { GltfJson } from "./gltf.ts";
 import { loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene.ts";

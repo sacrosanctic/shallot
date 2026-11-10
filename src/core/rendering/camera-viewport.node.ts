@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { type Plugin, precompile, type World } from "../../engine";
+import { type Plugin, precompile, type World } from "../../engine/index.ts";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
-import { Transform } from "../transform";
+import { Transform } from "../transform/index.ts";
 import { renderFrameKey } from "./frame-state.ts";
 import {
     attachCanvas,

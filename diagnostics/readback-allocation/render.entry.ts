@@ -1,12 +1,12 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import { Meshes, createApp, Camera, StandardRenderer, Transform, AmbientLight, PointLight, MeshInstance, DirectionalLight, SpotLight, type World } from "../../src/index.ts";
-import { LinesPlugin, drawLine, drawArrow, drawWireBox, GizmoAsset, Gizmo, registerGizmo } from "../../src/extras/lines";
-import { ProfilePlugin } from "../../src/extras/profile";
-import { GltfPlugin, loadGltfScene, poseGltfScene, spawnGltfScene } from "../../src/extras/gltf";
+import { LinesPlugin, drawLine, drawArrow, drawWireBox, GizmoAsset, Gizmo, registerGizmo } from "../../src/extras/lines/index.ts";
+import { ProfilePlugin } from "../../src/extras/profile/index.ts";
+import { GltfPlugin, loadGltfScene, poseGltfScene, spawnGltfScene } from "../../src/extras/gltf/index.ts";
 import { skinningFixtureUrl } from "../../src/extras/gltf/skinning.fixture";
-import { BackgroundContext, backgroundLayout, CameraBackground, registerProducerTable, Materials, ScreenSpaceAmbientOcclusion, ScreenSpaceAmbientOcclusionPlugin, StandardMaterial, registerBackground } from "../../src/standard/rendering";
-import { RenderContext } from "../../src/core/rendering";
+import { BackgroundContext, backgroundLayout, CameraBackground, registerProducerTable, Materials, ScreenSpaceAmbientOcclusion, ScreenSpaceAmbientOcclusionPlugin, StandardMaterial, registerBackground } from "../../src/standard/rendering/index.ts";
+import { RenderContext } from "../../src/core/rendering/index.ts";
 import { attachCanvas } from "../../src/core/rendering/view.ts";
 import { CanvasContext } from "../../src/engine/app/canvas.fixture";
 import {

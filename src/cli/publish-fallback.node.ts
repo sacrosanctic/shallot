@@ -12,7 +12,7 @@ import { join, resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { publishTestChromium } from "../../scripts/publish-browser.ts";
 import { removeTestDirectory } from "../../scripts/test-directory.ts";
-import { buildWeb, CROSS_ORIGIN_ISOLATION, contentType } from "../project";
+import { buildWeb, CROSS_ORIGIN_ISOLATION, contentType } from "../project/index.ts";
 import { verifyPublishedGame } from "./publish-verify.ts";
 
 setDefaultTimeout(TIMEOUT.node);

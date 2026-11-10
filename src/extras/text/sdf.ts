@@ -1,7 +1,7 @@
 import tgpu, { type TgpuRenderPipeline } from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 
 /** the SDF falloff exponent the atlas bakes and {@link sdfToSignedDistance} inverts. @internal */
 export const SDF_EXPONENT = 9;

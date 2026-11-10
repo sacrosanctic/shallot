@@ -15,7 +15,7 @@ export {
     setDefaultLoading,
     setDefaultPlugins,
     warmPlugins,
-} from "./app";
+} from "./app/index.ts";
 export {
     Diagnostic,
     type DiagnosticMeasurement,
@@ -25,7 +25,7 @@ export {
     SYSTEM_MEASURE_PREFIX,
     sampleDiagnosticTime,
     UI_MOUNT_MEASURE,
-} from "./diagnostics";
+} from "./diagnostics/index.ts";
 export {
     and,
     type Component,
@@ -60,7 +60,7 @@ export {
     vec4,
     World,
     type WorldSnapshot,
-} from "./ecs";
+} from "./ecs/index.ts";
 export {
     type BufferProbe,
     type BufferProbeOptions,
@@ -94,7 +94,7 @@ export {
     tgslCanary,
     UnsupportedError,
     validateGpu,
-} from "./runtime";
+} from "./runtime/index.ts";
 export { resizeViewport, type Viewport, Viewports } from "./runtime/viewport.ts";
 export {
     clamp,
@@ -119,4 +119,4 @@ export {
     srgbToLinear,
     unpackColor,
     unpackColorInto,
-} from "./utils";
+} from "./utils/index.ts";

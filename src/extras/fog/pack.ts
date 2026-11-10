@@ -1,5 +1,5 @@
-import type { World } from "../../engine";
-import { unpackColorInto } from "../../engine";
+import type { World } from "../../engine/index.ts";
+import { unpackColorInto } from "../../engine/index.ts";
 import { Fog } from "./index.ts";
 import { FOG_PARAMS } from "./medium.ts";
 

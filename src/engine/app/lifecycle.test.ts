@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { Time } from "../ecs";
+import { Time } from "../ecs/index.ts";
 import type { Plugin } from "./index.ts";
 import { createApp, runApp } from "./index.ts";
 

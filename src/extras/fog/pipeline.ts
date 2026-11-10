@@ -1,7 +1,7 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { ShadowFilteringMethodMode, ViewUniforms } from "../../core/rendering";
+import { ShadowFilteringMethodMode, ViewUniforms } from "../../core/rendering/index.ts";
 import {
     clusterCell,
     IndirectLightInput,
@@ -15,7 +15,7 @@ import {
     SunShadow,
     sampleSunShadow,
     tileRectsSchema,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import {
     directionalInScatter,
     equiangularInScatter,

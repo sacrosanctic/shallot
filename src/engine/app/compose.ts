@@ -1,4 +1,4 @@
-import { declaration } from "../ecs";
+import { declaration } from "../ecs/index.ts";
 import type { Plugin } from ".";
 
 /** a required plugin edge whose dependency is absent from the composition. */

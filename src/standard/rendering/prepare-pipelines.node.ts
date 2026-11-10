@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { Meshes, MeshInstance } from "../../core/mesh";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
@@ -10,9 +10,9 @@ import {
     DirectionalLight,
     NormalPrepass,
     NotShadowCaster,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { lookAtRotation, type World } from "../../engine";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation, type World } from "../../engine/index.ts";
 import {
     AlphaMode,
     Materials,

@@ -1,9 +1,9 @@
 import type { IndexFlag, StorageFlag, TgpuBuffer, UniformFlag } from "typegpu";
 import type { AnyData, AnyWgslData, WgslArray } from "typegpu/data";
 import * as d from "typegpu/data";
-import type { System, World } from "../../engine";
+import type { System, World } from "../../engine/index.ts";
 
-import { HandleAllocator, octEncode, packUnorm2 } from "../../engine/utils";
+import { HandleAllocator, octEncode, packUnorm2 } from "../../engine/utils/index.ts";
 import { MeshQuant, packTangent } from "./vertex.ts";
 
 export type MeshStorage<T extends AnyWgslData> = TgpuBuffer<WgslArray<T>> & StorageFlag;
@@ -233,7 +233,7 @@ class MeshRegistryImpl implements MeshRegistry {
     }
 }
 
-export const Meshes: import("../../engine").Resource<MeshRegistry> = {
+export const Meshes: import("../../engine/index.ts").Resource<MeshRegistry> = {
     create: (world) => world.resource(meshResourcesKey).meshes,
 };
 

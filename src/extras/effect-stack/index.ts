@@ -12,8 +12,8 @@ import {
     imageView,
     TonemappingSystem,
     Views,
-} from "../../core/rendering";
-import { component, f32, i32, type Plugin, u32, vec2, type World } from "../../engine";
+} from "../../core/rendering/index.ts";
+import { component, f32, i32, type Plugin, u32, vec2, type World } from "../../engine/index.ts";
 import {
     beginRenderPass,
     draw,
@@ -21,7 +21,7 @@ import {
     precompile,
     setRenderBindGroup,
     setRenderPipeline,
-} from "../../engine/runtime";
+} from "../../engine/runtime/index.ts";
 
 /** Radial streaks, with intensity as a fraction of the view size. colorLut is a registerImage id,
  * or -1 for the default red/green/blue gradient. The LUT is sampled along its vertical center. */

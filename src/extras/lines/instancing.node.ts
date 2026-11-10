@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { attachTexture, Camera, TransparentPhases } from "../../core/rendering";
-import { Transform } from "../../core/transform";
+import { attachTexture, Camera, TransparentPhases } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
 import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);

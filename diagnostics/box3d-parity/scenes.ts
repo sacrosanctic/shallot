@@ -8,7 +8,7 @@
 // the frozen ragdoll fixture. Environment as native.c:
 // RAIN_COUNT, RAIN_GROUP, ROCKS, COLORS, CACHE, PROFILE, COUNTERS, and on Node CPU (cpu.ts).
 // HASH_STEPS=0 disables hash output for timing; SAMPLE_WALL=1 reports setup and loop costs as M JSON.
-import { World } from "../../src/engine";
+import { World } from "../../src/engine/index.ts";
 import { awakeContactCount, contactBodyId, contactCapacity, contactField, ContactField } from "../../src/standard/physics/collision/contact.ts";
 import { OVERFLOW_INDEX } from "../../src/standard/physics/common/constants.ts";
 import { BodyType, defaultBodyDef, defaultFilter, defaultShapeDef, defaultSurfaceMaterial, type BodyDef, type ShapeDef, type WorldDef } from "../../src/standard/physics/common/types.ts";

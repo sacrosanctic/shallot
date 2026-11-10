@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { expectWarning } from "../../../scripts/test-console.ts";
-import { RenderingPlugin } from "../../core/rendering";
-import { DEFAULT_PLUGINS } from "../../standard";
-import { StandardRenderingPlugin } from "../../standard/rendering";
+import { RenderingPlugin } from "../../core/rendering/index.ts";
+import { DEFAULT_PLUGINS } from "../../standard/index.ts";
+import { StandardRenderingPlugin } from "../../standard/rendering/index.ts";
 import { stampAdapter } from "../index.ts";
 import { createApp, type Plugin } from "./index.ts";
 

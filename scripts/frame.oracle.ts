@@ -31,7 +31,7 @@ const {
 } = await import("@dylanebert/shallot/extras");
 const { setupGlobals } = await import("@dylanebert/shallot/webgpu");
 const { Gallery, GalleryPlugin } = await import("../examples/materials/src/gallery.ts");
-const { Clock, CyclePlugin, CycleScene } = await import("../examples/day-night-cycle/src/cycle");
+const { Clock, CyclePlugin, CycleScene } = await import("../examples/day-night-cycle/src/cycle/index.ts");
 const { Demo } = await import("../examples/first-person/src/demo.ts");
 const { MotesPlugin } = await import("../examples/particles/src/motes.ts");
 const { Room } = await import("../examples/particles/src/room.ts");

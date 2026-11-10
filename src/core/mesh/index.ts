@@ -1,4 +1,4 @@
-import type { Plugin } from "../../engine";
+import type { Plugin } from "../../engine/index.ts";
 import { MeshInstance } from "./instance.ts";
 
 export { MeshInstance } from "./instance.ts";

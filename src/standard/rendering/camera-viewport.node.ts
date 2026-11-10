@@ -9,9 +9,9 @@ import {
     DirectionalLight,
     Resolution,
     Views,
-} from "../../core/rendering";
+} from "../../core/rendering/index.ts";
 import { renderFrameKey } from "../../core/rendering/frame-state.ts";
-import { Transform } from "../../core/transform";
+import { Transform } from "../../core/transform/index.ts";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
 import { Clusters } from "./cluster.ts";
 import { StandardRenderer, StandardRenderingPlugin } from "./index.ts";

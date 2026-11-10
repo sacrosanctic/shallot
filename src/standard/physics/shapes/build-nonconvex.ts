@@ -1,4 +1,4 @@
-import type { World } from "../../../engine";
+import type { World } from "../../../engine/index.ts";
 import type { Vec3 } from "../common/records.ts";
 import { type Kernel, kernel } from "../kernel/kernel.ts";
 import type { HeightFieldData, HeightFieldDef } from "./heightfield.ts";

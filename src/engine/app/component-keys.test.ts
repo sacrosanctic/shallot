@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { component, f32 } from "../ecs";
+import { component, f32 } from "../ecs/index.ts";
 import { resolvePlugins } from "./compose.ts";
 
 test("different empty records under one key are refused, naming both plugins", () => {

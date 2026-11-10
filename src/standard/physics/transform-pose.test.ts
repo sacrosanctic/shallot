@@ -1,5 +1,5 @@
 import { expect, spyOn, test } from "bun:test";
-import { Body, BodyType, Shape, ShapeKind } from "../../core/physics";
+import { Body, BodyType, Shape, ShapeKind } from "../../core/physics/index.ts";
 import {
     deriveTransforms,
     GlobalTransform,
@@ -7,8 +7,8 @@ import {
     PrepareGlobalTransformSystem,
     Transform,
     TransformRuntime,
-} from "../../core/transform";
-import { createApp, type Plugin, type System, Time } from "../../engine";
+} from "../../core/transform/index.ts";
+import { createApp, type Plugin, type System, Time } from "../../engine/index.ts";
 import { Character, CharacterPlugin } from "./character.ts";
 import { init, kernel } from "./kernel/kernel.ts";
 import {

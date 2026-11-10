@@ -1,7 +1,7 @@
 import tgpu, { type TgpuRenderPipeline } from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import { agxLut } from "./agx-lut.ts";
 import { GradingConfig, grade } from "./color-grading.ts";
 import { tmAgxLog, tmLuma, tonemap } from "./tonemap.ts";

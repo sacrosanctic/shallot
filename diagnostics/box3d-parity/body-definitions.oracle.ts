@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import { createApp } from "../../src/engine";
-import { Body, BodyMotionLock, BodyType } from "../../src/core/physics";
-import { hashPhysics, StandardPhysicsPlugin } from "../../src/standard/physics";
-import { init } from "../../src/standard/physics/api";
+import { createApp } from "../../src/engine/index.ts";
+import { Body, BodyMotionLock, BodyType } from "../../src/core/physics/index.ts";
+import { hashPhysics, StandardPhysicsPlugin } from "../../src/standard/physics/index.ts";
+import { init } from "../../src/standard/physics/api/index.ts";
 import { defaultSurfaceMaterial } from "../../src/standard/physics/common/types.ts";
 import {
     BodyProperty,

@@ -2,8 +2,8 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { component, f32, type GpuTable, type World } from "../../engine";
-import { probeBuffer } from "../../engine/runtime";
+import { component, f32, type GpuTable, type World } from "../../engine/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
 import {
     instanceData,
     instanceDataTable,

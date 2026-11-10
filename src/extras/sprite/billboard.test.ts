@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { Billboard } from "../../core/rendering";
+import { Billboard } from "../../core/rendering/index.ts";
 import { World } from "../../engine/ecs/world.ts";
 import { Sprite } from "./pack.ts";
 

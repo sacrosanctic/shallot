@@ -8,8 +8,8 @@ import {
     Camera,
     captureTexture,
     DebandDither,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
 import { isolationFont } from "./font.fixture";
 import { internText, registerFont, Text, TextPlugin } from "./index.ts";
 

@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
-import { Body, BodyType, Shape, ShapeKind } from "../../core/physics";
-import { GlobalTransform } from "../../core/transform";
-import { createApp, type World } from "../../engine";
+import { Body, BodyType, Shape, ShapeKind } from "../../core/physics/index.ts";
+import { GlobalTransform } from "../../core/transform/index.ts";
+import { createApp, type World } from "../../engine/index.ts";
 import {
     computeBodyAABB,
     getLocalPoint,

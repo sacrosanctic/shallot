@@ -3,9 +3,9 @@ import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { createApp } from "../../engine/app";
-import { probeBuffer } from "../../engine/runtime";
-import { Xform } from "../rendering";
+import { createApp } from "../../engine/app/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
+import { Xform } from "../rendering/index.ts";
 
 await setupGlobals();
 

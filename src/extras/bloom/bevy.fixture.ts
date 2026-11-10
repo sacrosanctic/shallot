@@ -1,5 +1,5 @@
 import { readFileSync } from "node:fs";
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 
 // Bevy b3bdd75be bloom.wesl: resolve WESL's FIRST_DOWNSAMPLE, UNIFORM_SCALE and
 // USE_THRESHOLD conditionals by hand; functions guarded without braces may remain unused.

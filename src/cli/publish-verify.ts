@@ -3,7 +3,7 @@ import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import type { APIResponse, Browser, BrowserType, Page } from "playwright";
-import { CROSS_ORIGIN_ISOLATION, contentType } from "../project";
+import { CROSS_ORIGIN_ISOLATION, contentType } from "../project/index.ts";
 import { installDev } from "./publish-dependencies.ts";
 import { publishProgress } from "./publish-output.ts";
 

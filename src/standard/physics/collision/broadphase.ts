@@ -1,4 +1,4 @@
-import type { World } from "../../../engine";
+import type { World } from "../../../engine/index.ts";
 // Broad-phase — a port of Box3D's src/broad_phase.c (Erin Catto, MIT), the container over three
 // dynamic trees (static / kinematic / dynamic). Moved leaves mark their ancestors; candidate shape
 // pairs are traversed in tasks and globally sorted before contacts are created.

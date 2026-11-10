@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { gpuScene } from "../../../scripts/gpu.fixture";
 import { expectWarning } from "../../../scripts/test-console.ts";
-import { Meshes, MeshInstance } from "../../core/mesh";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     Anchor,
     attachTexture,
@@ -14,17 +14,17 @@ import {
     Tonemapping,
     TonemappingMethod,
     TransparentPhases,
-} from "../../core/rendering";
+} from "../../core/rendering/index.ts";
 import { imageTextures } from "../../core/rendering/image.ts";
-import { Transform } from "../../core/transform";
-import type { Plugin, World } from "../../engine";
+import { Transform } from "../../core/transform/index.ts";
+import type { Plugin, World } from "../../engine/index.ts";
 import {
     AlphaMode,
     MaterialPlugin,
     MeshMaterial,
     materialType,
     StandardRenderer,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import { Sprite, SpriteAlphaMode, SpritePlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);

@@ -1,4 +1,4 @@
-import { SYSTEM_MEASURE_PREFIX, sampleDiagnosticTime, userTimingSpan } from "../diagnostics";
+import { SYSTEM_MEASURE_PREFIX, sampleDiagnosticTime, userTimingSpan } from "../diagnostics/index.ts";
 import type { World } from "./world.ts";
 
 function invalidDelta(): never {

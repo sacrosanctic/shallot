@@ -3,7 +3,7 @@
 // synchronous. init() owns threading and startup contracts. The shared artifact loads dynamically
 // so single-thread consumers never parse it.
 
-import type { EntityRef, World } from "../../../engine";
+import type { EntityRef, World } from "../../../engine/index.ts";
 import { makeShapeId } from "../api/config.ts";
 import type { EntityId } from "../common/ids.ts";
 import { type ShapeEntity, shapeEntityAt } from "../world/shape-entities.ts";

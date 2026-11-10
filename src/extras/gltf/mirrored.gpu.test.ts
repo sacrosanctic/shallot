@@ -1,6 +1,6 @@
 import { afterAll, beforeAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { attachTexture, captureTexture } from "../../core/rendering";
+import { attachTexture, captureTexture } from "../../core/rendering/index.ts";
 import {
     type App,
     Camera,
@@ -10,7 +10,7 @@ import {
     Transform,
 } from "../../index.ts";
 import { openGpuApp } from "../../project/testing-gpu.ts";
-import { MeshRenderPlugin, StandardRenderingPlugin } from "../../standard/rendering";
+import { MeshRenderPlugin, StandardRenderingPlugin } from "../../standard/rendering/index.ts";
 import { loadGltfScene, spawnGltfScene } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);

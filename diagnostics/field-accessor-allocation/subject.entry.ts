@@ -1,5 +1,5 @@
 // Field-accessor workloads for the allocation sampler: a bare World, 64 entities, one row per input.
-import { component, f32, u32, vec4, World } from "../../src/engine";
+import { component, f32, u32, vec4, World } from "../../src/engine/index.ts";
 
 export const ROWS = ["raw", "single-set", "mixed-set", "get-set", "five-field"] as const;
 export type Row = (typeof ROWS)[number];

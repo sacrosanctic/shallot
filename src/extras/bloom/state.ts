@@ -1,4 +1,4 @@
-import type { EffectPass } from "../../core/rendering";
+import type { EffectPass } from "../../core/rendering/index.ts";
 
 export const BloomCompositeMode = {
     EnergyConserving: 0,

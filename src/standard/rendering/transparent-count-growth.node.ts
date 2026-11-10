@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { expectWarning } from "../../../scripts/test-console.ts";
-import { Meshes, MeshInstance } from "../../core/mesh";
-import { attachTexture, Camera } from "../../core/rendering";
-import { Transform } from "../../core/transform";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
+import { attachTexture, Camera } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
 import {
     AlphaMode,
     Materials,

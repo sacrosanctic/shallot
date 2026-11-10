@@ -1,4 +1,4 @@
-import { reportStartup } from "../../../engine/runtime";
+import { reportStartup } from "../../../engine/runtime/index.ts";
 import { readJointEventUserData } from "../kernel/jointcolumns.ts";
 import { assertKernelEntry, kernel, rethrowQueryError, threads } from "../kernel/kernel.ts";
 import type { WorldState } from "../world/world.ts";

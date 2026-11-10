@@ -1,5 +1,5 @@
 import * as d from "typegpu/data";
-import type { Mesh } from "../../core/mesh";
+import type { Mesh } from "../../core/mesh/index.ts";
 import type { MaterialType } from "./material-type.ts";
 
 export function materialAttributeError(

@@ -1,5 +1,5 @@
-import type { PhysicsMesh } from "../../core/physics";
-import type { Resource, World } from "../../engine";
+import type { PhysicsMesh } from "../../core/physics/index.ts";
+import type { Resource, World } from "../../engine/index.ts";
 import type { AABB } from "./common/records.ts";
 import { buildMesh } from "./geometry-builds.ts";
 import { kernel } from "./kernel/kernel.ts";

@@ -5,13 +5,13 @@
 
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import {
     dispatchWorkgroups,
     dispatchWorkgroups2,
     setComputeBindGroup,
     setComputePipeline,
-} from "../../engine/runtime";
+} from "../../engine/runtime/index.ts";
 import { DrawIndexedIndirect } from "./registry.ts";
 
 // One indirect record per casting mesh; instanceCount sums combo survivors and firstInstance

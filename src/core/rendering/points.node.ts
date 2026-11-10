@@ -1,16 +1,16 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps, gpuScene } from "../../../scripts/gpu.fixture";
-import { MeshInstance } from "../../core/mesh";
-import type { Resource, System } from "../../engine";
-import { ClearChangeMarksSystem } from "../../engine/app";
+import { MeshInstance } from "../../core/mesh/index.ts";
+import type { Resource, System } from "../../engine/index.ts";
+import { ClearChangeMarksSystem } from "../../engine/app/index.ts";
 import { precompileState, typegpuRoot } from "../../engine/runtime/gpu.ts";
 import {
     MaterialTypes,
     MeshRenderPlugin,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import {
     Clusters,
     CullLightsSystem,
@@ -29,7 +29,7 @@ import {
     GlobalTransformTickStartSystem,
     PrepareGlobalTransformSystem,
     Transform,
-} from "../transform";
+} from "../transform/index.ts";
 import { TransformRuntime } from "../transform/global-transform.ts";
 import { Frame, frameKey } from "./frame.ts";
 import { EndFrameSystem, renderFrameKey } from "./frame-state.ts";

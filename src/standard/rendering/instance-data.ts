@@ -1,8 +1,8 @@
 import tgpu, { type TgpuBindGroupLayout } from "typegpu";
 import type { AnyWgslStruct } from "typegpu/data";
 import * as d from "typegpu/data";
-import type { Component, GpuTable, World } from "../../engine";
-import { laneLayout, writeLane } from "../../engine/ecs";
+import type { Component, GpuTable, World } from "../../engine/index.ts";
+import { laneLayout, writeLane } from "../../engine/ecs/index.ts";
 
 const Presence = d.struct({ present: d.u32 });
 

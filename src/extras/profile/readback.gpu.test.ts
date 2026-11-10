@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { DiagnosticsStore } from "../../engine";
+import { DiagnosticsStore } from "../../engine/index.ts";
 import { ProfilePlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);

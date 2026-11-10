@@ -8,8 +8,8 @@ import {
     PhysicsMeshes,
     Shape,
     ShapeKind,
-} from "../../core/physics";
-import { createApp, World } from "../../engine";
+} from "../../core/physics/index.ts";
+import { createApp, World } from "../../engine/index.ts";
 import { heightFieldBuild } from "./geometry-builds.ts";
 import { StandardPhysicsPlugin, shapeEdges, shapeMesh } from "./index.ts";
 import { physicsState } from "./runtime.ts";

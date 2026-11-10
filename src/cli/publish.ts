@@ -4,7 +4,7 @@ import { basename, join } from "node:path";
 import { createInterface } from "node:readline/promises";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import type { Browser } from "playwright";
-import { buildWeb, CROSS_ORIGIN_ISOLATION } from "../project";
+import { buildWeb, CROSS_ORIGIN_ISOLATION } from "../project/index.ts";
 import {
     CLOUDFLARE_LOGIN_ARGS,
     CLOUDFLARE_LOGIN_DISCLOSURE,

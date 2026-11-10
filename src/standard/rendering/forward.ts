@@ -10,8 +10,8 @@ import {
     MeshInstance,
     MeshPlugin,
     meshResourcesKey,
-} from "../../core/mesh";
-import type { View } from "../../core/rendering";
+} from "../../core/mesh/index.ts";
+import type { View } from "../../core/rendering/index.ts";
 import {
     BeginFrameSystem,
     Camera,
@@ -32,11 +32,11 @@ import {
     renderLayers,
     type TransparentPhase,
     Views,
-} from "../../core/rendering";
-import { GlobalTransform } from "../../core/transform";
-import type { Plugin, System, World } from "../../engine";
-import { component, u32 } from "../../engine";
-import { withPipelineOwner } from "../../engine/runtime";
+} from "../../core/rendering/index.ts";
+import { GlobalTransform } from "../../core/transform/index.ts";
+import type { Plugin, System, World } from "../../engine/index.ts";
+import { component, u32 } from "../../engine/index.ts";
+import { withPipelineOwner } from "../../engine/runtime/index.ts";
 import {
     cascadeRegather,
     disposeShadowAtlas,

@@ -6,12 +6,12 @@ setDefaultTimeout(TIMEOUT.node);
 
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { Body, BodyType, Shape } from "../../core/physics";
-import { attachCanvas, Camera, RenderingPlugin } from "../../core/rendering";
+import { Body, BodyType, Shape } from "../../core/physics/index.ts";
+import { attachCanvas, Camera, RenderingPlugin } from "../../core/rendering/index.ts";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
 import { globalTransformTable, probeBuffer, Time, Transform } from "../../index.ts";
-import { StandardPhysicsPlugin } from "../../standard/physics";
-import { GlobalTransform } from "../transform";
+import { StandardPhysicsPlugin } from "../../standard/physics/index.ts";
+import { GlobalTransform } from "../transform/index.ts";
 import { GlobalTransformHistory as TransformRuntime } from "./global-transform.ts";
 
 await setupGlobals();

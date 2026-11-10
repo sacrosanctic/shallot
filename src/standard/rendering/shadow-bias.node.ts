@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { cube, Meshes, MeshInstance } from "../../core/mesh";
+import { cube, Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     AmbientLight,
     attachTexture,
@@ -12,9 +12,9 @@ import {
     PointLight,
     Tonemapping,
     TonemappingMethod,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { lookAtRotation, type World } from "../../engine";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation, type World } from "../../engine/index.ts";
 import { StandardRenderer, StandardRenderingPlugin } from "./index.ts";
 import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";
 import { MeshRenderPlugin } from "./mesh-render.ts";

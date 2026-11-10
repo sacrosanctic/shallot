@@ -1,15 +1,15 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { meshResourcesKey } from "../../core/mesh";
-import type { World } from "../../engine";
+import { meshResourcesKey } from "../../core/mesh/index.ts";
+import type { World } from "../../engine/index.ts";
 import {
     beginComputePass,
     dispatchWorkgroups,
     endComputePass,
     setComputeBindGroup,
     setComputePipeline,
-} from "../../engine/runtime";
+} from "../../engine/runtime/index.ts";
 
 import { MaterialTypes, materialSource, TRANSPARENT_KEYS } from "./material-type.ts";
 

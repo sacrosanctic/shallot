@@ -1,5 +1,5 @@
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { createApp } from "../../engine";
+import { createApp } from "../../engine/index.ts";
 import {
     AlphaMode,
     engineLayout,
@@ -9,9 +9,9 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "../../standard/rendering";
-import { cube, Meshes, MeshInstance } from "../mesh";
-import { Transform } from "../transform";
+} from "../../standard/rendering/index.ts";
+import { cube, Meshes, MeshInstance } from "../mesh/index.ts";
+import { Transform } from "../transform/index.ts";
 import { attachTexture, Camera, TransparentPhases } from ".";
 
 const MAX_ITEMS = 8192;

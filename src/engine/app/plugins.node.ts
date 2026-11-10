@@ -5,8 +5,8 @@ import { createTestGpuApp } from "../../../scripts/gpu.fixture";
 setDefaultTimeout(TIMEOUT.node);
 
 import { expectWarning } from "../../../scripts/test-console.ts";
-import { AudioPlugin, Listener, Sound } from "../../core/audio";
-import { MeshInstance } from "../../core/mesh";
+import { AudioPlugin, Listener, Sound } from "../../core/audio/index.ts";
+import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     Body,
     BodyType,
@@ -14,7 +14,7 @@ import {
     Shape,
     ShapeKind,
     SphericalJoint,
-} from "../../core/physics";
+} from "../../core/physics/index.ts";
 import {
     AmbientLight,
     attachCanvas,
@@ -28,11 +28,11 @@ import {
     Tonemapping,
     Views,
     VolumetricLight,
-} from "../../core/rendering";
+} from "../../core/rendering/index.ts";
 import { globalTransformTable } from "../../core/rendering/global-transform.ts";
 import { imageSampler, imageTexture } from "../../core/rendering/image.ts";
 import { offscreenTexture } from "../../core/rendering/view.ts";
-import { GlobalTransform } from "../../core/transform";
+import { GlobalTransform } from "../../core/transform/index.ts";
 import {
     drawArrow,
     EffectStackPlugin,
@@ -57,10 +57,10 @@ import {
     Text,
     TextPlugin,
     Vignette,
-} from "../../extras";
+} from "../../extras/index.ts";
 import { segmentState } from "../../extras/lines/segments.ts";
 import { SpriteSource } from "../../extras/sprite/material.ts";
-import { textStateKey } from "../../extras/text";
+import { textStateKey } from "../../extras/text/index.ts";
 import { isolationFont } from "../../extras/text/font.fixture";
 import {
     DEFAULT_PLUGINS,
@@ -69,14 +69,14 @@ import {
     StandardAudioPlugin,
     StandardMaterial,
     Transform,
-} from "../../standard";
+} from "../../standard/index.ts";
 import {
     Character,
     CharacterPlugin,
     hashPhysics,
     StandardPhysicsPlugin,
     setLinearVelocity,
-} from "../../standard/physics";
+} from "../../standard/physics/index.ts";
 import { physicsState } from "../../standard/physics/runtime.ts";
 import { worldCounters } from "../../standard/physics/world/world.ts";
 import {
@@ -86,7 +86,7 @@ import {
     pointComboEids,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import { createApp, type Plugin, probeTexture, Time, type World } from "../index.ts";
 import { CanvasContext } from "./canvas.fixture";
 

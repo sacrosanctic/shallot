@@ -1,4 +1,4 @@
-import type { World } from "../../../engine";
+import type { World } from "../../../engine/index.ts";
 import type { AABB } from "../common/records.ts";
 import { kernel, rethrowQueryError, setQueryCallback } from "./kernel.ts";
 import { guardViews } from "./views.ts";

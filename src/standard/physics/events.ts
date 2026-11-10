@@ -1,4 +1,4 @@
-import type { EntityRef, Resource } from "../../engine";
+import type { EntityRef, Resource } from "../../engine/index.ts";
 
 export interface PhysicsSensorEvent {
     sensorShape: EntityRef;

@@ -1,5 +1,5 @@
-import type { World } from "../../engine";
-import { component, unpackColor } from "../../engine";
+import type { World } from "../../engine/index.ts";
+import { component, unpackColor } from "../../engine/index.ts";
 import { Camera } from "./camera.ts";
 import { RenderContext } from "./render.ts";
 import type { View } from "./view.ts";

@@ -6,7 +6,7 @@ import {
     disposeGpuApps,
     gpuRequirements,
 } from "../../../scripts/gpu.fixture";
-import { MeshInstance } from "../../core/mesh";
+import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     AmbientLight,
     attachTexture,
@@ -15,10 +15,10 @@ import {
     DebandDither,
     DepthPrepass,
     DirectionalLight,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { lookAtRotation, type World } from "../../engine";
-import { rawDevice } from "../../engine/runtime";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation, type World } from "../../engine/index.ts";
+import { rawDevice } from "../../engine/runtime/index.ts";
 import { StandardRenderer } from "./forward.ts";
 import { StandardRenderingPlugin } from "./index.ts";
 import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";

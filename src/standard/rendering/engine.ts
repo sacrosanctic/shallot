@@ -5,8 +5,8 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { MeshQuant } from "../../core/mesh";
-import { FrameGpu, ViewUniforms } from "../../core/rendering";
+import { MeshQuant } from "../../core/mesh/index.ts";
+import { FrameGpu, ViewUniforms } from "../../core/rendering/index.ts";
 import { clusterCell, LightClusters } from "./cluster.ts";
 import { IndirectLightInput, indirectLight } from "./indirect.ts";
 import { distanceAttenuation, LightingGpu, PointLightGpu, spotFactor } from "./lighting.ts";

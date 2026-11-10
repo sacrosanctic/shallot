@@ -1,5 +1,5 @@
-import type { ScalarField, Vector4Field, World } from "../../engine";
-import type { Quat, Transform, Vec3 } from "./api";
+import type { ScalarField, Vector4Field, World } from "../../engine/index.ts";
+import type { Quat, Transform, Vec3 } from "./api/index.ts";
 import { makeJointId } from "./api/config.ts";
 import type { JointBinding, JointDef } from "./authoring.ts";
 import { fieldMarked, JOINT_KIND_COUNT, jointDef } from "./authoring.ts";

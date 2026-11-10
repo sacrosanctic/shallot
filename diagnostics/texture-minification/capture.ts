@@ -4,11 +4,11 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { deflateSync } from "node:zlib";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { createApp } from "../../src";
+import { createApp } from "../../src/index.ts";
 import { genMipmapsLayer, registerImage } from "../../src/core/rendering/image.ts";
-import { probeTexture } from "../../src/engine";
-import { type GltfJson, parseGltf } from "../../src/extras/gltf";
-import { MeshRenderPlugin, StandardRenderingPlugin } from "../../src/standard/rendering";
+import { probeTexture } from "../../src/engine/index.ts";
+import { type GltfJson, parseGltf } from "../../src/extras/gltf/index.ts";
+import { MeshRenderPlugin, StandardRenderingPlugin } from "../../src/standard/rendering/index.ts";
 import {
     boxLevel,
     capturePlane,

@@ -1,4 +1,4 @@
-import { Diagnostic, type DiagnosticsStore } from "../../engine";
+import { Diagnostic, type DiagnosticsStore } from "../../engine/index.ts";
 
 export const TIMING_FLOOR_MS = 0.005;
 export const TIMING_HISTORY = 120;

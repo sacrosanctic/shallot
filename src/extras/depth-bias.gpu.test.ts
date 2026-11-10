@@ -13,11 +13,11 @@ import {
     DEPTH_FORMAT,
     RenderContext,
     RenderPhases,
-} from "../core/rendering";
-import { Transform } from "../core/transform";
-import { type Plugin, precompile } from "../engine";
-import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./lines";
-import { internText, Text, TextPlugin } from "./text";
+} from "../core/rendering/index.ts";
+import { Transform } from "../core/transform/index.ts";
+import { type Plugin, precompile } from "../engine/index.ts";
+import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./lines/index.ts";
+import { internText, Text, TextPlugin } from "./text/index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const a = [-1.5, 0, -3];

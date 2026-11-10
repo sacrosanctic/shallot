@@ -1,4 +1,4 @@
-import type { World } from "../../engine/ecs";
+import type { World } from "../../engine/ecs/index.ts";
 import {
     type DistanceInput,
     type DistanceOutput,

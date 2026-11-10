@@ -1,11 +1,11 @@
-import { RenderContext } from "../../core/rendering";
-import type { World } from "../../engine";
+import { RenderContext } from "../../core/rendering/index.ts";
+import type { World } from "../../engine/index.ts";
 import {
     dispatchWorkgroups,
     dispatchWorkgroupsIndirect,
     setComputeBindGroup,
     setComputePipeline,
-} from "../../engine/runtime";
+} from "../../engine/runtime/index.ts";
 import { countLayout, scatterLayout } from "./pack.ts";
 import {
     ProducerDispatch,

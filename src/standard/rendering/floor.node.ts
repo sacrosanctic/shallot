@@ -10,7 +10,7 @@ import {
     expectAdapterNotice,
 } from "../../../scripts/gpu.fixture";
 import { expectWarning } from "../../../scripts/test-console.ts";
-import { Meshes, MeshInstance } from "../../core/mesh";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     AmbientLight,
     attachTexture,
@@ -25,24 +25,24 @@ import {
     RenderContext,
     SpotLight,
     Views,
-} from "../../core/rendering";
+} from "../../core/rendering/index.ts";
 import { PointsPlugin } from "../../core/rendering/points.fixture";
-import { Transform } from "../../core/transform";
-import { type Plugin, precompile, type World } from "../../engine";
-import { probeBuffer, stampAdapter } from "../../engine/runtime";
+import { Transform } from "../../core/transform/index.ts";
+import { type Plugin, precompile, type World } from "../../engine/index.ts";
+import { probeBuffer, stampAdapter } from "../../engine/runtime/index.ts";
 import { type AdapterInfoFacts, classifyAdapter } from "../../engine/runtime/adapter.ts";
-import { EffectStackPlugin, Vignette } from "../../extras/effect-stack";
+import { EffectStackPlugin, Vignette } from "../../extras/effect-stack/index.ts";
 import { SkinnedMaterial } from "../../extras/gltf/skinning.ts";
-import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "../../extras/lines";
+import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "../../extras/lines/index.ts";
 import {
     instanceLayout as lineInstanceLayout,
     lineLayout,
     viewLayout as lineViewLayout,
 } from "../../extras/lines/pipeline.ts";
-import { Sprite, SpriteMaterialInput, SpriteMaterialType, SpritePlugin } from "../../extras/sprite";
+import { Sprite, SpriteMaterialInput, SpriteMaterialType, SpritePlugin } from "../../extras/sprite/index.ts";
 import { SpriteAlphaMode } from "../../extras/sprite/pack.ts";
 import { spritePublicationLayout } from "../../extras/sprite/table.ts";
-import { internText, registerFont, Text, TextPlugin } from "../../extras/text";
+import { internText, registerFont, Text, TextPlugin } from "../../extras/text/index.ts";
 import { isolationFont } from "../../extras/text/font.fixture";
 import { textLayout, viewLayout as textViewLayout } from "../../extras/text/pipeline.ts";
 import {
@@ -73,7 +73,7 @@ import {
     VertexMaterialType,
 } from "./index.ts";
 import { isMeshInstanceDraw } from "./preprocess.ts";
-import "../../standard";
+import "../../standard/index.ts";
 
 const FloorParameters = d.struct({ color: d.vec4f });
 const attributeLayout = materialLayout(FloorParameters, {

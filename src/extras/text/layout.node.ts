@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { Anchor, Billboard } from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { probeBuffer } from "../../engine/runtime";
+import { Anchor, Billboard } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
 import * as atlas from "./atlas.ts";
 import { isolationFont } from "./font.fixture";
 import { GLYPH_AT, GLYPH_BYTES, GLYPH_FLOATS } from "./glyph.ts";

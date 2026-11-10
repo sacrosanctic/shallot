@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { runInNewContext } from "node:vm";
-import { World } from "../../engine";
+import { World } from "../../engine/index.ts";
 import { type Mesh, Meshes, meshResourcesKey } from "./index.ts";
 import { cube } from "./primitives.ts";
 

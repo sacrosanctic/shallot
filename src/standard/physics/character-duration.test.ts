@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
-import { Body, PhysicsPlugin, Shape, ShapeKind } from "../../core/physics";
-import { Transform, TransformPlugin } from "../../core/transform";
-import { Time, World } from "../../engine";
+import { Body, PhysicsPlugin, Shape, ShapeKind } from "../../core/physics/index.ts";
+import { Transform, TransformPlugin } from "../../core/transform/index.ts";
+import { Time, World } from "../../engine/index.ts";
 import { Character, CharacterPlugin } from "./character.ts";
 import gold from "./character-duration.gold.json";
 import { BodyType } from "./common/types.ts";

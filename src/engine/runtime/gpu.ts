@@ -1,6 +1,6 @@
 import tgpu, { type TgpuRoot } from "typegpu";
 import { u32 } from "typegpu/data";
-import type { Resource, World } from "../ecs";
+import type { Resource, World } from "../ecs/index.ts";
 import { type AdapterInfoFacts, type AdapterVerdict, classifyAdapter } from "./adapter.ts";
 import { continueSubmissionFence, submissionFence } from "./allocation-site.ts";
 import { captureGpuLog } from "./log.ts";

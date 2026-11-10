@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { attachCanvas, Camera, RenderingPlugin } from "../../core/rendering";
-import { Time, type World } from "../../engine";
+import { attachCanvas, Camera, RenderingPlugin } from "../../core/rendering/index.ts";
+import { Time, type World } from "../../engine/index.ts";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
-import { Transform, TransformPlugin } from "../transform";
+import { Transform, TransformPlugin } from "../transform/index.ts";
 import { GlobalTransformHistory as TransformRuntime } from "./global-transform.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);

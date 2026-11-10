@@ -1,4 +1,4 @@
-import { HandleAllocator } from "../../engine/utils";
+import { HandleAllocator } from "../../engine/utils/index.ts";
 
 /** World-local assets keyed by generation-checked handles, never by their display names.
  * Definitions are immutable after addition. Removal and clear invalidate handles; a stale handle

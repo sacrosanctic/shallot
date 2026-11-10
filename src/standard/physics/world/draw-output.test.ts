@@ -16,9 +16,9 @@ import {
     UNIT_CUBE_ID,
     WeldJoint,
     WheelJoint,
-} from "../../../core/physics";
-import { Transform } from "../../../core/transform";
-import { createApp, Time } from "../../../engine";
+} from "../../../core/physics/index.ts";
+import { Transform } from "../../../core/transform/index.ts";
+import { createApp, Time } from "../../../engine/index.ts";
 import { DEFAULT_MASK_BITS } from "../common/constants.ts";
 import type { AABB, WorldTransform } from "../common/records.ts";
 import { drawPhysics, PhysicsWorldDefinition, StandardPhysicsPlugin } from "../index.ts";

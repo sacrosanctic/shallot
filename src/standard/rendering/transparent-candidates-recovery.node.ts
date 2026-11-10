@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { Meshes, MeshInstance } from "../../core/mesh";
-import { attachTexture, Camera, TransparentPhases } from "../../core/rendering";
-import { Transform } from "../../core/transform";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
+import { attachTexture, Camera, TransparentPhases } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
 import {
     AlphaMode,
     Materials,

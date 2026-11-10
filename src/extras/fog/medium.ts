@@ -1,8 +1,8 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { octDecodeNormal } from "../../engine/utils";
-import { PointLightGpu, spotFactor } from "../../standard/rendering";
+import { octDecodeNormal } from "../../engine/utils/index.ts";
+import { PointLightGpu, spotFactor } from "../../standard/rendering/index.ts";
 
 /** Compute workgroup tile: 8×8 = 64 threads. */
 export const WORKGROUP = 8;

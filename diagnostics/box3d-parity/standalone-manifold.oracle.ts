@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import { createApp } from "../../src/engine";
+import { createApp } from "../../src/engine/index.ts";
 import { TIMEOUT } from "../../src/project/testing.js";
-import { StandardPhysicsPlugin } from "../../src/standard/physics";
+import { StandardPhysicsPlugin } from "../../src/standard/physics/index.ts";
 import { manifoldRecords } from "../../src/standard/physics/standalone-manifold.fixture";
 import { nativeSseOutput } from "./native-evidence.ts";
 setDefaultTimeout(TIMEOUT.node);

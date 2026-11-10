@@ -6,7 +6,7 @@ import {
     expectAdapterNotice,
 } from "../../../scripts/gpu.fixture";
 import { expectError } from "../../../scripts/test-console.ts";
-import { RenderingPlugin } from "../../core/rendering";
+import { RenderingPlugin } from "../../core/rendering/index.ts";
 import { type Plugin, runApp } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);

@@ -1,4 +1,4 @@
-import type { World } from "../../../engine";
+import type { World } from "../../../engine/index.ts";
 import { kernel } from "../kernel/kernel.ts";
 import type { Capsule, MassData } from "./geometry.ts";
 import type { HullData } from "./hull.ts";

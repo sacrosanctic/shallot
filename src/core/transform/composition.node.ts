@@ -2,8 +2,8 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { PhysicsPlugin } from "../physics";
-import { globalTransformTable, RenderingPlugin } from "../rendering";
+import { PhysicsPlugin } from "../physics/index.ts";
+import { globalTransformTable, RenderingPlugin } from "../rendering/index.ts";
 import { GlobalTransform, Transform, TransformPlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);

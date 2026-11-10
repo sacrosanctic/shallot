@@ -5,7 +5,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 setDefaultTimeout(TIMEOUT.node);
 
 import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture";
-import { MeshInstance } from "../../core/mesh";
+import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
@@ -14,9 +14,9 @@ import {
     DirectionalLight,
     PointLight,
     SpotLight,
-} from "../../core/rendering";
-import { GlobalTransform, Transform, TransformPlugin } from "../../core/transform";
-import { lookAtRotation, type World } from "../../engine";
+} from "../../core/rendering/index.ts";
+import { GlobalTransform, Transform, TransformPlugin } from "../../core/transform/index.ts";
+import { lookAtRotation, type World } from "../../engine/index.ts";
 import { StandardRenderer } from "./forward.ts";
 import { StandardRenderingPlugin } from "./index.ts";
 import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";

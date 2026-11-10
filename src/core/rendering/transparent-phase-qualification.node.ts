@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { precompile, type World } from "../../engine";
+import { precompile, type World } from "../../engine/index.ts";
 import {
     AlphaMode,
     MaterialPlugin,
@@ -13,10 +13,10 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import { MeshDrawBuffers } from "../../standard/rendering/preprocess.ts";
-import { Meshes, MeshInstance } from "../mesh";
-import { PrepareGlobalTransformSystem, Transform } from "../transform";
+import { Meshes, MeshInstance } from "../mesh/index.ts";
+import { PrepareGlobalTransformSystem, Transform } from "../transform/index.ts";
 import {
     attachTexture,
     Camera,

@@ -1,4 +1,4 @@
-import { component, entity, f32, u32, vec3, vec4 } from "../../engine";
+import { component, entity, f32, u32, vec3, vec4 } from "../../engine/index.ts";
 
 const FLT_MAX = 3.4028234663852886e38;
 const base = {

@@ -4,7 +4,7 @@
 // reflecting and a plain scale, as a mesh shape and as a compound's mesh child.
 import { expect, setDefaultTimeout, test } from "bun:test";
 import gold from "../../crates/physics/tests/mesh_impact.gold.json";
-import { World } from "../../src/engine";
+import { World } from "../../src/engine/index.ts";
 import { BodyType, defaultShapeDef, defaultSurfaceMaterial } from "../../src/standard/physics/common/types.ts";
 import { init } from "../../src/standard/physics/kernel/kernel.ts";
 import { makeBoxHull } from "../../src/standard/physics/shapes/build-hull.ts";

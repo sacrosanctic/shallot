@@ -1,5 +1,5 @@
-import { createApp } from "../../../../engine/app";
-import { rawDevice } from "../../../../engine/runtime";
+import { createApp } from "../../../../engine/app/index.ts";
+import { rawDevice } from "../../../../engine/runtime/index.ts";
 import { imageSampler, imageTextures, imageView, registerImage } from "../../image.ts";
 import { RenderingPlugin } from "../../substrate.ts";
 

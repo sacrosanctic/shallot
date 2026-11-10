@@ -1,8 +1,8 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { fullscreenVertex } from "../../core/rendering";
-import { precompile, probeTexture, type World } from "../../engine";
+import { fullscreenVertex } from "../../core/rendering/index.ts";
+import { precompile, probeTexture, type World } from "../../engine/index.ts";
 import { planeUv } from "./receding-plane.fixture";
 
 const point = d.struct({ uv: d.vec2f, dx: d.vec2f, dy: d.vec2f });

@@ -1,4 +1,4 @@
-import type { EntityRef } from "../../../engine";
+import type { EntityRef } from "../../../engine/index.ts";
 
 /** An ECS shape and body identity a solver shape slot carried at one generation. */
 export interface ShapeEntity {

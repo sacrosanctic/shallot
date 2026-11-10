@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import { Body, BodyType, Shape, ShapeKind, Hulls, PhysicsMeshes } from "../../src/core/physics";
-import { Transform } from "../../src/core/transform";
-import { createApp } from "../../src/engine";
-import { hashPhysics, PhysicsWorldDefinition, StandardPhysicsPlugin } from "../../src/standard/physics";
+import { Body, BodyType, Shape, ShapeKind, Hulls, PhysicsMeshes } from "../../src/core/physics/index.ts";
+import { Transform } from "../../src/core/transform/index.ts";
+import { createApp } from "../../src/engine/index.ts";
+import { hashPhysics, PhysicsWorldDefinition, StandardPhysicsPlugin } from "../../src/standard/physics/index.ts";
 import { nativeBinary, run } from "./native.ts";
 
 setDefaultTimeout(300_000);

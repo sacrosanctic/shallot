@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { World } from "../../engine";
+import { World } from "../../engine/index.ts";
 import { restore, snapshot } from "./api/snapshot.ts";
 import { contactIds } from "./collision/contact.ts";
 import { readContactManifolds } from "./collision/manifoldstore.ts";

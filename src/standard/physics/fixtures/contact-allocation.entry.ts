@@ -1,5 +1,5 @@
-import { Transform } from "../../../core/transform";
-import { createApp } from "../../../engine";
+import { Transform } from "../../../core/transform/index.ts";
+import { createApp } from "../../../engine/index.ts";
 import { contactPair } from "../contact-data.fixture";
 import { getContactData, getSensorData, StandardPhysicsPlugin } from "../index.ts";
 import { sensorVisitors } from "../sensor-data.fixture";

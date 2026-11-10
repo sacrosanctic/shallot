@@ -1,4 +1,4 @@
-import type { World } from "../../../engine";
+import type { World } from "../../../engine/index.ts";
 import type { Transform, Vec3 } from "../common/records.ts";
 import { type Kernel, kernel, kernelState } from "../kernel/kernel.ts";
 import type { HullData } from "./hull.ts";

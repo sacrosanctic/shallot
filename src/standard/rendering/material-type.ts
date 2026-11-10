@@ -2,11 +2,11 @@ import type { TgpuAccessor, TgpuBindGroupLayout, TgpuFn, TgpuLayoutEntry } from 
 import tgpu, { readFromArrayBuffer, writeToArrayBuffer } from "typegpu";
 import type { AnyWgslData, AnyWgslStruct, WgslArray } from "typegpu/data";
 import * as d from "typegpu/data";
-import { MeshInstance } from "../../core/mesh";
-import { Xform } from "../../core/rendering";
-import { GlobalTransform } from "../../core/transform";
-import type { GpuTable, Plugin, Resource, World } from "../../engine";
-import { type ComponentStorage, type LaneFormat, laneLayout, writeLane } from "../../engine/ecs";
+import { MeshInstance } from "../../core/mesh/index.ts";
+import { Xform } from "../../core/rendering/index.ts";
+import { GlobalTransform } from "../../core/transform/index.ts";
+import type { GpuTable, Plugin, Resource, World } from "../../engine/index.ts";
+import { type ComponentStorage, type LaneFormat, laneLayout, writeLane } from "../../engine/ecs/index.ts";
 import { validateBindingLimits } from "./binding-limits.ts";
 import { engineLayout } from "./engine.ts";
 import { type InstanceData, registerInstanceData } from "./instance-data.ts";

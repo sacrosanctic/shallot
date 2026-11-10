@@ -3,7 +3,7 @@ import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "nod
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import type { Browser } from "playwright";
-import * as build from "../project";
+import * as build from "../project/index.ts";
 import { publishProject } from "./publish.ts";
 import * as cloudflare from "./publish-cloudflare.ts";
 import * as itch from "./publish-itch.ts";

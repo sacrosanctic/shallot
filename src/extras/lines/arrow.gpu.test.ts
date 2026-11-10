@@ -11,9 +11,9 @@ import {
     computeClipFromWorld,
     DebandDither,
     TransparentPhases,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { lookAtRotation } from "../../engine/utils";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation } from "../../engine/utils/index.ts";
 import { Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./index.ts";
 import { drawArrow, drawLine, drawWireBox, lineCount } from "./segments.ts";
 

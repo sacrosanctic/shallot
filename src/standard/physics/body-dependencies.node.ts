@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { expectWarning } from "../../../scripts/test-console.ts";
-import { Body, RevoluteJoint, Shape, SphericalJoint } from "../../core/physics";
-import { createApp } from "../../engine";
+import { Body, RevoluteJoint, Shape, SphericalJoint } from "../../core/physics/index.ts";
+import { createApp } from "../../engine/index.ts";
 import * as authoring from "./authoring.ts";
 import * as records from "./kernel/jointrecords.ts";
 import * as marshal from "./marshal-shape.ts";

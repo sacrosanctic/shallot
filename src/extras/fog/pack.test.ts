@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { World } from "../../engine";
+import { World } from "../../engine/index.ts";
 import { Fog } from "./index.ts";
 import { FOG_FLOATS, FOG_PARAMS } from "./medium.ts";
 import { packFog } from "./pack.ts";

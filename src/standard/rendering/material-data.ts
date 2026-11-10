@@ -1,5 +1,5 @@
 import * as d from "typegpu/data";
-import { component, f32, u32, vec4 } from "../../engine";
+import { component, f32, u32, vec4 } from "../../engine/index.ts";
 
 /**
  * One instance's mesh, material and culling row, read by preprocess and the material shaders.

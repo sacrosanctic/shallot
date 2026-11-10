@@ -4,7 +4,7 @@ import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import {
     MaterialPlugin,
     MeshMaterial,
@@ -13,9 +13,9 @@ import {
     materialType,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "../../standard/rendering";
-import { MeshInstance } from "../mesh";
-import { Transform } from "../transform";
+} from "../../standard/rendering/index.ts";
+import { MeshInstance } from "../mesh/index.ts";
+import { Transform } from "../transform/index.ts";
 import {
     attachTexture,
     Camera,

@@ -7,7 +7,7 @@ import {
     gpuRequirements,
 } from "../../../scripts/gpu.fixture";
 import { expectWarning } from "../../../scripts/test-console.ts";
-import { MeshInstance } from "../../core/mesh";
+import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     AmbientLight,
     attachTexture,
@@ -16,10 +16,10 @@ import {
     DepthPrepass,
     PointLight,
     SpotLight,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import type { World } from "../../engine";
-import { rawDevice } from "../../engine/runtime";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import type { World } from "../../engine/index.ts";
+import { rawDevice } from "../../engine/runtime/index.ts";
 import { StandardRenderer } from "./forward.ts";
 import { StandardRenderingPlugin } from "./index.ts";
 import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";

@@ -1,5 +1,5 @@
 import * as d from "typegpu/data";
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import { GlobalTransformHistory } from "./global-transform.ts";
 
 /** Per-frame uniform schema shared by GPU bindings and CPU staging offsets. */
@@ -47,7 +47,7 @@ export function initializeFrameState(world: World): void {
     world.resource(frameKey);
 }
 
-export const Frame: import("../../engine").Resource<Frame> = {
+export const Frame: import("../../engine/index.ts").Resource<Frame> = {
     create: (world) => world.resource(frameKey),
 };
 

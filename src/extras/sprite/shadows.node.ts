@@ -1,24 +1,24 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { MeshInstance } from "../../core/mesh";
+import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Billboard,
     Camera,
     captureTexture,
     DirectionalLight,
-} from "../../core/rendering";
+} from "../../core/rendering/index.ts";
 import { imageTextures } from "../../core/rendering/image.ts";
 import { attachView, detachView, Views } from "../../core/rendering/view.ts";
-import { Transform } from "../../core/transform";
-import { lookAtRotation, precompile } from "../../engine";
-import { probeBuffer } from "../../engine/runtime";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation, precompile } from "../../engine/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
 import {
     DirectionalLightShadowMap,
     StandardRenderer,
     sunShadowView,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import { Sprite, SpriteFill, SpritePlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);

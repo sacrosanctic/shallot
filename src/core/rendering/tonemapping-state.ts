@@ -1,5 +1,5 @@
-import type { Plugin, System, World } from "../../engine";
-import { component, u32 } from "../../engine";
+import type { Plugin, System, World } from "../../engine/index.ts";
+import { component, u32 } from "../../engine/index.ts";
 import {
     beginRenderPass,
     draw,
@@ -7,7 +7,7 @@ import {
     precompile,
     setRenderBindGroup,
     setRenderPipeline,
-} from "../../engine/runtime";
+} from "../../engine/runtime/index.ts";
 import { ColorGrading, GradingConfig } from "./color-grading.ts";
 import {
     BeginFrameSystem,

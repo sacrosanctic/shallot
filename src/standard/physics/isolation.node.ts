@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { World } from "../../engine";
+import { World } from "../../engine/index.ts";
 import { BodyType, defaultShapeDef } from "./common/types.ts";
 import { init, kernel, kernelState, shutdown } from "./kernel/kernel.ts";
 import { queryColumns } from "./kernel/querycolumns.ts";

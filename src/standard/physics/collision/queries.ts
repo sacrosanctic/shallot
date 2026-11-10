@@ -1,4 +1,4 @@
-import type { World } from "../../../engine/ecs";
+import type { World } from "../../../engine/ecs/index.ts";
 import type { Quat, Transform, Vec3 } from "../common/records.ts";
 import { kernel } from "../kernel/kernel.ts";
 import type { ShapeProxy } from "./distance.ts";

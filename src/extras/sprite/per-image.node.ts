@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { expectWarning } from "../../../scripts/test-console.ts";
-import { Meshes, MeshInstance } from "../../core/mesh";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Billboard,
@@ -15,11 +15,11 @@ import {
     registerImage,
     Tonemapping,
     TonemappingMethod,
-} from "../../core/rendering";
+} from "../../core/rendering/index.ts";
 import { imageTextures } from "../../core/rendering/image.ts";
-import { Transform } from "../../core/transform";
-import { rawDevice } from "../../engine/runtime";
-import { Draws, MeshMaterial, StandardRenderer } from "../../standard/rendering";
+import { Transform } from "../../core/transform/index.ts";
+import { rawDevice } from "../../engine/runtime/index.ts";
+import { Draws, MeshMaterial, StandardRenderer } from "../../standard/rendering/index.ts";
 import { MaterialBatches, materialBatch } from "../../standard/rendering/material-batch.ts";
 import { Sprite, SpritePlugin } from "./index.ts";
 

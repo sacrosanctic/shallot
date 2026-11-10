@@ -1,18 +1,18 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import { MeshInstance } from "../../core/mesh";
-import { AmbientLight, attachTexture, Camera, captureTexture, Views } from "../../core/rendering";
+import { MeshInstance } from "../../core/mesh/index.ts";
+import { AmbientLight, attachTexture, Camera, captureTexture, Views } from "../../core/rendering/index.ts";
 import {
     Materials,
     MeshMaterial,
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "../../standard/rendering";
-import "../../standard";
+} from "../../standard/rendering/index.ts";
+import "../../standard/index.ts";
 
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { createTestGpuApp, expectAdapterNotice } from "../../../scripts/gpu.fixture";
-import { Transform } from "../../core/transform";
+import { Transform } from "../../core/transform/index.ts";
 import { stampAdapter, Time, type World } from "../index.ts";
 import type { createApp } from "./index.ts";
 

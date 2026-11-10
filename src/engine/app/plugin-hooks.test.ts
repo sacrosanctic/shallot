@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { HANDOFF_MARK, SYSTEM_MEASURE_PREFIX } from "../diagnostics";
+import { HANDOFF_MARK, SYSTEM_MEASURE_PREFIX } from "../diagnostics/index.ts";
 import type { Plugin } from "./index.ts";
 import { createApp } from "./index.ts";
 

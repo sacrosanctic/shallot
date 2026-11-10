@@ -1,6 +1,6 @@
-import { Body, BodyMotionLock, type BodyType } from "../../core/physics";
-import { Transform } from "../../core/transform";
-import type { World } from "../../engine";
+import { Body, BodyMotionLock, type BodyType } from "../../core/physics/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import type { World } from "../../engine/index.ts";
 import type { EntityId } from "./common/ids.ts";
 import { defaultBodyDef } from "./common/types.ts";
 import { createBody, makeBodyId } from "./world/body.ts";

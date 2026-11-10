@@ -1,7 +1,7 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as s from "typegpu/std";
-import { ViewUniforms } from "../../core/rendering";
+import { ViewUniforms } from "../../core/rendering/index.ts";
 
 // Visibility bitmask AO (Therrien et al., 2023), Bevy b3bdd75be
 // ssao/{preprocess_depth,ssao,spatial_denoise}.wesl.

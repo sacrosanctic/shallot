@@ -1,6 +1,6 @@
-import { MeshPlugin } from "../../core/mesh";
-import { RenderingPlugin } from "../../core/rendering";
-import type { Plugin } from "../../engine";
+import { MeshPlugin } from "../../core/mesh/index.ts";
+import { RenderingPlugin } from "../../core/rendering/index.ts";
+import type { Plugin } from "../../engine/index.ts";
 import { MeshMaterial } from "./material.ts";
 import {
     initializeMeshPreprocess,

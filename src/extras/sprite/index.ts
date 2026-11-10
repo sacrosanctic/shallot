@@ -1,7 +1,7 @@
-import { Meshes, type MeshHandle, MeshInstance, MeshPlugin } from "../../core/mesh";
-import { BeginFrameSystem, RenderingPlugin } from "../../core/rendering";
-import { GlobalTransform } from "../../core/transform";
-import { ClearChangeMarksSystem, type Plugin, type System, type World } from "../../engine";
+import { Meshes, type MeshHandle, MeshInstance, MeshPlugin } from "../../core/mesh/index.ts";
+import { BeginFrameSystem, RenderingPlugin } from "../../core/rendering/index.ts";
+import { GlobalTransform } from "../../core/transform/index.ts";
+import { ClearChangeMarksSystem, type Plugin, type System, type World } from "../../engine/index.ts";
 import {
     MaterialPlugin,
     MeshMaterial,
@@ -9,7 +9,7 @@ import {
     MeshRenderPlugin,
     materialTypeId,
     StandardRenderingPlugin,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import { SpriteMaterialType, SpriteSource } from "./material.ts";
 import { Sprite } from "./pack.ts";
 

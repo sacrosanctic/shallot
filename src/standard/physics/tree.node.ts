@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { World } from "../../engine";
+import { World } from "../../engine/index.ts";
 import { treeBox, treeSweep } from "./fixtures/tree.ts";
 import {
     createPhysicsTree,

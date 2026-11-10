@@ -11,11 +11,11 @@ import {
     type View,
     Views,
     VolumetricLight,
-} from "../../core/rendering";
-import { GlobalTransform } from "../../core/transform";
-import type { World } from "../../engine";
-import { unpackColor } from "../../engine";
-import { octDecodeNormal } from "../../engine/utils";
+} from "../../core/rendering/index.ts";
+import { GlobalTransform } from "../../core/transform/index.ts";
+import type { World } from "../../engine/index.ts";
+import { unpackColor } from "../../engine/index.ts";
+import { octDecodeNormal } from "../../engine/utils/index.ts";
 
 /** Ten directional records fit in the camera-independent uniform; its consumers size the same binding. */
 export const MAX_DIRECTIONAL_LIGHTS = 10;
@@ -88,7 +88,7 @@ export function initializeLightingState(world: World): void {
     world.resource(lightingKey);
 }
 
-export const Lighting: import("../../engine").Resource<Lighting> = {
+export const Lighting: import("../../engine/index.ts").Resource<Lighting> = {
     create: (world) => world.resource(lightingKey).gpu,
 };
 

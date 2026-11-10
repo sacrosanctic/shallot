@@ -1,11 +1,11 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { cube, Meshes, MeshInstance, sphere } from "../../core/mesh";
-import { attachTexture, Camera, RenderLayers } from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { DEFAULT_PLUGINS } from "../../standard";
-import { StandardRenderer } from "../../standard/rendering";
+import { cube, Meshes, MeshInstance, sphere } from "../../core/mesh/index.ts";
+import { attachTexture, Camera, RenderLayers } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { DEFAULT_PLUGINS } from "../../standard/index.ts";
+import { StandardRenderer } from "../../standard/rendering/index.ts";
 import { Outline, OutlinePlugin } from ".";
 
 setDefaultTimeout(TIMEOUT.node);

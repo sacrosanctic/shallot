@@ -14,7 +14,7 @@ import { bunChild } from "../../scripts/bun-child.ts";
 import { publishTestChromium } from "../../scripts/publish-browser.ts";
 import { publishTestButler } from "../../scripts/publish-butler.ts";
 import { removeTestDirectory } from "../../scripts/test-directory.ts";
-import { buildWeb, contentType } from "../project";
+import { buildWeb, contentType } from "../project/index.ts";
 import { publishAssets } from "./publish.ts";
 import {
     BUTLER_VERSION,

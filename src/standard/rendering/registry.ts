@@ -1,7 +1,7 @@
 import type { TgpuBuffer } from "typegpu";
 import * as d from "typegpu/data";
-import type { MeshHandle } from "../../core/mesh";
-import { Registry, type World } from "../../engine";
+import type { MeshHandle } from "../../core/mesh/index.ts";
+import { Registry, type World } from "../../engine/index.ts";
 
 /** WebGPU's canonical 20-byte `DrawIndexedIndirect` record. `baseVertex` is signed by specification. */
 export const DrawIndexedIndirect = d
@@ -145,7 +145,7 @@ export const drawsKey = { create: () => createDraws() };
 const createDraws = () => new DrawRegistry();
 
 /** every registered draw in the active world's registry, keyed by name */
-export const Draws: import("../../engine").Resource<Registry<Draw>> = {
+export const Draws: import("../../engine/index.ts").Resource<Registry<Draw>> = {
     create: (world) => world.resource(drawsKey),
 };
 

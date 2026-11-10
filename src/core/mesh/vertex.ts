@@ -12,7 +12,7 @@ import {
     unpack2x16snorm,
     unpack2x16unorm,
 } from "typegpu/std";
-import { chunk } from "../../engine/utils";
+import { chunk } from "../../engine/utils/index.ts";
 
 const quantNs = tgpu["~unstable"].namespace({ names: "strict" });
 

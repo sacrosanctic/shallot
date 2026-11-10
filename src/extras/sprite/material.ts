@@ -1,10 +1,10 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { Billboard, billboardCorner, xformMat } from "../../core/rendering";
-import type { World } from "../../engine";
-import { srgbToLinear1 } from "../../engine/utils";
-import { engineLayout, materialLayout, materialType } from "../../standard/rendering";
+import { Billboard, billboardCorner, xformMat } from "../../core/rendering/index.ts";
+import type { World } from "../../engine/index.ts";
+import { srgbToLinear1 } from "../../engine/utils/index.ts";
+import { engineLayout, materialLayout, materialType } from "../../standard/rendering/index.ts";
 import { createSpriteSource } from "./table.ts";
 
 /** One type-local material row: image, tint and fill are data, never shader registrations. */

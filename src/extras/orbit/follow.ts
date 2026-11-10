@@ -3,8 +3,8 @@ import {
     GlobalTransformTickEndSystem,
     GlobalTransformTickStartSystem,
     TransformRuntime,
-} from "../../core/transform";
-import { component, entity, not, type Plugin, type System, vec3, type World } from "../../engine";
+} from "../../core/transform/index.ts";
+import { component, entity, not, type Plugin, type System, vec3, type World } from "../../engine/index.ts";
 import { Orbit } from "./index.ts";
 
 // Camera-local history follows fixed placement without reading GPU presentation state.

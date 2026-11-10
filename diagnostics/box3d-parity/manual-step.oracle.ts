@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
-import { Body, BodyType, Shape, ShapeKind } from "../../src/core/physics";
-import { Transform } from "../../src/core/transform";
-import { createApp } from "../../src/engine";
-import { hashPhysics, PhysicsEvents, PhysicsWorldDefinition, StandardPhysicsPlugin, stepPhysics, StepPhysicsSystem } from "../../src/standard/physics";
+import { Body, BodyType, Shape, ShapeKind } from "../../src/core/physics/index.ts";
+import { Transform } from "../../src/core/transform/index.ts";
+import { createApp } from "../../src/engine/index.ts";
+import { hashPhysics, PhysicsEvents, PhysicsWorldDefinition, StandardPhysicsPlugin, stepPhysics, StepPhysicsSystem } from "../../src/standard/physics/index.ts";
 import { nativeSseOutput } from "./native-evidence.ts";
 import { assertPublicOracleKernel } from "./oracle-kernel.ts";
 

@@ -1,4 +1,4 @@
-import { component, vec2 } from "../../engine";
+import { component, vec2 } from "../../engine/index.ts";
 
 /**
  * Normalized pivot of a sprite or text block relative to its Transform.

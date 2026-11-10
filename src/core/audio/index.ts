@@ -1,5 +1,5 @@
-import { component, f32, i32, type Plugin, type Resource, u8, type World } from "../../engine";
-import { GlobalTransform, Transform, TransformPlugin } from "../transform";
+import { component, f32, i32, type Plugin, type Resource, u8, type World } from "../../engine/index.ts";
+import { GlobalTransform, Transform, TransformPlugin } from "../transform/index.ts";
 
 const MAX_CLIPS = 256;
 

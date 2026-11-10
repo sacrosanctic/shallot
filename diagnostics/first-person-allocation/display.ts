@@ -3,7 +3,7 @@ import { SourceMap } from "node:module";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { removeTestDirectory } from "../../scripts/test-directory.ts";
-import { type AdapterFacts, classifyAdapter } from "../../src/engine/runtime";
+import { type AdapterFacts, classifyAdapter } from "../../src/engine/runtime/index.ts";
 import { attribute, originalPosition, subjectSite } from "./allocation-sampler.mjs";
 import { CAPTURE_CONTRACT } from "@dylanebert/shallot/rendering";
 import { confirmOnDisplay, openOnDisplay } from "./display-seat.ts";

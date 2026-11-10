@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { World } from "../../engine";
+import { World } from "../../engine/index.ts";
 import { restore, snapshot } from "./api/snapshot.ts";
 import { isMoved } from "./collision/broadphase.ts";
 import { BodyType, defaultQueryFilter } from "./common/types.ts";

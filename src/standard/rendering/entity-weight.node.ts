@@ -21,7 +21,7 @@ import type { MaterialHandle } from "@dylanebert/shallot/standard/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
 import * as d from "typegpu/data";
-import { component, vec4 } from "../../engine";
+import { component, vec4 } from "../../engine/index.ts";
 import {
     applyPbrLighting,
     extendedMaterial,

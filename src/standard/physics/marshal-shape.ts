@@ -1,6 +1,6 @@
-import { Hulls, Shape as ShapeComponent, ShapeKind, ShapeMaterials } from "../../core/physics";
-import { Transform } from "../../core/transform";
-import type { World } from "../../engine";
+import { Hulls, Shape as ShapeComponent, ShapeKind, ShapeMaterials } from "../../core/physics/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import type { World } from "../../engine/index.ts";
 import { makeShapeId } from "./api/config.ts";
 import type { EntityId } from "./common/ids.ts";
 import { defaultShapeDef, type Filter, type ShapeDef, type SurfaceMaterial } from "./common/types.ts";

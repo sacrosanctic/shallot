@@ -1,9 +1,9 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { runInNewContext } from "node:vm";
-import { Listener, play, registerClip } from "../../src/core/audio";
-import { createApp, Time } from "../../src/engine";
-import { GlobalTransform, Transform } from "../../src/core/transform";
+import { Listener, play, registerClip } from "../../src/core/audio/index.ts";
+import { createApp, Time } from "../../src/engine/index.ts";
+import { GlobalTransform, Transform } from "../../src/core/transform/index.ts";
 import {
     AudioRuntime,
     reconcileAudio,

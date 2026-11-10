@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { BodyType } from "../../src/core/physics";
-import { init } from "../../src/standard/physics/api";
+import { BodyType } from "../../src/core/physics/index.ts";
+import { init } from "../../src/standard/physics/api/index.ts";
 import { BodyField, bodyField } from "../../src/standard/physics/kernel/bodyrecords.ts";
 import { simFlags } from "../../src/standard/physics/kernel/bodycolumns.ts";
 import { createSphereShape } from "../../src/standard/physics/shapes/shape.ts";

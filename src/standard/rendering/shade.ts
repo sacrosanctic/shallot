@@ -3,7 +3,7 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { chunk } from "../../engine/utils";
+import { chunk } from "../../engine/utils/index.ts";
 import { PointLightGpu } from "./lighting.ts";
 import { EDGE_TEXELS, MAX_CASCADES, MAX_POINT_CASTERS } from "./shadows.ts";
 

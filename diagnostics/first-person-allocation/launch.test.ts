@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import type { AdapterFacts } from "../../src/engine/runtime";
+import type { AdapterFacts } from "../../src/engine/runtime/index.ts";
 import { launchPlan } from "./launch.ts";
 import { resolveSeat, type SeatResolution } from "./seat.ts";
 

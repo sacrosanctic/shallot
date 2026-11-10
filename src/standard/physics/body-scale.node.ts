@@ -10,10 +10,10 @@ import {
     Shape,
     ShapeKind,
     SphericalJoint,
-} from "../../core/physics";
-import { GlobalTransform, Transform } from "../../core/transform";
-import { type System, Time, type World } from "../../engine";
-import { createApp } from "../../engine/app";
+} from "../../core/physics/index.ts";
+import { GlobalTransform, Transform } from "../../core/transform/index.ts";
+import { type System, Time, type World } from "../../engine/index.ts";
+import { createApp } from "../../engine/app/index.ts";
 import { Character, CharacterPlugin, hashPhysics, StandardPhysicsPlugin } from ".";
 import { compoundBuild, heightFieldBuild } from "./geometry-builds.ts";
 import { BodyField, bodyField } from "./kernel/bodyrecords.ts";
@@ -405,13 +405,13 @@ for (const kind of [ShapeKind.HeightField, ShapeKind.Compound])
                         : { name: "collect", spheres: [{ center: [0, 0, 0] as Scale, radius: 1 }] };
                 if (kind === ShapeKind.HeightField) {
                     const registry = w.resource(HeightFields);
-                    const id = registry.add(def as import("../../core/physics").HeightField);
+                    const id = registry.add(def as import("../../core/physics/index.ts").HeightField);
                     const built = heightFieldBuild(w, id, 2, 2, 2)!;
                     refs.push(new WeakRef(def), new WeakRef(built));
                     registry.remove(id);
                 } else {
                     const registry = w.resource(Compounds);
-                    const id = registry.add(def as import("../../core/physics").Compound);
+                    const id = registry.add(def as import("../../core/physics/index.ts").Compound);
                     const built = compoundBuild(w, id, 2, 2, 2)!;
                     refs.push(new WeakRef(def), new WeakRef(built));
                     registry.remove(id);

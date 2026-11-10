@@ -1,5 +1,5 @@
-import { Meshes, MeshInstance } from "../../core/mesh";
-import type { World } from "../../engine/ecs";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
+import type { World } from "../../engine/ecs/index.ts";
 import type { GltfAnimation, GltfNode, GltfNodePose } from "./animation.ts";
 import { GLTF_WASM_BASE64 } from "./gltf.wasm";
 import type { Gltf, GltfSceneInstance } from "./scene.ts";

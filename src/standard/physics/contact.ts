@@ -1,5 +1,5 @@
-import type { EntityRef } from "../../engine";
-import type { Vec3 } from "./api";
+import type { EntityRef } from "../../engine/index.ts";
+import type { Vec3 } from "./api/index.ts";
 import * as layout from "./kernel/contact-layout.ts";
 import type { Kernel } from "./kernel/kernel.ts";
 import { liveShapeEntity, type ShapeEntity } from "./world/shape-entities.ts";

@@ -1,7 +1,7 @@
 import gold from "../../../crates/physics/tests/character.gold.json";
-import { Body, PhysicsPlugin, Shape, ShapeKind } from "../../core/physics";
-import { Transform, TransformPlugin } from "../../core/transform";
-import { Time, World } from "../../engine";
+import { Body, PhysicsPlugin, Shape, ShapeKind } from "../../core/physics/index.ts";
+import { Transform, TransformPlugin } from "../../core/transform/index.ts";
+import { Time, World } from "../../engine/index.ts";
 import { Character, CharacterPlugin, characterScratch } from "./character.ts";
 import { BodyType, defaultBodyDef } from "./common/types.ts";
 import { quaternion } from "./kernel/math.ts";

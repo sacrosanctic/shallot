@@ -1,5 +1,5 @@
-import { BodyType } from "../../core/physics";
-import type { ScalarField } from "../../engine";
+import { BodyType } from "../../core/physics/index.ts";
+import type { ScalarField } from "../../engine/index.ts";
 import { type FieldBinding, fieldMarked } from "./authoring.ts";
 import type { EntityId } from "./common/ids.ts";
 import type { FieldCandidates } from "./field-candidates.ts";

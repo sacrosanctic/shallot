@@ -9,7 +9,7 @@ import {
     gpuScene,
 } from "../../../scripts/gpu.fixture";
 import { expectWarning } from "../../../scripts/test-console.ts";
-import { Meshes, type MeshHandle, MeshInstance } from "../../core/mesh";
+import { Meshes, type MeshHandle, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
@@ -19,11 +19,11 @@ import {
     Tonemapping,
     TonemappingMethod,
     Views,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { lookAtRotation, type Plugin, precompile, type World } from "../../engine";
-import { probeBuffer } from "../../engine/runtime";
-import { DEFAULT_PLUGINS } from "../../standard";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation, type Plugin, precompile, type World } from "../../engine/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
+import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import { sunShadowView } from "./atlas.ts";
 import {
     AlphaMode,

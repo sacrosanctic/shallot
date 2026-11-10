@@ -1,10 +1,10 @@
 import tgpu, { type StorageFlag, type TgpuBuffer } from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import type { MeshHandle } from "../../core/mesh";
-import { CullVolumes, Xform } from "../../core/rendering";
-import type { World } from "../../engine";
-import { HANDLE_INDEX_MASK } from "../../engine/utils";
+import type { MeshHandle } from "../../core/mesh/index.ts";
+import { CullVolumes, Xform } from "../../core/rendering/index.ts";
+import type { World } from "../../engine/index.ts";
+import { HANDLE_INDEX_MASK } from "../../engine/utils/index.ts";
 import type { MaterialHandle } from "./material.ts";
 import { batchResolver } from "./material-batch.ts";
 import { MeshInstanceInput } from "./material-data.ts";

@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
-import { Body, BodyType, Shape, ShapeKind } from "../../core/physics";
-import { GlobalTransform, Transform } from "../../core/transform";
-import { createApp, type EntityRef, Time } from "../../engine";
+import { Body, BodyType, Shape, ShapeKind } from "../../core/physics/index.ts";
+import { GlobalTransform, Transform } from "../../core/transform/index.ts";
+import { createApp, type EntityRef, Time } from "../../engine/index.ts";
 import { hashPhysics, PhysicsWorldDefinition, StandardPhysicsPlugin } from ".";
 import { threads } from "./kernel/kernel.ts";
 import { physicsState } from "./runtime.ts";

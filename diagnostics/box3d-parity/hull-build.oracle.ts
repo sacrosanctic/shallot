@@ -2,10 +2,10 @@ import { expect, test } from "bun:test";
 import { init, kernel } from "../../src/standard/physics/kernel/kernel.ts";
 import gold from "../../crates/physics/tests/hull_build.gold.json";
 import { nativeBinary, run } from "./native.ts";
-import { Hulls } from "../../src/core/physics";
-import { World } from "../../src/engine";
+import { Hulls } from "../../src/core/physics/index.ts";
+import { World } from "../../src/engine/index.ts";
 import { buildHull } from "../../src/standard/physics/geometry-builds.ts";
-import { StandardPhysicsPlugin } from "../../src/standard/physics";
+import { StandardPhysicsPlugin } from "../../src/standard/physics/index.ts";
 import { drawHull } from "../../src/standard/physics/shapes/readgeometry.ts";
 
 test("hull construction and every generator match native byte images", async () => {

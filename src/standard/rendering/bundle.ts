@@ -1,13 +1,13 @@
 import type { TgpuBindGroupLayout, TgpuRenderPipeline } from "typegpu";
 import { isBuffer } from "typegpu";
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import {
     draw,
     drawIndexedIndirect,
     setIndexBuffer,
     setRenderBindGroup,
     setRenderPipeline,
-} from "../../engine/runtime";
+} from "../../engine/runtime/index.ts";
 import { rethrowMaterialError } from "./material-type.ts";
 import type { Draw } from "./registry.ts";
 

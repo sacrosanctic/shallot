@@ -1,9 +1,9 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { biasClipDepth, DEPTH_FORMAT, ViewUniforms, Xform, xformMat } from "../../core/rendering";
-import { precompile, type World } from "../../engine";
-import { unpackLdrColor } from "../../engine/utils";
+import { biasClipDepth, DEPTH_FORMAT, ViewUniforms, Xform, xformMat } from "../../core/rendering/index.ts";
+import { precompile, type World } from "../../engine/index.ts";
+import { unpackLdrColor } from "../../engine/utils/index.ts";
 
 /** A pixel-width shaft, or one world-space triangle with vertices a, b and c. */
 export const Segment = d

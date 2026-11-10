@@ -12,7 +12,7 @@ import {
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { cargoBuildEnvironment, resolveCargoInvocation } from "../src/native";
+import { cargoBuildEnvironment, resolveCargoInvocation } from "../src/native/index.ts";
 import {
     assertCanvasImage,
     assertNoSmokeProcesses,

@@ -1,5 +1,5 @@
-import { type Plugin, type System, Viewports, type World } from "../../engine";
-import { OverlayCanvases } from "../../engine/app";
+import { type Plugin, type System, Viewports, type World } from "../../engine/index.ts";
+import { OverlayCanvases } from "../../engine/app/index.ts";
 
 /** Keyboard facts owned by one {@link World}. `pressed`/`released` are the frame latches. */
 export interface Keys {
@@ -194,7 +194,7 @@ interface BrowserAdapter {
 }
 
 /** This world's input devices; available without DOM or InputPlugin setup. */
-export const Devices: import("../../engine").Resource<Devices> = {
+export const Devices: import("../../engine/index.ts").Resource<Devices> = {
     create(world) {
         const devices = emptyRecord(world);
         world.onDispose(() => {

@@ -1,7 +1,7 @@
 import { afterAll, beforeAll, expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { attachTexture, captureTexture } from "../../core/rendering";
+import { attachTexture, captureTexture } from "../../core/rendering/index.ts";
 import { imageTextures } from "../../core/rendering/image.ts";
 import {
     type App,
@@ -26,7 +26,7 @@ import {
     type World,
 } from "../../index.ts";
 import { openGpuApp as createApp } from "../../project/testing-gpu.ts";
-import { MeshRenderPlugin, StandardRenderingPlugin } from "../../standard/rendering";
+import { MeshRenderPlugin, StandardRenderingPlugin } from "../../standard/rendering/index.ts";
 import {
     type Gltf,
     GltfPlugin,

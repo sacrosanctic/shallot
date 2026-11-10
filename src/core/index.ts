@@ -1,4 +1,4 @@
-export * from "./audio";
+export * from "./audio/index.ts";
 export {
     type AudioContextState,
     type AudioDevice,
@@ -30,7 +30,7 @@ export {
     type Touch,
     type TouchPoint,
     touchPoint,
-} from "./input";
+} from "./input/index.ts";
 export {
     capsule,
     cube,
@@ -42,8 +42,8 @@ export {
     MeshInstance,
     MeshPlugin,
     sphere,
-} from "./mesh";
-export * from "./physics";
+} from "./mesh/index.ts";
+export * from "./physics/index.ts";
 export {
     AmbientLight,
     Anchor,
@@ -79,7 +79,7 @@ export {
     TonemappingMethod,
     TonemappingSystem,
     VolumetricLight,
-} from "./rendering";
+} from "./rendering/index.ts";
 export {
     composeGlobalTransform,
     GlobalTransform,
@@ -89,4 +89,4 @@ export {
     resetInterpolation,
     Transform,
     TransformPlugin,
-} from "./transform";
+} from "./transform/index.ts";

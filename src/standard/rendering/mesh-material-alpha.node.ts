@@ -2,8 +2,8 @@ import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import type { System } from "../../engine";
-import { ClearChangeMarksSystem } from "../../engine/app";
+import type { System } from "../../engine/index.ts";
+import { ClearChangeMarksSystem } from "../../engine/app/index.ts";
 import {
     AlphaMode,
     MaterialPlugin,

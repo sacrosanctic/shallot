@@ -1,7 +1,7 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import type { GpuTable, Resource, System, World } from "../../engine/ecs";
+import type { GpuTable, Resource, System, World } from "../../engine/ecs/index.ts";
 import {
     GlobalTransform,
     GlobalTransformTickEndSystem,
@@ -9,7 +9,7 @@ import {
     PrepareGlobalTransformSystem,
     resetInterpolation,
     TransformRuntime,
-} from "../transform";
+} from "../transform/index.ts";
 import { PointLight, SpotLight } from "./lighting.ts";
 import { Xform } from "./xform.ts";
 

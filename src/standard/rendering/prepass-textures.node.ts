@@ -9,7 +9,7 @@ import {
     expectAdapterNotice,
     gpuScene,
 } from "../../../scripts/gpu.fixture";
-import { Meshes, MeshInstance } from "../../core/mesh";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachCanvas,
     attachTexture,
@@ -21,11 +21,11 @@ import {
     TonemappingMethod,
     Views,
     Xform,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { precompile } from "../../engine";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { precompile } from "../../engine/index.ts";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
-import { probeBuffer } from "../../engine/runtime";
+import { probeBuffer } from "../../engine/runtime/index.ts";
 import {
     AlphaMode,
     AlphaPipelineKey,
@@ -132,7 +132,7 @@ const probeState = {
 };
 const samplePlugin = {
     name: "PrepassSampleProbe",
-    warm(world: import("../../engine").World) {
+    warm(world: import("../../engine/index.ts").World) {
         const state = world.resource(probeState);
         state.pipeline = world.gpu.root.createComputePipeline({ compute: sampleKernel });
         precompile(world, "prepass-sample-probe", () => state.pipeline!);

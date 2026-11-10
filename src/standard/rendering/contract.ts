@@ -1,7 +1,7 @@
 import type { TgpuBindGroupLayout, TgpuFn } from "typegpu";
 import tgpu, { isTgpuFn } from "typegpu";
 import * as d from "typegpu/data";
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import { validateBindingLimits } from "./binding-limits.ts";
 import { backgroundsKey } from "./contract-state.ts";
 import { engineLayout } from "./engine.ts";
@@ -53,7 +53,7 @@ export interface Background<
     bindings?: (world: World) => Record<string, BindResource>;
 }
 
-export const Backgrounds: import("../../engine").Resource<ReadonlyMap<number, Background>> = {
+export const Backgrounds: import("../../engine/index.ts").Resource<ReadonlyMap<number, Background>> = {
     create: (world) => world.resource(backgroundsKey),
 };
 

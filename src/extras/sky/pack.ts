@@ -1,5 +1,5 @@
-import type { World } from "../../engine";
-import { unpackColorInto } from "../../engine";
+import type { World } from "../../engine/index.ts";
+import { unpackColorInto } from "../../engine/index.ts";
 import { Sky } from "./index.ts";
 import { SKY_AT } from "./shader.ts";
 

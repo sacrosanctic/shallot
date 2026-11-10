@@ -12,9 +12,9 @@ import {
     RenderPhases,
     Tonemapping,
     TonemappingMethod,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { precompile } from "../../engine";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { precompile } from "../../engine/index.ts";
 import { fogReadBindGroup, fogReadLayout, readFog, readFogInScatter } from ".";
 
 setDefaultTimeout(TIMEOUT.node);

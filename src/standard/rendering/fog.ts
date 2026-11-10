@@ -1,8 +1,8 @@
 import tgpu, { type TgpuBindGroupLayout, type TgpuFn } from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import type { View } from "../../core/rendering";
-import type { World } from "../../engine";
+import type { View } from "../../core/rendering/index.ts";
+import type { World } from "../../engine/index.ts";
 import { AlphaModeCode } from "./material-type.ts";
 
 /** The shaded fragment's world-space position, in meters. */

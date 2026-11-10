@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { CameraMode } from "../../core/rendering";
-import { lookAt, multiplyMat4, orthographic } from "../../engine";
+import { CameraMode } from "../../core/rendering/index.ts";
+import { lookAt, multiplyMat4, orthographic } from "../../engine/index.ts";
 import { cascadeFit, MAX_POINT_CASTERS, type PointShadowFrame, packCasters } from "./shadows.ts";
 
 // Reuse sparse rect storage across sets, as updatePointShadows does.

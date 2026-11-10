@@ -1,6 +1,6 @@
-import type { Resource, World } from "../../engine";
-import { component, f32, u32 } from "../../engine";
-import { Transform } from "../transform";
+import type { Resource, World } from "../../engine/index.ts";
+import { component, f32, u32 } from "../../engine/index.ts";
+import { Transform } from "../transform/index.ts";
 
 /** Ambient illumination used unless a camera carries an {@link AmbientLight} override. */
 export interface GlobalAmbientLightState {

@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { Body, BodyType, Shape, ShapeKind } from "../../core/physics";
-import { GlobalTransform, Transform } from "../../core/transform";
-import type { System } from "../../engine";
-import { createApp } from "../../engine/app";
+import { Body, BodyType, Shape, ShapeKind } from "../../core/physics/index.ts";
+import { GlobalTransform, Transform } from "../../core/transform/index.ts";
+import type { System } from "../../engine/index.ts";
+import { createApp } from "../../engine/app/index.ts";
 import { StandardPhysicsPlugin } from ".";
 import { defaultSurfaceMaterial } from "./common/types.ts";
 import { BodyField, bodyField } from "./kernel/bodyrecords.ts";

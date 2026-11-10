@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import type { World } from "../../engine";
-import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "../../extras/lines";
-import { internText, registerFont, Text, TextPlugin } from "../../extras/text";
+import type { World } from "../../engine/index.ts";
+import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "../../extras/lines/index.ts";
+import { internText, registerFont, Text, TextPlugin } from "../../extras/text/index.ts";
 import { isolationFont } from "../../extras/text/font.fixture";
 import {
     AlphaMode,
@@ -13,9 +13,9 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "../../standard/rendering";
-import { Meshes, MeshInstance } from "../mesh";
-import { Transform } from "../transform";
+} from "../../standard/rendering/index.ts";
+import { Meshes, MeshInstance } from "../mesh/index.ts";
+import { Transform } from "../transform/index.ts";
 import {
     attachTexture,
     Camera,

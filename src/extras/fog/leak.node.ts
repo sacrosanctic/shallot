@@ -10,10 +10,10 @@ import {
     Tonemapping,
     TonemappingMethod,
     VolumetricLight,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { DEFAULT_PLUGINS } from "../../standard";
-import { StandardRenderer } from "../../standard/rendering";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { DEFAULT_PLUGINS } from "../../standard/index.ts";
+import { StandardRenderer } from "../../standard/rendering/index.ts";
 import { FogPlugin } from ".";
 import { room } from "./room.fixture";
 

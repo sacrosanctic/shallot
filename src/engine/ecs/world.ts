@@ -5,7 +5,7 @@ import {
     ReadbackPool,
     submitFrame,
     type WorldGpu,
-} from "../runtime";
+} from "../runtime/index.ts";
 import { FieldColumns } from "./columns.ts";
 import {
     type Component,

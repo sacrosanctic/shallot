@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { Body, BodyType, Shape } from "../../core/physics";
-import { GlobalTransform, Transform } from "../../core/transform";
-import { Time } from "../../engine";
+import { Body, BodyType, Shape } from "../../core/physics/index.ts";
+import { GlobalTransform, Transform } from "../../core/transform/index.ts";
+import { Time } from "../../engine/index.ts";
 import { PhysicsWorldDefinition, StandardPhysicsPlugin } from ".";
 import { BodyField, setBodyField } from "./kernel/bodyrecords.ts";
 import { physicsBodyIndex, physicsState, setAwake, setLinearVelocity } from "./runtime.ts";

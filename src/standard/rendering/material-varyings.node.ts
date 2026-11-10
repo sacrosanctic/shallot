@@ -4,7 +4,7 @@ import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { MeshInstance } from "../../core/mesh";
+import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
@@ -15,10 +15,10 @@ import {
     Tonemapping,
     TonemappingMethod,
     Views,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { lookAtRotation, type Plugin, precompile, type World } from "../../engine";
-import { probeBuffer } from "../../engine/runtime";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation, type Plugin, precompile, type World } from "../../engine/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
 import { pointAtlasView, sunShadowView } from "./atlas.ts";
 import { StandardRenderer } from "./forward.ts";
 import { lit, StandardRenderingPlugin } from "./index.ts";

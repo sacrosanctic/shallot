@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { expectWarning } from "../../../scripts/test-console.ts";
-import { Body, BodyType, Shape, ShapeKind, Sleeping } from "../../core/physics";
-import { Transform } from "../../core/transform";
-import { createApp } from "../../engine";
+import { Body, BodyType, Shape, ShapeKind, Sleeping } from "../../core/physics/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { createApp } from "../../engine/index.ts";
 import {
     isAwake,
     PhysicsWorldDefinition,

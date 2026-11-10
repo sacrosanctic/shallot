@@ -4,17 +4,17 @@ import { readFromArrayBuffer } from "typegpu";
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { expectWarning } from "../../../scripts/test-console.ts";
-import { MeshInstance } from "../../core/mesh";
-import { attachTexture, Billboard, Camera } from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import type { World } from "../../engine";
-import { probeBuffer } from "../../engine/runtime";
+import { MeshInstance } from "../../core/mesh/index.ts";
+import { attachTexture, Billboard, Camera } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import type { World } from "../../engine/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
 import {
     AlphaPipelineKey,
     Draws,
     materialTypeId,
     StandardRenderer,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import { MeshInstanceInput } from "../../standard/rendering/material-data.ts";
 import { meshInstanceTable } from "../../standard/rendering/preprocess.ts";
 import { Sprite, SpriteMaterialType, SpritePlugin } from "./index.ts";

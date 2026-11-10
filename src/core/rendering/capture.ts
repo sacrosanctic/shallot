@@ -1,5 +1,5 @@
-import type { World } from "../../engine";
-import { deviceFailure, observedDeviceError, probeTexture } from "../../engine/runtime";
+import type { World } from "../../engine/index.ts";
+import { deviceFailure, observedDeviceError, probeTexture } from "../../engine/runtime/index.ts";
 import { cameraView, canvasFrameBinding, type View } from "./view.ts";
 
 interface CaptureIdentity {

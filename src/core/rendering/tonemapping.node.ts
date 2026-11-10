@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { precompile, type World } from "../../engine";
-import { probeTexture } from "../../engine/runtime";
-import { Transform } from "../transform";
+import { precompile, type World } from "../../engine/index.ts";
+import { probeTexture } from "../../engine/runtime/index.ts";
+import { Transform } from "../transform/index.ts";
 import { gradingDefaults } from "./color-grading.ts";
 import {
     attachTexture,

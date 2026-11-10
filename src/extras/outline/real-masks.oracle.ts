@@ -2,12 +2,12 @@ import { test } from "bun:test";
 import { LocalPlayer, Player } from "../../../examples/interact/src/player.ts";
 import { Room, RoomPlugin } from "../../../examples/interact/src/room.ts";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { Meshes, MeshInstance } from "../../core/mesh";
-import { attachTexture, Camera } from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { DEFAULT_PLUGINS } from "../../standard";
-import { setTransform } from "../../standard/physics";
-import { PointShadows, StandardRenderer } from "../../standard/rendering";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
+import { attachTexture, Camera } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { DEFAULT_PLUGINS } from "../../standard/index.ts";
+import { setTransform } from "../../standard/physics/index.ts";
+import { PointShadows, StandardRenderer } from "../../standard/rendering/index.ts";
 import { Outline, OutlinePlugin } from ".";
 import { captureSeeds } from "./mask.fixture";
 import { coverage } from "./reference.fixture";
@@ -22,7 +22,7 @@ const subjects = gpuApps(import.meta.path, [
             {
                 name: "OracleAntialias",
                 dependencies: [RoomPlugin],
-                initialize(world: import("../../engine").World) {
+                initialize(world: import("../../engine/index.ts").World) {
                     world.storage(Camera).antialias.set(world.resource(Room).camera, antialias);
                 },
             },

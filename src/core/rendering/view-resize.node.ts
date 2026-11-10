@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { Viewports } from "../../engine";
+import { Viewports } from "../../engine/index.ts";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
-import { Transform } from "../transform";
+import { Transform } from "../transform/index.ts";
 import { attachCanvas, Camera, RenderingPlugin, Views } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);

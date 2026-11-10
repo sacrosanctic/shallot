@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
-import type { World } from "../../engine";
-import { probeTexture } from "../../engine/runtime";
+import type { World } from "../../engine/index.ts";
+import { probeTexture } from "../../engine/runtime/index.ts";
 import { type Case, lookup } from "./parity.fixture";
 
 // Bevy b3bdd75be: verbatim WESL modules linked by dropping resolved imports and

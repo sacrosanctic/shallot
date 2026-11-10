@@ -1,13 +1,13 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../scripts/gpu.fixture";
-import { attachTexture, Camera, captureTexture } from "../core/rendering";
+import { attachTexture, Camera, captureTexture } from "../core/rendering/index.ts";
 import { imageTextures } from "../core/rendering/image.ts";
-import { Transform } from "../core/transform";
-import { StandardRenderer } from "../standard/rendering";
-import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./lines";
-import { Sprite, SpritePlugin } from "./sprite";
-import { internText, registerFont, Text, TextPlugin } from "./text";
+import { Transform } from "../core/transform/index.ts";
+import { StandardRenderer } from "../standard/rendering/index.ts";
+import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./lines/index.ts";
+import { Sprite, SpritePlugin } from "./sprite/index.ts";
+import { internText, registerFont, Text, TextPlugin } from "./text/index.ts";
 import { isolationFont } from "./text/font.fixture";
 
 setDefaultTimeout(TIMEOUT.node);

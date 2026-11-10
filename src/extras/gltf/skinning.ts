@@ -1,9 +1,9 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { MeshInstance, MeshPlugin } from "../../core/mesh";
-import { Xform, xformNormal, xformPoint, xformQuat } from "../../core/rendering";
-import { component, type Plugin, type System, u32, type World } from "../../engine";
+import { MeshInstance, MeshPlugin } from "../../core/mesh/index.ts";
+import { Xform, xformNormal, xformPoint, xformQuat } from "../../core/rendering/index.ts";
+import { component, type Plugin, type System, u32, type World } from "../../engine/index.ts";
 import {
     applyPbrLighting,
     extendedMaterial,
@@ -13,7 +13,7 @@ import {
     MeshPreprocessSystem,
     type materialLayout,
     pbrInputFromStandardMaterial,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 
 import { DeformationRanges, MorphTextures, MorphWidth, WeightWidth } from "./morph.ts";
 

@@ -1,8 +1,8 @@
-import { MeshInstance } from "../../core/mesh";
-import { DirectionalLight, GlobalAmbientLight, VolumetricLight } from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { lookAtRotation, type World } from "../../engine";
-import { Materials, MeshMaterial, StandardMaterial } from "../../standard/rendering";
+import { MeshInstance } from "../../core/mesh/index.ts";
+import { DirectionalLight, GlobalAmbientLight, VolumetricLight } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation, type World } from "../../engine/index.ts";
+import { Materials, MeshMaterial, StandardMaterial } from "../../standard/rendering/index.ts";
 import { Fog } from ".";
 
 // Carbon walls around a 6.6 × 3.2 × 6.6 m interior, a 2 × 1.5 m rear window and a low sun.

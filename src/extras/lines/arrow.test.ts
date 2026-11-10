@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { World } from "../../engine";
+import { World } from "../../engine/index.ts";
 import { SEGMENT_FLOATS, triangleVertex } from "./pipeline.ts";
 import { drawArrow, drawLine, head, lineStaging, segmentState } from "./segments.ts";
 

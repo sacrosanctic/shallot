@@ -3,16 +3,16 @@ import { registerImage } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { expectWarning } from "../../../scripts/test-console.ts";
-import { Meshes, MeshInstance } from "../../core/mesh";
+import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
     captureTexture,
     Tonemapping,
     TonemappingMethod,
-} from "../../core/rendering";
+} from "../../core/rendering/index.ts";
 import { imageTextures } from "../../core/rendering/image.ts";
-import { Transform } from "../../core/transform";
+import { Transform } from "../../core/transform/index.ts";
 import {
     AlphaMode,
     type MaterialHandle,
@@ -84,7 +84,7 @@ const subjects = gpuApps(import.meta.path, [
     },
 ]);
 
-function upload(world: import("../../engine").World) {
+function upload(world: import("../../engine/index.ts").World) {
     const device = world.gpu.device;
     // Dawn has no image decoder; upload the image pixels directly to isolate material sampling.
     image = device.createTexture({

@@ -1,4 +1,4 @@
-import { World } from "../../src/engine";
+import { World } from "../../src/engine/index.ts";
 import { BodyType, defaultShapeDef, defaultSurfaceMaterial } from "../../src/standard/physics/common/types.ts";
 import { EventKind, eventCount, eventId } from "../../src/standard/physics/kernel/eventbuffers.ts";
 import { kernel, init, shutdown } from "../../src/standard/physics/kernel/kernel.ts";

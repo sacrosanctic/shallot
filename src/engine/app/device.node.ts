@@ -4,13 +4,13 @@ import { expectError, expectWarning } from "../../../scripts/test-console.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 
-import { Body, BodyType, Shape } from "../../core/physics";
-import { GlobalTransform, Transform } from "../../core/transform";
-import { hashPhysics, StandardPhysicsPlugin } from "../../standard/physics";
-import "../../standard";
+import { Body, BodyType, Shape } from "../../core/physics/index.ts";
+import { GlobalTransform, Transform } from "../../core/transform/index.ts";
+import { hashPhysics, StandardPhysicsPlugin } from "../../standard/physics/index.ts";
+import "../../standard/index.ts";
 
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { globalTransformTable } from "../../core/rendering";
+import { globalTransformTable } from "../../core/rendering/index.ts";
 import { GpuError, type Plugin, Time, type World } from "../index.ts";
 import { createApp, runApp } from "./index.ts";
 

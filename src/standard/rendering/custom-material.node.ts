@@ -3,16 +3,16 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu, { readFromArrayBuffer } from "typegpu";
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { MeshInstance } from "../../core/mesh";
+import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
     captureTexture,
     Tonemapping,
     TonemappingMethod,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { probeBuffer } from "../../engine/runtime";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
 import {
     BackgroundContext,
     backgroundLayout,

@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { World } from "../ecs";
+import { World } from "../ecs/index.ts";
 import { mountOverlay, OverlayCanvases } from ".";
 
 interface FixtureElement {

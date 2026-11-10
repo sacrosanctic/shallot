@@ -13,11 +13,11 @@ import {
     type TransparentPhase,
     type View,
     type Xform,
-} from "../../core/rendering";
-import { GlobalTransform } from "../../core/transform";
-import type { Plugin, System, World } from "../../engine";
-import { component, f32, precompile } from "../../engine";
-import { drawInstances, setRenderBindGroup, setRenderPipeline } from "../../engine/runtime";
+} from "../../core/rendering/index.ts";
+import { GlobalTransform } from "../../core/transform/index.ts";
+import type { Plugin, System, World } from "../../engine/index.ts";
+import { component, f32, precompile } from "../../engine/index.ts";
+import { drawInstances, setRenderBindGroup, setRenderPipeline } from "../../engine/runtime/index.ts";
 import {
     createLinePipeline,
     instanceLayout,

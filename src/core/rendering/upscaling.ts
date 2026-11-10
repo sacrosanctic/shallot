@@ -1,7 +1,7 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import {
     beginRenderPass,
     draw,
@@ -10,7 +10,7 @@ import {
     setRenderBindGroup,
     setRenderPipeline,
     setViewport,
-} from "../../engine/runtime";
+} from "../../engine/runtime/index.ts";
 import { Camera } from "./camera.ts";
 import { fullscreenVertex } from "./tonemapping.ts";
 import type { View } from "./view.ts";

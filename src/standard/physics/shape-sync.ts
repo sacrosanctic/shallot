@@ -1,6 +1,6 @@
-import { ShapeKind, ShapeMaterials } from "../../core/physics";
-import { Transform } from "../../core/transform";
-import type { Vector4Field, World } from "../../engine";
+import { ShapeKind, ShapeMaterials } from "../../core/physics/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import type { Vector4Field, World } from "../../engine/index.ts";
 import { type FieldBinding, fieldMarked } from "./authoring.ts";
 import type { EntityId } from "./common/ids.ts";
 import type { Filter, SurfaceMaterial } from "./common/types.ts";

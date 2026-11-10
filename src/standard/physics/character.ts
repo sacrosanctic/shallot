@@ -1,5 +1,5 @@
-import { Body, Shape as ShapeComponent, ShapeKind } from "../../core/physics";
-import { Transform } from "../../core/transform";
+import { Body, Shape as ShapeComponent, ShapeKind } from "../../core/physics/index.ts";
+import { Transform } from "../../core/transform/index.ts";
 import {
     component,
     f32 as field,
@@ -9,7 +9,7 @@ import {
     u32,
     vec3,
     type World,
-} from "../../engine";
+} from "../../engine/index.ts";
 import { BodyType } from "./common/types.ts";
 import { BodyField, setBodyField } from "./kernel/bodyrecords.ts";
 import { queryColumns } from "./kernel/querycolumns.ts";

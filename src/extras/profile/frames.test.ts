@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { Diagnostic, DiagnosticsStore } from "../../engine";
+import { Diagnostic, DiagnosticsStore } from "../../engine/index.ts";
 import { cpuTotal } from "./cpu.ts";
 import { EmptyFrames } from "./empty.ts";
 import { FrameTimings } from "./frames.ts";

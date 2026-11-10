@@ -1,11 +1,11 @@
-import { Devices, InputPlugin, type Pointer } from "../../core/input";
-import { Camera, CameraMode } from "../../core/rendering";
+import { Devices, InputPlugin, type Pointer } from "../../core/input/index.ts";
+import { Camera, CameraMode } from "../../core/rendering/index.ts";
 import {
     deriveTransforms,
     GlobalTransform,
     Transform,
     TransformPlugin,
-} from "../../core/transform";
+} from "../../core/transform/index.ts";
 import {
     component,
     entity,
@@ -17,8 +17,8 @@ import {
     Viewports,
     vec3,
     type World,
-} from "../../engine";
-import { clamp, lookAtRotationInto } from "../../engine/utils";
+} from "../../engine/index.ts";
+import { clamp, lookAtRotationInto } from "../../engine/utils/index.ts";
 import { followPosition, OrbitFollowPlugin } from "./follow.ts";
 import { OrbitSmooth } from "./smooth.ts";
 

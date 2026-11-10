@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { createApp } from "../../../engine";
+import { createApp } from "../../../engine/index.ts";
 import { PhysicsWorldDefinition, StandardPhysicsPlugin } from "..";
 import { restore, snapshot } from "../api/snapshot.ts";
 import { kernel } from "../kernel/kernel.ts";

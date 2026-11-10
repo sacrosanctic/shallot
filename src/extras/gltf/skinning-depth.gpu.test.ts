@@ -4,11 +4,11 @@ import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import gold from "../../../examples/gltf/tests/animations.gold.json";
 import { fileFetch, syncAssets } from "../../../examples/gltf/tests/setup.ts";
-import { Meshes, type MeshHandle, MeshInstance } from "../../core/mesh";
-import { attachTexture, Camera, DepthPrepass, DirectionalLight, Views } from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { type App, lookAtRotation, precompile, type World } from "../../engine";
-import { probeBuffer } from "../../engine/runtime";
+import { Meshes, type MeshHandle, MeshInstance } from "../../core/mesh/index.ts";
+import { attachTexture, Camera, DepthPrepass, DirectionalLight, Views } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { type App, lookAtRotation, precompile, type World } from "../../engine/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
 import { openGpuApp } from "../../project/testing-gpu.ts";
 import {
     Materials,
@@ -17,7 +17,7 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import { sunShadowView } from "../../standard/rendering/atlas.ts";
 import { loadGltf } from "./load.ts";
 import { type GltfSceneInstance, loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene.ts";

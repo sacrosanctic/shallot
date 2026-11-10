@@ -1,20 +1,20 @@
 /// <reference types="@webgpu/types" />
 
 import * as d from "typegpu/data";
-import type { Plugin, System, World } from "../../engine";
-import { ClearChangeMarksSystem, invertMat4, unpackColor } from "../../engine";
+import type { Plugin, System, World } from "../../engine/index.ts";
+import { ClearChangeMarksSystem, invertMat4, unpackColor } from "../../engine/index.ts";
 import {
     beginComputePass,
     dispatchWorkgroups,
     endComputePass,
     setComputeBindGroup,
     setComputePipeline,
-} from "../../engine/runtime";
+} from "../../engine/runtime/index.ts";
 import {
     composeGlobalTransform,
     PrepareGlobalTransformSystem,
     TransformPlugin,
-} from "../transform";
+} from "../transform/index.ts";
 import { Anchor } from "./anchor.ts";
 
 import {

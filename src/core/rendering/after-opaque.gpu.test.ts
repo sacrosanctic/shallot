@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { Transform } from "../transform";
+import { Transform } from "../transform/index.ts";
 import { attachTexture, Camera, CorePipelinePlugin, RenderPhases } from ".";
 
 setDefaultTimeout(TIMEOUT.gpu);

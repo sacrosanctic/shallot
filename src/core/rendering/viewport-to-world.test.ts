@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
-import { qRotate, resizeViewport, World } from "../../engine";
+import { qRotate, resizeViewport, World } from "../../engine/index.ts";
 import { component } from "../../engine/ecs/component.ts";
-import { GlobalTransform } from "../transform";
+import { GlobalTransform } from "../transform/index.ts";
 import {
     Camera,
     CameraMode,

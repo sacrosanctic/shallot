@@ -1,8 +1,8 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { decodePos, MeshQuant, meshIdOf } from "../../core/mesh";
-import { ViewUniforms, Xform, xformPoint } from "../../core/rendering";
+import { decodePos, MeshQuant, meshIdOf } from "../../core/mesh/index.ts";
+import { ViewUniforms, Xform, xformPoint } from "../../core/rendering/index.ts";
 
 // Cap band width to bound the jump-flood pass count.
 export const MAX_WIDTH = 64;

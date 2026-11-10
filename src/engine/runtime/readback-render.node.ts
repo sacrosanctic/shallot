@@ -7,7 +7,7 @@ import {
     expectAdapterNotice,
     gpuRequirements,
 } from "../../../scripts/gpu.fixture";
-import { DEFAULT_PLUGINS } from "../../standard";
+import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import { classifyAdapter } from "./adapter.ts";
 import { rawDevice } from "./gpu.ts";
 

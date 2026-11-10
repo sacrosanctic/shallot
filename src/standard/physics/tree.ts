@@ -1,4 +1,4 @@
-import type { Resource, World } from "../../engine";
+import type { Resource, World } from "../../engine/index.ts";
 import type { RayCastInput } from "./collision/distance.ts";
 import type { AABB, Vec3 } from "./common/records.ts";
 import {

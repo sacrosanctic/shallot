@@ -1,13 +1,13 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import { DEPTH_FORMAT, presentingViews, type View, Views } from "../../core/rendering";
-import type { World } from "../../engine";
+import { DEPTH_FORMAT, presentingViews, type View, Views } from "../../core/rendering/index.ts";
+import type { World } from "../../engine/index.ts";
 import {
     beginComputePass,
     beginRenderPass,
     endComputePass,
     endRenderPass,
-} from "../../engine/runtime";
+} from "../../engine/runtime/index.ts";
 import { boundPipeline } from "./bound.ts";
 import type { BundleDraw, PassBundle } from "./bundle.ts";
 import { bundleChanged, bundleDraw, newPassBundle, recordBundle, replayBundle } from "./bundle.ts";
@@ -317,7 +317,7 @@ function shadowViewSlot(state: AtlasState): number {
 
 /** the point/spot atlas's re-gather instance ({@link createRegather} "point") — `forward.ts`'s
  * `record`/`ShadowCameraSystem` reach it directly for the `eids` lane swap + the alloc trigger. */
-export const pointRegather: import("../../engine").Resource<Regather> = {
+export const pointRegather: import("../../engine/index.ts").Resource<Regather> = {
     create: (world) => world.resource(atlasStateKey).pointRegather,
 };
 
@@ -382,7 +382,7 @@ export function comboViewSlots(
 }
 
 /** the CSM cascade atlas's re-gather instance ({@link createRegather} "cascade") — the point atlas's twin. */
-export const cascadeRegather: import("../../engine").Resource<Regather> = {
+export const cascadeRegather: import("../../engine/index.ts").Resource<Regather> = {
     create: (world) => world.resource(atlasStateKey).cascadeRegather,
 };
 interface CascadeBatch {

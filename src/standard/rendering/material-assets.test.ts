@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { createApp } from "../../engine/app";
+import { createApp } from "../../engine/app/index.ts";
 import { AlphaMode, Materials } from "./material.ts";
 import { StandardMaterial } from "./material-data.ts";
 

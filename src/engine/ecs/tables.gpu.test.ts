@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import type { createApp, Plugin } from "../app";
+import type { createApp, Plugin } from "../app/index.ts";
 import { f32, u32 } from "../index.ts";
-import { probeBuffer } from "../runtime";
+import { probeBuffer } from "../runtime/index.ts";
 import { type Component, component } from "./component.ts";
 import type { World } from "./world.ts";
 

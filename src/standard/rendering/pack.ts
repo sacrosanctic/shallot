@@ -7,8 +7,8 @@ import {
     CullVolumes,
     Xform,
     xformPoint,
-} from "../../core/rendering";
-import { HANDLE_INDEX_MASK } from "../../engine/utils";
+} from "../../core/rendering/index.ts";
+import { HANDLE_INDEX_MASK } from "../../engine/utils/index.ts";
 import { batchResolver } from "./material-batch.ts";
 import { EntityMeshInstanceInput } from "./material-data.ts";
 import { ALPHA_PIPELINE_KEY_COUNT, AlphaModeCode, AlphaPipelineKey } from "./material-type.ts";

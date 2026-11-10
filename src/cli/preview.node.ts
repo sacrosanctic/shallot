@@ -15,7 +15,7 @@ import {
 } from "node:fs";
 import { tmpdir } from "node:os";
 import { basename, join, resolve } from "node:path";
-import { nativeOutDir } from "../native";
+import { nativeOutDir } from "../native/index.ts";
 import {
     linuxPreviewEnv,
     previewProject,

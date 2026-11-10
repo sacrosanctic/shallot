@@ -1,15 +1,15 @@
-import { generateTangents } from "../../core/mesh";
+import { generateTangents } from "../../core/mesh/index.ts";
 import {
     ImageAddressMode,
     ImageFilterMode,
     type ImageSamplerDescriptor,
-} from "../../core/rendering";
+} from "../../core/rendering/index.ts";
 import {
     composeMat4 as compose,
     decomposeMat4,
     multiplyMat4 as multiply,
-} from "../../engine/utils";
-import type { TextureTransform } from "../../standard/rendering";
+} from "../../engine/utils/index.ts";
+import type { TextureTransform } from "../../standard/rendering/index.ts";
 import type { GltfAnimation, GltfAnimationPath, GltfNode } from "./animation.ts";
 
 const VERTEX_FLOATS = 8;

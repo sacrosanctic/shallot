@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { Body, BodyType, Shape, ShapeKind, WeldJoint } from "../../core/physics";
-import { GlobalTransform, Transform } from "../../core/transform";
-import { createApp } from "../../engine";
+import { Body, BodyType, Shape, ShapeKind, WeldJoint } from "../../core/physics/index.ts";
+import { GlobalTransform, Transform } from "../../core/transform/index.ts";
+import { createApp } from "../../engine/index.ts";
 import {
     applyAngularImpulse,
     applyLinearImpulse,
@@ -20,18 +20,18 @@ import { physicsBodyIndex, physicsState } from "./runtime.ts";
 import { bodyGetLinearVelocity } from "./world/body.ts";
 
 setDefaultTimeout(TIMEOUT.node);
-function published(world: import("../../engine").World, eid: number) {
+function published(world: import("../../engine/index.ts").World, eid: number) {
     const v = world.storage(GlobalTransform).linearVelocity;
     return { x: v.x.get(eid), y: v.y.get(eid), z: v.z.get(eid) };
 }
-function solver(world: import("../../engine").World, eid: number) {
+function solver(world: import("../../engine/index.ts").World, eid: number) {
     return bodyGetLinearVelocity(physicsState(world)!, physicsBodyIndex(world, eid), {
         x: 0,
         y: 0,
         z: 0,
     });
 }
-function ball(world: import("../../engine").World, x: number, type: number = BodyType.Dynamic) {
+function ball(world: import("../../engine/index.ts").World, x: number, type: number = BodyType.Dynamic) {
     const eid = world.create();
     world.add(eid, Transform, { translation: [x, 0, 0] });
     world.add(eid, Body, { type });
@@ -59,7 +59,7 @@ for (const [name, impulse] of [
     ],
 ] as const satisfies readonly [
     string,
-    (world: import("../../engine").World, eid: number) => void,
+    (world: import("../../engine/index.ts").World, eid: number) => void,
 ][]) {
     test(`${name} immediately publishes the solver's linear velocity without stepping`, async () => {
         const a = await app();
@@ -127,7 +127,7 @@ for (const [name, change] of [
     ["angular velocity", (world, eid) => setAngularVelocity(world, eid, { x: 3, y: 2, z: 1 })],
 ] as const satisfies readonly [
     string,
-    (world: import("../../engine").World, eid: number) => void,
+    (world: import("../../engine/index.ts").World, eid: number) => void,
 ][]) {
     test(`${name} changes no published linear velocity`, async () => {
         const a = await app();

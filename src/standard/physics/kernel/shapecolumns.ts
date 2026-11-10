@@ -1,4 +1,4 @@
-import type { World } from "../../../engine";
+import type { World } from "../../../engine/index.ts";
 import type { AABB } from "../common/records.ts";
 import type { ShapeDef, ShapeType, SurfaceMaterial } from "../common/types.ts";
 import type { Shape } from "../shapes/shape.ts";

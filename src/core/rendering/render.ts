@@ -1,4 +1,4 @@
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 
 /**
  * World-owned renderer context. Record through World.frameEncoder; submission follows the draw group.
@@ -38,6 +38,6 @@ export function initializeRenderState(world: World): void {
 }
 
 /** World-owned rendering state, resolved with `world.resource(RenderContext)`. */
-export const RenderContext: import("../../engine").Resource<RenderContext> = {
+export const RenderContext: import("../../engine/index.ts").Resource<RenderContext> = {
     create: (world) => world.resource(renderKey),
 };

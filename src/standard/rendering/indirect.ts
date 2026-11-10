@@ -2,7 +2,7 @@ import type { TgpuFn } from "typegpu";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import type { Resource, World } from "../../engine";
+import type { Resource, World } from "../../engine/index.ts";
 
 /** Inputs shared by every source of indirect light in standard materials and ambient fog. */
 export const IndirectLightInput = d

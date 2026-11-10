@@ -1,5 +1,5 @@
-import type { Plugin, Resource, System, World } from "../../engine";
-import { beginRenderPass, endRenderPass } from "../../engine/runtime";
+import type { Plugin, Resource, System, World } from "../../engine/index.ts";
+import { beginRenderPass, endRenderPass } from "../../engine/runtime/index.ts";
 import { Camera, computeViewFromWorld } from "./camera.ts";
 import { BeginFrameSystem, OverlaySystem, RenderingPlugin } from "./substrate.ts";
 import {

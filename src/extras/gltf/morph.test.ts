@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import * as d from "typegpu/data";
-import { generateTangents } from "../../core/mesh";
+import { generateTangents } from "../../core/mesh/index.ts";
 import { computeNormals, generateSceneTangents, parseGltf } from "./gltf.ts";
 import { DeformationRanges } from "./morph.ts";
 import { morphFixture } from "./morph.fixture";

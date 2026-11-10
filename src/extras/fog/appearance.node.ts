@@ -1,17 +1,17 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { MeshInstance } from "../../core/mesh";
-import { AmbientLight, attachTexture, Camera, captureTexture } from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import type { World } from "../../engine";
-import { DEFAULT_PLUGINS } from "../../standard";
+import { MeshInstance } from "../../core/mesh/index.ts";
+import { AmbientLight, attachTexture, Camera, captureTexture } from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import type { World } from "../../engine/index.ts";
+import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import {
     Materials,
     MeshMaterial,
     StandardMaterial,
     StandardRenderer,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import { Fog, FogPlugin, NoFog } from ".";
 
 setDefaultTimeout(TIMEOUT.node);

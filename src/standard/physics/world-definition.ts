@@ -1,4 +1,4 @@
-import type { EntityRef, Resource, World } from "../../engine";
+import type { EntityRef, Resource, World } from "../../engine/index.ts";
 import { CONTACT_RECYCLE_DISTANCE } from "./common/constants.ts";
 import { defaultWorldDef, type WorldDef } from "./common/types.ts";
 

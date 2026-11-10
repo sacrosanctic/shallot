@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { MeshInstance } from "../../core/mesh";
+import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     AmbientLight,
     attachTexture,
@@ -12,11 +12,11 @@ import {
     DepthPrepass,
     DirectionalLight,
     Views,
-} from "../../core/rendering";
+} from "../../core/rendering/index.ts";
 import { imageTextures } from "../../core/rendering/image.ts";
-import { Transform } from "../../core/transform";
-import { lookAtRotation, precompile, type World } from "../../engine";
-import { probeBuffer } from "../../engine/runtime";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation, precompile, type World } from "../../engine/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
 import { loadGltfScene, poseGltfScene, spawnGltfScene } from "../../extras/gltf/scene.ts";
 import { GltfPlugin, SkinnedMaterial } from "../../extras/gltf/skinning.ts";
 import { skinningFixtureUrl } from "../../extras/gltf/skinning.fixture";

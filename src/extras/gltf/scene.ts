@@ -1,14 +1,14 @@
-import { Meshes, type MeshHandle, MeshInstance } from "../../core/mesh";
+import { Meshes, type MeshHandle, MeshInstance } from "../../core/mesh/index.ts";
 import {
     DirectionalLight,
     PointLight,
     prepareImages,
     registerImage,
     SpotLight,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import type { World } from "../../engine/ecs";
-import { composeMat4, decomposeMat4, linearToSrgb, multiplyMat4 } from "../../engine/utils";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import type { World } from "../../engine/ecs/index.ts";
+import { composeMat4, decomposeMat4, linearToSrgb, multiplyMat4 } from "../../engine/utils/index.ts";
 import {
     AlphaMode,
     type MaterialHandle,
@@ -16,7 +16,7 @@ import {
     MeshMaterial,
     preparePipelines,
     StandardMaterial,
-} from "../../standard/rendering";
+} from "../../standard/rendering/index.ts";
 import type { GltfAnimation, GltfNode, GltfNodePose } from "./animation.ts";
 import type { GltfScene, GltfSkeleton, GltfSkin } from "./gltf.ts";
 import { initializeGltfGlobals, poseKernel, registerGltfKernel, writeKernelPose } from "./kernel.ts";

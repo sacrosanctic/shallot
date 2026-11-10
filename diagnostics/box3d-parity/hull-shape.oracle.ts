@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
-import { Body, Hulls, PhysicsPlugin, Shape } from "../../src/core/physics";
-import { TransformPlugin } from "../../src/core/transform";
-import { World } from "../../src/engine";
-import { StandardPhysicsPlugin } from "../../src/standard/physics";
+import { Body, Hulls, PhysicsPlugin, Shape } from "../../src/core/physics/index.ts";
+import { TransformPlugin } from "../../src/core/transform/index.ts";
+import { World } from "../../src/engine/index.ts";
+import { StandardPhysicsPlugin } from "../../src/standard/physics/index.ts";
 import { physicsState } from "../../src/standard/physics/runtime.ts";
 import { hullImage } from "../../src/standard/physics/shapes/hullbytes.ts";
 import { readShapeHull } from "../../src/standard/physics/shapes/hull.ts";

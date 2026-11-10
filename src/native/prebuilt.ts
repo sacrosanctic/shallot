@@ -3,7 +3,7 @@ import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { homedir } from "node:os";
 import { isAbsolute, relative, resolve } from "node:path";
-import { normalizePath } from "../project";
+import { normalizePath } from "../project/index.ts";
 
 export type PrebuiltMode = "system" | "portable";
 

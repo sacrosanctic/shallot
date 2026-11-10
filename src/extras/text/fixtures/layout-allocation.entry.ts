@@ -1,5 +1,5 @@
-import { Transform } from "../../../core/transform";
-import { createApp } from "../../../engine/app";
+import { Transform } from "../../../core/transform/index.ts";
+import { createApp } from "../../../engine/app/index.ts";
 import { internText, Text, TextPlugin } from "../index.ts";
 export let controlSink: object;
 export function control() {

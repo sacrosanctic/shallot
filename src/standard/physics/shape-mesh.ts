@@ -1,6 +1,6 @@
-import { sphere } from "../../core/mesh";
-import { Compounds, Hulls, type Shape, ShapeKind } from "../../core/physics";
-import type { ComponentRecord, World } from "../../engine";
+import { sphere } from "../../core/mesh/index.ts";
+import { Compounds, Hulls, type Shape, ShapeKind } from "../../core/physics/index.ts";
+import type { ComponentRecord, World } from "../../engine/index.ts";
 import type { Vec3 } from "./common/records.ts";
 import { buildPlacedHull, heightFieldBuild, meshBuild } from "./geometry-builds.ts";
 import { getHeightFieldTriangle, HEIGHT_FIELD_HOLE } from "./shapes/heightfield.ts";

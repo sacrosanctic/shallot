@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { precompile, probeBuffer, type World } from "../../engine";
+import { precompile, probeBuffer, type World } from "../../engine/index.ts";
 import {
     batchResolver,
     MaterialBatches,

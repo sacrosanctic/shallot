@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { cube, Meshes, MeshInstance } from "../../core/mesh";
+import { cube, Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     Camera,
@@ -11,11 +11,11 @@ import {
     DirectionalLight,
     RenderLayers,
     Xform,
-} from "../../core/rendering";
-import { Transform } from "../../core/transform";
-import { lookAtRotation, precompile, type World } from "../../engine";
-import { probeBuffer } from "../../engine/runtime";
-import { DEFAULT_PLUGINS } from "../../standard";
+} from "../../core/rendering/index.ts";
+import { Transform } from "../../core/transform/index.ts";
+import { lookAtRotation, precompile, type World } from "../../engine/index.ts";
+import { probeBuffer } from "../../engine/runtime/index.ts";
+import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import { sunShadowView } from "./atlas.ts";
 import {
     AlphaMode,

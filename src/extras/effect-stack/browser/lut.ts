@@ -1,8 +1,8 @@
-import { attachTexture, Camera, captureTexture, registerImage } from "../../../core/rendering";
-import { Transform } from "../../../core/transform";
-import { createApp } from "../../../engine/app";
-import { DEFAULT_PLUGINS } from "../../../standard";
-import { StandardRenderer } from "../../../standard/rendering";
+import { attachTexture, Camera, captureTexture, registerImage } from "../../../core/rendering/index.ts";
+import { Transform } from "../../../core/transform/index.ts";
+import { createApp } from "../../../engine/app/index.ts";
+import { DEFAULT_PLUGINS } from "../../../standard/index.ts";
+import { StandardRenderer } from "../../../standard/rendering/index.ts";
 import { ChromaticAberration, EffectStackPlugin } from "..";
 
 async function whiteImage(size: number): Promise<Blob> {

@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { createApp, DiagnosticsStore } from "../../engine";
+import { createApp, DiagnosticsStore } from "../../engine/index.ts";
 import { ProfilePlugin } from "./index.ts";
 
 await setupGlobals();

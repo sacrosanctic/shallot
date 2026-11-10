@@ -1,4 +1,4 @@
-import type { World } from "../../../engine";
+import type { World } from "../../../engine/index.ts";
 import { type KernelState, kernel, kernelState, kernelViewKey, kernelViewsCurrent } from "./kernel.ts";
 
 type ViewOwner = { ensureViews(): void };

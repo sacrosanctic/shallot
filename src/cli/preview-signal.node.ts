@@ -4,7 +4,7 @@ import { tmpdir } from "node:os";
 import { basename, join } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { removeTestDirectory } from "../../scripts/test-directory.ts";
-import { nativeOutDir } from "../native";
+import { nativeOutDir } from "../native/index.ts";
 import { runVite } from "../project/vite-command.ts";
 import { previewProject } from "./preview.ts";
 

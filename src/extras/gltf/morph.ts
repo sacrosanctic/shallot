@@ -1,4 +1,4 @@
-import type { World } from "../../engine";
+import type { World } from "../../engine/index.ts";
 import type { GltfMesh } from "./gltf.ts";
 
 /** Contiguous ranges; released neighbours coalesce and the free tail leaves the extent. */

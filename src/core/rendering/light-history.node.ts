@@ -2,8 +2,8 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import { createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { probeBuffer, Time } from "../../engine";
-import { GlobalTransform, resetInterpolation, Transform } from "../transform";
+import { probeBuffer, Time } from "../../engine/index.ts";
+import { GlobalTransform, resetInterpolation, Transform } from "../transform/index.ts";
 import {
     GlobalTransformHistory,
     globalTransformTable,

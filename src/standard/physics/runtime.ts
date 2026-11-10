@@ -6,7 +6,7 @@ import {
     PhysicsPlugin,
     Shape as ShapeComponent,
     Sleeping,
-} from "../../core/physics";
+} from "../../core/physics/index.ts";
 import {
     claimTransformPose,
     GlobalTransform,
@@ -14,7 +14,7 @@ import {
     resetInterpolation,
     Transform,
     TransformRuntime,
-} from "../../core/transform";
+} from "../../core/transform/index.ts";
 import {
     type EntityRef,
     type Plugin,
@@ -23,12 +23,12 @@ import {
     Time,
     type TypedArray,
     type World,
-} from "../../engine";
-import type { ComponentStorage } from "../../engine/ecs";
-import { reportStartup } from "../../engine/runtime";
-import { clamp } from "../../engine/utils";
-import type { AABB, Pos, Quat, Vec3, WorldState, WorldTransform } from "./api";
-import { init, type PhysicsSnapshot, shutdown } from "./api";
+} from "../../engine/index.ts";
+import type { ComponentStorage } from "../../engine/ecs/index.ts";
+import { reportStartup } from "../../engine/runtime/index.ts";
+import { clamp } from "../../engine/utils/index.ts";
+import type { AABB, Pos, Quat, Vec3, WorldState, WorldTransform } from "./api/index.ts";
+import { init, type PhysicsSnapshot, shutdown } from "./api/index.ts";
 import {
     restore as restoreWorld,
     snapshotBindings,

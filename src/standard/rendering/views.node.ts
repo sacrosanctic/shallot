@@ -2,7 +2,7 @@ import { afterAll, beforeAll, describe, expect, setDefaultTimeout, test } from "
 import { Camera, PointLight, StandardRenderingPlugin, Transform } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { cube, Meshes, MeshInstance } from "../../core/mesh";
+import { cube, Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
     attachView,
@@ -15,16 +15,16 @@ import {
     TonemappingMethod,
     Views,
     VolumetricLight,
-} from "../../core/rendering";
+} from "../../core/rendering/index.ts";
 import { tonemappingStateKey } from "../../core/rendering/tonemapping-state.ts";
 import {
     presentingViewRefusal,
     presentingViewSlot,
     viewResourcesKey,
 } from "../../core/rendering/view.ts";
-import type { World } from "../../engine";
-import { Fog, FogPlugin } from "../../extras/fog";
-import { Outline, OutlinePlugin } from "../../extras/outline";
+import type { World } from "../../engine/index.ts";
+import { Fog, FogPlugin } from "../../extras/fog/index.ts";
+import { Outline, OutlinePlugin } from "../../extras/outline/index.ts";
 import { CLUSTER_COUNT, CLUSTER_Z, Clusters, clusterGpuKey, LightCull } from "./cluster.ts";
 import { engineLayout } from "./engine.ts";
 import { StandardRenderer } from "./forward.ts";

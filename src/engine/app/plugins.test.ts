@@ -1,10 +1,10 @@
 import { afterEach, expect, test } from "bun:test";
-import { AudioPlugin } from "../../core/audio";
-import { BrowserInputPlugin, createBrowserInputPlugin, InputPlugin } from "../../core/input";
-import { MeshPlugin } from "../../core/mesh";
-import { PhysicsPlugin } from "../../core/physics";
-import { CorePipelinePlugin, RenderingPlugin } from "../../core/rendering";
-import { TransformPlugin } from "../../core/transform";
+import { AudioPlugin } from "../../core/audio/index.ts";
+import { BrowserInputPlugin, createBrowserInputPlugin, InputPlugin } from "../../core/input/index.ts";
+import { MeshPlugin } from "../../core/mesh/index.ts";
+import { PhysicsPlugin } from "../../core/physics/index.ts";
+import { CorePipelinePlugin, RenderingPlugin } from "../../core/rendering/index.ts";
+import { TransformPlugin } from "../../core/transform/index.ts";
 import {
     EffectStackPlugin,
     FogPlugin,
@@ -15,7 +15,7 @@ import {
     SkyPlugin,
     SpritePlugin,
     TextPlugin,
-} from "../../extras";
+} from "../../extras/index.ts";
 import {
     CharacterPlugin,
     DEFAULT_PLUGINS,
@@ -23,7 +23,7 @@ import {
     StandardAudioPlugin,
     StandardPhysicsPlugin,
     StandardRenderingPlugin,
-} from "../../standard";
+} from "../../standard/index.ts";
 import { type Plugin, Time } from "../index.ts";
 import { createApp } from "./index.ts";
 
