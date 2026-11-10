@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { createWave } from "./heightfield.ts";
 import { createWaveMesh } from "./mesh.ts";
-import gold from "./wave-build.gold.json";
+import gold from "./wave-build.gold.json" with { type: "json" };
 
 const word = new DataView(new ArrayBuffer(4));
 function bits(value: number): number {

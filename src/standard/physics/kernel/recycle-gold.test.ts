@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { contactIds } from "../collision/contact.ts";
-import gold from "../collision/recycle.gold.json";
+import gold from "../collision/recycle.gold.json" with { type: "json" };
 import { BodyType } from "../common/types.ts";
 import { createSphereShape } from "../shapes/shape.ts";
 import {

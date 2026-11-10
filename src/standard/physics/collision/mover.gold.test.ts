@@ -15,7 +15,7 @@ import { createGrid } from "../shapes/heightfield.ts";
 import type { HullData } from "../shapes/hull.ts";
 import { createGridMesh, type Mesh } from "../shapes/mesh.ts";
 import { type CollisionPlane, clipVector, type PlaneResult, solvePlanes } from "./mover.ts";
-import gold from "./mover.gold.json";
+import gold from "./mover.gold.json" with { type: "json" };
 import { kernelMover } from "./shape_query_gold.ts";
 
 const dv = new DataView(new ArrayBuffer(4));

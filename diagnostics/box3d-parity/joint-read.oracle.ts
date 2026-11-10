@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import publicGold from "../../src/standard/physics/joint-read.gold.json";
-import gold from "../../crates/physics/tests/joint_read.gold.json";
+import publicGold from "../../src/standard/physics/joint-read.gold.json" with { type: "json" };
+import gold from "../../crates/physics/tests/joint_read.gold.json" with { type: "json" };
 import { visitJointReaders } from "../../src/standard/physics/solver/joint-read.fixture.ts";
 import { nativeBinary, run } from "./native.ts";
 

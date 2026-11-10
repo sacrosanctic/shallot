@@ -2,7 +2,7 @@ import { createHash } from "node:crypto";
 import { mkdir, readFile, rename, rm, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import manifest from "./assets.json";
+import manifest from "./assets.json" with { type: "json" };
 
 export interface AssetFile {
     path: string;

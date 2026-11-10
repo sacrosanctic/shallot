@@ -13,7 +13,7 @@ import {
     StandardPhysicsPlugin,
 } from "./index.ts";
 import { hullImage } from "./shapes/hullbytes.ts";
-import gold from "./standalone-geometry.gold.json";
+import gold from "./standalone-geometry.gold.json" with { type: "json" };
 
 setDefaultTimeout(TIMEOUT.node);
 

@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import gold from "../../src/standard/physics/shapes/geometry.gold.json";
-import cases from "../../src/standard/physics/shapes/compound-tree.inputs.json";
+import gold from "../../src/standard/physics/shapes/geometry.gold.json" with { type: "json" };
+import cases from "../../src/standard/physics/shapes/compound-tree.inputs.json" with { type: "json" };
 import { nativeSseOutput } from "./native-evidence.ts";
 
 setDefaultTimeout(0);

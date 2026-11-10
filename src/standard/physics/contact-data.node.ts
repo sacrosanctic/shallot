@@ -4,7 +4,7 @@ import { Transform } from "../../core/transform/index.ts";
 import { createApp, type EntityRef } from "../../engine/index.ts";
 import type { PhysicsContactData } from "./contact.ts";
 import { contactPair } from "./contact-data.fixture.ts";
-import gold from "./contact-data.gold.json";
+import gold from "./contact-data.gold.json" with { type: "json" };
 import type { PhysicsContactEvent, PhysicsEventRecords } from "./events.ts";
 import { getContactData, PhysicsEvents, StandardPhysicsPlugin, setTransform } from "./index.ts";
 

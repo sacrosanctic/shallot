@@ -15,7 +15,7 @@ import {
     makeBoxHull,
     makeTransformedBoxHull,
 } from "./build-hull.ts";
-import gold from "./geometry.gold.json";
+import gold from "./geometry.gold.json" with { type: "json" };
 import { cloneHull, computeHullAABB, type HullData } from "./hull.ts";
 import { computeShapeMass, createHullShape } from "./shape.ts";
 

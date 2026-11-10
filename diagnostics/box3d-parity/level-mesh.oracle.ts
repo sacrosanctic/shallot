@@ -2,7 +2,7 @@ import { expect, test } from "bun:test";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import gold from "../../examples/physics/tests/level-mesh.gold.json";
+import gold from "../../examples/physics/tests/level-mesh.gold.json" with { type: "json" };
 import { drawMeshData } from "../../src/standard/physics/shapes/readgeometry.ts";
 import { levelMeshBinary } from "./level-mesh.ts";
 

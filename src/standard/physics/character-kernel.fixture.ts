@@ -1,4 +1,4 @@
-import gold from "../../../crates/physics/tests/character.gold.json";
+import gold from "../../../crates/physics/tests/character.gold.json" with { type: "json" };
 import { Body, PhysicsPlugin, Shape, ShapeKind } from "../../core/physics/index.ts";
 import { Transform, TransformPlugin } from "../../core/transform/index.ts";
 import { Time, World } from "../../engine/index.ts";

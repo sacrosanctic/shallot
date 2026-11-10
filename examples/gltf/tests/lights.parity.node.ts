@@ -14,7 +14,7 @@ import {
 import { loadGltfScene, poseGltfScene, spawnGltfScene } from "@dylanebert/shallot/gltf";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import gold from "./lights.gold.json";
+import gold from "./lights.gold.json" with { type: "json" };
 import { assets, fileFetch, syncAssets } from "./setup.ts";
 
 setDefaultTimeout(TIMEOUT.node);

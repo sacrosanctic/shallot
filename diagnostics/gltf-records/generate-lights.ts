@@ -2,7 +2,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
-import manifest from "../../examples/gltf/assets.json";
+import manifest from "../../examples/gltf/assets.json" with { type: "json" };
 import { syncFiles } from "../../examples/gltf/sync.ts";
 
 const revision = "1e7e3cff304a05416a54343e7ce273c709bccefe";

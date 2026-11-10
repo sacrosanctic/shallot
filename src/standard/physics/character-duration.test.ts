@@ -3,7 +3,7 @@ import { Body, PhysicsPlugin, Shape, ShapeKind } from "../../core/physics/index.
 import { Transform, TransformPlugin } from "../../core/transform/index.ts";
 import { Time, World } from "../../engine/index.ts";
 import { Character, CharacterPlugin } from "./character.ts";
-import gold from "./character-duration.gold.json";
+import gold from "./character-duration.gold.json" with { type: "json" };
 import { BodyType } from "./common/types.ts";
 import { physicsState, StandardPhysicsPlugin } from "./runtime.ts";
 import { hashWorldState } from "./world/hash.ts";

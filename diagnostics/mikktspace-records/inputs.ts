@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
-import manifest from "../../examples/gltf/assets.json";
+import manifest from "../../examples/gltf/assets.json" with { type: "json" };
 import { adversarial, adversarialNames } from "./adversarial.ts";
 
 export const models = [...manifest.models.map(model => model.name), ...adversarialNames];

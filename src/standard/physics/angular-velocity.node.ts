@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Body, BodyType, Shape, ShapeKind } from "../../core/physics/index.ts";
 import { Transform } from "../../core/transform/index.ts";
 import { createApp } from "../../engine/index.ts";
-import gold from "./angular-velocity.gold.json";
+import gold from "./angular-velocity.gold.json" with { type: "json" };
 import { getAngularVelocity, StandardPhysicsPlugin, setAngularVelocity } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);

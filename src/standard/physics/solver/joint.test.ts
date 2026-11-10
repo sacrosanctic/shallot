@@ -1,7 +1,7 @@
 // Direct-state joint behavior checks. Wrapper-specific accessor tests left with the removed handle API;
 // kernel creation, ordering, filtering, solver response and output are exercised over state and IDs.
 import { expect, test } from "bun:test";
-import gold from "../../../../crates/physics/tests/reader_regressions.gold.json";
+import gold from "../../../../crates/physics/tests/reader_regressions.gold.json" with { type: "json" };
 import { froundConfig } from "../common/config.ts";
 import type { Vec3 } from "../common/records.ts";
 import { BodyType, type WorldDef } from "../common/types.ts";
@@ -40,7 +40,7 @@ import {
     testShapeDef,
 } from "../testing.ts";
 import { bodyGetTransform, bodyIsAwake, getBodyState } from "../world/body.ts";
-import eventClaims from "../world/ecs-event-claims.gold.json";
+import eventClaims from "../world/ecs-event-claims.gold.json" with { type: "json" };
 import type { WorldState } from "../world/world.ts";
 import { worldCounters } from "../world/world.ts";
 

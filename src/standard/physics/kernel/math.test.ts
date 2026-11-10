@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import gold from "../../../../crates/physics/tests/math.gold.json";
+import gold from "../../../../crates/physics/tests/math.gold.json" with { type: "json" };
 import type { Mat3, Quat, Vec3 } from "../common/records.ts";
 import { kernel } from "./kernel.ts";
 import { matrix, quaternion, vector } from "./math.ts";

@@ -2,7 +2,7 @@
 import { copyFileSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { resolve } from "node:path";
-import records from "../../src/core/mesh/fixtures/mikktspace.json";
+import records from "../../src/core/mesh/fixtures/mikktspace.json" with { type: "json" };
 
 function run(args: string[]) {
     const result = Bun.spawnSync(args);

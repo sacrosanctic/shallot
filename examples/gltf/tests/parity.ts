@@ -28,7 +28,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import { decodeConformance } from "./arrays.ts";
 import { categories, modelPath } from "./catalog.ts";
-import gold from "./models.gold.json";
+import gold from "./models.gold.json" with { type: "json" };
 import { decodeQuantized } from "./quantization.ts";
 import { assets, fileFetch, syncAssets } from "./setup.ts";
 

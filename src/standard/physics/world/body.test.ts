@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import gold from "../../../../crates/physics/tests/reader_regressions.gold.json";
+import gold from "../../../../crates/physics/tests/reader_regressions.gold.json" with { type: "json" };
 import { froundConfig } from "../common/config.ts";
 import { BodyType } from "../common/types.ts";
 import { readSimCenter, readStateAngularVelocity } from "../kernel/bodycolumns.ts";

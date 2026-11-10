@@ -1,4 +1,4 @@
-import manifest from "./assets.json";
+import manifest from "./assets.json" with { type: "json" };
 import { modelPath, type Scene, scenes } from "./src/scenes.ts";
 
 export function pickerModels(paths: Readonly<Record<string, string>>) {

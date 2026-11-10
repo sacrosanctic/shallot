@@ -26,7 +26,7 @@ import { createFilterJoint, defaultJointDef, destroyJointInternal } from "../../
 import { createRevoluteJoint, defaultRevoluteJointDef } from "../../src/standard/physics/solver/revoluteJoint.ts";
 import { createSphericalJoint, defaultSphericalJointDef } from "../../src/standard/physics/solver/sphericalJoint.ts";
 import { PROFILE_FIELDS } from "../../src/standard/physics/world/profile.ts";
-import BONE_TABLE from "../../src/standard/physics/solver/fixtures/human.json";
+import BONE_TABLE from "../../src/standard/physics/solver/fixtures/human.json" with { type: "json" };
 
 const f = Math.fround;
 const PI = f(Math.PI);

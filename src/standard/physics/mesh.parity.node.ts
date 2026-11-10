@@ -7,7 +7,7 @@ import {
     StandardPhysicsPlugin,
 } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import gold from "../../../crates/physics/tests/nonconvex_build.gold.json";
+import gold from "../../../crates/physics/tests/nonconvex_build.gold.json" with { type: "json" };
 import { drawMeshData } from "./shapes/readgeometry.ts";
 
 setDefaultTimeout(TIMEOUT.node);

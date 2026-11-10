@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import gold from "../../src/standard/physics/sensor-data.gold.json";
+import gold from "../../src/standard/physics/sensor-data.gold.json" with { type: "json" };
 import { nativeBinary, run } from "./native.ts";
 
 test("sensor visitor gold equals native Box3D order across begin and end", () => {

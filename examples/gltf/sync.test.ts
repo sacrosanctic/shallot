@@ -4,7 +4,7 @@ import { mkdtemp, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
-import manifest from "./assets.json";
+import manifest from "./assets.json" with { type: "json" };
 import { devModels, pickerModels, pickerPaths } from "./dev-assets.ts";
 import { syncFiles } from "./sync.ts";
 

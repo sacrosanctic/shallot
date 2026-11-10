@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { init, kernel } from "../../src/standard/physics/kernel/kernel.ts";
-import gold from "../../crates/physics/tests/hull_build.gold.json";
+import gold from "../../crates/physics/tests/hull_build.gold.json" with { type: "json" };
 import { nativeBinary, run } from "./native.ts";
 import { Hulls } from "../../src/core/physics/index.ts";
 import { World } from "../../src/engine/index.ts";

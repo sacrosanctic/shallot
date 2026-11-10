@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import gold from "../../../../crates/physics/tests/joint_motion.gold.json";
+import gold from "../../../../crates/physics/tests/joint_motion.gold.json" with { type: "json" };
 import { visitJointMotion } from "./joint-motion.fixture.ts";
 
 test("joint translation, speed and length readers equal native Box3D bits", () => {

@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import gold from "../../crates/physics/tests/nonconvex_build.gold.json";
+import gold from "../../crates/physics/tests/nonconvex_build.gold.json" with { type: "json" };
 import { init, kernel } from "../../src/standard/physics/kernel/kernel.ts";
 import { nativeBinary, run } from "./native.ts";
 

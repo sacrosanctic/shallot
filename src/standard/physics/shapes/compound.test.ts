@@ -21,7 +21,7 @@ import {
     getCompoundMaterials,
 } from "./compound.ts";
 import { type Capsule, computeCapsuleAABB, computeSphereAABB, type Sphere } from "./geometry.ts";
-import gold from "./geometry.gold.json";
+import gold from "./geometry.gold.json" with { type: "json" };
 import { computeHullAABB, type HullData } from "./hull.ts";
 import { computeMeshAABB, createBoxMesh, type MeshData } from "./mesh.ts";
 import { computeShapeAABB, createCompoundShape, destroyShape, shapeIsValid } from "./shape.ts";

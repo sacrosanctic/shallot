@@ -22,7 +22,7 @@ import {
     StepPhysicsSystem,
 } from "./index.ts";
 import { readStateAngularVelocity } from "./kernel/bodycolumns.ts";
-import lane from "./oracle/box3d/v7/cases.json";
+import lane from "./oracle/box3d/v7/cases.json" with { type: "json" };
 import { physicsBodyIndex, physicsState } from "./runtime.ts";
 import {
     createHeightFieldShape,

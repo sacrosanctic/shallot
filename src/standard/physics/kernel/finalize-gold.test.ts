@@ -4,7 +4,7 @@ import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld } from
 import { BodyFlags } from "../world/body.ts";
 import { BodyField, bodyField } from "./bodyrecords.ts";
 import { BODY_ID, CENTER0, FLAGS, MIN_EXTENT, SIM_STRIDE, STATE_STRIDE } from "./columns.ts";
-import gold from "./finalize.gold.json";
+import gold from "./finalize.gold.json" with { type: "json" };
 import { kernel } from "./kernel.ts";
 
 const ROTATION0 = 10;

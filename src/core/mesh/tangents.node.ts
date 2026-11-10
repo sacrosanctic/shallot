@@ -6,9 +6,9 @@ setDefaultTimeout(TIMEOUT.node);
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { assets, models, primitives } from "../../../diagnostics/mikktspace-records/inputs.ts";
-import manifest from "../../../examples/gltf/assets.json";
+import manifest from "../../../examples/gltf/assets.json" with { type: "json" };
 import { syncFiles } from "../../../examples/gltf/sync.ts";
-import records from "./fixtures/mikktspace.json";
+import records from "./fixtures/mikktspace.json" with { type: "json" };
 import { generateTangents } from "./tangents.ts";
 
 beforeAll(async () => {

@@ -4,7 +4,7 @@ import { Body, BodyType, Hulls, Shape } from "../../core/physics/index.ts";
 import { GlobalTransform, Transform } from "../../core/transform/index.ts";
 import { createApp } from "../../engine/index.ts";
 import { getMassData, hashPhysics, StandardPhysicsPlugin, setMassData } from "./index.ts";
-import gold from "./mass-data.gold.json";
+import gold from "./mass-data.gold.json" with { type: "json" };
 
 setDefaultTimeout(TIMEOUT.node);
 const override = {

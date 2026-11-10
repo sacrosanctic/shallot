@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import manifest from "../assets.json";
+import manifest from "../assets.json" with { type: "json" };
 import { syncFiles } from "../sync.ts";
 
 export const assets = new URL("../public/assets/", import.meta.url);

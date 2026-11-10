@@ -17,7 +17,7 @@ import {
 } from "../testing.ts";
 import { makeBoxHull } from "./build-hull.ts";
 import { createCompound } from "./compound.ts";
-import gold from "./geometry.gold.json";
+import gold from "./geometry.gold.json" with { type: "json" };
 import { createGrid } from "./heightfield.ts";
 import { createGridMesh } from "./mesh.ts";
 import {

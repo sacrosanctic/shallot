@@ -20,7 +20,7 @@ import {
     StandardPhysicsPlugin,
 } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import gold from "./joint-read.gold.json";
+import gold from "./joint-read.gold.json" with { type: "json" };
 
 setDefaultTimeout(TIMEOUT.node);
 

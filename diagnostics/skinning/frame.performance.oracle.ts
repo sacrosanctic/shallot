@@ -56,7 +56,7 @@ import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import manifest from "../../examples/gltf/assets.json";
+import manifest from "../../examples/gltf/assets.json" with { type: "json" };
 import { syncFiles } from "../../examples/gltf/sync.ts";
 
 // bun test ./diagnostics/skinning/frame.performance.oracle.ts

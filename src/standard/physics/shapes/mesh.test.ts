@@ -3,7 +3,7 @@ import type { Vec3 } from "../common/records.ts";
 import { BodyType } from "../common/types.ts";
 import { ShapeField, shapeField } from "../kernel/shaperecords.ts";
 import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
-import gold from "./geometry.gold.json";
+import gold from "./geometry.gold.json" with { type: "json" };
 import {
     createBoxMesh,
     createGridMesh,

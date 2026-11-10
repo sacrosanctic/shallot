@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 import { Body, BodyType, FilterJoint, RevoluteJoint, Shape, ShapeKind, SphericalJoint, Transform, type World } from "@dylanebert/shallot";
-import bones from "../../src/standard/physics/solver/fixtures/human.json";
+import bones from "../../src/standard/physics/solver/fixtures/human.json" with { type: "json" };
 
 const f = Math.fround;
 const degrees = f(0.01745329251);

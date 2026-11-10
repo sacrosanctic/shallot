@@ -17,7 +17,7 @@ import {
     roundSphere,
     type Sphere,
 } from "./geometry.ts";
-import gold from "./geometry.gold.json";
+import gold from "./geometry.gold.json" with { type: "json" };
 import {
     computeShapeAABBOut,
     computeShapeMass,

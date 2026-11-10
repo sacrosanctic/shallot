@@ -2,8 +2,8 @@ import { afterAll, beforeAll, expect, setDefaultTimeout, spyOn, test } from "bun
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import animationGold from "../../../examples/gltf/tests/animations.gold.json";
-import modelGold from "../../../examples/gltf/tests/models.gold.json";
+import animationGold from "../../../examples/gltf/tests/animations.gold.json" with { type: "json" };
+import modelGold from "../../../examples/gltf/tests/models.gold.json" with { type: "json" };
 import { assets, fileFetch, syncAssets } from "../../../examples/gltf/tests/setup.ts";
 import { Meshes, type MeshHandle, MeshInstance } from "../../core/mesh/index.ts";
 import {

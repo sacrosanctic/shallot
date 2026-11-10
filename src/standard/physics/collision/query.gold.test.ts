@@ -14,7 +14,7 @@ import { createGrid } from "../shapes/heightfield.ts";
 import type { HullData } from "../shapes/hull.ts";
 import { createGridMesh, type Mesh } from "../shapes/mesh.ts";
 import type { CastOutput, ShapeProxy } from "./distance.ts";
-import gold from "./query.gold.json";
+import gold from "./query.gold.json" with { type: "json" };
 import { kernelCast, kernelOverlap, kernelRay } from "./shape_query_gold.ts";
 
 const dv = new DataView(new ArrayBuffer(4));

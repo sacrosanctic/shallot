@@ -19,7 +19,7 @@ import { intersectRayTriangle, transform } from "../kernel/math.ts";
 import { queryColumns } from "../kernel/querycolumns.ts";
 import { createBody } from "../world/body.ts";
 import { createWorld, destroyWorld, getWorld, type WorldState } from "../world/world.ts";
-import gold from "./geometry.gold.json";
+import gold from "./geometry.gold.json" with { type: "json" };
 import {
     createGrid,
     createHeightField,

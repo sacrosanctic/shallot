@@ -18,7 +18,7 @@ import {
 } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import gold from "../../../crates/physics/tests/mover_pogo.gold.json";
+import gold from "../../../crates/physics/tests/mover_pogo.gold.json" with { type: "json" };
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { GlobalTransform } from "../../core/transform/index.ts";
 import {

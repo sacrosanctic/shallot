@@ -11,7 +11,7 @@ import {
 import { GlobalTransform, Transform, TransformPlugin } from "../../../core/transform/index.ts";
 import { type EntityRef, Time, World } from "../../../engine/index.ts";
 import { PhysicsEvents, PhysicsWorldDefinition, StandardPhysicsPlugin, setAwake } from "../index.ts";
-import claims from "./ecs-event-claims.gold.json";
+import claims from "./ecs-event-claims.gold.json" with { type: "json" };
 
 type Names = Map<EntityRef, string>;
 const zero = { x: 0, y: 0, z: 0 };

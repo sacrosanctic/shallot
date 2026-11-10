@@ -8,7 +8,7 @@ import {
     setTransform,
 } from "./index.ts";
 import { sensorVisitors } from "./sensor-data.fixture.ts";
-import gold from "./sensor-data.gold.json";
+import gold from "./sensor-data.gold.json" with { type: "json" };
 
 setDefaultTimeout(TIMEOUT.node);
 test("sensor visitors equal native contents and order across begin, end and restore, borrowing one World-owned array", async () => {

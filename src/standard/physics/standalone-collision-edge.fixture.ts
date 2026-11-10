@@ -19,8 +19,8 @@ import {
     toiWords,
     vf,
 } from "./standalone-collision.fixture.ts";
-import failed from "./standalone-collision-failed.json";
-import history from "./standalone-collision-history.json";
+import failed from "./standalone-collision-failed.json" with { type: "json" };
+import history from "./standalone-collision-history.json" with { type: "json" };
 
 type Case =
     | { operation: 7 | 8; input: DistanceInput; capacity: number; reset: boolean }

@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import gold from "../../../../crates/physics/tests/reader_regressions.gold.json";
+import gold from "../../../../crates/physics/tests/reader_regressions.gold.json" with { type: "json" };
 import { BodyType, defaultSurfaceMaterial, type SurfaceMaterial } from "../common/types.ts";
 import { kernel } from "../kernel/kernel.ts";
 import { makeBoxHull } from "../shapes/build-hull.ts";

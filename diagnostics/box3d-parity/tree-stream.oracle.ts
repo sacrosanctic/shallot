@@ -1,5 +1,5 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import gold from "../../src/standard/physics/collision/tree.gold.json";
+import gold from "../../src/standard/physics/collision/tree.gold.json" with { type: "json" };
 import { nativeSseOutput } from "./native-evidence.ts";
 import { treeStreamInput, treeStreamObservations } from "./tree-stream.ts";
 setDefaultTimeout(0);

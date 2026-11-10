@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import gold from "../../src/standard/physics/mass-data.gold.json";
+import gold from "../../src/standard/physics/mass-data.gold.json" with { type: "json" };
 import { nativeBinary, run } from "./native.ts";
 
 test("mass override snapshots retain native Box3D hashes, mass and velocity", () => {

@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import gold from "../../crates/physics/tests/reader_regressions.gold.json";
+import gold from "../../crates/physics/tests/reader_regressions.gold.json" with { type: "json" };
 import { nativeBinary, run } from "./native.ts";
 
 test("body readers and default material mixing gold regenerate from native Box3D", () => {

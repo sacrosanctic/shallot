@@ -9,7 +9,7 @@ import { dirname, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { fixtures } from "./fixtures.ts";
 import { recordArray } from "../../examples/gltf/tests/records.ts";
-import manifest from "../../examples/gltf/assets.json";
+import manifest from "../../examples/gltf/assets.json" with { type: "json" };
 import { syncFiles } from "../../examples/gltf/sync.ts";
 
 const quantization = process.argv.includes("--quantization");

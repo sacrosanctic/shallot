@@ -2,7 +2,7 @@ import { beforeAll, expect, setDefaultTimeout, test } from "bun:test";
 import { readFile } from "node:fs/promises";
 import { loadGltf } from "@dylanebert/shallot/gltf";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import gold from "./quantization.gold.json";
+import gold from "./quantization.gold.json" with { type: "json" };
 import { assets, fileFetch, syncAssets } from "./setup.ts";
 
 setDefaultTimeout(TIMEOUT.node);

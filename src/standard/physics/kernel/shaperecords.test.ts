@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import gold from "../../../../crates/physics/tests/reader_regressions.gold.json";
+import gold from "../../../../crates/physics/tests/reader_regressions.gold.json" with { type: "json" };
 import { restore, snapshot } from "../api/snapshot.ts";
 import { BodyType, ShapeType } from "../common/types.ts";
 import {

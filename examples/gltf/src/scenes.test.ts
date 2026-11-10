@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
-import manifest from "../assets.json";
+import manifest from "../assets.json" with { type: "json" };
 import {
     categories,
     initialScene,

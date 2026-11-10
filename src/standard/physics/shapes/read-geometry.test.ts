@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import gold from "../../../../crates/physics/tests/geometry_read.gold.json";
+import gold from "../../../../crates/physics/tests/geometry_read.gold.json" with { type: "json" };
 import { computeCapsuleAABB, computeSphereAABB } from "./geometry.ts";
 import { getHeightFieldTriangle, type HeightFieldData } from "./heightfield.ts";
 import { computeHullAABB, type HullData } from "./hull.ts";

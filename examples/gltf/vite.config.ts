@@ -1,7 +1,7 @@
 import { fileURLToPath } from "node:url";
 import { shallot } from "@dylanebert/shallot/vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
-import manifest from "./assets.json";
+import manifest from "./assets.json" with { type: "json" };
 import { devModels } from "./dev-assets.ts";
 import { syncFiles } from "./sync.ts";
 

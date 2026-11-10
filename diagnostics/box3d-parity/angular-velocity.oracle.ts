@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import gold from "../../src/standard/physics/angular-velocity.gold.json";
+import gold from "../../src/standard/physics/angular-velocity.gold.json" with { type: "json" };
 import { nativeBinary, run } from "./native.ts";
 
 test("angular velocity gold is native Box3D's current value", () => {
