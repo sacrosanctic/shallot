@@ -47,7 +47,7 @@ import {
     SkinnedMesh,
     SkinPalette,
 } from "./skinning.ts";
-import { skinningFixtureUrl } from "./skinning.fixture";
+import { skinningFixtureUrl } from "./skinning.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 // The mesh layout already uses all eight fragment storage buffers after skin. A storage texture

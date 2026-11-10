@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { createTestGpuApp } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp } from "../../../scripts/gpu.fixture.ts";
 import type { createApp } from "../../engine/app/index.ts";
-import { CanvasContext } from "../../engine/app/canvas.fixture";
+import { CanvasContext } from "../../engine/app/canvas.fixture.ts";
 import { probeTexture } from "../../engine/runtime/index.ts";
 import { EffectStackPlugin, Vignette } from "../../extras/effect-stack/index.ts";
 import { StandardRenderer } from "../../standard/rendering/index.ts";
@@ -17,7 +17,7 @@ import {
     EffectPasses,
     Views,
 } from "./index.ts";
-import { PointsPlugin } from "./points.fixture";
+import { PointsPlugin } from "./points.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

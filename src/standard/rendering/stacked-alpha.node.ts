@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuScene } from "../../../scripts/gpu.fixture";
+import { gpuScene } from "../../../scripts/gpu.fixture.ts";
 import { expectWarning } from "../../../scripts/test-console.ts";
 import { MeshInstance } from "../../core/mesh/index.ts";
 import {
@@ -15,8 +15,8 @@ import { offscreenTexture } from "../../core/rendering/view.ts";
 import { Transform } from "../../core/transform/index.ts";
 import type { World } from "../../engine/index.ts";
 import { probeTexture } from "../../engine/runtime/index.ts";
-import { DEFAULT_PLUGINS } from "..";
-import { AlphaMode, Materials, MeshMaterial, StandardMaterial, StandardRenderer } from ".";
+import { DEFAULT_PLUGINS } from "../index.ts";
+import { AlphaMode, Materials, MeshMaterial, StandardMaterial, StandardRenderer } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const SIZE = 32;

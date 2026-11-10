@@ -35,7 +35,7 @@ import {
     poseGltfScene,
     spawnGltfScene,
 } from "./index.ts";
-import { morphFixture, morphFixtureUrl } from "./morph.fixture";
+import { morphFixture, morphFixtureUrl } from "./morph.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const vertices = new Float32Array([

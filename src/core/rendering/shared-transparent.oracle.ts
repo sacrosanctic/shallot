@@ -12,7 +12,7 @@ import {
 } from "../../standard/rendering/index.ts";
 import { cube, Meshes, MeshInstance } from "../mesh/index.ts";
 import { Transform } from "../transform/index.ts";
-import { attachTexture, Camera, TransparentPhases } from ".";
+import { attachTexture, Camera, TransparentPhases } from "./index.ts";
 
 const MAX_ITEMS = 8192;
 const FRAME_BUDGET_MS = 16.7;

@@ -5,7 +5,7 @@ import { Body, BodyType, Shape } from "@dylanebert/shallot/physics";
 import { StandardPhysicsPlugin } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Transform } from "@dylanebert/shallot/transform";
-import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { cpuTotal } from "../../extras/profile/cpu.ts";
 
 setDefaultTimeout(TIMEOUT.node);

@@ -9,7 +9,7 @@ import {
     type TOIInput,
     TOIState,
     timeOfImpact,
-} from ".";
+} from "./index.ts";
 import {
     bits,
     collisionCases,
@@ -18,7 +18,7 @@ import {
     hex,
     toiWords,
     vf,
-} from "./standalone-collision.fixture";
+} from "./standalone-collision.fixture.ts";
 import failed from "./standalone-collision-failed.json";
 import history from "./standalone-collision-history.json";
 

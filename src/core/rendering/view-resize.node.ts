@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { Viewports } from "../../engine/index.ts";
-import { CanvasContext } from "../../engine/app/canvas.fixture";
+import { CanvasContext } from "../../engine/app/canvas.fixture.ts";
 import { Transform } from "../transform/index.ts";
 import { attachCanvas, Camera, RenderingPlugin, Views } from "./index.ts";
 

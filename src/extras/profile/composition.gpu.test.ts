@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { Diagnostic, DiagnosticsStore, type Plugin, precompile } from "../../engine/index.ts";
 import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import { DiagnosticsOverlayPlugin, ProfilePlugin } from "./index.ts";

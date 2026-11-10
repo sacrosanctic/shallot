@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
-import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { MeshInstance } from "../../core/mesh/index.ts";
 import { RenderingPlugin } from "../../core/rendering/index.ts";
 import { Transform } from "../../core/transform/index.ts";

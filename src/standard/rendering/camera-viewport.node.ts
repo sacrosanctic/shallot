@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import {
     attachCanvas,
     attachTexture,
@@ -12,7 +12,7 @@ import {
 } from "../../core/rendering/index.ts";
 import { renderFrameKey } from "../../core/rendering/frame-state.ts";
 import { Transform } from "../../core/transform/index.ts";
-import { CanvasContext } from "../../engine/app/canvas.fixture";
+import { CanvasContext } from "../../engine/app/canvas.fixture.ts";
 import { Clusters } from "./cluster.ts";
 import { StandardRenderer, StandardRenderingPlugin } from "./index.ts";
 import { cascadeCovers, updateCascades } from "./shadows.ts";

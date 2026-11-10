@@ -1,5 +1,5 @@
 import { expect, expectTypeOf, test } from "bun:test";
-import { evaluateGltfAnimation, type GltfAnimation, type GltfNode, parseGltf } from ".";
+import { evaluateGltfAnimation, type GltfAnimation, type GltfNode, parseGltf } from "./index.ts";
 
 const nodes: GltfNode[] = [
     {

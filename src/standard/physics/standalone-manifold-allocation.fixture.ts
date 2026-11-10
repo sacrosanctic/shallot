@@ -1,5 +1,5 @@
 import { createApp, StandardPhysicsPlugin } from "@dylanebert/shallot";
-import { manifoldSubject } from "./standalone-manifold.fixture";
+import { manifoldSubject } from "./standalone-manifold.fixture.ts";
 export let controlSink: { frame: number } | undefined;
 export const control = () => {
     controlSink = { frame: 0 };

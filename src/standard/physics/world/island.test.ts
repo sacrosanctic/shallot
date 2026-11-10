@@ -11,7 +11,7 @@ import {
 import { JointField, jointField } from "../kernel/jointrecords.ts";
 import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint.ts";
 import { defaultJointDef, destroyJointInternal } from "../solver/joint.ts";
-import { jointIds } from "../solver/joint.fixture";
+import { jointIds } from "../solver/joint.fixture.ts";
 import { createTestBody, createTestWorld, destroyTestWorld } from "../testing.ts";
 
 function distanceJoint(world: ReturnType<typeof createTestWorld>, a: number, b: number) {

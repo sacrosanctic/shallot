@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import { gpuScene } from "../../../scripts/gpu.fixture";
+import { gpuScene } from "../../../scripts/gpu.fixture.ts";
 import { attachTexture, Camera, captureTexture } from "../../core/rendering/index.ts";
 import { Transform } from "../../core/transform/index.ts";
 import { DEFAULT_PLUGINS } from "../../standard/index.ts";

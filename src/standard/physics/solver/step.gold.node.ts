@@ -10,7 +10,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 
 setDefaultTimeout(TIMEOUT.node);
 
-import { splitAllocationSubject } from "../joint-allocation.fixture";
+import { splitAllocationSubject } from "../joint-allocation.fixture.ts";
 import { EventKind, eventCount, eventId } from "../kernel/eventbuffers.ts";
 import { kernel, shutdown, threads, workers } from "../kernel/kernel.ts";
 import { createHullShape, createSphereShape, getSensorData } from "../shapes/shape.ts";

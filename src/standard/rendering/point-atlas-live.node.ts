@@ -5,7 +5,7 @@ import {
     createTestGpuApp,
     disposeGpuApps,
     gpuRequirements,
-} from "../../../scripts/gpu.fixture";
+} from "../../../scripts/gpu.fixture.ts";
 import { expectWarning } from "../../../scripts/test-console.ts";
 import { MeshInstance } from "../../core/mesh/index.ts";
 import {

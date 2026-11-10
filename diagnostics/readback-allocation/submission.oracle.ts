@@ -1,5 +1,5 @@
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import createSubject from "./render.entry";
+import createSubject from "./render.entry.ts";
 
 await setupGlobals();
 

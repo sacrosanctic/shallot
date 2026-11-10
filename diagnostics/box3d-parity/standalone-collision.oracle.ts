@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "../../src/project/testing.js";
-import { nativeEdgeInput } from "../../src/standard/physics/standalone-collision-edge.fixture";
-import { nativeCollisionInput } from "../../src/standard/physics/standalone-collision.fixture";
+import { nativeEdgeInput } from "../../src/standard/physics/standalone-collision-edge.fixture.ts";
+import { nativeCollisionInput } from "../../src/standard/physics/standalone-collision.fixture.ts";
 import { nativeSseOutput } from "./native-evidence.ts";
 
 setDefaultTimeout(TIMEOUT.node);

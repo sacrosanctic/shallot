@@ -24,7 +24,7 @@ import {
     rowContrast,
     spawnRecedingPlane,
     uploadDiagnosticImages,
-} from "../../src/standard/rendering/receding-plane.fixture";
+} from "../../src/standard/rendering/receding-plane.fixture.ts";
 
 const label = process.argv[2] ?? "current";
 const out = resolve(import.meta.dir, "../../test-results/texture-minification", label);

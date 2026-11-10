@@ -1,6 +1,6 @@
 import { setFlagsFromString } from "node:v8";
 import { CameraBackground } from "@dylanebert/shallot";
-import create, { control } from "./turnover.entry";
+import create, { control } from "./turnover.entry.ts";
 
 export { control };
 

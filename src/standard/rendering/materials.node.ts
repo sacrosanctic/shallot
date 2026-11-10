@@ -3,7 +3,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { readFromArrayBuffer } from "typegpu";
 import * as d from "typegpu/data";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     AmbientLight,

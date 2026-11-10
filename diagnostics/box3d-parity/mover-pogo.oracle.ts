@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import gold from "../../crates/physics/tests/mover_pogo.gold.json";
-import { visitMoverPogo, type MoverPogoCase } from "../../src/standard/physics/solver/mover-pogo.fixture";
+import { visitMoverPogo, type MoverPogoCase } from "../../src/standard/physics/solver/mover-pogo.fixture.ts";
 import { nativeBinary, run } from "./native.ts";
 
 const native = JSON.parse(run([nativeBinary("mover-pogo.c")])) as MoverPogoCase[];

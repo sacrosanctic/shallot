@@ -25,7 +25,7 @@ import {
 } from "@dylanebert/shallot";
 import { attachTexture, Views } from "../src/core/rendering/index.ts";
 import { rawDevice } from "../src/engine/runtime/index.ts";
-import { createTestGpuApp, disposeGpuApps, gpuRequirements } from "./gpu.fixture";
+import { createTestGpuApp, disposeGpuApps, gpuRequirements } from "./gpu.fixture.ts";
 
 export const compileSubjects = [
     { name: "engine-only", config: { defaults: false, plugins: [] } },

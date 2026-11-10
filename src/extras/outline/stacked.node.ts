@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { DEFAULT_PLUGINS } from "../../standard/index.ts";
-import { corners, LOWER, stackedFrame, stackedScene } from "../stacked-camera.fixture";
-import { Outline, OutlinePlugin } from ".";
+import { corners, LOWER, stackedFrame, stackedScene } from "../stacked-camera.fixture.ts";
+import { Outline, OutlinePlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

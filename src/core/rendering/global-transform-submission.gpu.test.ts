@@ -2,13 +2,13 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { attachCanvas, Camera, RenderingPlugin } from "../../core/rendering/index.ts";
 import { Time, type World } from "../../engine/index.ts";
-import { CanvasContext } from "../../engine/app/canvas.fixture";
+import { CanvasContext } from "../../engine/app/canvas.fixture.ts";
 import { Transform, TransformPlugin } from "../transform/index.ts";
 import { GlobalTransformHistory as TransformRuntime } from "./global-transform.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 
-import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture";
+import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture.ts";
 
 const subjects = gpuApps(import.meta.path, [
     { defaults: false, plugins: [TransformPlugin] },

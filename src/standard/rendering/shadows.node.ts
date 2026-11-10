@@ -4,7 +4,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 
 setDefaultTimeout(TIMEOUT.node);
 
-import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture";
+import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,

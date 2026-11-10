@@ -2,7 +2,7 @@ import { expect, test } from "bun:test";
 import { Body, BodyType, Shape, ShapeKind } from "../../core/physics/index.ts";
 import { GlobalTransform, Transform } from "../../core/transform/index.ts";
 import { createApp, type EntityRef, Time } from "../../engine/index.ts";
-import { hashPhysics, PhysicsWorldDefinition, StandardPhysicsPlugin } from ".";
+import { hashPhysics, PhysicsWorldDefinition, StandardPhysicsPlugin } from "./index.ts";
 import { threads } from "./kernel/kernel.ts";
 import { physicsState } from "./runtime.ts";
 import {

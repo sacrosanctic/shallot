@@ -10,7 +10,7 @@ interface Kernel {
 let kernel: Promise<Kernel> | undefined;
 
 async function load(): Promise<Kernel> {
-    const { MIKKTSPACE_WASM_BASE64 } = await import("./mikktspace.wasm");
+    const { MIKKTSPACE_WASM_BASE64 } = await import("./mikktspace.wasm.ts");
     const bytes = Uint8Array.from(atob(MIKKTSPACE_WASM_BASE64), (char) => char.charCodeAt(0));
     const { instance } = await WebAssembly.instantiate(bytes);
     return instance.exports as unknown as Kernel;

@@ -4,7 +4,7 @@ import * as d from "typegpu/data";
 
 setDefaultTimeout(TIMEOUT.node);
 
-import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { MeshInstance } from "../../core/mesh/index.ts";
 import { globalTransformTable } from "../../core/rendering/index.ts";
 import { Transform } from "../../core/transform/index.ts";

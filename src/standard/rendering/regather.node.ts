@@ -1,6 +1,6 @@
 import { afterAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { precompile, type World } from "../../engine/index.ts";
 import { createRegather, prepareRegather, SHADOW_ARG_STRIDE } from "./regather.ts";
 

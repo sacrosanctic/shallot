@@ -9,7 +9,7 @@ import {
     shapeDistance,
     type TOIOutput,
     timeOfImpact,
-} from ".";
+} from "./index.ts";
 
 const v = (x = 0, y = 0, z = 0) => ({ x, y, z });
 const q = { v: v(), s: 1 };

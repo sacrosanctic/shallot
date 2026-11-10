@@ -8,7 +8,7 @@ import {
     createTestGpuApp as createApp,
     createTestGpuApp,
     expectAdapterNotice,
-} from "../../../scripts/gpu.fixture";
+} from "../../../scripts/gpu.fixture.ts";
 import { expectWarning } from "../../../scripts/test-console.ts";
 import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
@@ -26,7 +26,7 @@ import {
     SpotLight,
     Views,
 } from "../../core/rendering/index.ts";
-import { PointsPlugin } from "../../core/rendering/points.fixture";
+import { PointsPlugin } from "../../core/rendering/points.fixture.ts";
 import { Transform } from "../../core/transform/index.ts";
 import { type Plugin, precompile, type World } from "../../engine/index.ts";
 import { probeBuffer, stampAdapter } from "../../engine/runtime/index.ts";
@@ -43,7 +43,7 @@ import { Sprite, SpriteMaterialInput, SpriteMaterialType, SpritePlugin } from ".
 import { SpriteAlphaMode } from "../../extras/sprite/pack.ts";
 import { spritePublicationLayout } from "../../extras/sprite/table.ts";
 import { internText, registerFont, Text, TextPlugin } from "../../extras/text/index.ts";
-import { isolationFont } from "../../extras/text/font.fixture";
+import { isolationFont } from "../../extras/text/font.fixture.ts";
 import { textLayout, viewLayout as textViewLayout } from "../../extras/text/pipeline.ts";
 import {
     CLUSTER_COUNT,

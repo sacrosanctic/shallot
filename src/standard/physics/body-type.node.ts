@@ -1,10 +1,10 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { Body, BodyType, Shape } from "../../core/physics/index.ts";
 import { GlobalTransform, Transform } from "../../core/transform/index.ts";
 import { Time } from "../../engine/index.ts";
-import { StandardPhysicsPlugin, setLinearVelocity, setTargetTransform } from ".";
+import { StandardPhysicsPlugin, setLinearVelocity, setTargetTransform } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

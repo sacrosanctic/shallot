@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { World } from "../ecs/index.ts";
-import { mountOverlay, OverlayCanvases } from ".";
+import { mountOverlay, OverlayCanvases } from "./index.ts";
 
 interface FixtureElement {
     style: { position: string; cssText: string };

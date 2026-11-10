@@ -18,8 +18,8 @@ import {
 import { attachTexture } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
-import { gpuScene } from "../../../scripts/gpu.fixture";
-import { room } from "./room.fixture";
+import { gpuScene } from "../../../scripts/gpu.fixture.ts";
+import { room } from "./room.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

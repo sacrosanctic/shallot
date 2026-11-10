@@ -4,7 +4,7 @@ import {
     createTestGpuApp as createApp,
     disposeGpuApps,
     expectAdapterNotice,
-} from "../../../scripts/gpu.fixture";
+} from "../../../scripts/gpu.fixture.ts";
 import { expectError } from "../../../scripts/test-console.ts";
 import { RenderingPlugin } from "../../core/rendering/index.ts";
 import { type Plugin, runApp } from "./index.ts";

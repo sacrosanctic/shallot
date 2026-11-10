@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { d } from "typegpu";
-import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture";
+import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { rawDevice } from "./gpu.ts";
 import { probeBuffer, probeTexture } from "./probe.ts";
 

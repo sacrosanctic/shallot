@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { registerImage } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { expectWarning } from "../../../scripts/test-console.ts";
 import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {

@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { controlledReadback } from "./readback.fixture";
+import { controlledReadback } from "./readback.fixture.ts";
 
 const copy = () => {};
 

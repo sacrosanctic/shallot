@@ -9,7 +9,7 @@ import {
     PhysicsWorldDefinition,
     StandardPhysicsPlugin,
     StepPhysicsSystem,
-} from ".";
+} from "./index.ts";
 import { contactIds } from "./collision/contact.ts";
 import { readContactManifolds } from "./collision/manifoldstore.ts";
 import { BodyType, defaultFilter, defaultSurfaceMaterial } from "./common/types.ts";

@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuScene } from "../../../scripts/gpu.fixture";
+import { gpuScene } from "../../../scripts/gpu.fixture.ts";
 import { MeshInstance } from "../../core/mesh/index.ts";
 import { attachTexture, Camera } from "../../core/rendering/index.ts";
 import { offscreenTexture } from "../../core/rendering/view.ts";
@@ -14,8 +14,8 @@ import {
     StandardMaterial,
     StandardRenderer,
 } from "../../standard/rendering/index.ts";
-import { corners, LOWER, pixel, SIZE, stackedFrame, stackedScene } from "../stacked-camera.fixture";
-import { Fog, FogPlugin, NoFog } from ".";
+import { corners, LOWER, pixel, SIZE, stackedFrame, stackedScene } from "../stacked-camera.fixture.ts";
+import { Fog, FogPlugin, NoFog } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

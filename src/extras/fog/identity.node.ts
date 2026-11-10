@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import { gpuScene } from "../../../scripts/gpu.fixture";
+import { gpuScene } from "../../../scripts/gpu.fixture.ts";
 import {
     attachTexture,
     Camera,
@@ -15,7 +15,7 @@ import {
 } from "../../core/rendering/index.ts";
 import { Transform } from "../../core/transform/index.ts";
 import { precompile } from "../../engine/index.ts";
-import { fogReadBindGroup, fogReadLayout, readFog, readFogInScatter } from ".";
+import { fogReadBindGroup, fogReadLayout, readFog, readFogInScatter } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const fragment = tgpu

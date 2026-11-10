@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { createApp } from "../../engine/index.ts";
-import { collideSpheres, StandardPhysicsPlugin } from ".";
+import { collideSpheres, StandardPhysicsPlugin } from "./index.ts";
 import { kernel } from "./kernel/kernel.ts";
-import { manifoldRecords, manifoldSubject } from "./standalone-manifold.fixture";
+import { manifoldRecords, manifoldSubject } from "./standalone-manifold.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("all nine public manifolds, every field and warm cache equal native touching, speculative and separated records", async () => {

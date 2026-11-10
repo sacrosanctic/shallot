@@ -1,6 +1,6 @@
 import { beforeAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { createTestGpuApp } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp } from "../../../scripts/gpu.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 
@@ -61,7 +61,7 @@ import {
 import { segmentState } from "../../extras/lines/segments.ts";
 import { SpriteSource } from "../../extras/sprite/material.ts";
 import { textStateKey } from "../../extras/text/index.ts";
-import { isolationFont } from "../../extras/text/font.fixture";
+import { isolationFont } from "../../extras/text/font.fixture.ts";
 import {
     DEFAULT_PLUGINS,
     Materials,
@@ -88,7 +88,7 @@ import {
     StandardRenderingPlugin,
 } from "../../standard/rendering/index.ts";
 import { createApp, type Plugin, probeTexture, Time, type World } from "../index.ts";
-import { CanvasContext } from "./canvas.fixture";
+import { CanvasContext } from "./canvas.fixture.ts";
 
 const everyPlugin: readonly Plugin[] = [
     ...DEFAULT_PLUGINS,

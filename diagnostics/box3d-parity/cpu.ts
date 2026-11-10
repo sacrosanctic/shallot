@@ -3,8 +3,8 @@
 // phase on its stack, and its self time is split into kernel (wasm) and TypeScript; each phase lists the inclusive
 // time of the functions it calls, five levels deep.
 import { Session } from "node:inspector";
-import { KERNEL_SHARED_WASM_BASE64 } from "../../src/standard/physics/kernel/kernel.shared.wasm";
-import { KERNEL_WASM_BASE64 } from "../../src/standard/physics/kernel/kernel.wasm";
+import { KERNEL_SHARED_WASM_BASE64 } from "../../src/standard/physics/kernel/kernel.shared.wasm.ts";
+import { KERNEL_WASM_BASE64 } from "../../src/standard/physics/kernel/kernel.wasm.ts";
 
 type Frame = { functionName: string; url: string };
 type ProfileNode = { id: number; callFrame: Frame; children?: number[] };

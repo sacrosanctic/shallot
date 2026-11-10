@@ -3,7 +3,7 @@ import { type Component, Time } from "@dylanebert/shallot";
 import * as core from "@dylanebert/shallot/physics";
 import { StandardPhysicsPlugin } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { expectWarning } from "../../../scripts/test-console.ts";
 import {
     DJ_LOWER_SPRING_FORCE,
@@ -31,7 +31,7 @@ import {
 } from "./kernel/joint-layout.ts";
 import { readJointFloat, readJointQuat, readJointVec3 } from "./kernel/jointcolumns.ts";
 import { physicsState } from "./runtime.ts";
-import { jointIds } from "./solver/joint.fixture";
+import { jointIds } from "./solver/joint.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

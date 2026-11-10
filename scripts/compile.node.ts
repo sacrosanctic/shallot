@@ -9,7 +9,7 @@ import {
     type World,
 } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { compileSubjects, initialSsaoCamera, measureCompile } from "./compile.fixture";
+import { compileSubjects, initialSsaoCamera, measureCompile } from "./compile.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

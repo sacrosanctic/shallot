@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import {
     attachTexture,
     Camera,
@@ -14,9 +14,9 @@ import { Transform } from "../../core/transform/index.ts";
 import { type Plugin, precompile, type World } from "../../engine/index.ts";
 import { probeTexture } from "../../engine/runtime/index.ts";
 import { EffectStackPlugin, Vignette } from "../effect-stack/index.ts";
-import { compare } from "../effect-stack/parity.fixture";
-import { Bloom, BloomCompositeMode, BloomPlugin } from ".";
-import { bevyPipelines, renderBevy } from "./bevy.fixture";
+import { compare } from "../effect-stack/parity.fixture.ts";
+import { Bloom, BloomCompositeMode, BloomPlugin } from "./index.ts";
+import { bevyPipelines, renderBevy } from "./bevy.fixture.ts";
 import { blendFactor, stateKey } from "./state.ts";
 
 setDefaultTimeout(TIMEOUT.node);

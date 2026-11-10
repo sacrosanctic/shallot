@@ -10,7 +10,7 @@ import {
 } from "@dylanebert/shallot/physics";
 import { StandardPhysicsPlugin } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { expectWarning } from "../../../scripts/test-console.ts";
 import { physicsBodyIndex, physicsState } from "./runtime.ts";
 import { worldCounters } from "./world/world.ts";

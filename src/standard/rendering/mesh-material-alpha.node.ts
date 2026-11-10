@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import type { System } from "../../engine/index.ts";
 import { ClearChangeMarksSystem } from "../../engine/app/index.ts";
 import {

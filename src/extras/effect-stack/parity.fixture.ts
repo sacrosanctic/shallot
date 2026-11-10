@@ -9,7 +9,7 @@ import {
 import { Transform } from "../../core/transform/index.ts";
 import type { Plugin, World } from "../../engine/index.ts";
 import { probeTexture } from "../../engine/runtime/index.ts";
-import { ChromaticAberration, EffectStackPlugin, LensDistortion, Vignette } from ".";
+import { ChromaticAberration, EffectStackPlugin, LensDistortion, Vignette } from "./index.ts";
 
 export const width = 192;
 export const height = 96;

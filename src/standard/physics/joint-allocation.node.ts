@@ -6,7 +6,7 @@ import {
     sampleAllocation,
 } from "../../../diagnostics/first-person-allocation/allocation.ts";
 import { countedKernelBytes } from "../../../scripts/counted-kernel.ts";
-import { jointAllocationSubject, splitAllocationSubject } from "./joint-allocation.fixture";
+import { jointAllocationSubject, splitAllocationSubject } from "./joint-allocation.fixture.ts";
 import { clockImport, type Kernel, kernelState } from "./kernel/kernel.ts";
 import { createTestWorld, destroyTestWorld } from "./testing.ts";
 import type { WorldState } from "./world/world.ts";

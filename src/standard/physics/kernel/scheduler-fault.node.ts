@@ -5,7 +5,7 @@ import { BodyType } from "../common/types.ts";
 import { createSphereShape } from "../shapes/shape.ts";
 import { createTestBody, createTestWorld, stepTestWorld, testShapeDef } from "../testing.ts";
 import { init, kernel, kernelState, shutdown } from "./kernel.ts";
-import { KERNEL_SHARED_WASM_BASE64, SHARED_STACK_SIZE } from "./kernel.shared.wasm";
+import { KERNEL_SHARED_WASM_BASE64, SHARED_STACK_SIZE } from "./kernel.shared.wasm.ts";
 import { createPool } from "./pool.ts";
 
 setDefaultTimeout(TIMEOUT.node);

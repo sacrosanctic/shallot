@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { rawDevice } from "../src/engine/runtime/index.ts";
-import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "./gpu.fixture";
+import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "./gpu.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const subject = compileGpuFile(import.meta.path, async () => {

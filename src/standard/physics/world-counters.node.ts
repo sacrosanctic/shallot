@@ -9,7 +9,7 @@ import {
     Transform,
 } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { getWorldCounters, PhysicsWorldDefinition, StandardPhysicsPlugin } from ".";
+import { getWorldCounters, PhysicsWorldDefinition, StandardPhysicsPlugin } from "./index.ts";
 import { counterPile } from "./fixtures/world-counters.ts";
 import { kernel } from "./kernel/kernel.ts";
 

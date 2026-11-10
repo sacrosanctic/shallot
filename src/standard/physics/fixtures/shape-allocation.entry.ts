@@ -1,7 +1,7 @@
 import { createApp, PhysicsMeshes, StandardPhysicsPlugin } from "@dylanebert/shallot";
 import { meshBuild } from "../geometry-builds.ts";
 import { physicsState } from "../runtime.ts";
-import { shapeAllocationSubject } from "../shape-allocation.fixture";
+import { shapeAllocationSubject } from "../shape-allocation.fixture.ts";
 
 export let controlSink: object | undefined;
 export const control = () => {

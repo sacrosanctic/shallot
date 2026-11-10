@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { probeTexture } from "../../engine/index.ts";
 import { DEFAULT_FONT, loadFont } from "./font.ts";
 import { TextPlugin } from "./index.ts";

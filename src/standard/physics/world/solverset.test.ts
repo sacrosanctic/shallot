@@ -18,7 +18,7 @@ import {
 } from "../kernel/solversetcolumns.ts";
 import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint.ts";
 import { defaultJointDef } from "../solver/joint.ts";
-import { jointIds } from "../solver/joint.fixture";
+import { jointIds } from "../solver/joint.fixture.ts";
 import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld } from "../testing.ts";
 import { bodyGetLinearVelocity, bodyIsAwake, bodySetAwake, destroyBody } from "../world/body.ts";
 import type { WorldState } from "./world.ts";

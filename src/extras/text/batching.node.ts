@@ -1,11 +1,11 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuScene } from "../../../scripts/gpu.fixture";
+import { gpuScene } from "../../../scripts/gpu.fixture.ts";
 import { attachTexture, Camera, TransparentPhases } from "../../core/rendering/index.ts";
 import { Transform } from "../../core/transform/index.ts";
 import { probeBuffer } from "../../engine/runtime/index.ts";
 import { drawLine, LinesPlugin } from "../lines/index.ts";
-import { isolationFont } from "./font.fixture";
+import { isolationFont } from "./font.fixture.ts";
 import { GLYPH_AT, GLYPH_BYTES, GLYPH_FLOATS } from "./glyph.ts";
 import { internText, registerFont, Text, TextPlugin, textStateKey } from "./index.ts";
 

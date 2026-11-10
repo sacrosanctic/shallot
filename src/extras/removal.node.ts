@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuApps } from "../../scripts/gpu.fixture";
+import { gpuApps } from "../../scripts/gpu.fixture.ts";
 import { attachTexture, Camera, captureTexture } from "../core/rendering/index.ts";
 import { imageTextures } from "../core/rendering/image.ts";
 import { Transform } from "../core/transform/index.ts";
@@ -8,7 +8,7 @@ import { StandardRenderer } from "../standard/rendering/index.ts";
 import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./lines/index.ts";
 import { Sprite, SpritePlugin } from "./sprite/index.ts";
 import { internText, registerFont, Text, TextPlugin } from "./text/index.ts";
-import { isolationFont } from "./text/font.fixture";
+import { isolationFont } from "./text/font.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 let font = 0;

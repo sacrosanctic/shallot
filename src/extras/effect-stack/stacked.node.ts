@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Vignette as LegacyVignette, VignettePlugin } from "@dylanebert/shallot/vignette";
-import { gpuApps, gpuScene } from "../../../scripts/gpu.fixture";
+import { gpuApps, gpuScene } from "../../../scripts/gpu.fixture.ts";
 import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,
@@ -25,11 +25,11 @@ import {
     StandardMaterial,
     StandardRenderer,
 } from "../../standard/rendering/index.ts";
-import { corners, LOWER, pixel, SIZE, stackedFrame, stackedScene } from "../stacked-camera.fixture";
-import { ChromaticAberration, EffectStackPlugin, LensDistortion, Vignette } from ".";
+import { corners, LOWER, pixel, SIZE, stackedFrame, stackedScene } from "../stacked-camera.fixture.ts";
+import { ChromaticAberration, EffectStackPlugin, LensDistortion, Vignette } from "./index.ts";
 
-import { bevyPipeline, renderBevy } from "./bevy.fixture";
-import { cases, compare, inputTexture, parityCapture, texture } from "./parity.fixture";
+import { bevyPipeline, renderBevy } from "./bevy.fixture.ts";
+import { cases, compare, inputTexture, parityCapture, texture } from "./parity.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

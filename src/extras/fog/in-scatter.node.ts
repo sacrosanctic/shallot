@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
-import { gpuScene } from "../../../scripts/gpu.fixture";
+import { gpuScene } from "../../../scripts/gpu.fixture.ts";
 import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     AmbientLight,
@@ -24,7 +24,7 @@ import {
     NoFog,
     readFog,
     readFogInScatter,
-} from ".";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const config = { defaults: false, plugins: [...DEFAULT_PLUGINS, FogPlugin] };

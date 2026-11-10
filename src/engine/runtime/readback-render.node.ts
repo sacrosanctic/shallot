@@ -1,12 +1,12 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import createRenderedSubject from "../../../diagnostics/readback-allocation/render.entry";
+import createRenderedSubject from "../../../diagnostics/readback-allocation/render.entry.ts";
 import {
     createTestGpuApp,
     disposeGpuApps,
     expectAdapterNotice,
     gpuRequirements,
-} from "../../../scripts/gpu.fixture";
+} from "../../../scripts/gpu.fixture.ts";
 import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import { classifyAdapter } from "./adapter.ts";
 import { rawDevice } from "./gpu.ts";

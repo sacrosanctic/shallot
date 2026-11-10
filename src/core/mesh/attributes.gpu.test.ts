@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import type { TgpuBuffer } from "typegpu";
 import * as d from "typegpu/data";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { Meshes, type MeshHandle, MeshPlugin } from "./index.ts";
 import { clearMeshes, flushMeshes } from "./mesh.ts";
 

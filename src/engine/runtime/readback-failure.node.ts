@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { controlledReadback } from "./readback.fixture";
+import { controlledReadback } from "./readback.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

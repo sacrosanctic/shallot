@@ -1,7 +1,7 @@
 import { afterAll, beforeAll, describe, expect, setDefaultTimeout, test } from "bun:test";
 import { Camera, PointLight, StandardRenderingPlugin, Transform } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { cube, Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,

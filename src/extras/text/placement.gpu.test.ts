@@ -2,7 +2,7 @@ import { afterAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { encodePos } from "../../core/mesh/index.ts";
 import { Billboard, globalTransformTable, RenderingPlugin } from "../../core/rendering/index.ts";
 import {

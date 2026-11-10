@@ -12,8 +12,8 @@ import {
     type LocalManifold,
     makeBoxHull,
     type SATCache,
-} from ".";
-import { emptyCache } from "./standalone-collision.fixture";
+} from "./index.ts";
+import { emptyCache } from "./standalone-collision.fixture.ts";
 
 const v = (x = 0, y = 0, z = 0) => ({ x, y, z });
 const bitsBuffer = new ArrayBuffer(4),

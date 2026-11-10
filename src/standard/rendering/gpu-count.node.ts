@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { Meshes, MeshInstance, MeshPlugin } from "../../core/mesh/index.ts";
 import { attachTexture, Camera, captureTexture, DirectionalLight } from "../../core/rendering/index.ts";
 import { Transform } from "../../core/transform/index.ts";

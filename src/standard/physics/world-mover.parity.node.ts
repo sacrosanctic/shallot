@@ -9,7 +9,7 @@ import {
     hashPhysics,
     PhysicsWorldDefinition,
     StandardPhysicsPlugin,
-} from ".";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("world mover returns native traversal planes at capacity, filters live entities and borrows separate World storage", async () => {

@@ -1,16 +1,16 @@
 import { test } from "bun:test";
 import { LocalPlayer, Player } from "../../../examples/interact/src/player.ts";
 import { Room, RoomPlugin } from "../../../examples/interact/src/room.ts";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import { attachTexture, Camera } from "../../core/rendering/index.ts";
 import { Transform } from "../../core/transform/index.ts";
 import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import { setTransform } from "../../standard/physics/index.ts";
 import { PointShadows, StandardRenderer } from "../../standard/rendering/index.ts";
-import { Outline, OutlinePlugin } from ".";
-import { captureSeeds } from "./mask.fixture";
-import { coverage } from "./reference.fixture";
+import { Outline, OutlinePlugin } from "./index.ts";
+import { captureSeeds } from "./mask.fixture.ts";
+import { coverage } from "./reference.fixture.ts";
 
 const subjects = gpuApps(import.meta.path, [
     { defaults: false, plugins: [...DEFAULT_PLUGINS, OutlinePlugin] },

@@ -27,7 +27,7 @@ import {
 import { hashPhysics, StandardPhysicsPlugin } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { expectWarning } from "../../../scripts/test-console.ts";
 import { physicsState } from "./runtime.ts";
 import { worldCounters } from "./world/world.ts";

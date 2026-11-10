@@ -4,7 +4,7 @@ import { Body, BodyType, Shape, ShapeKind } from "../../core/physics/index.ts";
 import { GlobalTransform, Transform } from "../../core/transform/index.ts";
 import type { System } from "../../engine/index.ts";
 import { createApp } from "../../engine/app/index.ts";
-import { StandardPhysicsPlugin } from ".";
+import { StandardPhysicsPlugin } from "./index.ts";
 import { defaultSurfaceMaterial } from "./common/types.ts";
 import { BodyField, bodyField } from "./kernel/bodyrecords.ts";
 import { physicsBodyIndex, physicsState, StepPhysicsSystem } from "./runtime.ts";

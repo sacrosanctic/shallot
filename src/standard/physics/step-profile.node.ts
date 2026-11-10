@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Body, BodyType, Shape } from "../../core/physics/index.ts";
 import { createApp } from "../../engine/index.ts";
-import { PhysicsWorldDefinition, StandardPhysicsPlugin, StepPhysicsSystem, stepPhysics } from ".";
+import { PhysicsWorldDefinition, StandardPhysicsPlugin, StepPhysicsSystem, stepPhysics } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

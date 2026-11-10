@@ -10,7 +10,7 @@ import {
     StandardPhysicsPlugin,
     StepPhysicsSystem,
     stepPhysics,
-} from ".";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

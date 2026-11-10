@@ -1,6 +1,6 @@
 import { afterEach, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import {
     AmbientLight,
     attachTexture,
@@ -18,7 +18,7 @@ import { Transform } from "../../core/transform/index.ts";
 import type { World } from "../../engine/index.ts";
 import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import { StandardRenderer } from "../../standard/rendering/index.ts";
-import { Fog, FogPlugin, NoFog } from ".";
+import { Fog, FogPlugin, NoFog } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const initial = { camera: 0, light: 0 };

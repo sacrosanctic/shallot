@@ -18,7 +18,7 @@ import {
     MeshMaterial,
     StandardMaterial,
     StandardRenderer,
-} from ".";
+} from "./index.ts";
 
 /**
  * Diagnostic texture, varying along U only: 16-texel bands of two tones, crossed every 4 texels by a

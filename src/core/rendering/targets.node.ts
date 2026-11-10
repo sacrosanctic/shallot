@@ -3,7 +3,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import { gpuScene } from "../../../scripts/gpu.fixture";
+import { gpuScene } from "../../../scripts/gpu.fixture.ts";
 import { lookAtRotation, type Plugin } from "../../engine/index.ts";
 import { Fog, FogPlugin, NoFog } from "../../extras/fog/index.ts";
 import { Outline, OutlinePlugin } from "../../extras/outline/index.ts";

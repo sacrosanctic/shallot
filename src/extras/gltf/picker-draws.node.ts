@@ -9,7 +9,7 @@ import { GltfPlugin, loadGltfScene, spawnGltfScene } from "@dylanebert/shallot/g
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { modelPath, type Scene, scenes, truckPlacement } from "../../../examples/gltf/src/scenes.ts";
 import { fileFetch, syncAssets } from "../../../examples/gltf/tests/setup.ts";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { DataImages, Images, imageTextures } from "../../core/rendering/image.ts";
 import { MeshMaterial } from "../../standard/rendering/material-data.ts";
 import { alphaPipelineKey, pipelineKey } from "../../standard/rendering/material-type.ts";

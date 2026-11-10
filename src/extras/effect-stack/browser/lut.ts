@@ -3,7 +3,7 @@ import { Transform } from "../../../core/transform/index.ts";
 import { createApp } from "../../../engine/app/index.ts";
 import { DEFAULT_PLUGINS } from "../../../standard/index.ts";
 import { StandardRenderer } from "../../../standard/rendering/index.ts";
-import { ChromaticAberration, EffectStackPlugin } from "..";
+import { ChromaticAberration, EffectStackPlugin } from "../index.ts";
 
 async function whiteImage(size: number): Promise<Blob> {
     const canvas = new OffscreenCanvas(size, size);

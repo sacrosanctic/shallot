@@ -1,6 +1,6 @@
 import { test } from "bun:test";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { compileSubjects, measureCompile } from "./compile.fixture";
+import { compileSubjects, measureCompile } from "./compile.fixture.ts";
 
 await setupGlobals();
 for (const subject of compileSubjects) {

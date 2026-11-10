@@ -1,5 +1,5 @@
 import { createApp, StandardPhysicsPlugin } from "@dylanebert/shallot";
-import { mutationAllocationSubject } from "../mutation-allocation.fixture";
+import { mutationAllocationSubject } from "../mutation-allocation.fixture.ts";
 import { physicsState } from "../runtime.ts";
 
 export let controlSink: object | undefined;

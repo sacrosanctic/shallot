@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import createRenderedSubject from "../../../diagnostics/readback-allocation/render.entry";
-import { expectAdapterNotice } from "../../../scripts/gpu.fixture";
+import createRenderedSubject from "../../../diagnostics/readback-allocation/render.entry.ts";
+import { expectAdapterNotice } from "../../../scripts/gpu.fixture.ts";
 import { PointLight } from "../../core/rendering/index.ts";
 import { Transform } from "../../core/transform/index.ts";
 import { probeBuffer } from "../../engine/runtime/index.ts";

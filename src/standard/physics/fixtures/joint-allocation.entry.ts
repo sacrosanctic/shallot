@@ -1,5 +1,5 @@
 import { createApp, StandardPhysicsPlugin } from "@dylanebert/shallot";
-import { jointAllocationSubject } from "../joint-allocation.fixture";
+import { jointAllocationSubject } from "../joint-allocation.fixture.ts";
 import { physicsState } from "../runtime.ts";
 
 export let controlSink: { frame: number } | undefined;

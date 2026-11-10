@@ -7,7 +7,7 @@ import {
 } from "../../../diagnostics/first-person-allocation/allocation.ts";
 import { countedKernelBytes } from "../../../scripts/counted-kernel.ts";
 import { clockImport, type Kernel, kernelState } from "./kernel/kernel.ts";
-import { mutationAllocationSubject } from "./mutation-allocation.fixture";
+import { mutationAllocationSubject } from "./mutation-allocation.fixture.ts";
 import { createTestWorld, destroyTestWorld } from "./testing.ts";
 import type { WorldState } from "./world/world.ts";
 

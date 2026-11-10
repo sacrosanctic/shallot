@@ -14,7 +14,7 @@ import {
 import { GlobalTransform, Transform } from "../../core/transform/index.ts";
 import { type System, Time, type World } from "../../engine/index.ts";
 import { createApp } from "../../engine/app/index.ts";
-import { Character, CharacterPlugin, hashPhysics, StandardPhysicsPlugin } from ".";
+import { Character, CharacterPlugin, hashPhysics, StandardPhysicsPlugin } from "./index.ts";
 import { compoundBuild, heightFieldBuild } from "./geometry-builds.ts";
 import { BodyField, bodyField } from "./kernel/bodyrecords.ts";
 import { ShapeField, shapeField } from "./kernel/shaperecords.ts";

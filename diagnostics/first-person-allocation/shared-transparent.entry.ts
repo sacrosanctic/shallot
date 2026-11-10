@@ -4,7 +4,7 @@ import { Transform } from "../../src/core/transform/index.ts";
 import { createApp } from "../../src/engine/index.ts";
 import { AlphaMode, Materials, MeshMaterial, MeshRenderPlugin, StandardMaterial, StandardRenderer, StandardRenderingPlugin } from "../../src/standard/rendering/index.ts";
 import { Gizmo, GizmoAsset, registerGizmo, drawLine, LinesPlugin } from "../../src/extras/lines/index.ts";
-import { isolationFont } from "../../src/extras/text/font.fixture";
+import { isolationFont } from "../../src/extras/text/font.fixture.ts";
 import { internText, registerFont, Text, TextPlugin } from "../../src/extras/text/index.ts";
 
 const FIXED_DT = 1 / 60;

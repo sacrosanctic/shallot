@@ -1,13 +1,13 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuScene } from "../../../scripts/gpu.fixture";
+import { gpuScene } from "../../../scripts/gpu.fixture.ts";
 import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import { attachTexture, Camera, CameraMode, detachView } from "../../core/rendering/index.ts";
 import { Transform } from "../../core/transform/index.ts";
 import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import { StandardRenderer } from "../../standard/rendering/index.ts";
-import { Outline, OutlinePlugin } from ".";
-import { captureSeeds } from "./mask.fixture";
+import { Outline, OutlinePlugin } from "./index.ts";
+import { captureSeeds } from "./mask.fixture.ts";
 import {
     coverage,
     halfFlood,
@@ -18,7 +18,7 @@ import {
     size,
     squaredDistance,
     widths,
-} from "./reference.fixture";
+} from "./reference.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const { render } = outlineReference(import.meta.path);

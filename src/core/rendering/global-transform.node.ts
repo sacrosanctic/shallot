@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { MeshInstance, MeshPlugin } from "../../core/mesh/index.ts";
 import { Body, BodyType } from "../../core/physics/index.ts";
 import {
@@ -14,7 +14,7 @@ import {
 } from "../../core/rendering/index.ts";
 import * as engine from "../../engine/index.ts";
 import { probeBuffer, u32 } from "../../engine/index.ts";
-import { CanvasContext } from "../../engine/app/canvas.fixture";
+import { CanvasContext } from "../../engine/app/canvas.fixture.ts";
 import { component } from "../../engine/ecs/component.ts";
 import type { System } from "../../engine/ecs/scheduler.ts";
 import { Time } from "../../engine/ecs/scheduler.ts";

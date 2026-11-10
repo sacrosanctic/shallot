@@ -3,7 +3,7 @@ import * as d from "typegpu/data";
 import { generateTangents } from "../../core/mesh/index.ts";
 import { computeNormals, generateSceneTangents, parseGltf } from "./gltf.ts";
 import { DeformationRanges } from "./morph.ts";
-import { morphFixture } from "./morph.fixture";
+import { morphFixture } from "./morph.fixture.ts";
 import { VertexDeformation } from "./skinning.ts";
 
 test("deformation vertex data reuses the skin stride; ranges coalesce and refuse named capacity overflow without changing extent", () => {

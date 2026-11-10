@@ -10,7 +10,7 @@ import {
     Transform,
 } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuScene } from "../../../scripts/gpu.fixture";
+import { gpuScene } from "../../../scripts/gpu.fixture.ts";
 import { attachTexture, Camera, captureTexture, DebandDither } from "../../core/rendering/index.ts";
 import { lookAtRotation } from "../../engine/utils/index.ts";
 import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./index.ts";

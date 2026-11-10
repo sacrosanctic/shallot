@@ -13,7 +13,7 @@ import { bodySetAwake, bodySetType } from "../world/body.ts";
 import type { WorldState } from "../world/world.ts";
 import { createDistanceJoint, defaultDistanceJointDef } from "./distanceJoint.ts";
 import { defaultJointDef, destroyJointInternal } from "./joint.ts";
-import { jointIds } from "./joint.fixture";
+import { jointIds } from "./joint.fixture.ts";
 
 function distanceJoint(
     world: WorldState,

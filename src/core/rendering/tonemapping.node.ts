@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { precompile, type World } from "../../engine/index.ts";
 import { probeTexture } from "../../engine/runtime/index.ts";
 import { Transform } from "../transform/index.ts";
@@ -22,7 +22,7 @@ import {
     bevyUniform,
     type Grade,
     methods,
-} from "./tonemapping-bevy.fixture";
+} from "./tonemapping-bevy.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const subjects = gpuApps(import.meta.path, [

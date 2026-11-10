@@ -11,7 +11,7 @@ import { BodyField, setBodyField } from "./kernel/bodyrecords.ts";
 import { hullDatabaseIndex } from "./kernel/geocolumns.ts";
 import { clockImport, type Kernel, kernelState } from "./kernel/kernel.ts";
 import { S_GEO_REFERENCE, SHAPE_STRIDE } from "./kernel/shapecolumns.ts";
-import { shapeAllocationSubject } from "./shape-allocation.fixture";
+import { shapeAllocationSubject } from "./shape-allocation.fixture.ts";
 import { makeBoxHull } from "./shapes/build-hull.ts";
 import { createCompound } from "./shapes/compound.ts";
 import { createGrid } from "./shapes/heightfield.ts";

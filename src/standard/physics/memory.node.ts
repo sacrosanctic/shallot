@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Body, Hulls, Shape } from "../../core/physics/index.ts";
 import { createApp } from "../../engine/app/index.ts";
-import { PhysicsWorldDefinition, StandardPhysicsPlugin } from ".";
+import { PhysicsWorldDefinition, StandardPhysicsPlugin } from "./index.ts";
 import { artifact, kernel } from "./kernel/kernel.ts";
 
 setDefaultTimeout(TIMEOUT.node);

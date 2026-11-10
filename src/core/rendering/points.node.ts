@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuApps, gpuScene } from "../../../scripts/gpu.fixture";
+import { gpuApps, gpuScene } from "../../../scripts/gpu.fixture.ts";
 import { MeshInstance } from "../../core/mesh/index.ts";
 import type { Resource, System } from "../../engine/index.ts";
 import { ClearChangeMarksSystem } from "../../engine/app/index.ts";
@@ -61,7 +61,7 @@ import {
     TonemappingMethod,
 } from "./index.ts";
 import { GlobalAmbientLight } from "./lighting.ts";
-import { PointsPlugin, pointsState } from "./points.fixture";
+import { PointsPlugin, pointsState } from "./points.fixture.ts";
 import { RenderContext, renderKey } from "./render.ts";
 import { viewTargetsKey } from "./targets.ts";
 import { compositeCacheKey } from "./tonemapping.ts";

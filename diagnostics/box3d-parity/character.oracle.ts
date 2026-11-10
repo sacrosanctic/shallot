@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { characterGold, visitCharacterGold } from "../../src/standard/physics/character-kernel.fixture";
+import { characterGold, visitCharacterGold } from "../../src/standard/physics/character-kernel.fixture.ts";
 import { nativeBinary, run } from "./native.ts";
 
 test("the kernel sample mover matches regenerated native Box3D movement records", async () => {

@@ -1,6 +1,6 @@
 import type { World } from "../../engine/index.ts";
 import { probeTexture } from "../../engine/runtime/index.ts";
-import { sampleDistance } from "./reference.fixture";
+import { sampleDistance } from "./reference.fixture.ts";
 
 /** Copies the real mask before the first flood, and exposes the production final seed field. */
 export function captureSeeds(world: World, camera: number, width: number, height: number) {

@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { getWorldCounters, PhysicsWorldDefinition } from ".";
+import { getWorldCounters, PhysicsWorldDefinition } from "./index.ts";
 import { counterPile, counterRow, counterSweep } from "./fixtures/world-counters.ts";
 
 setDefaultTimeout(TIMEOUT.node);

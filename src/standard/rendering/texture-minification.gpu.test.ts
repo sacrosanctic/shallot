@@ -1,6 +1,6 @@
 import { beforeAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { ImageAddressMode, ImageFilterMode, registerImage } from "../../core/rendering/index.ts";
 import { MeshRenderPlugin, StandardRenderingPlugin } from "./index.ts";
 import {
@@ -13,9 +13,9 @@ import {
     TONES,
     trilinearReference,
     uploadDiagnosticImages,
-} from "./receding-plane.fixture";
+} from "./receding-plane.fixture.ts";
 
-import { hardwarePlanePipeline, hardwarePlaneReference } from "./receding-plane-reference.fixture";
+import { hardwarePlanePipeline, hardwarePlaneReference } from "./receding-plane-reference.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const repeat = { addressModeU: ImageAddressMode.Repeat, addressModeV: ImageAddressMode.Repeat };

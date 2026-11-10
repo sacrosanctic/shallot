@@ -1,9 +1,9 @@
 import { afterAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import type { createApp } from "../app/index.ts";
 import { probeBuffer } from "./probe.ts";
-import { countStaging } from "./readback.fixture";
+import { countStaging } from "./readback.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const worlds: Awaited<ReturnType<typeof createApp>>[] = [];

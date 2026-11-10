@@ -4,7 +4,7 @@ import { FogPlugin, NoFog } from "@dylanebert/shallot/extras";
 import { attachTexture, captureTexture } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { room } from "./room.fixture";
+import { room } from "./room.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const WIDTH = 640;

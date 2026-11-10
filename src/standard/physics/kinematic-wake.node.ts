@@ -9,7 +9,7 @@ import {
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { GlobalTransform } from "@dylanebert/shallot/transform";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 await setupGlobals();

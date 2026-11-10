@@ -7,7 +7,7 @@ import {
     StandardPhysicsPlugin,
     setTransform,
 } from "./index.ts";
-import { sensorVisitors } from "./sensor-data.fixture";
+import { sensorVisitors } from "./sensor-data.fixture.ts";
 import gold from "./sensor-data.gold.json";
 
 setDefaultTimeout(TIMEOUT.node);

@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import {
     Anchor,
     attachTexture,
@@ -10,7 +10,7 @@ import {
     DebandDither,
 } from "../../core/rendering/index.ts";
 import { Transform } from "../../core/transform/index.ts";
-import { isolationFont } from "./font.fixture";
+import { isolationFont } from "./font.fixture.ts";
 import { internText, registerFont, Text, TextPlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);

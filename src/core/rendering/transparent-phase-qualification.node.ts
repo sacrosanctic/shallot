@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
-import { gpuScene } from "../../../scripts/gpu.fixture";
+import { gpuScene } from "../../../scripts/gpu.fixture.ts";
 import { precompile, type World } from "../../engine/index.ts";
 import {
     AlphaMode,
@@ -31,7 +31,7 @@ import {
     TransparentPhases,
     type View,
     Views,
-} from ".";
+} from "./index.ts";
 import { computeClipFromWorld } from "./camera.ts";
 
 setDefaultTimeout(TIMEOUT.node);

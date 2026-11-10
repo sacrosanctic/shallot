@@ -3,7 +3,7 @@ import { DirectionalLight, GlobalAmbientLight, VolumetricLight } from "../../cor
 import { Transform } from "../../core/transform/index.ts";
 import { lookAtRotation, type World } from "../../engine/index.ts";
 import { Materials, MeshMaterial, StandardMaterial } from "../../standard/rendering/index.ts";
-import { Fog } from ".";
+import { Fog } from "./index.ts";
 
 // Carbon walls around a 6.6 × 3.2 × 6.6 m interior, a 2 × 1.5 m rear window and a low sun.
 // Ambient is the sun-only interreflection balance, ρΦ / (πA(1 − ρ)), in cd/m².

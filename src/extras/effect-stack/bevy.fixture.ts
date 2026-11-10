@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import type { World } from "../../engine/index.ts";
 import { probeTexture } from "../../engine/runtime/index.ts";
-import { type Case, lookup } from "./parity.fixture";
+import { type Case, lookup } from "./parity.fixture.ts";
 
 // Bevy b3bdd75be: verbatim WESL modules linked by dropping resolved imports and
 // qualifying the lens module's private constant, which otherwise collides with vignette's.

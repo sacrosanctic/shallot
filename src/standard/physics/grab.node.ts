@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Body, BodyType, Hulls, Shape } from "../../core/physics/index.ts";
 import { GlobalTransform, Transform } from "../../core/transform/index.ts";
 import { createApp } from "../../engine/index.ts";
-import { getLocalPoint, getMassData, StandardPhysicsPlugin, setTargetTransform } from ".";
+import { getLocalPoint, getMassData, StandardPhysicsPlugin, setTargetTransform } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

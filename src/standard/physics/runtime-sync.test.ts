@@ -54,7 +54,7 @@ import {
     setShapeFriction,
     shapeIsValid,
 } from "./shapes/shape.ts";
-import { jointIds } from "./solver/joint.fixture";
+import { jointIds } from "./solver/joint.fixture.ts";
 import {
     BodyProperty,
     bodyGetLinearVelocity,

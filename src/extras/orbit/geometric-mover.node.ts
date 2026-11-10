@@ -19,8 +19,8 @@ import {
 } from "../../../examples/physics/src/geometric-mover.ts";
 import { createScene } from "../../../examples/physics/src/scenes.ts";
 import { setSceneCamera } from "../../../examples/physics/src/view.ts";
-import { createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { CanvasContext } from "../../engine/app/canvas.fixture";
+import { createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
+import { CanvasContext } from "../../engine/app/canvas.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 await setupGlobals();

@@ -7,9 +7,9 @@ import {
     shapeCast,
     shapeDistance,
     timeOfImpact,
-} from ".";
-import { collisionCases, emptyCache, publicCollisionOutput } from "./standalone-collision.fixture";
-import { publicEdgeOutput } from "./standalone-collision-edge.fixture";
+} from "./index.ts";
+import { collisionCases, emptyCache, publicCollisionOutput } from "./standalone-collision.fixture.ts";
+import { publicEdgeOutput } from "./standalone-collision-edge.fixture.ts";
 import failed from "./standalone-collision-failed.json";
 import history from "./standalone-collision-history.json";
 

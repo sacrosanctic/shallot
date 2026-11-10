@@ -1,5 +1,5 @@
 import type { Capture } from "@dylanebert/shallot/rendering";
-import { expect, type Page, test } from "../browser.fixture";
+import { expect, type Page, test } from "../browser.fixture.ts";
 
 // One running app at its own output size: 480x270 CSS pixels at pixelRatio 2, a 960x540 backing surface.
 // Each claim names what its evidence is. A physical display's presentation has no headless witness; it is

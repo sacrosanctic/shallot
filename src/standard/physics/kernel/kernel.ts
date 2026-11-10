@@ -8,7 +8,7 @@ import { makeShapeId } from "../api/config.ts";
 import type { EntityId } from "../common/ids.ts";
 import { type ShapeEntity, shapeEntityAt } from "../world/shape-entities.ts";
 import type { WorldState } from "../world/world.ts";
-import { KERNEL_WASM_BASE64 } from "./kernel.wasm";
+import { KERNEL_WASM_BASE64 } from "./kernel.wasm.ts";
 import { createPool, maxWorkers, type Pool, solverPause } from "./pool.ts";
 
 /** Physics kernel ABI. */
@@ -1256,7 +1256,7 @@ async function single(runtime: KernelState): Promise<void> {
 
 async function multi(runtime: KernelState, want: number): Promise<void> {
     const { KERNEL_SHARED_WASM_BASE64, SHARED_INITIAL_PAGES, SHARED_STACK_SIZE } = await import(
-        "./kernel.shared.wasm"
+        "./kernel.shared.wasm.ts"
     );
 
     // The module declares its own memory floor (data + shadow stack), so `initial` may not go below it;
@@ -1310,7 +1310,7 @@ async function boot(runtime: KernelState, threads: number | undefined): Promise<
     const plan = resolve(threads, host());
     announce(plan);
     if (plan.want >= 1) {
-        const { SHARED_INITIAL_PAGES } = await import("./kernel.shared.wasm");
+        const { SHARED_INITIAL_PAGES } = await import("./kernel.shared.wasm.ts");
         if (runtime.maximumMemory < SHARED_INITIAL_PAGES * 65536) {
             throw new Error(
                 `PhysicsWorldDefinition.maximumMemory must be at least ${SHARED_INITIAL_PAGES * 65536} bytes.`,

@@ -5,10 +5,10 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 setDefaultTimeout(TIMEOUT.node);
 
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { Body, BodyType, Shape } from "../../core/physics/index.ts";
 import { attachCanvas, Camera, RenderingPlugin } from "../../core/rendering/index.ts";
-import { CanvasContext } from "../../engine/app/canvas.fixture";
+import { CanvasContext } from "../../engine/app/canvas.fixture.ts";
 import { globalTransformTable, probeBuffer, Time, Transform } from "../../index.ts";
 import { StandardPhysicsPlugin } from "../../standard/physics/index.ts";
 import { GlobalTransform } from "../transform/index.ts";

@@ -1,10 +1,10 @@
 import * as d from "typegpu/data";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { fullscreenVertex } from "../../core/rendering/index.ts";
 import { precompile, type World } from "../../engine/index.ts";
 import { probeTexture } from "../../engine/runtime/index.ts";
 import { DEFAULT_PLUGINS } from "../../standard/index.ts";
-import { OutlinePlugin } from ".";
+import { OutlinePlugin } from "./index.ts";
 import {
     compositeHalfKernel,
     compositeKernel,

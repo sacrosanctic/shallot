@@ -1,5 +1,5 @@
 import { pipelineWarnings } from "@dylanebert/shallot/testing";
-import { expect, test } from "../../../../../scripts/browser.fixture";
+import { expect, test } from "../../../../../scripts/browser.fixture.ts";
 
 test.use(pipelineWarnings);
 

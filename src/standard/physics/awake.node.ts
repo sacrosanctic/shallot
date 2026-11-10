@@ -10,7 +10,7 @@ import {
     StandardPhysicsPlugin,
     setAwake,
     setLinearVelocity,
-} from ".";
+} from "./index.ts";
 
 import { kernel } from "./kernel/kernel.ts";
 import { physicsBodyIndex, physicsState } from "./runtime.ts";

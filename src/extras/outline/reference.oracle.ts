@@ -6,7 +6,7 @@ import {
     size,
     squaredDistance,
     widths,
-} from "./reference.fixture";
+} from "./reference.fixture.ts";
 
 const { render } = outlineReference(import.meta.path);
 

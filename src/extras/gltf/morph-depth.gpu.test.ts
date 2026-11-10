@@ -25,7 +25,7 @@ import {
 } from "../../standard/rendering/index.ts";
 import { sunShadowView } from "../../standard/rendering/atlas.ts";
 import { loadGltf } from "./load.ts";
-import { morphFixture, morphFixtureUrl } from "./morph.fixture";
+import { morphFixture, morphFixtureUrl } from "./morph.fixture.ts";
 import { type GltfSceneInstance, loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene.ts";
 import { GltfPlugin } from "./skinning.ts";
 

@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture";
+import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { PointLight, SpotLight, VolumetricLight } from "../../core/rendering/index.ts";
 import { Transform } from "../../core/transform/index.ts";
 import { probeBuffer } from "../../engine/runtime/index.ts";

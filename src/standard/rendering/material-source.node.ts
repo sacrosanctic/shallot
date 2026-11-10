@@ -29,7 +29,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Transform } from "@dylanebert/shallot/transform";
 import tgpu, { readFromArrayBuffer } from "typegpu";
 import * as d from "typegpu/data";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { expectWarning } from "../../../scripts/test-console.ts";
 
 setDefaultTimeout(TIMEOUT.node);

@@ -22,7 +22,7 @@ import {
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Transform } from "@dylanebert/shallot/transform";
 import * as d from "typegpu/data";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const Parameters = d.struct({

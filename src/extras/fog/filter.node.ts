@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import {
     attachTexture,
     Camera,
@@ -12,8 +12,8 @@ import { Transform } from "../../core/transform/index.ts";
 import { lookAtRotation } from "../../engine/index.ts";
 import { DEFAULT_PLUGINS } from "../../standard/index.ts";
 import { StandardRenderer } from "../../standard/rendering/index.ts";
-import { FogPlugin } from ".";
-import { room } from "./room.fixture";
+import { FogPlugin } from "./index.ts";
+import { room } from "./room.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const subjects = gpuApps(import.meta.path, [

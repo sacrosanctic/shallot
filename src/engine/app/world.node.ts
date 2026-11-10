@@ -4,7 +4,7 @@ import {
     createTestGpuApp as createApp,
     disposeGpuApps,
     expectAdapterNotice,
-} from "../../../scripts/gpu.fixture";
+} from "../../../scripts/gpu.fixture.ts";
 import { component } from "../ecs/index.ts";
 import { classifyAdapter } from "../runtime/adapter.ts";
 
@@ -28,7 +28,7 @@ import {
     TextPlugin,
     textStateKey,
 } from "../../extras/text/index.ts";
-import { isolationFont } from "../../extras/text/font.fixture";
+import { isolationFont } from "../../extras/text/font.fixture.ts";
 import { Draws } from "../../standard/rendering/index.ts";
 import { f32, probeBuffer, requestGPU, Time, World } from "../index.ts";
 import "../../standard/index.ts";

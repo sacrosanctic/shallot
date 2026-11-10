@@ -3,7 +3,7 @@ import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import { fullscreenVertex } from "../../core/rendering/index.ts";
 import { precompile, probeTexture, type World } from "../../engine/index.ts";
-import { planeUv } from "./receding-plane.fixture";
+import { planeUv } from "./receding-plane.fixture.ts";
 
 const point = d.struct({ uv: d.vec2f, dx: d.vec2f, dy: d.vec2f });
 const layout = tgpu.bindGroupLayout({

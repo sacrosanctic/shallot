@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import { createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import type { Plugin } from "../app/index.ts";
 import { probeBuffer } from "../runtime/index.ts";
 import type { World } from "./world.ts";

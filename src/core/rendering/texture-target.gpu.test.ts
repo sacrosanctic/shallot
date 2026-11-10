@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture";
+import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { rawDevice } from "../../engine/runtime/index.ts";
 import { Transform } from "../transform/index.ts";
 import {

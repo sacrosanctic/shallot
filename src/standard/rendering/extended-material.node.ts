@@ -29,7 +29,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Transform } from "@dylanebert/shallot/transform";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { gpuScene } from "../../../scripts/gpu.fixture";
+import { gpuScene } from "../../../scripts/gpu.fixture.ts";
 import { imageTextures } from "../../core/rendering/image.ts";
 
 setDefaultTimeout(TIMEOUT.node);

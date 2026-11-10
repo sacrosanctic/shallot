@@ -4,7 +4,7 @@ import { createServer } from "node:net";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { expect, test } from "../browser.fixture";
+import { expect, test } from "../browser.fixture.ts";
 import { removeTestDirectory } from "../test-directory.ts";
 
 const SUBJECT = dirname(fileURLToPath(import.meta.url));

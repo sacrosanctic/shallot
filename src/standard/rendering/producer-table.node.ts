@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { cube, Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachTexture,

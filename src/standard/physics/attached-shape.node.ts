@@ -4,7 +4,7 @@ import { expectWarning } from "../../../scripts/test-console.ts";
 import { Body, BodyType, Shape, ShapeKind } from "../../core/physics/index.ts";
 import { GlobalTransform, Transform, TransformRuntime } from "../../core/transform/index.ts";
 import { createApp } from "../../engine/app/index.ts";
-import { StandardPhysicsPlugin } from ".";
+import { StandardPhysicsPlugin } from "./index.ts";
 import { setTransform } from "./runtime.ts";
 
 setDefaultTimeout(TIMEOUT.node);

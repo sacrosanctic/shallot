@@ -5,7 +5,7 @@ import { StandardPhysicsPlugin, StepPhysicsSystem, SyncPhysicsConstraintsSystem 
 import { WHJ_LOWER_SUSPENSION_IMPULSE, WHJ_UPPER_SUSPENSION_IMPULSE } from "./kernel/joint-layout.ts";
 import { readJointFloat, writeJointFloat } from "./kernel/jointcolumns.ts";
 import { physicsState } from "./runtime.ts";
-import { jointIds } from "./solver/joint.fixture";
+import { jointIds } from "./solver/joint.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

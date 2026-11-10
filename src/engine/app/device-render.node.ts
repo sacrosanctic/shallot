@@ -11,7 +11,7 @@ import {
 import "../../standard/index.ts";
 
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { createTestGpuApp, expectAdapterNotice } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp, expectAdapterNotice } from "../../../scripts/gpu.fixture.ts";
 import { Transform } from "../../core/transform/index.ts";
 import { stampAdapter, Time, type World } from "../index.ts";
 import type { createApp } from "./index.ts";

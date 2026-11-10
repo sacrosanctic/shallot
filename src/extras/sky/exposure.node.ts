@@ -21,7 +21,7 @@ import {
 } from "@dylanebert/shallot/standard/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Transform } from "@dylanebert/shallot/transform";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const subjects = gpuApps(import.meta.path, [{ plugins: [SkyPlugin] }]);

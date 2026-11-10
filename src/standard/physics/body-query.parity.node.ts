@@ -12,7 +12,7 @@ import {
     overlapBodyShape,
     PhysicsWorldDefinition,
     StandardPhysicsPlugin,
-} from ".";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("body queries use explicit placement and live entities without stepping or changing the world", async () => {

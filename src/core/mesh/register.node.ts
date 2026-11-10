@@ -5,7 +5,7 @@ import {
     disposeGpuApps,
     expectAdapterNotice,
     gpuApps,
-} from "../../../scripts/gpu.fixture";
+} from "../../../scripts/gpu.fixture.ts";
 import { expectWarning } from "../../../scripts/test-console.ts";
 import type { createApp, Plugin, System, World } from "../../engine/index.ts";
 import { rawDevice } from "../../engine/runtime/index.ts";

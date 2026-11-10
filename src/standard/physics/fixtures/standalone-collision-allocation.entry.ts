@@ -6,7 +6,7 @@ import {
     shapeDistance,
     timeOfImpact,
 } from "@dylanebert/shallot/standard/physics";
-import { collisionCases, emptyCache } from "../standalone-collision.fixture";
+import { collisionCases, emptyCache } from "../standalone-collision.fixture.ts";
 
 export let controlSink: object | undefined;
 export const control = () => {

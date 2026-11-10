@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { expectWarning } from "../../../scripts/test-console.ts";
 import { MeshInstance } from "../../core/mesh/index.ts";
 import {
@@ -20,7 +20,7 @@ import {
 } from "../../core/rendering/index.ts";
 import { Transform } from "../../core/transform/index.ts";
 import { invertMat4, lookAtRotation, type World } from "../../engine/index.ts";
-import { CanvasContext } from "../../engine/app/canvas.fixture";
+import { CanvasContext } from "../../engine/app/canvas.fixture.ts";
 import { probeBuffer } from "../../engine/runtime/index.ts";
 import {
     CLUSTER_COUNT,

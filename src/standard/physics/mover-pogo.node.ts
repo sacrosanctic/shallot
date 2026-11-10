@@ -19,7 +19,7 @@ import {
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import gold from "../../../crates/physics/tests/mover_pogo.gold.json";
-import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { GlobalTransform } from "../../core/transform/index.ts";
 import {
     MVJ_LINEAR_VELOCITY,
@@ -35,7 +35,7 @@ import {
 } from "./kernel/columns.ts";
 import { readJointFloat, readJointVec3 } from "./kernel/jointcolumns.ts";
 import { physicsState } from "./runtime.ts";
-import { jointIds } from "./solver/joint.fixture";
+import { jointIds } from "./solver/joint.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 await setupGlobals();

@@ -8,7 +8,7 @@ import {
     disposeGpuApps,
     expectAdapterNotice,
     gpuScene,
-} from "../../../scripts/gpu.fixture";
+} from "../../../scripts/gpu.fixture.ts";
 import { Meshes, MeshInstance } from "../../core/mesh/index.ts";
 import {
     attachCanvas,
@@ -24,7 +24,7 @@ import {
 } from "../../core/rendering/index.ts";
 import { Transform } from "../../core/transform/index.ts";
 import { precompile } from "../../engine/index.ts";
-import { CanvasContext } from "../../engine/app/canvas.fixture";
+import { CanvasContext } from "../../engine/app/canvas.fixture.ts";
 import { probeBuffer } from "../../engine/runtime/index.ts";
 import {
     AlphaMode,

@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { characterGold, visitCharacterGold } from "./character-kernel.fixture";
+import { characterGold, visitCharacterGold } from "./character-kernel.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

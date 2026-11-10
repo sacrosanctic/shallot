@@ -3,13 +3,13 @@ import { type Component, type FieldType, Time, type World } from "@dylanebert/sh
 import * as physics from "@dylanebert/shallot/physics";
 import { StandardPhysicsPlugin } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { JointField, jointField } from "./kernel/jointrecords.ts";
 import { kernel } from "./kernel/kernel.ts";
 import { physicsBodyIndex, physicsState } from "./runtime.ts";
 import { defaultDistanceJointDef } from "./solver/distanceJoint.ts";
 import { defaultJointDef, JointType } from "./solver/joint.ts";
-import { jointIds } from "./solver/joint.fixture";
+import { jointIds } from "./solver/joint.fixture.ts";
 import { defaultMotorJointDef } from "./solver/motorJoint.ts";
 import { defaultMoverJointDef } from "./solver/moverJoint.ts";
 import { defaultParallelJointDef } from "./solver/parallelJoint.ts";

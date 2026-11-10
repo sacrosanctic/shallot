@@ -5,7 +5,7 @@ import { StandardPhysicsPlugin } from "../../src/standard/physics/index.ts";
 import { BodyType } from "../../src/standard/physics/common/types.ts";
 import { makeBoxHull } from "../../src/standard/physics/shapes/build-hull.ts";
 import { createHullShape, createSphereShape } from "../../src/standard/physics/shapes/shape.ts";
-import { manifoldRecords, manifoldSubject } from "../../src/standard/physics/standalone-manifold.fixture";
+import { manifoldRecords, manifoldSubject } from "../../src/standard/physics/standalone-manifold.fixture.ts";
 import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld, testShapeDef } from "../../src/standard/physics/testing.ts";
 import { worldSetPreSolveCallback } from "../../src/standard/physics/world/world.ts";
 import { WorldCountersBuffer } from "../../src/standard/physics/world/counters.ts";

@@ -1,14 +1,14 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { readFromArrayBuffer } from "typegpu";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { expectWarning } from "../../../scripts/test-console.ts";
 import { Anchor } from "../../core/rendering/index.ts";
 import { Transform } from "../../core/transform/index.ts";
 import { probeBuffer } from "../../engine/runtime/index.ts";
 import { Sprite, SpriteMaterialInput, SpriteMaterialType, SpritePlugin } from "../sprite/index.ts";
 import { spriteOffset } from "../sprite/material.ts";
-import { isolationFont } from "./font.fixture";
+import { isolationFont } from "./font.fixture.ts";
 import { GLYPH_AT, GLYPH_BYTES } from "./glyph.ts";
 import { internText, registerFont, Text, TextPlugin, textStateKey } from "./index.ts";
 

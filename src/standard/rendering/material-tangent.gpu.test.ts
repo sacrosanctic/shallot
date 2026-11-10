@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { MeshInstance } from "../../core/mesh/index.ts";
 import { attachTexture, Camera, NormalPrepass } from "../../core/rendering/index.ts";
 import { viewTargetsKey } from "../../core/rendering/targets.ts";

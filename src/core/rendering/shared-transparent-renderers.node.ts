@@ -1,10 +1,10 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuScene } from "../../../scripts/gpu.fixture";
+import { gpuScene } from "../../../scripts/gpu.fixture.ts";
 import type { World } from "../../engine/index.ts";
 import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "../../extras/lines/index.ts";
 import { internText, registerFont, Text, TextPlugin } from "../../extras/text/index.ts";
-import { isolationFont } from "../../extras/text/font.fixture";
+import { isolationFont } from "../../extras/text/font.fixture.ts";
 import {
     AlphaMode,
     Materials,
@@ -24,7 +24,7 @@ import {
     Tonemapping,
     TonemappingMethod,
     TransparentPhases,
-} from ".";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 let font = 0;

@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { expectWarning } from "../../../scripts/test-console.ts";
 import type { World } from "../ecs/index.ts";
 import { precompile, precompileState, withPipelineOwner } from "./gpu.ts";

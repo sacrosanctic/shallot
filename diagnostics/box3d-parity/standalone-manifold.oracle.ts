@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp } from "../../src/engine/index.ts";
 import { TIMEOUT } from "../../src/project/testing.js";
 import { StandardPhysicsPlugin } from "../../src/standard/physics/index.ts";
-import { manifoldRecords } from "../../src/standard/physics/standalone-manifold.fixture";
+import { manifoldRecords } from "../../src/standard/physics/standalone-manifold.fixture.ts";
 import { nativeSseOutput } from "./native-evidence.ts";
 setDefaultTimeout(TIMEOUT.node);
 test("public manifold fields and warm caches equal native Box3D", async () => {

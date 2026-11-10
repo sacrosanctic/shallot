@@ -1,7 +1,7 @@
 import { setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { observedDeviceError } from "../../../src/engine/runtime/index.ts";
-import { gpuApps } from "../../gpu.fixture";
+import { gpuApps } from "../../gpu.fixture.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const apps = gpuApps(import.meta.path, [{ defaults: false, plugins: [] }]);

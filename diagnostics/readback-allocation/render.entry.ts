@@ -4,11 +4,11 @@ import { Meshes, createApp, Camera, StandardRenderer, Transform, AmbientLight, P
 import { LinesPlugin, drawLine, drawArrow, drawWireBox, GizmoAsset, Gizmo, registerGizmo } from "../../src/extras/lines/index.ts";
 import { ProfilePlugin } from "../../src/extras/profile/index.ts";
 import { GltfPlugin, loadGltfScene, poseGltfScene, spawnGltfScene } from "../../src/extras/gltf/index.ts";
-import { skinningFixtureUrl } from "../../src/extras/gltf/skinning.fixture";
+import { skinningFixtureUrl } from "../../src/extras/gltf/skinning.fixture.ts";
 import { BackgroundContext, backgroundLayout, CameraBackground, registerProducerTable, Materials, ScreenSpaceAmbientOcclusion, ScreenSpaceAmbientOcclusionPlugin, StandardMaterial, registerBackground } from "../../src/standard/rendering/index.ts";
 import { RenderContext } from "../../src/core/rendering/index.ts";
 import { attachCanvas } from "../../src/core/rendering/view.ts";
-import { CanvasContext } from "../../src/engine/app/canvas.fixture";
+import { CanvasContext } from "../../src/engine/app/canvas.fixture.ts";
 import {
     dispatchWorkgroups,
     dispatchWorkgroups2,

@@ -1,7 +1,7 @@
 import { afterAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
-import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
+import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture.ts";
 import { precompile, type World } from "../../engine/index.ts";
 import { PointLightGpu } from "./lighting.ts";
 import {

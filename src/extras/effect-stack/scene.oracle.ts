@@ -1,15 +1,15 @@
 import { expect, test } from "bun:test";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { Scene, ScenePlugin, setEffect } from "../../../examples/post-processing/src/scene.ts";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { attachTexture, EffectPasses, TonemappingSystem, Views } from "../../core/rendering/index.ts";
 import { offscreenTexture } from "../../core/rendering/view.ts";
 import type { Plugin } from "../../engine/index.ts";
 import { probeTexture } from "../../engine/runtime/index.ts";
 import { DEFAULT_PLUGINS } from "../../standard/index.ts";
-import { EffectStackPlugin } from ".";
-import { bevyPipeline, renderBevy } from "./bevy.fixture";
-import { cases, compare, texture } from "./parity.fixture";
+import { EffectStackPlugin } from "./index.ts";
+import { bevyPipeline, renderBevy } from "./bevy.fixture.ts";
+import { cases, compare, texture } from "./parity.fixture.ts";
 
 const width = 1280,
     height = 720;

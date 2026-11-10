@@ -2,7 +2,7 @@ import { beforeAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { MeshInstance } from "../../core/mesh/index.ts";
 import {
     AmbientLight,
@@ -19,7 +19,7 @@ import { lookAtRotation, precompile, type World } from "../../engine/index.ts";
 import { probeBuffer } from "../../engine/runtime/index.ts";
 import { loadGltfScene, poseGltfScene, spawnGltfScene } from "../../extras/gltf/scene.ts";
 import { GltfPlugin, SkinnedMaterial } from "../../extras/gltf/skinning.ts";
-import { skinningFixtureUrl } from "../../extras/gltf/skinning.fixture";
+import { skinningFixtureUrl } from "../../extras/gltf/skinning.fixture.ts";
 import { sunShadowView } from "./atlas.ts";
 import {
     AlphaMode,

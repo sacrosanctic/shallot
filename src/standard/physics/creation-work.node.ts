@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Body, Hulls, Shape } from "../../core/physics/index.ts";
 import { Transform } from "../../core/transform/index.ts";
 import { createApp } from "../../engine/app/index.ts";
-import { PhysicsWorldDefinition, StandardPhysicsPlugin } from ".";
+import { PhysicsWorldDefinition, StandardPhysicsPlugin } from "./index.ts";
 import { physicsCounters } from "./runtime.ts";
 
 setDefaultTimeout(TIMEOUT.node);

@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { gpuApps } from "../../../scripts/gpu.fixture";
+import { gpuApps } from "../../../scripts/gpu.fixture.ts";
 import { Transform } from "../transform/index.ts";
-import { attachTexture, Camera, CorePipelinePlugin, RenderPhases } from ".";
+import { attachTexture, Camera, CorePipelinePlugin, RenderPhases } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const subjects = gpuApps(import.meta.path, [{ defaults: false, plugins: [CorePipelinePlugin] }]);
