@@ -1,5 +1,5 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import { nativeBinary, run } from "./native";
+import { nativeBinary, run } from "./native.ts";
 
 setDefaultTimeout(0);
 test("body transform gold is native b3Body_GetTransform", async () => {

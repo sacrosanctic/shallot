@@ -26,7 +26,7 @@ import type {
     SphericalJointConfig,
     WeldJointConfig,
     WheelJointConfig,
-} from "./api/config";
+} from "./api/config.ts";
 
 const entries = [
     ["Distance", DistanceJoint],

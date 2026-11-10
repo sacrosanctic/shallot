@@ -1,15 +1,15 @@
 import { afterAll, beforeAll, expect, test } from "bun:test";
-import { BodyType, init, makeBoxHull, shutdown } from "../api/index";
-import { defaultFilter, type Filter } from "../common/types";
-import { EventKind, eventCount } from "../kernel/eventbuffers";
-import { createHullShape, createSphereShape } from "../shapes/shape";
+import { BodyType, init, makeBoxHull, shutdown } from "../api/index.ts";
+import { defaultFilter, type Filter } from "../common/types.ts";
+import { EventKind, eventCount } from "../kernel/eventbuffers.ts";
+import { createHullShape, createSphereShape } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
+} from "../testing.ts";
 
 beforeAll(async () => {
     await init(undefined);

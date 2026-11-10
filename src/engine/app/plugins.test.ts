@@ -24,8 +24,8 @@ import {
     StandardPhysicsPlugin,
     StandardRenderingPlugin,
 } from "../../standard";
-import { type Plugin, Time } from "../index";
-import { createApp } from "./index";
+import { type Plugin, Time } from "../index.ts";
+import { createApp } from "./index.ts";
 
 const needsGpu = new Set<Plugin>([
     RenderingPlugin,

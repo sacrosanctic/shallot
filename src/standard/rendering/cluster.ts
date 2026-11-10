@@ -47,7 +47,7 @@ import {
     PointLightsRw,
     spotParams,
     warnLightInputs,
-} from "./lighting";
+} from "./lighting.ts";
 
 interface ClusterGpuState {
     clusters: Clusters;

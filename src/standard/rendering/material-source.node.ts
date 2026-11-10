@@ -30,7 +30,7 @@ import { Transform } from "@dylanebert/shallot/transform";
 import tgpu, { readFromArrayBuffer } from "typegpu";
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const Surface = component(

@@ -1,4 +1,4 @@
-import { evaluateKernel } from "./kernel";
+import { evaluateKernel } from "./kernel.ts";
 
 export type GltfAnimationPath = "translation" | "rotation" | "scale" | "weights";
 

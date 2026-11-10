@@ -1,10 +1,10 @@
 import type { World } from "../../../engine/ecs";
-import type { Transform, Vec3 } from "../common/records";
-import { kernel } from "../kernel/kernel";
-import type { Capsule, Sphere } from "../shapes/geometry";
-import type { HullData } from "../shapes/hull";
-import { hullByteCount, writeHullImage } from "../shapes/hullbytes";
-import type { SimplexCache } from "./queries";
+import type { Transform, Vec3 } from "../common/records.ts";
+import { kernel } from "../kernel/kernel.ts";
+import type { Capsule, Sphere } from "../shapes/geometry.ts";
+import type { HullData } from "../shapes/hull.ts";
+import { hullByteCount, writeHullImage } from "../shapes/hullbytes.ts";
+import type { SimplexCache } from "./queries.ts";
 
 /** Box3D separating features, including the manual axes used by the Manifold samples. */
 export const SeparatingFeature = {

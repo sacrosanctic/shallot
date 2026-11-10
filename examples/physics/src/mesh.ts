@@ -13,11 +13,11 @@ import {
 } from "@dylanebert/shallot";
 import { rotationFromAxisAngle, StandardPhysicsPlugin } from "@dylanebert/shallot/standard/physics";
 import voxelData from "./collision_mesh_01.json" with { type: "json" };
-import { decodeMesh } from "./mesh-data";
-import { HeightFieldSamplePlugin, heightFieldScene } from "./mesh-height-field";
-import { MeshInspectorPlugin, meshCreationScene, meshViewerScene } from "./mesh-inspector";
-import { ReflectionPlugin, reflectionScene } from "./mesh-reflection";
-import type { Controls } from "./scenes";
+import { decodeMesh } from "./mesh-data.ts";
+import { HeightFieldSamplePlugin, heightFieldScene } from "./mesh-height-field.ts";
+import { MeshInspectorPlugin, meshCreationScene, meshViewerScene } from "./mesh-inspector.ts";
+import { ReflectionPlugin, reflectionScene } from "./mesh-reflection.ts";
+import type { Controls } from "./scenes.ts";
 
 const f = Math.fround;
 type V3 = [number, number, number];

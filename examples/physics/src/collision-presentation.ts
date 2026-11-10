@@ -1,8 +1,8 @@
 import { Body, ShapeKind, type World } from "@dylanebert/shallot";
 import { computeBodyAABB, shapeEdges } from "@dylanebert/shallot/standard/physics";
-import { CollisionState, type Sweep } from "./collision";
-import { drawInkPoint, INK } from "./ink-presentation";
-import { JOINT_LINE } from "./joint-presentation";
+import { CollisionState, type Sweep } from "./collision.ts";
+import { drawInkPoint, INK } from "./ink-presentation.ts";
+import { JOINT_LINE } from "./joint-presentation.ts";
 
 type Point = [number, number, number];
 type Vec = { x: number; y: number; z: number };

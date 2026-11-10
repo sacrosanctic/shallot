@@ -1,4 +1,4 @@
-import type { AABB, Vec3 } from "../common/records";
+import type { AABB, Vec3 } from "../common/records.ts";
 
 export {
     createBoxMesh,
@@ -7,8 +7,8 @@ export {
     createMesh,
     createTorusMesh,
     createWaveMesh,
-} from "./build-nonconvex";
-export { computeMeshAABB, getMeshTriangle, safeScale } from "./read-geometry";
+} from "./build-nonconvex.ts";
+export { computeMeshAABB, getMeshTriangle, safeScale } from "./read-geometry.ts";
 
 /** Triangle mesh edge flags (b3MeshEdgeFlags), packed one byte per triangle. */
 export const MeshEdgeFlags = {

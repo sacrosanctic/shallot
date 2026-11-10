@@ -1,12 +1,12 @@
 import {expect,setDefaultTimeout,test} from "bun:test";
-import {BodyType} from "../../src/standard/physics/common/types";
-import {createSphereShape} from "../../src/standard/physics/shapes/shape";
-import {createTestWorld,createTestBody,destroyTestWorld,stepTestWorld,testShapeDef} from "../../src/standard/physics/testing";
-import {worldCounters,worldSetCustomFilterCallback} from "../../src/standard/physics/world/world";
+import {BodyType} from "../../src/standard/physics/common/types.ts";
+import {createSphereShape} from "../../src/standard/physics/shapes/shape.ts";
+import {createTestWorld,createTestBody,destroyTestWorld,stepTestWorld,testShapeDef} from "../../src/standard/physics/testing.ts";
+import {worldCounters,worldSetCustomFilterCallback} from "../../src/standard/physics/world/world.ts";
 import inputs from "../../src/standard/physics/collision/broad-pairs.inputs.json";
 import gold from "../../src/standard/physics/collision/broad-pairs.gold.json";
-import {nativeSseOutput} from "./native-evidence";
-import {assertPublicOracleKernel} from "./oracle-kernel";
+import {nativeSseOutput} from "./native-evidence.ts";
+import {assertPublicOracleKernel} from "./oracle-kernel.ts";
 setDefaultTimeout(0);
 test("the complete overlapping pair sets equal native, including sets beyond the former per-proxy limit",async()=>{
     await assertPublicOracleKernel();

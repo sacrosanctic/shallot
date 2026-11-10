@@ -3,8 +3,8 @@ import { Camera, type Plugin } from "@dylanebert/shallot";
 import { PhysicsWorldDefinition } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { MotesPlugin as ParticlesMotes } from "../examples/particles/src/motes";
-import { MotesPlugin as FogMotes } from "../examples/volumetric-fog/src/motes";
+import { MotesPlugin as ParticlesMotes } from "../examples/particles/src/motes.ts";
+import { MotesPlugin as FogMotes } from "../examples/volumetric-fog/src/motes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

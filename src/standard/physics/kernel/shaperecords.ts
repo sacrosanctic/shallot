@@ -1,6 +1,6 @@
-import type { WorldState } from "../world/world";
-import { kernel } from "./kernel";
-import { SHAPE_STRIDE } from "./shapecolumns";
+import type { WorldState } from "../world/world.ts";
+import { kernel } from "./kernel.ts";
+import { SHAPE_STRIDE } from "./shapecolumns.ts";
 
 /** Nongeometry field codes; generation and flags share word 41. */
 export const ShapeField = {

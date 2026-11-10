@@ -19,7 +19,7 @@ import {
     SyncPhysicsConstraintsSystem,
     setAwake,
 } from "@dylanebert/shallot/standard/physics";
-import type { Controls } from "./scenes";
+import type { Controls } from "./scenes.ts";
 
 const f = Math.fround;
 export const DrivingState = {

@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture";
-import { f32, vec2 } from "../index";
+import { f32, vec2 } from "../index.ts";
 import { probeBuffer } from "../runtime";
-import { component } from "./component";
+import { component } from "./component.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const Rows = { amount: f32, vector: vec2 };

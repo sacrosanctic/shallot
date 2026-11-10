@@ -2,8 +2,8 @@ import { expect, test } from "bun:test";
 import * as d from "typegpu/data";
 import type { Mesh } from "../../core/mesh";
 import type { World } from "../../engine";
-import { type MaterialType, materialType } from "./material-type";
-import { compileMaterial, meshStreamMask } from "./pipelines";
+import { type MaterialType, materialType } from "./material-type.ts";
+import { compileMaterial, meshStreamMask } from "./pipelines.ts";
 
 const colorOnly = materialType({
     name: "ColorStreamKey",

@@ -1,7 +1,7 @@
 import { createApp } from "../../../../engine/app";
 import { probeTexture, rawDevice } from "../../../../engine/runtime";
-import { imageTextures, registerImage } from "../../image";
-import { RenderingPlugin } from "../../substrate";
+import { imageTextures, registerImage } from "../../image.ts";
+import { RenderingPlugin } from "../../substrate.ts";
 
 const size = 512;
 const level = 4;

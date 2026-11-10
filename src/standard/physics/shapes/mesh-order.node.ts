@@ -8,7 +8,7 @@ import {
     createTorusMesh,
     createWaveMesh,
     type MeshData,
-} from "./mesh";
+} from "./mesh.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

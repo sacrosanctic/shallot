@@ -1,6 +1,6 @@
 import { expect, spyOn, test } from "bun:test";
 import type { Browser, LaunchOptions } from "playwright";
-import { launchPublishChromium } from "./publish-verify";
+import { launchPublishChromium } from "./publish-verify.ts";
 
 test("production verification uses Chromium's sandbox when it starts", async () => {
     const browser = {} as Browser;

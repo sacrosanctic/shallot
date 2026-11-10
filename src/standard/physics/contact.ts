@@ -1,9 +1,9 @@
 import type { EntityRef } from "../../engine";
 import type { Vec3 } from "./api";
-import * as layout from "./kernel/contact-layout";
-import type { Kernel } from "./kernel/kernel";
-import { liveShapeEntity, type ShapeEntity } from "./world/shape-entities";
-import type { WorldState } from "./world/world";
+import * as layout from "./kernel/contact-layout.ts";
+import type { Kernel } from "./kernel/kernel.ts";
+import { liveShapeEntity, type ShapeEntity } from "./world/shape-entities.ts";
+import type { WorldState } from "./world/world.ts";
 
 export interface PhysicsManifoldPoint {
     /** World-space offset from body A's center of mass, in meters. */

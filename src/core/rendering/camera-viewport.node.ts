@@ -5,7 +5,7 @@ import { gpuApps } from "../../../scripts/gpu.fixture";
 import { type Plugin, precompile, type World } from "../../engine";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
 import { Transform } from "../transform";
-import { renderFrameKey } from "./frame-state";
+import { renderFrameKey } from "./frame-state.ts";
 import {
     attachCanvas,
     attachTexture,
@@ -22,7 +22,7 @@ import {
     Tonemapping,
     TonemappingMethod,
     Views,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 await setupGlobals();

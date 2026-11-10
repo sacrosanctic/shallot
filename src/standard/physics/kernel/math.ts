@@ -1,5 +1,5 @@
-import type { AABB, Mat3, Quat, Transform, Vec3 } from "../common/records";
-import { kernel } from "./kernel";
+import type { AABB, Mat3, Quat, Transform, Vec3 } from "../common/records.ts";
+import { kernel } from "./kernel.ts";
 
 // Parity inputs and expected intermediates must retain Box3D's arithmetic.
 function read(operation: number, input: number[]): Float32Array {

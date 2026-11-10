@@ -15,14 +15,14 @@ import {
 } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
-import { removeTestDirectory } from "../../scripts/test-directory";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
 import {
     resolveViteCli,
     startViteDev,
     viteCliArgs,
     viteUrlFromLines,
-} from "../project/vite-command";
-import { parseCliArgs } from "./index";
+} from "../project/vite-command.ts";
+import { parseCliArgs } from "./index.ts";
 
 async function waitForPage(url: string): Promise<Response> {
     const deadline = Date.now() + 10_000;

@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { BROWSER_CEILING, BUDGET, CEILING, TIMEOUT } from "@dylanebert/shallot/testing";
-import { browserCommandErrors, packageTimeoutErrors, timeoutErrors } from "./timeout-policy";
+import { browserCommandErrors, packageTimeoutErrors, timeoutErrors } from "./timeout-policy.ts";
 
 const cheap =
     'import { test } from "bun:test"; import { CEILING, BUDGET, TIMEOUT } from "@dylanebert/shallot/testing";';

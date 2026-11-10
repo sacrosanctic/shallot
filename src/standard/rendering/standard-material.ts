@@ -2,9 +2,9 @@ import tgpu, { type TgpuFn } from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import type { World } from "../../engine";
-import { engineLayout, litPbr } from "./engine";
-import { type InstanceData, instanceData } from "./instance-data";
-import { BaseColor, StandardMaterial, StandardMaterialInput } from "./material-data";
+import { engineLayout, litPbr } from "./engine.ts";
+import { type InstanceData, instanceData } from "./instance-data.ts";
+import { BaseColor, StandardMaterial, StandardMaterialInput } from "./material-data.ts";
 import {
     AlphaModeCode,
     MaterialAssets,
@@ -17,9 +17,9 @@ import {
     materialType,
     materialVertexInput,
     materialVertexOutput,
-} from "./material-type";
-import type { BindResource } from "./pipelines";
-import { Pbr } from "./shade";
+} from "./material-type.ts";
+import type { BindResource } from "./pipelines.ts";
+import { Pbr } from "./shade.ts";
 
 const ColorFields = d.struct({ color: d.vec4f });
 const baseColors = instanceData(BaseColor, ColorFields);

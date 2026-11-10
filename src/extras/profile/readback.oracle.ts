@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import { createApp, DiagnosticsStore } from "../../engine";
-import { ProfilePlugin } from "./index";
+import { ProfilePlugin } from "./index.ts";
 
 await setupGlobals();
 const spanLabels = ["readback-witness", "example//compute", "", "%2F"];

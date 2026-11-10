@@ -3,10 +3,10 @@ import { readFileSync } from "node:fs";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { MeshPlugin } from "../../core/mesh";
 import { GlobalTransform, TransformPlugin } from "../../core/transform";
-import { openGpuApp as createApp } from "../../project/testing-gpu";
-import type { GltfJson } from "./gltf";
-import { loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene";
-import { GltfPlugin } from "./skinning";
+import { openGpuApp as createApp } from "../../project/testing-gpu.ts";
+import type { GltfJson } from "./gltf.ts";
+import { loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene.ts";
+import { GltfPlugin } from "./skinning.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 

@@ -1,10 +1,10 @@
 import tgpu, { type TgpuRoot } from "typegpu";
 import { u32 } from "typegpu/data";
 import type { Resource, World } from "../ecs";
-import { type AdapterInfoFacts, type AdapterVerdict, classifyAdapter } from "./adapter";
-import { continueSubmissionFence, submissionFence } from "./allocation-site";
-import { captureGpuLog } from "./log";
-import { now } from "./platform";
+import { type AdapterInfoFacts, type AdapterVerdict, classifyAdapter } from "./adapter.ts";
+import { continueSubmissionFence, submissionFence } from "./allocation-site.ts";
+import { captureGpuLog } from "./log.ts";
+import { now } from "./platform.ts";
 
 /**
  * thrown when WebGPU is unavailable or a device can't meet a required feature or limit. `missing` names

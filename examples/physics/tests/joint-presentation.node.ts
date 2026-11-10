@@ -16,10 +16,10 @@ import {
     drawJointViews,
     JOINT_DOT_DIAMETER,
     JOINT_LINE,
-} from "../src/joint-presentation";
-import { JointSamplePlugin } from "../src/joints";
-import { RagdollPlugin } from "../src/ragdoll";
-import { changeControl, controlValues, createScene } from "../src/scenes";
+} from "../src/joint-presentation.ts";
+import { JointSamplePlugin } from "../src/joints.ts";
+import { RagdollPlugin } from "../src/ragdoll.ts";
+import { changeControl, controlValues, createScene } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const [scene, count] of [

@@ -1,9 +1,9 @@
 import type { Plugin } from "../../engine";
-import { MeshInstance } from "./instance";
+import { MeshInstance } from "./instance.ts";
 
-export { MeshInstance } from "./instance";
-export { capsule, cube, sphere } from "./primitives";
-export { generateTangents } from "./tangents";
+export { MeshInstance } from "./instance.ts";
+export { capsule, cube, sphere } from "./primitives.ts";
+export { generateTangents } from "./tangents.ts";
 export {
     decodeColor,
     decodePos,
@@ -18,7 +18,7 @@ export {
     packTangent,
     posQuantPackWgsl,
     posQuantWgsl,
-} from "./vertex";
+} from "./vertex.ts";
 
 import {
     clearMeshes,
@@ -26,11 +26,11 @@ import {
     initializeMeshState,
     PrepareMeshesSystem,
     setDefaultMeshHandle,
-} from "./mesh";
-import { initMeshes } from "./primitives";
+} from "./mesh.ts";
+import { initMeshes } from "./primitives.ts";
 
-export type { Mesh, MeshBinding, MeshData, MeshHandle, MeshIndex } from "./mesh";
-export { flushMeshes, Meshes, meshResourcesKey } from "./mesh";
+export type { Mesh, MeshBinding, MeshData, MeshHandle, MeshIndex } from "./mesh.ts";
+export { flushMeshes, Meshes, meshResourcesKey } from "./mesh.ts";
 
 /**
  * Owns this world's mesh registry and GPU storage, including the default unit cube. Add

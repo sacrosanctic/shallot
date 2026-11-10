@@ -4,16 +4,16 @@ import pkg from "../../../package.json" with { type: "json" };
 import { GpuError, UnsupportedError } from "../../engine";
 import type { Loading } from "../../engine/app";
 import type { AdapterVerdict } from "../../engine/runtime";
-import { DARK, END_TICK, type Palette, type Splash, splash, toSvg } from "./brand";
+import { DARK, END_TICK, type Palette, type Splash, splash, toSvg } from "./brand.ts";
 import {
     initialPresentation,
     type PresentationEvent,
     type PresentationState,
     type SplashProfile,
     transitionPresentation,
-} from "./presentation";
+} from "./presentation.ts";
 
-export type { SplashProfile } from "./presentation";
+export type { SplashProfile } from "./presentation.ts";
 
 /** The grace before responsive branded content is allowed to appear. */
 export const SPLASH_GRACE_MS = 150;

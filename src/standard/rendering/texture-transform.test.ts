@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import * as d from "typegpu/data";
-import { StandardMaterial, StandardMaterialInput } from "./material-data";
+import { StandardMaterial, StandardMaterialInput } from "./material-data.ts";
 
 test("five identity texture transforms occupy 100 scalar bytes, reusing the old row's tail padding", () => {
     expect(d.sizeOf(StandardMaterialInput)).toBe(208);

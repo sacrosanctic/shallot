@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { HANDOFF_MARK, SYSTEM_MEASURE_PREFIX } from "../diagnostics";
-import type { Plugin } from "./index";
-import { createApp } from "./index";
+import type { Plugin } from "./index.ts";
+import { createApp } from "./index.ts";
 
 function captureUserTiming(): {
     marks: string[];

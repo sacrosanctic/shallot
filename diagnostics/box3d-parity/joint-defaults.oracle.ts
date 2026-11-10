@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import * as C from "../../src/standard/physics/kernel/columns";
-import { J_CONSTRAINT_SOFTNESS } from "../../src/standard/physics/kernel/joint-layout";
+import * as C from "../../src/standard/physics/kernel/columns.ts";
+import { J_CONSTRAINT_SOFTNESS } from "../../src/standard/physics/kernel/joint-layout.ts";
 import {
     readJointEventUserData,
     readJointFlag,
@@ -12,26 +12,26 @@ import {
     writeJointQuat,
     writeJointTransform,
     writeJointVec3,
-} from "../../src/standard/physics/kernel/jointcolumns";
-import { JointField, jointDrawScale, jointField } from "../../src/standard/physics/kernel/jointrecords";
-import { kernel, init } from "../../src/standard/physics/kernel/kernel";
-import { BodyType } from "../../src/standard/physics/common/types";
-import { createTestBody, createTestWorld, destroyTestWorld } from "../../src/standard/physics/testing";
-import { createFilterJoint, defaultJointDef, destroyJointInternal } from "../../src/standard/physics/solver/joint";
-import { createDistanceJoint, defaultDistanceJointDef } from "../../src/standard/physics/solver/distanceJoint";
-import { createMotorJoint, defaultMotorJointDef } from "../../src/standard/physics/solver/motorJoint";
-import { createMoverJoint, defaultMoverJointDef } from "../../src/standard/physics/solver/moverJoint";
-import { createPogoJoint, defaultPogoJointDef } from "../../src/standard/physics/solver/pogoJoint";
-import { createParallelJoint, defaultParallelJointDef } from "../../src/standard/physics/solver/parallelJoint";
-import { createPrismaticJoint, defaultPrismaticJointDef } from "../../src/standard/physics/solver/prismaticJoint";
-import { createRevoluteJoint, defaultRevoluteJointDef } from "../../src/standard/physics/solver/revoluteJoint";
-import { createSphericalJoint, defaultSphericalJointDef } from "../../src/standard/physics/solver/sphericalJoint";
-import { createWeldJoint, defaultWeldJointDef } from "../../src/standard/physics/solver/weldJoint";
-import { createWheelJoint, defaultWheelJointDef } from "../../src/standard/physics/solver/wheelJoint";
-import { wakeJointBodies } from "../../src/standard/physics/solver/joint";
-import { nativeSseOutput } from "./native-evidence";
-import { assertPublicOracleKernel } from "./oracle-kernel";
-import type { WorldState } from "../../src/standard/physics/world/world";
+} from "../../src/standard/physics/kernel/jointcolumns.ts";
+import { JointField, jointDrawScale, jointField } from "../../src/standard/physics/kernel/jointrecords.ts";
+import { kernel, init } from "../../src/standard/physics/kernel/kernel.ts";
+import { BodyType } from "../../src/standard/physics/common/types.ts";
+import { createTestBody, createTestWorld, destroyTestWorld } from "../../src/standard/physics/testing.ts";
+import { createFilterJoint, defaultJointDef, destroyJointInternal } from "../../src/standard/physics/solver/joint.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "../../src/standard/physics/solver/distanceJoint.ts";
+import { createMotorJoint, defaultMotorJointDef } from "../../src/standard/physics/solver/motorJoint.ts";
+import { createMoverJoint, defaultMoverJointDef } from "../../src/standard/physics/solver/moverJoint.ts";
+import { createPogoJoint, defaultPogoJointDef } from "../../src/standard/physics/solver/pogoJoint.ts";
+import { createParallelJoint, defaultParallelJointDef } from "../../src/standard/physics/solver/parallelJoint.ts";
+import { createPrismaticJoint, defaultPrismaticJointDef } from "../../src/standard/physics/solver/prismaticJoint.ts";
+import { createRevoluteJoint, defaultRevoluteJointDef } from "../../src/standard/physics/solver/revoluteJoint.ts";
+import { createSphericalJoint, defaultSphericalJointDef } from "../../src/standard/physics/solver/sphericalJoint.ts";
+import { createWeldJoint, defaultWeldJointDef } from "../../src/standard/physics/solver/weldJoint.ts";
+import { createWheelJoint, defaultWheelJointDef } from "../../src/standard/physics/solver/wheelJoint.ts";
+import { wakeJointBodies } from "../../src/standard/physics/solver/joint.ts";
+import { nativeSseOutput } from "./native-evidence.ts";
+import { assertPublicOracleKernel } from "./oracle-kernel.ts";
+import type { WorldState } from "../../src/standard/physics/world/world.ts";
 
 setDefaultTimeout(180_000);
 await init(undefined, { threads: 0 });

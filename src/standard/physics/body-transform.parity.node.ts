@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Body, BodyType, Shape, ShapeKind } from "../../core/physics";
 import { GlobalTransform, Transform } from "../../core/transform";
 import { createApp } from "../../engine";
-import { getBodyTransform, StandardPhysicsPlugin, setBodyType, setTransform } from "./index";
+import { getBodyTransform, StandardPhysicsPlugin, setBodyType, setTransform } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const bits = (v: number) => {

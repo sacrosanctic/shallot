@@ -11,9 +11,9 @@ import {
 import { DiagnosticsOverlayPlugin } from "@dylanebert/shallot/extras";
 import { attachTexture, worldToViewport } from "@dylanebert/shallot/rendering";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { AppPlugin, Viewer } from "../examples/physics/src/app";
-import { Grab } from "../examples/physics/src/grab";
-import { sceneSwitcher } from "../examples/physics/src/sample";
+import { AppPlugin, Viewer } from "../examples/physics/src/app.ts";
+import { Grab } from "../examples/physics/src/grab.ts";
+import { sceneSwitcher } from "../examples/physics/src/sample.ts";
 
 test("physics grab outline: summed GPU outline:jfa span on a fixed view", async () => {
     const app = await openGpuApp({

@@ -2,22 +2,22 @@ import { existsSync, mkdtempSync, readdirSync, readFileSync, realpathSync } from
 import { SourceMap } from "node:module";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
-import { removeTestDirectory } from "../../scripts/test-directory";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
 import { type AdapterFacts, classifyAdapter } from "../../src/engine/runtime";
 import { attribute, originalPosition, subjectSite } from "./allocation-sampler.mjs";
 import { CAPTURE_CONTRACT } from "@dylanebert/shallot/rendering";
-import { confirmOnDisplay, openOnDisplay } from "./display-seat";
-import { launchPlan } from "./launch";
-import { resolveViteCli } from "../../src/project/vite-command";
-import { resolveSeat } from "./seat";
+import { confirmOnDisplay, openOnDisplay } from "./display-seat.ts";
+import { launchPlan } from "./launch.ts";
+import { resolveViteCli } from "../../src/project/vite-command.ts";
+import { resolveSeat } from "./seat.ts";
 import { BROWSER_CONFIG } from "@dylanebert/shallot/testing";
 import {
     type AllocationSample,
     type AllocationSite,
     type AllocationWindow,
     TIER_FLAGS,
-} from "./allocation";
-import { normalizePath } from "../../src/project/paths";
+} from "./allocation.ts";
+import { normalizePath } from "../../src/project/paths.ts";
 
 /** one collection in the steady windows, read from V8's GC trace over CDP */
 export interface Collection {
@@ -421,7 +421,7 @@ export async function samplePage(
     let browser: import("playwright").Browser | undefined;
     try {
         // Build the project's own Vite config, then inspect the same output through its preview server.
-        const { buildWeb } = await import("../../src/project/build");
+        const { buildWeb } = await import("../../src/project/build.ts");
         await bounded("the web build", buildWeb(projectDir, { outDir, sourcemap: true }));
         preview = await startPreview(projectDir, outDir, remaining());
         const { origin } = preview;

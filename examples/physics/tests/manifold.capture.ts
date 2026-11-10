@@ -1,6 +1,6 @@
 import { test } from "playwright/test";
-import { manifoldNames } from "../src/manifold";
-import { capture } from "./capture";
+import { manifoldNames } from "../src/manifold.ts";
+import { capture } from "./capture.ts";
 
 for (const width of [1280, 390])
     for (const id of manifoldNames)

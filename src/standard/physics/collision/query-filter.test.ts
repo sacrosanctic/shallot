@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
-import { BodyType } from "../common/types";
-import { queryColumns } from "../kernel/querycolumns";
-import { createSphereShape } from "../shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing";
+import { BodyType } from "../common/types.ts";
+import { queryColumns } from "../kernel/querycolumns.ts";
+import { createSphereShape } from "../shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
 
 const origin = { x: 0, y: 0, z: 0 };
 const translation = { x: 10, y: 0, z: 0 };

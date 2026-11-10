@@ -43,7 +43,7 @@ export interface DrawArgs {
  */
 export interface Draw {
     name: string;
-    material: Pick<import("./material-type").MaterialHandle, "type" | "material">;
+    material: Pick<import("./material-type.ts").MaterialHandle, "type" | "material">;
     alphaPipelineKey: number;
     cullMode?: number;
     mesh: MeshHandle;

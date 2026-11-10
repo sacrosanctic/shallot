@@ -1,6 +1,6 @@
 import type { World } from "@dylanebert/shallot";
-import { manifoldDrag } from "../src/manifold-drag";
-import { changeControl, type Scene } from "../src/scenes";
+import { manifoldDrag } from "../src/manifold-drag.ts";
+import { changeControl, type Scene } from "../src/scenes.ts";
 export function manifoldInput(
     world: World,
     scene: Scene,

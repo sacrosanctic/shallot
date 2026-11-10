@@ -1,19 +1,19 @@
-import { ShapeType } from "../common/types";
-import { kernelMover } from "./shape_query_gold";
+import { ShapeType } from "../common/types.ts";
+import { kernelMover } from "./shape_query_gold.ts";
 // Behavioral port of Box3D's test/test_mover.c. These assert the invariants the plane solver and the
 // mover-collide functions must hold (converged iteration counts, valid normalized normals, correct
 // push-out direction and depth) — independent of the bit-exact gold gate in mover.gold.test.ts, so they
 // guard against the C reference itself being wrong, which equality against it cannot.
 
 import { expect, test } from "bun:test";
-import type { Vec3 } from "../common/records";
-import { vector } from "../kernel/math";
+import type { Vec3 } from "../common/records.ts";
+import { vector } from "../kernel/math.ts";
 
 const absf = Math.abs;
 
-import { makeBoxHull } from "../shapes/build-hull";
-import type { Capsule, Sphere } from "../shapes/geometry";
-import { type CollisionPlane, solvePlanes } from "./mover";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import type { Capsule, Sphere } from "../shapes/geometry.ts";
+import { type CollisionPlane, solvePlanes } from "./mover.ts";
 
 const FLT_MAX = 3.4028234663852886e38;
 const v = (x: number, y: number, z: number): Vec3 => ({ x, y, z });

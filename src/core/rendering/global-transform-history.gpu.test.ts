@@ -11,7 +11,7 @@ import {
     Time,
     Transform,
     type World,
-} from "../../index";
+} from "../../index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 
@@ -21,7 +21,7 @@ import {
     GlobalTransformHistoryEndSystem,
     GlobalTransformHistoryStartSystem,
     GlobalTransformHistory as TransformRuntime,
-} from "./global-transform";
+} from "./global-transform.ts";
 
 const startTick = (world: World) => {
     deriveTransforms(world);

@@ -13,9 +13,9 @@ import {
 } from "@dylanebert/shallot";
 import { StandardPhysicsPlugin } from "@dylanebert/shallot/standard/physics";
 import buildingData from "./building.json" with { type: "json" };
-import { human } from "./human";
-import { decodeMesh } from "./mesh-data";
-import type { Controls } from "./scenes";
+import { human } from "./human.ts";
+import { decodeMesh } from "./mesh-data.ts";
+import type { Controls } from "./scenes.ts";
 
 const building = decodeMesh(buildingData);
 const f = Math.fround;

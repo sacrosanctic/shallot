@@ -3,10 +3,10 @@ import { mkdirSync, mkdtempSync, readFileSync, realpathSync, writeFileSync } fro
 import { tmpdir } from "node:os";
 import { join, relative, resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { normalizePath } from "../src/project/paths";
-import { bunChild } from "./bun-child";
-import { spawnPackedInstall } from "./packed-install-spawn";
-import { removeTestDirectory } from "./test-directory";
+import { normalizePath } from "../src/project/paths.ts";
+import { bunChild } from "./bun-child.ts";
+import { spawnPackedInstall } from "./packed-install-spawn.ts";
+import { removeTestDirectory } from "./test-directory.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const ROOT = resolve(import.meta.dir, "..");

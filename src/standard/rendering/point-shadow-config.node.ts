@@ -16,11 +16,11 @@ import {
 } from "../../core/rendering";
 import { Transform } from "../../core/transform";
 import { rawDevice } from "../../engine/runtime";
-import { StandardRenderer } from "./forward";
-import { StandardRenderingPlugin } from "./index";
-import { Materials, MeshMaterial, StandardMaterial } from "./material";
-import { MeshRenderPlugin } from "./mesh-render";
-import { PointShadows } from "./shadows";
+import { StandardRenderer } from "./forward.ts";
+import { StandardRenderingPlugin } from "./index.ts";
+import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";
+import { MeshRenderPlugin } from "./mesh-render.ts";
+import { PointShadows } from "./shadows.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

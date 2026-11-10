@@ -5,10 +5,10 @@ import { GlobalTransform, Transform } from "../../core/transform";
 import type { System } from "../../engine";
 import { createApp } from "../../engine/app";
 import { StandardPhysicsPlugin } from ".";
-import { defaultSurfaceMaterial } from "./common/types";
-import { BodyField, bodyField } from "./kernel/bodyrecords";
-import { physicsBodyIndex, physicsState, StepPhysicsSystem } from "./runtime";
-import { getShapeMaterial, readShapeSphere } from "./shapes/shape";
+import { defaultSurfaceMaterial } from "./common/types.ts";
+import { BodyField, bodyField } from "./kernel/bodyrecords.ts";
+import { physicsBodyIndex, physicsState, StepPhysicsSystem } from "./runtime.ts";
+import { getShapeMaterial, readShapeSphere } from "./shapes/shape.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

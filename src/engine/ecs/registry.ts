@@ -1,6 +1,6 @@
-import type { Component, ComponentValues } from "./component";
-import { declaration, idOf, isType, lanes } from "./component";
-import type { World } from "./world";
+import type { Component, ComponentValues } from "./component.ts";
+import { declaration, idOf, isType, lanes } from "./component.ts";
+import type { World } from "./world.ts";
 
 interface Entry {
     key: string;

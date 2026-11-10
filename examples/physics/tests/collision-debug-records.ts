@@ -1,4 +1,4 @@
-import type { CollisionDebug } from "../src/collision-debug";
+import type { CollisionDebug } from "../src/collision-debug.ts";
 
 const buffer = new DataView(new ArrayBuffer(4));
 function hex(v: number): string {

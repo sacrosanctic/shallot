@@ -12,7 +12,7 @@ import {
     StandardPhysicsPlugin,
     Transform,
 } from "@dylanebert/shallot";
-import { chime } from "./chime";
+import { chime } from "./chime.ts";
 import {
     CHIME_VOLUME,
     InteractionInput,
@@ -20,7 +20,7 @@ import {
     Sliding,
     SoundGamePlugin,
     Usable,
-} from "./sound";
+} from "./sound.ts";
 
 const apps: Awaited<ReturnType<typeof createApp>>[] = [];
 afterEach(() => {

@@ -19,7 +19,7 @@ import {
     StandardRenderer,
     StandardRenderingPlugin,
 } from "../../standard/rendering";
-import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./index";
+import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const SIZE = 256;

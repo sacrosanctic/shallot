@@ -45,7 +45,7 @@ import {
     WaveMaterial,
     WavePlugin,
     waveVector,
-} from "./materials";
+} from "./materials.ts";
 
 export const presets = [
     {

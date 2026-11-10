@@ -44,8 +44,8 @@ import {
     sunShadowParams,
     sunShadowView,
 } from "../../standard/rendering";
-import { FOG_FLOATS, FOG_HEIGHT, FOG_SLICES, FOG_WIDTH, FogGpu, WORKGROUP } from "./medium";
-import { packFog } from "./pack";
+import { FOG_FLOATS, FOG_HEIGHT, FOG_SLICES, FOG_WIDTH, FogGpu, WORKGROUP } from "./medium.ts";
+import { packFog } from "./pack.ts";
 import {
     fogDepthKernel,
     fogDepthKernelMultisampled,
@@ -68,11 +68,11 @@ import {
     fogLayout1,
     fogReadLayout,
     readFog,
-} from "./pipeline";
+} from "./pipeline.ts";
 
-export { fogReadLayout, readFog, readFogInScatter } from "./pipeline";
+export { fogReadLayout, readFog, readFogInScatter } from "./pipeline.ts";
 
-import { TEMPORAL_FRAMES } from "./temporal";
+import { TEMPORAL_FRAMES } from "./temporal.ts";
 
 /**
  * The scene's volumetric atmosphere: one per scene (a singleton). A frustum grid accumulates extinction

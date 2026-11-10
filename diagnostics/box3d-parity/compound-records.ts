@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
-import type { CompoundData } from "../../src/standard/physics/shapes/compound";
-import type { Vec3, Transform } from "../../src/standard/physics/common/records";
-import { drawMeshData } from "../../src/standard/physics/shapes/readgeometry";
+import type { CompoundData } from "../../src/standard/physics/shapes/compound.ts";
+import type { Vec3, Transform } from "../../src/standard/physics/common/records.ts";
+import { drawMeshData } from "../../src/standard/physics/shapes/readgeometry.ts";
 
 const digest = (value: unknown) => createHash("sha256").update(JSON.stringify(value)).digest("hex");
 const vector = (v: Vec3) => [v.x, v.y, v.z];

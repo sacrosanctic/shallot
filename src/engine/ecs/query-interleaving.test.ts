@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { RegisteredQuery } from "./query";
+import { RegisteredQuery } from "./query.ts";
 
 test("removal after a nested iteration never skips an untouched outer member", () => {
     const query = new RegisteredQuery([]);

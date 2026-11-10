@@ -13,8 +13,8 @@ import { homedir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { inflateRawSync } from "node:zlib";
 import { CROSS_ORIGIN_ISOLATION } from "../project";
-import { publishProgress } from "./publish-output";
-import type { PublishHost } from "./publish-verify";
+import { publishProgress } from "./publish-output.ts";
+import type { PublishHost } from "./publish-verify.ts";
 
 export const BUTLER_VERSION = "15.32.0";
 /** SHA-256 recorded at download of broth's `default` archive per platform, not publisher attestations. */

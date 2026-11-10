@@ -22,7 +22,7 @@ import {
 } from "@dylanebert/shallot";
 import { Orbit, OrbitPlugin } from "@dylanebert/shallot/extras";
 
-import { PatternMaterial, PatternPlugin } from "./pattern";
+import { PatternMaterial, PatternPlugin } from "./pattern.ts";
 
 export const Scene: Resource<{
     camera: number;

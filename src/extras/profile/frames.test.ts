@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { Diagnostic, DiagnosticsStore } from "../../engine";
-import { cpuTotal } from "./cpu";
-import { EmptyFrames } from "./empty";
-import { FrameTimings } from "./frames";
+import { cpuTotal } from "./cpu.ts";
+import { EmptyFrames } from "./empty.ts";
+import { FrameTimings } from "./frames.ts";
 
 test("a new label seeds only presented frames, not a padded history window", () => {
     const store = new DiagnosticsStore();

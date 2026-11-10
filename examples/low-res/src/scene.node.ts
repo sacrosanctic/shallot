@@ -30,8 +30,8 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import { Posterize } from "./posterize";
-import { Scene, ScenePlugin } from "./scene";
+import { Posterize } from "./posterize.ts";
+import { Scene, ScenePlugin } from "./scene.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 let app: Awaited<ReturnType<typeof openGpuApp>>;

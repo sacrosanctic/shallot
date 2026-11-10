@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { createApp } from "@dylanebert/shallot";
-import { Turn, TurntablePlugin } from "./index";
+import { Turn, TurntablePlugin } from "./index.ts";
 
 test("a set speed changes the angle advanced per step", async () => {
     const app = await createApp({ defaults: false, plugins: [TurntablePlugin] });

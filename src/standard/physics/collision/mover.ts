@@ -1,5 +1,5 @@
-import type { Plane, Vec3 } from "../common/records";
-import { kernel } from "../kernel/kernel";
+import type { Plane, Vec3 } from "../common/records.ts";
+import { kernel } from "../kernel/kernel.ts";
 
 let buffer: ArrayBufferLike | undefined;
 let capacity = 0;

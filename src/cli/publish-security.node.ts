@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { CLOUDFLARE_LOGIN_ARGS, CLOUDFLARE_LOGIN_DISCLOSURE } from "./publish-cloudflare";
+import { CLOUDFLARE_LOGIN_ARGS, CLOUDFLARE_LOGIN_DISCLOSURE } from "./publish-cloudflare.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

@@ -14,11 +14,11 @@ import {
     WheelJoint,
     type World,
 } from "@dylanebert/shallot";
-import { drawInkPoint, INK_DOT as JOINT_DOT, INK as JOINT_INK } from "./ink-presentation";
+import { drawInkPoint, INK_DOT as JOINT_DOT, INK as JOINT_INK } from "./ink-presentation.ts";
 
-export { INK as JOINT_INK, INK_DOT as JOINT_DOT } from "./ink-presentation";
+export { INK as JOINT_INK, INK_DOT as JOINT_DOT } from "./ink-presentation.ts";
 
-import { categories, type Scene } from "./scenes";
+import { categories, type Scene } from "./scenes.ts";
 
 const kinds = [
     DistanceJoint,

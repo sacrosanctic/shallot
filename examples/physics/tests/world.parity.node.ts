@@ -1,10 +1,10 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics, Shape } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { sceneSwitcher } from "../src/sample";
-import { changeControl, controlValues, scenes } from "../src/scenes";
-import { WorldSamplePlugin, WorldSampleState, worldScenes } from "../src/world";
-import { sampleGold } from "./gold";
+import { sceneSwitcher } from "../src/sample.ts";
+import { changeControl, controlValues, scenes } from "../src/scenes.ts";
+import { WorldSamplePlugin, WorldSampleState, worldScenes } from "../src/world.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of Object.keys(worldScenes) as (keyof typeof worldScenes)[]) {

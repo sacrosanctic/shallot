@@ -12,7 +12,7 @@ import {
 } from "../../core/rendering";
 import { precompile, type World } from "../../engine";
 import { unpackLdrColor } from "../../engine/utils";
-import { Glyph, sdfToSignedDistance } from "./glyph";
+import { Glyph, sdfToSignedDistance } from "./glyph.ts";
 
 const viewLayout = tgpu
     .bindGroupLayout({

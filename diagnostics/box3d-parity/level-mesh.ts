@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { nativeBinary } from "./native";
+import { nativeBinary } from "./native.ts";
 
 export function levelMeshBinary(): string {
     const samples = join(process.env.BOX3D ?? "", "samples");

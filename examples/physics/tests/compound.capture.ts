@@ -1,6 +1,6 @@
 import { test } from "playwright/test";
-import { compoundScenes } from "../src/compound";
-import { capture } from "./capture";
+import { compoundScenes } from "../src/compound.ts";
+import { capture } from "./capture.ts";
 
 for (const width of [1280, 390]) {
     for (const id of [...Object.keys(compoundScenes), "village"]) {

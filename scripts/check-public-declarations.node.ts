@@ -8,8 +8,8 @@ import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { basename, dirname, join, relative, resolve } from "node:path";
 import { parse } from "@babel/parser";
-import { normalizePath } from "../src/project/paths";
-import { removeTestDirectory } from "./test-directory";
+import { normalizePath } from "../src/project/paths.ts";
+import { removeTestDirectory } from "./test-directory.ts";
 
 const ROOT = resolve(import.meta.dir, "..");
 const PACKAGE = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as {

@@ -17,7 +17,7 @@ import {
     StepPhysicsSystem,
     solvePlanes,
 } from "@dylanebert/shallot/standard/physics";
-import type { Controls } from "./scenes";
+import type { Controls } from "./scenes.ts";
 
 export const CharacterSample = {
     create: () => ({

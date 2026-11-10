@@ -2,12 +2,12 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { BaseColor, Devices, Materials, MeshMaterial, Shape } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { AppPlugin, Viewer } from "../src/app";
-import { DynamicMoverState } from "../src/dynamic-mover-scene";
-import { ShapeMaterial } from "../src/material";
-import { sceneSwitcher } from "../src/sample";
-import { changeControl, controlValues } from "../src/scenes";
-import { ShapeMaterials } from "../src/shape-color";
+import { AppPlugin, Viewer } from "../src/app.ts";
+import { DynamicMoverState } from "../src/dynamic-mover-scene.ts";
+import { ShapeMaterial } from "../src/material.ts";
+import { sceneSwitcher } from "../src/sample.ts";
+import { changeControl, controlValues } from "../src/scenes.ts";
+import { ShapeMaterials } from "../src/shape-color.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("Dynamic Mover writes opaque depth when not aiming and restores it after the fade", async () => {

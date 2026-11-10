@@ -1,13 +1,13 @@
 import { Body, createApp, Shape, StandardPhysicsPlugin, Transform } from "@dylanebert/shallot";
-import { awakeContactCount } from "../collision/contact";
-import { SetType } from "../common/constants";
-import { BodyType, defaultSurfaceMaterial } from "../common/types";
-import { BodyField, bodyField } from "../kernel/bodyrecords";
-import { physicsBodyIndex, physicsState } from "../runtime";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createHullShape } from "../shapes/shape";
-import { createTestBody, testShapeDef } from "../testing";
-import { bodySetLinearVelocity } from "../world/body";
+import { awakeContactCount } from "../collision/contact.ts";
+import { SetType } from "../common/constants.ts";
+import { BodyType, defaultSurfaceMaterial } from "../common/types.ts";
+import { BodyField, bodyField } from "../kernel/bodyrecords.ts";
+import { physicsBodyIndex, physicsState } from "../runtime.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createHullShape } from "../shapes/shape.ts";
+import { createTestBody, testShapeDef } from "../testing.ts";
+import { bodySetLinearVelocity } from "../world/body.ts";
 
 export let controlSink: { frame: number } | undefined;
 export const control = () => {

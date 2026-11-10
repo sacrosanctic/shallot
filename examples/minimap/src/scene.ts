@@ -23,7 +23,7 @@ import {
     type World,
 } from "@dylanebert/shallot";
 import { CameraViewport, RenderLayers } from "@dylanebert/shallot/rendering";
-import { LocalPlayer, Player, PlayerPlugin, UpdatePlayerControlSystem } from "./player";
+import { LocalPlayer, Player, PlayerPlugin, UpdatePlayerControlSystem } from "./player.ts";
 
 export const Scene: Resource<{
     camera: number;

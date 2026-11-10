@@ -4,7 +4,7 @@ import {
     sampleAllocation,
     windowBytes,
     type AllocationSite,
-} from "../first-person-allocation/allocation";
+} from "../first-person-allocation/allocation.ts";
 
 const WARM_FRAMES = 12_000;
 const SAMPLE_FRAMES = 600;

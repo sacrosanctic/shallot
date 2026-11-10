@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import gold from "../../../examples/gltf/tests/animations.gold.json";
-import { fileFetch, syncAssets } from "../../../examples/gltf/tests/setup";
+import { fileFetch, syncAssets } from "../../../examples/gltf/tests/setup.ts";
 import { Meshes, MeshInstance } from "../../core/mesh";
 import {
     attachTexture,
@@ -18,7 +18,7 @@ import {
 import { Transform } from "../../core/transform";
 import type { App, World } from "../../engine";
 import { probeBuffer, probeTexture } from "../../engine/runtime";
-import { openGpuApp } from "../../project/testing-gpu";
+import { openGpuApp } from "../../project/testing-gpu.ts";
 import {
     AlphaMode,
     Draws,
@@ -30,23 +30,23 @@ import {
     StandardRenderer,
     StandardRenderingPlugin,
 } from "../../standard/rendering";
-import { sunShadowView } from "../../standard/rendering/atlas";
-import type { GltfScene } from "./gltf";
-import { loadGltf } from "./load";
+import { sunShadowView } from "../../standard/rendering/atlas.ts";
+import type { GltfScene } from "./gltf.ts";
+import { loadGltf } from "./load.ts";
 import {
     type Gltf,
     type GltfSceneInstance,
     loadGltfScene,
     poseGltfScene,
     spawnGltfScene,
-} from "./scene";
+} from "./scene.ts";
 import {
     deformationBindings,
     deformationVertex,
     GltfPlugin,
     SkinnedMesh,
     SkinPalette,
-} from "./skinning";
+} from "./skinning.ts";
 import { skinningFixtureUrl } from "./skinning.fixture";
 
 setDefaultTimeout(TIMEOUT.gpu);

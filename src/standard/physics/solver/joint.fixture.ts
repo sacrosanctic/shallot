@@ -1,5 +1,5 @@
-import { JointField, jointCapacity, jointField } from "../kernel/jointrecords";
-import type { WorldState } from "../world/world";
+import { JointField, jointCapacity, jointField } from "../kernel/jointrecords.ts";
+import type { WorldState } from "../world/world.ts";
 
 export function jointIds(world: WorldState): number[] {
     const ids: number[] = [];

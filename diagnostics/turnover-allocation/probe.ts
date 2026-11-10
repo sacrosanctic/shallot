@@ -1,8 +1,8 @@
 // Prints each warm window's unadmitted allocation rows of voxel turnover: sample count, bytes and the stack
 // below the scheduler. argv: probe.entry.ts knobs, and `all` to print admitted wrapper rows too.
 import { resolve } from "node:path";
-import { sampleAllocation } from "../first-person-allocation/allocation";
-import { isAdmittedAllocationSite } from "../first-person-allocation/allocation-admissions";
+import { sampleAllocation } from "../first-person-allocation/allocation.ts";
+import { isAdmittedAllocationSite } from "../first-person-allocation/allocation-admissions.ts";
 
 const words = process.argv.slice(2);
 const sample = await sampleAllocation(resolve(import.meta.dir, "probe.entry.ts"), {

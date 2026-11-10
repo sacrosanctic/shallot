@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { component, f32, vec2 } from "./component";
-import { World } from "./world";
+import { component, f32, vec2 } from "./component.ts";
+import { World } from "./world.ts";
 
 test("registered components without holders retain initial columns as entities grow; accessors return holder values and zero for non-holders", () => {
     const world = new World();

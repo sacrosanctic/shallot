@@ -1,7 +1,7 @@
 import { cube, Meshes, type World } from "@dylanebert/shallot";
 import { Materials } from "@dylanebert/shallot/standard/rendering";
 import * as d from "typegpu/data";
-import { DetailKind } from "./detail";
+import { DetailKind } from "./detail.ts";
 
 type Box = [number, number, number, number, number, number];
 

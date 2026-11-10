@@ -22,8 +22,8 @@ import {
     Transform,
 } from "@dylanebert/shallot";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { PlayerMotion } from "./motion";
-import { DrivePlayerSystem, LocalPlayer, Player, PlayerInput, PlayerPlugin } from "./player";
+import { PlayerMotion } from "./motion.ts";
+import { DrivePlayerSystem, LocalPlayer, Player, PlayerInput, PlayerPlugin } from "./player.ts";
 
 await setupGlobals();
 

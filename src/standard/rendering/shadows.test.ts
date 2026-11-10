@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { CameraMode } from "../../core/rendering";
 import { lookAt, multiplyMat4, orthographic } from "../../engine";
-import { cascadeFit, MAX_POINT_CASTERS, type PointShadowFrame, packCasters } from "./shadows";
+import { cascadeFit, MAX_POINT_CASTERS, type PointShadowFrame, packCasters } from "./shadows.ts";
 
 // Reuse sparse rect storage across sets, as updatePointShadows does.
 test("packCasters fills an equal grid for spots, points and mixed sets, dropping when MIN_TILE cannot fit", () => {

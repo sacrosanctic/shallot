@@ -1,26 +1,26 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { World } from "../../../engine";
-import { restore, snapshot } from "../api/snapshot";
-import { BodyType } from "../common/types";
-import { init, kernel, shutdown } from "../kernel/kernel";
-import { createSphereShape } from "../shapes/shape";
+import { restore, snapshot } from "../api/snapshot.ts";
+import { BodyType } from "../common/types.ts";
+import { init, kernel, shutdown } from "../kernel/kernel.ts";
+import { createSphereShape } from "../shapes/shape.ts";
 import {
     createFilterJoint,
     defaultJointDef,
     destroyJointInternal,
     setJointCollideConnected,
-} from "../solver/joint";
+} from "../solver/joint.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { bodyGetTransform, destroyBody } from "../world/body";
-import type { WorldState } from "../world/world";
-import { worldSetGravity } from "../world/world";
+} from "../testing.ts";
+import { bodyGetTransform, destroyBody } from "../world/body.ts";
+import type { WorldState } from "../world/world.ts";
+import { worldSetGravity } from "../world/world.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

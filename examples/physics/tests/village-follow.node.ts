@@ -12,9 +12,9 @@ import {
 } from "@dylanebert/shallot";
 import { Orbit, OrbitPlugin } from "@dylanebert/shallot/extras";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { createScene, scenes } from "../src/scenes";
-import { setSceneCamera } from "../src/view";
-import { VillagePlugin, VillageState } from "../src/village";
+import { createScene, scenes } from "../src/scenes.ts";
+import { setSceneCamera } from "../src/view.ts";
+import { VillagePlugin, VillageState } from "../src/village.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("Village keeps every movement key live with its follow camera and has no T toggle or Surface row", async () => {

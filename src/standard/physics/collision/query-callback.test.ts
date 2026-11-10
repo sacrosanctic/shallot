@@ -1,14 +1,14 @@
 import { expect, test } from "bun:test";
 import { Time, Transform, TransformPlugin, World } from "@dylanebert/shallot";
 import { Body, BodyType, PhysicsPlugin, Shape, ShapeKind } from "@dylanebert/shallot/physics";
-import type { Pos, Vec3 } from "../common/records";
+import type { Pos, Vec3 } from "../common/records.ts";
 import {
     castRay,
     castRayClosest,
     castShapeClosest,
     emptyQueryHit,
     StandardPhysicsPlugin,
-} from "../runtime";
+} from "../runtime.ts";
 
 const origin = { x: 0, y: 0, z: 0 };
 const translation = { x: 10, y: 0, z: 0 };

@@ -1,9 +1,9 @@
 import { sphere } from "../../core/mesh";
 import { Compounds, Hulls, type Shape, ShapeKind } from "../../core/physics";
 import type { ComponentRecord, World } from "../../engine";
-import type { Vec3 } from "./common/records";
-import { buildPlacedHull, heightFieldBuild, meshBuild } from "./geometry-builds";
-import { getHeightFieldTriangle, HEIGHT_FIELD_HOLE } from "./shapes/heightfield";
+import type { Vec3 } from "./common/records.ts";
+import { buildPlacedHull, heightFieldBuild, meshBuild } from "./geometry-builds.ts";
+import { getHeightFieldTriangle, HEIGHT_FIELD_HOLE } from "./shapes/heightfield.ts";
 
 type Point = [number, number, number];
 

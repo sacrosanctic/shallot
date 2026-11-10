@@ -3,9 +3,9 @@ import * as childProcess from "node:child_process";
 import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { buildWeb } from "../project/build";
-import { runWrangler } from "./publish-cloudflare";
-import { runButler } from "./publish-itch";
+import { buildWeb } from "../project/build.ts";
+import { runWrangler } from "./publish-cloudflare.ts";
+import { runButler } from "./publish-itch.ts";
 
 for (const status of [0, 1]) {
     test(`publish build output is ${status ? "complete on failure" : "quiet on success"}`, async () => {

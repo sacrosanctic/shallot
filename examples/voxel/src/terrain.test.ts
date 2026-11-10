@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { faces, height, perlin } from "./noise";
+import { faces, height, perlin } from "./noise.ts";
 import {
     capacity,
     chunks,
@@ -8,7 +8,7 @@ import {
     slotCount,
     type TerrainConfig,
     translation,
-} from "./terrain-data";
+} from "./terrain-data.ts";
 
 const CONFIG: TerrainConfig = { chunkSize: 16, viewDistance: 3, height: 32, relief: 12 };
 

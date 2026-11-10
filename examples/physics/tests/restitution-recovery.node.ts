@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { RestitutionPlugin, RestitutionState } from "../src/restitution";
-import { sceneSwitcher } from "../src/sample";
+import { RestitutionPlugin, RestitutionState } from "../src/restitution.ts";
+import { sceneSwitcher } from "../src/sample.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("leaving a played Restitution scene clears its gameplay before another scene steps", async () => {

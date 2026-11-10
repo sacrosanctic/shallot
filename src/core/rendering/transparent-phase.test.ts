@@ -1,10 +1,10 @@
 import { expect, test } from "bun:test";
 import { World } from "../../engine";
-import { component } from "../../engine/ecs/component";
+import { component } from "../../engine/ecs/component.ts";
 import { GlobalTransform } from "../transform";
-import { Camera } from "./camera";
-import { TransparentPhase } from "./phases";
-import type { View } from "./view";
+import { Camera } from "./camera.ts";
+import { TransparentPhase } from "./phases.ts";
+import type { View } from "./view.ts";
 
 function view(width = 100, height = 100): View {
     return { width, height } as View;

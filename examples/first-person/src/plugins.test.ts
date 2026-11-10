@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { DEFAULT_PLUGINS, type Plugin, resolvePlugins } from "@dylanebert/shallot";
-import { APP_PLUGINS } from "./plugins";
+import { APP_PLUGINS } from "./plugins.ts";
 
 test("the page's first-person plugin list resolves with the engine defaults", () => {
     const plugins = new Set<Plugin>([...DEFAULT_PLUGINS, ...APP_PLUGINS]);

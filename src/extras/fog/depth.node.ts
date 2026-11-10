@@ -7,9 +7,9 @@ import { Transform } from "../../core/transform";
 import type { World } from "../../engine";
 import { DEFAULT_PLUGINS } from "../../standard";
 import { StandardRenderer } from "../../standard/rendering";
-import { maskLayoutOcclude, maskLayoutOccludeMultisampled } from "../outline/passes";
+import { maskLayoutOcclude, maskLayoutOccludeMultisampled } from "../outline/passes.ts";
 import { Fog, FogPlugin, NoFog } from ".";
-import { fogGridLayout, fogLayout0, fogLayout0Multisampled, fogLayout1 } from "./pipeline";
+import { fogGridLayout, fogLayout0, fogLayout0Multisampled, fogLayout1 } from "./pipeline.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

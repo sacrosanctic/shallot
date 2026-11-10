@@ -1,11 +1,11 @@
-import { NULL_INDEX } from "../common/array";
-import { FLT_MAX } from "../common/constants";
-import type { EntityId } from "../common/ids";
-import type { Transform, Vec3 } from "../common/records";
-import { readJointEventUserData, readJointReaction } from "../kernel/jointcolumns";
-import { JointField, jointCapacity, jointField, jointViews } from "../kernel/jointrecords";
-import { kernel } from "../kernel/kernel";
-import type { WorldState } from "../world/world";
+import { NULL_INDEX } from "../common/array.ts";
+import { FLT_MAX } from "../common/constants.ts";
+import type { EntityId } from "../common/ids.ts";
+import type { Transform, Vec3 } from "../common/records.ts";
+import { readJointEventUserData, readJointReaction } from "../kernel/jointcolumns.ts";
+import { JointField, jointCapacity, jointField, jointViews } from "../kernel/jointrecords.ts";
+import { kernel } from "../kernel/kernel.ts";
+import type { WorldState } from "../world/world.ts";
 
 /** Joint kind (b3JointType). Numeric values mirror the C enum order (parallel = 0 … pogo = 10). */
 export const JointType = {

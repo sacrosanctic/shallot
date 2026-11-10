@@ -1,4 +1,4 @@
-import { sampleGold } from "../../examples/physics/tests/gold";
+import { sampleGold } from "../../examples/physics/tests/gold.ts";
 
 function records(scene: string, text: string): string[] {
     if (scene !== "benchmarkSensor") return text.trimEnd() ? text.trimEnd().split("\n") : [];

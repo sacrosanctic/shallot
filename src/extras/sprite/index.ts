@@ -10,11 +10,11 @@ import {
     materialTypeId,
     StandardRenderingPlugin,
 } from "../../standard/rendering";
-import { SpriteMaterialType, SpriteSource } from "./material";
-import { Sprite } from "./pack";
+import { SpriteMaterialType, SpriteSource } from "./material.ts";
+import { Sprite } from "./pack.ts";
 
-export { SpriteMaterialInput, SpriteMaterialType } from "./material";
-export { Sprite, SpriteAlphaMode, SpriteFill } from "./pack";
+export { SpriteMaterialInput, SpriteMaterialType } from "./material.ts";
+export { Sprite, SpriteAlphaMode, SpriteFill } from "./pack.ts";
 
 const SPRITE_QUERY = [Sprite];
 const QUAD_VERTS = new Float32Array([

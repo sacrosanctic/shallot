@@ -1,4 +1,4 @@
-import { buildArtifactIsFresh, buildInputHash } from "../../build-inputs";
+import { buildArtifactIsFresh, buildInputHash } from "../../build-inputs.ts";
 
 export const KERNEL_ARTIFACTS = [
     "src/standard/physics/kernel/kernel.wasm.ts",

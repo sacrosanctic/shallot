@@ -3,7 +3,7 @@ import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import { vec2f, vec4f } from "typegpu/data";
 import * as std from "typegpu/std";
-import { idiv } from "./tgsl";
+import { idiv } from "./tgsl.ts";
 
 // Two properties of the escape leaves are testable without a device and invisible to a CPU round-trip:
 // a dual leaf's ternary folds, so only its raw arm reaches the WGSL, and its emitted name is the

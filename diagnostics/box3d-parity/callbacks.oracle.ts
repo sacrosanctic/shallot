@@ -2,8 +2,8 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { mkdtempSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { removeTestDirectory } from "../../scripts/test-directory";
-import { nativeBinary, run } from "./native";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
+import { nativeBinary, run } from "./native.ts";
 
 setDefaultTimeout(180_000);
 const dir = mkdtempSync(join(tmpdir(), "box3d-callbacks-"));

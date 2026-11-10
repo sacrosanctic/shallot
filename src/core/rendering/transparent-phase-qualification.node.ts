@@ -14,7 +14,7 @@ import {
     StandardRenderer,
     StandardRenderingPlugin,
 } from "../../standard/rendering";
-import { MeshDrawBuffers } from "../../standard/rendering/preprocess";
+import { MeshDrawBuffers } from "../../standard/rendering/preprocess.ts";
 import { Meshes, MeshInstance } from "../mesh";
 import { PrepareGlobalTransformSystem, Transform } from "../transform";
 import {
@@ -32,7 +32,7 @@ import {
     type View,
     Views,
 } from ".";
-import { computeClipFromWorld } from "./camera";
+import { computeClipFromWorld } from "./camera.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const TransitionParameters = d.struct({ color: d.vec4f });

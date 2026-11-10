@@ -11,8 +11,8 @@ import {
     makeBoxHull,
     makeScaledBoxHull,
     StandardPhysicsPlugin,
-} from "./index";
-import { hullImage } from "./shapes/hullbytes";
+} from "./index.ts";
+import { hullImage } from "./shapes/hullbytes.ts";
 import gold from "./standalone-geometry.gold.json";
 
 setDefaultTimeout(TIMEOUT.node);

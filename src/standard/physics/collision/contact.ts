@@ -1,11 +1,11 @@
 // contact.c bindings (Box3D, Erin Catto, MIT).
-import { NULL_INDEX } from "../common/array";
-import type { EntityId } from "../common/ids";
-import type { Vec3 } from "../common/records";
-import { kernel } from "../kernel/kernel";
-import type { Shape } from "../shapes/shape";
-import type { WorldState } from "../world/world";
-import { DIR_STRIDE } from "./manifoldstore";
+import { NULL_INDEX } from "../common/array.ts";
+import type { EntityId } from "../common/ids.ts";
+import type { Vec3 } from "../common/records.ts";
+import { kernel } from "../kernel/kernel.ts";
+import type { Shape } from "../shapes/shape.ts";
+import type { WorldState } from "../world/world.ts";
+import { DIR_STRIDE } from "./manifoldstore.ts";
 
 export const ContactFlags = {
     contactTouchingFlag: 0x00000001,
@@ -22,9 +22,9 @@ export const ContactFlags = {
     relativeTransformValid: 0x00800000,
 } as const;
 
-export { ContactField } from "../kernel/contact-layout";
+export { ContactField } from "../kernel/contact-layout.ts";
 
-import { ContactField } from "../kernel/contact-layout";
+import { ContactField } from "../kernel/contact-layout.ts";
 
 /** Read a field at a contact id; signed null indices remain -1. */
 export function contactField(world: WorldState, id: number, field: number): number {

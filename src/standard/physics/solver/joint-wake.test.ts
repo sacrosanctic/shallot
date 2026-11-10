@@ -1,19 +1,19 @@
 import { expect, test } from "bun:test";
-import { restore, snapshot } from "../api/snapshot";
-import { BodyType } from "../common/types";
-import { BodyField, bodyField } from "../kernel/bodyrecords";
-import { setSplitIslandCandidate, splitIslandCandidate } from "../kernel/islandcolumns";
-import { queryColumns } from "../kernel/querycolumns";
-import { createSphereShape } from "../shapes/shape";
+import { restore, snapshot } from "../api/snapshot.ts";
+import { BodyType } from "../common/types.ts";
+import { BodyField, bodyField } from "../kernel/bodyrecords.ts";
+import { setSplitIslandCandidate, splitIslandCandidate } from "../kernel/islandcolumns.ts";
+import { queryColumns } from "../kernel/querycolumns.ts";
+import { createSphereShape } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { bodyIsAwake, bodySetAwake, bodySetLinearVelocity } from "../world/body";
-import { createFilterJoint, defaultJointDef, destroyJointInternal } from "./joint";
+} from "../testing.ts";
+import { bodyIsAwake, bodySetAwake, bodySetLinearVelocity } from "../world/body.ts";
+import { createFilterJoint, defaultJointDef, destroyJointInternal } from "./joint.ts";
 
 function castRayClosest(
     world: ReturnType<typeof createTestWorld>,

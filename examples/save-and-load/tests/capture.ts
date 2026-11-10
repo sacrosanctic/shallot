@@ -1,7 +1,7 @@
 import { mkdirSync } from "node:fs";
 import { dirname } from "node:path";
 import { expect, type Page } from "playwright/test";
-import type { Save } from "../src/save";
+import type { Save } from "../src/save.ts";
 
 declare global {
     interface Window {

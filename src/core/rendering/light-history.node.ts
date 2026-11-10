@@ -8,9 +8,9 @@ import {
     GlobalTransformHistory,
     globalTransformTable,
     readRenderGlobalTransform,
-} from "./global-transform";
-import { attachTexture, Camera, RenderingPlugin } from "./index";
-import { PointLight, SpotLight } from "./lighting";
+} from "./global-transform.ts";
+import { attachTexture, Camera, RenderingPlugin } from "./index.ts";
+import { PointLight, SpotLight } from "./lighting.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 await setupGlobals();

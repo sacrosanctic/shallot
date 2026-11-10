@@ -28,10 +28,10 @@ import {
 import { setLinearVelocity, setTransform } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { DemoPlugin, RADIUS, SnowTrails } from "./demo";
-import { Grab, pick } from "./grab";
-import { FIELD, groundAt } from "./hills";
-import { DEPTH, RESOLUTION, Trail } from "./trail";
+import { DemoPlugin, RADIUS, SnowTrails } from "./demo.ts";
+import { Grab, pick } from "./grab.ts";
+import { FIELD, groundAt } from "./hills.ts";
+import { DEPTH, RESOLUTION, Trail } from "./trail.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const { setupGlobals } = await import("@dylanebert/shallot/webgpu");

@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import * as d from "typegpu/data";
-import { materialLayout } from "./material-type";
+import { materialLayout } from "./material-type.ts";
 
 const Parameters = d.struct({ value: d.f32 });
 const uniforms = (count: number) =>

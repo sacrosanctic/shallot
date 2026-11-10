@@ -1,6 +1,6 @@
 import { test } from "playwright/test";
-import { stackingScenes } from "../src/stacking";
-import { capture } from "./capture";
+import { stackingScenes } from "../src/stacking.ts";
+import { capture } from "./capture.ts";
 
 for (const id of Object.keys(stackingScenes)) {
     test(`${id} stacking look review`, async ({ page }) => {

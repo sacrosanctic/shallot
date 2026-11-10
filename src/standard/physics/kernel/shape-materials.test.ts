@@ -1,17 +1,17 @@
 import { expect, test } from "bun:test";
 import { createCompound, defaultSurfaceMaterial } from "../api";
-import { restore, snapshot } from "../api/snapshot";
-import { BodyType } from "../common/types";
+import { restore, snapshot } from "../api/snapshot.ts";
+import { BodyType } from "../common/types.ts";
 import {
     createCompoundShape,
     createSphereShape,
     destroyShape,
     getShapeMaterial,
     getShapeMaterials,
-} from "../shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing";
-import { kernel } from "./kernel";
-import { SHAPE_STRIDE } from "./shapecolumns";
+} from "../shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
+import { kernel } from "./kernel.ts";
+import { SHAPE_STRIDE } from "./shapecolumns.ts";
 
 const sphere = { center: { x: 0, y: 0, z: 0 }, radius: 1 };
 

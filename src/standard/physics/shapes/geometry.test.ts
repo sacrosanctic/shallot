@@ -1,13 +1,13 @@
 import { expect, test } from "bun:test";
-import type { Transform, Vec3 } from "../common/records";
-import { transform } from "../kernel/math";
+import type { Transform, Vec3 } from "../common/records.ts";
+import { transform } from "../kernel/math.ts";
 
 const f32 = Math.fround;
 
-import { BodyType } from "../common/types";
-import { ShapeField, shapeField } from "../kernel/shaperecords";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing";
-import { destroyBody } from "../world/body";
+import { BodyType } from "../common/types.ts";
+import { ShapeField, shapeField } from "../kernel/shaperecords.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
+import { destroyBody } from "../world/body.ts";
 import {
     type Capsule,
     computeCapsuleAABB,
@@ -16,7 +16,7 @@ import {
     roundCapsule,
     roundSphere,
     type Sphere,
-} from "./geometry";
+} from "./geometry.ts";
 import gold from "./geometry.gold.json";
 import {
     computeShapeAABBOut,
@@ -25,7 +25,7 @@ import {
     createSphereShape,
     destroyShape,
     shapeIsValid,
-} from "./shape";
+} from "./shape.ts";
 
 const dv = new DataView(new ArrayBuffer(4));
 function fromBits(hex: string): number {

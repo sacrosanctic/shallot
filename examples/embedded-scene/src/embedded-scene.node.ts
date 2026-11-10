@@ -3,7 +3,7 @@ import { Camera } from "@dylanebert/shallot";
 import { attachTexture, captureTexture } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp as createApp } from "@dylanebert/shallot/testing/gpu";
-import { LoadingWorld } from "./scene";
+import { LoadingWorld } from "./scene.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

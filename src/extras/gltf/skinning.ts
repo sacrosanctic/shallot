@@ -15,7 +15,7 @@ import {
     pbrInputFromStandardMaterial,
 } from "../../standard/rendering";
 
-import { DeformationRanges, MorphTextures, MorphWidth, WeightWidth } from "./morph";
+import { DeformationRanges, MorphTextures, MorphWidth, WeightWidth } from "./morph.ts";
 
 /** Family-absolute vertex data: four packed u16 joints, morph texel/descriptor, four skin weights.
  * Morph descriptor is (targetCount << 3) | position/normal/tangent mask; zero disables morphing. */

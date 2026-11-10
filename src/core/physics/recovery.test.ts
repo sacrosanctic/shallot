@@ -7,7 +7,7 @@ import {
     PhysicsMeshes,
     PhysicsPlugin,
     ShapeMaterials,
-} from "./index";
+} from "./index.ts";
 
 test("core physics restores every handle, duplicate labels, removed slots and allocation state with reusable images", () => {
     const world = new World();

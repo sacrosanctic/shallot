@@ -1,7 +1,7 @@
 import { mkdir } from "node:fs/promises";
 import { holdFrames, pipelineWarnings } from "@dylanebert/shallot/testing";
 import { expect, type Page, test } from "playwright/test";
-import { bodyHasFocus, dragRange, pointerControl, tabSkipsChrome } from "./pointer";
+import { bodyHasFocus, dragRange, pointerControl, tabSkipsChrome } from "./pointer.ts";
 
 const names = ["Lens distortion", "Chromatic aberration", "Vignette"];
 

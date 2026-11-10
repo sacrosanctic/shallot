@@ -1,9 +1,9 @@
 import { type Plugin, runApp, ScreenSpaceAmbientOcclusionPlugin } from "@dylanebert/shallot";
 import { probeTexture } from "../../src/engine/runtime";
-import { ssaoState } from "../../src/standard/rendering/ssao";
-import { EXAMPLE_CONTROLS, PALETTES, type PaletteName } from "./palette";
-import { DIAGNOSTIC_PLUGINS, SCENES, type SceneDefinition } from "./scenes";
-import { addAmbientOcclusion } from "./ssao";
+import { ssaoState } from "../../src/standard/rendering/ssao.ts";
+import { EXAMPLE_CONTROLS, PALETTES, type PaletteName } from "./palette.ts";
+import { DIAGNOSTIC_PLUGINS, SCENES, type SceneDefinition } from "./scenes.ts";
+import { addAmbientOcclusion } from "./ssao.ts";
 
 const query = new URLSearchParams(location.search);
 const sceneId = query.get("scene") ?? SCENES[0]!.id;

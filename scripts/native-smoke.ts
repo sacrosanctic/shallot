@@ -19,8 +19,8 @@ import {
 } from "node:fs";
 import { createServer } from "node:http";
 import { basename, delimiter, dirname, isAbsolute, relative, resolve } from "node:path";
-import { classifyAdapter } from "../src/engine/runtime/adapter";
-import { normalizePath } from "../src/project/paths";
+import { classifyAdapter } from "../src/engine/runtime/adapter.ts";
+import { normalizePath } from "../src/project/paths.ts";
 import { CEILING } from "../src/project/testing.js";
 
 const ROOT = resolve(import.meta.dir, "..");

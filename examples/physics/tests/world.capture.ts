@@ -1,6 +1,6 @@
 import { test } from "playwright/test";
-import { worldScenes } from "../src/world";
-import { capture } from "./capture";
+import { worldScenes } from "../src/world.ts";
+import { capture } from "./capture.ts";
 
 for (const width of [1280, 390])
     for (const id of Object.keys(worldScenes)) {

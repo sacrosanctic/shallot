@@ -1,7 +1,7 @@
 import type { World } from "@dylanebert/shallot";
-import { CollisionState } from "../src/collision";
-import { collisionDrag } from "../src/collision-drag";
-import { changeControl, type Scene } from "../src/scenes";
+import { CollisionState } from "../src/collision.ts";
+import { collisionDrag } from "../src/collision-drag.ts";
+import { changeControl, type Scene } from "../src/scenes.ts";
 export function collisionInput(
     world: World,
     scene: Scene,

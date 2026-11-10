@@ -4,7 +4,7 @@ import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import { component, f32, vec2, vec3 } from "../../engine";
-import { tmLuma } from "./tonemap";
+import { tmLuma } from "./tonemap.ts";
 
 /** Camera grading. Exposure is an offset in stops; hue is in radians.
  * Temperature and tint adjust the D65 CIE xy white point. Section vectors contain

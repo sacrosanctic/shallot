@@ -1,18 +1,18 @@
 import { expect, test } from "bun:test";
-import { restore, snapshot } from "../api/snapshot";
-import { BodyType } from "../common/types";
-import { BodyField, bodyField } from "../kernel/bodyrecords";
+import { restore, snapshot } from "../api/snapshot.ts";
+import { BodyType } from "../common/types.ts";
+import { BodyField, bodyField } from "../kernel/bodyrecords.ts";
 import {
     islandArrayCount,
     islandArrayGet,
     islandField,
     islandKernel,
-} from "../kernel/islandcolumns";
-import { JointField, jointField } from "../kernel/jointrecords";
-import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint";
-import { defaultJointDef, destroyJointInternal } from "../solver/joint";
+} from "../kernel/islandcolumns.ts";
+import { JointField, jointField } from "../kernel/jointrecords.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint.ts";
+import { defaultJointDef, destroyJointInternal } from "../solver/joint.ts";
 import { jointIds } from "../solver/joint.fixture";
-import { createTestBody, createTestWorld, destroyTestWorld } from "../testing";
+import { createTestBody, createTestWorld, destroyTestWorld } from "../testing.ts";
 
 function distanceJoint(world: ReturnType<typeof createTestWorld>, a: number, b: number) {
     const base = { ...defaultJointDef(), bodyIdA: a, bodyIdB: b };

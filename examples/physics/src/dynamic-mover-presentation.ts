@@ -1,6 +1,6 @@
 import type { World } from "@dylanebert/shallot";
-import { DynamicMoverState } from "./dynamic-mover-scene";
-import { add, mul, pose } from "./mover";
+import { DynamicMoverState } from "./dynamic-mover-scene.ts";
+import { add, mul, pose } from "./mover.ts";
 
 type Point = [number, number, number];
 export function dynamicMoverDrawing(world: World) {

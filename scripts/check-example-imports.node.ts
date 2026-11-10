@@ -6,13 +6,13 @@ setDefaultTimeout(TIMEOUT.node);
 
 import { readdirSync, readFileSync } from "node:fs";
 import { dirname, isAbsolute, relative, resolve } from "node:path";
-import { packageManifest } from "../src/cli/create";
-import { normalizePath } from "../src/project/paths";
+import { packageManifest } from "../src/cli/create.ts";
+import { normalizePath } from "../src/project/paths.ts";
 import {
     importsIn as collectImports,
     componentImportsIn,
     resolveRelative,
-} from "./example-imports";
+} from "./example-imports.ts";
 
 const ROOT = resolve(import.meta.dir, "..");
 const EXAMPLES = resolve(ROOT, "examples");

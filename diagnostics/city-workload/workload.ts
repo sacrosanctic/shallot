@@ -1,4 +1,4 @@
-import { SEED } from "../../examples/city/src/layout";
+import { SEED } from "../../examples/city/src/layout.ts";
 
 const populations = Array.from({ length: 9 }, (_, i) => 4096 * 2 ** i);
 

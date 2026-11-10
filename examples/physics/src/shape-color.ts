@@ -13,12 +13,12 @@ import {
     type World,
 } from "@dylanebert/shallot";
 import type { MaterialHandle } from "@dylanebert/shallot/standard/rendering";
-import { DynamicMoverState } from "./dynamic-mover-scene";
-import { EventSample } from "./events";
-import { GeometricMoverState } from "./geometric-mover";
-import { RigidBodyState } from "./rigid-body";
-import { MotorizedJoint } from "./roles";
-import { SensorSample } from "./sensor";
+import { DynamicMoverState } from "./dynamic-mover-scene.ts";
+import { EventSample } from "./events.ts";
+import { GeometricMoverState } from "./geometric-mover.ts";
+import { RigidBodyState } from "./rigid-body.ts";
+import { MotorizedJoint } from "./roles.ts";
+import { SensorSample } from "./sensor.ts";
 
 export const materials = {
     ground: StandardMaterial({ baseColor: [0.085, 0.08, 0.072, 1], perceptualRoughness: 0.82 }),

@@ -1,4 +1,4 @@
-import type { Kernel } from "../kernel/kernel";
+import type { Kernel } from "../kernel/kernel.ts";
 
 /** Box3D's b3Counters. Graph color counts include contacts and joints. */
 export interface PhysicsWorldCounters {

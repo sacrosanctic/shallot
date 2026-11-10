@@ -3,9 +3,9 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
-import { accessorFixture, animationFixtures, writtenAnimationFixtures } from "./animation-fixtures";
+import { accessorFixture, animationFixtures, writtenAnimationFixtures } from "./animation-fixtures.ts";
 import manifest from "../../examples/gltf/assets.json";
-import { syncFiles } from "../../examples/gltf/sync";
+import { syncFiles } from "../../examples/gltf/sync.ts";
 
 const revision = "1e7e3cff304a05416a54343e7ce273c709bccefe";
 const checkout = process.env.THREE;

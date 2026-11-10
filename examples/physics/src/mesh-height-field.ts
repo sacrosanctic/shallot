@@ -15,7 +15,7 @@ import {
     StandardPhysicsPlugin,
     StepPhysicsSystem,
 } from "@dylanebert/shallot/standard/physics";
-import type { Controls } from "./scenes";
+import type { Controls } from "./scenes.ts";
 
 const f = Math.fround;
 const initial = {

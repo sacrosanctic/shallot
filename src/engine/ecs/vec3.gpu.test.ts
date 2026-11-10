@@ -2,10 +2,10 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture";
-import { vec3, vec4 } from "../index";
+import { vec3, vec4 } from "../index.ts";
 import { probeBuffer } from "../runtime";
-import { component, sameComponentSchema, sameTypeLayout } from "./component";
-import { World } from "./world";
+import { component, sameComponentSchema, sameTypeLayout } from "./component.ts";
+import { World } from "./world.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 

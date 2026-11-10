@@ -1,7 +1,7 @@
 // bun diagnostics/field-accessor-allocation/sample.ts
 // Node sampler bytes per window for each row, then JSC ns per entity (median and spread of 7 runs).
 import { resolve } from "node:path";
-import { sampleAllocation, windowBytes } from "../first-person-allocation/allocation";
+import { sampleAllocation, windowBytes } from "../first-person-allocation/allocation.ts";
 import create, { ENTITIES, ROWS } from "./subject.entry";
 
 const entry = resolve(import.meta.dir, "subject.entry.ts");

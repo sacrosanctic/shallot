@@ -20,10 +20,10 @@ import {
 import { Transform } from "../../core/transform";
 import { lookAtRotation, type World } from "../../engine";
 import { rawDevice } from "../../engine/runtime";
-import { StandardRenderer } from "./forward";
-import { MaterialPlugin, materialType, StandardRenderingPlugin } from "./index";
-import { AlphaMode, Materials, MeshMaterial, StandardMaterial } from "./material";
-import { MeshRenderPlugin } from "./mesh-render";
+import { StandardRenderer } from "./forward.ts";
+import { MaterialPlugin, materialType, StandardRenderingPlugin } from "./index.ts";
+import { AlphaMode, Materials, MeshMaterial, StandardMaterial } from "./material.ts";
+import { MeshRenderPlugin } from "./mesh-render.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 

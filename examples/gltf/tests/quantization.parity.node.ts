@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { loadGltf } from "@dylanebert/shallot/gltf";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import gold from "./quantization.gold.json";
-import { assets, fileFetch, syncAssets } from "./setup";
+import { assets, fileFetch, syncAssets } from "./setup.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 beforeAll(syncAssets);

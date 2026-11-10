@@ -1,24 +1,24 @@
 import { expect, test } from "bun:test";
-import { restore, snapshot } from "../api/snapshot";
-import { BodyType } from "../common/types";
-import { DIR_BLOCK, M_POINTS, POINT_STRIDE } from "../kernel/contact-layout";
-import { EventKind, eventCount, eventId } from "../kernel/eventbuffers";
-import { kernel } from "../kernel/kernel";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createMesh } from "../shapes/mesh";
-import { createHullShape, createMeshShape, createSphereShape } from "../shapes/shape";
+import { restore, snapshot } from "../api/snapshot.ts";
+import { BodyType } from "../common/types.ts";
+import { DIR_BLOCK, M_POINTS, POINT_STRIDE } from "../kernel/contact-layout.ts";
+import { EventKind, eventCount, eventId } from "../kernel/eventbuffers.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createMesh } from "../shapes/mesh.ts";
+import { createHullShape, createMeshShape, createSphereShape } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { bodySetTransform } from "../world/body";
-import { hashWorldState } from "../world/hash";
-import { ContactField, ContactFlags, contactCapacity, contactField, contactIds } from "./contact";
-import { DIR_STRIDE, MANIFOLD_STRIDE } from "./manifoldstore";
-import { updateBroadPhasePairs } from "./pairs";
+} from "../testing.ts";
+import { bodySetTransform } from "../world/body.ts";
+import { hashWorldState } from "../world/hash.ts";
+import { ContactField, ContactFlags, contactCapacity, contactField, contactIds } from "./contact.ts";
+import { DIR_STRIDE, MANIFOLD_STRIDE } from "./manifoldstore.ts";
+import { updateBroadPhasePairs } from "./pairs.ts";
 
 function eventContacts(world: ReturnType<typeof createTestWorld>, kind: number): number[] {
     return Array.from(

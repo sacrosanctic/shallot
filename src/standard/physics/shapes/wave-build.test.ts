@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { createWave } from "./heightfield";
-import { createWaveMesh } from "./mesh";
+import { createWave } from "./heightfield.ts";
+import { createWaveMesh } from "./mesh.ts";
 import gold from "./wave-build.gold.json";
 
 const word = new DataView(new ArrayBuffer(4));

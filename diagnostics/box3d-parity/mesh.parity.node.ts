@@ -3,8 +3,8 @@ import { readFileSync } from "node:fs";
 import { createApp, PhysicsMeshes, Shape, ShapeKind } from "../../src";
 import { StandardPhysicsPlugin } from "../../src/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { createScene } from "../../examples/physics/src/scenes";
-import { meshRecords } from "./mesh-records";
+import { createScene } from "../../examples/physics/src/scenes.ts";
+import { meshRecords } from "./mesh-records.ts";
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of ["voxel", "hollowBox", "gridMesh", "bigBoxMesh", "boxMesh"] as const) {
     test(`${scene} static mesh geometry equals native records`,async()=>{

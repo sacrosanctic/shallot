@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics, StandardPhysicsPlugin } from "@dylanebert/shallot";
 import { setTargetTransform } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { Grab, pick, release } from "../src/grab";
-import { createScene } from "../src/scenes";
-import { sampleGold } from "./gold";
+import { Grab, pick, release } from "../src/grab.ts";
+import { createScene } from "../src/scenes.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

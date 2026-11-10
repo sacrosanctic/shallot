@@ -1,6 +1,6 @@
 import { existsSync } from "node:fs";
 import { resolve } from "node:path";
-import { buildArtifactIsFresh, buildInputHash } from "../../build-inputs";
+import { buildArtifactIsFresh, buildInputHash } from "../../build-inputs.ts";
 
 export const AUDIO_ARTIFACT = "crates/audio/pkg/shallot_audio.wasm";
 export const AUDIO_STAMP_FILE = "crates/audio/pkg/shallot_audio.js";

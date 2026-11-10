@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 import { parse } from "@babel/parser";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Glob } from "bun";
-import { normalizePath } from "../src/project/paths";
+import { normalizePath } from "../src/project/paths.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

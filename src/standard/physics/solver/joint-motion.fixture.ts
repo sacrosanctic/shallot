@@ -1,13 +1,13 @@
-import { BodyType, defaultShapeDef } from "../common/types";
-import { kernel } from "../kernel/kernel";
-import { createSphereShape } from "../shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld } from "../testing";
-import { bodySetAngularVelocity, bodySetAwake, bodySetLinearVelocity } from "../world/body";
-import { distanceJointCurrentLength } from "./distanceJoint";
-import { createJoint, defaultJointDef, type JointType } from "./joint";
-import { pogoJointCurrentLength } from "./pogoJoint";
-import { prismaticJointSpeed, prismaticJointTranslation } from "./prismaticJoint";
-import { wheelJointSpinSpeed } from "./wheelJoint";
+import { BodyType, defaultShapeDef } from "../common/types.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { createSphereShape } from "../shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld } from "../testing.ts";
+import { bodySetAngularVelocity, bodySetAwake, bodySetLinearVelocity } from "../world/body.ts";
+import { distanceJointCurrentLength } from "./distanceJoint.ts";
+import { createJoint, defaultJointDef, type JointType } from "./joint.ts";
+import { pogoJointCurrentLength } from "./pogoJoint.ts";
+import { prismaticJointSpeed, prismaticJointTranslation } from "./prismaticJoint.ts";
+import { wheelJointSpinSpeed } from "./wheelJoint.ts";
 export type JointMotionCase = {
     kind: number;
     mode: number;

@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { jfaPassCount, jfaStep, MAX_JFA_PASSES } from "./passes";
+import { jfaPassCount, jfaStep, MAX_JFA_PASSES } from "./passes.ts";
 
 for (const [width, levels] of [
     [0, 1],

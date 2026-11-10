@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import type { OracleCase } from "./consumer";
+import type { OracleCase } from "./consumer.ts";
 
 export type StrictResult = {
     id: string;

@@ -30,11 +30,11 @@ const {
     drawWireBox,
 } = await import("@dylanebert/shallot/extras");
 const { setupGlobals } = await import("@dylanebert/shallot/webgpu");
-const { Gallery, GalleryPlugin } = await import("../examples/materials/src/gallery");
+const { Gallery, GalleryPlugin } = await import("../examples/materials/src/gallery.ts");
 const { Clock, CyclePlugin, CycleScene } = await import("../examples/day-night-cycle/src/cycle");
-const { Demo } = await import("../examples/first-person/src/demo");
-const { MotesPlugin } = await import("../examples/particles/src/motes");
-const { Room } = await import("../examples/particles/src/room");
+const { Demo } = await import("../examples/first-person/src/demo.ts");
+const { MotesPlugin } = await import("../examples/particles/src/motes.ts");
+const { Room } = await import("../examples/particles/src/room.ts");
 await setupGlobals();
 const directory = process.argv[2];
 if (!directory)

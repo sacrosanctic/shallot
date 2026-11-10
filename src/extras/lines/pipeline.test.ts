@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import * as d from "typegpu/data";
-import { lineQuad } from "./pipeline";
+import { lineQuad } from "./pipeline.ts";
 
 const resolution = d.vec2f(64, 64);
 

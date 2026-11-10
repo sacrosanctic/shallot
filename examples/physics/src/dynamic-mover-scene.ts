@@ -29,10 +29,10 @@ import {
     setTargetTransform,
     setTransform,
 } from "@dylanebert/shallot/standard/physics";
-import { DynamicMover } from "./dynamic-mover";
-import { add, cross, dot, length, mul, pose, rotate, sub, type Vec, v } from "./mover";
-import { readPlayerControls } from "./player-controls";
-import type { Controls } from "./scenes";
+import { DynamicMover } from "./dynamic-mover.ts";
+import { add, cross, dot, length, mul, pose, rotate, sub, type Vec, v } from "./mover.ts";
+import { readPlayerControls } from "./player-controls.ts";
+import type { Controls } from "./scenes.ts";
 
 const f = Math.fround;
 // roundf ties away from zero, unlike Math.round.

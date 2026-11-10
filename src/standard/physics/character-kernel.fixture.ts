@@ -2,14 +2,14 @@ import gold from "../../../crates/physics/tests/character.gold.json";
 import { Body, PhysicsPlugin, Shape, ShapeKind } from "../../core/physics";
 import { Transform, TransformPlugin } from "../../core/transform";
 import { Time, World } from "../../engine";
-import { Character, CharacterPlugin, characterScratch } from "./character";
-import { BodyType, defaultBodyDef } from "./common/types";
-import { quaternion } from "./kernel/math";
-import { physicsState, StandardPhysicsPlugin } from "./runtime";
-import { makeBoxHull } from "./shapes/build-hull";
-import { createHullShape } from "./shapes/shape";
-import { testShapeDef } from "./testing";
-import { bodySetAngularVelocity, bodySetLinearVelocity, createBody } from "./world/body";
+import { Character, CharacterPlugin, characterScratch } from "./character.ts";
+import { BodyType, defaultBodyDef } from "./common/types.ts";
+import { quaternion } from "./kernel/math.ts";
+import { physicsState, StandardPhysicsPlugin } from "./runtime.ts";
+import { makeBoxHull } from "./shapes/build-hull.ts";
+import { createHullShape } from "./shapes/shape.ts";
+import { testShapeDef } from "./testing.ts";
+import { bodySetAngularVelocity, bodySetLinearVelocity, createBody } from "./world/body.ts";
 
 export { gold as characterGold };
 export async function visitCharacterGold(

@@ -8,8 +8,8 @@ import {
     gpuRequirements,
 } from "../../../scripts/gpu.fixture";
 import { DEFAULT_PLUGINS } from "../../standard";
-import { classifyAdapter } from "./adapter";
-import { rawDevice } from "./gpu";
+import { classifyAdapter } from "./adapter.ts";
+import { rawDevice } from "./gpu.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

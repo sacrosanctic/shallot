@@ -11,7 +11,7 @@ import {
 import { type View, Views, worldToViewport } from "@dylanebert/shallot/rendering";
 import { PhysicsEvents, setTargetTransform } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { drawSensorHitViews } from "../src/event-presentation";
+import { drawSensorHitViews } from "../src/event-presentation.ts";
 import {
     contact,
     EventSample,
@@ -23,10 +23,10 @@ import {
     persistentContact,
     sensor,
     sensorHits,
-} from "../src/events";
-import { Grab, pick, release } from "../src/grab";
-import { type Controls, changeControl, controlValues, scenes } from "../src/scenes";
-import { sampleGold } from "./gold";
+} from "../src/events.ts";
+import { Grab, pick, release } from "../src/grab.ts";
+import { type Controls, changeControl, controlValues, scenes } from "../src/scenes.ts";
+import { sampleGold } from "./gold.ts";
 
 function eventRecords(world: World) {
     const sample = world.resource(EventSample);

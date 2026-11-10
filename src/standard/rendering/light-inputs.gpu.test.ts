@@ -4,9 +4,9 @@ import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture";
 import { PointLight, SpotLight, VolumetricLight } from "../../core/rendering";
 import { Transform } from "../../core/transform";
 import { probeBuffer } from "../../engine/runtime";
-import { lightInputKey } from "./cluster";
-import { StandardRenderingPlugin } from "./index";
-import { spotParams } from "./lighting";
+import { lightInputKey } from "./cluster.ts";
+import { StandardRenderingPlugin } from "./index.ts";
+import { spotParams } from "./lighting.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const subjects = gpuApps(import.meta.path, [

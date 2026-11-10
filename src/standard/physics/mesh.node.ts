@@ -7,9 +7,9 @@ import {
     StandardPhysicsPlugin,
 } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { countedKernelBytes } from "../../../scripts/counted-kernel";
-import { meshBuild } from "./geometry-builds";
-import { clockImport, type Kernel, kernelState } from "./kernel/kernel";
+import { countedKernelBytes } from "../../../scripts/counted-kernel.ts";
+import { meshBuild } from "./geometry-builds.ts";
+import { clockImport, type Kernel, kernelState } from "./kernel/kernel.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 let kernelBytes: ArrayBuffer;

@@ -11,7 +11,7 @@ import {
     setComputePipeline,
 } from "../../engine/runtime";
 
-import { MaterialTypes, materialSource, TRANSPARENT_KEYS } from "./material-type";
+import { MaterialTypes, materialSource, TRANSPARENT_KEYS } from "./material-type.ts";
 
 const descriptor = { label: "shallot-mesh-count" };
 const sourceLayout = tgpu

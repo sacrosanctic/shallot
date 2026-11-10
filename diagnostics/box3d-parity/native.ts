@@ -4,7 +4,7 @@
 import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, renameSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
-import { BOX3D_PIN } from "../../src/standard/physics/oracle/pin";
+import { BOX3D_PIN } from "../../src/standard/physics/oracle/pin.ts";
 
 const here = import.meta.dir;
 

@@ -1,11 +1,11 @@
 import { expect, test } from "bun:test";
 import gold from "../../../../crates/physics/tests/reader_regressions.gold.json";
-import { froundConfig } from "../common/config";
-import { BodyType } from "../common/types";
-import { readSimCenter, readStateAngularVelocity } from "../kernel/bodycolumns";
-import { quaternion, vector } from "../kernel/math";
-import { createSphereShape } from "../shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing";
+import { froundConfig } from "../common/config.ts";
+import { BodyType } from "../common/types.ts";
+import { readSimCenter, readStateAngularVelocity } from "../kernel/bodycolumns.ts";
+import { quaternion, vector } from "../kernel/math.ts";
+import { createSphereShape } from "../shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
 import {
     bodyApplyAngularImpulse,
     bodyApplyLinearImpulse,
@@ -17,7 +17,7 @@ import {
     bodySetTargetTransform,
     getBodySim,
     getBodyState,
-} from "./body";
+} from "./body.ts";
 
 function nativeVector(words: number[]) {
     const v = new Float32Array(new Uint32Array(words).buffer);

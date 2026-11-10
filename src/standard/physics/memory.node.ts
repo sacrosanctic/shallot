@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Body, Hulls, Shape } from "../../core/physics";
 import { createApp } from "../../engine/app";
 import { PhysicsWorldDefinition, StandardPhysicsPlugin } from ".";
-import { artifact, kernel } from "./kernel/kernel";
+import { artifact, kernel } from "./kernel/kernel.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

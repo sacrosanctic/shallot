@@ -16,8 +16,8 @@ import {
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { isRangeSubset, isValidRange } from "verkit";
-import { normalizePath } from "../src/project/paths";
-import { removeTestDirectory } from "./test-directory";
+import { normalizePath } from "../src/project/paths.ts";
+import { removeTestDirectory } from "./test-directory.ts";
 
 const ROOT = resolve(import.meta.dir, "..");
 const ENGINE = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8"));

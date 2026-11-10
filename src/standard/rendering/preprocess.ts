@@ -31,10 +31,10 @@ import {
     setComputeBindGroup,
     setComputePipeline,
 } from "../../engine/runtime";
-import { uploadInstanceData } from "./instance-data";
-import { MaterialTypes } from "./material";
-import { MaterialBatches, materialBatch, syncMaterialBatches } from "./material-batch";
-import { EntityMeshInstanceInput, MeshMaterial } from "./material-data";
+import { uploadInstanceData } from "./instance-data.ts";
+import { MaterialTypes } from "./material.ts";
+import { MaterialBatches, materialBatch, syncMaterialBatches } from "./material-batch.ts";
+import { EntityMeshInstanceInput, MeshMaterial } from "./material-data.ts";
 import {
     ALPHA_PIPELINE_KEY_COUNT,
     alphaPipelineKey,
@@ -44,9 +44,9 @@ import {
     pipelineKey,
     pipelineKeyCount,
     TransparentMeshes,
-} from "./material-type";
-import { materialAttributeError } from "./mesh-attributes";
-import { publishMeshCounts, rebuildMeshCounts, warmTransparentCounts } from "./mesh-count";
+} from "./material-type.ts";
+import { materialAttributeError } from "./mesh-attributes.ts";
+import { publishMeshCounts, rebuildMeshCounts, warmTransparentCounts } from "./mesh-count.ts";
 import {
     CullParams,
     countKernel,
@@ -59,15 +59,15 @@ import {
     scatterLayout,
     tileScanKernel,
     tileSumKernel,
-} from "./pack";
+} from "./pack.ts";
 import {
     countProducers,
     producerCapacity,
     scatterProducers,
     syncProducerPack,
-} from "./producer-pack";
-import { producerTables } from "./producer-table";
-import { type Draw, DrawIndexedIndirect, Draws } from "./registry";
+} from "./producer-pack.ts";
+import { producerTables } from "./producer-table.ts";
+import { type Draw, DrawIndexedIndirect, Draws } from "./registry.ts";
 
 const DRAW_ARG_STRIDE = d.sizeOf(DrawIndexedIndirect);
 // Every (alpha pipeline key, cull mode) pair, for CPU lookups that must not move as the key stride grows.

@@ -8,15 +8,15 @@ import {
     endComputePass,
     endRenderPass,
 } from "../../engine/runtime";
-import { boundPipeline } from "./bound";
-import type { BundleDraw, PassBundle } from "./bundle";
-import { bundleChanged, bundleDraw, newPassBundle, recordBundle, replayBundle } from "./bundle";
-import { engineLayout } from "./engine";
-import type { Recorded } from "./forward";
-import { engineGroup } from "./pipelines";
-import { MeshDrawBuffers } from "./preprocess";
-import { createRegather, type Regather, SHADOW_ARG_STRIDE } from "./regather";
-import type { Draw } from "./registry";
+import { boundPipeline } from "./bound.ts";
+import type { BundleDraw, PassBundle } from "./bundle.ts";
+import { bundleChanged, bundleDraw, newPassBundle, recordBundle, replayBundle } from "./bundle.ts";
+import { engineLayout } from "./engine.ts";
+import type { Recorded } from "./forward.ts";
+import { engineGroup } from "./pipelines.ts";
+import { MeshDrawBuffers } from "./preprocess.ts";
+import { createRegather, type Regather, SHADOW_ARG_STRIDE } from "./regather.ts";
+import type { Draw } from "./registry.ts";
 import {
     CASCADE_FLOATS,
     comboMetaSchema,
@@ -27,8 +27,8 @@ import {
     SUN_PARAMS,
     SunShadow,
     tileRectsSchema,
-} from "./shade";
-import { shadowLayout } from "./shadow-layout";
+} from "./shade.ts";
+import { shadowLayout } from "./shadow-layout.ts";
 import {
     cascadeAtlasSize,
     cascadeComboEids,
@@ -54,9 +54,9 @@ import {
     sunOverlap,
     sunResolution,
     sunTowardLight,
-} from "./shadows";
+} from "./shadows.ts";
 
-export { shadowLayout } from "./shadow-layout";
+export { shadowLayout } from "./shadow-layout.ts";
 
 interface AtlasState {
     sunCasting: boolean;

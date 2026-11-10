@@ -1,7 +1,7 @@
 import { createApp } from "../../../../engine/app";
 import { probeTexture, rawDevice } from "../../../../engine/runtime";
-import { imageTexture, imageTextures, prepareImages, registerImage } from "../../image";
-import { RenderingPlugin } from "../../substrate";
+import { imageTexture, imageTextures, prepareImages, registerImage } from "../../image.ts";
+import { RenderingPlugin } from "../../substrate.ts";
 
 const canvas = new OffscreenCanvas(8, 8);
 const context = canvas.getContext("2d")!;

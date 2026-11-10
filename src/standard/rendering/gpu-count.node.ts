@@ -14,8 +14,8 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./index";
-import { MeshDrawBuffers, MeshPreprocessSystem } from "./preprocess";
+} from "./index.ts";
+import { MeshDrawBuffers, MeshPreprocessSystem } from "./preprocess.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const scenes = new WeakMap<World, ReturnType<typeof initialize>>();

@@ -1,7 +1,7 @@
 import type { Plugin, Resource, System, World } from "../../engine";
 import { beginRenderPass, endRenderPass } from "../../engine/runtime";
-import { Camera, computeViewFromWorld } from "./camera";
-import { BeginFrameSystem, OverlaySystem, RenderingPlugin } from "./substrate";
+import { Camera, computeViewFromWorld } from "./camera.ts";
+import { BeginFrameSystem, OverlaySystem, RenderingPlugin } from "./substrate.ts";
 import {
     colorPassDescriptor,
     colorTargets,
@@ -13,9 +13,9 @@ import {
     NormalPrepassRequests,
     prepassDescriptor,
     releaseNormalTarget,
-} from "./targets";
-import { TonemappingPlugin, TonemappingSystem } from "./tonemapping-state";
-import { type View, Views } from "./view";
+} from "./targets.ts";
+import { TonemappingPlugin, TonemappingSystem } from "./tonemapping-state.ts";
+import { type View, Views } from "./view.ts";
 
 /** One renderer-owned draw submitted to the shared, per-view transparent phase. */
 export interface TransparentPhaseItem {

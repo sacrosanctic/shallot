@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics, Shape } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { RagdollPlugin, ragdollScenes } from "../src/ragdoll";
-import { changeControl, controlValues, createScene } from "../src/scenes";
-import { sampleGold } from "./gold";
+import { RagdollPlugin, ragdollScenes } from "../src/ragdoll.ts";
+import { changeControl, controlValues, createScene } from "../src/scenes.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of ["ragdollBox", "ragdollMesh"] as const) {

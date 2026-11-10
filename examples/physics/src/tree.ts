@@ -21,8 +21,8 @@ import {
 import bounds01 from "./bounds01.json" with { type: "json" };
 import bounds02 from "./bounds02.json" with { type: "json" };
 import bounds03 from "./bounds03.json" with { type: "json" };
-import { decodeFloat32 } from "./mesh-data";
-import type { Controls } from "./scenes";
+import { decodeFloat32 } from "./mesh-data.ts";
+import type { Controls } from "./scenes.ts";
 
 const bounds = [bounds01, bounds02, bounds03].map(decodeFloat32);
 const f = Math.fround;

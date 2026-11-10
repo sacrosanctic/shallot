@@ -7,11 +7,11 @@ import { Xform } from "../../core/rendering";
 import { GlobalTransform } from "../../core/transform";
 import type { GpuTable, Plugin, Resource, World } from "../../engine";
 import { type ComponentStorage, type LaneFormat, laneLayout, writeLane } from "../../engine/ecs";
-import { validateBindingLimits } from "./binding-limits";
-import { engineLayout } from "./engine";
-import { type InstanceData, registerInstanceData } from "./instance-data";
-import { MeshInstanceInput, MeshMaterial } from "./material-data";
-import { shadowLayout } from "./shadow-layout";
+import { validateBindingLimits } from "./binding-limits.ts";
+import { engineLayout } from "./engine.ts";
+import { type InstanceData, registerInstanceData } from "./instance-data.ts";
+import { MeshInstanceInput, MeshMaterial } from "./material-data.ts";
+import { shadowLayout } from "./shadow-layout.ts";
 
 /** Add the material contract to TypeGPU's unfilled-slot error at a pipeline resolution boundary. @internal */
 export function rethrowMaterialError(name: string, error: unknown): never {
@@ -733,7 +733,7 @@ export interface MaterialType<
     readonly source?: Resource<MaterialSource<P>>;
     /** Live resources owned by this material type; called at draw to observe replacements.
      * Mesh attributes and mesh.bindings take precedence. Built-ins resolve from their engine owners. */
-    readonly bindings?: (world: World) => Record<string, import("./pipelines").BindResource>;
+    readonly bindings?: (world: World) => Record<string, import("./pipelines.ts").BindResource>;
     /** Request this view's prepass this frame while this type has draws.
      * depth reads reverse-Z device depth; normal reads a world-space unit normal.
      * Undeclared prepassDepth/prepassNormal calls are refused during pipeline preparation.

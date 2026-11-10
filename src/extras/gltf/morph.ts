@@ -1,5 +1,5 @@
 import type { World } from "../../engine";
-import type { GltfMesh } from "./gltf";
+import type { GltfMesh } from "./gltf.ts";
 
 /** Contiguous ranges; released neighbours coalesce and the free tail leaves the extent. */
 export class DeformationRanges {

@@ -15,7 +15,7 @@ import {
     Tonemapping,
     TonemappingMethod,
 } from "../../core/rendering";
-import { imageTextures } from "../../core/rendering/image";
+import { imageTextures } from "../../core/rendering/image.ts";
 import { Transform } from "../../core/transform";
 import { lookAtRotation } from "../../engine/utils";
 import {
@@ -31,8 +31,8 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./index";
-import { brdf, Pbr } from "./shade";
+} from "./index.ts";
+import { brdf, Pbr } from "./shade.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const light = std.normalize(d.vec3f(0.7, 0.3, 1));

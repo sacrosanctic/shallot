@@ -7,10 +7,10 @@ import {
     ContinuousState,
     ContinuousStepObserver,
     continuousScenes,
-} from "../src/continuous";
-import { sceneSwitcher } from "../src/sample";
-import { changeControl, controlValues, createScene } from "../src/scenes";
-import { sampleGold } from "./gold";
+} from "../src/continuous.ts";
+import { sceneSwitcher } from "../src/sample.ts";
+import { changeControl, controlValues, createScene } from "../src/scenes.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of Object.keys(continuousScenes) as (keyof typeof continuousScenes)[]) {

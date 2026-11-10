@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { resolve } from "node:path";
-import { GLTF_ARTIFACT, gltfArtifactIsFresh } from "../crates/gltf/scripts/inputs";
+import { GLTF_ARTIFACT, gltfArtifactIsFresh } from "../crates/gltf/scripts/inputs.ts";
 
 test("checked glTF artifact matches its build inputs", () => {
     const fresh = gltfArtifactIsFresh(resolve(import.meta.dir, ".."));

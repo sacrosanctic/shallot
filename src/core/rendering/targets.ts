@@ -1,8 +1,8 @@
 import type { World } from "../../engine";
 import { component, unpackColor } from "../../engine";
-import { Camera } from "./camera";
-import { RenderContext } from "./render";
-import type { View } from "./view";
+import { Camera } from "./camera.ts";
+import { RenderContext } from "./render.ts";
+import type { View } from "./view.ts";
 
 /** Reverse-Z depth format shared by view passes and matching renderer pipelines. */
 export const DEPTH_FORMAT: GPUTextureFormat = "depth32float";

@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { MeshInstance } from "../../core/mesh";
 import {
     AmbientLight,
@@ -16,13 +16,13 @@ import {
 import { Transform } from "../../core/transform";
 import { lookAtRotation } from "../../engine";
 import { probeBuffer } from "../../engine/runtime";
-import { clusterGpuKey } from "./cluster";
-import { StandardRenderer } from "./forward";
-import { StandardRenderingPlugin } from "./index";
-import { spotParams } from "./lighting";
-import { Materials, MeshMaterial, StandardMaterial } from "./material";
-import { MeshRenderPlugin } from "./mesh-render";
-import { PointShadows, pointFaceVP } from "./shadows";
+import { clusterGpuKey } from "./cluster.ts";
+import { StandardRenderer } from "./forward.ts";
+import { StandardRenderingPlugin } from "./index.ts";
+import { spotParams } from "./lighting.ts";
+import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";
+import { MeshRenderPlugin } from "./mesh-render.ts";
+import { PointShadows, pointFaceVP } from "./shadows.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const methods = [ShadowFilteringMethodMode.Hardware2x2, ShadowFilteringMethodMode.Gaussian];

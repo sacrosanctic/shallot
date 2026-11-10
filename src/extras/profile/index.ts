@@ -1,9 +1,9 @@
 import type { Plugin, System, World } from "../../engine";
 import { Diagnostic, DiagnosticsStore, mountOverlay } from "../../engine";
-import { cpuTotal } from "./cpu";
-import { EmptyFrames } from "./empty";
-import { FrameTimings, TIMING_FLOOR_MS } from "./frames";
-import { reorderRows } from "./reorder";
+import { cpuTotal } from "./cpu.ts";
+import { EmptyFrames } from "./empty.ts";
+import { FrameTimings, TIMING_FLOOR_MS } from "./frames.ts";
+import { reorderRows } from "./reorder.ts";
 
 const INDIRECT_FLOOR_US = 1;
 

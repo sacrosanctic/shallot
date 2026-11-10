@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { allocatesNothing, allocationFailure, sampleAllocation, windowBytes } from "./allocation";
+import { allocatesNothing, allocationFailure, sampleAllocation, windowBytes } from "./allocation.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

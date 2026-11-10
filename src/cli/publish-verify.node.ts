@@ -3,10 +3,10 @@ import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { publishTestChromium } from "../../scripts/publish-browser";
-import { removeTestDirectory } from "../../scripts/test-directory";
+import { publishTestChromium } from "../../scripts/publish-browser.ts";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
 import { CROSS_ORIGIN_ISOLATION } from "../project";
-import { verifyPublishedGame } from "./publish-verify";
+import { verifyPublishedGame } from "./publish-verify.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const root = mkdtempSync(join(tmpdir(), "shallot-publish-controls-"));

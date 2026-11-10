@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { Shape, ShapeKind, Transform, type World } from "../../src";
-import { heightFieldBuild, meshBuild } from "../../src/standard/physics/geometry-builds";
-import { drawHeightField, drawMeshData } from "../../src/standard/physics/shapes/readgeometry";
+import { heightFieldBuild, meshBuild } from "../../src/standard/physics/geometry-builds.ts";
+import { drawHeightField, drawMeshData } from "../../src/standard/physics/shapes/readgeometry.ts";
 const digest = (value: unknown) => createHash("sha256").update(JSON.stringify(value)).digest("hex");
 export function nativeMeshFrames(text: string): string[] {
     const data = new Map<string, {kind:string;data:unknown}>();

@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { createTestGpuApp, disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import type { World } from "../../engine";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
 import { Transform } from "../transform";
@@ -16,7 +16,7 @@ import {
     RenderingPlugin,
     Tonemapping,
     TonemappingMethod,
-} from "./index";
+} from "./index.ts";
 import { PointsPlugin } from "./points.fixture";
 
 setDefaultTimeout(TIMEOUT.node);

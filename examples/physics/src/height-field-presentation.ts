@@ -1,8 +1,8 @@
 import { Shape, ShapeKind, type World } from "@dylanebert/shallot";
 import { shapeEdges } from "@dylanebert/shallot/standard/physics";
-import { drawInkPoint, INK } from "./ink-presentation";
-import { JOINT_LINE } from "./joint-presentation";
-import { HeightFieldState } from "./mesh-height-field";
+import { drawInkPoint, INK } from "./ink-presentation.ts";
+import { JOINT_LINE } from "./joint-presentation.ts";
+import { HeightFieldState } from "./mesh-height-field.ts";
 
 type Point = [number, number, number];
 export function heightFieldDrawing(world: World): number[][] {

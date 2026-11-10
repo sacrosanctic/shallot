@@ -1,9 +1,9 @@
 import { component, f32, type Plugin, type Resource, u32, vec3 } from "../../engine";
 import { Transform, TransformPlugin } from "../transform";
-import { PhysicsAssets } from "./assets";
-import { Compounds } from "./compound";
-import { HeightFields } from "./height-field";
-import { Hulls } from "./hull";
+import { PhysicsAssets } from "./assets.ts";
+import { Compounds } from "./compound.ts";
+import { HeightFields } from "./height-field.ts";
+import { Hulls } from "./hull.ts";
 import {
     DistanceJoint,
     FilterJoint,
@@ -16,11 +16,11 @@ import {
     SphericalJoint,
     WeldJoint,
     WheelJoint,
-} from "./joints";
-import { PhysicsMeshes } from "./mesh";
-import { Shape, type ShapeMaterialSet } from "./shape";
+} from "./joints.ts";
+import { PhysicsMeshes } from "./mesh.ts";
+import { Shape, type ShapeMaterialSet } from "./shape.ts";
 
-export type { PhysicsAssets } from "./assets";
+export type { PhysicsAssets } from "./assets.ts";
 export {
     DistanceJoint,
     FilterJoint,
@@ -33,14 +33,14 @@ export {
     SphericalJoint,
     WeldJoint,
     WheelJoint,
-} from "./joints";
+} from "./joints.ts";
 
 export {
     Shape,
     ShapeKind,
     type ShapeMaterialSet,
     type SurfaceMaterial,
-} from "./shape";
+} from "./shape.ts";
 
 /** World-owned per-triangle material lists. `add` returns the handle for `Shape.materialSet`;
  * -1 means none. Names are display labels. */
@@ -182,7 +182,7 @@ export const PhysicsPlugin: Plugin = {
     },
     components,
 };
-export { type Compound, Compounds } from "./compound";
-export { type HeightField, HeightFields } from "./height-field";
-export { type Hull, Hulls, UNIT_CUBE_ID } from "./hull";
-export { type PhysicsMesh, PhysicsMeshes } from "./mesh";
+export { type Compound, Compounds } from "./compound.ts";
+export { type HeightField, HeightFields } from "./height-field.ts";
+export { type Hull, Hulls, UNIT_CUBE_ID } from "./hull.ts";
+export { type PhysicsMesh, PhysicsMeshes } from "./mesh.ts";

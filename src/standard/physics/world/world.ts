@@ -1,29 +1,29 @@
-import type { CustomFilterCallback, PreSolveCallback } from "../api/config";
-import { SetType } from "../common/constants";
-import { jointCount } from "../kernel/jointrecords";
+import type { CustomFilterCallback, PreSolveCallback } from "../api/config.ts";
+import { SetType } from "../common/constants.ts";
+import { jointCount } from "../kernel/jointrecords.ts";
 import {
     createSolverSet,
     setBodyCount,
     solverSetCount,
     solverSetIndex,
     wakeSolverSet,
-} from "../kernel/solversetcolumns";
+} from "../kernel/solversetcolumns.ts";
 import type {
     WorldCustomFilterCallback,
     WorldMixCallback,
     WorldPreSolveCallback,
-} from "../world-definition";
+} from "../world-definition.ts";
 
 // Box3D physics_world.c (Erin Catto, MIT). World ids include a generation so a recycled
 // registry slot cannot validate a destroyed world's handle.
 
 import { clamp } from "../../../engine/utils";
-import { type BroadPhase, createBroadPhase } from "../collision/broadphase";
-import { contactCount } from "../collision/contact";
-import { createManifoldStore, type ManifoldStore } from "../collision/manifoldstore";
-import { froundConfig } from "../common/config";
-import { CONTACT_RECYCLE_DISTANCE } from "../common/constants";
-import type { Vec3 } from "../common/records";
+import { type BroadPhase, createBroadPhase } from "../collision/broadphase.ts";
+import { contactCount } from "../collision/contact.ts";
+import { createManifoldStore, type ManifoldStore } from "../collision/manifoldstore.ts";
+import { froundConfig } from "../common/config.ts";
+import { CONTACT_RECYCLE_DISTANCE } from "../common/constants.ts";
+import type { Vec3 } from "../common/records.ts";
 
 const f32 = Math.fround;
 
@@ -33,16 +33,16 @@ import {
     type MixCallback,
     type ShapeDef,
     type WorldDef,
-} from "../common/types";
-import { type BodyStore, createBodyStore } from "../kernel/bodycolumns";
-import { hullDatabaseIndex, stageHullUpload } from "../kernel/geocolumns";
-import { islandKernel } from "../kernel/islandcolumns";
-import { kernel } from "../kernel/kernel";
-import type { QueryColumns } from "../kernel/querycolumns";
-import { createShapeStore, type ShapeStore } from "../kernel/shapecolumns";
-import type { HullData } from "../shapes/hull";
-import { createStepProfile, readStepProfile, type StepProfile } from "./profile";
-import { createShapeEntities, type ShapeEntities } from "./shape-entities";
+} from "../common/types.ts";
+import { type BodyStore, createBodyStore } from "../kernel/bodycolumns.ts";
+import { hullDatabaseIndex, stageHullUpload } from "../kernel/geocolumns.ts";
+import { islandKernel } from "../kernel/islandcolumns.ts";
+import { kernel } from "../kernel/kernel.ts";
+import type { QueryColumns } from "../kernel/querycolumns.ts";
+import { createShapeStore, type ShapeStore } from "../kernel/shapecolumns.ts";
+import type { HullData } from "../shapes/hull.ts";
+import { createStepProfile, readStepProfile, type StepProfile } from "./profile.ts";
+import { createShapeEntities, type ShapeEntities } from "./shape-entities.ts";
 
 /** Maximum concurrent worlds (B3_MAX_WORLDS). */
 export const MAX_WORLDS = 128;
@@ -79,7 +79,7 @@ export type WorldState = {
     shapeEntities: ShapeEntities;
     shapeDefInput: ShapeDef;
 
-    geometryUploadScratch?: import("../kernel/geocolumns").GeometryUploadScratch;
+    geometryUploadScratch?: import("../kernel/geocolumns.ts").GeometryUploadScratch;
     manifoldStore: ManifoldStore;
     bodyStore: BodyStore;
     shapeStore: ShapeStore;

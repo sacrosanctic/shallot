@@ -30,8 +30,8 @@ import {
     vec2,
     type World,
 } from "@dylanebert/shallot";
-import { PlayerFollow } from "./follow";
-import { PlayerMotion } from "./motion";
+import { PlayerFollow } from "./follow.ts";
+import { PlayerMotion } from "./motion.ts";
 
 const MAX_PITCH = Math.PI / 2 - 0.01;
 // the look normalizes by this fixed reference height, never the live canvas size.

@@ -1,8 +1,8 @@
 import { type Ray, Viewports, type World } from "../../engine";
 import { composeGlobalTransform, GlobalTransform } from "../transform";
-import { Camera, CameraMode, computeViewFromWorld } from "./camera";
-import { type CameraRect, cameraRect } from "./camera-viewport";
-import { cameraView } from "./view";
+import { Camera, CameraMode, computeViewFromWorld } from "./camera.ts";
+import { type CameraRect, cameraRect } from "./camera-viewport.ts";
+import { cameraView } from "./view.ts";
 
 const _size = { x: 0, y: 0, width: 0, height: 0 };
 const _viewFromWorld = new Float32Array(16);

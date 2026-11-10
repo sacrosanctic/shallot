@@ -10,12 +10,12 @@ import {
 } from "../../core/physics";
 import { Transform, TransformPlugin } from "../../core/transform";
 import { World } from "../../engine";
-import { buildHull } from "./geometry-builds";
-import { marshalShape, shapeHullGeometry } from "./marshal-shape";
-import { makeBoxHull } from "./shapes/build-hull";
-import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld } from "./testing";
-import { getMassData, makeBodyId } from "./world/body";
-import { hashWorldState } from "./world/hash";
+import { buildHull } from "./geometry-builds.ts";
+import { marshalShape, shapeHullGeometry } from "./marshal-shape.ts";
+import { makeBoxHull } from "./shapes/build-hull.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld } from "./testing.ts";
+import { getMassData, makeBodyId } from "./world/body.ts";
+import { hashWorldState } from "./world/hash.ts";
 
 test("two worlds marshal their own hull registered under the same name", () => {
     const worlds = [new World(), new World()];

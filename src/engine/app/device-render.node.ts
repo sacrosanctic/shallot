@@ -13,8 +13,8 @@ import "../../standard";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { createTestGpuApp, expectAdapterNotice } from "../../../scripts/gpu.fixture";
 import { Transform } from "../../core/transform";
-import { stampAdapter, Time, type World } from "../index";
-import type { createApp } from "./index";
+import { stampAdapter, Time, type World } from "../index.ts";
+import type { createApp } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

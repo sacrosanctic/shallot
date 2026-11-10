@@ -23,8 +23,8 @@ import {
 } from "@dylanebert/shallot";
 import { Orbit, OrbitPlugin } from "@dylanebert/shallot/extras";
 import { Billboard } from "@dylanebert/shallot/rendering";
-import { Cube, coinAssets, Game, GamePlugin } from "./game";
-import { readSave } from "./save";
+import { Cube, coinAssets, Game, GamePlugin } from "./game.ts";
+import { readSave } from "./save.ts";
 
 function makeScene(world: World): void {
     const ambient = world.resource(GlobalAmbientLight);

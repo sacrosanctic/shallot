@@ -6,7 +6,7 @@ export {
     srgbToLinear,
     unpackColor,
     unpackColorInto,
-} from "./color";
+} from "./color.ts";
 export {
     hdrColorPackWgsl,
     hdrColorUnpackWgsl,
@@ -30,8 +30,8 @@ export {
     unpackLdrColor,
     unpackQuatSmallest3,
     unpackQuatSnorm16x4,
-} from "./encode";
-export { HANDLE_INDEX_MASK, HandleAllocator } from "./handles";
+} from "./encode.ts";
+export { HANDLE_INDEX_MASK, HandleAllocator } from "./handles.ts";
 export {
     clamp,
     composeMat4,
@@ -51,6 +51,6 @@ export {
     type Ray,
     rotateQuatByEuler,
     slerp,
-} from "./math";
-export { Registry } from "./registry";
-export { chunk, idiv, uniformLoad } from "./tgsl";
+} from "./math.ts";
+export { Registry } from "./registry.ts";
+export { chunk, idiv, uniformLoad } from "./tgsl.ts";

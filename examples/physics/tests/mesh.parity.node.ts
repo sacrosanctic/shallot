@@ -2,14 +2,14 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics } from "@dylanebert/shallot";
 import { StandardPhysicsPlugin } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { MeshSamplePlugin, meshScenes } from "../src/mesh";
-import { MeshInspectorState } from "../src/mesh-inspector";
-import { meshViewerBounds } from "../src/mesh-inspector-presentation";
-import { type Controls, controlValues, createScene } from "../src/scenes";
-import { drawingDigest } from "./digest";
-import { sampleGold } from "./gold";
-import { manualParityScenes } from "./manual-parity";
-import { meshControl } from "./mesh-controls";
+import { MeshSamplePlugin, meshScenes } from "../src/mesh.ts";
+import { MeshInspectorState } from "../src/mesh-inspector.ts";
+import { meshViewerBounds } from "../src/mesh-inspector-presentation.ts";
+import { type Controls, controlValues, createScene } from "../src/scenes.ts";
+import { drawingDigest } from "./digest.ts";
+import { sampleGold } from "./gold.ts";
+import { manualParityScenes } from "./manual-parity.ts";
+import { meshControl } from "./mesh-controls.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of Object.keys(meshScenes) as (keyof typeof meshScenes)[]) {

@@ -2,8 +2,8 @@ import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { expectError } from "../../scripts/test-console";
-import { main, parseCliArgs } from "./index";
+import { expectError } from "../../scripts/test-console.ts";
+import { main, parseCliArgs } from "./index.ts";
 
 type Result = { code: number; stdout: string; stderr: string };
 

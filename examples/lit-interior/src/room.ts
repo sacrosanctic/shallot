@@ -24,7 +24,7 @@ import {
     type World,
 } from "@dylanebert/shallot";
 import { Sky, SkyPlugin, skyBackgroundHandle } from "@dylanebert/shallot/extras";
-import { LocalPlayer, Player, PlayerPlugin } from "./player";
+import { LocalPlayer, Player, PlayerPlugin } from "./player.ts";
 
 type Color = readonly [number, number, number, number];
 type Vec3 = readonly [number, number, number];

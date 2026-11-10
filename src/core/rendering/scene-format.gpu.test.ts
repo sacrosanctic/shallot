@@ -10,8 +10,8 @@ import {
     detachView,
     RenderContext,
     RenderPhases,
-} from "./index";
-import { viewResourcesKey } from "./view";
+} from "./index.ts";
+import { viewResourcesKey } from "./view.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const Scene: Plugin = {

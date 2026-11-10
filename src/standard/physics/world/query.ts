@@ -1,16 +1,16 @@
-import type { ShapeProxy } from "../collision/distance";
-import type { PlaneResult } from "../collision/mover";
-import type { EntityId } from "../common/ids";
-import type { AABB, Pos, Transform, Vec3, WorldTransform } from "../common/records";
-import { defaultQueryFilter, type QueryFilter } from "../common/types";
-import { BodyField, bodyField } from "../kernel/bodyrecords";
-import { rethrowQueryError, setQueryCallback } from "../kernel/kernel";
-import { queryColumns } from "../kernel/querycolumns";
-import type { TreeStats } from "../kernel/treecolumns";
-import type { Capsule } from "../shapes/geometry";
-import { getShapeMaterialCount } from "../shapes/shape";
-import { bodyGetTransform, bodyIsValid } from "./body";
-import type { WorldState } from "./world";
+import type { ShapeProxy } from "../collision/distance.ts";
+import type { PlaneResult } from "../collision/mover.ts";
+import type { EntityId } from "../common/ids.ts";
+import type { AABB, Pos, Transform, Vec3, WorldTransform } from "../common/records.ts";
+import { defaultQueryFilter, type QueryFilter } from "../common/types.ts";
+import { BodyField, bodyField } from "../kernel/bodyrecords.ts";
+import { rethrowQueryError, setQueryCallback } from "../kernel/kernel.ts";
+import { queryColumns } from "../kernel/querycolumns.ts";
+import type { TreeStats } from "../kernel/treecolumns.ts";
+import type { Capsule } from "../shapes/geometry.ts";
+import { getShapeMaterialCount } from "../shapes/shape.ts";
+import { bodyGetTransform, bodyIsValid } from "./body.ts";
+import type { WorldState } from "./world.ts";
 
 export type WorldCastHit = {
     shape: number;

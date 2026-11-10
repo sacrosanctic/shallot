@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { World } from "../../engine";
-import { registerFont } from "./index";
+import { registerFont } from "./index.ts";
 
 test("one font URL returns one id and two URLs return two", () => {
     const world = new World();

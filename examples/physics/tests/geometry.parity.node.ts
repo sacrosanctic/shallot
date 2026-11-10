@@ -1,10 +1,10 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { GeometryPlugin, geometryNames } from "../src/geometry";
-import { changeControl, controlValues, createScene } from "../src/scenes";
-import { drawingDigest } from "./digest";
-import { geometryRecords } from "./geometry-records";
+import { GeometryPlugin, geometryNames } from "../src/geometry.ts";
+import { changeControl, controlValues, createScene } from "../src/scenes.ts";
+import { drawingDigest } from "./digest.ts";
+import { geometryRecords } from "./geometry-records.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of geometryNames)

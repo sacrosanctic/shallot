@@ -36,7 +36,7 @@ import {
     CameraBackground,
     type MaterialHandle,
 } from "@dylanebert/shallot/standard/rendering";
-import type { LookPalette } from "./palette";
+import type { LookPalette } from "./palette.ts";
 
 export interface SceneDefinition {
     id: string;

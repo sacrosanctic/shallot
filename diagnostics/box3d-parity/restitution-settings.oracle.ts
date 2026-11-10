@@ -3,7 +3,7 @@ import { Body, BodyType, Shape, ShapeKind, Hulls, PhysicsMeshes } from "../../sr
 import { Transform } from "../../src/core/transform";
 import { createApp } from "../../src/engine";
 import { hashPhysics, PhysicsWorldDefinition, StandardPhysicsPlugin } from "../../src/standard/physics";
-import { nativeBinary, run } from "./native";
+import { nativeBinary, run } from "./native.ts";
 
 setDefaultTimeout(300_000);
 const cases = [

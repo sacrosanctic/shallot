@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import {
     Body,
     BodyType,
@@ -15,13 +15,13 @@ import { GlobalTransform, Transform } from "../../core/transform";
 import { type System, Time, type World } from "../../engine";
 import { createApp } from "../../engine/app";
 import { Character, CharacterPlugin, hashPhysics, StandardPhysicsPlugin } from ".";
-import { compoundBuild, heightFieldBuild } from "./geometry-builds";
-import { BodyField, bodyField } from "./kernel/bodyrecords";
-import { ShapeField, shapeField } from "./kernel/shaperecords";
-import { physicsBodyIndex, physicsState, StepPhysicsSystem } from "./runtime";
-import { getShapeGeometryScale, readShapeCapsule, readShapeSphere } from "./shapes/shape";
-import { getMassData } from "./world/body";
-import { worldCounters } from "./world/world";
+import { compoundBuild, heightFieldBuild } from "./geometry-builds.ts";
+import { BodyField, bodyField } from "./kernel/bodyrecords.ts";
+import { ShapeField, shapeField } from "./kernel/shaperecords.ts";
+import { physicsBodyIndex, physicsState, StepPhysicsSystem } from "./runtime.ts";
+import { getShapeGeometryScale, readShapeCapsule, readShapeSphere } from "./shapes/shape.ts";
+import { getMassData } from "./world/body.ts";
+import { worldCounters } from "./world/world.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const app = () => createApp({ defaults: false, plugins: [StandardPhysicsPlugin] });

@@ -1,12 +1,12 @@
 import { expect, test } from "bun:test";
-import type { Vec3 } from "../common/records";
-import { quaternion, transform, vector } from "../kernel/math";
+import type { Vec3 } from "../common/records.ts";
+import { quaternion, transform, vector } from "../kernel/math.ts";
 
 const f32 = Math.fround;
 
-import { BodyType } from "../common/types";
-import { kernel } from "../kernel/kernel";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing";
+import { BodyType } from "../common/types.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
 import {
     createCone,
     createCylinder,
@@ -14,10 +14,10 @@ import {
     createRock,
     makeBoxHull,
     makeTransformedBoxHull,
-} from "./build-hull";
+} from "./build-hull.ts";
 import gold from "./geometry.gold.json";
-import { cloneHull, computeHullAABB, type HullData } from "./hull";
-import { computeShapeMass, createHullShape } from "./shape";
+import { cloneHull, computeHullAABB, type HullData } from "./hull.ts";
+import { computeShapeMass, createHullShape } from "./shape.ts";
 
 // Reconstruct an exact f32 from the raw hex bits the C generator emitted.
 const dv = new DataView(new ArrayBuffer(4));

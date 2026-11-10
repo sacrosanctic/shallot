@@ -3,13 +3,13 @@ import type { World } from "../../../engine";
 // dynamic trees (static / kinematic / dynamic). Moved leaves mark their ancestors; candidate shape
 // pairs are traversed in tasks and globally sorted before contacts are created.
 
-import type { AABB } from "../common/records";
-import { BodyType } from "../common/types";
-import { type BroadStore, createBroadStore } from "../kernel/broadcolumns";
-import { kernel } from "../kernel/kernel";
-import type { DynamicTree } from "../kernel/treecolumns";
-import * as tree from "../kernel/treecolumns";
-import { createSet, type HashSet } from "./table";
+import type { AABB } from "../common/records.ts";
+import { BodyType } from "../common/types.ts";
+import { type BroadStore, createBroadStore } from "../kernel/broadcolumns.ts";
+import { kernel } from "../kernel/kernel.ts";
+import type { DynamicTree } from "../kernel/treecolumns.ts";
+import * as tree from "../kernel/treecolumns.ts";
+import { createSet, type HashSet } from "./table.ts";
 
 // Store the proxy type in the lower 2 bits of the key; the remaining bits hold the proxy id.
 export const proxyType = (key: number): BodyType => (key & 3) as BodyType;

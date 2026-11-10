@@ -1,9 +1,9 @@
-import type { Vec3 } from "../common/records";
-import { PGJ_IMPULSE, PGJ_VELOCITY } from "../kernel/columns";
-import { readJointFloat } from "../kernel/jointcolumns";
-import { kernel } from "../kernel/kernel";
-import type { WorldState } from "../world/world";
-import { finishJointCreation, type Joint, type JointDef, writeJointDefinition } from "./joint";
+import type { Vec3 } from "../common/records.ts";
+import { PGJ_IMPULSE, PGJ_VELOCITY } from "../kernel/columns.ts";
+import { readJointFloat } from "../kernel/jointcolumns.ts";
+import { kernel } from "../kernel/kernel.ts";
+import type { WorldState } from "../world/world.ts";
+import { finishJointCreation, type Joint, type JointDef, writeJointDefinition } from "./joint.ts";
 
 /** b3PogoJointDef, with resolved body handles. */
 export type PogoJointDef = {

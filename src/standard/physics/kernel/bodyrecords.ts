@@ -1,6 +1,6 @@
-import type { Mat3 } from "../common/records";
-import type { WorldState } from "../world/world";
-import { simOffset } from "./bodycolumns";
+import type { Mat3 } from "../common/records.ts";
+import type { WorldState } from "../world/world.ts";
+import { simOffset } from "./bodycolumns.ts";
 
 export const BODY_RECORD_STRIDE = 21;
 export const BodyField = {

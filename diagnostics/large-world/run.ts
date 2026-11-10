@@ -2,8 +2,8 @@ import { copyFileSync, mkdtempSync, symlinkSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { shallot } from "@dylanebert/shallot/bun";
-import { removeTestDirectory } from "../../scripts/test-directory";
-import { nativeBinary, run } from "../box3d-parity/native";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
+import { nativeBinary, run } from "../box3d-parity/native.ts";
 
 // bun diagnostics/large-world/run.ts [grid count, default 1000] [cpu|draw|shared] [workerCount: 1 shared, 0 unshared]
 // At Box3D's grid of 1000, with BOX3D set, native.c runs the same scene first and each phase is

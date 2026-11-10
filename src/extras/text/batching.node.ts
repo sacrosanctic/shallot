@@ -6,8 +6,8 @@ import { Transform } from "../../core/transform";
 import { probeBuffer } from "../../engine/runtime";
 import { drawLine, LinesPlugin } from "../lines";
 import { isolationFont } from "./font.fixture";
-import { GLYPH_AT, GLYPH_BYTES, GLYPH_FLOATS } from "./glyph";
-import { internText, registerFont, Text, TextPlugin, textStateKey } from "./index";
+import { GLYPH_AT, GLYPH_BYTES, GLYPH_FLOATS } from "./glyph.ts";
+import { internText, registerFont, Text, TextPlugin, textStateKey } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 let font = 0;

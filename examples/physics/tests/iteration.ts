@@ -1,5 +1,5 @@
 import type { World } from "@dylanebert/shallot";
-import { type Scene, scenes } from "../src/scenes";
+import { type Scene, scenes } from "../src/scenes.ts";
 
 export function advanceIteration(world: World, scene: Scene): void {
     const entry: {

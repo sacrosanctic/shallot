@@ -16,7 +16,7 @@ import {
     Transform,
 } from "@dylanebert/shallot";
 import { Orbit, OrbitPlugin } from "@dylanebert/shallot/extras";
-import { Posterize, PosterizePlugin } from "./posterize";
+import { Posterize, PosterizePlugin } from "./posterize.ts";
 export const Scene = { create: () => ({ camera: -1 }) };
 export const ScenePlugin: Plugin = {
     name: "LowResScene",

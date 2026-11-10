@@ -1,6 +1,6 @@
 import type { Resource } from "../../engine";
-import { PhysicsAssets } from "./assets";
-import type { SurfaceMaterial } from "./shape";
+import { PhysicsAssets } from "./assets.ts";
+import type { SurfaceMaterial } from "./shape.ts";
 
 type Vec3 = [number, number, number];
 

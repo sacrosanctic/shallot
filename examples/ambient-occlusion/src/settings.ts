@@ -1,5 +1,5 @@
 import { ScreenSpaceAmbientOcclusion, type World } from "@dylanebert/shallot";
-import { Scene } from "./scene";
+import { Scene } from "./scene.ts";
 
 export const settings = [
     { field: "radius", label: "Radius", min: 0.1, max: 8, step: 0.0001, value: 0.7285 },

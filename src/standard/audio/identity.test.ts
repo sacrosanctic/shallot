@@ -2,7 +2,7 @@ import { expect, test } from "bun:test";
 import { AudioOutput, Clips, play, registerClip, Sound } from "../../core/audio";
 import { Devices } from "../../core/input";
 import { World } from "../../engine";
-import { AudioRuntime, loadClip, reconcileAudio } from "./runtime";
+import { AudioRuntime, loadClip, reconcileAudio } from "./runtime.ts";
 
 test("clips with the same display label keep distinct handles and PCM for an existing Sound", () => {
     const world = new World();

@@ -1,5 +1,5 @@
-import type { WorldState } from "../world/world";
-import { kernel } from "./kernel";
+import type { WorldState } from "../world/world.ts";
+import { kernel } from "./kernel.ts";
 
 function active(world: WorldState) {
     const k = kernel(world.ecsState);

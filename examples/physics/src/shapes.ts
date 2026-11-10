@@ -23,9 +23,9 @@ import {
     StepPhysicsSystem,
 } from "@dylanebert/shallot/standard/physics";
 import conveyorData from "./conveyor.json" with { type: "json" };
-import { decodeMesh } from "./mesh-data";
-import { RestitutionPlugin } from "./restitution";
-import type { Controls } from "./scenes";
+import { decodeMesh } from "./mesh-data.ts";
+import { RestitutionPlugin } from "./restitution.ts";
+import type { Controls } from "./scenes.ts";
 
 const conveyor = decodeMesh(conveyorData);
 const f = Math.fround;

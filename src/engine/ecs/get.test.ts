@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { entity, f16, f32, u32, vec2, vec3, vec4, World } from "./index";
+import { entity, f16, f32, u32, vec2, vec3, vec4, World } from "./index.ts";
 
 const Record = {
     scalar: f32,

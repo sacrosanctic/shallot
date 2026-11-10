@@ -1,8 +1,8 @@
-import type { BodyType, Filter } from "../common/types";
-import type { WorldState } from "../world/world";
-import { BodyField, bodyField } from "./bodyrecords";
-import { kernel } from "./kernel";
-import { SHAPE_STRIDE } from "./shapecolumns";
+import type { BodyType, Filter } from "../common/types.ts";
+import type { WorldState } from "../world/world.ts";
+import { BodyField, bodyField } from "./bodyrecords.ts";
+import { kernel } from "./kernel.ts";
+import { SHAPE_STRIDE } from "./shapecolumns.ts";
 
 export function bodyType(world: WorldState, id: number): BodyType {
     return bodyField(world, id, BodyField.type) as BodyType;

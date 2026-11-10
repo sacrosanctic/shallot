@@ -2,7 +2,7 @@ import { setDefaultTimeout, test } from "bun:test";
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { buildProjectDeclaration } from "./project-declaration";
+import { buildProjectDeclaration } from "./project-declaration.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

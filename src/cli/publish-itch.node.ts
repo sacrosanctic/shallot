@@ -10,12 +10,12 @@ import {
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { bunChild } from "../../scripts/bun-child";
-import { publishTestChromium } from "../../scripts/publish-browser";
-import { publishTestButler } from "../../scripts/publish-butler";
-import { removeTestDirectory } from "../../scripts/test-directory";
+import { bunChild } from "../../scripts/bun-child.ts";
+import { publishTestChromium } from "../../scripts/publish-browser.ts";
+import { publishTestButler } from "../../scripts/publish-butler.ts";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
 import { buildWeb, contentType } from "../project";
-import { publishAssets } from "./publish";
+import { publishAssets } from "./publish.ts";
 import {
     BUTLER_VERSION,
     butlerPlatform,
@@ -23,8 +23,8 @@ import {
     ITCH_HTML_SCRIPT,
     runButler,
     waitForItchBuild,
-} from "./publish-itch";
-import { verifyPublishedGame } from "./publish-verify";
+} from "./publish-itch.ts";
+import { verifyPublishedGame } from "./publish-verify.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const repo = resolve(import.meta.dir, "../..");

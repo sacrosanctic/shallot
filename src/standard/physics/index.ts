@@ -1,6 +1,6 @@
 export type { DebugDraw, ShapeProxy } from "./api";
 export { defaultDebugDraw } from "./api";
-export { Character, CharacterPlugin, GroundState } from "./character";
+export { Character, CharacterPlugin, GroundState } from "./character.ts";
 export {
     collideCapsuleAndSphere,
     collideCapsules,
@@ -16,14 +16,14 @@ export {
     type LocalManifoldPoint,
     type SATCache,
     SeparatingFeature,
-} from "./collision/manifold";
+} from "./collision/manifold.ts";
 export {
     type CollisionPlane,
     clipVector,
     type PlaneResult,
     type PlaneSolverResult,
     solvePlanes,
-} from "./collision/mover";
+} from "./collision/mover.ts";
 export {
     type DistanceInput,
     type DistanceOutput,
@@ -40,9 +40,9 @@ export {
     type TOIOutput,
     TOIState,
     timeOfImpact,
-} from "./collision/queries";
-export type { QueryFilter } from "./common/types";
-export type { PhysicsContactData, PhysicsManifold, PhysicsManifoldPoint } from "./contact";
+} from "./collision/queries.ts";
+export type { QueryFilter } from "./common/types.ts";
+export type { PhysicsContactData, PhysicsManifold, PhysicsManifoldPoint } from "./contact.ts";
 export type {
     PhysicsContactEvent,
     PhysicsContactPair,
@@ -51,16 +51,16 @@ export type {
     PhysicsHitEvent,
     PhysicsJointEvent,
     PhysicsSensorEvent,
-} from "./events";
-export { PhysicsEvents } from "./events";
-export { hull2D, type Point2D, simplifyHull2D } from "./hull2d";
+} from "./events.ts";
+export { PhysicsEvents } from "./events.ts";
+export { hull2D, type Point2D, simplifyHull2D } from "./hull2d.ts";
 export {
     createPhysicsMesh,
     destroyPhysicsMesh,
     type PhysicsMeshData,
     type PhysicsMeshNode,
-} from "./mesh";
-export { computeCosSin, rotationFromAxisAngle } from "./rotation";
+} from "./mesh.ts";
+export { computeCosSin, rotationFromAxisAngle } from "./rotation.ts";
 export {
     applyAngularImpulse,
     applyForce,
@@ -124,18 +124,18 @@ export {
     setTransform,
     stepPhysics,
     timeOfImpactBodyMover,
-} from "./runtime";
-export { shapeEdges, shapeMesh } from "./shape-mesh";
+} from "./runtime.ts";
+export { shapeEdges, shapeMesh } from "./shape-mesh.ts";
 export {
     cloneAndTransformHull,
     createCylinder,
     createHull,
     makeBoxHull,
     makeScaledBoxHull,
-} from "./shapes/build-hull";
-export type { Capsule, MassData } from "./shapes/geometry";
-export type { HullData } from "./shapes/hull";
-export { computeCapsuleMass, computeHullMass } from "./shapes/mass";
+} from "./shapes/build-hull.ts";
+export type { Capsule, MassData } from "./shapes/geometry.ts";
+export type { HullData } from "./shapes/hull.ts";
+export { computeCapsuleMass, computeHullMass } from "./shapes/mass.ts";
 export {
     createPhysicsTree,
     createPhysicsTreeProxy,
@@ -157,13 +157,13 @@ export {
     rebuildPhysicsTree,
     savePhysicsTree,
     validatePhysicsTree,
-} from "./tree";
-export type { PhysicsWorldCounters } from "./world/counters";
-export type { StepProfile } from "./world/profile";
+} from "./tree.ts";
+export type { PhysicsWorldCounters } from "./world/counters.ts";
+export type { StepProfile } from "./world/profile.ts";
 export {
     PhysicsWorldDefinition,
     type PhysicsWorldDefinitionConfig,
     type WorldCustomFilterCallback,
     type WorldMixCallback,
     type WorldPreSolveCallback,
-} from "./world-definition";
+} from "./world-definition.ts";

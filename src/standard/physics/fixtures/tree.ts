@@ -13,7 +13,7 @@ import {
     rebuildPhysicsTree,
     savePhysicsTree,
     validatePhysicsTree,
-} from "../index";
+} from "../index.ts";
 
 export function treeBox(i: number) {
     const x = (i * 7) % 19,

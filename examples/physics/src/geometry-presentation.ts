@@ -1,7 +1,7 @@
 import { ShapeKind, type World } from "@dylanebert/shallot";
 import { shapeEdges } from "@dylanebert/shallot/standard/physics";
-import { Geometry } from "./geometry";
-import { JOINT_INK, JOINT_LINE } from "./joint-presentation";
+import { Geometry } from "./geometry.ts";
+import { JOINT_INK, JOINT_LINE } from "./joint-presentation.ts";
 
 type Point = [number, number, number];
 const point = (v: { x: number; y: number; z: number }): Point => [v.x, v.y, v.z];

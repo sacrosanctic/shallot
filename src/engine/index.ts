@@ -95,7 +95,7 @@ export {
     UnsupportedError,
     validateGpu,
 } from "./runtime";
-export { resizeViewport, type Viewport, Viewports } from "./runtime/viewport";
+export { resizeViewport, type Viewport, Viewports } from "./runtime/viewport.ts";
 export {
     clamp,
     composeMat4,

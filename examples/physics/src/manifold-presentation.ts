@@ -1,8 +1,8 @@
 import { ShapeKind, type World } from "@dylanebert/shallot";
 import { type HullData, shapeEdges, shapeMesh } from "@dylanebert/shallot/standard/physics";
-import { drawInkPoint, INK } from "./ink-presentation";
-import { JOINT_LINE } from "./joint-presentation";
-import { type ManifoldPose, ManifoldSample, manifoldRotate, manifoldTransform } from "./manifold";
+import { drawInkPoint, INK } from "./ink-presentation.ts";
+import { JOINT_LINE } from "./joint-presentation.ts";
+import { type ManifoldPose, ManifoldSample, manifoldRotate, manifoldTransform } from "./manifold.ts";
 
 type Point = [number, number, number];
 const point = (v: { x: number; y: number; z: number }): Point => [v.x, v.y, v.z];

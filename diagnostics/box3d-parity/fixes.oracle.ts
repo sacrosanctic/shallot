@@ -1,14 +1,14 @@
 import { expect, test } from "bun:test";
 import { BodyType } from "../../src/core/physics";
 import { init } from "../../src/standard/physics/api";
-import { BodyField, bodyField } from "../../src/standard/physics/kernel/bodyrecords";
-import { simFlags } from "../../src/standard/physics/kernel/bodycolumns";
-import { createSphereShape } from "../../src/standard/physics/shapes/shape";
-import { createFilterJoint, defaultJointDef } from "../../src/standard/physics/solver/joint";
-import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld, testShapeDef } from "../../src/standard/physics/testing";
-import { BodyFlags, BodyProperty, bodyGetProperty, bodySetProperty, getBodySim } from "../../src/standard/physics/world/body";
-import { hashWorldState } from "../../src/standard/physics/world/hash";
-import { nativeSseOutput } from "./native-evidence";
+import { BodyField, bodyField } from "../../src/standard/physics/kernel/bodyrecords.ts";
+import { simFlags } from "../../src/standard/physics/kernel/bodycolumns.ts";
+import { createSphereShape } from "../../src/standard/physics/shapes/shape.ts";
+import { createFilterJoint, defaultJointDef } from "../../src/standard/physics/solver/joint.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld, testShapeDef } from "../../src/standard/physics/testing.ts";
+import { BodyFlags, BodyProperty, bodyGetProperty, bodySetProperty, getBodySim } from "../../src/standard/physics/world/body.ts";
+import { hashWorldState } from "../../src/standard/physics/world/hash.ts";
+import { nativeSseOutput } from "./native-evidence.ts";
 
 await init(undefined, { threads: 0 });
 const native = nativeSseOutput("fixes.c", "").trim().split("\n");

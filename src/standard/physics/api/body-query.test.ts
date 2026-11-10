@@ -1,12 +1,12 @@
 import { expect, test } from "bun:test";
-import type { ShapeProxy } from "../collision/distance";
-import type { Pos, Transform, Vec3 } from "../common/records";
-import { defaultQueryFilter } from "../common/types";
-import { BodyField, bodyField } from "../kernel/bodyrecords";
-import { setQueryCallback } from "../kernel/kernel";
-import { queryColumns } from "../kernel/querycolumns";
-import { createSphereShape } from "../shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing";
+import type { ShapeProxy } from "../collision/distance.ts";
+import type { Pos, Transform, Vec3 } from "../common/records.ts";
+import { defaultQueryFilter } from "../common/types.ts";
+import { BodyField, bodyField } from "../kernel/bodyrecords.ts";
+import { setQueryCallback } from "../kernel/kernel.ts";
+import { queryColumns } from "../kernel/querycolumns.ts";
+import { createSphereShape } from "../shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
 
 const zero = { x: 0, y: 0, z: 0 };
 const placement = { p: { x: 4, y: 0, z: 0 }, q: { v: zero, s: 1 } };

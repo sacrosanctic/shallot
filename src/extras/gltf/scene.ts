@@ -17,17 +17,17 @@ import {
     preparePipelines,
     StandardMaterial,
 } from "../../standard/rendering";
-import type { GltfAnimation, GltfNode, GltfNodePose } from "./animation";
-import type { GltfScene, GltfSkeleton, GltfSkin } from "./gltf";
-import { initializeGltfGlobals, poseKernel, registerGltfKernel, writeKernelPose } from "./kernel";
-import { loadGltf } from "./load";
+import type { GltfAnimation, GltfNode, GltfNodePose } from "./animation.ts";
+import type { GltfScene, GltfSkeleton, GltfSkin } from "./gltf.ts";
+import { initializeGltfGlobals, poseKernel, registerGltfKernel, writeKernelPose } from "./kernel.ts";
+import { loadGltf } from "./load.ts";
 import {
     MorphedMesh,
     SkinnedMaterial,
     SkinnedMesh,
     SkinPalette,
     VertexDeformation,
-} from "./skinning";
+} from "./skinning.ts";
 
 export interface GltfPrimitive {
     readonly mesh: MeshHandle;

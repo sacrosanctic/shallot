@@ -10,9 +10,9 @@ import {
 import { attachTexture, captureTexture } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { AppPlugin } from "./app";
-import { Scene, ScenePlugin, setOcclusion } from "./scene";
-import { setQuality, setSetting, settings } from "./settings";
+import { AppPlugin } from "./app.ts";
+import { Scene, ScenePlugin, setOcclusion } from "./scene.ts";
+import { setQuality, setSetting, settings } from "./settings.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("three unit cubes meet around a moving 0.4 sphere and High AO camera", async () => {

@@ -3,7 +3,7 @@ import { builtinModules } from "node:module";
 import { relative, resolve, sep } from "node:path";
 import { parse } from "@babel/parser";
 import { Glob } from "bun";
-import { normalizePath } from "../src/project/paths";
+import { normalizePath } from "../src/project/paths.ts";
 
 const GAME_TIERS = ["engine", "core", "standard", "extras"] as const;
 const TIER_ORDER = new Map(GAME_TIERS.map((tier, index) => [tier, index]));

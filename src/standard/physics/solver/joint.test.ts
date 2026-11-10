@@ -2,15 +2,15 @@
 // kernel creation, ordering, filtering, solver response and output are exercised over state and IDs.
 import { expect, test } from "bun:test";
 import gold from "../../../../crates/physics/tests/reader_regressions.gold.json";
-import { froundConfig } from "../common/config";
-import type { Vec3 } from "../common/records";
-import { BodyType, type WorldDef } from "../common/types";
-import { readStateAngularVelocity } from "../kernel/bodycolumns";
-import { JointField, jointField, setJointField } from "../kernel/jointrecords";
-import { quaternion, vector } from "../kernel/math";
-import { makeBoxHull, makeCubeHull } from "../shapes/build-hull";
-import { createHullShape, createSphereShape } from "../shapes/shape";
-import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint";
+import { froundConfig } from "../common/config.ts";
+import type { Vec3 } from "../common/records.ts";
+import { BodyType, type WorldDef } from "../common/types.ts";
+import { readStateAngularVelocity } from "../kernel/bodycolumns.ts";
+import { JointField, jointField, setJointField } from "../kernel/jointrecords.ts";
+import { quaternion, vector } from "../kernel/math.ts";
+import { makeBoxHull, makeCubeHull } from "../shapes/build-hull.ts";
+import { createHullShape, createSphereShape } from "../shapes/shape.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint.ts";
 import {
     createFilterJoint,
     defaultJointDef,
@@ -20,29 +20,29 @@ import {
     type JointDef,
     JointType,
     jointIsValid,
-} from "../solver/joint";
-import { createMotorJoint, defaultMotorJointDef } from "../solver/motorJoint";
-import { createParallelJoint, defaultParallelJointDef } from "../solver/parallelJoint";
+} from "../solver/joint.ts";
+import { createMotorJoint, defaultMotorJointDef } from "../solver/motorJoint.ts";
+import { createParallelJoint, defaultParallelJointDef } from "../solver/parallelJoint.ts";
 import {
     createPrismaticJoint,
     defaultPrismaticJointDef,
     prismaticJointSpeed,
-} from "../solver/prismaticJoint";
-import { createRevoluteJoint, defaultRevoluteJointDef } from "../solver/revoluteJoint";
-import { createSphericalJoint, defaultSphericalJointDef } from "../solver/sphericalJoint";
-import { createWeldJoint, defaultWeldJointDef } from "../solver/weldJoint";
-import { createWheelJoint, defaultWheelJointDef } from "../solver/wheelJoint";
+} from "../solver/prismaticJoint.ts";
+import { createRevoluteJoint, defaultRevoluteJointDef } from "../solver/revoluteJoint.ts";
+import { createSphericalJoint, defaultSphericalJointDef } from "../solver/sphericalJoint.ts";
+import { createWeldJoint, defaultWeldJointDef } from "../solver/weldJoint.ts";
+import { createWheelJoint, defaultWheelJointDef } from "../solver/wheelJoint.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { bodyGetTransform, bodyIsAwake, getBodyState } from "../world/body";
+} from "../testing.ts";
+import { bodyGetTransform, bodyIsAwake, getBodyState } from "../world/body.ts";
 import eventClaims from "../world/ecs-event-claims.gold.json";
-import type { WorldState } from "../world/world";
-import { worldCounters } from "../world/world";
+import type { WorldState } from "../world/world.ts";
+import { worldCounters } from "../world/world.ts";
 
 const len = (v: Vec3): number => Math.hypot(v.x, v.y, v.z);
 const frame = (x = 0, y = 0, z = 0) => ({ p: { x, y, z }, q: { v: { x: 0, y: 0, z: 0 }, s: 1 } });

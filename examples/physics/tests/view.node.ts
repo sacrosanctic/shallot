@@ -16,13 +16,13 @@ import {
     setAwake,
 } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { DynamicMoverState } from "../src/dynamic-mover-scene";
-import { EventSample, EventSamplePlugin } from "../src/events";
-import { GeometricMoverState } from "../src/geometric-mover";
-import { allManifoldNames } from "../src/manifold";
-import { scenePresentation } from "../src/presentation";
-import { RigidBodyState } from "../src/rigid-body";
-import { MotorizedJoint } from "../src/roles";
+import { DynamicMoverState } from "../src/dynamic-mover-scene.ts";
+import { EventSample, EventSamplePlugin } from "../src/events.ts";
+import { GeometricMoverState } from "../src/geometric-mover.ts";
+import { allManifoldNames } from "../src/manifold.ts";
+import { scenePresentation } from "../src/presentation.ts";
+import { RigidBodyState } from "../src/rigid-body.ts";
+import { MotorizedJoint } from "../src/roles.ts";
 import {
     categories,
     changeControl,
@@ -31,9 +31,9 @@ import {
     enabledControls,
     type Scene,
     scenes,
-} from "../src/scenes";
-import { SensorSample } from "../src/sensor";
-import { shapeMaterial } from "../src/shape-color";
+} from "../src/scenes.ts";
+import { SensorSample } from "../src/sensor.ts";
+import { shapeMaterial } from "../src/shape-color.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

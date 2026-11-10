@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, Time } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { drawingHistory } from "../src/drawing-history";
+import { drawingHistory } from "../src/drawing-history.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

@@ -2,8 +2,8 @@ import { expect, test } from "bun:test";
 import { dirname, resolve, win32 } from "node:path";
 import { fileURLToPath } from "node:url";
 import { attribute, originalPosition, prepareSamplingSession, subjectSite, warmCollects, type ProfileNode } from "./allocation-sampler.mjs";
-import { isAdmittedAllocationSite } from "./allocation-admissions";
-import { gpuAllocationExpressions } from "../../src/engine/runtime/allocation-site";
+import { isAdmittedAllocationSite } from "./allocation-admissions.ts";
+import { gpuAllocationExpressions } from "../../src/engine/runtime/allocation-site.ts";
 import {
     type AllocationSample,
     allocatesNothing,
@@ -11,8 +11,8 @@ import {
     windowBytes,
     tracedSample,
     TIER_FLAGS,
-} from "./allocation";
-import { normalizePath } from "../../src/project/paths";
+} from "./allocation.ts";
+import { normalizePath } from "../../src/project/paths.ts";
 
 test("a sampling session starts after one collected and drained subject step", async () => {
     const order: string[] = [];

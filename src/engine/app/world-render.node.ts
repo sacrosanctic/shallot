@@ -10,7 +10,7 @@ import {
     MeshRenderPlugin,
     StandardRenderingPlugin,
 } from "../../standard/rendering";
-import { MeshDrawBuffers, meshInstanceTable } from "../../standard/rendering/preprocess";
+import { MeshDrawBuffers, meshInstanceTable } from "../../standard/rendering/preprocess.ts";
 import { probeBuffer } from "../runtime";
 
 setDefaultTimeout(TIMEOUT.node);

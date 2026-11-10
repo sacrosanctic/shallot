@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import * as engine from "../../engine";
 import { UnsupportedError } from "../../engine";
-import { requestGPU } from "../../engine/runtime/gpu";
-import { shallotDark } from "./index";
+import { requestGPU } from "../../engine/runtime/gpu.ts";
+import { shallotDark } from "./index.ts";
 
 for (const [kind, heading] of [
     ["validation", "Something went wrong"],

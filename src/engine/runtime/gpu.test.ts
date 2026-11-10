@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { checkPipelineStorageBindings, countPipelineStorageBindings, requestGPU } from "./gpu";
+import { checkPipelineStorageBindings, countPipelineStorageBindings, requestGPU } from "./gpu.ts";
 
 const storage = (visibility: number, type: "storage" | "read-only-storage" = "storage") =>
     ({ visibility, buffer: { type } }) as GPUBindGroupLayoutEntry;

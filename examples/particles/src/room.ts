@@ -21,7 +21,7 @@ import {
     type World,
 } from "@dylanebert/shallot";
 import { DiagnosticsOverlayPlugin } from "@dylanebert/shallot/extras";
-import { LocalPlayer, Player, PlayerPlugin } from "./player";
+import { LocalPlayer, Player, PlayerPlugin } from "./player.ts";
 
 export const Room: Resource<{ camera: number; player: number }> = {
     create: () => ({ camera: 0, player: 0 }),

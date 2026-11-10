@@ -1,5 +1,5 @@
 import type { World } from "../../../engine";
-import { type KernelState, kernel, kernelState, kernelViewKey, kernelViewsCurrent } from "./kernel";
+import { type KernelState, kernel, kernelState, kernelViewKey, kernelViewsCurrent } from "./kernel.ts";
 
 type ViewOwner = { ensureViews(): void };
 type ViewFields = { viewOwner: ViewOwner; viewData: Record<string, unknown> };

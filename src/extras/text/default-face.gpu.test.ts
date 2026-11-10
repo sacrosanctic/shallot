@@ -3,9 +3,9 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { attachTexture, Camera, captureTexture } from "../../core/rendering";
 import { Transform } from "../../core/transform";
-import { DEFAULT_FONT } from "./font";
+import { DEFAULT_FONT } from "./font.ts";
 import { isolationFont } from "./font.fixture";
-import { internText, registerFont, Text, TextPlugin } from "./index";
+import { internText, registerFont, Text, TextPlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 let defaultFont = 0;

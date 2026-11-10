@@ -1,9 +1,9 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { DETAIL_SALT, DetailKind, HASH_MIX, HASH_X, HASH_Z } from "./detail";
-import type { heightfield } from "./gpu-noise";
-import { SEED, type TerrainConfig } from "./terrain-data";
+import { DETAIL_SALT, DetailKind, HASH_MIX, HASH_X, HASH_Z } from "./detail.ts";
+import type { heightfield } from "./gpu-noise.ts";
+import { SEED, type TerrainConfig } from "./terrain-data.ts";
 
 const layout = tgpu.bindGroupLayout({
     records: { storage: d.arrayOf(d.vec2u), access: "mutable" },

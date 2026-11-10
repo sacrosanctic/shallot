@@ -1,6 +1,6 @@
 import type { World } from "@dylanebert/shallot";
 import { Bloom } from "@dylanebert/shallot/bloom";
-import { Scene } from "./scene";
+import { Scene } from "./scene.ts";
 
 export const settings = [
     { field: "intensity", label: "Intensity", min: 0, max: 1, value: 0.15 },

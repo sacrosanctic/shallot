@@ -11,9 +11,9 @@ import {
     TonemappingMethod,
     Views,
 } from "../../core/rendering";
-import { imageTextures } from "../../core/rendering/image";
-import { tonemappingStateKey } from "../../core/rendering/tonemapping-state";
-import { offscreenTexture } from "../../core/rendering/view";
+import { imageTextures } from "../../core/rendering/image.ts";
+import { tonemappingStateKey } from "../../core/rendering/tonemapping-state.ts";
+import { offscreenTexture } from "../../core/rendering/view.ts";
 import { Transform } from "../../core/transform";
 import { precompile, type World } from "../../engine";
 import { probeTexture } from "../../engine/runtime";

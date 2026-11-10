@@ -6,10 +6,10 @@ import {
     expectAdapterNotice,
     gpuApps,
 } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import type { createApp, Plugin, System, World } from "../../engine";
 import { rawDevice } from "../../engine/runtime";
-import { classifyAdapter } from "../../engine/runtime/adapter";
+import { classifyAdapter } from "../../engine/runtime/adapter.ts";
 import {
     MeshPreprocessSystem,
     MeshRenderPlugin,
@@ -24,7 +24,7 @@ import {
     captureTexture,
 } from "../rendering";
 import { Transform } from "../transform";
-import { type Mesh, Meshes, type MeshHandle, MeshInstance, MeshPlugin } from "./index";
+import { type Mesh, Meshes, type MeshHandle, MeshInstance, MeshPlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

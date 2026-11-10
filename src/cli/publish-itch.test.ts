@@ -4,9 +4,9 @@ import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { deflateRawSync } from "node:zlib";
 import * as projectBuild from "../project";
-import { parseCliArgs } from "./index";
-import { preflightPublish, publishProject, readPublishLink } from "./publish";
-import * as itch from "./publish-itch";
+import { parseCliArgs } from "./index.ts";
+import { preflightPublish, publishProject, readPublishLink } from "./publish.ts";
+import * as itch from "./publish-itch.ts";
 import {
     type ButlerResult,
     butlerPath,
@@ -21,8 +21,8 @@ import {
     itchPush,
     liveItchBuild,
     waitForItchBuild,
-} from "./publish-itch";
-import * as verify from "./publish-verify";
+} from "./publish-itch.ts";
+import * as verify from "./publish-verify.ts";
 
 const recorded = JSON.parse(
     readFileSync(join(import.meta.dir, "fixtures/publish-itch.json"), "utf8"),

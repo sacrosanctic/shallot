@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { expectError } from "../../../scripts/test-console";
+import { expectError } from "../../../scripts/test-console.ts";
 import { MeshInstance } from "../../core/mesh";
 import {
     attachCanvas,
@@ -25,7 +25,7 @@ import {
     materialType,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 // A filtering binding handed a comparison sampler fails bind group validation in the frame's draw.

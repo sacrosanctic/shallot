@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { faces, height } from "./noise";
+import { faces, height } from "./noise.ts";
 import {
     capacity,
     chunks,
@@ -10,7 +10,7 @@ import {
     slotCount,
     type TerrainConfig,
     voxelScale,
-} from "./terrain-data";
+} from "./terrain-data.ts";
 
 const config: TerrainConfig = { chunkSize: 8, viewDistance: 4, height: 16, relief: 4 };
 test("voxel scale is one inside, zero outside, and decreases smoothly through the annulus", () => {

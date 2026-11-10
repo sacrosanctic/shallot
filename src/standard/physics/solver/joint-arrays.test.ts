@@ -1,18 +1,18 @@
 import { expect, test } from "bun:test";
-import { restore, snapshot } from "../api/snapshot";
-import { NULL_INDEX } from "../common/array";
-import { GRAPH_COLOR_COUNT, OVERFLOW_INDEX, SetType } from "../common/constants";
-import { BodyType } from "../common/types";
-import { DJ_IMPULSE, DJ_MOTOR_IMPULSE, J_JOINT_ID, JOINT_STRIDE } from "../kernel/columns";
-import { jointArrayCount, jointArrayKey, jointAt, writeJointFloat } from "../kernel/jointcolumns";
-import { JointField, jointField } from "../kernel/jointrecords";
-import { kernel } from "../kernel/kernel";
-import { solverSetCount } from "../kernel/solversetcolumns";
-import { createTestBody, createTestWorld, destroyTestWorld } from "../testing";
-import { bodySetAwake, bodySetType } from "../world/body";
-import type { WorldState } from "../world/world";
-import { createDistanceJoint, defaultDistanceJointDef } from "./distanceJoint";
-import { defaultJointDef, destroyJointInternal } from "./joint";
+import { restore, snapshot } from "../api/snapshot.ts";
+import { NULL_INDEX } from "../common/array.ts";
+import { GRAPH_COLOR_COUNT, OVERFLOW_INDEX, SetType } from "../common/constants.ts";
+import { BodyType } from "../common/types.ts";
+import { DJ_IMPULSE, DJ_MOTOR_IMPULSE, J_JOINT_ID, JOINT_STRIDE } from "../kernel/columns.ts";
+import { jointArrayCount, jointArrayKey, jointAt, writeJointFloat } from "../kernel/jointcolumns.ts";
+import { JointField, jointField } from "../kernel/jointrecords.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { solverSetCount } from "../kernel/solversetcolumns.ts";
+import { createTestBody, createTestWorld, destroyTestWorld } from "../testing.ts";
+import { bodySetAwake, bodySetType } from "../world/body.ts";
+import type { WorldState } from "../world/world.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "./distanceJoint.ts";
+import { defaultJointDef, destroyJointInternal } from "./joint.ts";
 import { jointIds } from "./joint.fixture";
 
 function distanceJoint(

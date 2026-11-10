@@ -3,7 +3,7 @@ import * as d from "typegpu/data";
 import { pack2x16unorm } from "typegpu/std";
 import { World } from "../../engine";
 import { packUnorm2 } from "../../engine/utils";
-import { Meshes, packMeshStreams, type QuantStreams } from "./mesh";
+import { Meshes, packMeshStreams, type QuantStreams } from "./mesh.ts";
 import {
     decodeColor,
     decodeTangent,
@@ -11,7 +11,7 @@ import {
     encodeTangent,
     MeshQuant,
     packTangent,
-} from "./vertex";
+} from "./vertex.ts";
 
 // Oct x has error <= 0.5/32767; sign-biased/remapped y <= 2/32767.
 // Unfolding is sqrt(2)-Lipschitz in L1, and normalization costs at most

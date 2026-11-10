@@ -1,8 +1,8 @@
 import { afterAll, beforeAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { bunChild } from "./bun-child";
-import { packedInstall } from "./packed-install-spawn";
-import { removeTestDirectory } from "./test-directory";
+import { bunChild } from "./bun-child.ts";
+import { packedInstall } from "./packed-install-spawn.ts";
+import { removeTestDirectory } from "./test-directory.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

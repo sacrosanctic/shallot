@@ -12,9 +12,9 @@ import {
 } from "@dylanebert/shallot";
 import { Orbit, OrbitPlugin } from "@dylanebert/shallot/extras";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { DrivingPlugin, DrivingState } from "../src/driving";
-import { createScene } from "../src/scenes";
-import { setSceneCamera } from "../src/view";
+import { DrivingPlugin, DrivingState } from "../src/driving.ts";
+import { createScene } from "../src/scenes.ts";
+import { setSceneCamera } from "../src/view.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

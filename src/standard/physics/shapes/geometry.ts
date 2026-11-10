@@ -1,8 +1,8 @@
-import type { Mat3, Vec3 } from "../common/records";
+import type { Mat3, Vec3 } from "../common/records.ts";
 
 const f32 = Math.fround;
 
-export { computeCapsuleAABB, computeSphereAABB } from "./read-geometry";
+export { computeCapsuleAABB, computeSphereAABB } from "./read-geometry.ts";
 
 /** Mass, local center of mass, and inertia about that center (b3MassData). */
 export type MassData = {

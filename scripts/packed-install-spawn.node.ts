@@ -12,9 +12,9 @@ import {
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { bunChild } from "./bun-child";
-import { packedInstall, spawnPackedInstall } from "./packed-install-spawn";
-import { removeTestDirectory } from "./test-directory";
+import { bunChild } from "./bun-child.ts";
+import { packedInstall, spawnPackedInstall } from "./packed-install-spawn.ts";
+import { removeTestDirectory } from "./test-directory.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

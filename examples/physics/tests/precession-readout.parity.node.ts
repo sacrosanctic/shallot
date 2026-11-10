@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { BodySamplePlugin } from "../src/bodies";
-import { changeControl, controlValues, createScene, scenes } from "../src/scenes";
+import { BodySamplePlugin } from "../src/bodies.ts";
+import { changeControl, controlValues, createScene, scenes } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("Precession's read-only rows equal the native sample's averaged rates each step", async () => {

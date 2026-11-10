@@ -8,8 +8,8 @@ import {
     AudioRuntime,
     reconcileAudio,
     StandardAudioPlugin,
-} from "../../src/standard/audio/runtime";
-import { WORKLET_CODE } from "../../src/standard/audio/worklet";
+} from "../../src/standard/audio/runtime.ts";
+import { WORKLET_CODE } from "../../src/standard/audio/worklet.ts";
 
 const BLOCK = 128;
 const BLOCKS_PER_FRAME = 6;

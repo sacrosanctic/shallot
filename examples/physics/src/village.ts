@@ -23,9 +23,9 @@ import {
     SyncPhysicsConstraintsSystem,
 } from "@dylanebert/shallot/standard/physics";
 import building from "./building.json" with { type: "json" };
-import { decodeMesh } from "./mesh-data";
-import { add, GeometricMover, mul, sub, v } from "./mover";
-import { readPlayerControls } from "./player-controls";
+import { decodeMesh } from "./mesh-data.ts";
+import { add, GeometricMover, mul, sub, v } from "./mover.ts";
+import { readPlayerControls } from "./player-controls.ts";
 
 const f = Math.fround;
 const identity = (): [number, number, number, number] => [0, 0, 0, 1];

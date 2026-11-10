@@ -9,7 +9,7 @@
 import { spawnSync } from "node:child_process";
 import { resolve } from "node:path";
 import { Glob } from "bun";
-import { normalizePath } from "../../../src/project/paths";
+import { normalizePath } from "../../../src/project/paths.ts";
 
 const owner = resolve(import.meta.dir, "../../..");
 const files = Array.from(

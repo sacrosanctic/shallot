@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { init } from "./kernel";
-import { createProxy, createTree, destroyTree, query } from "./treecolumns";
+import { init } from "./kernel.ts";
+import { createProxy, createTree, destroyTree, query } from "./treecolumns.ts";
 
 await init(undefined, { threads: 0 });
 

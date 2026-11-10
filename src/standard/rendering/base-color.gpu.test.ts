@@ -13,14 +13,14 @@ import {
     DirectionalLight,
     Views,
 } from "../../core/rendering";
-import { imageTextures } from "../../core/rendering/image";
+import { imageTextures } from "../../core/rendering/image.ts";
 import { Transform } from "../../core/transform";
 import { lookAtRotation, precompile, type World } from "../../engine";
 import { probeBuffer } from "../../engine/runtime";
-import { loadGltfScene, poseGltfScene, spawnGltfScene } from "../../extras/gltf/scene";
-import { GltfPlugin, SkinnedMaterial } from "../../extras/gltf/skinning";
+import { loadGltfScene, poseGltfScene, spawnGltfScene } from "../../extras/gltf/scene.ts";
+import { GltfPlugin, SkinnedMaterial } from "../../extras/gltf/skinning.ts";
 import { skinningFixtureUrl } from "../../extras/gltf/skinning.fixture";
-import { sunShadowView } from "./atlas";
+import { sunShadowView } from "./atlas.ts";
 import {
     AlphaMode,
     applyPbrLighting,
@@ -34,8 +34,8 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./index";
-import { MeshDrawBuffers } from "./preprocess";
+} from "./index.ts";
+import { MeshDrawBuffers } from "./preprocess.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const Extended = extendedMaterial(Materials, {
@@ -90,7 +90,7 @@ async function depths(world: World, camera: number) {
     ).bytes;
 }
 const color = [0.2, 0.7, 0.4, 0.3] as const;
-const scenes: { camera: number; entity: number; reference: import("./index").MaterialHandle }[] =
+const scenes: { camera: number; entity: number; reference: import("./index.ts").MaterialHandle }[] =
     [];
 const apps = gpuApps(
     import.meta.path,

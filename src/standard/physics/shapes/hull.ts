@@ -1,10 +1,10 @@
-import type { AABB, Mat3, Plane, Vec3 } from "../common/records";
+import type { AABB, Mat3, Plane, Vec3 } from "../common/records.ts";
 
-export { computeHullAABB } from "./read-geometry";
+export { computeHullAABB } from "./read-geometry.ts";
 
-import { S_GEO_REFERENCE, SHAPE_STRIDE } from "../kernel/shapecolumns";
-import type { WorldState } from "../world/world";
-import { drawHull } from "./readgeometry";
+import { S_GEO_REFERENCE, SHAPE_STRIDE } from "../kernel/shapecolumns.ts";
+import type { WorldState } from "../world/world.ts";
+import { drawHull } from "./readgeometry.ts";
 
 /** A hull vertex: index of one half-edge with this vertex as origin (b3HullVertex). */
 export type HullVertex = { edge: number };

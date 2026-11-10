@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { World } from "../../engine";
-import { Fog } from "./index";
-import { FOG_FLOATS, FOG_PARAMS } from "./medium";
-import { packFog } from "./pack";
+import { Fog } from "./index.ts";
+import { FOG_FLOATS, FOG_PARAMS } from "./medium.ts";
+import { packFog } from "./pack.ts";
 
 test("fog packs coefficient extinction and scattering albedo independently of light intensity", () => {
     const world = new World();

@@ -15,9 +15,9 @@ import {
 import * as engine from "../../engine";
 import { probeBuffer, u32 } from "../../engine";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
-import { component } from "../../engine/ecs/component";
-import type { System } from "../../engine/ecs/scheduler";
-import { Time } from "../../engine/ecs/scheduler";
+import { component } from "../../engine/ecs/component.ts";
+import type { System } from "../../engine/ecs/scheduler.ts";
+import { Time } from "../../engine/ecs/scheduler.ts";
 import {
     StandardPhysicsPlugin,
     StepPhysicsSystem,
@@ -39,8 +39,8 @@ import {
     prepareGlobalTransformFrame,
     readRenderGlobalTransform,
     GlobalTransformHistory as TransformRuntime,
-} from "./global-transform";
-import { BeginFrameSystem } from "./substrate";
+} from "./global-transform.ts";
+import { BeginFrameSystem } from "./substrate.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

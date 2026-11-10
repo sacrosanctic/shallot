@@ -7,8 +7,8 @@ import {
     shapeCast,
     simplifyHull2D,
 } from "@dylanebert/shallot/standard/physics";
-import { box, identity, vec } from "./collision-debug";
-import type { Controls } from "./scenes";
+import { box, identity, vec } from "./collision-debug.ts";
+import type { Controls } from "./scenes.ts";
 
 const f = Math.fround;
 export const CollisionGeometry = {

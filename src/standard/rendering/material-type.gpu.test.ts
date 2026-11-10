@@ -26,7 +26,7 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const PixelMaterial = materialType({

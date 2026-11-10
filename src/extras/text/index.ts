@@ -37,15 +37,15 @@ import {
     ensureString,
     type GlyphAtlas,
     layoutText,
-} from "./atlas";
-import { DEFAULT_FONT, type Font, loadFont } from "./font";
-import { GLYPH_AT, GLYPH_BYTES, GLYPH_FLOATS, Glyph } from "./glyph";
-import { Justify } from "./justify";
+} from "./atlas.ts";
+import { DEFAULT_FONT, type Font, loadFont } from "./font.ts";
+import { GLYPH_AT, GLYPH_BYTES, GLYPH_FLOATS, Glyph } from "./glyph.ts";
+import { Justify } from "./justify.ts";
 
-export { Justify } from "./justify";
+export { Justify } from "./justify.ts";
 
-import { createTextPipeline, textLayout, viewLayout } from "./pipeline";
-import { resetPipelines } from "./sdf";
+import { createTextPipeline, textLayout, viewLayout } from "./pipeline.ts";
+import { resetPipelines } from "./sdf.ts";
 
 /** Registered fonts keyed by URL; id 0 is the bundled default face. */
 export const Fonts = {

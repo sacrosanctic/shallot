@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
-import type { Vec3 } from "../common/records";
-import { BodyType } from "../common/types";
-import { ShapeField, shapeField } from "../kernel/shaperecords";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing";
+import type { Vec3 } from "../common/records.ts";
+import { BodyType } from "../common/types.ts";
+import { ShapeField, shapeField } from "../kernel/shaperecords.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
 import gold from "./geometry.gold.json";
 import {
     createBoxMesh,
@@ -12,8 +12,8 @@ import {
     createWaveMesh,
     type MeshData,
     type MeshNode,
-} from "./mesh";
-import { createMeshShape, destroyShape, shapeIsValid } from "./shape";
+} from "./mesh.ts";
+import { createMeshShape, destroyShape, shapeIsValid } from "./shape.ts";
 
 const dv = new DataView(new ArrayBuffer(4));
 function fromBits(hex: string): number {

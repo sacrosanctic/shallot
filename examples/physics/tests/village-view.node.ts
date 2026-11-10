@@ -3,10 +3,10 @@ import { Camera, MeshInstance, MeshMaterial, Shape, Transform } from "@dylaneber
 import { Gizmo, Orbit } from "@dylanebert/shallot/extras";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { AppPlugin, Viewer } from "../src/app";
-import { compoundChildren } from "../src/compound-presentation";
-import { sceneSwitcher } from "../src/sample";
-import { VillageState } from "../src/village";
+import { AppPlugin, Viewer } from "../src/app.ts";
+import { compoundChildren } from "../src/compound-presentation.ts";
+import { sceneSwitcher } from "../src/sample.ts";
+import { VillageState } from "../src/village.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of ["village", "benchmarkVillage"] as const)

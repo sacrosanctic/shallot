@@ -9,10 +9,10 @@ import {
     xformPoint,
 } from "../../core/rendering";
 import { HANDLE_INDEX_MASK } from "../../engine/utils";
-import { batchResolver } from "./material-batch";
-import { EntityMeshInstanceInput } from "./material-data";
-import { ALPHA_PIPELINE_KEY_COUNT, AlphaModeCode, AlphaPipelineKey } from "./material-type";
-import { DrawIndexedIndirect } from "./registry";
+import { batchResolver } from "./material-batch.ts";
+import { EntityMeshInstanceInput } from "./material-data.ts";
+import { ALPHA_PIPELINE_KEY_COUNT, AlphaModeCode, AlphaPipelineKey } from "./material-type.ts";
+import { DrawIndexedIndirect } from "./registry.ts";
 
 // Raw compute passes bind by index, so layouts pin their group indices rather than relying on resolve order.
 
@@ -84,7 +84,7 @@ export const CULL_STRIDE = CULL_VOLUME_FLOATS / 4;
  * @internal
  */
 export function visibility(
-    layout: typeof cullLayout | typeof import("./producer-table").producerCullLayout,
+    layout: typeof cullLayout | typeof import("./producer-table.ts").producerCullLayout,
 ) {
     return tgpu.fn(
         [d.u32, d.u32, d.u32, d.u32, d.u32],

@@ -5,9 +5,9 @@ import { basename, dirname, join, relative, resolve } from "node:path";
 import { parse } from "@babel/parser";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { parseCss, parse as parseSvelte } from "svelte/compiler";
-import { EXAMPLE_CONTROLS } from "../diagnostics/default-look/palette";
-import { normalizePath } from "../src/project/paths";
-import { removeTestDirectory } from "./test-directory";
+import { EXAMPLE_CONTROLS } from "../diagnostics/default-look/palette.ts";
+import { normalizePath } from "../src/project/paths.ts";
+import { removeTestDirectory } from "./test-directory.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

@@ -33,11 +33,11 @@ import {
     setTransform,
     stepPhysics,
 } from "@dylanebert/shallot/standard/physics";
-import { CastPlugin, castScene } from "./cast";
-import { gyroscopicPrecession, PrecessionPlugin } from "./precession";
-import { SceneRestart } from "./scene-restart";
-import type { Controls } from "./scenes";
-import { refreshShapeColors } from "./shape-color";
+import { CastPlugin, castScene } from "./cast.ts";
+import { gyroscopicPrecession, PrecessionPlugin } from "./precession.ts";
+import { SceneRestart } from "./scene-restart.ts";
+import type { Controls } from "./scenes.ts";
+import { refreshShapeColors } from "./shape-color.ts";
 
 type V3 = [number, number, number];
 const f = Math.fround;

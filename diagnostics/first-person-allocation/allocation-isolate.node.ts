@@ -3,9 +3,9 @@ import { mkdtempSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
-import { removeTestDirectory } from "../../scripts/test-directory";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { allocationFailure, measuredIsolateTrace, tracedSample, TIER_FLAGS } from "./allocation";
+import { allocationFailure, measuredIsolateTrace, tracedSample, TIER_FLAGS } from "./allocation.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

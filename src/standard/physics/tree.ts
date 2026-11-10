@@ -1,13 +1,13 @@
 import type { Resource, World } from "../../engine";
-import type { RayCastInput } from "./collision/distance";
-import type { AABB, Vec3 } from "./common/records";
+import type { RayCastInput } from "./collision/distance.ts";
+import type { AABB, Vec3 } from "./common/records.ts";
 import {
     assertKernelEntry,
     type Kernel,
     kernel,
     rethrowQueryError,
     setQueryCallback,
-} from "./kernel/kernel";
+} from "./kernel/kernel.ts";
 
 const treeBrand: unique symbol = Symbol("PhysicsTree");
 /** An independently owned dynamic AABB tree, released explicitly or with its World. */

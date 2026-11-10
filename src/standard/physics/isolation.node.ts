@@ -1,31 +1,31 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { World } from "../../engine";
-import { BodyType, defaultShapeDef } from "./common/types";
-import { init, kernel, kernelState, shutdown } from "./kernel/kernel";
-import { queryColumns } from "./kernel/querycolumns";
-import { createRock, makeBoxHull } from "./shapes/build-hull";
-import { createGridMesh, createWave, createWaveMesh } from "./shapes/build-nonconvex";
-import { createHeightField } from "./shapes/heightfield";
-import { createMesh } from "./shapes/mesh";
+import { BodyType, defaultShapeDef } from "./common/types.ts";
+import { init, kernel, kernelState, shutdown } from "./kernel/kernel.ts";
+import { queryColumns } from "./kernel/querycolumns.ts";
+import { createRock, makeBoxHull } from "./shapes/build-hull.ts";
+import { createGridMesh, createWave, createWaveMesh } from "./shapes/build-nonconvex.ts";
+import { createHeightField } from "./shapes/heightfield.ts";
+import { createMesh } from "./shapes/mesh.ts";
 import {
     createHeightFieldShape,
     createHullShape,
     createMeshShape,
     createSphereShape,
-} from "./shapes/shape";
-import { createFilterJoint, defaultJointDef } from "./solver/joint";
-import { createRevoluteJoint, defaultRevoluteJointDef } from "./solver/revoluteJoint";
+} from "./shapes/shape.ts";
+import { createFilterJoint, defaultJointDef } from "./solver/joint.ts";
+import { createRevoluteJoint, defaultRevoluteJointDef } from "./solver/revoluteJoint.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "./testing";
-import { bodySetAwake } from "./world/body";
-import { hashWorldState } from "./world/hash";
-import type { WorldState } from "./world/world";
+} from "./testing.ts";
+import { bodySetAwake } from "./world/body.ts";
+import { hashWorldState } from "./world/hash.ts";
+import type { WorldState } from "./world/world.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

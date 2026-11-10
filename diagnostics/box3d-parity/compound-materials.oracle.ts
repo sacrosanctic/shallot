@@ -1,13 +1,13 @@
 import { expect, test } from "bun:test";
-import { defaultSurfaceMaterial } from "../../src/standard/physics/common/types";
-import { createCompound } from "../../src/standard/physics/shapes/compound";
-import { createMesh } from "../../src/standard/physics/shapes/mesh";
-import { createCompoundShape } from "../../src/standard/physics/shapes/shape";
-import { defaultBodyDef, defaultShapeDef, defaultWorldDef } from "../../src/standard/physics/common/types";
-import { createBody } from "../../src/standard/physics/world/body";
-import { createWorld, getWorld, destroyWorld } from "../../src/standard/physics/world/world";
-import { worldCastRayClosest } from "../../src/standard/physics/world/query";
-import { nativeSseOutput } from "./native-evidence";
+import { defaultSurfaceMaterial } from "../../src/standard/physics/common/types.ts";
+import { createCompound } from "../../src/standard/physics/shapes/compound.ts";
+import { createMesh } from "../../src/standard/physics/shapes/mesh.ts";
+import { createCompoundShape } from "../../src/standard/physics/shapes/shape.ts";
+import { defaultBodyDef, defaultShapeDef, defaultWorldDef } from "../../src/standard/physics/common/types.ts";
+import { createBody } from "../../src/standard/physics/world/body.ts";
+import { createWorld, getWorld, destroyWorld } from "../../src/standard/physics/world/world.ts";
+import { worldCastRayClosest } from "../../src/standard/physics/world/query.ts";
+import { nativeSseOutput } from "./native-evidence.ts";
 
 test("a compound mesh child retains six distinct materials", () => {
     const vertices = Array.from({ length: 6 }, (_, i) => [

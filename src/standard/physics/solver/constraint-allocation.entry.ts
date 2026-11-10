@@ -7,19 +7,19 @@ import {
     StandardPhysicsPlugin,
 } from "@dylanebert/shallot";
 import { Transform } from "../../../core/transform";
-import { BodyType } from "../common/types";
-import { init, shutdown } from "../kernel/kernel";
-import { quaternion } from "../kernel/math";
-import { physicsBodyIndex, physicsState } from "../runtime";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createHullShape } from "../shapes/shape";
+import { BodyType } from "../common/types.ts";
+import { init, shutdown } from "../kernel/kernel.ts";
+import { quaternion } from "../kernel/math.ts";
+import { physicsBodyIndex, physicsState } from "../runtime.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createHullShape } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
+} from "../testing.ts";
 import {
     bodyApplyAngularImpulse,
     bodyApplyForce,
@@ -29,14 +29,14 @@ import {
     bodyApplyTorque,
     bodyIsAwake,
     bodySetTargetTransform,
-} from "../world/body";
-import { defaultJointDef } from "./joint";
+} from "../world/body.ts";
+import { defaultJointDef } from "./joint.ts";
 import {
     createPrismaticJoint,
     defaultPrismaticJointDef,
     prismaticJointSpeed,
-} from "./prismaticJoint";
-import { createSphericalJoint, defaultSphericalJointDef } from "./sphericalJoint";
+} from "./prismaticJoint.ts";
+import { createSphericalJoint, defaultSphericalJointDef } from "./sphericalJoint.ts";
 
 export let controlSink: { frame: number } | undefined;
 export const control = () => {

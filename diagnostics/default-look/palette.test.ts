@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
-import { EXAMPLE_CONTROLS, oklchFromLinear, PALETTES, srgbChannel } from "./palette";
-import { reportHtml } from "./report";
-import { SCENES } from "./scenes";
+import { EXAMPLE_CONTROLS, oklchFromLinear, PALETTES, srgbChannel } from "./palette.ts";
+import { reportHtml } from "./report.ts";
+import { SCENES } from "./scenes.ts";
 
 test("current-in-range repairs only overflowing albedo and ink, preserving hue and alpha", () => {
     const baseline = PALETTES.current;

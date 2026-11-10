@@ -1,5 +1,5 @@
 import type { Resource } from "../../engine";
-import { PhysicsAssets } from "./assets";
+import { PhysicsAssets } from "./assets.ts";
 
 /**
  * Convex geometry in shape-local meters, before `Shape.scale`.

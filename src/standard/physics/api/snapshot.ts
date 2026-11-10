@@ -1,8 +1,8 @@
-import { assertQueryWorld, kernel } from "../kernel/kernel";
-import { queryColumns } from "../kernel/querycolumns";
-import type { CheckpointStore } from "../kernel/views";
-import type { WorldState } from "../world/world";
-import { worldIsValid } from "../world/world";
+import { assertQueryWorld, kernel } from "../kernel/kernel.ts";
+import { queryColumns } from "../kernel/querycolumns.ts";
+import type { CheckpointStore } from "../kernel/views.ts";
+import type { WorldState } from "../world/world.ts";
+import { worldIsValid } from "../world/world.ts";
 
 /**
  * Reusable snapshot of a wasm-backed physics world. Caller-owned geometry identities remain opaque

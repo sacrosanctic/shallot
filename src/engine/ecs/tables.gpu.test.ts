@@ -3,10 +3,10 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import type { createApp, Plugin } from "../app";
-import { f32, u32 } from "../index";
+import { f32, u32 } from "../index.ts";
 import { probeBuffer } from "../runtime";
-import { type Component, component } from "./component";
-import type { World } from "./world";
+import { type Component, component } from "./component.ts";
+import type { World } from "./world.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 

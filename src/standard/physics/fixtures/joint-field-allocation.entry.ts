@@ -1,6 +1,6 @@
 import { createApp, StandardPhysicsPlugin } from "@dylanebert/shallot";
 import { Body, BodyType, RevoluteJoint } from "@dylanebert/shallot/physics";
-import { physicsState, SyncPhysicsConstraintsSystem } from "../runtime";
+import { physicsState, SyncPhysicsConstraintsSystem } from "../runtime.ts";
 import { jointIds } from "../solver/joint.fixture";
 
 export let controlSink: { frame: number } | undefined;

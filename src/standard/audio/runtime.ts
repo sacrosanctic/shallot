@@ -16,7 +16,7 @@ import {
     STOP,
     STRIDE,
     UPDATE,
-} from "./worklet";
+} from "./worklet.ts";
 
 const BUFFER_LENGTH = FINISHED_OFFSET + MAX_VOICES;
 const MATRIX = new Float32Array(16);

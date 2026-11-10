@@ -8,8 +8,8 @@ import {
 } from "@dylanebert/shallot";
 import { internText, Text, TextPlugin } from "@dylanebert/shallot/extras";
 
-import { gpuAllocationExpressions } from "../../src/engine/runtime/allocation-site";
-import { Demo } from "../../examples/first-person/src/demo";
+import { gpuAllocationExpressions } from "../../src/engine/runtime/allocation-site.ts";
+import { Demo } from "../../examples/first-person/src/demo.ts";
 
 // A compile-time constant equal to Time.FIXED_DT: that one is an object property, so passing it
 // across the arrow boxes a double every frame, which is the harness's cost, not the scene's.

@@ -6,7 +6,7 @@ import {
     setComputeBindGroup,
     setComputePipeline,
 } from "../../engine/runtime";
-import { countLayout, scatterLayout } from "./pack";
+import { countLayout, scatterLayout } from "./pack.ts";
 import {
     ProducerDispatch,
     ProducerParams,
@@ -16,7 +16,7 @@ import {
     producerCullLayout,
     producerScatterKernel,
     producerTables,
-} from "./producer-table";
+} from "./producer-table.ts";
 
 interface BoundProducer {
     args: GPUBuffer;

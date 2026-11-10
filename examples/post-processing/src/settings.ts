@@ -1,6 +1,6 @@
 import type { World } from "@dylanebert/shallot";
 import { ChromaticAberration, LensDistortion, Vignette } from "@dylanebert/shallot/extras";
-import { Scene } from "./scene";
+import { Scene } from "./scene.ts";
 
 export const settings = [
     [

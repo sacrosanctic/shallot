@@ -4,7 +4,7 @@ import { gpuApps } from "../../../scripts/gpu.fixture";
 import { precompile, type World } from "../../engine";
 import { probeTexture } from "../../engine/runtime";
 import { Transform } from "../transform";
-import { gradingDefaults } from "./color-grading";
+import { gradingDefaults } from "./color-grading.ts";
 import {
     attachTexture,
     Camera,
@@ -15,7 +15,7 @@ import {
     EffectPasses,
     Tonemapping,
     TonemappingMethod,
-} from "./index";
+} from "./index.ts";
 import {
     bevyLut,
     bevyPipeline,

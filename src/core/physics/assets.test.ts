@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { PhysicsAssets } from "./assets";
+import { PhysicsAssets } from "./assets.ts";
 
 test("duplicate labels retain independent handles and removal cannot redirect a stale handle", () => {
     const assets = new PhysicsAssets<{ name: string; size: number }>();

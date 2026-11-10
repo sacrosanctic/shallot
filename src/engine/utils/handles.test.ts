@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { HandleAllocator } from "./handles";
+import { HandleAllocator } from "./handles.ts";
 
 test("recycling dense indices changes generation and rejects stale or malformed handles", () => {
     const allocator = new HandleAllocator();

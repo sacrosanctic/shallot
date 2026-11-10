@@ -11,8 +11,8 @@ import {
 } from "@dylanebert/shallot";
 import { PhysicsEvents, setTransform } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { drawEventMark, type EventMark } from "../src/event-presentation";
-import { EventSample, EventSamplePlugin, persistentContact } from "../src/events";
+import { drawEventMark, type EventMark } from "../src/event-presentation.ts";
+import { EventSample, EventSamplePlugin, persistentContact } from "../src/events.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

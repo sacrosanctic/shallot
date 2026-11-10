@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { resolvePlugins } from "../app/compose";
-import { component, declaration, f32, vec2, vec4 } from "./component";
+import { resolvePlugins } from "../app/compose.ts";
+import { component, declaration, f32, vec2, vec4 } from "./component.ts";
 
 const fields = () => ({ scalarValue: f32, pair: vec2, vectorValue: vec4 });
 

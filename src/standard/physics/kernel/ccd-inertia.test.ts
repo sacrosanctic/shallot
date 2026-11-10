@@ -1,22 +1,22 @@
 import { expect, test } from "bun:test";
-import { BodyType } from "../common/types";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createHullShape } from "../shapes/shape";
+import { BodyType } from "../common/types.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createHullShape } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { BodyFlags, getBodySim } from "../world/body";
+} from "../testing.ts";
+import { BodyFlags, getBodySim } from "../world/body.ts";
 import {
     readSimInvInertiaLocal,
     readSimInvInertiaWorld,
     readSimTransform,
     simFlags,
-} from "./bodycolumns";
-import { matrix } from "./math";
+} from "./bodycolumns.ts";
+import { matrix } from "./math.ts";
 
 test("fast non-bullet inertia follows its CCD-clipped rotation in the kernel", () => {
     const world = createTestWorld({ gravity: { x: 0, y: 0, z: 0 }, enableSleep: false });

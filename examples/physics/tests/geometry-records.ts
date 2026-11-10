@@ -1,6 +1,6 @@
 import type { World } from "@dylanebert/shallot";
 import type { HullData, MassData } from "@dylanebert/shallot/standard/physics";
-import { Geometry } from "../src/geometry";
+import { Geometry } from "../src/geometry.ts";
 
 const point = (v: { x: number; y: number; z: number }) => [v.x, v.y, v.z];
 export function hullRecord(h: HullData, x: number): number[] {

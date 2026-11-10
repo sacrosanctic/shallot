@@ -1,10 +1,10 @@
 import { runApp } from "@dylanebert/shallot";
 import { profilerBounds } from "@dylanebert/shallot/extras";
 import { flushSync, mount, unmount } from "svelte";
-import { AppPlugin, Viewer } from "./app";
+import { AppPlugin, Viewer } from "./app.ts";
 import Hud from "./Hud.svelte";
-import { profilerFits, sceneSwitcher } from "./sample";
-import { changeControl, type Scene, scenes } from "./scenes";
+import { profilerFits, sceneSwitcher } from "./sample.ts";
+import { changeControl, type Scene, scenes } from "./scenes.ts";
 
 const requested = new URL(location.href).searchParams.get("scene");
 const initial = requested && Object.hasOwn(scenes, requested) ? (requested as Scene) : "boxStack";

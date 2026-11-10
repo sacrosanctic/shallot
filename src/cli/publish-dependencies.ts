@@ -1,7 +1,7 @@
 import { spawnSync } from "node:child_process";
 import { readdirSync } from "node:fs";
 import { dirname, resolve } from "node:path";
-import { publishProgress } from "./publish-output";
+import { publishProgress } from "./publish-output.ts";
 
 export function installDev(projectDir: string, dependency: string): void {
     let directory = resolve(projectDir);

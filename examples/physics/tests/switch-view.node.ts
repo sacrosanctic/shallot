@@ -14,12 +14,12 @@ import {
 import { LinesPlugin, OrbitPlugin, TextPlugin } from "@dylanebert/shallot/extras";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { EventSamplePlugin, SampleInputPlugin } from "../src/events";
-import { Grab, GrabPlugin } from "../src/grab";
-import { ShapeMaterialPlugin } from "../src/material";
-import { sceneSwitcher } from "../src/sample";
-import { categories } from "../src/scenes";
-import { createViewer, GrabFeedback } from "../src/view";
+import { EventSamplePlugin, SampleInputPlugin } from "../src/events.ts";
+import { Grab, GrabPlugin } from "../src/grab.ts";
+import { ShapeMaterialPlugin } from "../src/material.ts";
+import { sceneSwitcher } from "../src/sample.ts";
+import { categories } from "../src/scenes.ts";
+import { createViewer, GrabFeedback } from "../src/view.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

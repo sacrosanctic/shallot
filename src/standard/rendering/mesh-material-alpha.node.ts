@@ -13,7 +13,7 @@ import {
     materialType,
     StandardMaterial,
     StandardRenderingPlugin,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const OtherParameters = d.struct({ color: d.vec4f });

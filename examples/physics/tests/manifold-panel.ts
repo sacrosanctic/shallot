@@ -1,6 +1,6 @@
 import { holdFrames, pipelineWarnings } from "@dylanebert/shallot/testing";
 import { expect, test } from "playwright/test";
-import { bodyHasFocus, pointerControl } from "./pointer";
+import { bodyHasFocus, pointerControl } from "./pointer.ts";
 
 export function manifoldPanelTests(stepped: boolean) {
     test.use(pipelineWarnings);

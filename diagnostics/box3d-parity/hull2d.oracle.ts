@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { nativeBinary, run } from "./native";
+import { nativeBinary, run } from "./native.ts";
 
 setDefaultTimeout(0);
 test("public native 2D hull cases repeat their gold and reject changed circle inputs", () => {

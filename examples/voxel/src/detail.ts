@@ -1,5 +1,5 @@
-import { height } from "./noise";
-import { SEED, type TerrainConfig } from "./terrain-data";
+import { height } from "./noise.ts";
+import { SEED, type TerrainConfig } from "./terrain-data.ts";
 
 export const HASH_X = 374761393;
 export const HASH_Z = 668265263;

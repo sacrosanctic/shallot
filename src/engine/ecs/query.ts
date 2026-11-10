@@ -1,5 +1,5 @@
-import { type Components, idOf } from "./component";
-import type { Entities, Entity } from "./entity";
+import { type Components, idOf } from "./component.ts";
+import type { Entities, Entity } from "./entity.ts";
 
 const $op = Symbol("op");
 

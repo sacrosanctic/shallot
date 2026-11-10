@@ -1,12 +1,12 @@
 import { expect, expectTypeOf, test } from "bun:test";
 import * as d from "typegpu/data";
-import { backgroundLayout } from "./contract";
+import { backgroundLayout } from "./contract.ts";
 import {
     type MaterialBinding,
     materialLayout,
     materialType,
     materialVertexOutput,
-} from "./material-type";
+} from "./material-type.ts";
 
 test("a material without owned bindings needs only its parameter schema", () => {
     const Parameters = d.struct({ tint: d.vec4f, scale: d.f32 });

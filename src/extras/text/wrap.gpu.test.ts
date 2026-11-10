@@ -4,7 +4,7 @@ import { gpuApps } from "../../../scripts/gpu.fixture";
 import { Anchor, attachTexture, Camera, captureTexture } from "../../core/rendering";
 import { Transform } from "../../core/transform";
 import { isolationFont } from "./font.fixture";
-import { internText, Justify, registerFont, Text, TextPlugin } from "./index";
+import { internText, Justify, registerFont, Text, TextPlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 let font = 0;

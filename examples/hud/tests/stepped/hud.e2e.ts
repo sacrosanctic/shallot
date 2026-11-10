@@ -1,6 +1,6 @@
 import { pipelineWarnings } from "@dylanebert/shallot/testing";
 import { expect, type Page, test } from "playwright/test";
-import { bodyHasFocus, dragRange, gameKeyMovesCamera, pointerControl } from "../pointer";
+import { bodyHasFocus, dragRange, gameKeyMovesCamera, pointerControl } from "../pointer.ts";
 
 test.use(pipelineWarnings);
 

@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { type GltfJson, parseGltf, readAccessor } from "./gltf";
+import { type GltfJson, parseGltf, readAccessor } from "./gltf.ts";
 
 // KHR_mesh_quantization, Extending Mesh Attributes / Extending Morph Target Attributes.
 const signed = [5120, 5122];

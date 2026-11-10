@@ -1,8 +1,8 @@
 import { mkdir } from "node:fs/promises";
 import { pipelineWarnings } from "@dylanebert/shallot/testing";
 import { expect, type Page, test } from "playwright/test";
-import { settings } from "../src/settings";
-import { bodyHasFocus, dragRange, gameKeyMovesCamera, pointerControl } from "./pointer";
+import { settings } from "../src/settings.ts";
+import { bodyHasFocus, dragRange, gameKeyMovesCamera, pointerControl } from "./pointer.ts";
 
 type CaptureWindow = Window & { captureScene: () => Promise<number[]>; captures: number[][] };
 async function capture(page: Page): Promise<number> {

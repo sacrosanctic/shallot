@@ -1,5 +1,5 @@
 import { mock } from "bun:test";
-import { oracleWasm } from "./oracle-kernel";
+import { oracleWasm } from "./oracle-kernel.ts";
 
 // Replace the module in this test process without rewriting imports in the transpiler cache.
 mock.module("../../src/standard/physics/kernel/kernel.wasm.ts", () => ({

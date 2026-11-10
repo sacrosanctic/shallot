@@ -1,11 +1,11 @@
-import type { SurfaceMaterial } from "../common/types";
-import type { CompoundData } from "../shapes/compound";
-import type { HeightFieldData } from "../shapes/heightfield";
-import type { HullData } from "../shapes/hull";
-import { hash64NonZero, hullByteCount, hullImage, writeHullImage } from "../shapes/hullbytes";
-import type { MeshData } from "../shapes/mesh";
-import type { WorldState } from "../world/world";
-import { kernel } from "./kernel";
+import type { SurfaceMaterial } from "../common/types.ts";
+import type { CompoundData } from "../shapes/compound.ts";
+import type { HeightFieldData } from "../shapes/heightfield.ts";
+import type { HullData } from "../shapes/hull.ts";
+import { hash64NonZero, hullByteCount, hullImage, writeHullImage } from "../shapes/hullbytes.ts";
+import type { MeshData } from "../shapes/mesh.ts";
+import type { WorldState } from "../world/world.ts";
+import { kernel } from "./kernel.ts";
 
 /** World-owned upload scratch for authored bytes; retained geometry lives in kernel allocations. */
 export class GeometryUploadScratch {
@@ -348,7 +348,7 @@ function sharedImages<T extends object>(
 function equalBytes(a: Uint8Array, b: Uint8Array): boolean {
     return a.length === b.length && a.every((x, i) => x === b[i]);
 }
-function putTransform(v: DataView, o: number, t: import("../common/records").Transform): void {
+function putTransform(v: DataView, o: number, t: import("../common/records.ts").Transform): void {
     const values = [t.p.x, t.p.y, t.p.z, t.q.v.x, t.q.v.y, t.q.v.z, t.q.s];
     for (let i = 0; i < values.length; ++i) v.setFloat32(o + i * 4, values[i], true);
 }

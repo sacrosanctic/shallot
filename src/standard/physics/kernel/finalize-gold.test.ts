@@ -1,11 +1,11 @@
 import { expect, test } from "bun:test";
-import { BodyType } from "../common/types";
-import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld } from "../testing";
-import { BodyFlags } from "../world/body";
-import { BodyField, bodyField } from "./bodyrecords";
-import { BODY_ID, CENTER0, FLAGS, MIN_EXTENT, SIM_STRIDE, STATE_STRIDE } from "./columns";
+import { BodyType } from "../common/types.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld } from "../testing.ts";
+import { BodyFlags } from "../world/body.ts";
+import { BodyField, bodyField } from "./bodyrecords.ts";
+import { BODY_ID, CENTER0, FLAGS, MIN_EXTENT, SIM_STRIDE, STATE_STRIDE } from "./columns.ts";
 import gold from "./finalize.gold.json";
-import { kernel } from "./kernel";
+import { kernel } from "./kernel.ts";
 
 const ROTATION0 = 10;
 const simMap = [

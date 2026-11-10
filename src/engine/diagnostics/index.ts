@@ -1,13 +1,13 @@
-import { sampleDiagnosticTime } from "./time";
+import { sampleDiagnosticTime } from "./time.ts";
 
-export { sampleDiagnosticTime } from "./time";
+export { sampleDiagnosticTime } from "./time.ts";
 export {
     HANDOFF_MARK,
     SYSTEM_MEASURE_PREFIX,
     UI_MOUNT_MEASURE,
     userTimingMark,
     userTimingSpan,
-} from "./user-timing";
+} from "./user-timing.ts";
 
 /** Slash-separated diagnostic identity; components must be nonempty. */
 export class DiagnosticPath {

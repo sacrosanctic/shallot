@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { decodeQuantized, float32Ulp } from "./quantization";
+import { decodeQuantized, float32Ulp } from "./quantization.ts";
 
 test("the decode bound includes division rounding amplified by the extent", () => {
     const offset = Math.fround(-0.014622720889747143);

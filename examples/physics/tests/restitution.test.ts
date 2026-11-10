@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { World } from "@dylanebert/shallot";
-import { RestitutionState, restitutionScenes } from "../src/restitution";
-import { restitutionLines } from "../src/restitution-presentation";
-import type { Controls } from "../src/scenes";
+import { RestitutionState, restitutionScenes } from "../src/restitution.ts";
+import { restitutionLines } from "../src/restitution-presentation.ts";
+import type { Controls } from "../src/scenes.ts";
 
 test("Bounce Impulse readouts distinguish approach, measured and expected impulse after the hit", () => {
     const world = new World();

@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { characterGold, visitCharacterGold } from "../../src/standard/physics/character-kernel.fixture";
-import { nativeBinary, run } from "./native";
+import { nativeBinary, run } from "./native.ts";
 
 test("the kernel sample mover matches regenerated native Box3D movement records", async () => {
     const native = JSON.parse(run([nativeBinary("character.c")])) as typeof characterGold;

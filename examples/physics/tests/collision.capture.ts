@@ -1,7 +1,7 @@
 import { test } from "playwright/test";
-import { collisionNames } from "../src/collision";
-import { debugNames } from "../src/collision-debug";
-import { capture } from "./capture";
+import { collisionNames } from "../src/collision.ts";
+import { debugNames } from "../src/collision-debug.ts";
+import { capture } from "./capture.ts";
 
 for (const width of [1280, 390])
     for (const id of [...collisionNames, ...debugNames]) {

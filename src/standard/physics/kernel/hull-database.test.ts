@@ -1,25 +1,25 @@
 import { expect, test } from "bun:test";
-import { restore, snapshot } from "../api/snapshot";
-import { transform } from "./math";
+import { restore, snapshot } from "../api/snapshot.ts";
+import { transform } from "./math.ts";
 
 const f32 = Math.fround;
 
-import { BodyType, defaultSurfaceMaterial } from "../common/types";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createCompound } from "../shapes/compound";
-import { cloneHull, readShapeHull } from "../shapes/hull";
+import { BodyType, defaultSurfaceMaterial } from "../common/types.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createCompound } from "../shapes/compound.ts";
+import { cloneHull, readShapeHull } from "../shapes/hull.ts";
 import {
     computeShapeMass,
     createCompoundShape,
     createHullShape,
     destroyShape,
-} from "../shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing";
-import type { WorldState } from "../world/world";
-import { hullDatabaseIndex, stageHullUpload } from "./geocolumns";
-import { kernel } from "./kernel";
-import { queryColumns } from "./querycolumns";
-import { S_GEO_REFERENCE, SHAPE_STRIDE } from "./shapecolumns";
+} from "../shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
+import type { WorldState } from "../world/world.ts";
+import { hullDatabaseIndex, stageHullUpload } from "./geocolumns.ts";
+import { kernel } from "./kernel.ts";
+import { queryColumns } from "./querycolumns.ts";
+import { S_GEO_REFERENCE, SHAPE_STRIDE } from "./shapecolumns.ts";
 
 function compoundHullPointer(world: WorldState, shape: number): number {
     const store = world.shapeStore;

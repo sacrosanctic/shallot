@@ -2,7 +2,7 @@ import tgpu, { type TgpuRenderPipeline } from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import { checkTextureLimits, precompile, Registry, type World } from "../../engine";
-import { fullscreenVertex } from "./tonemapping";
+import { fullscreenVertex } from "./tonemapping.ts";
 
 /** @internal Native 2D images, indexed by independent color and data ids. */
 export const imageTextures = {

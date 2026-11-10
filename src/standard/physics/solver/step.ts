@@ -1,8 +1,8 @@
 import { reportStartup } from "../../../engine/runtime";
-import { readJointEventUserData } from "../kernel/jointcolumns";
-import { assertKernelEntry, kernel, rethrowQueryError, threads } from "../kernel/kernel";
-import type { WorldState } from "../world/world";
-import { solve } from "./solver";
+import { readJointEventUserData } from "../kernel/jointcolumns.ts";
+import { assertKernelEntry, kernel, rethrowQueryError, threads } from "../kernel/kernel.ts";
+import type { WorldState } from "../world/world.ts";
+import { solve } from "./solver.ts";
 
 /** Advance the kernel world; TypeScript supplies settings and drives its yields. */
 export function step(world: WorldState, timeStep: number, subStepCount: number): void {

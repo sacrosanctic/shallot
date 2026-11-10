@@ -11,9 +11,9 @@ import {
     StandardPhysicsPlugin,
     solvePlanes,
 } from "@dylanebert/shallot/standard/physics";
-import { rethrowQueryError, setQueryCallback } from "./kernel/kernel";
-import { queryColumns } from "./kernel/querycolumns";
-import { physicsState } from "./runtime";
+import { rethrowQueryError, setQueryCallback } from "./kernel/kernel.ts";
+import { queryColumns } from "./kernel/querycolumns.ts";
+import { physicsState } from "./runtime.ts";
 
 function collideMover(
     world: World,

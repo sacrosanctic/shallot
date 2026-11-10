@@ -22,17 +22,17 @@ import {
     hashPhysics,
     StandardPhysicsPlugin,
 } from "@dylanebert/shallot/standard/physics";
-import { expectWarning } from "../../../scripts/test-console";
-import { defaultSurfaceMaterial } from "./common/types";
-import { compoundBuild, heightFieldBuild, meshBuild } from "./geometry-builds";
-import { kernel } from "./kernel/kernel";
-import { physicsState } from "./runtime";
-import { createHull } from "./shapes/build-hull";
-import { type CompoundData, type CompoundDef, createCompound } from "./shapes/compound";
-import { createHeightField } from "./shapes/heightfield";
-import { createGridMesh, createMesh, createTorusMesh, createWaveMesh } from "./shapes/mesh";
-import { getShapeGeometryReference } from "./shapes/shape";
-import { worldCounters } from "./world/world";
+import { expectWarning } from "../../../scripts/test-console.ts";
+import { defaultSurfaceMaterial } from "./common/types.ts";
+import { compoundBuild, heightFieldBuild, meshBuild } from "./geometry-builds.ts";
+import { kernel } from "./kernel/kernel.ts";
+import { physicsState } from "./runtime.ts";
+import { createHull } from "./shapes/build-hull.ts";
+import { type CompoundData, type CompoundDef, createCompound } from "./shapes/compound.ts";
+import { createHeightField } from "./shapes/heightfield.ts";
+import { createGridMesh, createMesh, createTorusMesh, createWaveMesh } from "./shapes/mesh.ts";
+import { getShapeGeometryReference } from "./shapes/shape.ts";
+import { worldCounters } from "./world/world.ts";
 
 async function withPhysics(run: (world: World) => void): Promise<void> {
     const world = new World();

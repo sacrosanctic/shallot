@@ -1,7 +1,7 @@
 import { createApp } from "../../../../engine/app";
 import { rawDevice } from "../../../../engine/runtime";
-import { imageSampler, imageTextures, imageView, registerImage } from "../../image";
-import { RenderingPlugin } from "../../substrate";
+import { imageSampler, imageTextures, imageView, registerImage } from "../../image.ts";
+import { RenderingPlugin } from "../../substrate.ts";
 
 // The authored PNG has sRGB primaries, a linear (gamma 1) ICC transfer curve and
 // one opaque RGBA texel [64, 128, 192, 255]. The profile was made with Little CMS

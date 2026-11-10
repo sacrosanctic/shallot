@@ -1,6 +1,6 @@
 import { pipelineWarnings } from "@dylanebert/shallot/testing";
 import { expect, test } from "playwright/test";
-import { pointerControl } from "../pointer";
+import { pointerControl } from "../pointer.ts";
 
 test.use(pipelineWarnings);
 

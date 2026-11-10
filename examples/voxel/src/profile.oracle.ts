@@ -4,7 +4,7 @@ import { ProfilePlugin } from "@dylanebert/shallot/extras";
 import { attachTexture } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { Terrain, TerrainPlugin } from "./terrain";
+import { Terrain, TerrainPlugin } from "./terrain.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const median = (values: number[]) => values.sort((a, b) => a - b)[Math.floor(values.length / 2)];

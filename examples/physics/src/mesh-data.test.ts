@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { decodeMesh } from "./mesh-data";
+import { decodeMesh } from "./mesh-data.ts";
 
 test("mesh arrays decode little-endian floats and full-width unsigned indices", () => {
     const mesh = decodeMesh({

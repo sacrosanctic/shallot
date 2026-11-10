@@ -15,7 +15,7 @@ import {
     touchPoint,
     World,
 } from "@dylanebert/shallot";
-import { LocalPlayer, mountTouchButton, Player, PlayerInput, PlayerPlugin } from "./player";
+import { LocalPlayer, mountTouchButton, Player, PlayerInput, PlayerPlugin } from "./player.ts";
 
 test("floating stick clamps, ignores its dead zone, and coexists with right drag; release and cancel neutralize it", () => {
     const world = new World();

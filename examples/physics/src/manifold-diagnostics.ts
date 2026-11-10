@@ -25,9 +25,9 @@ import {
     sub,
     type Vec,
     vector,
-} from "./manifold-math";
-import { ManifoldSample, type ManifoldState, sat } from "./manifold-state";
-import type { Controls } from "./scenes";
+} from "./manifold-math.ts";
+import { ManifoldSample, type ManifoldState, sat } from "./manifold-state.ts";
+import type { Controls } from "./scenes.ts";
 
 const f = Math.fround,
     MAX = f(3.4028234663852886e38);

@@ -1,9 +1,9 @@
 import { expect, test } from "bun:test";
-import { kernel } from "../kernel/kernel";
-import { createTestBody, createTestWorld, destroyTestWorld } from "../testing";
-import { bodyIsValid, destroyBody, makeBodyId } from "../world/body";
-import { worldCounters } from "../world/world";
-import { BodyType } from "./types";
+import { kernel } from "../kernel/kernel.ts";
+import { createTestBody, createTestWorld, destroyTestWorld } from "../testing.ts";
+import { bodyIsValid, destroyBody, makeBodyId } from "../world/body.ts";
+import { worldCounters } from "../world/world.ts";
+import { BodyType } from "./types.ts";
 
 test("body generations wrap at sixteen bits as Box3D handles do", () => {
     const world = createTestWorld();

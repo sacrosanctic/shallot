@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { ColorGrading, Tonemapping, World } from "@dylanebert/shallot";
-import { Scene } from "./scene";
-import { methods, setMethod } from "./settings";
+import { Scene } from "./scene.ts";
+import { methods, setMethod } from "./settings.ts";
 
 for (const [name, method] of methods) {
     test(`${name} applies Bevy's basic scene recommendation`, () => {

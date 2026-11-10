@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import manifest from "../assets.json";
-import { syncFiles } from "../sync";
+import { syncFiles } from "../sync.ts";
 
 export const assets = new URL("../public/assets/", import.meta.url);
 export async function syncAssets() {

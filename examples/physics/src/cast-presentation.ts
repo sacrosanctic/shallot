@@ -11,8 +11,8 @@ import {
     rayTranslation,
     sphereOrigin,
     sphereTranslation,
-} from "./cast";
-import { JOINT_DOT, JOINT_INK, JOINT_LINE } from "./joint-presentation";
+} from "./cast.ts";
+import { JOINT_DOT, JOINT_INK, JOINT_LINE } from "./joint-presentation.ts";
 
 type Point = [number, number, number];
 type Vec = { x: number; y: number; z: number };

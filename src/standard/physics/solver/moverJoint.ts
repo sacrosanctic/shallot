@@ -1,7 +1,7 @@
-import type { Vec3 } from "../common/records";
-import { kernel } from "../kernel/kernel";
-import type { WorldState } from "../world/world";
-import { finishJointCreation, type Joint, type JointDef, writeJointDefinition } from "./joint";
+import type { Vec3 } from "../common/records.ts";
+import { kernel } from "../kernel/kernel.ts";
+import type { WorldState } from "../world/world.ts";
+import { finishJointCreation, type Joint, type JointDef, writeJointDefinition } from "./joint.ts";
 
 /** b3MoverJointDef, with resolved body handles. */
 export type MoverJointDef = { base: JointDef; linearVelocity: Vec3; maxForce: number };

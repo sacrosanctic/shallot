@@ -4,20 +4,20 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import {
     allocationFailure,
     sampleAllocation,
-} from "../../../diagnostics/first-person-allocation/allocation";
-import { countedKernelBytes } from "../../../scripts/counted-kernel";
-import { BodyType } from "./common/types";
-import { clockImport, type Kernel, kernelState } from "./kernel/kernel";
-import { ShapeField, shapeField } from "./kernel/shaperecords";
-import { makeBoxHull } from "./shapes/build-hull";
-import { createHullShape } from "./shapes/shape";
+} from "../../../diagnostics/first-person-allocation/allocation.ts";
+import { countedKernelBytes } from "../../../scripts/counted-kernel.ts";
+import { BodyType } from "./common/types.ts";
+import { clockImport, type Kernel, kernelState } from "./kernel/kernel.ts";
+import { ShapeField, shapeField } from "./kernel/shaperecords.ts";
+import { makeBoxHull } from "./shapes/build-hull.ts";
+import { createHullShape } from "./shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "./testing";
+} from "./testing.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const entry = resolve(import.meta.dir, "fixtures/contact-allocation.entry.ts");

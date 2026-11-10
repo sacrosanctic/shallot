@@ -28,9 +28,9 @@ import { hashPhysics, StandardPhysicsPlugin } from "@dylanebert/shallot/standard
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
-import { physicsState } from "./runtime";
-import { worldCounters } from "./world/world";
+import { expectWarning } from "../../../scripts/test-console.ts";
+import { physicsState } from "./runtime.ts";
+import { worldCounters } from "./world/world.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 await setupGlobals();

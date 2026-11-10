@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { resolve } from "node:path";
-import { allocationFailure, sampleAllocation } from "../first-person-allocation/allocation";
-import { isAdmittedAllocationSite } from "../first-person-allocation/allocation-admissions";
+import { allocationFailure, sampleAllocation } from "../first-person-allocation/allocation.ts";
+import { isAdmittedAllocationSite } from "../first-person-allocation/allocation-admissions.ts";
 
 setDefaultTimeout(240_000);
 

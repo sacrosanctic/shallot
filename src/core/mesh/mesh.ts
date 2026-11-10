@@ -4,7 +4,7 @@ import * as d from "typegpu/data";
 import type { System, World } from "../../engine";
 
 import { HandleAllocator, octEncode, packUnorm2 } from "../../engine/utils";
-import { MeshQuant, packTangent } from "./vertex";
+import { MeshQuant, packTangent } from "./vertex.ts";
 
 export type MeshStorage<T extends AnyWgslData> = TgpuBuffer<WgslArray<T>> & StorageFlag;
 export type MeshIndex = MeshStorage<d.U32> & IndexFlag;

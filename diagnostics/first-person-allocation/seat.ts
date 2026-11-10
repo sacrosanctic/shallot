@@ -4,7 +4,7 @@
 // supplies only the operational launch dispatch.
 
 import { type AdapterFacts, classifyAdapter } from "../../src/engine/runtime";
-import type { LaunchPlan } from "./launch";
+import type { LaunchPlan } from "./launch.ts";
 
 /** the seats this policy resolves. `cpu` is the absence of a requirement, not a tag. */
 export type Seat = "cpu" | "gpu" | "display";

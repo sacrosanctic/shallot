@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { bodyMoverTOIRows } from "./fixtures/body-mover-toi";
+import { bodyMoverTOIRows } from "./fixtures/body-mover-toi.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

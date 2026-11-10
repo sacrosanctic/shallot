@@ -6,8 +6,8 @@ import {
     computeHullMass,
     makeScaledBoxHull,
     StandardPhysicsPlugin,
-} from "./index";
-import { kernel } from "./kernel/kernel";
+} from "./index.ts";
+import { kernel } from "./kernel/kernel.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

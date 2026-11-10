@@ -2,16 +2,16 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp } from "../../src/engine";
 import { TIMEOUT } from "../../src/project/testing.js";
 import { StandardPhysicsPlugin } from "../../src/standard/physics";
-import { BodyType } from "../../src/standard/physics/common/types";
-import { makeBoxHull } from "../../src/standard/physics/shapes/build-hull";
-import { createHullShape, createSphereShape } from "../../src/standard/physics/shapes/shape";
+import { BodyType } from "../../src/standard/physics/common/types.ts";
+import { makeBoxHull } from "../../src/standard/physics/shapes/build-hull.ts";
+import { createHullShape, createSphereShape } from "../../src/standard/physics/shapes/shape.ts";
 import { manifoldRecords, manifoldSubject } from "../../src/standard/physics/standalone-manifold.fixture";
-import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld, testShapeDef } from "../../src/standard/physics/testing";
-import { worldSetPreSolveCallback } from "../../src/standard/physics/world/world";
-import { WorldCountersBuffer } from "../../src/standard/physics/world/counters";
-import { kernel } from "../../src/standard/physics/kernel/kernel";
-import { nativeSseOutput } from "./native-evidence";
-import { assertPublicOracleKernel } from "./oracle-kernel";
+import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld, testShapeDef } from "../../src/standard/physics/testing.ts";
+import { worldSetPreSolveCallback } from "../../src/standard/physics/world/world.ts";
+import { WorldCountersBuffer } from "../../src/standard/physics/world/counters.ts";
+import { kernel } from "../../src/standard/physics/kernel/kernel.ts";
+import { nativeSseOutput } from "./native-evidence.ts";
+import { assertPublicOracleKernel } from "./oracle-kernel.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

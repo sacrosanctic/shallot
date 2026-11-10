@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { createTestWorld, destroyTestWorld } from "../testing";
-import { queryColumns } from "./querycolumns";
+import { createTestWorld, destroyTestWorld } from "../testing.ts";
+import { queryColumns } from "./querycolumns.ts";
 
 test("query filter words survive default queries and refresh when custom bits change", () => {
     const world = createTestWorld();

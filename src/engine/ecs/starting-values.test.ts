@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { component } from "./component";
-import { f16, f32, vec2, vec3, vec4, World } from "./index";
+import { component } from "./component.ts";
+import { f16, f32, vec2, vec3, vec4, World } from "./index.ts";
 
 const Component = { scalar: f32, pair: vec2, quad: vec4, half: f16, omitted: f32 };
 

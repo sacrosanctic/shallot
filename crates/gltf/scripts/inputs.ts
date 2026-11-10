@@ -1,4 +1,4 @@
-import { buildArtifactIsFresh, buildInputHash } from "../../build-inputs";
+import { buildArtifactIsFresh, buildInputHash } from "../../build-inputs.ts";
 
 export const GLTF_ARTIFACT = "src/extras/gltf/gltf.wasm.ts";
 

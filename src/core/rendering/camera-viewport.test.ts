@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { World } from "../../engine";
-import { CameraViewport } from "./camera";
-import { cameraRect } from "./camera-viewport";
+import { CameraViewport } from "./camera.ts";
+import { cameraRect } from "./camera-viewport.ts";
 
 for (const [width, height, expected] of [
     [48, 20, { x: 40, y: 4, width: 8, height: 16 }],

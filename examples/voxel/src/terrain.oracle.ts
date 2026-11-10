@@ -3,8 +3,8 @@ import { Meshes, probeBuffer } from "@dylanebert/shallot";
 import { attachTexture } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { Terrain, TerrainPlugin } from "./terrain";
-import { CONFIG, ringSlots } from "./terrain-data";
+import { Terrain, TerrainPlugin } from "./terrain.ts";
+import { CONFIG, ringSlots } from "./terrain-data.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("report the shipped terrain's fenced step time without a performance assertion", async () => {

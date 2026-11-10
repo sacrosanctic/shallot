@@ -2,9 +2,9 @@ import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { recordArray } from "../../../examples/gltf/tests/records";
+import { recordArray } from "../../../examples/gltf/tests/records.ts";
 import records from "./fixtures/records.json";
-import { loadGltf, parseGltf } from "./index";
+import { loadGltf, parseGltf } from "./index.ts";
 
 const localFetch: typeof fetch = (async (input: URL | string) => {
     const url = new URL(String(input));

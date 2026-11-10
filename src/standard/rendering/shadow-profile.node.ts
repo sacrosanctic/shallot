@@ -3,15 +3,15 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
 import { precompile, type World } from "../../engine";
-import { PointLightGpu } from "./lighting";
+import { PointLightGpu } from "./lighting.ts";
 import {
     pointCastersSchema,
     pointShadowRef,
     SunShadow,
     sampleSunShadow,
     tileRectsSchema,
-} from "./shade";
-import { EDGE_TEXELS, MAX_POINT_CASTERS } from "./shadows";
+} from "./shade.ts";
+import { EDGE_TEXELS, MAX_POINT_CASTERS } from "./shadows.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const SIDE = 256;

@@ -1,4 +1,4 @@
-import { sampleGold } from "./gold";
+import { sampleGold } from "./gold.ts";
 
 /** FNV-1a's u64 seed, xor and wrapping multiply, as in hashWorldState.
  * Input is UTF-8 of the gold's canonical records: world hash plus JSON event lists,

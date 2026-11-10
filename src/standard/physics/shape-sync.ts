@@ -1,20 +1,20 @@
 import { ShapeKind, ShapeMaterials } from "../../core/physics";
 import { Transform } from "../../core/transform";
 import type { Vector4Field, World } from "../../engine";
-import { type FieldBinding, fieldMarked } from "./authoring";
-import type { EntityId } from "./common/ids";
-import type { Filter, SurfaceMaterial } from "./common/types";
-import { meshBuild } from "./geometry-builds";
-import { geometryIdentity, hullDatabaseIndex } from "./kernel/geocolumns";
-import { kernel } from "./kernel/kernel";
-import { ShapeField, ShapeFlags, setShapeFlag, shapeField, shapeFlag } from "./kernel/shaperecords";
+import { type FieldBinding, fieldMarked } from "./authoring.ts";
+import type { EntityId } from "./common/ids.ts";
+import type { Filter, SurfaceMaterial } from "./common/types.ts";
+import { meshBuild } from "./geometry-builds.ts";
+import { geometryIdentity, hullDatabaseIndex } from "./kernel/geocolumns.ts";
+import { kernel } from "./kernel/kernel.ts";
+import { ShapeField, ShapeFlags, setShapeFlag, shapeField, shapeFlag } from "./kernel/shaperecords.ts";
 import {
     authoredShapeFilter,
     authoredShapeMaterial,
     shapeBodyScale,
     shapeGeometry,
     shapeHullGeometry,
-} from "./marshal-shape";
+} from "./marshal-shape.ts";
 import {
     getShapeDensity,
     getShapeFilter,
@@ -37,9 +37,9 @@ import {
     setShapeRestitution,
     setShapeSphere,
     setShapeSurfaceMaterial,
-} from "./shapes/shape";
-import { updateBodyMassData } from "./world/body";
-import type { WorldState } from "./world/world";
+} from "./shapes/shape.ts";
+import { updateBodyMassData } from "./world/body.ts";
+import type { WorldState } from "./world/world.ts";
 
 function scalar(binding: FieldBinding, eid: number, field: string): number {
     return (binding.storage[field] as { get(eid: number): number }).get(eid);

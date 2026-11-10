@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { cube, Meshes, type MeshHandle, MeshInstance } from "../../core/mesh";
-import { clearMeshes, flushMeshes } from "../../core/mesh/mesh";
+import { clearMeshes, flushMeshes } from "../../core/mesh/mesh.ts";
 import {
     attachTexture,
     Camera,
@@ -13,7 +13,7 @@ import {
     TonemappingMethod,
 } from "../../core/rendering";
 import { Transform } from "../../core/transform";
-import { StandardRenderer } from "./forward";
+import { StandardRenderer } from "./forward.ts";
 import {
     Draws,
     MaterialPlugin,
@@ -23,8 +23,8 @@ import {
     materialType,
     StandardMaterial,
     StandardRenderingPlugin,
-} from "./index";
-import { MeshRenderPlugin } from "./mesh-render";
+} from "./index.ts";
+import { MeshRenderPlugin } from "./mesh-render.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

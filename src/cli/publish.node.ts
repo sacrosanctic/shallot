@@ -14,18 +14,18 @@ import { createServer } from "node:net";
 import { tmpdir } from "node:os";
 import { basename, join, resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { bunChild } from "../../scripts/bun-child";
-import { packedInstall } from "../../scripts/packed-install-spawn";
-import { publishTestChromium } from "../../scripts/publish-browser";
-import { removeTestDirectory } from "../../scripts/test-directory";
-import { publishHeaders } from "./publish";
+import { bunChild } from "../../scripts/bun-child.ts";
+import { packedInstall } from "../../scripts/packed-install-spawn.ts";
+import { publishTestChromium } from "../../scripts/publish-browser.ts";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
+import { publishHeaders } from "./publish.ts";
 import {
     cloudflareConfig,
     discoverWranglerConfig,
     resolveWrangler,
     WRANGLER_VERSION,
-} from "./publish-cloudflare";
-import { verifyPublishedGame } from "./publish-verify";
+} from "./publish-cloudflare.ts";
+import { verifyPublishedGame } from "./publish-verify.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const repo = resolve(import.meta.dir, "../..");
@@ -181,13 +181,13 @@ test("a packed minimal scaffold with physics starts through pinned Wrangler asse
     const installed = join(scaffold, "node_modules/@dylanebert/shallot");
     const publish = (await import(
         join(installed, "src/cli/publish.ts")
-    )) as typeof import("./publish");
+    )) as typeof import("./publish.ts");
     const verify = (await import(
         join(installed, "src/cli/publish-verify.ts")
-    )) as typeof import("./publish-verify");
+    )) as typeof import("./publish-verify.ts");
     const build = (await import(
         join(installed, "src/project/build.ts")
-    )) as typeof import("../project/build");
+    )) as typeof import("../project/build.ts");
     const snapshot = (relative = "", files = new Map<string, Buffer<ArrayBuffer>>()) => {
         for (const entry of readdirSync(join(scaffold, relative), {
             withFileTypes: true,

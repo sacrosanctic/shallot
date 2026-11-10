@@ -15,13 +15,13 @@ import {
     ShapeKind,
 } from "../../src/core/physics";
 import { Time, World } from "../../src/engine";
-import { quaternion, vector } from "../../src/standard/physics/kernel/math";
+import { quaternion, vector } from "../../src/standard/physics/kernel/math.ts";
 import { Transform, TransformPlugin } from "../../src/core/transform";
-import { BodyType, defaultSurfaceMaterial } from "../../src/standard/physics/common/types";
-import { createBoxMesh } from "../../src/standard/physics/shapes/mesh";
-import { createCompound } from "../../src/standard/physics/shapes/compound";
-import { createGrid } from "../../src/standard/physics/shapes/heightfield";
-import { makeBoxHull } from "../../src/standard/physics/shapes/build-hull";
+import { BodyType, defaultSurfaceMaterial } from "../../src/standard/physics/common/types.ts";
+import { createBoxMesh } from "../../src/standard/physics/shapes/mesh.ts";
+import { createCompound } from "../../src/standard/physics/shapes/compound.ts";
+import { createGrid } from "../../src/standard/physics/shapes/heightfield.ts";
+import { makeBoxHull } from "../../src/standard/physics/shapes/build-hull.ts";
 import {
     createCapsuleShape,
     createCompoundShape,
@@ -29,14 +29,14 @@ import {
     createHullShape,
     createMeshShape,
     createSphereShape,
-} from "../../src/standard/physics/shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld, testShapeDef } from "../../src/standard/physics/testing";
-import { makeBodyId } from "../../src/standard/physics/world/body";
-import { EventKind, eventCount, eventId } from "../../src/standard/physics/kernel/eventbuffers";
-import { init, kernel } from "../../src/standard/physics/kernel/kernel";
-import { ContactField, contactField, contactIsValid } from "../../src/standard/physics/collision/contact";
-import { readContactManifolds } from "../../src/standard/physics/collision/manifoldstore";
-import type { WorldState } from "../../src/standard/physics/world/world";
+} from "../../src/standard/physics/shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld, testShapeDef } from "../../src/standard/physics/testing.ts";
+import { makeBodyId } from "../../src/standard/physics/world/body.ts";
+import { EventKind, eventCount, eventId } from "../../src/standard/physics/kernel/eventbuffers.ts";
+import { init, kernel } from "../../src/standard/physics/kernel/kernel.ts";
+import { ContactField, contactField, contactIsValid } from "../../src/standard/physics/collision/contact.ts";
+import { readContactManifolds } from "../../src/standard/physics/collision/manifoldstore.ts";
+import type { WorldState } from "../../src/standard/physics/world/world.ts";
 import {
     bodyCastRay,
     bodyCastShape,
@@ -51,7 +51,7 @@ import {
     worldOverlapAABB,
     worldOverlapShape,
     type WorldCastHit,
-} from "../../src/standard/physics/world/query";
+} from "../../src/standard/physics/world/query.ts";
 import {
     castBodyRay,
     castBodyShape,
@@ -67,11 +67,11 @@ import {
     PhysicsWorldDefinition,
     StandardPhysicsPlugin,
 } from "../../src/standard/physics";
-import { BodyField, bodyField } from "../../src/standard/physics/kernel/bodyrecords";
-import { setQueryCallback } from "../../src/standard/physics/kernel/kernel";
-import { queryColumns } from "../../src/standard/physics/kernel/querycolumns";
-import { nativeSseOutput } from "./native-evidence";
-import { assertPublicOracleKernel } from "./oracle-kernel";
+import { BodyField, bodyField } from "../../src/standard/physics/kernel/bodyrecords.ts";
+import { setQueryCallback } from "../../src/standard/physics/kernel/kernel.ts";
+import { queryColumns } from "../../src/standard/physics/kernel/querycolumns.ts";
+import { nativeSseOutput } from "./native-evidence.ts";
+import { assertPublicOracleKernel } from "./oracle-kernel.ts";
 
 setDefaultTimeout(180_000);
 await init(undefined, { threads: 0 });

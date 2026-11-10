@@ -23,8 +23,8 @@ import {
     StandardPhysicsPlugin,
     StepPhysicsSystem,
 } from "@dylanebert/shallot/standard/physics";
-import { human } from "./human";
-import type { Controls } from "./scenes";
+import { human } from "./human.ts";
+import type { Controls } from "./scenes.ts";
 
 const f = Math.fround;
 type V3 = [number, number, number];

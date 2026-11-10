@@ -20,9 +20,9 @@ import {
     SyncPhysicsConstraintsSystem,
 } from "@dylanebert/shallot/standard/physics";
 import building from "./building.json" with { type: "json" };
-import { decodeMesh } from "./mesh-data";
-import { v } from "./mover";
-import { readPlayerControls } from "./player-controls";
+import { decodeMesh } from "./mesh-data.ts";
+import { v } from "./mover.ts";
+import { readPlayerControls } from "./player-controls.ts";
 import {
     BODY_RADIUS,
     FEET_HEIGHT,
@@ -31,7 +31,7 @@ import {
     rigidCharacter,
     stepRigid,
     TOTAL_HEIGHT,
-} from "./rigid-character";
+} from "./rigid-character.ts";
 import stairs from "./stairs.json" with { type: "json" };
 import level from "./test_map01.json" with { type: "json" };
 import voxel1 from "./voxel_mesh_01.json" with { type: "json" };

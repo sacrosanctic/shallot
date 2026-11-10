@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { formatValue } from "./control-format";
-import { scenes } from "./scenes";
+import { formatValue } from "./control-format.ts";
+import { scenes } from "./scenes.ts";
 
 test("Driving's rows retain DrawControls bounds and decimal formats without ImGui suffixes", () => {
     expect(

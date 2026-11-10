@@ -9,8 +9,8 @@ import {
     TransformRuntime,
 } from "../../core/transform";
 import { createApp, type Plugin, type System, Time } from "../../engine";
-import { Character, CharacterPlugin } from "./character";
-import { init, kernel } from "./kernel/kernel";
+import { Character, CharacterPlugin } from "./character.ts";
+import { init, kernel } from "./kernel/kernel.ts";
 import {
     hashPhysics,
     physicsBodyIndex,
@@ -19,8 +19,8 @@ import {
     StepPhysicsSystem,
     setTargetTransform,
     setTransform,
-} from "./runtime";
-import { bodyGetTransform } from "./world/body";
+} from "./runtime.ts";
+import { bodyGetTransform } from "./world/body.ts";
 
 const SyncSystem = StandardPhysicsPlugin.systems![0];
 

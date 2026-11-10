@@ -1,7 +1,7 @@
 import type { World } from "@dylanebert/shallot";
 import type { Mesh } from "@dylanebert/shallot/mesh";
 import * as d from "typegpu/data";
-import { capacity, type TerrainConfig } from "./terrain-data";
+import { capacity, type TerrainConfig } from "./terrain-data.ts";
 
 export type Geometry = {
     mesh: Mesh;

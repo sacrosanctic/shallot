@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { component, f16, f32, vec4 } from "./component";
-import { World } from "./world";
+import { component, f16, f32, vec4 } from "./component.ts";
+import { World } from "./world.ts";
 
 const Held = component("destroy-held-values", {
     scalar: f32,

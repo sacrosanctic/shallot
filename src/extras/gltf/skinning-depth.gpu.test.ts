@@ -3,13 +3,13 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import gold from "../../../examples/gltf/tests/animations.gold.json";
-import { fileFetch, syncAssets } from "../../../examples/gltf/tests/setup";
+import { fileFetch, syncAssets } from "../../../examples/gltf/tests/setup.ts";
 import { Meshes, type MeshHandle, MeshInstance } from "../../core/mesh";
 import { attachTexture, Camera, DepthPrepass, DirectionalLight, Views } from "../../core/rendering";
 import { Transform } from "../../core/transform";
 import { type App, lookAtRotation, precompile, type World } from "../../engine";
 import { probeBuffer } from "../../engine/runtime";
-import { openGpuApp } from "../../project/testing-gpu";
+import { openGpuApp } from "../../project/testing-gpu.ts";
 import {
     Materials,
     MeshMaterial,
@@ -18,10 +18,10 @@ import {
     StandardRenderer,
     StandardRenderingPlugin,
 } from "../../standard/rendering";
-import { sunShadowView } from "../../standard/rendering/atlas";
-import { loadGltf } from "./load";
-import { type GltfSceneInstance, loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene";
-import { GltfPlugin } from "./skinning";
+import { sunShadowView } from "../../standard/rendering/atlas.ts";
+import { loadGltf } from "./load.ts";
+import { type GltfSceneInstance, loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene.ts";
+import { GltfPlugin } from "./skinning.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const SIDE = 256;

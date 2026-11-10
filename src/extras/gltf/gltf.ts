@@ -10,7 +10,7 @@ import {
     multiplyMat4 as multiply,
 } from "../../engine/utils";
 import type { TextureTransform } from "../../standard/rendering";
-import type { GltfAnimation, GltfAnimationPath, GltfNode } from "./animation";
+import type { GltfAnimation, GltfAnimationPath, GltfNode } from "./animation.ts";
 
 const VERTEX_FLOATS = 8;
 

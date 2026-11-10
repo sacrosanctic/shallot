@@ -27,12 +27,12 @@ import {
     setAwake,
     setTargetTransform,
 } from "@dylanebert/shallot/standard/physics";
-import { CharacterSample, characterDrag } from "./character";
-import { CollisionState } from "./collision";
-import { CollisionDebug, debugDrag } from "./collision-debug";
-import { collisionDrag } from "./collision-drag";
-import { ManifoldSample } from "./manifold";
-import { manifoldDrag } from "./manifold-drag";
+import { CharacterSample, characterDrag } from "./character.ts";
+import { CollisionState } from "./collision.ts";
+import { CollisionDebug, debugDrag } from "./collision-debug.ts";
+import { collisionDrag } from "./collision-drag.ts";
+import { ManifoldSample } from "./manifold.ts";
+import { manifoldDrag } from "./manifold-drag.ts";
 
 export const Grab = {
     create: () => ({

@@ -10,7 +10,7 @@ import {
     perspective,
     quatToEuler,
     rotateQuatByEuler,
-} from "./math";
+} from "./math.ts";
 
 // `lookAtRotation` and `lookAt` are two readings of one orientation: `lookAtRotation` returns it as a quaternion an entity is
 // posed with, `lookAt` as the view matrix a projection multiplies. StandardRenderer poses each shadow light camera with

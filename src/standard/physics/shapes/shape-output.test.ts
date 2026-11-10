@@ -1,25 +1,25 @@
 import { expect, test } from "bun:test";
-import { ContactField, contactField, contactIds, contactIsValid } from "../collision/contact";
-import { updateBroadPhasePairs } from "../collision/pairs";
-import { matrix, transform, vector } from "../kernel/math";
+import { ContactField, contactField, contactIds, contactIsValid } from "../collision/contact.ts";
+import { updateBroadPhasePairs } from "../collision/pairs.ts";
+import { matrix, transform, vector } from "../kernel/math.ts";
 
 const f32 = Math.fround;
 
-import { BodyType, defaultShapeDef, defaultSurfaceMaterial, ShapeType } from "../common/types";
-import { readShapeAabb } from "../kernel/shapecolumns";
-import { ShapeField, shapeField } from "../kernel/shaperecords";
+import { BodyType, defaultShapeDef, defaultSurfaceMaterial, ShapeType } from "../common/types.ts";
+import { readShapeAabb } from "../kernel/shapecolumns.ts";
+import { ShapeField, shapeField } from "../kernel/shaperecords.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { makeBoxHull } from "./build-hull";
-import { createCompound } from "./compound";
+} from "../testing.ts";
+import { makeBoxHull } from "./build-hull.ts";
+import { createCompound } from "./compound.ts";
 import gold from "./geometry.gold.json";
-import { createGrid } from "./heightfield";
-import { createGridMesh } from "./mesh";
+import { createGrid } from "./heightfield.ts";
+import { createGridMesh } from "./mesh.ts";
 import {
     computeFatShapeAABBOut,
     computeShapeAABB,
@@ -34,7 +34,7 @@ import {
     createSphereShape,
     getShapeCentroid,
     setShapeFilter,
-} from "./shape";
+} from "./shape.ts";
 
 const bits = new DataView(new ArrayBuffer(4));
 function hex(x: number): string {

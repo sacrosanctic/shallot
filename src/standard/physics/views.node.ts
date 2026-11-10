@@ -10,16 +10,16 @@ import {
     StandardPhysicsPlugin,
     StepPhysicsSystem,
 } from ".";
-import { contactIds } from "./collision/contact";
-import { readContactManifolds } from "./collision/manifoldstore";
-import { BodyType, defaultFilter, defaultSurfaceMaterial } from "./common/types";
-import { kernel, rethrowQueryError, setQueryCallback } from "./kernel/kernel";
-import { queryColumns } from "./kernel/querycolumns";
-import { readFatAabb, readShapeAabb } from "./kernel/shapecolumns";
-import { physicsBodyIndex } from "./runtime";
-import { makeBoxHull } from "./shapes/build-hull";
-import { createGridMesh } from "./shapes/build-nonconvex";
-import { readShapeHull } from "./shapes/hull";
+import { contactIds } from "./collision/contact.ts";
+import { readContactManifolds } from "./collision/manifoldstore.ts";
+import { BodyType, defaultFilter, defaultSurfaceMaterial } from "./common/types.ts";
+import { kernel, rethrowQueryError, setQueryCallback } from "./kernel/kernel.ts";
+import { queryColumns } from "./kernel/querycolumns.ts";
+import { readFatAabb, readShapeAabb } from "./kernel/shapecolumns.ts";
+import { physicsBodyIndex } from "./runtime.ts";
+import { makeBoxHull } from "./shapes/build-hull.ts";
+import { createGridMesh } from "./shapes/build-nonconvex.ts";
+import { readShapeHull } from "./shapes/hull.ts";
 import {
     computeShapeMass,
     createCapsuleShape,
@@ -32,17 +32,17 @@ import {
     readShapeCapsule,
     readShapeSphere,
     shapeIsValid,
-} from "./shapes/shape";
+} from "./shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "./testing";
-import { bodyGetLinearVelocity, bodyGetTransform } from "./world/body";
-import { worldCastRay, worldCastShape, worldCollideMover } from "./world/query";
-import type { WorldState } from "./world/world";
+} from "./testing.ts";
+import { bodyGetLinearVelocity, bodyGetTransform } from "./world/body.ts";
+import { worldCastRay, worldCastShape, worldCollideMover } from "./world/query.ts";
+import type { WorldState } from "./world/world.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

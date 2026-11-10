@@ -1,16 +1,16 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics, Shape } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { sceneSwitcher } from "../src/sample";
+import { sceneSwitcher } from "../src/sample.ts";
 import {
     changeControl,
     controlValues,
     createScene,
     enabledControls,
     type Scene,
-} from "../src/scenes";
-import { StackingSamplePlugin, stackingScenes } from "../src/stacking";
-import { sampleGold } from "./gold";
+} from "../src/scenes.ts";
+import { StackingSamplePlugin, stackingScenes } from "../src/stacking.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

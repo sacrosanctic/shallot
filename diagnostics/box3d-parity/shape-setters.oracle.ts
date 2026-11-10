@@ -1,10 +1,10 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import { nativeSseOutput } from "./native-evidence";
-import { BodyType } from "../../src/standard/physics/common/types";
-import { defaultSurfaceMaterial, type SurfaceMaterial } from "../../src/standard/physics/common/types";
-import { createHull } from "../../src/standard/physics/shapes/build-hull";
-import { readShapeHull } from "../../src/standard/physics/shapes/hull";
-import { createMesh } from "../../src/standard/physics/shapes/mesh";
+import { nativeSseOutput } from "./native-evidence.ts";
+import { BodyType } from "../../src/standard/physics/common/types.ts";
+import { defaultSurfaceMaterial, type SurfaceMaterial } from "../../src/standard/physics/common/types.ts";
+import { createHull } from "../../src/standard/physics/shapes/build-hull.ts";
+import { readShapeHull } from "../../src/standard/physics/shapes/hull.ts";
+import { createMesh } from "../../src/standard/physics/shapes/mesh.ts";
 import {
     createCapsuleShape,
     createHullShape,
@@ -27,12 +27,12 @@ import {
     setShapeRestitution,
     setShapeSphere,
     setShapeSurfaceMaterial,
-} from "../../src/standard/physics/shapes/shape";
-import { ShapeFlags, setShapeFlag, shapeFlag } from "../../src/standard/physics/kernel/shaperecords";
-import { readShapeMesh } from "../../src/standard/physics/shapes/readgeometry";
-import { init } from "../../src/standard/physics/kernel/kernel";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../../src/standard/physics/testing";
-import type { WorldState } from "../../src/standard/physics/world/world";
+} from "../../src/standard/physics/shapes/shape.ts";
+import { ShapeFlags, setShapeFlag, shapeFlag } from "../../src/standard/physics/kernel/shaperecords.ts";
+import { readShapeMesh } from "../../src/standard/physics/shapes/readgeometry.ts";
+import { init } from "../../src/standard/physics/kernel/kernel.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../../src/standard/physics/testing.ts";
+import type { WorldState } from "../../src/standard/physics/world/world.ts";
 
 setDefaultTimeout(180_000);
 await init(undefined, { threads: 0 });

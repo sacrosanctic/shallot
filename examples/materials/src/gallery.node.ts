@@ -5,8 +5,8 @@ import { openGpuApp as createApp } from "@dylanebert/shallot/testing/gpu";
 setDefaultTimeout(TIMEOUT.node);
 
 import { Materials, MeshMaterial, StandardMaterial } from "@dylanebert/shallot";
-import { Gallery, GalleryPlugin, presets } from "./gallery";
-import { CheckerMaterial, QuantizedMaterial, WaveMaterial } from "./materials";
+import { Gallery, GalleryPlugin, presets } from "./gallery.ts";
+import { CheckerMaterial, QuantizedMaterial, WaveMaterial } from "./materials.ts";
 
 test("the gallery's carbon and red colors reach the checkerboard's material row", async () => {
     const app = await createApp({ defaults: false, plugins: [GalleryPlugin] });

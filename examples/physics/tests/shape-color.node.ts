@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { BaseColor, Body, BodyType, createApp, Shape } from "@dylanebert/shallot";
 import { StandardPhysicsPlugin, setAwake } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { EventSample } from "../src/events";
-import { changeControl, controlValues, createScene } from "../src/scenes";
-import { drivenBodies, setReaction, shapeMaterial, shapeRole } from "../src/shape-color";
+import { EventSample } from "../src/events.ts";
+import { changeControl, controlValues, createScene } from "../src/scenes.ts";
+import { drivenBodies, setReaction, shapeMaterial, shapeRole } from "../src/shape-color.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

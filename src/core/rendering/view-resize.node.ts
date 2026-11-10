@@ -4,7 +4,7 @@ import { createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
 import { Viewports } from "../../engine";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
 import { Transform } from "../transform";
-import { attachCanvas, Camera, RenderingPlugin, Views } from "./index";
+import { attachCanvas, Camera, RenderingPlugin, Views } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

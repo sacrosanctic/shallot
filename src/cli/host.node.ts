@@ -7,8 +7,8 @@ setDefaultTimeout(TIMEOUT.node);
 import { mkdtempSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { bunChild } from "../../scripts/bun-child";
-import { removeTestDirectory } from "../../scripts/test-directory";
+import { bunChild } from "../../scripts/bun-child.ts";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
 
 for (const command of ["dev", "build", "preview"]) {
     test(`${command} refuses linux on macOS before any build or launch`, () => {

@@ -12,7 +12,7 @@ import {
 } from "../../core/rendering";
 import { Transform } from "../../core/transform";
 import { DEFAULT_PLUGINS } from "../../standard";
-import { MeshMaterial, materialLayout, materialType, StandardRenderer } from "./index";
+import { MeshMaterial, materialLayout, materialType, StandardRenderer } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const subject = gpuScene(

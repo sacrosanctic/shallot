@@ -18,7 +18,7 @@ import {
 } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp as createApp } from "@dylanebert/shallot/testing/gpu";
-import { DrivePlayerSystem, LocalPlayer, Player, PlayerPlugin } from "./player";
+import { DrivePlayerSystem, LocalPlayer, Player, PlayerPlugin } from "./player.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

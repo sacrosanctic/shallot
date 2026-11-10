@@ -1,5 +1,5 @@
 import { expect, test } from "playwright/test";
-import { capture } from "./capture";
+import { capture } from "./capture.ts";
 
 test("stack, hover, picker and Bridge look review", async ({ page }) => {
     await page.goto("/");

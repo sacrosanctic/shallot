@@ -2,11 +2,11 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp } from "@dylanebert/shallot";
 import { StandardPhysicsPlugin } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { compoundScenes } from "../../examples/physics/src/compound";
-import { createScene } from "../../examples/physics/src/scenes";
-import { physicsState } from "../../src/standard/physics/runtime";
-import type { CompoundData } from "../../src/standard/physics/shapes/compound";
-import { compoundRecord } from "./compound-records";
+import { compoundScenes } from "../../examples/physics/src/compound.ts";
+import { createScene } from "../../examples/physics/src/scenes.ts";
+import { physicsState } from "../../src/standard/physics/runtime.ts";
+import type { CompoundData } from "../../src/standard/physics/shapes/compound.ts";
+import { compoundRecord } from "./compound-records.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of Object.keys(compoundScenes) as (keyof typeof compoundScenes)[]) {

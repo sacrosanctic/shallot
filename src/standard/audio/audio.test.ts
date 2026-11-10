@@ -10,7 +10,7 @@ import {
     installAudioRestore,
     reconcileAudio,
     returnAudioBuffer,
-} from "./runtime";
+} from "./runtime.ts";
 
 interface Message {
     type: string;

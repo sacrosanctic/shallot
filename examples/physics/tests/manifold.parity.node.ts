@@ -1,17 +1,17 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { ManifoldPlugin, ManifoldSample, manifoldNames } from "../src/manifold";
-import { manifoldDiagnosticScenes } from "../src/manifold-diagnostics";
-import { sceneSwitcher } from "../src/sample";
-import { changeControl, controlValues, createScene } from "../src/scenes";
-import { drawingDigest } from "./digest";
-import { sampleGold } from "./gold";
-import { manifoldDiagnosticGesture } from "./manifold-diagnostic-gesture";
-import { manifoldDiagnosticRecords } from "./manifold-diagnostic-records";
-import { manifoldInput } from "./manifold-input";
-import { manifoldPoseRecord, manifoldPoses } from "./manifold-poses";
-import { manifoldRecords } from "./manifold-records";
+import { ManifoldPlugin, ManifoldSample, manifoldNames } from "../src/manifold.ts";
+import { manifoldDiagnosticScenes } from "../src/manifold-diagnostics.ts";
+import { sceneSwitcher } from "../src/sample.ts";
+import { changeControl, controlValues, createScene } from "../src/scenes.ts";
+import { drawingDigest } from "./digest.ts";
+import { sampleGold } from "./gold.ts";
+import { manifoldDiagnosticGesture } from "./manifold-diagnostic-gesture.ts";
+import { manifoldDiagnosticRecords } from "./manifold-diagnostic-records.ts";
+import { manifoldInput } from "./manifold-input.ts";
+import { manifoldPoseRecord, manifoldPoses } from "./manifold-poses.ts";
+import { manifoldRecords } from "./manifold-records.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of manifoldNames)

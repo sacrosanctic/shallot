@@ -1,7 +1,7 @@
 import type { World } from "@dylanebert/shallot";
 import { computeCosSin, type HullData } from "@dylanebert/shallot/standard/physics";
-import { drawInkPoint, INK } from "./ink-presentation";
-import { JOINT_LINE } from "./joint-presentation";
+import { drawInkPoint, INK } from "./ink-presentation.ts";
+import { JOINT_LINE } from "./joint-presentation.ts";
 import {
     add,
     cross,
@@ -12,8 +12,8 @@ import {
     sub,
     type Vec,
     vector,
-} from "./manifold-math";
-import { ManifoldSample } from "./manifold-state";
+} from "./manifold-math.ts";
+import { ManifoldSample } from "./manifold-state.ts";
 
 type Point = [number, number, number];
 const f = Math.fround,

@@ -3,8 +3,8 @@ import { Body, BodyType, Shape, ShapeKind } from "../../src/core/physics";
 import { Transform } from "../../src/core/transform";
 import { createApp } from "../../src/engine";
 import { hashPhysics, PhysicsEvents, PhysicsWorldDefinition, StandardPhysicsPlugin, stepPhysics, StepPhysicsSystem } from "../../src/standard/physics";
-import { nativeSseOutput } from "./native-evidence";
-import { assertPublicOracleKernel } from "./oracle-kernel";
+import { nativeSseOutput } from "./native-evidence.ts";
+import { assertPublicOracleKernel } from "./oracle-kernel.ts";
 
 await assertPublicOracleKernel();
 const native = nativeSseOutput("manual-step.c", "").trim().split("\n").map(line => {

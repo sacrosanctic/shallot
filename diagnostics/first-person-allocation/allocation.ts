@@ -1,7 +1,7 @@
 import { copyFileSync, mkdtempSync, readdirSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { basename, dirname, join, resolve } from "node:path";
-import { removeTestDirectory } from "../../scripts/test-directory";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
 import { DEFERRED_TURBOFAN_FLAGS, SAMPLE_RESULT } from "./allocation-sampler.mjs";
 
 export interface AllocationFrame {

@@ -1,4 +1,4 @@
-import type { ManifoldPose } from "../src/manifold";
+import type { ManifoldPose } from "../src/manifold.ts";
 
 export function manifoldPoseRecord(step: number, pose: ManifoldPose): string {
     return [step, pose.p.x, pose.p.y, pose.p.z, pose.q.v.x, pose.q.v.y, pose.q.v.z, pose.q.s].join(

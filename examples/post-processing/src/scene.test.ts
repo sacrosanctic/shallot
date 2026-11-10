@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { Camera, World } from "@dylanebert/shallot";
 import { LensDistortion, Orbit } from "@dylanebert/shallot/extras";
-import { effects, Scene, ScenePlugin, setEffect } from "./scene";
-import { setSetting, settings } from "./settings";
+import { effects, Scene, ScenePlugin, setEffect } from "./scene.ts";
+import { setSetting, settings } from "./settings.ts";
 
 function scene(): World {
     const world = new World();

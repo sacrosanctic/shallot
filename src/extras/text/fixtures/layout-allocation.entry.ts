@@ -1,6 +1,6 @@
 import { Transform } from "../../../core/transform";
 import { createApp } from "../../../engine/app";
-import { internText, Text, TextPlugin } from "../index";
+import { internText, Text, TextPlugin } from "../index.ts";
 export let controlSink: object;
 export function control() {
     controlSink = { frame: 0 };

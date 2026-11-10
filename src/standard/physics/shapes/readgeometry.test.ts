@@ -1,12 +1,12 @@
 import { expect, test } from "bun:test";
-import { BodyType, defaultSurfaceMaterial, ShapeType } from "../common/types";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing";
-import { makeBoxHull } from "./build-hull";
-import { createCompound } from "./compound";
-import { createGrid } from "./heightfield";
-import { createGridMesh } from "./mesh";
-import { readCompoundChildren, readShapeHeightField, readShapeMesh } from "./readgeometry";
-import { createCompoundShape, createHeightFieldShape, createMeshShape } from "./shape";
+import { BodyType, defaultSurfaceMaterial, ShapeType } from "../common/types.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
+import { makeBoxHull } from "./build-hull.ts";
+import { createCompound } from "./compound.ts";
+import { createGrid } from "./heightfield.ts";
+import { createGridMesh } from "./mesh.ts";
+import { readCompoundChildren, readShapeHeightField, readShapeMesh } from "./readgeometry.ts";
+import { createCompoundShape, createHeightFieldShape, createMeshShape } from "./shape.ts";
 
 test("debug-draw geometry outputs are fresh views reconstructed from kernel uploads", () => {
     const world = createTestWorld();

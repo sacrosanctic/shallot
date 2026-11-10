@@ -16,7 +16,7 @@ import {
     StepPhysicsSystem,
 } from "@dylanebert/shallot/standard/physics";
 import hullPoints from "./hull-points.json" with { type: "json" };
-import type { Controls } from "./scenes";
+import type { Controls } from "./scenes.ts";
 
 const f = Math.fround;
 type Vec = { x: number; y: number; z: number };

@@ -9,7 +9,7 @@ import {
     Transform,
 } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { castMover, getInverseMass, PhysicsWorldDefinition } from "./index";
+import { castMover, getInverseMass, PhysicsWorldDefinition } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("mover cast and inverse mass records are borrowed per World", async () => {

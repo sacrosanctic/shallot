@@ -5,7 +5,7 @@ import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { expect, test } from "../browser.fixture";
-import { removeTestDirectory } from "../test-directory";
+import { removeTestDirectory } from "../test-directory.ts";
 
 const SUBJECT = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(SUBJECT, "../..");

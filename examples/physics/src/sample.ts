@@ -1,8 +1,8 @@
 import type { World } from "@dylanebert/shallot";
 import { showProfiler } from "@dylanebert/shallot/extras";
-import { MotorizedJoint } from "./roles";
-import { SceneRestart } from "./scene-restart";
-import { categories, createScene, type Scene } from "./scenes";
+import { MotorizedJoint } from "./roles.ts";
+import { SceneRestart } from "./scene-restart.ts";
+import { categories, createScene, type Scene } from "./scenes.ts";
 
 type Bounds = Pick<DOMRectReadOnly, "left" | "right" | "top" | "bottom">;
 

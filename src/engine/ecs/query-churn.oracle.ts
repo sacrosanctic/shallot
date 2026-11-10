@@ -1,5 +1,5 @@
-import { component, f32 } from "./component";
-import { World } from "./world";
+import { component, f32 } from "./component.ts";
+import { World } from "./world.ts";
 
 const C = component("query-churn", { value: f32 });
 const entities = 10_000;

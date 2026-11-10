@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { nativeHostDiagnostic } from "./index";
+import { nativeHostDiagnostic } from "./index.ts";
 
 for (const [host, hostName] of [
     ["darwin", "macOS"],

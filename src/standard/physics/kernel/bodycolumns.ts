@@ -4,14 +4,14 @@ import type { World } from "../../../engine";
 // Each World owns its columns. A reserve can reallocate a column without growing memory, so
 // refresh after grow-capable calls checks both the column offsets and the memory buffer.
 
-import { SetType } from "../common/constants";
-import type { Mat3, Vec3, WorldTransform } from "../common/records";
-import type { BodySim } from "../world/body";
-import type { WorldState } from "../world/world";
-import { BODY_RECORD_STRIDE } from "./bodyrecords";
-import { BODY_ID, CENTER0, FLAGS, MIN_EXTENT, SIM_STRIDE, STATE_STRIDE } from "./columns";
-import { kernel } from "./kernel";
-import { KernelViews } from "./views";
+import { SetType } from "../common/constants.ts";
+import type { Mat3, Vec3, WorldTransform } from "../common/records.ts";
+import type { BodySim } from "../world/body.ts";
+import type { WorldState } from "../world/world.ts";
+import { BODY_RECORD_STRIDE } from "./bodyrecords.ts";
+import { BODY_ID, CENTER0, FLAGS, MIN_EXTENT, SIM_STRIDE, STATE_STRIDE } from "./columns.ts";
+import { kernel } from "./kernel.ts";
+import { KernelViews } from "./views.ts";
 
 // BODY_LAYOUT header indices (bodies.rs); slots 2, 3 and 5 are unallocated.
 export const B_STATE = 0;

@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
-import { createHull, makeBoxHull, makeOffsetBoxHull } from "../../src/standard/physics/shapes/build-hull";
-import { hash64NonZero, hullImage } from "../../src/standard/physics/shapes/hullbytes";
-import { nativeBinary } from "./native";
+import { createHull, makeBoxHull, makeOffsetBoxHull } from "../../src/standard/physics/shapes/build-hull.ts";
+import { hash64NonZero, hullImage } from "../../src/standard/physics/shapes/hullbytes.ts";
+import { nativeBinary } from "./native.ts";
 
 test("hull byte images and full 64-bit hashes equal direct native box construction", () => {
     const result = Bun.spawnSync([nativeBinary("hull-hash.c")]);

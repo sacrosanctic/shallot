@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { Meshes, type MeshHandle, MeshPlugin } from "./index";
+import { Meshes, type MeshHandle, MeshPlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const cases = [

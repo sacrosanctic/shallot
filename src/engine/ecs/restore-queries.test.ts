@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
-import { component, f32 } from "./component";
-import { not, or } from "./query";
-import { World } from "./world";
+import { component, f32 } from "./component.ts";
+import { not, or } from "./query.ts";
+import { World } from "./world.ts";
 
 const X = component("restore-query-not", { value: f32 });
 const C = component("restore-query-observer", { value: f32 });

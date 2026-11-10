@@ -15,8 +15,8 @@ import {
 } from "node:fs";
 import { tmpdir } from "node:os";
 import { basename, join, resolve } from "node:path";
-import { expectError } from "../../scripts/test-console";
-import { runCreate } from "./create";
+import { expectError } from "../../scripts/test-console.ts";
+import { runCreate } from "./create.ts";
 
 const ROOT = resolve(import.meta.dir, "../..");
 const SCRATCH = mkdtempSync(join(tmpdir(), "shallot-create-"));

@@ -1,24 +1,24 @@
 import { createApp } from "@dylanebert/shallot";
-import { BodyType } from "../common/types";
-import { init, shutdown, threads } from "../kernel/kernel";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createHullShape } from "../shapes/shape";
+import { BodyType } from "../common/types.ts";
+import { init, shutdown, threads } from "../kernel/kernel.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createHullShape } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { createDistanceJoint, defaultDistanceJointDef } from "./distanceJoint";
-import { createFilterJoint, defaultJointDef } from "./joint";
-import { createMotorJoint, defaultMotorJointDef } from "./motorJoint";
-import { createParallelJoint, defaultParallelJointDef } from "./parallelJoint";
-import { createPrismaticJoint, defaultPrismaticJointDef } from "./prismaticJoint";
-import { createRevoluteJoint, defaultRevoluteJointDef } from "./revoluteJoint";
-import { createSphericalJoint, defaultSphericalJointDef } from "./sphericalJoint";
-import { createWeldJoint, defaultWeldJointDef } from "./weldJoint";
-import { createWheelJoint, defaultWheelJointDef } from "./wheelJoint";
+} from "../testing.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "./distanceJoint.ts";
+import { createFilterJoint, defaultJointDef } from "./joint.ts";
+import { createMotorJoint, defaultMotorJointDef } from "./motorJoint.ts";
+import { createParallelJoint, defaultParallelJointDef } from "./parallelJoint.ts";
+import { createPrismaticJoint, defaultPrismaticJointDef } from "./prismaticJoint.ts";
+import { createRevoluteJoint, defaultRevoluteJointDef } from "./revoluteJoint.ts";
+import { createSphericalJoint, defaultSphericalJointDef } from "./sphericalJoint.ts";
+import { createWeldJoint, defaultWeldJointDef } from "./weldJoint.ts";
+import { createWheelJoint, defaultWheelJointDef } from "./wheelJoint.ts";
 
 export let controlSink: { frame: number } | undefined;
 export const control = () => {

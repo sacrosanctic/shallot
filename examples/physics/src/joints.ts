@@ -30,9 +30,9 @@ import {
     setAwake,
 } from "@dylanebert/shallot/standard/physics";
 import earcut from "earcut";
-import { DrivingPlugin, drivingScene } from "./driving";
-import { MotorizedJoint } from "./roles";
-import type { Controls } from "./scenes";
+import { DrivingPlugin, drivingScene } from "./driving.ts";
+import { MotorizedJoint } from "./roles.ts";
+import type { Controls } from "./scenes.ts";
 
 type V3 = [number, number, number];
 function body(world: World, position: V3, dynamic = true): number {

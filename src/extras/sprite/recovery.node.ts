@@ -1,12 +1,12 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { MeshInstance } from "../../core/mesh";
 import { Transform } from "../../core/transform";
 import type { World } from "../../engine";
 import { MeshMaterial } from "../../standard/rendering";
-import { Sprite, SpritePlugin } from "./index";
+import { Sprite, SpritePlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const subjects = gpuApps(import.meta.path, [{ defaults: false, plugins: [SpritePlugin] }]);

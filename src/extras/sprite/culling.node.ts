@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { readFromArrayBuffer } from "typegpu";
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { MeshInstance } from "../../core/mesh";
 import { attachTexture, Billboard, Camera } from "../../core/rendering";
 import { Transform } from "../../core/transform";
@@ -15,9 +15,9 @@ import {
     materialTypeId,
     StandardRenderer,
 } from "../../standard/rendering";
-import { MeshInstanceInput } from "../../standard/rendering/material-data";
-import { meshInstanceTable } from "../../standard/rendering/preprocess";
-import { Sprite, SpriteMaterialType, SpritePlugin } from "./index";
+import { MeshInstanceInput } from "../../standard/rendering/material-data.ts";
+import { meshInstanceTable } from "../../standard/rendering/preprocess.ts";
+import { Sprite, SpriteMaterialType, SpritePlugin } from "./index.ts";
 
 async function boundRadius(world: World, eid: number): Promise<number> {
     const table = meshInstanceTable(world);

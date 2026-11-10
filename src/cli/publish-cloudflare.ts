@@ -2,7 +2,7 @@ import { spawnSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import { dirname, join, resolve } from "node:path";
-import { publishProgress } from "./publish-output";
+import { publishProgress } from "./publish-output.ts";
 
 /** Matches pinned Wrangler's findWranglerConfig: each filename searches every ancestor. */
 export function discoverWranglerConfig(projectDir: string): string | undefined {

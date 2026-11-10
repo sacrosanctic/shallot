@@ -1,6 +1,6 @@
 import type { Plugin } from "@dylanebert/shallot";
 import { DiagnosticsOverlayPlugin } from "@dylanebert/shallot/extras";
-import { APP_PLUGINS } from "./plugins";
+import { APP_PLUGINS } from "./plugins.ts";
 
 export const AppPlugin: Plugin = {
     name: "FirstPersonApp",

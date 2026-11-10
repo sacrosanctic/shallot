@@ -6,7 +6,7 @@ import {
     submitFrame,
     type WorldGpu,
 } from "../runtime";
-import { FieldColumns } from "./columns";
+import { FieldColumns } from "./columns.ts";
 import {
     type Component,
     type ComponentRecord,
@@ -20,17 +20,17 @@ import {
     sameComponentSchema,
     type Vector2Field,
     type Vector4Field,
-} from "./component";
-import { Entities, type EntityRef } from "./entity";
-import { type Recovery, SnapshotComposition, type WorldSnapshot } from "./snapshot";
+} from "./component.ts";
+import { Entities, type EntityRef } from "./entity.ts";
+import { type Recovery, SnapshotComposition, type WorldSnapshot } from "./snapshot.ts";
 
-export type { WorldSnapshot } from "./snapshot";
+export type { WorldSnapshot } from "./snapshot.ts";
 
-import { Queries } from "./query";
-import { ComponentRegistry } from "./registry";
-import { Scheduler, type System, Time } from "./scheduler";
-import { type ChangeClock, type ComponentStorage, WorldField } from "./storage";
-import { GpuTable, type GpuTableOptions } from "./table";
+import { Queries } from "./query.ts";
+import { ComponentRegistry } from "./registry.ts";
+import { Scheduler, type System, Time } from "./scheduler.ts";
+import { type ChangeClock, type ComponentStorage, WorldField } from "./storage.ts";
+import { GpuTable, type GpuTableOptions } from "./table.ts";
 
 const INITIAL_CAPACITY = 16;
 const UPLOAD_CHUNK_BYTES = 64 * 1024;

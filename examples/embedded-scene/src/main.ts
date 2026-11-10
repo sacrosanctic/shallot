@@ -1,7 +1,7 @@
 import { runApp, shallotDark } from "@dylanebert/shallot";
-import { mountHost } from "./host";
-import { revealAfterFirstFrame } from "./reveal";
-import { LoadingWorld } from "./scene";
+import { mountHost } from "./host.ts";
+import { revealAfterFirstFrame } from "./reveal.ts";
+import { LoadingWorld } from "./scene.ts";
 
 const host = mountHost();
 const loading = shallotDark({

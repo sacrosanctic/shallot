@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { component, entity, f32 } from "./component";
-import { World } from "./world";
+import { component, entity, f32 } from "./component.ts";
+import { World } from "./world.ts";
 
 test("an unattributed fixed system refuses recovery by system name until removed", () => {
     const world = new World();

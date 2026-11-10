@@ -2,7 +2,7 @@ import { test } from "bun:test";
 import { createApp, Meshes, MeshPlugin } from "@dylanebert/shallot";
 import { GltfPlugin, loadGltf, loadGltfScene } from "@dylanebert/shallot/gltf";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { assets, fileFetch, syncAssets } from "../../examples/gltf/tests/setup";
+import { assets, fileFetch, syncAssets } from "../../examples/gltf/tests/setup.ts";
 
 test("quantized fixture base positions through core unorm16 storage", async () => {
 await syncAssets();

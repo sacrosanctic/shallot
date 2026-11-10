@@ -20,7 +20,7 @@ import {
     reduceFs,
     reduceLayout,
     WORKGROUP,
-} from "./passes";
+} from "./passes.ts";
 
 export const size = 32;
 export const widths = [1.5, 2, 2.5, 3, 3.5, 4, 5.5, 7, 7.5, 8, 9.5];

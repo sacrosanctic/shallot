@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
 import { Meshes, MeshInstance } from "../../core/mesh";
-import { meshResourcesKey } from "../../core/mesh/mesh";
+import { meshResourcesKey } from "../../core/mesh/mesh.ts";
 import type { World } from "../../engine";
 import {
     AlphaMode,
@@ -12,9 +12,9 @@ import {
     MeshRenderPlugin,
     StandardMaterial,
     StandardRenderingPlugin,
-} from "./index";
-import { AlphaPipelineKey } from "./material-type";
-import { MeshDrawBuffers } from "./preprocess";
+} from "./index.ts";
+import { AlphaPipelineKey } from "./material-type.ts";
+import { MeshDrawBuffers } from "./preprocess.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const config = { defaults: false, plugins: [MeshRenderPlugin, StandardRenderingPlugin] };

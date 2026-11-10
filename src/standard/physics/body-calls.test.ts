@@ -10,7 +10,7 @@ import {
     StandardPhysicsPlugin,
     setLinearVelocity,
     setTransform,
-} from "./runtime";
+} from "./runtime.ts";
 
 function spawnBall(world: World): number {
     const eid = world.create();

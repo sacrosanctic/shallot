@@ -1,14 +1,14 @@
 import type { World } from "../../../engine";
-import type { AABB } from "../common/records";
-import type { ShapeDef, ShapeType, SurfaceMaterial } from "../common/types";
-import type { Shape } from "../shapes/shape";
-import type { WorldState } from "../world/world";
-import { kernel } from "./kernel";
+import type { AABB } from "../common/records.ts";
+import type { ShapeDef, ShapeType, SurfaceMaterial } from "../common/types.ts";
+import type { Shape } from "../shapes/shape.ts";
+import type { WorldState } from "../world/world.ts";
+import { kernel } from "./kernel.ts";
 // crates/physics/src/shapes.rs owns World-local shape records; a slot is fixed for its life.
 // Lifecycle writes must reach the resident record immediately: finalize reads it without a marshal.
 // Reserves can reallocate columns or grow memory; callers refresh views afterward.
 
-import { KernelViews } from "./views";
+import { KernelViews } from "./views.ts";
 
 /** Word stride of one kernel shape record, mirroring `shapes.rs`. */
 export const SHAPE_STRIDE = 50;

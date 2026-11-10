@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
-import { formatReadout, formatValue } from "./control-format";
-import { manifoldNames, manifoldPointLimits } from "./manifold";
-import { type Controls, controlValues, enabledControls, type Scene, scenes } from "./scenes";
+import { formatReadout, formatValue } from "./control-format.ts";
+import { manifoldNames, manifoldPointLimits } from "./manifold.ts";
+import { type Controls, controlValues, enabledControls, type Scene, scenes } from "./scenes.ts";
 
 test("Determinism retains only read-only sample claims", () => {
     for (const scene of [

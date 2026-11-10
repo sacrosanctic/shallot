@@ -1,10 +1,10 @@
-import type { EntityId } from "../common/ids";
-import type { Pos, Quat, Transform, Vec3 } from "../common/records";
-import { JointField, jointField } from "../kernel/jointrecords";
-import { ShapeField, shapeField } from "../kernel/shaperecords";
-import type { Shape as ShapeRecord } from "../shapes/shape";
-import type { Joint as JointRecord } from "../solver/joint";
-import type { WorldState } from "../world/world";
+import type { EntityId } from "../common/ids.ts";
+import type { Pos, Quat, Transform, Vec3 } from "../common/records.ts";
+import { JointField, jointField } from "../kernel/jointrecords.ts";
+import { ShapeField, shapeField } from "../kernel/shaperecords.ts";
+import type { Shape as ShapeRecord } from "../shapes/shape.ts";
+import type { Joint as JointRecord } from "../solver/joint.ts";
+import type { WorldState } from "../world/world.ts";
 
 /** Return false to reject a collision pair. Arguments are generation-aware IDs for the two shapes.
  * Called only when either shape enables custom filtering. Runs synchronously during the step; the

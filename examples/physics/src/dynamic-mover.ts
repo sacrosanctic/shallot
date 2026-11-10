@@ -25,7 +25,7 @@ import {
     getPogoJointImpulse,
     PhysicsWorldDefinition,
 } from "@dylanebert/shallot/standard/physics";
-import { add, cross, dot, length, mul, pose, rotate, sub, type Vec, v } from "./mover";
+import { add, cross, dot, length, mul, pose, rotate, sub, type Vec, v } from "./mover.ts";
 
 const f = Math.fround;
 const tuple = (p: Vec): [number, number, number] => [p.x, p.y, p.z];

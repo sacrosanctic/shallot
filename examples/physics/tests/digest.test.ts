@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { readdirSync, statSync } from "node:fs";
-import { digestMismatch, drawingDigest, eventDigests, querySteps, recordDigest } from "./digest";
+import { digestMismatch, drawingDigest, eventDigests, querySteps, recordDigest } from "./digest.ts";
 
 test("record digests use FNV-1a u64 UTF-8 bytes", () => {
     expect(recordDigest("")).toBe("cbf29ce484222325");

@@ -1,9 +1,9 @@
 import { expect, test } from "bun:test";
 import gold from "../../../../crates/physics/tests/geometry_read.gold.json";
-import { computeCapsuleAABB, computeSphereAABB } from "./geometry";
-import { getHeightFieldTriangle, type HeightFieldData } from "./heightfield";
-import { computeHullAABB, type HullData } from "./hull";
-import { computeMeshAABB, getMeshTriangle, type MeshData, safeScale } from "./mesh";
+import { computeCapsuleAABB, computeSphereAABB } from "./geometry.ts";
+import { getHeightFieldTriangle, type HeightFieldData } from "./heightfield.ts";
+import { computeHullAABB, type HullData } from "./hull.ts";
+import { computeMeshAABB, getMeshTriangle, type MeshData, safeScale } from "./mesh.ts";
 
 test("safe scale rounds input fields before choosing their signs, like native float fields", () => {
     const expected = new Float32Array(

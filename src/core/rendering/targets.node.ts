@@ -35,7 +35,7 @@ import {
     Tonemapping,
     TonemappingMethod,
     VolumetricLight,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 // The camera a draw system detaches between the prepass and the main pass, once.

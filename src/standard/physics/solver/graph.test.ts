@@ -1,8 +1,8 @@
 import { afterEach, expect, test } from "bun:test";
-import { DYNAMIC_COLOR_COUNT, OVERFLOW_INDEX } from "../common/constants";
-import { BodyType } from "../common/types";
-import { type Kernel, kernel } from "../kernel/kernel";
-import { createTestWorld, destroyTestWorld } from "../testing";
+import { DYNAMIC_COLOR_COUNT, OVERFLOW_INDEX } from "../common/constants.ts";
+import { BodyType } from "../common/types.ts";
+import { type Kernel, kernel } from "../kernel/kernel.ts";
+import { createTestWorld, destroyTestWorld } from "../testing.ts";
 
 let world: ReturnType<typeof createTestWorld>;
 function createGraph(_capacity: number): Kernel {

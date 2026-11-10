@@ -1,9 +1,9 @@
-import type { AABB, Transform, Vec3 } from "../common/records";
-import { type Kernel, kernel } from "../kernel/kernel";
-import type { Capsule, Sphere } from "./geometry";
-import type { HeightFieldData } from "./heightfield";
-import type { HullData } from "./hull";
-import type { Mesh, MeshData, Triangle } from "./mesh";
+import type { AABB, Transform, Vec3 } from "../common/records.ts";
+import { type Kernel, kernel } from "../kernel/kernel.ts";
+import type { Capsule, Sphere } from "./geometry.ts";
+import type { HeightFieldData } from "./heightfield.ts";
+import type { HullData } from "./hull.ts";
+import type { Mesh, MeshData, Triangle } from "./mesh.ts";
 
 type Scratch = { k: Kernel; f: Float32Array; u: Uint32Array; output: DataView };
 const scratch = new WeakMap<Kernel, Scratch>();

@@ -1,23 +1,23 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { World } from "../../engine";
-import { restore, snapshot } from "./api/snapshot";
-import { isMoved } from "./collision/broadphase";
-import { BodyType, defaultQueryFilter } from "./common/types";
-import { EventKind, eventCount } from "./kernel/eventbuffers";
-import { queryColumns } from "./kernel/querycolumns";
-import { createSphereShape } from "./shapes/shape";
-import { createFilterJoint, defaultJointDef } from "./solver/joint";
+import { restore, snapshot } from "./api/snapshot.ts";
+import { isMoved } from "./collision/broadphase.ts";
+import { BodyType, defaultQueryFilter } from "./common/types.ts";
+import { EventKind, eventCount } from "./kernel/eventbuffers.ts";
+import { queryColumns } from "./kernel/querycolumns.ts";
+import { createSphereShape } from "./shapes/shape.ts";
+import { createFilterJoint, defaultJointDef } from "./solver/joint.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "./testing";
-import { bodySetTransform } from "./world/body";
-import { hashWorldState } from "./world/hash";
-import type { WorldState } from "./world/world";
+} from "./testing.ts";
+import { bodySetTransform } from "./world/body.ts";
+import { hashWorldState } from "./world/hash.ts";
+import type { WorldState } from "./world/world.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

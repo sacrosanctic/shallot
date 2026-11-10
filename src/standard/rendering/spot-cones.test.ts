@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { lookAtRotation, perspective } from "../../engine/utils";
-import { spotOuterAngle, spotParams } from "./lighting";
-import { EDGE_TEXELS, type PointShadowFrame, spotBasis } from "./shadows";
+import { spotOuterAngle, spotParams } from "./lighting.ts";
+import { EDGE_TEXELS, type PointShadowFrame, spotBasis } from "./shadows.ts";
 
 const radians = Math.PI / 180;
 // f32 spacing in [1, 2) is 2^-23; rounding π/2 goes above the valid range.

@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { ColorGrading, World } from "@dylanebert/shallot";
-import { Scene } from "./scene";
-import { setSetting, settings } from "./settings";
+import { Scene } from "./scene.ts";
+import { setSetting, settings } from "./settings.ts";
 
 for (const [index, control] of settings.entries()) {
     test(`${control.group} ${control.label} writes its camera field and restores identity`, () => {

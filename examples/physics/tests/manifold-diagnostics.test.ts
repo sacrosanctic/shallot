@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { World } from "@dylanebert/shallot";
-import { arcCanReach, makeArc, manifoldDiagnosticScenes } from "../src/manifold-diagnostics";
-import { vector } from "../src/manifold-math";
+import { arcCanReach, makeArc, manifoldDiagnosticScenes } from "../src/manifold-diagnostics.ts";
+import { vector } from "../src/manifold-math.ts";
 
 test("diagnostic readouts tolerate the UI mounting before scene construction", () => {
     const world = new World();

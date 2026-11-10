@@ -1,10 +1,10 @@
 import { expect, test } from "bun:test";
 import * as d from "typegpu/data";
 import { generateTangents } from "../../core/mesh";
-import { computeNormals, generateSceneTangents, parseGltf } from "./gltf";
-import { DeformationRanges } from "./morph";
+import { computeNormals, generateSceneTangents, parseGltf } from "./gltf.ts";
+import { DeformationRanges } from "./morph.ts";
 import { morphFixture } from "./morph.fixture";
-import { VertexDeformation } from "./skinning";
+import { VertexDeformation } from "./skinning.ts";
 
 test("deformation vertex data reuses the skin stride; ranges coalesce and refuse named capacity overflow without changing extent", () => {
     expect(d.sizeOf(VertexDeformation)).toBe(32);

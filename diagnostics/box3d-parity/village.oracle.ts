@@ -1,17 +1,17 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics } from "@dylanebert/shallot";
-import { createScene } from "../../examples/physics/src/scenes";
-import { VillagePlugin, VillageState } from "../../examples/physics/src/village";
-import { drawingDigest } from "../../examples/physics/tests/digest";
-import { sampleGold } from "../../examples/physics/tests/gold";
-import { physicsState } from "../../src/standard/physics/runtime";
-import type { CompoundData } from "../../src/standard/physics/shapes/compound";
-import { compoundRecord } from "./compound-records";
+import { createScene } from "../../examples/physics/src/scenes.ts";
+import { VillagePlugin, VillageState } from "../../examples/physics/src/village.ts";
+import { drawingDigest } from "../../examples/physics/tests/digest.ts";
+import { sampleGold } from "../../examples/physics/tests/gold.ts";
+import { physicsState } from "../../src/standard/physics/runtime.ts";
+import type { CompoundData } from "../../src/standard/physics/shapes/compound.ts";
+import { compoundRecord } from "./compound-records.ts";
 import { mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
-import { sampleBinary } from "./sample";
-import { run } from "./native";
+import { sampleBinary } from "./sample.ts";
+import { run } from "./native.ts";
 
 setDefaultTimeout(0);
 test("Village convex-child material ids follow the native sample", async () => {

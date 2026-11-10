@@ -20,7 +20,7 @@ import {
 } from "@dylanebert/shallot";
 import { Orbit, OrbitPlugin } from "@dylanebert/shallot/extras";
 import type { MaterialHandle } from "@dylanebert/shallot/standard/rendering";
-import { layout, type Placement, POPULATION, SEED } from "./layout";
+import { layout, type Placement, POPULATION, SEED } from "./layout.ts";
 
 export const COLORS = [
     [0.085, 0.08, 0.072, 1],

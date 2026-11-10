@@ -1,7 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { pipelineWarnings } from "@dylanebert/shallot/testing";
 import { expect, type JSHandle, type Page, test } from "playwright/test";
-import { dragRange, gameKeyMovesCamera } from "../pointer";
+import { dragRange, gameKeyMovesCamera } from "../pointer.ts";
 
 test.use(pipelineWarnings);
 

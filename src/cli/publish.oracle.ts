@@ -4,13 +4,13 @@ import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } f
 import { tmpdir } from "node:os";
 import { basename, join, resolve } from "node:path";
 import { createInterface } from "node:readline/promises";
-import { bunChild } from "../../scripts/bun-child";
-import { packedInstall } from "../../scripts/packed-install-spawn";
-import { browserSessionPath } from "../../scripts/publish-browser-session";
-import { cleanupOracleWorkers } from "../../scripts/publish-oracle-cleanup";
+import { bunChild } from "../../scripts/bun-child.ts";
+import { packedInstall } from "../../scripts/packed-install-spawn.ts";
+import { browserSessionPath } from "../../scripts/publish-browser-session.ts";
+import { cleanupOracleWorkers } from "../../scripts/publish-oracle-cleanup.ts";
 import { normalizePath } from "../project";
-import { cloudflareConfig, type WranglerResult, workerExists } from "./publish-cloudflare";
-import { BUTLER_VERSION } from "./publish-itch";
+import { cloudflareConfig, type WranglerResult, workerExists } from "./publish-cloudflare.ts";
+import { BUTLER_VERSION } from "./publish-itch.ts";
 
 async function confirmPlay(url: string | null, instruction: string) {
     console.info(instruction);

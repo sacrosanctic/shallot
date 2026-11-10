@@ -1,25 +1,25 @@
 import { expect, test } from "bun:test";
-import { BodyType, defaultSurfaceMaterial, type SurfaceMaterial } from "../common/types";
-import { EventKind, eventCount, eventId } from "../kernel/eventbuffers";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createCompound } from "../shapes/compound";
-import { createMesh } from "../shapes/mesh";
+import { BodyType, defaultSurfaceMaterial, type SurfaceMaterial } from "../common/types.ts";
+import { EventKind, eventCount, eventId } from "../kernel/eventbuffers.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createCompound } from "../shapes/compound.ts";
+import { createMesh } from "../shapes/mesh.ts";
 import {
     createCompoundShape,
     createHullShape,
     createMeshShape,
     createSphereShape,
-} from "../shapes/shape";
+} from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { bodySetTransform } from "../world/body";
-import { ContactField, ContactFlags, contactField, contactIsValid } from "./contact";
-import { readContactManifolds, readContactMaterial } from "./manifoldstore";
+} from "../testing.ts";
+import { bodySetTransform } from "../world/body.ts";
+import { ContactField, ContactFlags, contactField, contactIsValid } from "./contact.ts";
+import { readContactManifolds, readContactMaterial } from "./manifoldstore.ts";
 
 const identity = { v: { x: 0, y: 0, z: 0 }, s: 1 };
 const transform = { p: { x: 0, y: 0, z: 0 }, q: identity };

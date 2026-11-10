@@ -2,14 +2,14 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { Body, BodyType, createApp, hashPhysics, StandardPhysicsPlugin } from "@dylanebert/shallot";
 import { setBodyType } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { BodySamplePlugin } from "../../../examples/physics/src/bodies";
+import { BodySamplePlugin } from "../../../examples/physics/src/bodies.ts";
 import {
     changeControl,
     controlValues,
     createScene,
     scenes,
-} from "../../../examples/physics/src/scenes";
-import { sampleGold } from "../../../examples/physics/tests/gold";
+} from "../../../examples/physics/src/scenes.ts";
+import { sampleGold } from "../../../examples/physics/tests/gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

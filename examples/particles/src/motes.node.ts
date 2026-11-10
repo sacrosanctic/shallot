@@ -15,8 +15,8 @@ import {
 } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { MOTE_COUNT, Motes, MotesPlugin } from "./motes";
-import { Room } from "./room";
+import { MOTE_COUNT, Motes, MotesPlugin } from "./motes.ts";
+import { Room } from "./room.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 let app: Awaited<ReturnType<typeof createApp>>;

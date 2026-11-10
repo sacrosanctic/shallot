@@ -3,7 +3,7 @@ import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "nod
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { browserSessionPath } from "./publish-browser-session";
+import { browserSessionPath } from "./publish-browser-session.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

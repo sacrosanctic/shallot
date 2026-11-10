@@ -2,8 +2,8 @@ import { readFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";
 import { nativeHostDiagnostic } from "../native";
 import { resolveViteCli, startViteDev } from "../project";
-import { buildProject, type NativeTarget } from "./build";
-import { previewProject } from "./preview";
+import { buildProject, type NativeTarget } from "./build.ts";
+import { previewProject } from "./preview.ts";
 
 const desktopStatus = `
   Desktop status (experimental)
@@ -344,7 +344,7 @@ export async function main(
         exit(0);
     }
     if (parsed.kind === "create") {
-        const { runCreate } = await import("./create");
+        const { runCreate } = await import("./create.ts");
         exit(runCreate(parsed.rest));
     }
     if (parsed.kind === "unknown") {
@@ -355,7 +355,7 @@ export async function main(
 
     if (parsed.kind === "publish") {
         try {
-            const { publishProject } = await import("./publish");
+            const { publishProject } = await import("./publish.ts");
             await publishProject(process.cwd(), parsed.target);
             exit(0);
         } catch (error) {

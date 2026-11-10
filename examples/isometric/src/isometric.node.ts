@@ -4,8 +4,8 @@ import { Orbit } from "@dylanebert/shallot/extras";
 import { attachTexture, captureTexture, detachView } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { Isometric, IsometricPlugin } from "./isometric";
-import { layout, POPULATION, SEED } from "./layout";
+import { Isometric, IsometricPlugin } from "./isometric.ts";
+import { layout, POPULATION, SEED } from "./layout.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 let app: Awaited<ReturnType<typeof openGpuApp>>;

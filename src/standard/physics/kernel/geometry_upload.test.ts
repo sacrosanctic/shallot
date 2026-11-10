@@ -5,11 +5,11 @@ import {
     defaultShapeDef,
     defaultSurfaceMaterial,
     defaultWorldDef,
-} from "../common/types";
-import { createCylinder, makeBoxHull } from "../shapes/build-hull";
-import { createCompound } from "../shapes/compound";
-import { createGrid } from "../shapes/heightfield";
-import { createGridMesh } from "../shapes/mesh";
+} from "../common/types.ts";
+import { createCylinder, makeBoxHull } from "../shapes/build-hull.ts";
+import { createCompound } from "../shapes/compound.ts";
+import { createGrid } from "../shapes/heightfield.ts";
+import { createGridMesh } from "../shapes/mesh.ts";
 import {
     createCapsuleShape,
     createCompoundShape,
@@ -17,9 +17,9 @@ import {
     createHullShape,
     createMeshShape,
     createSphereShape,
-} from "../shapes/shape";
-import { step } from "../solver/step";
-import { createBody, destroyBody } from "../world/body";
+} from "../shapes/shape.ts";
+import { step } from "../solver/step.ts";
+import { createBody, destroyBody } from "../world/body.ts";
 import {
     addHullToDatabase,
     createWorld,
@@ -27,10 +27,10 @@ import {
     getWorld,
     removeHullFromDatabase,
     type WorldState,
-} from "../world/world";
-import { hullDatabaseIndex } from "./geocolumns";
-import { init, kernel } from "./kernel";
-import { S_GEO_REFERENCE, SHAPE_STRIDE } from "./shapecolumns";
+} from "../world/world.ts";
+import { hullDatabaseIndex } from "./geocolumns.ts";
+import { init, kernel } from "./kernel.ts";
+import { S_GEO_REFERENCE, SHAPE_STRIDE } from "./shapecolumns.ts";
 
 await init(undefined, { threads: 0 });
 const unit = { x: 1, y: 1, z: 1 };

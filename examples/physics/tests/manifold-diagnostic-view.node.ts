@@ -1,10 +1,10 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { ManifoldPlugin, ManifoldSample } from "../src/manifold";
-import { manifoldDiagnosticDrawing } from "../src/manifold-diagnostic-presentation";
-import { manifoldTransform } from "../src/manifold-math";
-import { createScene } from "../src/scenes";
+import { ManifoldPlugin, ManifoldSample } from "../src/manifold.ts";
+import { manifoldDiagnosticDrawing } from "../src/manifold-diagnostic-presentation.ts";
+import { manifoldTransform } from "../src/manifold-math.ts";
+import { createScene } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

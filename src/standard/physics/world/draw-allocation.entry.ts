@@ -1,9 +1,9 @@
 import { createApp } from "@dylanebert/shallot";
-import { DEFAULT_MASK_BITS } from "../common/constants";
-import { queryColumns } from "../kernel/querycolumns";
-import { destroyTestWorld } from "../testing";
-import { worldDraw } from "./draw";
-import { drawScene } from "./draw-scene";
+import { DEFAULT_MASK_BITS } from "../common/constants.ts";
+import { queryColumns } from "../kernel/querycolumns.ts";
+import { destroyTestWorld } from "../testing.ts";
+import { worldDraw } from "./draw.ts";
+import { drawScene } from "./draw-scene.ts";
 
 export let controlSink: { frame: number } | undefined;
 export const control = () => {

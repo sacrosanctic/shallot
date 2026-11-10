@@ -25,7 +25,7 @@ import {
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
 import * as d from "typegpu/data";
-import { ShapeMaterial, ShapeMaterialPlugin } from "../src/material";
+import { ShapeMaterial, ShapeMaterialPlugin } from "../src/material.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 function createScene(world: World) {

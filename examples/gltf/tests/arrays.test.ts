@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { decodedArray } from "./arrays";
-import { recordArray } from "./records";
+import { decodedArray } from "./arrays.ts";
+import { recordArray } from "./records.ts";
 
 test("authored signed zero remains exact in small values and large byte digests", () => {
     decodedArray(new Float32Array([-0]), [-0], 1, "Model primitive 0 positions");

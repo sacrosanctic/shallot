@@ -1,9 +1,9 @@
-import { BodyType, defaultSurfaceMaterial } from "../common/types";
-import { quaternion, transform } from "../kernel/math";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createCompound } from "../shapes/compound";
-import { createGrid } from "../shapes/heightfield";
-import { createGridMesh } from "../shapes/mesh";
+import { BodyType, defaultSurfaceMaterial } from "../common/types.ts";
+import { quaternion, transform } from "../kernel/math.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createCompound } from "../shapes/compound.ts";
+import { createGrid } from "../shapes/heightfield.ts";
+import { createGridMesh } from "../shapes/mesh.ts";
 import {
     createCapsuleShape,
     createCompoundShape,
@@ -11,18 +11,18 @@ import {
     createHullShape,
     createMeshShape,
     createSphereShape,
-} from "../shapes/shape";
-import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint";
-import { createFilterJoint, defaultJointDef } from "../solver/joint";
-import { createMotorJoint, defaultMotorJointDef } from "../solver/motorJoint";
-import { createParallelJoint, defaultParallelJointDef } from "../solver/parallelJoint";
-import { createPrismaticJoint, defaultPrismaticJointDef } from "../solver/prismaticJoint";
-import { createRevoluteJoint, defaultRevoluteJointDef } from "../solver/revoluteJoint";
-import { createSphericalJoint, defaultSphericalJointDef } from "../solver/sphericalJoint";
-import { createWeldJoint, defaultWeldJointDef } from "../solver/weldJoint";
-import { createWheelJoint, defaultWheelJointDef } from "../solver/wheelJoint";
-import { createTestBody, createTestWorld, stepTestWorld, testShapeDef } from "../testing";
-import { defaultDebugDraw } from "./draw";
+} from "../shapes/shape.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint.ts";
+import { createFilterJoint, defaultJointDef } from "../solver/joint.ts";
+import { createMotorJoint, defaultMotorJointDef } from "../solver/motorJoint.ts";
+import { createParallelJoint, defaultParallelJointDef } from "../solver/parallelJoint.ts";
+import { createPrismaticJoint, defaultPrismaticJointDef } from "../solver/prismaticJoint.ts";
+import { createRevoluteJoint, defaultRevoluteJointDef } from "../solver/revoluteJoint.ts";
+import { createSphericalJoint, defaultSphericalJointDef } from "../solver/sphericalJoint.ts";
+import { createWeldJoint, defaultWeldJointDef } from "../solver/weldJoint.ts";
+import { createWheelJoint, defaultWheelJointDef } from "../solver/wheelJoint.ts";
+import { createTestBody, createTestWorld, stepTestWorld, testShapeDef } from "../testing.ts";
+import { defaultDebugDraw } from "./draw.ts";
 
 function jointBase(bodyIdA: number, bodyIdB: number) {
     return { ...defaultJointDef(), bodyIdA, bodyIdB };

@@ -5,8 +5,8 @@ import {
     allocationFailure,
     type PreparedAllocationSampler,
     prepareAllocationSampler,
-} from "../../../diagnostics/first-person-allocation/allocation";
-import { isAdmittedAllocationSite } from "../../../diagnostics/first-person-allocation/allocation-admissions";
+} from "../../../diagnostics/first-person-allocation/allocation.ts";
+import { isAdmittedAllocationSite } from "../../../diagnostics/first-person-allocation/allocation-admissions.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

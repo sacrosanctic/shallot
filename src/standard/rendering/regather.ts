@@ -12,7 +12,7 @@ import {
     setComputeBindGroup,
     setComputePipeline,
 } from "../../engine/runtime";
-import { DrawIndexedIndirect } from "./registry";
+import { DrawIndexedIndirect } from "./registry.ts";
 
 // One indirect record per casting mesh; instanceCount sums combo survivors and firstInstance
 // addresses its gathered run. Derive the byte stride from DrawIndexedIndirect to keep writers aligned.

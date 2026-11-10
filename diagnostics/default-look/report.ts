@@ -7,8 +7,8 @@ import {
     PALETTES,
     type Rgba,
     srgbChannel,
-} from "./palette";
-import { SCENES } from "./scenes";
+} from "./palette.ts";
+import { SCENES } from "./scenes.ts";
 
 function displayColor(value: string | number): Rgba {
     const channels =

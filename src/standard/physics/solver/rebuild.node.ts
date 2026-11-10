@@ -1,21 +1,21 @@
 import { afterAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { bunChild } from "../../../../scripts/bun-child";
-import { contactCount } from "../collision/contact";
-import type { WorldTransform } from "../common/records";
-import { type BodyDef, BodyType } from "../common/types";
-import { EventKind, eventCount } from "../kernel/eventbuffers";
-import { init, shutdown, threads } from "../kernel/kernel";
-import { createSphereShape } from "../shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing";
+import { bunChild } from "../../../../scripts/bun-child.ts";
+import { contactCount } from "../collision/contact.ts";
+import type { WorldTransform } from "../common/records.ts";
+import { type BodyDef, BodyType } from "../common/types.ts";
+import { EventKind, eventCount } from "../kernel/eventbuffers.ts";
+import { init, shutdown, threads } from "../kernel/kernel.ts";
+import { createSphereShape } from "../shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
 import {
     bodyGetTransform,
     bodyIsAwake,
     bodySetLinearVelocity,
     updateBodyMassData,
-} from "../world/body";
-import type { WorldState } from "../world/world";
-import { step as stepWorld } from "./step";
+} from "../world/body.ts";
+import type { WorldState } from "../world/world.ts";
+import { step as stepWorld } from "./step.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

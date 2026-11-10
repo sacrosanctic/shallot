@@ -1,1 +1,1 @@
-export { loadClip, StandardAudioPlugin } from "./runtime";
+export { loadClip, StandardAudioPlugin } from "./runtime.ts";

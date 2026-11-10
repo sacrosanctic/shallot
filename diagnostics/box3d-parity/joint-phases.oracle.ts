@@ -3,7 +3,7 @@ import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { TIMEOUT } from "../../src/project/testing.js";
-import { nativeBinary, run } from "./native";
+import { nativeBinary, run } from "./native.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const path = "src/standard/physics/solver/joint.gold.json";

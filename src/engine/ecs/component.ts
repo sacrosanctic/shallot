@@ -1,5 +1,5 @@
-import type { Entity } from "./entity";
-import type { World } from "./world";
+import type { Entity } from "./entity.ts";
+import type { World } from "./world.ts";
 
 /** SoA component schema: each field names a type; worlds own the columns. */
 export type Component = Record<string, unknown>;

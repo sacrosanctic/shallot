@@ -1,26 +1,26 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { World } from "../../engine";
-import { restore, snapshot } from "./api/snapshot";
-import { contactIds } from "./collision/contact";
-import { readContactManifolds } from "./collision/manifoldstore";
-import { BodyType, defaultQueryFilter, defaultShapeDef } from "./common/types";
-import { queryColumns } from "./kernel/querycolumns";
-import { makeBoxHull } from "./shapes/build-hull";
-import { createHullShape, createSphereShape } from "./shapes/shape";
-import { defaultJointDef } from "./solver/joint";
-import { createRevoluteJoint, defaultRevoluteJointDef } from "./solver/revoluteJoint";
+import { restore, snapshot } from "./api/snapshot.ts";
+import { contactIds } from "./collision/contact.ts";
+import { readContactManifolds } from "./collision/manifoldstore.ts";
+import { BodyType, defaultQueryFilter, defaultShapeDef } from "./common/types.ts";
+import { queryColumns } from "./kernel/querycolumns.ts";
+import { makeBoxHull } from "./shapes/build-hull.ts";
+import { createHullShape, createSphereShape } from "./shapes/shape.ts";
+import { defaultJointDef } from "./solver/joint.ts";
+import { createRevoluteJoint, defaultRevoluteJointDef } from "./solver/revoluteJoint.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "./testing";
-import { bodySetAwake } from "./world/body";
-import { hashWorldState } from "./world/hash";
-import type { WorldState } from "./world/world";
-import { worldCounters } from "./world/world";
+} from "./testing.ts";
+import { bodySetAwake } from "./world/body.ts";
+import { hashWorldState } from "./world/hash.ts";
+import type { WorldState } from "./world/world.ts";
+import { worldCounters } from "./world/world.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

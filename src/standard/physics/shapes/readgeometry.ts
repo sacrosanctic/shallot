@@ -1,11 +1,11 @@
-import type { Transform, Vec3 } from "../common/records";
-import { ShapeType } from "../common/types";
-import { kernel } from "../kernel/kernel";
-import type { WorldState } from "../world/world";
-import type { Capsule, Sphere } from "./geometry";
-import type { HeightFieldData } from "./heightfield";
-import type { HullData } from "./hull";
-import type { Mesh, MeshData, MeshNode, MeshTriangle } from "./mesh";
+import type { Transform, Vec3 } from "../common/records.ts";
+import { ShapeType } from "../common/types.ts";
+import { kernel } from "../kernel/kernel.ts";
+import type { WorldState } from "../world/world.ts";
+import type { Capsule, Sphere } from "./geometry.ts";
+import type { HeightFieldData } from "./heightfield.ts";
+import type { HullData } from "./hull.ts";
+import type { Mesh, MeshData, MeshNode, MeshTriangle } from "./mesh.ts";
 
 export function drawVector(v: DataView, o: number): Vec3 {
     return { x: v.getFloat32(o, true), y: v.getFloat32(o + 4, true), z: v.getFloat32(o + 8, true) };

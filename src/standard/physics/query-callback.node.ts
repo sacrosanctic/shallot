@@ -1,10 +1,10 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { BodyType } from "./common/types";
-import { queryColumns } from "./kernel/querycolumns";
-import { createSphereShape } from "./shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "./testing";
-import { worldCastRay } from "./world/query";
+import { BodyType } from "./common/types.ts";
+import { queryColumns } from "./kernel/querycolumns.ts";
+import { createSphereShape } from "./shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "./testing.ts";
+import { worldCastRay } from "./world/query.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

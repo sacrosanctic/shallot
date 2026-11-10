@@ -2,8 +2,8 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, GlobalTransform } from "@dylanebert/shallot";
 import { setLinearVelocity } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { IssueState, IssuesPlugin, issueScenes } from "./issues";
-import { changeControl, controlValues, createScene } from "./scenes";
+import { IssueState, IssuesPlugin, issueScenes } from "./issues.ts";
+import { changeControl, controlValues, createScene } from "./scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

@@ -3,8 +3,8 @@ import { Materials, Meshes, MeshInstance } from "@dylanebert/shallot";
 import { attachTexture, captureTexture } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { City, COLORS, cityPlugin } from "./city";
-import { layout, POPULATION, SEED } from "./layout";
+import { City, COLORS, cityPlugin } from "./city.ts";
+import { layout, POPULATION, SEED } from "./layout.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

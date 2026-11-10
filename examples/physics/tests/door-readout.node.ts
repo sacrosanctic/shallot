@@ -2,8 +2,8 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, RevoluteJoint } from "@dylanebert/shallot";
 import { getJointLinearSeparation } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { DoorState, JointSamplePlugin } from "../src/joints";
-import { changeControl, controlValues, createScene, scenes } from "../src/scenes";
+import { DoorState, JointSamplePlugin } from "../src/joints.ts";
+import { changeControl, controlValues, createScene, scenes } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

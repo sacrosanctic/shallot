@@ -5,7 +5,7 @@ import { Billboard, billboardCorner, xformMat } from "../../core/rendering";
 import type { World } from "../../engine";
 import { srgbToLinear1 } from "../../engine/utils";
 import { engineLayout, materialLayout, materialType } from "../../standard/rendering";
-import { createSpriteSource } from "./table";
+import { createSpriteSource } from "./table.ts";
 
 /** One type-local material row: image, tint and fill are data, never shader registrations. */
 export const SpriteMaterialInput = d

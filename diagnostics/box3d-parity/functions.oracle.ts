@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import { nativeSseOutput } from "./native-evidence";
-import { oracleWasm } from "./oracle-kernel";
+import { nativeSseOutput } from "./native-evidence.ts";
+import { oracleWasm } from "./oracle-kernel.ts";
 
 setDefaultTimeout(180_000);
 

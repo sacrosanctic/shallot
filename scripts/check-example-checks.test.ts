@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { readdirSync } from "node:fs";
 import { relative, resolve } from "node:path";
-import { normalizePath } from "../src/project/paths";
+import { normalizePath } from "../src/project/paths.ts";
 
 const ROOT = resolve(import.meta.dir, "..");
 

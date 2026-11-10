@@ -2,11 +2,11 @@ import tgpu, { type TgpuRenderPipeline } from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import type { World } from "../../engine";
-import { agxLut } from "./agx-lut";
-import { GradingConfig, grade } from "./color-grading";
-import { tmAgxLog, tmLuma, tonemap } from "./tonemap";
-import { tonyLut } from "./tony-lut";
-import { linearToSrgb3 } from "./view";
+import { agxLut } from "./agx-lut.ts";
+import { GradingConfig, grade } from "./color-grading.ts";
+import { tmAgxLog, tmLuma, tonemap } from "./tonemap.ts";
+import { tonyLut } from "./tony-lut.ts";
+import { linearToSrgb3 } from "./view.ts";
 
 /** Bevy's `fullscreen_vertex_shader`: one triangle covering the viewport at depth 0, drawn with
  * three vertices and no vertex buffer. `uv` is (0, 0) at the top-left corner and (1, 1) at the

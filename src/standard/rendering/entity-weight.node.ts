@@ -27,9 +27,9 @@ import {
     extendedMaterial,
     MaterialPlugin,
     pbrInputFromStandardMaterial,
-} from "./index";
-import { instanceData, instanceDataTable } from "./instance-data";
-import { meshInstanceTable } from "./preprocess";
+} from "./index.ts";
+import { instanceData, instanceDataTable } from "./instance-data.ts";
+import { meshInstanceTable } from "./preprocess.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

@@ -4,10 +4,10 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import {
     allocationFailure,
     sampleAllocation,
-} from "../../../diagnostics/first-person-allocation/allocation";
+} from "../../../diagnostics/first-person-allocation/allocation.ts";
 
-import { countedKernelBytes } from "../../../scripts/counted-kernel";
-import { clockImport, type Kernel } from "./kernel/kernel";
+import { countedKernelBytes } from "../../../scripts/counted-kernel.ts";
+import { clockImport, type Kernel } from "./kernel/kernel.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 let kernelBytes: ArrayBuffer;

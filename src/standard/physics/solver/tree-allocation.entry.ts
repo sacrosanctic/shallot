@@ -1,16 +1,16 @@
 import { createApp } from "@dylanebert/shallot";
-import { BodyType } from "../common/types";
-import { init, shutdown } from "../kernel/kernel";
-import * as tree from "../kernel/treecolumns";
-import { createSphereShape } from "../shapes/shape";
+import { BodyType } from "../common/types.ts";
+import { init, shutdown } from "../kernel/kernel.ts";
+import * as tree from "../kernel/treecolumns.ts";
+import { createSphereShape } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { bodySetTransform } from "../world/body";
+} from "../testing.ts";
+import { bodySetTransform } from "../world/body.ts";
 
 export let controlSink: { frame: number } | undefined;
 export const control = () => {

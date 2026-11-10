@@ -1,7 +1,7 @@
 // Query records from Box3D's types.h (Erin Catto, MIT). The queries run in the kernel
 // (crates/physics/src/distance.rs); these are the TypeScript shapes of their inputs and outputs.
 
-import type { Vec3 } from "../common/records";
+import type { Vec3 } from "../common/records.ts";
 
 /** A convex shape as a point cloud wrapped with a rounding radius (b3ShapeProxy). */
 export type ShapeProxy = {

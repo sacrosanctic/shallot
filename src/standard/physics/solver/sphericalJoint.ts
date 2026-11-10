@@ -1,7 +1,7 @@
-import type { Quat, Vec3 } from "../common/records";
-import { kernel } from "../kernel/kernel";
-import type { WorldState } from "../world/world";
-import { finishJointCreation, type Joint, type JointDef, writeJointDefinition } from "./joint";
+import type { Quat, Vec3 } from "../common/records.ts";
+import { kernel } from "../kernel/kernel.ts";
+import type { WorldState } from "../world/world.ts";
+import { finishJointCreation, type Joint, type JointDef, writeJointDefinition } from "./joint.ts";
 
 /** Spherical joint definition (b3SphericalJointDef), body handles resolved to a base JointDef. */
 export type SphericalJointDef = {

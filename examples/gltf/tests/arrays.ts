@@ -1,6 +1,6 @@
 import { expect } from "bun:test";
 import type { GltfMesh } from "@dylanebert/shallot/gltf";
-import { recordArray } from "./records";
+import { recordArray } from "./records.ts";
 
 export function decodedArrays(mesh: GltfMesh) {
     const count = mesh.vertices.length / 8;

@@ -19,8 +19,8 @@ import {
     type World,
 } from "../../engine";
 import { clamp, lookAtRotationInto } from "../../engine/utils";
-import { followPosition, OrbitFollowPlugin } from "./follow";
-import { OrbitSmooth } from "./smooth";
+import { followPosition, OrbitFollowPlugin } from "./follow.ts";
+import { OrbitSmooth } from "./smooth.ts";
 
 const Tau = Math.PI * 2;
 const Deg2Rad = Math.PI / 180;

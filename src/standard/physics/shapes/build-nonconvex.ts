@@ -1,9 +1,9 @@
 import type { World } from "../../../engine";
-import type { Vec3 } from "../common/records";
-import { type Kernel, kernel } from "../kernel/kernel";
-import type { HeightFieldData, HeightFieldDef } from "./heightfield";
-import type { MeshData, MeshDef } from "./mesh";
-import { drawHeightField, drawMeshData } from "./readgeometry";
+import type { Vec3 } from "../common/records.ts";
+import { type Kernel, kernel } from "../kernel/kernel.ts";
+import type { HeightFieldData, HeightFieldDef } from "./heightfield.ts";
+import type { MeshData, MeshDef } from "./mesh.ts";
+import { drawHeightField, drawMeshData } from "./readgeometry.ts";
 
 type Scratch = { floats: Float32Array; words: Uint32Array; view: DataView };
 const scratch = new WeakMap<Kernel, Scratch>();

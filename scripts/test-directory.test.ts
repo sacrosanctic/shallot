@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { removeTestDirectory } from "./test-directory";
+import { removeTestDirectory } from "./test-directory.ts";
 
 const failure = (code: string) => Object.assign(new Error(code), { code });
 

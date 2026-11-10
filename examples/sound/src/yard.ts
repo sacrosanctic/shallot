@@ -24,9 +24,9 @@ import {
     type World,
 } from "@dylanebert/shallot";
 import { loadClip, StandardAudioPlugin } from "@dylanebert/shallot/standard/audio";
-import { chime } from "./chime";
-import { LocalPlayer, Player, PlayerPlugin } from "./player";
-import { InteractionInput, Sliding, SoundGamePlugin, Usable } from "./sound";
+import { chime } from "./chime.ts";
+import { LocalPlayer, Player, PlayerPlugin } from "./player.ts";
+import { InteractionInput, Sliding, SoundGamePlugin, Usable } from "./sound.ts";
 
 export const Yard: Resource<{ camera: number; player: number; speaker: number; bell: number }> = {
     create: () => ({ camera: 0, player: 0, speaker: 0, bell: 0 }),

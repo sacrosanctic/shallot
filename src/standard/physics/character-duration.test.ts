@@ -2,11 +2,11 @@ import { expect, test } from "bun:test";
 import { Body, PhysicsPlugin, Shape, ShapeKind } from "../../core/physics";
 import { Transform, TransformPlugin } from "../../core/transform";
 import { Time, World } from "../../engine";
-import { Character, CharacterPlugin } from "./character";
+import { Character, CharacterPlugin } from "./character.ts";
 import gold from "./character-duration.gold.json";
-import { BodyType } from "./common/types";
-import { physicsState, StandardPhysicsPlugin } from "./runtime";
-import { hashWorldState } from "./world/hash";
+import { BodyType } from "./common/types.ts";
+import { physicsState, StandardPhysicsPlugin } from "./runtime.ts";
+import { hashWorldState } from "./world/hash.ts";
 
 const values = new Float32Array(3);
 const words = new Uint32Array(values.buffer);

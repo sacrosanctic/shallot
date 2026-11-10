@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { World } from "../../../engine";
-import { ecsShapeReference } from "../kernel/kernel";
+import { ecsShapeReference } from "../kernel/kernel.ts";
 import {
     bindShapeEntity,
     createShapeEntities,
@@ -9,8 +9,8 @@ import {
     retireShapeEntity,
     type ShapeEntity,
     shapeEntityAt,
-} from "./shape-entities";
-import type { WorldState } from "./world";
+} from "./shape-entities.ts";
+import type { WorldState } from "./world.ts";
 
 test("a slot retired and rebound at the same generation before its events are read is live again with the new entities", () => {
     const world = new World();

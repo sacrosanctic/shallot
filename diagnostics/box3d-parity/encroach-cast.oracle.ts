@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { World } from "../../src/engine";
-import { shapeCast } from "../../src/standard/physics/collision/queries";
-import { init } from "../../src/standard/physics/kernel/kernel";
-import { nativeSseOutput } from "./native-evidence";
+import { shapeCast } from "../../src/standard/physics/collision/queries.ts";
+import { init } from "../../src/standard/physics/kernel/kernel.ts";
+import { nativeSseOutput } from "./native-evidence.ts";
 
 const world = new World();
 await init(world, { threads: 0 });

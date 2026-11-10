@@ -16,7 +16,7 @@ import {
 } from "../../standard/rendering";
 import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "../lines";
 import { isolationFont } from "./font.fixture";
-import { internText, registerFont, Text, TextPlugin } from "./index";
+import { internText, registerFont, Text, TextPlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const config = {

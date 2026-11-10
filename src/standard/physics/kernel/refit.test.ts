@@ -1,18 +1,18 @@
 import { expect, test } from "bun:test";
-import { SPECULATIVE_DISTANCE } from "../common/constants";
-import { BodyType } from "../common/types";
-import { createMesh } from "../shapes/mesh";
-import { computeFatShapeAABB, createMeshShape } from "../shapes/shape";
+import { SPECULATIVE_DISTANCE } from "../common/constants.ts";
+import { BodyType } from "../common/types.ts";
+import { createMesh } from "../shapes/mesh.ts";
+import { computeFatShapeAABB, createMeshShape } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { bodyGetTransform } from "../world/body";
-import { bounds } from "./math";
-import { readFatAabb, readShapeAabb } from "./shapecolumns";
+} from "../testing.ts";
+import { bodyGetTransform } from "../world/body.ts";
+import { bounds } from "./math.ts";
+import { readFatAabb, readShapeAabb } from "./shapecolumns.ts";
 
 test("kernel finalization commits a moving non-convex mesh's tight and fat bounds, read as independent snapshots", () => {
     const world = createTestWorld({

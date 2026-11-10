@@ -1,7 +1,7 @@
 import type { System, World } from "../../engine";
-import { encodeFrameCapture } from "./capture";
-import { encodeUpscaling } from "./upscaling";
-import { INITIAL_VIEW_CAPACITY, type View, Views } from "./view";
+import { encodeFrameCapture } from "./capture.ts";
+import { encodeUpscaling } from "./upscaling.ts";
+import { INITIAL_VIEW_CAPACITY, type View, Views } from "./view.ts";
 
 export const VIEW_KEY_FLOATS = 29;
 
@@ -9,18 +9,18 @@ export const renderFrameKey = {
     create: () => ({
         camWorld: new Float32Array(16),
         depthOnlyEids: [] as number[],
-        depthOnlyViews: [] as import("./view").View[],
+        depthOnlyViews: [] as import("./view.ts").View[],
         presentingEids: [] as number[],
-        presentingViews: [] as import("./view").View[],
+        presentingViews: [] as import("./view.ts").View[],
         // canvas and texture views sorted by target, Camera.order and eid
         targetEids: [] as number[],
-        targetViews: [] as import("./view").View[],
+        targetViews: [] as import("./view.ts").View[],
         clipFromWorlds: [] as Float32Array[],
         worldFromClips: [] as Float32Array[],
         viewFromWorlds: [] as Float32Array[],
         clipFromViews: [] as Float32Array[],
         // the View each slot was last packed for: a new View starts with an unfilled viewFromWorld
-        slotViews: [] as (import("./view").View | undefined)[],
+        slotViews: [] as (import("./view.ts").View | undefined)[],
         viewKeys: new Float64Array(INITIAL_VIEW_CAPACITY * VIEW_KEY_FLOATS).fill(Number.NaN),
         viewKeyNext: new Float64Array(VIEW_KEY_FLOATS),
     }),

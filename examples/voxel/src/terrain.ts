@@ -31,11 +31,11 @@ import {
     StandardRenderingPlugin,
 } from "@dylanebert/shallot/standard/rendering";
 import * as d from "typegpu/data";
-import { TerrainMaterial, TerrainMaterialPlugin } from "./material";
-import { mesher } from "./mesher";
-import { placement } from "./placement";
-import { type Geometry, pool } from "./pool";
-import { scatter } from "./scatter";
+import { TerrainMaterial, TerrainMaterialPlugin } from "./material.ts";
+import { mesher } from "./mesher.ts";
+import { placement } from "./placement.ts";
+import { type Geometry, pool } from "./pool.ts";
+import { scatter } from "./scatter.ts";
 import {
     CONFIG,
     chunks,
@@ -46,7 +46,7 @@ import {
     SPEED,
     slotCount,
     type TerrainConfig,
-} from "./terrain-data";
+} from "./terrain-data.ts";
 
 type Slot = {
     x: number;

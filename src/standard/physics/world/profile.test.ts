@@ -1,19 +1,19 @@
 import { expect, spyOn, test } from "bun:test";
-import { BodyType } from "../common/types";
-import { BodyField, bodyField } from "../kernel/bodyrecords";
-import { kernel } from "../kernel/kernel";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createHullShape } from "../shapes/shape";
-import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint";
-import { defaultJointDef, destroyJointInternal } from "../solver/joint";
+import { BodyType } from "../common/types.ts";
+import { BodyField, bodyField } from "../kernel/bodyrecords.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createHullShape } from "../shapes/shape.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint.ts";
+import { defaultJointDef, destroyJointInternal } from "../solver/joint.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { worldProfile } from "./world";
+} from "../testing.ts";
+import { worldProfile } from "./world.ts";
 
 function splitSubject(world: ReturnType<typeof createTestWorld>): () => void {
     const a = createTestBody(world, { type: BodyType.Dynamic, enableSleep: false });

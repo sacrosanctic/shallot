@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { resolve } from "./kernel";
+import { resolve } from "./kernel.ts";
 
 for (const [cores, want] of [
     [0, 1],

@@ -12,9 +12,9 @@ import {
 } from "@dylanebert/shallot";
 import { Orbit, OrbitPlugin } from "@dylanebert/shallot/extras";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { RigidBodyPlugin, RigidBodyState } from "../src/rigid-body";
-import { controlValues, createScene } from "../src/scenes";
-import { setSceneCamera } from "../src/view";
+import { RigidBodyPlugin, RigidBodyState } from "../src/rigid-body.ts";
+import { controlValues, createScene } from "../src/scenes.ts";
+import { setSceneCamera } from "../src/view.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("Rigid Body keeps all six keys live and follows its character without T or V modes", async () => {

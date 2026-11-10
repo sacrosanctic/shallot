@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp } from "../../src";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { MeshSamplePlugin } from "../../examples/physics/src/mesh";
-import { type Controls, controlValues, createScene, scenes } from "../../examples/physics/src/scenes";
-import { meshFrame } from "./mesh-frames";
+import { MeshSamplePlugin } from "../../examples/physics/src/mesh.ts";
+import { type Controls, controlValues, createScene, scenes } from "../../examples/physics/src/scenes.ts";
+import { meshFrame } from "./mesh-frames.ts";
 setDefaultTimeout(TIMEOUT.node);
 for(const scene of ["meshReflection","meshHeightField"] as const) for(const controlled of [false,true]) {
     test(`${scene}${controlled?" controls":""} static geometry equals every native frame`,async()=>{

@@ -28,11 +28,11 @@ import {
     setTransform,
 } from "@dylanebert/shallot/standard/physics";
 import building from "../../src/building.json" with { type: "json" };
-import { Geometry } from "../../src/geometry";
-import { decodeMesh } from "../../src/mesh-data";
-import type { Controls } from "../../src/scenes";
-import { measureEnergy } from "./energy";
-import { ghostFloor } from "./ghost-floor";
+import { Geometry } from "../../src/geometry.ts";
+import { decodeMesh } from "../../src/mesh-data.ts";
+import type { Controls } from "../../src/scenes.ts";
+import { measureEnergy } from "./energy.ts";
+import { ghostFloor } from "./ghost-floor.ts";
 import hullSources from "./hull-crash.json" with { type: "json" };
 import wheel from "./issue-wheel.json" with { type: "json" };
 import jitter from "./issues-points.json" with { type: "json" };

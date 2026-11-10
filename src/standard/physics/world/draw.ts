@@ -1,10 +1,10 @@
-import { hi32, lo32 } from "../common/bits";
-import type { AABB, Pos, WorldTransform } from "../common/records";
-import { queryColumns } from "../kernel/querycolumns";
-import type { Capsule, Sphere } from "../shapes/geometry";
-import type { HeightFieldData } from "../shapes/heightfield";
-import type { HullData } from "../shapes/hull";
-import type { Mesh } from "../shapes/mesh";
+import { hi32, lo32 } from "../common/bits.ts";
+import type { AABB, Pos, WorldTransform } from "../common/records.ts";
+import { queryColumns } from "../kernel/querycolumns.ts";
+import type { Capsule, Sphere } from "../shapes/geometry.ts";
+import type { HeightFieldData } from "../shapes/heightfield.ts";
+import type { HullData } from "../shapes/hull.ts";
+import type { Mesh } from "../shapes/mesh.ts";
 import {
     drawCapsule,
     drawHeightField,
@@ -13,8 +13,8 @@ import {
     drawSphere,
     drawTransform,
     drawVector,
-} from "../shapes/readgeometry";
-import type { WorldState } from "./world";
+} from "../shapes/readgeometry.ts";
+import type { WorldState } from "./world.ts";
 
 /** Low-24-bit packed RGB colors (b3HexColor). */
 export const DebugColor = {

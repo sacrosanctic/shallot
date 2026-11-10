@@ -3,9 +3,9 @@ import { Transform } from "@dylanebert/shallot";
 import { attachTexture, captureTexture } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { MOTE_COUNT, Motes, MotesPlugin } from "./motes";
-import { Player } from "./player";
-import { Room } from "./room";
+import { MOTE_COUNT, Motes, MotesPlugin } from "./motes.ts";
+import { Player } from "./player.ts";
+import { Room } from "./room.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const decode = (x: number) => {

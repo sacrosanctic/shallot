@@ -27,7 +27,7 @@ import {
     SEGMENT_FLOATS,
     Segment,
     viewLayout,
-} from "./pipeline";
+} from "./pipeline.ts";
 import {
     disposeSegments,
     flushSegments,
@@ -40,9 +40,9 @@ import {
     type SegmentState,
     segmentState,
     warmSegments,
-} from "./segments";
+} from "./segments.ts";
 
-export { drawArrow, drawLine, drawWireBox, GizmoAsset, type LineOptions } from "./segments";
+export { drawArrow, drawLine, drawWireBox, GizmoAsset, type LineOptions } from "./segments.ts";
 
 /** Draws a registered asset at the entity's interpolated GlobalTransform, as meshes draw. Remove Gizmo to hide it. */
 export const Gizmo = component(

@@ -13,7 +13,7 @@ import {
 import { Transform } from "../../core/transform";
 import { lookAtRotation, type World } from "../../engine";
 import { CameraBackground, StandardRenderer } from "../../standard/rendering";
-import { Sky, SkyPlugin, skyBackgroundHandle } from "./index";
+import { Sky, SkyPlugin, skyBackgroundHandle } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const subjects = gpuApps(import.meta.path, [{ defaults: false, plugins: [SkyPlugin] }]);

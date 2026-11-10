@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { attribute } from "./allocation-sampler.mjs";
-import { browserAllocated } from "./display";
+import { browserAllocated } from "./display.ts";
 
 // A page frame: an engine function with a script URL, or a native one (no URL), as the CPU profile reports them.
 type PageFrame = { name: string; url: string };

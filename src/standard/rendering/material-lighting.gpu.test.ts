@@ -21,8 +21,8 @@ import {
     StandardRenderer,
     StandardRenderingPlugin,
     VertexMaterialType,
-} from "./index";
-import type { MaterialHandle } from "./material-type";
+} from "./index.ts";
+import type { MaterialHandle } from "./material-type.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 

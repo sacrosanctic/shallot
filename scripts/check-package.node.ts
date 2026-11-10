@@ -8,7 +8,7 @@ import { existsSync, mkdtempSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { gunzipSync } from "node:zlib";
-import { removeTestDirectory } from "./test-directory";
+import { removeTestDirectory } from "./test-directory.ts";
 
 test("the packed package passes size, publint and declaration checks", () => {
     const MaxUnpackedBytes = 12_950_000;

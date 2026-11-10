@@ -42,7 +42,7 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

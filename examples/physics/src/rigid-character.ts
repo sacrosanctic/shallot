@@ -6,7 +6,7 @@ import {
     setMassData,
     setTransform,
 } from "@dylanebert/shallot/standard/physics";
-import { add, length, mul, sub, type Vec, v } from "./mover";
+import { add, length, mul, sub, type Vec, v } from "./mover.ts";
 
 const f = Math.fround;
 export const SRC = f(0.0254);

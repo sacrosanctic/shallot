@@ -3,9 +3,9 @@ import { Camera, MeshInstance, MeshMaterial, qRotate, Shape, Transform } from "@
 import { Gizmo, Orbit } from "@dylanebert/shallot/extras";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { AppPlugin, Viewer } from "../src/app";
-import { drawingBounds, drawSet } from "../src/draw-set";
-import { sceneSwitcher } from "../src/sample";
+import { AppPlugin, Viewer } from "../src/app.ts";
+import { drawingBounds, drawSet } from "../src/draw-set.ts";
+import { sceneSwitcher } from "../src/sample.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

@@ -8,13 +8,13 @@
 // test asserts equality with native at the state where its cause showed.
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { join } from "node:path";
-import { createCylinder, createRock } from "../../src/standard/physics/shapes/build-hull";
-import { createHullShape } from "../../src/standard/physics/shapes/shape";
-import { testShapeDef, createTestBody, createTestWorld, destroyTestWorld } from "../../src/standard/physics/testing";
-import { BodyType } from "../../src/standard/physics/common/types";
-import { kernel } from "../../src/standard/physics/kernel/kernel";
-import { S_GEO_REFERENCE, SHAPE_STRIDE } from "../../src/standard/physics/kernel/shapecolumns";
-import { nativeBinary, run } from "./native";
+import { createCylinder, createRock } from "../../src/standard/physics/shapes/build-hull.ts";
+import { createHullShape } from "../../src/standard/physics/shapes/shape.ts";
+import { testShapeDef, createTestBody, createTestWorld, destroyTestWorld } from "../../src/standard/physics/testing.ts";
+import { BodyType } from "../../src/standard/physics/common/types.ts";
+import { kernel } from "../../src/standard/physics/kernel/kernel.ts";
+import { S_GEO_REFERENCE, SHAPE_STRIDE } from "../../src/standard/physics/kernel/shapecolumns.ts";
+import { nativeBinary, run } from "./native.ts";
 
 setDefaultTimeout(180_000);
 

@@ -18,7 +18,7 @@ import {
     materialType,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 // Wider than any shadow atlas tile, so a write addressed by an atlas fragment's x lands past the camera's 8.

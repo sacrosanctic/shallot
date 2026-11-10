@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { createApp } from "../../engine/app";
-import { AlphaMode, Materials } from "./material";
-import { StandardMaterial } from "./material-data";
+import { AlphaMode, Materials } from "./material.ts";
+import { StandardMaterial } from "./material-data.ts";
 
 test("standard material rows are authored without a renderer or device", async () => {
     const app = await createApp({ defaults: false, plugins: [] });

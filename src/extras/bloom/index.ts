@@ -16,8 +16,8 @@ import {
     setRenderBindGroup,
     setRenderPipeline,
 } from "../../engine/runtime";
-import { composite, down, first, layout, Settings, up } from "./shaders";
-import { BloomCompositeMode, blendFactor, type CameraState, type State, stateKey } from "./state";
+import { composite, down, first, layout, Settings, up } from "./shaders.ts";
+import { BloomCompositeMode, blendFactor, type CameraState, type State, stateKey } from "./state.ts";
 
 export { BloomCompositeMode };
 

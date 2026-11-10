@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
 import { MeshInstance } from "../../core/mesh";
 import { attachTexture, Camera } from "../../core/rendering";
-import { offscreenTexture } from "../../core/rendering/view";
+import { offscreenTexture } from "../../core/rendering/view.ts";
 import { Transform } from "../../core/transform";
 import { probeTexture } from "../../engine/runtime";
 import { DEFAULT_PLUGINS } from "../../standard";

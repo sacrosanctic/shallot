@@ -5,7 +5,7 @@ setDefaultTimeout(TIMEOUT.node);
 
 import { mkdtempSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { removeTestDirectory } from "../../../scripts/test-directory";
+import { removeTestDirectory } from "../../../scripts/test-directory.ts";
 
 test("a mesh import without tangent generation bundles no MikkTSpace bytes", async () => {
     const scratch = mkdtempSync(resolve(import.meta.dir, ".tangent-bundle-"));

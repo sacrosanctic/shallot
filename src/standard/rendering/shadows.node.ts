@@ -17,10 +17,10 @@ import {
 } from "../../core/rendering";
 import { GlobalTransform, Transform, TransformPlugin } from "../../core/transform";
 import { lookAtRotation, type World } from "../../engine";
-import { StandardRenderer } from "./forward";
-import { StandardRenderingPlugin } from "./index";
-import { Materials, MeshMaterial, StandardMaterial } from "./material";
-import { MeshRenderPlugin } from "./mesh-render";
+import { StandardRenderer } from "./forward.ts";
+import { StandardRenderingPlugin } from "./index.ts";
+import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";
+import { MeshRenderPlugin } from "./mesh-render.ts";
 import {
     cascadeComboEids,
     cascadeCount,
@@ -29,7 +29,7 @@ import {
     destroyCascades,
     resetCascades,
     updateCascades,
-} from "./shadows";
+} from "./shadows.ts";
 
 const rendering = { defaults: false, plugins: [StandardRenderingPlugin, MeshRenderPlugin] };
 // three headless worlds for the cascade-pool rows, three rendering worlds for the bound row, one for

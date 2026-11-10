@@ -1,10 +1,10 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics, StandardPhysicsPlugin, type World } from "@dylanebert/shallot";
 import { PhysicsWorldDefinition } from "@dylanebert/shallot/standard/physics";
-import { BenchmarkSamplePlugin } from "../../examples/physics/src/benchmarks";
-import { EventSamplePlugin } from "../../examples/physics/src/events";
-import { sceneSwitcher } from "../../examples/physics/src/sample";
-import { createScene } from "../../examples/physics/src/scenes";
+import { BenchmarkSamplePlugin } from "../../examples/physics/src/benchmarks.ts";
+import { EventSamplePlugin } from "../../examples/physics/src/events.ts";
+import { sceneSwitcher } from "../../examples/physics/src/sample.ts";
+import { createScene } from "../../examples/physics/src/scenes.ts";
 
 setDefaultTimeout(0);
 

@@ -5,10 +5,10 @@ import { CEILING } from "@dylanebert/shallot/testing";
 import { attachTexture, Camera, CorePipelinePlugin, captureTexture } from "../src/core/rendering";
 import { Transform } from "../src/core/transform";
 import { deviceFailure, observedDeviceError, rawDevice } from "../src/engine/runtime";
-import type { AdapterVerdict } from "../src/engine/runtime/adapter";
-import { adapterNotice } from "../src/engine/runtime/gpu";
-import { normalizePath } from "../src/project/paths";
-import { expectWarning } from "./test-console";
+import type { AdapterVerdict } from "../src/engine/runtime/adapter.ts";
+import { adapterNotice } from "../src/engine/runtime/gpu.ts";
+import { normalizePath } from "../src/project/paths.ts";
+import { expectWarning } from "./test-console.ts";
 
 // On llvmpipe the first camera frame a process draws pays the driver's first-draw cost, below the
 // engine: a core camera drawn first took 593 ms, an MSAA camera next 63 ms and a third 4 ms (run

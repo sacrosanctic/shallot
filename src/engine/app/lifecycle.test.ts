@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { Time } from "../ecs";
-import type { Plugin } from "./index";
-import { createApp, runApp } from "./index";
+import type { Plugin } from "./index.ts";
+import { createApp, runApp } from "./index.ts";
 
 function withoutGpu(): () => void {
     const previous = Object.getOwnPropertyDescriptor(navigator, "gpu");

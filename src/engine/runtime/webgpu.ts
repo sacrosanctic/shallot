@@ -1,4 +1,4 @@
-import { loadDawn } from "./dawn-host";
+import { loadDawn } from "./dawn-host.ts";
 
 let gpu: GPU | undefined;
 

@@ -1,8 +1,8 @@
 import { Shape, ShapeKind, type World } from "@dylanebert/shallot";
 import { shapeEdges } from "@dylanebert/shallot/standard/physics";
-import { CharacterSample, validNormal } from "./character";
-import { drawInkPoint, INK } from "./ink-presentation";
-import { JOINT_LINE } from "./joint-presentation";
+import { CharacterSample, validNormal } from "./character.ts";
+import { drawInkPoint, INK } from "./ink-presentation.ts";
+import { JOINT_LINE } from "./joint-presentation.ts";
 
 type Point = [number, number, number];
 const CYAN = 0x38afc0;

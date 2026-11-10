@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { Body, BodyType, Shape, ShapeKind, Sleeping } from "../../core/physics";
 import { Transform } from "../../core/transform";
 import { createApp } from "../../engine";
@@ -12,9 +12,9 @@ import {
     setLinearVelocity,
 } from ".";
 
-import { kernel } from "./kernel/kernel";
-import { physicsBodyIndex, physicsState } from "./runtime";
-import { destroyBody } from "./world/body";
+import { kernel } from "./kernel/kernel.ts";
+import { physicsBodyIndex, physicsState } from "./runtime.ts";
+import { destroyBody } from "./world/body.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

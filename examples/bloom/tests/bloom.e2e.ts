@@ -1,8 +1,8 @@
 import { mkdir } from "node:fs/promises";
 import { holdFrames, pipelineWarnings } from "@dylanebert/shallot/testing";
 import { expect, test } from "playwright/test";
-import { settings } from "../src/settings";
-import { bodyHasFocus, dragRange, gameKeyMovesCamera, pointerControl } from "./pointer";
+import { settings } from "../src/settings.ts";
+import { bodyHasFocus, dragRange, gameKeyMovesCamera, pointerControl } from "./pointer.ts";
 
 test.use(pipelineWarnings);
 

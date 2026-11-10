@@ -1,7 +1,7 @@
 import type { World } from "../../../engine";
-import { kernel } from "../kernel/kernel";
-import type { Capsule, MassData } from "./geometry";
-import type { HullData } from "./hull";
+import { kernel } from "../kernel/kernel.ts";
+import type { Capsule, MassData } from "./geometry.ts";
+import type { HullData } from "./hull.ts";
 
 function input(world?: World): Float32Array {
     const k = kernel(world);

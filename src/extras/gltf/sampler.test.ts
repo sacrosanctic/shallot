@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { type GltfJson, parseGltf } from "./gltf";
+import { type GltfJson, parseGltf } from "./gltf.ts";
 
 function model(minFilter?: number): GltfJson {
     return {

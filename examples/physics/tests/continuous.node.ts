@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, GlobalTransform } from "@dylanebert/shallot";
 import { PhysicsWorldDefinition, setTransform } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { ContinuousSamplePlugin, ContinuousState } from "../src/continuous";
-import { sceneSwitcher } from "../src/sample";
-import { changeControl, controlValues } from "../src/scenes";
+import { ContinuousSamplePlugin, ContinuousState } from "../src/continuous.ts";
+import { sceneSwitcher } from "../src/sample.ts";
+import { changeControl, controlValues } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

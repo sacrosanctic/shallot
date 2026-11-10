@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { completeIntro, MINIMUM_DWELL_MS } from "./dwell";
-import { titleCard } from "./index";
+import { completeIntro, MINIMUM_DWELL_MS } from "./dwell.ts";
+import { titleCard } from "./index.ts";
 
 test("the title card exposes the completion hold to the engine", () => {
     expect(typeof titleCard({} as HTMLElement).complete).toBe("function");

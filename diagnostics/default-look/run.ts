@@ -63,11 +63,11 @@ import { BROWSER_CONFIG } from "@dylanebert/shallot/testing";
 import { shallot } from "@dylanebert/shallot/vite";
 import { chromium, type Page } from "playwright";
 import { createServer as createViteServer } from "vite";
-import { type CostRow, costHtml, costReport } from "./cost-report";
-import { PALETTES } from "./palette";
-import { reportHtml } from "./report";
-import { SCENES } from "./scenes";
-import { AO_LEVELS } from "./ssao";
+import { type CostRow, costHtml, costReport } from "./cost-report.ts";
+import { PALETTES } from "./palette.ts";
+import { reportHtml } from "./report.ts";
+import { SCENES } from "./scenes.ts";
+import { AO_LEVELS } from "./ssao.ts";
 
 const cost = process.argv.includes("--cost");
 const ssao = process.argv.includes("--ssao");

@@ -10,7 +10,7 @@ import { Transform } from "../../core/transform";
 import { ClearChangeMarksSystem, lookAtRotation, precompile, type World } from "../../engine";
 import { probeBuffer } from "../../engine/runtime";
 import { DEFAULT_PLUGINS } from "../../standard";
-import { sunShadowView } from "./atlas";
+import { sunShadowView } from "./atlas.ts";
 import {
     MeshInstanceInput,
     MeshMaterial,
@@ -19,8 +19,8 @@ import {
     materialType,
     meshInstanceTable,
     StandardRenderer,
-} from "./index";
-import { Draws } from "./registry";
+} from "./index.ts";
+import { Draws } from "./registry.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const surface = materialLayout(d.struct({ color: d.vec4f }), {

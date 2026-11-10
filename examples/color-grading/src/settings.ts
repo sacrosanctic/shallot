@@ -1,5 +1,5 @@
 import { ColorGrading, type World } from "@dylanebert/shallot";
-import { Scene } from "./scene";
+import { Scene } from "./scene.ts";
 
 type Global = "exposure" | "temperature" | "tint" | "hue";
 type Section = "saturation" | "contrast" | "gamma" | "gain" | "lift";

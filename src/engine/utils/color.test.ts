@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { unpackColor, unpackColorInto } from "./color";
+import { unpackColor, unpackColorInto } from "./color.ts";
 
 test("unpackColorInto writes the same linear channels as unpackColor at its offset", () => {
     for (const packed of [0x000000, 0x804020, 0xffffff]) {

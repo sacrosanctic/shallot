@@ -1,6 +1,6 @@
 import { test } from "bun:test";
-import { LocalPlayer, Player } from "../../../examples/interact/src/player";
-import { Room, RoomPlugin } from "../../../examples/interact/src/room";
+import { LocalPlayer, Player } from "../../../examples/interact/src/player.ts";
+import { Room, RoomPlugin } from "../../../examples/interact/src/room.ts";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { Meshes, MeshInstance } from "../../core/mesh";
 import { attachTexture, Camera } from "../../core/rendering";

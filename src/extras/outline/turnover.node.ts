@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { type Mesh, Meshes, type MeshHandle, MeshInstance } from "../../core/mesh";
-import { meshResourcesKey } from "../../core/mesh/mesh";
+import { meshResourcesKey } from "../../core/mesh/mesh.ts";
 import { attachTexture, Camera, captureTexture } from "../../core/rendering";
 import { Transform } from "../../core/transform";
 import type { World } from "../../engine";

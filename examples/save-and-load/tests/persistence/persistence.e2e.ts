@@ -1,6 +1,6 @@
 import { pipelineWarnings } from "@dylanebert/shallot/testing";
 import { expect, type Page, test } from "playwright/test";
-import { capture } from "../capture";
+import { capture } from "../capture.ts";
 
 test.use(pipelineWarnings);
 

@@ -1,8 +1,8 @@
 import type { World } from "@dylanebert/shallot";
 import { PhysicsWorldDefinition } from "@dylanebert/shallot/standard/physics";
-import { Geometry } from "../../src/geometry";
-import type { Controls } from "../../src/scenes";
-import { IssueState, IssueVelocities, issueScenes } from "./issues";
+import { Geometry } from "../../src/geometry.ts";
+import type { Controls } from "../../src/scenes.ts";
+import { IssueState, IssueVelocities, issueScenes } from "./issues.ts";
 
 type Scene = keyof typeof issueScenes;
 export function createScene(world: World, scene: Scene): number[] {

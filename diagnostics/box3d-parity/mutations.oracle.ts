@@ -1,11 +1,11 @@
 import { expect, test } from "bun:test";
-import { nativeBinary, run } from "./native";
-import { BodyType } from "../../src/standard/physics/common/types";
-import { init } from "../../src/standard/physics/kernel/kernel";
-import { createSphereShape, setShapeFilter } from "../../src/standard/physics/shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../../src/standard/physics/testing";
-import { bodySetType, destroyBody } from "../../src/standard/physics/world/body";
-import type { BodyDef } from "../../src/standard/physics/common/types";
+import { nativeBinary, run } from "./native.ts";
+import { BodyType } from "../../src/standard/physics/common/types.ts";
+import { init } from "../../src/standard/physics/kernel/kernel.ts";
+import { createSphereShape, setShapeFilter } from "../../src/standard/physics/shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../../src/standard/physics/testing.ts";
+import { bodySetType, destroyBody } from "../../src/standard/physics/world/body.ts";
+import type { BodyDef } from "../../src/standard/physics/common/types.ts";
 
 await init(undefined, { threads: 0 });
 test("native warmed mutation allocation denominator", () => {

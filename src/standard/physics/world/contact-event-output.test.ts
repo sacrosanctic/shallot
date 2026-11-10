@@ -1,19 +1,19 @@
 import { expect, test } from "bun:test";
-import { ContactField, contactCount, contactIsValid, setContactField } from "../collision/contact";
-import { updateBroadPhasePairs } from "../collision/pairs";
-import { BodyType } from "../common/types";
-import { EventKind, eventCount, eventId } from "../kernel/eventbuffers";
-import { kernel } from "../kernel/kernel";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createHullShape } from "../shapes/shape";
+import { ContactField, contactCount, contactIsValid, setContactField } from "../collision/contact.ts";
+import { updateBroadPhasePairs } from "../collision/pairs.ts";
+import { BodyType } from "../common/types.ts";
+import { EventKind, eventCount, eventId } from "../kernel/eventbuffers.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createHullShape } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { destroyBody } from "../world/body";
+} from "../testing.ts";
+import { destroyBody } from "../world/body.ts";
 
 test("contact begin, hit and end events retain a full u32 generation and the solved begin impulse", () => {
     const world = createTestWorld({ gravity: { x: 0, y: -10, z: 0 }, enableContinuous: false });

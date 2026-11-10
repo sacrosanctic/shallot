@@ -1,25 +1,25 @@
 import { afterAll, beforeAll, describe, expect, test } from "bun:test";
-import { BodyType } from "../common/types";
-import { EventKind, eventCount, eventId } from "../kernel/eventbuffers";
-import { kernel, rethrowQueryError, setQueryCallback } from "../kernel/kernel";
-import { queryColumns } from "../kernel/querycolumns";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createHullShape, createSphereShape, getSensorData, shapeIsValid } from "../shapes/shape";
+import { BodyType } from "../common/types.ts";
+import { EventKind, eventCount, eventId } from "../kernel/eventbuffers.ts";
+import { kernel, rethrowQueryError, setQueryCallback } from "../kernel/kernel.ts";
+import { queryColumns } from "../kernel/querycolumns.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createHullShape, createSphereShape, getSensorData, shapeIsValid } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { hashWorldState } from "../world/hash";
+} from "../testing.ts";
+import { hashWorldState } from "../world/hash.ts";
 import {
     type WorldState,
     worldCounters,
     worldSetCustomFilterCallback,
     worldSetPreSolveCallback,
-} from "../world/world";
-import { restore, snapshot } from "./snapshot";
+} from "../world/world.ts";
+import { restore, snapshot } from "./snapshot.ts";
 
 function contactWorld(pre = false): WorldState {
     const world = createTestWorld({ gravity: { x: 0, y: 0, z: 0 } });

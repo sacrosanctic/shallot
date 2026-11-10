@@ -45,49 +45,49 @@ import {
 } from "@dylanebert/shallot/standard/physics";
 import type { MaterialHandle } from "@dylanebert/shallot/standard/rendering";
 import * as d from "typegpu/data";
-import { benchmarkVillageDrawing } from "./benchmark-village";
-import { drawCastView } from "./cast-presentation";
-import { characterDrawing, drawCharacterView } from "./character-presentation";
-import { collisionNames } from "./collision";
-import { debugDrawing, drawCollisionDebug } from "./collision-debug-presentation";
-import { collisionGeometryDrawing, drawCollisionGeometry } from "./collision-geometry-presentation";
-import { drawCollisionView } from "./collision-presentation";
-import { childGeometry, compoundChildren, largeCompound } from "./compound-presentation";
-import { ContinuousState } from "./continuous";
-import { drawQuerySpawn } from "./determinism-presentation";
-import { drawingBounds, drawSet } from "./draw-set";
-import { drawingHistory } from "./drawing-history";
-import { DrivingState } from "./driving";
-import { dynamicMoverDrawing } from "./dynamic-mover-presentation";
-import { DynamicMoverPlugin, DynamicMoverState } from "./dynamic-mover-scene";
-import { EventSample } from "./events";
-import { GeometricMoverState } from "./geometric-mover";
-import { drawGeometry } from "./geometry-presentation";
-import { Grab } from "./grab";
-import { drawHeightFieldView } from "./height-field-presentation";
-import { drawInkPoint } from "./ink-presentation";
-import { drawJointViews } from "./joint-presentation";
-import { ManifoldSample } from "./manifold";
+import { benchmarkVillageDrawing } from "./benchmark-village.ts";
+import { drawCastView } from "./cast-presentation.ts";
+import { characterDrawing, drawCharacterView } from "./character-presentation.ts";
+import { collisionNames } from "./collision.ts";
+import { debugDrawing, drawCollisionDebug } from "./collision-debug-presentation.ts";
+import { collisionGeometryDrawing, drawCollisionGeometry } from "./collision-geometry-presentation.ts";
+import { drawCollisionView } from "./collision-presentation.ts";
+import { childGeometry, compoundChildren, largeCompound } from "./compound-presentation.ts";
+import { ContinuousState } from "./continuous.ts";
+import { drawQuerySpawn } from "./determinism-presentation.ts";
+import { drawingBounds, drawSet } from "./draw-set.ts";
+import { drawingHistory } from "./drawing-history.ts";
+import { DrivingState } from "./driving.ts";
+import { dynamicMoverDrawing } from "./dynamic-mover-presentation.ts";
+import { DynamicMoverPlugin, DynamicMoverState } from "./dynamic-mover-scene.ts";
+import { EventSample } from "./events.ts";
+import { GeometricMoverState } from "./geometric-mover.ts";
+import { drawGeometry } from "./geometry-presentation.ts";
+import { Grab } from "./grab.ts";
+import { drawHeightFieldView } from "./height-field-presentation.ts";
+import { drawInkPoint } from "./ink-presentation.ts";
+import { drawJointViews } from "./joint-presentation.ts";
+import { ManifoldSample } from "./manifold.ts";
 import {
     drawManifoldDiagnostics,
     manifoldDiagnosticDrawing,
-} from "./manifold-diagnostic-presentation";
-import { drawManifold, manifoldGeometry } from "./manifold-presentation";
-import { ShapeMaterial } from "./material";
-import { drawMeshViewerView } from "./mesh-inspector-presentation";
-import { drawPogoRay, pogoDrawing } from "./mover-presentation";
-import { mountPlayerControls } from "./player-controls";
-import { type ShapeGeometryCache, scenePresentation, shapePresentation } from "./presentation";
-import { castHeightField } from "./queries";
-import { restitutionScenes } from "./restitution";
-import { restitutionLines } from "./restitution-presentation";
-import { RigidBodyState } from "./rigid-body";
-import { type Scene, scenes } from "./scenes";
-import { ShapeMaterials, shapeMaterial } from "./shape-color";
-import { drawTreeBenchmark, treeGroundHeight } from "./tree-presentation";
-import { VillageState } from "./village";
-import { drawVillageView } from "./village-presentation";
-import { WorldSampleState } from "./world";
+} from "./manifold-diagnostic-presentation.ts";
+import { drawManifold, manifoldGeometry } from "./manifold-presentation.ts";
+import { ShapeMaterial } from "./material.ts";
+import { drawMeshViewerView } from "./mesh-inspector-presentation.ts";
+import { drawPogoRay, pogoDrawing } from "./mover-presentation.ts";
+import { mountPlayerControls } from "./player-controls.ts";
+import { type ShapeGeometryCache, scenePresentation, shapePresentation } from "./presentation.ts";
+import { castHeightField } from "./queries.ts";
+import { restitutionScenes } from "./restitution.ts";
+import { restitutionLines } from "./restitution-presentation.ts";
+import { RigidBodyState } from "./rigid-body.ts";
+import { type Scene, scenes } from "./scenes.ts";
+import { ShapeMaterials, shapeMaterial } from "./shape-color.ts";
+import { drawTreeBenchmark, treeGroundHeight } from "./tree-presentation.ts";
+import { VillageState } from "./village.ts";
+import { drawVillageView } from "./village-presentation.ts";
+import { WorldSampleState } from "./world.ts";
 
 function placeMarker(
     world: World,
@@ -121,7 +121,7 @@ function placeMarker(
     }
 }
 
-import { drawEventMark, drawSensorHitViews } from "./event-presentation";
+import { drawEventMark, drawSensorHitViews } from "./event-presentation.ts";
 
 export const GrabFeedback = {
     create: () => ({ marker: 0, attachment: [0, 0, 0] as [number, number, number] }),

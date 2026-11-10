@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import { isGlb, parseGlb } from "./glb";
-import { type GltfJson, parseGltf } from "./gltf";
+import { isGlb, parseGlb } from "./glb.ts";
+import { type GltfJson, parseGltf } from "./gltf.ts";
 
 const MAGIC = 0x46546c67;
 const JSON_CHUNK = 0x4e4f534a;

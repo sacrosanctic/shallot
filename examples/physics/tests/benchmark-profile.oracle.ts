@@ -4,9 +4,9 @@ import { Camera, DiagnosticsStore, Meshes } from "@dylanebert/shallot";
 import { DiagnosticsOverlayPlugin, ProfilePlugin, showProfiler } from "@dylanebert/shallot/extras";
 import { attachTexture } from "@dylanebert/shallot/rendering";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { AppPlugin, Viewer } from "../src/app";
-import { sceneSwitcher } from "../src/sample";
-import { scenes as allScenes, categories, type Scene } from "../src/scenes";
+import { AppPlugin, Viewer } from "../src/app.ts";
+import { sceneSwitcher } from "../src/sample.ts";
+import { scenes as allScenes, categories, type Scene } from "../src/scenes.ts";
 
 // bun diagnostics/benchmark-profile/run.ts; hardware timings are observations, not a gate.
 const app = await openGpuApp({

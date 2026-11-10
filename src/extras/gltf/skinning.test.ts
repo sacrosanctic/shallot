@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { composeMat4 } from "../../engine/utils";
-import { type GltfJson, generateSceneTangents, parseGltf } from "./gltf";
-import { loadGltf } from "./load";
+import { type GltfJson, generateSceneTangents, parseGltf } from "./gltf.ts";
+import { loadGltf } from "./load.ts";
 
 function fixture(name = "skin-accessors") {
     const json = JSON.parse(

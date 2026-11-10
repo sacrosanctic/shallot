@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
 import { component, u32 } from "../ecs";
-import { probeBuffer } from "./probe";
+import { probeBuffer } from "./probe.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

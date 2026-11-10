@@ -7,10 +7,10 @@ import {
     CollisionDebugPlugin,
     debugDrag,
     debugNames,
-} from "../src/collision-debug";
-import { debugDrawing } from "../src/collision-debug-presentation";
-import { changeControl, controlValues, createScene, scenes } from "../src/scenes";
-import { setSceneCamera } from "../src/view";
+} from "../src/collision-debug.ts";
+import { debugDrawing } from "../src/collision-debug-presentation.ts";
+import { changeControl, controlValues, createScene, scenes } from "../src/scenes.ts";
+import { setSceneCamera } from "../src/view.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const point = (v: { x: number; y: number; z: number }): [number, number, number] => [v.x, v.y, v.z];

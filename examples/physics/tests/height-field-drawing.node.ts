@@ -2,10 +2,10 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { Camera, createApp, GlobalTransform, resizeViewport } from "@dylanebert/shallot";
 import { type View, Views, worldToViewport } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { drawHeightFieldView, heightFieldDrawing } from "../src/height-field-presentation";
-import { MeshSamplePlugin } from "../src/mesh";
-import { HeightFieldState } from "../src/mesh-height-field";
-import { type Controls, controlValues, createScene, scenes } from "../src/scenes";
+import { drawHeightFieldView, heightFieldDrawing } from "../src/height-field-presentation.ts";
+import { MeshSamplePlugin } from "../src/mesh.ts";
+import { HeightFieldState } from "../src/mesh-height-field.ts";
+import { type Controls, controlValues, createScene, scenes } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("Height Field draws its native-sized ray endpoints and hit, sphere outline and no axes in scene ink", async () => {

@@ -19,12 +19,12 @@ import {
 import { Transform } from "../../core/transform";
 import { lookAtRotation, type Plugin, precompile, type World } from "../../engine";
 import { probeBuffer } from "../../engine/runtime";
-import { pointAtlasView, sunShadowView } from "./atlas";
-import { StandardRenderer } from "./forward";
-import { lit, StandardRenderingPlugin } from "./index";
-import { MeshMaterial } from "./material-data";
-import { AlphaMode, type MaterialHandle, MaterialPlugin, materialType } from "./material-type";
-import { MeshRenderPlugin } from "./mesh-render";
+import { pointAtlasView, sunShadowView } from "./atlas.ts";
+import { StandardRenderer } from "./forward.ts";
+import { lit, StandardRenderingPlugin } from "./index.ts";
+import { MeshMaterial } from "./material-data.ts";
+import { AlphaMode, type MaterialHandle, MaterialPlugin, materialType } from "./material-type.ts";
+import { MeshRenderPlugin } from "./mesh-render.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const Parameters = d.struct({ color: d.vec4f });

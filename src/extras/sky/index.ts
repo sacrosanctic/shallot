@@ -11,8 +11,8 @@ import {
     registerBackground,
     StandardRenderingPlugin,
 } from "../../standard/rendering";
-import { packSky } from "./pack";
-import { SKY_BYTES, SKY_FLOATS, SkyGpu, skyBackground } from "./shader";
+import { packSky } from "./pack.ts";
+import { SKY_BYTES, SKY_FLOATS, SkyGpu, skyBackground } from "./shader.ts";
 
 /**
  * the scene's procedural sky, one per scene (a singleton). A camera shows it by selecting the registered

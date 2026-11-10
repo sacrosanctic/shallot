@@ -18,7 +18,7 @@ import {
     TransformPlugin,
     type World,
 } from "@dylanebert/shallot";
-import { Action, Hint, InteractionInput, InteractPlugin, Usable } from "./interact";
+import { Action, Hint, InteractionInput, InteractPlugin, Usable } from "./interact.ts";
 
 const apps: Awaited<ReturnType<typeof createApp>>[] = [];
 afterEach(() => {

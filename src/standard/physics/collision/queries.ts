@@ -1,7 +1,7 @@
 import type { World } from "../../../engine/ecs";
-import type { Quat, Transform, Vec3 } from "../common/records";
-import { kernel } from "../kernel/kernel";
-import type { ShapeProxy } from "./distance";
+import type { Quat, Transform, Vec3 } from "../common/records.ts";
+import { kernel } from "../kernel/kernel.ts";
+import type { ShapeProxy } from "./distance.ts";
 
 /** Convex distance input; transform places B in A's frame. Lengths are meters. */
 export type DistanceInput = {

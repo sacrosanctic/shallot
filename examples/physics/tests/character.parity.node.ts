@@ -1,13 +1,13 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics, StandardPhysicsPlugin } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { CharacterSample, CharacterSamplePlugin, characterDrag } from "../src/character";
-import { characterDrawing } from "../src/character-presentation";
-import { GeometricMoverPlugin, GeometricMoverState } from "../src/geometric-mover";
-import { RigidBodyPlugin, RigidBodyState } from "../src/rigid-body";
-import { changeControl, controlValues, createScene } from "../src/scenes";
-import { drawingDigest } from "./digest";
-import { sampleGold } from "./gold";
+import { CharacterSample, CharacterSamplePlugin, characterDrag } from "../src/character.ts";
+import { characterDrawing } from "../src/character-presentation.ts";
+import { GeometricMoverPlugin, GeometricMoverState } from "../src/geometric-mover.ts";
+import { RigidBodyPlugin, RigidBodyState } from "../src/rigid-body.ts";
+import { changeControl, controlValues, createScene } from "../src/scenes.ts";
+import { drawingDigest } from "./digest.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const controlled of [false, true])

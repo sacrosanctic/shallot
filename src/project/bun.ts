@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { dirname, join, relative, resolve, sep } from "node:path";
 import type { BunPlugin } from "bun";
 import typegpu from "unplugin-typegpu/bun";
-import { normalizePath } from "./paths";
+import { normalizePath } from "./paths.ts";
 
 const PACKAGE_ROOT = resolve(import.meta.dir, "../..");
 const SHALLOT = JSON.parse(readFileSync(join(PACKAGE_ROOT, "package.json"), "utf8"));

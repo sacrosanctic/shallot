@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { type GltfJson, parseGltf } from "./gltf";
+import { type GltfJson, parseGltf } from "./gltf.ts";
 
 for (const field of ["version", "minVersion"] as const)
     for (const version of ["2.1", "2.10", "3.0", "999999999.0"])

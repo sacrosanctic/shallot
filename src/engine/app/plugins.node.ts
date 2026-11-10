@@ -4,7 +4,7 @@ import { createTestGpuApp } from "../../../scripts/gpu.fixture";
 
 setDefaultTimeout(TIMEOUT.node);
 
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { AudioPlugin, Listener, Sound } from "../../core/audio";
 import { MeshInstance } from "../../core/mesh";
 import {
@@ -29,9 +29,9 @@ import {
     Views,
     VolumetricLight,
 } from "../../core/rendering";
-import { globalTransformTable } from "../../core/rendering/global-transform";
-import { imageSampler, imageTexture } from "../../core/rendering/image";
-import { offscreenTexture } from "../../core/rendering/view";
+import { globalTransformTable } from "../../core/rendering/global-transform.ts";
+import { imageSampler, imageTexture } from "../../core/rendering/image.ts";
+import { offscreenTexture } from "../../core/rendering/view.ts";
 import { GlobalTransform } from "../../core/transform";
 import {
     drawArrow,
@@ -58,8 +58,8 @@ import {
     TextPlugin,
     Vignette,
 } from "../../extras";
-import { segmentState } from "../../extras/lines/segments";
-import { SpriteSource } from "../../extras/sprite/material";
+import { segmentState } from "../../extras/lines/segments.ts";
+import { SpriteSource } from "../../extras/sprite/material.ts";
 import { textStateKey } from "../../extras/text";
 import { isolationFont } from "../../extras/text/font.fixture";
 import {
@@ -77,8 +77,8 @@ import {
     StandardPhysicsPlugin,
     setLinearVelocity,
 } from "../../standard/physics";
-import { physicsState } from "../../standard/physics/runtime";
-import { worldCounters } from "../../standard/physics/world/world";
+import { physicsState } from "../../standard/physics/runtime.ts";
+import { worldCounters } from "../../standard/physics/world/world.ts";
 import {
     Backgrounds,
     CameraBackground,
@@ -87,7 +87,7 @@ import {
     StandardRenderer,
     StandardRenderingPlugin,
 } from "../../standard/rendering";
-import { createApp, type Plugin, probeTexture, Time, type World } from "../index";
+import { createApp, type Plugin, probeTexture, Time, type World } from "../index.ts";
 import { CanvasContext } from "./canvas.fixture";
 
 const everyPlugin: readonly Plugin[] = [

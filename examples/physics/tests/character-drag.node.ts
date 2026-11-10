@@ -13,9 +13,9 @@ import {
 import { Orbit, OrbitMode } from "@dylanebert/shallot/extras";
 import { type View, Views } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { CharacterSample, CharacterSamplePlugin } from "../src/character";
-import { Grab, GrabPlugin } from "../src/grab";
-import { createScene } from "../src/scenes";
+import { CharacterSample, CharacterSamplePlugin } from "../src/character.ts";
+import { Grab, GrabPlugin } from "../src/grab.ts";
+import { createScene } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

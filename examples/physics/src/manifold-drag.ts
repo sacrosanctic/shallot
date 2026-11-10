@@ -1,6 +1,6 @@
 import type { World } from "@dylanebert/shallot";
-import { rayHitsCapsule, rayHitsSphere } from "./collision-drag";
-import { ManifoldSample, manifoldRotate, vector } from "./manifold";
+import { rayHitsCapsule, rayHitsSphere } from "./collision-drag.ts";
+import { ManifoldSample, manifoldRotate, vector } from "./manifold.ts";
 
 type Vec = ReturnType<typeof vector>;
 export function manifoldDrag(

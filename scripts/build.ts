@@ -1,9 +1,9 @@
 import { resolve } from "node:path";
 import { $ } from "bun";
-import { audioArtifactIsFresh } from "../crates/audio/scripts/audio-inputs";
-import { gltfArtifactIsFresh } from "../crates/gltf/scripts/inputs";
-import { mikktspaceArtifactIsFresh } from "../crates/mikktspace/scripts/inputs";
-import { kernelArtifactsAreFresh } from "../crates/physics/scripts/kernel-inputs";
+import { audioArtifactIsFresh } from "../crates/audio/scripts/audio-inputs.ts";
+import { gltfArtifactIsFresh } from "../crates/gltf/scripts/inputs.ts";
+import { mikktspaceArtifactIsFresh } from "../crates/mikktspace/scripts/inputs.ts";
+import { kernelArtifactsAreFresh } from "../crates/physics/scripts/kernel-inputs.ts";
 
 const root = resolve(import.meta.dir, "..");
 if (!audioArtifactIsFresh(root)) await $`bun scripts/audio.ts`.cwd(root);

@@ -28,7 +28,7 @@ import {
     setTransform,
     timeOfImpactBodyMover,
 } from "@dylanebert/shallot/standard/physics";
-import { decodeMesh } from "./mesh-data";
+import { decodeMesh } from "./mesh-data.ts";
 import {
     add,
     cross,
@@ -40,9 +40,9 @@ import {
     rotate,
     sub,
     v,
-} from "./mover";
-import { readPlayerControls } from "./player-controls";
-import type { Controls } from "./scenes";
+} from "./mover.ts";
+import { readPlayerControls } from "./player-controls.ts";
+import type { Controls } from "./scenes.ts";
 import stairsData from "./stairs.json" with { type: "json" };
 import testMap from "./test_map01.json" with { type: "json" };
 

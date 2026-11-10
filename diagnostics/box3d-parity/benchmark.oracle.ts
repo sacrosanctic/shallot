@@ -1,20 +1,20 @@
 import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import * as physics from "@dylanebert/shallot/standard/physics";
-import { MeshSamplePlugin } from "../../examples/physics/src/mesh";
+import { MeshSamplePlugin } from "../../examples/physics/src/mesh.ts";
 import { Body, BodyType, createApp, hashPhysics, Shape, StandardPhysicsPlugin } from "@dylanebert/shallot";
-import { BenchmarkSample, BenchmarkSamplePlugin, benchmarkScenes } from "../../examples/physics/src/benchmarks";
-import { sceneSwitcher } from "../../examples/physics/src/sample";
-import { changeControl, controlValues, createScene, scenes } from "../../examples/physics/src/scenes";
-import { sampleGold } from "../../examples/physics/tests/gold";
+import { BenchmarkSample, BenchmarkSamplePlugin, benchmarkScenes } from "../../examples/physics/src/benchmarks.ts";
+import { sceneSwitcher } from "../../examples/physics/src/sample.ts";
+import { changeControl, controlValues, createScene, scenes } from "../../examples/physics/src/scenes.ts";
+import { sampleGold } from "../../examples/physics/tests/gold.ts";
 import { setLinearVelocity } from "@dylanebert/shallot/standard/physics";
-import { digestMismatch, drawingDigest, eventRecord, recordDigest } from "../../examples/physics/tests/digest";
-import { sensorEvents } from "./records";
+import { digestMismatch, drawingDigest, eventRecord, recordDigest } from "../../examples/physics/tests/digest.ts";
+import { sensorEvents } from "./records.ts";
 import "./village.oracle";
-import { VillagePlugin } from "../../examples/physics/src/village";
-import { manualParityScenes } from "../../examples/physics/tests/manual-parity";
-import { expectSwitchesEqualFresh } from "../../examples/physics/tests/switch";
-import { advanceIteration } from "../../examples/physics/tests/iteration";
-import { benchmarkVillageRecord } from "../../examples/physics/tests/benchmark-village-records";
+import { VillagePlugin } from "../../examples/physics/src/village.ts";
+import { manualParityScenes } from "../../examples/physics/tests/manual-parity.ts";
+import { expectSwitchesEqualFresh } from "../../examples/physics/tests/switch.ts";
+import { advanceIteration } from "../../examples/physics/tests/iteration.ts";
+import { benchmarkVillageRecord } from "../../examples/physics/tests/benchmark-village-records.ts";
 
 // Run by path with sample.oracle.ts. Scene parity needs one solver thread; the engine's
 // small determinism scenes hold scheduling and cross-host equality.

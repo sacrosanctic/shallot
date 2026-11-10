@@ -1,5 +1,5 @@
-import { kernel, kernelState, rethrowQueryError } from "../kernel/kernel";
-import type { WorldState } from "../world/world";
+import { kernel, kernelState, rethrowQueryError } from "../kernel/kernel.ts";
+import type { WorldState } from "../world/world.ts";
 
 /** Run user material callbacks at the kernel's post-collide serial point. */
 export function mixContacts(world: WorldState): void {

@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { DeterminismPlugin, DeterminismState } from "../src/determinism";
-import { querySpawnDrawing } from "../src/determinism-presentation";
-import { createScene } from "../src/scenes";
+import { DeterminismPlugin, DeterminismState } from "../src/determinism.ts";
+import { querySpawnDrawing } from "../src/determinism-presentation.ts";
+import { createScene } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("Query Spawn draws its ray, overlap bounds and stopped sphere in scene ink", async () => {

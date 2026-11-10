@@ -15,7 +15,7 @@ import {
     Views,
     viewportToWorld,
     worldToViewport,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const subjects = gpuApps(import.meta.path, [

@@ -8,7 +8,7 @@ export type {
     Vector2Field,
     Vector3Field,
     Vector4Field,
-} from "./component";
+} from "./component.ts";
 export {
     component,
     declaration,
@@ -27,12 +27,12 @@ export {
     vec2,
     vec3,
     vec4,
-} from "./component";
-export type { EntityRef } from "./entity";
-export { and, not, or } from "./query";
-export { type System, Time } from "./scheduler";
-export { type Recovery, recoverResource, type WorldSnapshot } from "./snapshot";
-export type { ComponentStorage } from "./storage";
+} from "./component.ts";
+export type { EntityRef } from "./entity.ts";
+export { and, not, or } from "./query.ts";
+export { type System, Time } from "./scheduler.ts";
+export { type Recovery, recoverResource, type WorldSnapshot } from "./snapshot.ts";
+export type { ComponentStorage } from "./storage.ts";
 export {
     GpuTable,
     type GpuTableOptions,
@@ -40,5 +40,5 @@ export {
     laneLayout,
     type TableUploadPath,
     writeLane,
-} from "./table";
-export { type Resource, World } from "./world";
+} from "./table.ts";
+export { type Resource, World } from "./world.ts";

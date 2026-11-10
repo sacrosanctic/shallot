@@ -11,9 +11,9 @@ import {
     setRenderPipeline,
     setViewport,
 } from "../../engine/runtime";
-import { Camera } from "./camera";
-import { fullscreenVertex } from "./tonemapping";
-import type { View } from "./view";
+import { Camera } from "./camera.ts";
+import { fullscreenVertex } from "./tonemapping.ts";
+import type { View } from "./view.ts";
 
 const upscalingLayout = tgpu.bindGroupLayout({
     source: { texture: d.texture2d(d.f32), visibility: ["fragment"] },

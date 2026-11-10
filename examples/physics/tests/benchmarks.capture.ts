@@ -1,6 +1,6 @@
 import { holdFrames, pipelineWarnings } from "@dylanebert/shallot/testing";
 import { expect, test } from "playwright/test";
-import { capture } from "./capture";
+import { capture } from "./capture.ts";
 
 test.use(pipelineWarnings);
 for (const name of [

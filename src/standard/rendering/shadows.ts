@@ -27,7 +27,7 @@ import {
     type World,
 } from "../../engine";
 import { lookAtPacked } from "../../engine/utils";
-import { directionalTravelDirection, shadowDirectionalLight, spotOuterAngle } from "./lighting";
+import { directionalTravelDirection, shadowDirectionalLight, spotOuterAngle } from "./lighting.ts";
 
 /** the directional shadow's cascade ceiling: each cascade takes one of the depth view slots reserved out
  * of the point-shadow combo budget, so the count can't exceed it. */

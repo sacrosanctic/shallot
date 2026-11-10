@@ -15,10 +15,10 @@ import {
 import { Orbit } from "@dylanebert/shallot/extras";
 import { attachTexture, captureTexture } from "@dylanebert/shallot/rendering";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { City, cityPlugin } from "../../examples/city/src/city";
-import { layout } from "../../examples/city/src/layout";
-import { expectError } from "../../scripts/test-console";
-import { refuseReport, WORKLOAD } from "./workload";
+import { City, cityPlugin } from "../../examples/city/src/city.ts";
+import { layout } from "../../examples/city/src/layout.ts";
+import { expectError } from "../../scripts/test-console.ts";
+import { refuseReport, WORKLOAD } from "./workload.ts";
 
 function median(values: number[]): number {
     return values.toSorted((a, b) => a - b)[Math.floor(values.length / 2)]!;

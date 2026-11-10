@@ -11,9 +11,9 @@ import {
     registerProducerTable,
     StandardMaterial,
     StandardRenderingPlugin,
-} from "./index";
-import { MeshDrawBuffers, meshPreprocessKey } from "./preprocess";
-import { type Draw, Draws } from "./registry";
+} from "./index.ts";
+import { MeshDrawBuffers, meshPreprocessKey } from "./preprocess.ts";
+import { type Draw, Draws } from "./registry.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const subject = gpuScene(

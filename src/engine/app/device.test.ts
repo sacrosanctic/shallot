@@ -1,10 +1,10 @@
 import { expect, test } from "bun:test";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { RenderingPlugin } from "../../core/rendering";
 import { DEFAULT_PLUGINS } from "../../standard";
 import { StandardRenderingPlugin } from "../../standard/rendering";
-import { stampAdapter } from "../index";
-import { createApp, type Plugin } from "./index";
+import { stampAdapter } from "../index.ts";
+import { createApp, type Plugin } from "./index.ts";
 
 const fallbackAdapter = {
     info: {

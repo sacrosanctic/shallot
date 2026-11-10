@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { test } from "playwright/test";
-import { capture } from "./capture";
+import { capture } from "./capture.ts";
 
 for (const [id, name, last] of [
     ["revolute", "Revolute", "Rotation"],

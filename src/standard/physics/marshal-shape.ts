@@ -1,11 +1,11 @@
 import { Hulls, Shape as ShapeComponent, ShapeKind, ShapeMaterials } from "../../core/physics";
 import { Transform } from "../../core/transform";
 import type { World } from "../../engine";
-import { makeShapeId } from "./api/config";
-import type { EntityId } from "./common/ids";
-import { defaultShapeDef, type Filter, type ShapeDef, type SurfaceMaterial } from "./common/types";
-import { buildPlacedHull, compoundBuild, heightFieldBuild, meshBuild } from "./geometry-builds";
-import type { HullData } from "./shapes/hull";
+import { makeShapeId } from "./api/config.ts";
+import type { EntityId } from "./common/ids.ts";
+import { defaultShapeDef, type Filter, type ShapeDef, type SurfaceMaterial } from "./common/types.ts";
+import { buildPlacedHull, compoundBuild, heightFieldBuild, meshBuild } from "./geometry-builds.ts";
+import type { HullData } from "./shapes/hull.ts";
 import {
     createCapsuleShape,
     createCompoundShape,
@@ -14,8 +14,8 @@ import {
     createMeshShape,
     createSphereShape,
     shapeIsValid,
-} from "./shapes/shape";
-import type { WorldState } from "./world/world";
+} from "./shapes/shape.ts";
+import type { WorldState } from "./world/world.ts";
 
 export function authoredShapeMaterial(world: World, eid: number): SurfaceMaterial {
     const shape = world.storage(ShapeComponent);

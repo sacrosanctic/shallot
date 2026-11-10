@@ -2,11 +2,11 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Transform } from "../../core/transform";
 import { createApp, type EntityRef } from "../../engine";
-import type { PhysicsContactData } from "./contact";
+import type { PhysicsContactData } from "./contact.ts";
 import { contactPair } from "./contact-data.fixture";
 import gold from "./contact-data.gold.json";
-import type { PhysicsContactEvent, PhysicsEventRecords } from "./events";
-import { getContactData, PhysicsEvents, StandardPhysicsPlugin, setTransform } from "./index";
+import type { PhysicsContactEvent, PhysicsEventRecords } from "./events.ts";
+import { getContactData, PhysicsEvents, StandardPhysicsPlugin, setTransform } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const vector = (v: { x: number; y: number; z: number }) => [v.x, v.y, v.z];

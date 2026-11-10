@@ -5,9 +5,9 @@ import { StandardPhysicsPlugin } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { GlobalTransform, Transform } from "@dylanebert/shallot/transform";
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { physicsBodyIndex, physicsState } from "./runtime";
-import { defaultJointDef } from "./solver/joint";
-import { createRevoluteJoint, defaultRevoluteJointDef } from "./solver/revoluteJoint";
+import { physicsBodyIndex, physicsState } from "./runtime.ts";
+import { defaultJointDef } from "./solver/joint.ts";
+import { createRevoluteJoint, defaultRevoluteJointDef } from "./solver/revoluteJoint.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

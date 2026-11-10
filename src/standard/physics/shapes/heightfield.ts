@@ -1,7 +1,7 @@
-import type { AABB, Vec3 } from "../common/records";
+import type { AABB, Vec3 } from "../common/records.ts";
 
-export { createGrid, createHeightField, createWave } from "./build-nonconvex";
-export { getHeightFieldTriangle } from "./read-geometry";
+export { createGrid, createHeightField, createWave } from "./build-nonconvex.ts";
+export { getHeightFieldTriangle } from "./read-geometry.ts";
 
 /** Reserved material index designating a hole (skipped cell) in a height field (B3_HEIGHT_FIELD_HOLE). */
 export const HEIGHT_FIELD_HOLE = 0xff;

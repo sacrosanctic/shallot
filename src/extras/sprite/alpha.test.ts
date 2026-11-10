@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { World } from "../../engine/ecs/world";
-import { Sprite, SpriteAlphaMode, SpriteFill } from "./pack";
+import { World } from "../../engine/ecs/world.ts";
+import { Sprite, SpriteAlphaMode, SpriteFill } from "./pack.ts";
 
 test("sprites default to Mask(0.5) and a full image; Mask preserves its threshold", () => {
     const world = new World();

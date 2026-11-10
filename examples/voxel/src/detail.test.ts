@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
-import { columnSlope, DetailKind, detailCount, detailKind } from "./detail";
-import { height } from "./noise";
-import { CONFIG } from "./terrain-data";
+import { columnSlope, DetailKind, detailCount, detailKind } from "./detail.ts";
+import { height } from "./noise.ts";
+import { CONFIG } from "./terrain-data.ts";
 
 test("seeded detail pins named columns and places all five kinds within nine chunks", () => {
     for (const [x, z, kind] of [

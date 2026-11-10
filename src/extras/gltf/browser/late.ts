@@ -18,7 +18,7 @@ import {
     StandardRenderer,
     StandardRenderingPlugin,
 } from "../../../standard/rendering";
-import { type Gltf, loadGltfScene, spawnGltfScene } from "../scene";
+import { type Gltf, loadGltfScene, spawnGltfScene } from "../scene.ts";
 
 const source = new URL("../fixtures/BoxTextured/glTF/BoxTextured.gltf", import.meta.url);
 const apps: App[] = [];

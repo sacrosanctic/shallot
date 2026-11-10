@@ -1,6 +1,6 @@
 import { test } from "playwright/test";
-import { continuousScenes } from "../src/continuous";
-import { capture } from "./capture";
+import { continuousScenes } from "../src/continuous.ts";
+import { capture } from "./capture.ts";
 
 for (const id of Object.keys(continuousScenes)) {
     test(`${id} continuous look review`, async ({ page }) => {

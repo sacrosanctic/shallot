@@ -12,9 +12,9 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { mkdtempSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { removeTestDirectory } from "../../scripts/test-directory";
-import { nativeBinary } from "./native";
-import { WINDOWS } from "./windows";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
+import { nativeBinary } from "./native.ts";
+import { WINDOWS } from "./windows.ts";
 
 setDefaultTimeout(300_000);
 

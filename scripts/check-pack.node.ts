@@ -9,9 +9,9 @@ import { relative, resolve } from "node:path";
 import { parse } from "@babel/parser";
 import { Glob } from "bun";
 import { parse as parseComponent } from "svelte/compiler";
-import { PROJECT_OUTPUT } from "../src/cli/create";
-import { normalizePath } from "../src/project/paths";
-import { importsIn, resolveRelative } from "./example-imports";
+import { PROJECT_OUTPUT } from "../src/cli/create.ts";
+import { normalizePath } from "../src/project/paths.ts";
+import { importsIn, resolveRelative } from "./example-imports.ts";
 
 // Check actual pack output so ignored manifest negations cannot pass.
 test("the npm package contains only declared files and required consumers", async () => {

@@ -1,5 +1,5 @@
 import type { Loading } from "@dylanebert/shallot";
-import { completeIntro } from "./dwell";
+import { completeIntro } from "./dwell.ts";
 
 export function titleCard(bootstrap: HTMLElement): Loading {
     let card = bootstrap;

@@ -4,7 +4,7 @@ import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import animationGold from "../../../examples/gltf/tests/animations.gold.json";
 import modelGold from "../../../examples/gltf/tests/models.gold.json";
-import { assets, fileFetch, syncAssets } from "../../../examples/gltf/tests/setup";
+import { assets, fileFetch, syncAssets } from "../../../examples/gltf/tests/setup.ts";
 import { Meshes, type MeshHandle, MeshInstance } from "../../core/mesh";
 import {
     attachTexture,
@@ -16,7 +16,7 @@ import {
 import { Transform } from "../../core/transform";
 import type { App, World } from "../../engine";
 import { probeTexture } from "../../engine/runtime";
-import { openGpuApp } from "../../project/testing-gpu";
+import { openGpuApp } from "../../project/testing-gpu.ts";
 import {
     AlphaMode,
     MaterialPlugin,
@@ -27,17 +27,17 @@ import {
     StandardRenderer,
     StandardRenderingPlugin,
 } from "../../standard/rendering";
-import type { GltfScene } from "./gltf";
-import { loadGltf } from "./load";
+import type { GltfScene } from "./gltf.ts";
+import { loadGltf } from "./load.ts";
 import { morphFixture, morphFixtureUrl } from "./morph.fixture";
-import { type GltfSceneInstance, loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene";
+import { type GltfSceneInstance, loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene.ts";
 import {
     deformationBindings,
     deformationVertex,
     GltfPlugin,
     MorphedMesh,
     SkinPalette,
-} from "./skinning";
+} from "./skinning.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const layout = materialLayout(d.struct({ pad: d.u32 }), {

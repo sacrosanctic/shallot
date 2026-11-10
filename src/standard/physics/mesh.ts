@@ -1,8 +1,8 @@
 import type { PhysicsMesh } from "../../core/physics";
 import type { Resource, World } from "../../engine";
-import type { AABB } from "./common/records";
-import { buildMesh } from "./geometry-builds";
-import { kernel } from "./kernel/kernel";
+import type { AABB } from "./common/records.ts";
+import { buildMesh } from "./geometry-builds.ts";
+import { kernel } from "./kernel/kernel.ts";
 
 /** A b3MeshNode's mesh-local bounds in meters and its position in the tree. */
 export interface PhysicsMeshNode {

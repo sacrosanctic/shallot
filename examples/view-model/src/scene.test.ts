@@ -12,7 +12,7 @@ import {
 } from "@dylanebert/shallot";
 import { RenderLayers } from "@dylanebert/shallot/rendering";
 import { PhysicsWorldDefinition } from "@dylanebert/shallot/standard/physics";
-import { Scene, ScenePlugin } from "./scene";
+import { Scene, ScenePlugin } from "./scene.ts";
 
 test("the standard character stops at the wall; its cameras and multipart model follow the same frame pose", async () => {
     const app = await createApp({

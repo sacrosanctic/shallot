@@ -5,12 +5,12 @@ import {
     CollisionGeometry,
     CollisionGeometryPlugin,
     collisionGeometryScenes,
-} from "../src/collision-geometry";
-import { sceneSwitcher } from "../src/sample";
-import { type Controls, changeControl, controlValues, createScene, scenes } from "../src/scenes";
-import { collisionGeometryRecords } from "./collision-geometry-records";
-import { drawingDigest } from "./digest";
-import { sampleGold } from "./gold";
+} from "../src/collision-geometry.ts";
+import { sceneSwitcher } from "../src/sample.ts";
+import { type Controls, changeControl, controlValues, createScene, scenes } from "../src/scenes.ts";
+import { collisionGeometryRecords } from "./collision-geometry-records.ts";
+import { drawingDigest } from "./digest.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of Object.keys(

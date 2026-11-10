@@ -1,6 +1,6 @@
 import { test } from "playwright/test";
-import { geometryNames } from "../src/geometry";
-import { capture } from "./capture";
+import { geometryNames } from "../src/geometry.ts";
+import { capture } from "./capture.ts";
 
 for (const width of [1280, 390])
     for (const id of geometryNames) {

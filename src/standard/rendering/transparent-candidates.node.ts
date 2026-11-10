@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { Meshes, MeshInstance } from "../../core/mesh";
 import { attachTexture, Camera, TransparentPhases } from "../../core/rendering";
 import { GlobalTransform, Transform } from "../../core/transform";
@@ -13,7 +13,7 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const subject = gpuScene(

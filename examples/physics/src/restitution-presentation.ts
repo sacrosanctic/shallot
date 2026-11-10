@@ -1,5 +1,5 @@
 import type { World } from "@dylanebert/shallot";
-import { RestitutionState } from "./restitution";
+import { RestitutionState } from "./restitution.ts";
 
 type Point = [number, number, number];
 export function restitutionLines(world: World): { a: Point; b: Point }[] {

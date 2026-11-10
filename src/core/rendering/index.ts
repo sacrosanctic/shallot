@@ -1,12 +1,12 @@
-export { Anchor } from "./anchor";
-export { Billboard, billboardCorner } from "./billboard";
-export { EXPOSURE_EV100_BLENDER } from "./camera";
-export { biasClipDepth } from "./depth-bias";
+export { Anchor } from "./anchor.ts";
+export { Billboard, billboardCorner } from "./billboard.ts";
+export { EXPOSURE_EV100_BLENDER } from "./camera.ts";
+export { biasClipDepth } from "./depth-bias.ts";
 export {
     GlobalTransformHistory,
     globalTransformTable,
     readRenderGlobalTransform,
-} from "./global-transform";
+} from "./global-transform.ts";
 export {
     ImageAddressMode,
     ImageFilterMode,
@@ -16,7 +16,7 @@ export {
     imageTexture,
     imageTextures,
     imageView,
-} from "./image";
+} from "./image.ts";
 export {
     CorePipelinePlugin,
     MainPassSystem,
@@ -26,10 +26,10 @@ export {
     TransparentPhase,
     type TransparentPhaseItem,
     TransparentPhases,
-} from "./phases";
-export * from "./substrate";
-export { TonemappingMethod } from "./tonemap";
-export { fullscreenVertex } from "./tonemapping";
+} from "./phases.ts";
+export * from "./substrate.ts";
+export { TonemappingMethod } from "./tonemap.ts";
+export { fullscreenVertex } from "./tonemapping.ts";
 export {
     ColorGrading,
     CustomPresentation,
@@ -38,6 +38,6 @@ export {
     EffectPasses,
     Tonemapping,
     TonemappingSystem,
-} from "./tonemapping-state";
-export { viewportToWorld, worldToViewport } from "./viewport-to-world";
-export { Xform, xformMat, xformNormal, xformPoint, xformQuat, xformWgsl } from "./xform";
+} from "./tonemapping-state.ts";
+export { viewportToWorld, worldToViewport } from "./viewport-to-world.ts";
+export { Xform, xformMat, xformNormal, xformPoint, xformQuat, xformWgsl } from "./xform.ts";

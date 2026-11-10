@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { Meshes, MeshInstance } from "../../core/mesh";
 import {
     attachTexture,
@@ -16,12 +16,12 @@ import {
     Tonemapping,
     TonemappingMethod,
 } from "../../core/rendering";
-import { imageTextures } from "../../core/rendering/image";
+import { imageTextures } from "../../core/rendering/image.ts";
 import { Transform } from "../../core/transform";
 import { rawDevice } from "../../engine/runtime";
 import { Draws, MeshMaterial, StandardRenderer } from "../../standard/rendering";
-import { MaterialBatches, materialBatch } from "../../standard/rendering/material-batch";
-import { Sprite, SpritePlugin } from "./index";
+import { MaterialBatches, materialBatch } from "../../standard/rendering/material-batch.ts";
+import { Sprite, SpritePlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 let camera = -1;

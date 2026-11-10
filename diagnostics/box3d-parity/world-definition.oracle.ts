@@ -2,17 +2,17 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp } from "../../src/engine";
 import { hashPhysics, PhysicsWorldDefinition, StandardPhysicsPlugin } from "../../src/standard/physics";
 import { BodyType, init } from "../../src/standard/physics/api";
-import { createSphereShape } from "../../src/standard/physics/shapes/shape";
-import { bodyIsAwake, setMassData } from "../../src/standard/physics/world/body";
-import { hashWorldState } from "../../src/standard/physics/world/hash";
+import { createSphereShape } from "../../src/standard/physics/shapes/shape.ts";
+import { bodyIsAwake, setMassData } from "../../src/standard/physics/world/body.ts";
+import { hashWorldState } from "../../src/standard/physics/world/hash.ts";
 import {
     worldEnableSleeping,
     worldSetGravity,
     worldSetIsotropicInertiaTolerance,
-} from "../../src/standard/physics/world/world";
-import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld, testShapeDef } from "../../src/standard/physics/testing";
-import { nativeSseOutput } from "./native-evidence";
-import { assertPublicOracleKernel } from "./oracle-kernel";
+} from "../../src/standard/physics/world/world.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld, testShapeDef } from "../../src/standard/physics/testing.ts";
+import { nativeSseOutput } from "./native-evidence.ts";
+import { assertPublicOracleKernel } from "./oracle-kernel.ts";
 
 setDefaultTimeout(180_000);
 await init(undefined, { threads: 0 });

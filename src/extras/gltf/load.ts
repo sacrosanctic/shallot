@@ -1,11 +1,11 @@
-import { isGlb, parseGlb } from "./glb";
+import { isGlb, parseGlb } from "./glb.ts";
 import {
     type GltfJson,
     type GltfScene,
     generateSceneTangents,
     parseGltf,
     validateAsset,
-} from "./gltf";
+} from "./gltf.ts";
 
 /** Reads a glTF or GLB URL and resolves external and data-URI buffers with the supplied fetch.
  * Generates missing normal-texture tangents using that texture's coordinate set.

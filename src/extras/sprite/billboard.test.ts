@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { Billboard } from "../../core/rendering";
-import { World } from "../../engine/ecs/world";
-import { Sprite } from "./pack";
+import { World } from "../../engine/ecs/world.ts";
+import { Sprite } from "./pack.ts";
 
 test("sprites default to Screen orientation", () => {
     const world = new World();

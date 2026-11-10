@@ -2,10 +2,10 @@
 // contact ids and solver order. Material indices follow first-seen order across child types.
 // sharedHullCount and sharedMeshCount are diagnostics; children retain their geometry references.
 
-import { ALL_BITS_HI, ALL_BITS_LO } from "../common/constants";
-import type { AABB, Transform, Vec3 } from "../common/records";
-import { cloneMaterial, ShapeType, type SurfaceMaterial } from "../common/types";
-import * as tree from "../kernel/treecolumns";
+import { ALL_BITS_HI, ALL_BITS_LO } from "../common/constants.ts";
+import type { AABB, Transform, Vec3 } from "../common/records.ts";
+import { cloneMaterial, ShapeType, type SurfaceMaterial } from "../common/types.ts";
+import * as tree from "../kernel/treecolumns.ts";
 import {
     type Capsule,
     computeCapsuleAABB,
@@ -13,9 +13,9 @@ import {
     roundCapsule,
     roundSphere,
     type Sphere,
-} from "./geometry";
-import { computeHullAABB, type HullData } from "./hull";
-import { computeMeshAABB, type Mesh, type MeshData } from "./mesh";
+} from "./geometry.ts";
+import { computeHullAABB, type HullData } from "./hull.ts";
+import { computeMeshAABB, type Mesh, type MeshData } from "./mesh.ts";
 
 const f32 = Math.fround;
 

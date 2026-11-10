@@ -64,7 +64,7 @@ import {
     reduceFs,
     reduceLayout,
     WORKGROUP,
-} from "./passes";
+} from "./passes.ts";
 
 /**
  * outline highlight: a colored band hugs the object's silhouette for hover, selection, or grab feedback.

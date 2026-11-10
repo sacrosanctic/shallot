@@ -1,7 +1,7 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import { pointCastersSchema, SunShadow, tileRectsSchema } from "./shade";
-import { MAX_POINT_CASTERS } from "./shadows";
+import { pointCastersSchema, SunShadow, tileRectsSchema } from "./shade.ts";
+import { MAX_POINT_CASTERS } from "./shadows.ts";
 
 // Each schema factory call creates a distinct struct object. Reuse these instances within a resolve;
 // resolving a second same-named PointCasters/TileRects instance would suffix its WGSL name and break

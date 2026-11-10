@@ -1,7 +1,7 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { SDF_EXPONENT } from "./sdf";
+import { SDF_EXPONENT } from "./sdf.ts";
 
 /** Shared CPU/GPU instance layout; staging stride and field offsets derive from this schema.
  * Positions and size are local, before the entity transform; color is packed sRGBA. */

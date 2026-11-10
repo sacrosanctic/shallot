@@ -1,7 +1,7 @@
 import type { World } from "@dylanebert/shallot";
-import { manifoldDrag } from "../src/manifold-drag";
-import { add, vector } from "../src/manifold-math";
-import { ManifoldSample } from "../src/manifold-state";
+import { manifoldDrag } from "../src/manifold-drag.ts";
+import { add, vector } from "../src/manifold-math.ts";
+import { ManifoldSample } from "../src/manifold-state.ts";
 export function manifoldDiagnosticGesture(world: World, step: number): void {
     const s = world.resource(ManifoldSample),
         translation = vector(0, 0, -20);

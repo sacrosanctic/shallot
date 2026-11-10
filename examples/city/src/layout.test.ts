@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { layout, POPULATION, SEED } from "./layout";
+import { layout, POPULATION, SEED } from "./layout.ts";
 
 test("the same seed repeats placements and a different seed changes them", () => {
     const placements = layout(SEED, POPULATION);

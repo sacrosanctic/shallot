@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { recoverResource } from "./snapshot";
-import { type Resource, World } from "./world";
+import { recoverResource } from "./snapshot.ts";
+import { type Resource, World } from "./world.ts";
 
 type Sample = { step: number; point: number[]; refs: Map<number, { row: number }>; late?: number };
 const Sample: Resource<Sample> = {

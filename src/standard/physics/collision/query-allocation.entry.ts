@@ -15,14 +15,14 @@ import {
     overlapShape,
     type PhysicsQueryHit,
 } from "@dylanebert/shallot/standard/physics";
-import { defaultQueryFilter, defaultSurfaceMaterial } from "../common/types";
-import { transform } from "../kernel/math";
-import { queryColumns } from "../kernel/querycolumns";
-import { physicsState } from "../runtime";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createCompound } from "../shapes/compound";
-import { createGrid } from "../shapes/heightfield";
-import { createGridMesh } from "../shapes/mesh";
+import { defaultQueryFilter, defaultSurfaceMaterial } from "../common/types.ts";
+import { transform } from "../kernel/math.ts";
+import { queryColumns } from "../kernel/querycolumns.ts";
+import { physicsState } from "../runtime.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createCompound } from "../shapes/compound.ts";
+import { createGrid } from "../shapes/heightfield.ts";
+import { createGridMesh } from "../shapes/mesh.ts";
 import {
     createCapsuleShape,
     createCompoundShape,
@@ -30,8 +30,8 @@ import {
     createHullShape,
     createMeshShape,
     createSphereShape,
-} from "../shapes/shape";
-import { createTestBody, testShapeDef } from "../testing";
+} from "../shapes/shape.ts";
+import { createTestBody, testShapeDef } from "../testing.ts";
 
 export let controlSink: { frame: number } | undefined;
 export const control = () => {

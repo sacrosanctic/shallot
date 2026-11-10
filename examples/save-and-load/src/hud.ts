@@ -1,5 +1,5 @@
 import type { System, World } from "@dylanebert/shallot";
-import { count, Game, loadGame, newGame, saveGame, saveLabel } from "./game";
+import { count, Game, loadGame, newGame, saveGame, saveLabel } from "./game.ts";
 
 export function hud(container: HTMLElement, world: World): () => void {
     const root = document.createElement("section");

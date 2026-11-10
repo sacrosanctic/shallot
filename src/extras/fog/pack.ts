@@ -1,7 +1,7 @@
 import type { World } from "../../engine";
 import { unpackColorInto } from "../../engine";
-import { Fog } from "./index";
-import { FOG_PARAMS } from "./medium";
+import { Fog } from "./index.ts";
+import { FOG_PARAMS } from "./medium.ts";
 
 /** Packs the medium's light radiance, extinction density, scattering albedo and light intensity into caller-owned FogGpu storage.
  * A zero-extinction medium has zero in-scatter. */

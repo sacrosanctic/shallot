@@ -1,9 +1,9 @@
 import { afterEach, expect, test } from "bun:test";
-import type { AABB } from "../common/records";
-import { BodyType } from "../common/types";
-import { rebuild } from "../kernel/treecolumns";
-import { createTestWorld, destroyTestWorld } from "../testing";
-import type { WorldState } from "../world/world";
+import type { AABB } from "../common/records.ts";
+import { BodyType } from "../common/types.ts";
+import { rebuild } from "../kernel/treecolumns.ts";
+import { createTestWorld, destroyTestWorld } from "../testing.ts";
+import type { WorldState } from "../world/world.ts";
 import {
     bufferMove,
     createProxy,
@@ -15,7 +15,7 @@ import {
     proxyKey,
     proxyType,
     testOverlap,
-} from "./broadphase";
+} from "./broadphase.ts";
 
 const worlds: WorldState[] = [];
 afterEach(() => {

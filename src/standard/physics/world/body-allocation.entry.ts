@@ -1,14 +1,14 @@
 import { createApp, StandardPhysicsPlugin } from "@dylanebert/shallot";
-import { contactIds, createContact, destroyContact } from "../collision/contact";
-import { BodyType } from "../common/types";
-import { readStateAngularVelocity } from "../kernel/bodycolumns";
-import { physicsState } from "../runtime";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createHullShape } from "../shapes/shape";
-import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint";
-import { defaultJointDef } from "../solver/joint";
-import { createTestBody, testShapeDef } from "../testing";
-import { PhysicsWorldDefinition } from "../world-definition";
+import { contactIds, createContact, destroyContact } from "../collision/contact.ts";
+import { BodyType } from "../common/types.ts";
+import { readStateAngularVelocity } from "../kernel/bodycolumns.ts";
+import { physicsState } from "../runtime.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createHullShape } from "../shapes/shape.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint.ts";
+import { defaultJointDef } from "../solver/joint.ts";
+import { createTestBody, testShapeDef } from "../testing.ts";
+import { PhysicsWorldDefinition } from "../world-definition.ts";
 import {
     bodyApplyAngularImpulse,
     bodyApplyForce,
@@ -26,7 +26,7 @@ import {
     bodySetTargetTransform,
     bodySetTransform,
     getBodyState,
-} from "./body";
+} from "./body.ts";
 
 export let controlSink: object | undefined;
 export const control = () => {

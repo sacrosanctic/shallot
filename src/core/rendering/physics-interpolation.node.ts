@@ -9,14 +9,14 @@ import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/
 import { Body, BodyType, Shape } from "../../core/physics";
 import { attachCanvas, Camera, RenderingPlugin } from "../../core/rendering";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
-import { globalTransformTable, probeBuffer, Time, Transform } from "../../index";
+import { globalTransformTable, probeBuffer, Time, Transform } from "../../index.ts";
 import { StandardPhysicsPlugin } from "../../standard/physics";
 import { GlobalTransform } from "../transform";
-import { GlobalTransformHistory as TransformRuntime } from "./global-transform";
+import { GlobalTransformHistory as TransformRuntime } from "./global-transform.ts";
 
 await setupGlobals();
 
-function attachTestCamera(world: import("../../index").World): void {
+function attachTestCamera(world: import("../../index.ts").World): void {
     let context: CanvasContext;
     const canvas = {
         width: 32,

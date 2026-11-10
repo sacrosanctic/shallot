@@ -1,12 +1,12 @@
 import { expect, test } from "bun:test";
-import { init, kernel } from "../../src/standard/physics/kernel/kernel";
+import { init, kernel } from "../../src/standard/physics/kernel/kernel.ts";
 import gold from "../../crates/physics/tests/hull_build.gold.json";
-import { nativeBinary, run } from "./native";
+import { nativeBinary, run } from "./native.ts";
 import { Hulls } from "../../src/core/physics";
 import { World } from "../../src/engine";
-import { buildHull } from "../../src/standard/physics/geometry-builds";
+import { buildHull } from "../../src/standard/physics/geometry-builds.ts";
 import { StandardPhysicsPlugin } from "../../src/standard/physics";
-import { drawHull } from "../../src/standard/physics/shapes/readgeometry";
+import { drawHull } from "../../src/standard/physics/shapes/readgeometry.ts";
 
 test("hull construction and every generator match native byte images", async () => {
     const native = JSON.parse(run([nativeBinary("hull-build.c")])) as typeof gold;

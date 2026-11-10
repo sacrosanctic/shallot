@@ -4,7 +4,7 @@ import { Body, BodyType, Shape, ShapeKind } from "../../core/physics";
 import { Transform } from "../../core/transform";
 import { createApp } from "../../engine";
 import gold from "./angular-velocity.gold.json";
-import { getAngularVelocity, StandardPhysicsPlugin, setAngularVelocity } from "./index";
+import { getAngularVelocity, StandardPhysicsPlugin, setAngularVelocity } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("current angular velocity equals native after stepping, setting and snapshot restore", async () => {

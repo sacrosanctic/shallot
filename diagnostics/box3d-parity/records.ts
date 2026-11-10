@@ -1,14 +1,14 @@
 import { createApp, hashPhysics, StandardPhysicsPlugin } from "@dylanebert/shallot";
 import { type HullData, PhysicsEvents } from "@dylanebert/shallot/standard/physics";
-import { BenchmarkSamplePlugin } from "../../examples/physics/src/benchmarks";
-import { buildHulls, castHeightField, heightField, hull, QuerySample, QuerySamplePlugin } from "../../examples/physics/src/queries";
-import { createScene } from "../../examples/physics/src/scenes";
-import { SensorSample } from "../../examples/physics/src/sensor";
-import { eventRecord, querySteps } from "../../examples/physics/tests/digest";
-import { sampleGold } from "../../examples/physics/tests/gold";
-import { run } from "./native";
-import { sampleBinary } from "./sample";
-import { compareRecords } from "./record-diff";
+import { BenchmarkSamplePlugin } from "../../examples/physics/src/benchmarks.ts";
+import { buildHulls, castHeightField, heightField, hull, QuerySample, QuerySamplePlugin } from "../../examples/physics/src/queries.ts";
+import { createScene } from "../../examples/physics/src/scenes.ts";
+import { SensorSample } from "../../examples/physics/src/sensor.ts";
+import { eventRecord, querySteps } from "../../examples/physics/tests/digest.ts";
+import { sampleGold } from "../../examples/physics/tests/gold.ts";
+import { run } from "./native.ts";
+import { sampleBinary } from "./sample.ts";
+import { compareRecords } from "./record-diff.ts";
 import { fileURLToPath } from "node:url";
 
 export async function queryRecords(scene: "heightField" | "hull"): Promise<string> {

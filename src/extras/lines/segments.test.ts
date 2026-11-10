@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { World } from "../../engine";
-import { SEGMENT_FLOATS } from "./pipeline";
+import { SEGMENT_FLOATS } from "./pipeline.ts";
 import {
     drawArrow,
     drawLine,
@@ -11,7 +11,7 @@ import {
     lineStableParts,
     push,
     segmentState,
-} from "./segments";
+} from "./segments.ts";
 
 test("line stable identities survive segment staging growth", () => {
     const world = new World();

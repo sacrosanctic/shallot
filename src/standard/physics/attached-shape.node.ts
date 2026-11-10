@@ -1,11 +1,11 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { Body, BodyType, Shape, ShapeKind } from "../../core/physics";
 import { GlobalTransform, Transform, TransformRuntime } from "../../core/transform";
 import { createApp } from "../../engine/app";
 import { StandardPhysicsPlugin } from ".";
-import { setTransform } from "./runtime";
+import { setTransform } from "./runtime.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

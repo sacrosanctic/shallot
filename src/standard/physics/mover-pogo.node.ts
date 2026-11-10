@@ -32,9 +32,9 @@ import {
     PGJ_NORMAL,
     PGJ_REST_LENGTH,
     PGJ_VELOCITY,
-} from "./kernel/columns";
-import { readJointFloat, readJointVec3 } from "./kernel/jointcolumns";
-import { physicsState } from "./runtime";
+} from "./kernel/columns.ts";
+import { readJointFloat, readJointVec3 } from "./kernel/jointcolumns.ts";
+import { physicsState } from "./runtime.ts";
 import { jointIds } from "./solver/joint.fixture";
 
 setDefaultTimeout(TIMEOUT.node);

@@ -11,11 +11,11 @@ import {
 } from "@dylanebert/shallot";
 import { setLinearVelocity, setTransform } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { DynamicMover } from "../src/dynamic-mover";
-import { dynamicMoverDrawing } from "../src/dynamic-mover-presentation";
-import { DynamicMoverPlugin, DynamicMoverState } from "../src/dynamic-mover-scene";
-import { changeControl, controlValues, createScene, scenes } from "../src/scenes";
-import { shapeRole } from "../src/shape-color";
+import { DynamicMover } from "../src/dynamic-mover.ts";
+import { dynamicMoverDrawing } from "../src/dynamic-mover-presentation.ts";
+import { DynamicMoverPlugin, DynamicMoverState } from "../src/dynamic-mover-scene.ts";
+import { changeControl, controlValues, createScene, scenes } from "../src/scenes.ts";
+import { shapeRole } from "../src/shape-color.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("Dynamic Mover takes the sample's defaults and exposes its simulation controls without a camera toggle", async () => {

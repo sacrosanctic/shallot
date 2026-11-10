@@ -1,14 +1,14 @@
 import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { Body, RevoluteJoint, Shape, SphericalJoint } from "../../core/physics";
 import { createApp } from "../../engine";
-import * as authoring from "./authoring";
-import * as records from "./kernel/jointrecords";
-import * as marshal from "./marshal-shape";
-import { physicsState, StandardPhysicsPlugin } from "./runtime";
-import * as shapeSync from "./shape-sync";
-import { worldCounters } from "./world/world";
+import * as authoring from "./authoring.ts";
+import * as records from "./kernel/jointrecords.ts";
+import * as marshal from "./marshal-shape.ts";
+import { physicsState, StandardPhysicsPlugin } from "./runtime.ts";
+import * as shapeSync from "./shape-sync.ts";
+import { worldCounters } from "./world/world.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

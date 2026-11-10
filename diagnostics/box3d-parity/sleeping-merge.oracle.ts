@@ -1,12 +1,12 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import { BodyType } from "../../src/standard/physics/common/types";
-import { createSphereShape } from "../../src/standard/physics/shapes/shape";
-import { createDistanceJoint, defaultDistanceJointDef } from "../../src/standard/physics/solver/distanceJoint";
-import { bodyApplyLinearImpulseToCenter, bodySetAwake } from "../../src/standard/physics/world/body";
-import { defaultJointDef } from "../../src/standard/physics/solver/joint";
-import { hashWorldState } from "../../src/standard/physics/world/hash";
-import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld, testShapeDef } from "../../src/standard/physics/testing";
-import { nativeBinary, run } from "./native";
+import { BodyType } from "../../src/standard/physics/common/types.ts";
+import { createSphereShape } from "../../src/standard/physics/shapes/shape.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "../../src/standard/physics/solver/distanceJoint.ts";
+import { bodyApplyLinearImpulseToCenter, bodySetAwake } from "../../src/standard/physics/world/body.ts";
+import { defaultJointDef } from "../../src/standard/physics/solver/joint.ts";
+import { hashWorldState } from "../../src/standard/physics/world/hash.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld, testShapeDef } from "../../src/standard/physics/testing.ts";
+import { nativeBinary, run } from "./native.ts";
 
 setDefaultTimeout(180_000);
 

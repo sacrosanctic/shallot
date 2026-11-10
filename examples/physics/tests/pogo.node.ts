@@ -1,11 +1,11 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, pressKey, Time } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { drawingHistory } from "../src/drawing-history";
-import { GeometricMoverPlugin, GeometricMoverState } from "../src/geometric-mover";
-import { drawPogoRay, pogoDrawing } from "../src/mover-presentation";
-import { createScene } from "../src/scenes";
-import { VillagePlugin, VillageState } from "../src/village";
+import { drawingHistory } from "../src/drawing-history.ts";
+import { GeometricMoverPlugin, GeometricMoverState } from "../src/geometric-mover.ts";
+import { drawPogoRay, pogoDrawing } from "../src/mover-presentation.ts";
+import { createScene } from "../src/scenes.ts";
+import { VillagePlugin, VillageState } from "../src/village.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

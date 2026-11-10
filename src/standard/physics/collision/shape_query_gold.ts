@@ -1,12 +1,12 @@
-import type { Transform, Vec3 } from "../common/records";
-import { defaultBodyDef, defaultShapeDef, defaultWorldDef, ShapeType } from "../common/types";
-import { init, kernel } from "../kernel/kernel";
-import { transform } from "../kernel/math";
-import type { CompoundData } from "../shapes/compound";
-import type { Capsule, Sphere } from "../shapes/geometry";
-import type { HeightFieldData } from "../shapes/heightfield";
-import type { HullData } from "../shapes/hull";
-import type { Mesh } from "../shapes/mesh";
+import type { Transform, Vec3 } from "../common/records.ts";
+import { defaultBodyDef, defaultShapeDef, defaultWorldDef, ShapeType } from "../common/types.ts";
+import { init, kernel } from "../kernel/kernel.ts";
+import { transform } from "../kernel/math.ts";
+import type { CompoundData } from "../shapes/compound.ts";
+import type { Capsule, Sphere } from "../shapes/geometry.ts";
+import type { HeightFieldData } from "../shapes/heightfield.ts";
+import type { HullData } from "../shapes/hull.ts";
+import type { Mesh } from "../shapes/mesh.ts";
 import {
     createCapsuleShape,
     createCompoundShape,
@@ -14,11 +14,11 @@ import {
     createHullShape,
     createMeshShape,
     createSphereShape,
-} from "../shapes/shape";
-import { createBody } from "../world/body";
-import { createWorld, destroyWorld, getWorld, type WorldState } from "../world/world";
-import type { CastOutput, RayCastInput, ShapeCastInput, ShapeProxy } from "./distance";
-import type { PlaneResult } from "./mover";
+} from "../shapes/shape.ts";
+import { createBody } from "../world/body.ts";
+import { createWorld, destroyWorld, getWorld, type WorldState } from "../world/world.ts";
+import type { CastOutput, RayCastInput, ShapeCastInput, ShapeProxy } from "./distance.ts";
+import type { PlaneResult } from "./mover.ts";
 
 await init(undefined, { threads: 0 });
 

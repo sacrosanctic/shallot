@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { bunChild } from "../../scripts/bun-child";
-import { removeTestDirectory } from "../../scripts/test-directory";
+import { bunChild } from "../../scripts/bun-child.ts";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 
@@ -21,7 +21,7 @@ import {
     previewProject,
     resolvePreviewTarget,
     windowsPreviewCommand,
-} from "./preview";
+} from "./preview.ts";
 
 test("web preview belongs to Vite while native preview resolves its native shell target", () => {
     expect(resolvePreviewTarget("mac")).toEqual({ kind: "mac" });

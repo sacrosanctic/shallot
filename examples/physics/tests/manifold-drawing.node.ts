@@ -2,15 +2,15 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp } from "@dylanebert/shallot";
 import { PhysicsWorldDefinition } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { INK } from "../src/ink-presentation";
+import { INK } from "../src/ink-presentation.ts";
 import {
     ManifoldPlugin,
     ManifoldSample,
     manifoldNames,
     manifoldPointLimits,
-} from "../src/manifold";
-import { manifoldDrawing, manifoldGeometry } from "../src/manifold-presentation";
-import { changeControl, controlValues, createScene, enabledControls, scenes } from "../src/scenes";
+} from "../src/manifold.ts";
+import { manifoldDrawing, manifoldGeometry } from "../src/manifold-presentation.ts";
+import { changeControl, controlValues, createScene, enabledControls, scenes } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const [index, scene] of manifoldNames.entries())

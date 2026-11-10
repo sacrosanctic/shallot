@@ -1,4 +1,4 @@
-import { bunChild } from "./bun-child";
+import { bunChild } from "./bun-child.ts";
 
 const child = Bun.spawn({
     ...bunChild(["test", "gpu.test", ...process.argv.slice(2)]),

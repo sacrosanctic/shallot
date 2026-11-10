@@ -18,7 +18,7 @@ import {
     materialType,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const VARIANTS = ["plain", "varying"] as const;

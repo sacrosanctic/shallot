@@ -26,11 +26,11 @@ import {
     P_TOTAL_NORMAL_IMPULSE,
     P_TRIANGLE_INDEX,
     POINT_STRIDE,
-} from "../kernel/contact-layout";
-import { kernel } from "../kernel/kernel";
-import { KernelViews } from "../kernel/views";
-import type { WorldState } from "../world/world";
-import type { Manifold } from "./contact";
+} from "../kernel/contact-layout.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { KernelViews } from "../kernel/views.ts";
+import type { WorldState } from "../world/world.ts";
+import type { Manifold } from "./contact.ts";
 
 export {
     DIR_BLOCK,
@@ -39,7 +39,7 @@ export {
     M_POINTS,
     MANIFOLD_STRIDE,
     POINT_STRIDE,
-} from "../kernel/contact-layout";
+} from "../kernel/contact-layout.ts";
 
 /** Current views of a world's contact directory and stable manifold blocks. */
 export class ManifoldStore extends KernelViews {

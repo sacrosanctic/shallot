@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { Transform, World } from "@dylanebert/shallot";
-import { COIN_CAP, Coin, decode, encode, migrate, placement, readSave, sampleSpots } from "./save";
+import { COIN_CAP, Coin, decode, encode, migrate, placement, readSave, sampleSpots } from "./save.ts";
 
 function world() {
     const w = new World();

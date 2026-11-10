@@ -1,6 +1,6 @@
-import type { Font } from "./font";
-import { Justify } from "./justify";
-import { SDF_EXPONENT, SDFGenerator } from "./sdf";
+import type { Font } from "./font.ts";
+import { Justify } from "./justify.ts";
+import { SDF_EXPONENT, SDFGenerator } from "./sdf.ts";
 
 const SDF_SIZE = 96;
 

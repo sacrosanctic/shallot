@@ -3,7 +3,7 @@ import { createServer } from "node:net";
 import { resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { firefox, webkit } from "playwright";
-import { bunChild } from "../../scripts/bun-child";
+import { bunChild } from "../../scripts/bun-child.ts";
 
 const [browserName, directory, control] = process.argv.slice(2);
 if (

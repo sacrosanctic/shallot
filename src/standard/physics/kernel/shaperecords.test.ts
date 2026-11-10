@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import gold from "../../../../crates/physics/tests/reader_regressions.gold.json";
-import { restore, snapshot } from "../api/snapshot";
-import { BodyType, ShapeType } from "../common/types";
+import { restore, snapshot } from "../api/snapshot.ts";
+import { BodyType, ShapeType } from "../common/types.ts";
 import {
     computeShapeMass,
     createCapsuleShape,
@@ -9,12 +9,12 @@ import {
     destroyShape,
     setShapeFilter,
     shapeIsValid,
-} from "../shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing";
-import { getMassData } from "../world/body";
-import { BodyField, bodyField } from "./bodyrecords";
-import { kernel } from "./kernel";
-import { readShapeAabb, SHAPE_STRIDE } from "./shapecolumns";
+} from "../shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
+import { getMassData } from "../world/body.ts";
+import { BodyField, bodyField } from "./bodyrecords.ts";
+import { kernel } from "./kernel.ts";
+import { readShapeAabb, SHAPE_STRIDE } from "./shapecolumns.ts";
 import {
     ShapeField,
     ShapeFlags,
@@ -23,7 +23,7 @@ import {
     shapeField,
     shapeFlag,
     shapeScalar,
-} from "./shaperecords";
+} from "./shaperecords.ts";
 
 function shapeId(world: ReturnType<typeof createTestWorld>, shape: number) {
     return {

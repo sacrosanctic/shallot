@@ -1,5 +1,5 @@
 import { getWorldCounters, PhysicsWorldDefinition } from "@dylanebert/shallot/standard/physics";
-import { counterPile } from "./world-counters";
+import { counterPile } from "./world-counters.ts";
 
 export let controlSink: object | undefined;
 export const control = () => {

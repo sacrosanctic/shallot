@@ -1,6 +1,6 @@
 import { afterEach, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { expectError, expectWarning } from "../../../scripts/test-console";
+import { expectError, expectWarning } from "../../../scripts/test-console.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 
@@ -11,8 +11,8 @@ import "../../standard";
 
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import { globalTransformTable } from "../../core/rendering";
-import { GpuError, type Plugin, Time, type World } from "../index";
-import { createApp, runApp } from "./index";
+import { GpuError, type Plugin, Time, type World } from "../index.ts";
+import { createApp, runApp } from "./index.ts";
 
 await setupGlobals();
 

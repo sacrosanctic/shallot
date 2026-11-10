@@ -4,7 +4,7 @@ import { attachCanvas, Camera, RenderingPlugin } from "../../core/rendering";
 import { Time, type World } from "../../engine";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
 import { Transform, TransformPlugin } from "../transform";
-import { GlobalTransformHistory as TransformRuntime } from "./global-transform";
+import { GlobalTransformHistory as TransformRuntime } from "./global-transform.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 

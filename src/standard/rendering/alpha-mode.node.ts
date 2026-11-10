@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { MeshInstance } from "../../core/mesh";
 import {
     attachTexture,
@@ -11,7 +11,7 @@ import {
     TonemappingMethod,
     TransparentPhases,
 } from "../../core/rendering";
-import { imageTextures } from "../../core/rendering/image";
+import { imageTextures } from "../../core/rendering/image.ts";
 import { Transform } from "../../core/transform";
 import {
     AlphaMode,
@@ -23,8 +23,8 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./index";
-import { AlphaModeCode, alphaModeFields, alphaPipelineKey } from "./material-type";
+} from "./index.ts";
+import { AlphaModeCode, alphaModeFields, alphaPipelineKey } from "./material-type.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const alphaWorld = {

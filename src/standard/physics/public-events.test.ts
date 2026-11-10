@@ -23,7 +23,7 @@ import {
     StandardPhysicsPlugin,
     setTransform,
 } from "@dylanebert/shallot/standard/physics";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 
 async function physicsWorldForTest(): Promise<World> {
     const world = new World();

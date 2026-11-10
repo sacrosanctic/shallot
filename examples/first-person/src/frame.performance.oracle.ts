@@ -14,7 +14,7 @@ import {
 } from "@dylanebert/shallot";
 import { attachTexture } from "@dylanebert/shallot/rendering";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { APP_PLUGINS } from "./plugins";
+import { APP_PLUGINS } from "./plugins.ts";
 
 await bounded("frame probe WebGPU setup", setupGlobals());
 function bounded<T>(label: string, promise: PromiseLike<T>): Promise<T> {

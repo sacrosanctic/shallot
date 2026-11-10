@@ -1,9 +1,9 @@
 import { Meshes, MeshInstance } from "../../core/mesh";
 import type { World } from "../../engine/ecs";
-import type { GltfAnimation, GltfNode, GltfNodePose } from "./animation";
+import type { GltfAnimation, GltfNode, GltfNodePose } from "./animation.ts";
 import { GLTF_WASM_BASE64 } from "./gltf.wasm";
-import type { Gltf, GltfSceneInstance } from "./scene";
-import { MorphedMesh, SkinnedMesh, SkinPalette } from "./skinning";
+import type { Gltf, GltfSceneInstance } from "./scene.ts";
+import { MorphedMesh, SkinnedMesh, SkinPalette } from "./skinning.ts";
 
 interface Kernel {
     memory: WebAssembly.Memory;

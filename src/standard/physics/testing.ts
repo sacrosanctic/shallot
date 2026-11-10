@@ -6,11 +6,11 @@ import {
     defaultWorldDef,
     type ShapeDef,
     type WorldDef,
-} from "./common/types";
-import { step } from "./solver/step";
-import { createBody } from "./world/body";
-import type { WorldId, WorldState } from "./world/world";
-import { createWorld, destroyWorld, getWorld } from "./world/world";
+} from "./common/types.ts";
+import { step } from "./solver/step.ts";
+import { createBody } from "./world/body.ts";
+import type { WorldId, WorldState } from "./world/world.ts";
+import { createWorld, destroyWorld, getWorld } from "./world/world.ts";
 
 /** Create a direct world-state fixture for physics tests and native parity oracles. */
 export function createTestWorld(def: Partial<WorldDef> = {}, owner?: World): WorldState {

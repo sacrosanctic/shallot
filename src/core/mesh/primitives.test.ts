@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { capsule, cube, sphere } from "./primitives";
+import { capsule, cube, sphere } from "./primitives.ts";
 
 for (const [name, build] of [
     ["sphere", (segments: number, rings: number) => sphere(0.5, segments, rings)],

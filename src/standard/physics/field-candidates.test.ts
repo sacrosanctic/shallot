@@ -1,12 +1,12 @@
 import { expect, test } from "bun:test";
 import { World } from "../../engine";
-import { fieldMarked, shapeBinding } from "./authoring";
+import { fieldMarked, shapeBinding } from "./authoring.ts";
 import {
     clearFieldCandidates,
     createFieldCandidates,
     markFieldCandidate,
     requeueFieldCandidate,
-} from "./field-candidates";
+} from "./field-candidates.ts";
 
 test("requeue appends in consumption order without losing marks or duplicating live candidates", () => {
     const candidates = createFieldCandidates();

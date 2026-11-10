@@ -1,16 +1,16 @@
-import { BodyType, defaultShapeDef } from "../common/types";
-import { JOINT_STRIDE } from "../kernel/columns";
-import { kernel } from "../kernel/kernel";
-import { createSphereShape } from "../shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld } from "../testing";
-import { bodyGetLinearVelocity, bodyGetTransform } from "../world/body";
+import { BodyType, defaultShapeDef } from "../common/types.ts";
+import { JOINT_STRIDE } from "../kernel/columns.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { createSphereShape } from "../shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld } from "../testing.ts";
+import { bodyGetLinearVelocity, bodyGetTransform } from "../world/body.ts";
 import {
     createJoint,
     defaultJointDef,
     destroyJointInternal,
     getJointConstraintForce,
     type JointType,
-} from "./joint";
+} from "./joint.ts";
 
 export type MoverPogoCase = { kind: number; mode: number; fields: number[][]; samples: number[][] };
 const bits = (value: number) => new Uint32Array(new Float32Array([value]).buffer)[0]!;

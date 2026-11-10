@@ -1,8 +1,8 @@
 import { mkdirSync, readdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { compose, fromBlocks, toSvg } from "../src/standard/loading/brand";
-import { readBranding } from "./branding";
-import { toPng } from "./png";
+import { compose, fromBlocks, toSvg } from "../src/standard/loading/brand.ts";
+import { readBranding } from "./branding.ts";
+import { toPng } from "./png.ts";
 
 const ROOT = resolve(import.meta.dir, "..");
 

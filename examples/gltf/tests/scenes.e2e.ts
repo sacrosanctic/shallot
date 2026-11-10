@@ -1,7 +1,7 @@
 import { holdFrames, pipelineWarnings } from "@dylanebert/shallot/testing";
 import { type ElementHandle, expect, type Page, test } from "playwright/test";
-import { categories } from "../src/scenes";
-import { scenePixels } from "./scenes";
+import { categories } from "../src/scenes.ts";
+import { scenePixels } from "./scenes.ts";
 
 test.use({ ...pipelineWarnings, deviceScaleFactor: 1 });
 

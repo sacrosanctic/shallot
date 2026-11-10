@@ -6,9 +6,9 @@ import {
     type Vector2Field,
     type Vector3Field,
     type Vector4Field,
-} from "./component";
-import type { EntityRef } from "./entity";
-import type { World } from "./world";
+} from "./component.ts";
+import type { EntityRef } from "./entity.ts";
+import type { World } from "./world.ts";
 
 export type FieldStorage<T extends FieldType> = T["lanes"] extends 1
     ? ScalarField

@@ -38,7 +38,7 @@ import {
     mipKernel,
     mipLayout,
     SsaoSettings,
-} from "./ssao-shaders";
+} from "./ssao-shaders.ts";
 
 export const ScreenSpaceAmbientOcclusionQualityLevel = {
     Low: 0,

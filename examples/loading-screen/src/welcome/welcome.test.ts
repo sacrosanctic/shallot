@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { createApp, Transform } from "@dylanebert/shallot";
-import { Welcome, WelcomeCube } from "./index";
+import { Welcome, WelcomeCube } from "./index.ts";
 
 test("the welcome cube turns when the world steps", async () => {
     const app = await createApp({ defaults: false, plugins: [Welcome] });

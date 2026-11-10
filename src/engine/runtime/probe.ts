@@ -1,6 +1,6 @@
 import type { World } from "../ecs";
-import { deviceFailure, deviceLost } from "./gpu";
-import type { ReadbackStamp } from "./readback";
+import { deviceFailure, deviceLost } from "./gpu.ts";
+import type { ReadbackStamp } from "./readback.ts";
 
 const COPY_ALIGNMENT = 4;
 function assertRequestAllowed(owner: World): void {

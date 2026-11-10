@@ -19,9 +19,9 @@ import {
     PRIMES,
     summarizeHandoff,
 } from "./probe.mjs";
-import { cpuIn, ROLES, startTrace, type Trace } from "./trace";
+import { cpuIn, ROLES, startTrace, type Trace } from "./trace.ts";
 import { type BrowserContext, chromium, type Page, webkit } from "playwright";
-import { bunChild } from "../../scripts/bun-child";
+import { bunChild } from "../../scripts/bun-child.ts";
 
 // Per example, the gap from the loading screen's handoff to the first steady frame, with what ran in between:
 // each system's setup and first update, GPU calls and the UI mount. Warm runs load each example once unmeasured

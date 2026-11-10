@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
-import { COLORS } from "../../examples/city/src/city";
-import { layout, POPULATION, SEED } from "../../examples/city/src/layout";
-import { refuseReport, WORKLOAD } from "./workload";
+import { COLORS } from "../../examples/city/src/city.ts";
+import { layout, POPULATION, SEED } from "../../examples/city/src/layout.ts";
+import { refuseReport, WORKLOAD } from "./workload.ts";
 
 test("the record doubles from 4096 through a million parts and declares the example kit", () => {
     expect(WORKLOAD.seed).toBe(SEED);

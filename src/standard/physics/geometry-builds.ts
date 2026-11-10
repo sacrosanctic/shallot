@@ -16,26 +16,26 @@ import {
     PhysicsMeshes,
 } from "../../core/physics";
 import type { Resource, World } from "../../engine";
-import { MAX_HULL_VERTICES } from "./common/constants";
-import type { Transform } from "./common/records";
-import { defaultSurfaceMaterial } from "./common/types";
+import { MAX_HULL_VERTICES } from "./common/constants.ts";
+import type { Transform } from "./common/records.ts";
+import { defaultSurfaceMaterial } from "./common/types.ts";
 import {
     cloneAndTransformHull,
     createCylinder,
     createHull,
     makeBoxHull,
     makeTransformedBoxHull,
-} from "./shapes/build-hull";
-import { type CompoundData, createCompound } from "./shapes/compound";
-import { createHeightField, createWave, type HeightFieldData } from "./shapes/heightfield";
-import type { HullData } from "./shapes/hull";
+} from "./shapes/build-hull.ts";
+import { type CompoundData, createCompound } from "./shapes/compound.ts";
+import { createHeightField, createWave, type HeightFieldData } from "./shapes/heightfield.ts";
+import type { HullData } from "./shapes/hull.ts";
 import {
     createGridMesh,
     createMesh,
     createTorusMesh,
     createWaveMesh,
     type MeshData,
-} from "./shapes/mesh";
+} from "./shapes/mesh.ts";
 
 interface Geometry<Def extends { name: string }, Built extends object> {
     registry: Resource<PhysicsAssets<Def>>;

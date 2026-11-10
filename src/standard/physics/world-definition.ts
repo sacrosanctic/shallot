@@ -1,6 +1,6 @@
 import type { EntityRef, Resource, World } from "../../engine";
-import { CONTACT_RECYCLE_DISTANCE } from "./common/constants";
-import { defaultWorldDef, type WorldDef } from "./common/types";
+import { CONTACT_RECYCLE_DISTANCE } from "./common/constants.ts";
+import { defaultWorldDef, type WorldDef } from "./common/types.ts";
 
 export type WorldCustomFilterCallback = (
     world: World,

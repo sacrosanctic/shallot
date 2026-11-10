@@ -1,6 +1,6 @@
 import type { TgpuRenderPipeline } from "typegpu";
 import type { MeshIndex } from "../../core/mesh";
-import type { MaterialGroupEntry } from "./pipelines";
+import type { MaterialGroupEntry } from "./pipelines.ts";
 
 // A shared leaf lets color and atlas passes bind draws without a runtime import cycle.
 

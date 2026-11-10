@@ -1,4 +1,4 @@
-import type { QueryRecord } from "../src/collision";
+import type { QueryRecord } from "../src/collision.ts";
 
 const bits = (n: number) =>
     new Uint32Array(new Float32Array([n]).buffer)[0]!.toString(16).padStart(8, "0");

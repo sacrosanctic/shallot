@@ -19,8 +19,8 @@ import {
     poseGltfScene,
     spawnGltfScene,
 } from "@dylanebert/shallot/gltf";
-import { fitBounds, sceneAngles, sceneBounds } from "./framing";
-import { initialScene, modelPath, type Scene, scenes, truckPlacement } from "./scenes";
+import { fitBounds, sceneAngles, sceneBounds } from "./framing.ts";
+import { initialScene, modelPath, type Scene, scenes, truckPlacement } from "./scenes.ts";
 
 export const Viewer: Resource<{
     models: Map<Scene, Gltf>;

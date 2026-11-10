@@ -12,9 +12,9 @@ import {
 } from "@dylanebert/shallot";
 import { Orbit, OrbitPlugin } from "@dylanebert/shallot/extras";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { GeometricMoverPlugin, GeometricMoverState } from "../src/geometric-mover";
-import { changeControl, controlValues, createScene } from "../src/scenes";
-import { setSceneCamera } from "../src/view";
+import { GeometricMoverPlugin, GeometricMoverState } from "../src/geometric-mover.ts";
+import { changeControl, controlValues, createScene } from "../src/scenes.ts";
+import { setSceneCamera } from "../src/view.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("Geometric Mover's follow camera stays attached with every movement key live and Clip Velocity toggled", async () => {

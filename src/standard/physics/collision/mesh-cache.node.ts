@@ -1,20 +1,20 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { restore, snapshot } from "../api/snapshot";
-import { BodyType, defaultShapeDef } from "../common/types";
-import { kernel } from "../kernel/kernel";
-import { createMesh } from "../shapes/mesh";
-import { createMeshShape, createSphereShape } from "../shapes/shape";
+import { restore, snapshot } from "../api/snapshot.ts";
+import { BodyType, defaultShapeDef } from "../common/types.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { createMesh } from "../shapes/mesh.ts";
+import { createMeshShape, createSphereShape } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { bodySetAwake, destroyBody } from "../world/body";
-import { hashWorldState } from "../world/hash";
-import { ContactField, contactField, contactIds } from "./contact";
+} from "../testing.ts";
+import { bodySetAwake, destroyBody } from "../world/body.ts";
+import { hashWorldState } from "../world/hash.ts";
+import { ContactField, contactField, contactIds } from "./contact.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

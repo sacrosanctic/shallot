@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { parseGltf } from "./gltf";
+import { parseGltf } from "./gltf.ts";
 
 for (const slot of [
     "baseColor",

@@ -1,27 +1,27 @@
 import { expect, test } from "bun:test";
-import { restore, snapshot } from "../api/snapshot";
-import { SetType } from "../common/constants";
-import { BodyType } from "../common/types";
-import { bodySimSlot, setSimField, simBodyId } from "../kernel/bodycolumns";
-import { BodyField, bodyField } from "../kernel/bodyrecords";
-import { SIM_STRIDE } from "../kernel/columns";
-import { islandField } from "../kernel/islandcolumns";
-import { jointArrayCount, jointArrayKey, jointAt } from "../kernel/jointcolumns";
-import { JointField, jointCapacity, jointField } from "../kernel/jointrecords";
-import { kernel } from "../kernel/kernel";
+import { restore, snapshot } from "../api/snapshot.ts";
+import { SetType } from "../common/constants.ts";
+import { BodyType } from "../common/types.ts";
+import { bodySimSlot, setSimField, simBodyId } from "../kernel/bodycolumns.ts";
+import { BodyField, bodyField } from "../kernel/bodyrecords.ts";
+import { SIM_STRIDE } from "../kernel/columns.ts";
+import { islandField } from "../kernel/islandcolumns.ts";
+import { jointArrayCount, jointArrayKey, jointAt } from "../kernel/jointcolumns.ts";
+import { JointField, jointCapacity, jointField } from "../kernel/jointrecords.ts";
+import { kernel } from "../kernel/kernel.ts";
 import {
     setArrayCount,
     setArrayGet,
     setBodyCount,
     solverSetCount,
     solverSetIndex,
-} from "../kernel/solversetcolumns";
-import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint";
-import { defaultJointDef } from "../solver/joint";
+} from "../kernel/solversetcolumns.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint.ts";
+import { defaultJointDef } from "../solver/joint.ts";
 import { jointIds } from "../solver/joint.fixture";
-import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld } from "../testing";
-import { bodyGetLinearVelocity, bodyIsAwake, bodySetAwake, destroyBody } from "../world/body";
-import type { WorldState } from "./world";
+import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld } from "../testing.ts";
+import { bodyGetLinearVelocity, bodyIsAwake, bodySetAwake, destroyBody } from "../world/body.ts";
+import type { WorldState } from "./world.ts";
 
 function distanceJoint(world: WorldState, a: number, b: number, length = 1) {
     const base = { ...defaultJointDef(), bodyIdA: a, bodyIdB: b };

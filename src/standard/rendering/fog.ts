@@ -3,7 +3,7 @@ import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import type { View } from "../../core/rendering";
 import type { World } from "../../engine";
-import { AlphaModeCode } from "./material-type";
+import { AlphaModeCode } from "./material-type.ts";
 
 /** The shaded fragment's world-space position, in meters. */
 export const FogInput = d.struct({ worldPosition: d.vec3f }).$name("FogInput");

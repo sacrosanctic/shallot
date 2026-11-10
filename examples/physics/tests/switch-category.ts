@@ -1,7 +1,7 @@
 import { test } from "bun:test";
-import { categories } from "../src/scenes";
-import { manualParityScenes } from "./manual-parity";
-import { expectSwitchesEqualFresh } from "./switch";
+import { categories } from "../src/scenes.ts";
+import { manualParityScenes } from "./manual-parity.ts";
+import { expectSwitchesEqualFresh } from "./switch.ts";
 
 export function testCategorySwitches(name: string): void {
     const category = categories.find((category) => category.name === name);

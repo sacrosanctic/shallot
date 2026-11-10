@@ -1,6 +1,6 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { LocalPlayer, Player } from "./player";
+import { LocalPlayer, Player } from "./player.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 
@@ -18,8 +18,8 @@ import {
     type World,
 } from "@dylanebert/shallot";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { Route } from "./demo";
-import { APP_PLUGINS } from "./plugins";
+import { Route } from "./demo.ts";
+import { APP_PLUGINS } from "./plugins.ts";
 
 async function ascent() {
     const app = await openGpuApp({ defaults: false, plugins: APP_PLUGINS });

@@ -1,5 +1,5 @@
-import type { TypedArray } from "./component";
-import type { WorldField } from "./storage";
+import type { TypedArray } from "./component.ts";
+import type { WorldField } from "./storage.ts";
 
 /** @internal Field storage owns its capture boundary and never shrinks live columns. */
 export class FieldColumns {

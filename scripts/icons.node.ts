@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { readdirSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { compose, fromBlocks, toSvg } from "../src/standard/loading/brand";
-import { readBranding } from "./branding";
-import { toPng } from "./png";
+import { compose, fromBlocks, toSvg } from "../src/standard/loading/brand.ts";
+import { readBranding } from "./branding.ts";
+import { toPng } from "./png.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const root = resolve(import.meta.dir, "..");

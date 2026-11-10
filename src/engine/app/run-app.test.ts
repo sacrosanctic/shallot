@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { runApp } from "./index";
+import { runApp } from "./index.ts";
 
 test("runApp steps a callback under half the median cadence but holds six pending frames", async () => {
     const callbacks: (() => void)[] = [];

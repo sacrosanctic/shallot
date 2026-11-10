@@ -30,7 +30,7 @@ import { Transform } from "@dylanebert/shallot/transform";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { imageTextures } from "../../core/rendering/image";
+import { imageTextures } from "../../core/rendering/image.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const Composed = extendedMaterial(Materials, {

@@ -2,7 +2,7 @@ import { afterAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
 import type { createApp } from "../app";
-import { probeBuffer } from "./probe";
+import { probeBuffer } from "./probe.ts";
 import { countStaging } from "./readback.fixture";
 
 setDefaultTimeout(TIMEOUT.gpu);

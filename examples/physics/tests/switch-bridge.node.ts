@@ -1,6 +1,6 @@
 import { setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { expectSwitchesEqualFresh } from "./switch";
+import { expectSwitchesEqualFresh } from "./switch.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

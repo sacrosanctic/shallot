@@ -12,7 +12,7 @@ import {
     type TOIOutput,
     timeOfImpact,
 } from "@dylanebert/shallot/standard/physics";
-import type { Controls } from "./scenes";
+import type { Controls } from "./scenes.ts";
 
 const f = Math.fround;
 export type Vec = { x: number; y: number; z: number };

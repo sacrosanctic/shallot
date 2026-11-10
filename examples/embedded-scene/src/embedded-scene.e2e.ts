@@ -1,6 +1,6 @@
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { expect, expectStartupAlert, type Page, releasing, test } from "../tests/browser-fixture";
+import { expect, expectStartupAlert, type Page, releasing, test } from "../tests/browser-fixture.ts";
 
 const CAPTURE_ENTRY = resolve(
     dirname(fileURLToPath(import.meta.url)),

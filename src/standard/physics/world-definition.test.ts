@@ -3,14 +3,14 @@ import { Body, BodyType, Shape, ShapeKind } from "../../core/physics";
 import { GlobalTransform, Transform } from "../../core/transform";
 import { createApp, type EntityRef, Time } from "../../engine";
 import { hashPhysics, PhysicsWorldDefinition, StandardPhysicsPlugin } from ".";
-import { threads } from "./kernel/kernel";
-import { physicsState } from "./runtime";
+import { threads } from "./kernel/kernel.ts";
+import { physicsState } from "./runtime.ts";
 import {
     worldEnableRestitutionPropagation,
     worldGetRestitutionIterations,
     worldIsRestitutionPropagationEnabled,
     worldSetRestitutionIterations,
-} from "./world/world";
+} from "./world/world.ts";
 
 test("workerCount selects a single-thread solver at build", async () => {
     const app = await createApp({

@@ -10,12 +10,12 @@ import {
     Resolution,
     Views,
 } from "../../core/rendering";
-import { renderFrameKey } from "../../core/rendering/frame-state";
+import { renderFrameKey } from "../../core/rendering/frame-state.ts";
 import { Transform } from "../../core/transform";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
-import { Clusters } from "./cluster";
-import { StandardRenderer, StandardRenderingPlugin } from "./index";
-import { cascadeCovers, updateCascades } from "./shadows";
+import { Clusters } from "./cluster.ts";
+import { StandardRenderer, StandardRenderingPlugin } from "./index.ts";
+import { cascadeCovers, updateCascades } from "./shadows.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const subjects = gpuApps(import.meta.path, [

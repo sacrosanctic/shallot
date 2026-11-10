@@ -5,8 +5,8 @@ import {
     type AllocationWindow,
     allocationFailure,
     windowBytes,
-} from "./allocation";
-import { type PageSample, samplePage } from "./display";
+} from "./allocation.ts";
+import { type PageSample, samplePage } from "./display.ts";
 
 function table(
     label: string,

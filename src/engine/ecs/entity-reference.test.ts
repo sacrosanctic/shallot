@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { entity, World } from "./index";
+import { entity, World } from "./index.ts";
 
 test("a kept reference resolves while alive and reads missing after destruction and eid reuse", () => {
     const world = new World();

@@ -1,7 +1,7 @@
 import type { World } from "../../engine";
 import { unpackColorInto } from "../../engine";
-import { Sky } from "./index";
-import { SKY_AT } from "./shader";
+import { Sky } from "./index.ts";
+import { SKY_AT } from "./shader.ts";
 
 /**
  * Pack a `Sky` singleton entity into its {@link SkyGpu} uniform. Hex colors decode to linear RGB; per-light

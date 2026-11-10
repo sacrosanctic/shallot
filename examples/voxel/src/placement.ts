@@ -5,9 +5,9 @@ import { MeshInstanceInput, registerProducerTable } from "@dylanebert/shallot/st
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { DetailKind } from "./detail";
-import { DetailPart, detailParts } from "./parts";
-import { radii, slotCount, type TerrainConfig } from "./terrain-data";
+import { DetailKind } from "./detail.ts";
+import { DetailPart, detailParts } from "./parts.ts";
+import { radii, slotCount, type TerrainConfig } from "./terrain-data.ts";
 
 const Params = d.struct({ center: d.i32, remainder: d.f32 });
 const layout = tgpu.bindGroupLayout({

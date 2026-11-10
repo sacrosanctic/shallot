@@ -3,7 +3,7 @@ import { Camera } from "@dylanebert/shallot";
 import { attachTexture, captureTexture } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { Welcome } from "./index";
+import { Welcome } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("the welcome scene draws visible pixels above its dark clear", async () => {

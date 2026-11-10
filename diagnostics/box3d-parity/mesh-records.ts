@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { PhysicsMeshes, Shape, ShapeKind, Transform, type World } from "../../src";
-import { meshBuild } from "../../src/standard/physics/geometry-builds";
-import { drawMeshData } from "../../src/standard/physics/shapes/readgeometry";
+import { meshBuild } from "../../src/standard/physics/geometry-builds.ts";
+import { drawMeshData } from "../../src/standard/physics/shapes/readgeometry.ts";
 const digest = (value: unknown) => createHash("sha256").update(JSON.stringify(value)).digest("hex");
 export function nativeMeshRecords(text: string): string[] {
     return text.trimEnd().split("\n").map(line => {

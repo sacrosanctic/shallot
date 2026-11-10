@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { categories } from "../src/scenes";
-import { manualParityScenes } from "./manual-parity";
-import { dominoSwitchRanges } from "./switch-dominoes";
+import { categories } from "../src/scenes.ts";
+import { manualParityScenes } from "./manual-parity.ts";
+import { dominoSwitchRanges } from "./switch-dominoes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

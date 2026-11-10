@@ -1,5 +1,5 @@
-import { bunChild } from "../../../../scripts/bun-child";
-import { readContactManifolds } from "../collision/manifoldstore";
+import { bunChild } from "../../../../scripts/bun-child.ts";
+import { readContactManifolds } from "../collision/manifoldstore.ts";
 // Active scene parity runs the immutable official command/bundle corpus. The historical 53 scene
 // fixtures remain under fixtures/ as migration evidence, but their predecessor hashes are not the
 // current authority and are intentionally not asserted here.
@@ -11,20 +11,20 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 setDefaultTimeout(TIMEOUT.node);
 
 import { splitAllocationSubject } from "../joint-allocation.fixture";
-import { EventKind, eventCount, eventId } from "../kernel/eventbuffers";
-import { kernel, shutdown, threads, workers } from "../kernel/kernel";
-import { createHullShape, createSphereShape, getSensorData } from "../shapes/shape";
+import { EventKind, eventCount, eventId } from "../kernel/eventbuffers.ts";
+import { kernel, shutdown, threads, workers } from "../kernel/kernel.ts";
+import { createHullShape, createSphereShape, getSensorData } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { makeBodyId } from "../world/body";
-import { worldCounters, worldProfile } from "../world/world";
-import { defaultJointDef, getJointConstraintForce } from "./joint";
-import { createWeldJoint, defaultWeldJointDef } from "./weldJoint";
+} from "../testing.ts";
+import { makeBodyId } from "../world/body.ts";
+import { worldCounters, worldProfile } from "../world/world.ts";
+import { defaultJointDef, getJointConstraintForce } from "./joint.ts";
+import { createWeldJoint, defaultWeldJointDef } from "./weldJoint.ts";
 
 const pooled = process.env.PHYSICS_CORPUS_POOL === "1";
 if (pooled) {
@@ -33,11 +33,11 @@ if (pooled) {
     }
 }
 
-import { BodyType } from "../common/types";
-import { loadConsumerCorpus, runCommonInput } from "../oracle/consumer";
-import { loadScenarioCorpus, runScenario } from "../oracle/scenario";
-import { compareCase } from "../oracle/strict";
-import { makeBoxHull } from "../shapes/build-hull";
+import { BodyType } from "../common/types.ts";
+import { loadConsumerCorpus, runCommonInput } from "../oracle/consumer.ts";
+import { loadScenarioCorpus, runScenario } from "../oracle/scenario.ts";
+import { compareCase } from "../oracle/strict.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
 
 test("a split candidate completes before finalize on the serial and live-pool step", () => {
     const world = createTestWorld({ gravity: { x: 0, y: 0, z: 0 }, enableSleep: false });

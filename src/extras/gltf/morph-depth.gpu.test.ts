@@ -14,7 +14,7 @@ import {
 import { Transform } from "../../core/transform";
 import { type App, lookAtRotation, precompile, type World } from "../../engine";
 import { probeBuffer } from "../../engine/runtime";
-import { openGpuApp } from "../../project/testing-gpu";
+import { openGpuApp } from "../../project/testing-gpu.ts";
 import {
     Materials,
     MeshMaterial,
@@ -23,11 +23,11 @@ import {
     StandardRenderer,
     StandardRenderingPlugin,
 } from "../../standard/rendering";
-import { sunShadowView } from "../../standard/rendering/atlas";
-import { loadGltf } from "./load";
+import { sunShadowView } from "../../standard/rendering/atlas.ts";
+import { loadGltf } from "./load.ts";
 import { morphFixture, morphFixtureUrl } from "./morph.fixture";
-import { type GltfSceneInstance, loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene";
-import { GltfPlugin } from "./skinning";
+import { type GltfSceneInstance, loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene.ts";
+import { GltfPlugin } from "./skinning.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const Side = 256;

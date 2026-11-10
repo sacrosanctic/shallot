@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../scripts/gpu.fixture";
 import { attachTexture, Camera, captureTexture } from "../core/rendering";
-import { imageTextures } from "../core/rendering/image";
+import { imageTextures } from "../core/rendering/image.ts";
 import { Transform } from "../core/transform";
 import { StandardRenderer } from "../standard/rendering";
 import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./lines";

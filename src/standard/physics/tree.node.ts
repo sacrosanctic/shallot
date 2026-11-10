@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { World } from "../../engine";
-import { treeBox, treeSweep } from "./fixtures/tree";
+import { treeBox, treeSweep } from "./fixtures/tree.ts";
 import {
     createPhysicsTree,
     createPhysicsTreeProxy,
@@ -16,8 +16,8 @@ import {
     StandardPhysicsPlugin,
     savePhysicsTree,
     validatePhysicsTree,
-} from "./index";
-import { kernel } from "./kernel/kernel";
+} from "./index.ts";
+import { kernel } from "./kernel/kernel.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 async function subject(run: (world: World) => void): Promise<void> {

@@ -1,13 +1,13 @@
-import { GRAPH_COLOR_COUNT, SetType } from "../common/constants";
-import type { Quat, Transform, Vec3 } from "../common/records";
+import { GRAPH_COLOR_COUNT, SetType } from "../common/constants.ts";
+import type { Quat, Transform, Vec3 } from "../common/records.ts";
 
 const f32 = Math.fround;
 
-import type { Joint } from "../solver/joint";
-import type { WorldState } from "../world/world";
-import { J_JOINT_ID } from "./columns";
-import { JointField, jointField, jointViews } from "./jointrecords";
-import { kernel } from "./kernel";
+import type { Joint } from "../solver/joint.ts";
+import type { WorldState } from "../world/world.ts";
+import { J_JOINT_ID } from "./columns.ts";
+import { JointField, jointField, jointViews } from "./jointrecords.ts";
+import { kernel } from "./kernel.ts";
 
 function jointKernel(world: WorldState) {
     const k = kernel(world.ecsState);

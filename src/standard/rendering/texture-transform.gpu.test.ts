@@ -13,7 +13,7 @@ import {
     Tonemapping,
     TonemappingMethod,
 } from "../../core/rendering";
-import { imageTextures } from "../../core/rendering/image";
+import { imageTextures } from "../../core/rendering/image.ts";
 import { Transform } from "../../core/transform";
 import {
     extendedMaterial,
@@ -25,7 +25,7 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const slots = ["baseColor", "metallicRoughness", "normalMap", "occlusion", "emissive"] as const;

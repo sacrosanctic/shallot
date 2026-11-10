@@ -1,6 +1,6 @@
 import { parse } from "@babel/parser";
-import { gpuAllocationExpressions } from "../../src/engine/runtime/allocation-site";
-import type { AllocationSite } from "./allocation";
+import { gpuAllocationExpressions } from "../../src/engine/runtime/allocation-site.ts";
+import type { AllocationSite } from "./allocation.ts";
 
 const parserMetadata = new Set([
     "start",

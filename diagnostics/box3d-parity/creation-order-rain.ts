@@ -1,6 +1,6 @@
 import { Body, PhysicsMeshes, Shape, ShapeKind, Transform, type World } from "@dylanebert/shallot";
-import { kernel } from "../../src/standard/physics/kernel/kernel";
-import { human } from "./creation-order-human";
+import { kernel } from "../../src/standard/physics/kernel/kernel.ts";
+import { human } from "./creation-order-human.ts";
 
 const f = Math.fround;
 // mesh.c's input vertices and indices, before either path builds the mesh tree.

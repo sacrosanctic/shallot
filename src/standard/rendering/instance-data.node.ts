@@ -31,7 +31,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Transform } from "@dylanebert/shallot/transform";
 import * as d from "typegpu/data";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { MeshDrawBuffers } from "./preprocess";
+import { MeshDrawBuffers } from "./preprocess.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const Tint = component("InstanceTint", { color: vec4 });

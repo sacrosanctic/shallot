@@ -3,8 +3,8 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import gold from "../../examples/physics/tests/level-mesh.gold.json";
-import { drawMeshData } from "../../src/standard/physics/shapes/readgeometry";
-import { levelMeshBinary } from "./level-mesh";
+import { drawMeshData } from "../../src/standard/physics/shapes/readgeometry.ts";
+import { levelMeshBinary } from "./level-mesh.ts";
 
 for (const name of [...Object.keys(gold), "voxel_mesh_03", "voxel_mesh_04"]) {
     test(`${name} encoded arrays equal native mesh loader`, () => {

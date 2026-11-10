@@ -1,6 +1,6 @@
-import { INK } from "./ink-presentation";
-import { JOINT_LINE } from "./joint-presentation";
-import type { Mover } from "./mover";
+import { INK } from "./ink-presentation.ts";
+import { JOINT_LINE } from "./joint-presentation.ts";
+import type { Mover } from "./mover.ts";
 
 type Point = [number, number, number];
 

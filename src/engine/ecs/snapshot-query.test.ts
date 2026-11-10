@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { component, f32 } from "./component";
-import { World } from "./world";
+import { component, f32 } from "./component.ts";
+import { World } from "./world.ts";
 
 const C = component("snapshot-query-order", { value: f32 });
 

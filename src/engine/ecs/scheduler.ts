@@ -1,5 +1,5 @@
 import { SYSTEM_MEASURE_PREFIX, sampleDiagnosticTime, userTimingSpan } from "../diagnostics";
-import type { World } from "./world";
+import type { World } from "./world.ts";
 
 function invalidDelta(): never {
     throw new Error("step deltaTime must be a finite, non-negative number");

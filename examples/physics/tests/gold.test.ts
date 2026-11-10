@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { sampleGold } from "./gold";
+import { sampleGold } from "./gold.ts";
 
 test("sample gold retains all 64 hash bits and reconstructs omitted empty events independently", () => {
     const records = sampleGold("ffffffffffffffff\n0000000000000001\n");

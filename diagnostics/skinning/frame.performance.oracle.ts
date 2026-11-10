@@ -57,7 +57,7 @@ import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import manifest from "../../examples/gltf/assets.json";
-import { syncFiles } from "../../examples/gltf/sync";
+import { syncFiles } from "../../examples/gltf/sync.ts";
 
 // bun test ./diagnostics/skinning/frame.performance.oracle.ts
 // SKINNING_MODES=unskinned,shipped selects the shipped glTF path and its textured bind-pose baseline.

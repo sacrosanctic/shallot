@@ -1,7 +1,7 @@
 import { createApp, Meshes } from "@dylanebert/shallot";
 import { attachTexture } from "@dylanebert/shallot/rendering";
-import { gpuAllocationExpressions } from "../../src/engine/runtime/allocation-site";
-import { Terrain, terrainPlugin } from "../../examples/voxel/src/terrain";
+import { gpuAllocationExpressions } from "../../src/engine/runtime/allocation-site.ts";
+import { Terrain, terrainPlugin } from "../../examples/voxel/src/terrain.ts";
 
 let grow: () => void;
 export function control() { grow(); }

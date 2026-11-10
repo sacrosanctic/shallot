@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { cpuTotal } from "./cpu";
+import { cpuTotal } from "./cpu.ts";
 
 test("CPU totals count outermost timings, not slash-delimited parts", () => {
     expect(

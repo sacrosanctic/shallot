@@ -1,6 +1,6 @@
 import { test } from "playwright/test";
-import { ragdollScenes } from "../src/ragdoll";
-import { capture } from "./capture";
+import { ragdollScenes } from "../src/ragdoll.ts";
+import { capture } from "./capture.ts";
 
 for (const width of [1280, 390]) {
     for (const id of Object.keys(ragdollScenes)) {

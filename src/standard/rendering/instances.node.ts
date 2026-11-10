@@ -8,12 +8,12 @@ import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/
 import { MeshInstance } from "../../core/mesh";
 import { globalTransformTable } from "../../core/rendering";
 import { Transform } from "../../core/transform";
-import { StandardRenderingPlugin } from "./forward";
-import { MaterialPlugin, Materials, MeshMaterial, StandardMaterial } from "./material";
-import { materialType, materialTypeId } from "./material-type";
-import { MeshRenderPlugin } from "./mesh-render";
-import { MeshDrawBuffers, meshInstanceTable } from "./preprocess";
-import { Draws } from "./registry";
+import { StandardRenderingPlugin } from "./forward.ts";
+import { MaterialPlugin, Materials, MeshMaterial, StandardMaterial } from "./material.ts";
+import { materialType, materialTypeId } from "./material-type.ts";
+import { MeshRenderPlugin } from "./mesh-render.ts";
+import { MeshDrawBuffers, meshInstanceTable } from "./preprocess.ts";
+import { Draws } from "./registry.ts";
 import "../../standard";
 
 import { setupGlobals } from "@dylanebert/shallot/webgpu";

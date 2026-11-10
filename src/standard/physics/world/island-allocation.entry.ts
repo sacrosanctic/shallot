@@ -4,23 +4,23 @@ import {
     awakeContactGet,
     ContactField,
     contactField,
-} from "../collision/contact";
-import { SetType } from "../common/constants";
-import { BodyType } from "../common/types";
-import { BodyField, bodyField } from "../kernel/bodyrecords";
+} from "../collision/contact.ts";
+import { SetType } from "../common/constants.ts";
+import { BodyType } from "../common/types.ts";
+import { BodyField, bodyField } from "../kernel/bodyrecords.ts";
 import {
     addIslandBody,
     islandArrayCount,
     islandKernel,
     removeIslandBody,
-} from "../kernel/islandcolumns";
-import { physicsState } from "../runtime";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createHullShape } from "../shapes/shape";
-import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint";
-import { defaultJointDef } from "../solver/joint";
-import { createTestBody, testShapeDef } from "../testing";
-import { PhysicsWorldDefinition } from "../world-definition";
+} from "../kernel/islandcolumns.ts";
+import { physicsState } from "../runtime.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createHullShape } from "../shapes/shape.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint.ts";
+import { defaultJointDef } from "../solver/joint.ts";
+import { createTestBody, testShapeDef } from "../testing.ts";
+import { PhysicsWorldDefinition } from "../world-definition.ts";
 
 export let controlSink: { frame: number } | undefined;
 export const control = () => {

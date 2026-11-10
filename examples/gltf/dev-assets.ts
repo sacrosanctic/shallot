@@ -1,5 +1,5 @@
 import manifest from "./assets.json";
-import { modelPath, type Scene, scenes } from "./src/scenes";
+import { modelPath, type Scene, scenes } from "./src/scenes.ts";
 
 export function pickerModels(paths: Readonly<Record<string, string>>) {
     const models = new Set<(typeof manifest.models)[number]>();

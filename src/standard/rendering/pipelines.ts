@@ -38,11 +38,11 @@ import {
 } from "../../core/rendering";
 import { precompile, precompileScope, type World } from "../../engine";
 import { octDecodeNormal } from "../../engine/utils";
-import { cascadeLayout, pointLayout, shadowLayout } from "./atlas";
-import { validateBindingLimits } from "./binding-limits";
-import { LightCull } from "./cluster";
-import type { Background, BackgroundLayout } from "./contract";
-import { BackgroundContext, Backgrounds } from "./contract";
+import { cascadeLayout, pointLayout, shadowLayout } from "./atlas.ts";
+import { validateBindingLimits } from "./binding-limits.ts";
+import { LightCull } from "./cluster.ts";
+import type { Background, BackgroundLayout } from "./contract.ts";
+import { BackgroundContext, Backgrounds } from "./contract.ts";
 import {
     engineLayout,
     fragCoord,
@@ -57,13 +57,13 @@ import {
     prepassNormalSlot,
     recordLitNormal,
     sunVisibility,
-} from "./engine";
-import { foggedColor, fogSlot, fogSource, unfoggedColor } from "./fog";
-import type { Recorded } from "./forward";
-import { indirectLightSlot, indirectLightSources } from "./indirect";
-import { instanceDataRoot } from "./instance-data";
-import { viewLighting } from "./lighting";
-import type { MaterialBinding, MaterialLayout, MaterialType } from "./material-type";
+} from "./engine.ts";
+import { foggedColor, fogSlot, fogSource, unfoggedColor } from "./fog.ts";
+import type { Recorded } from "./forward.ts";
+import { indirectLightSlot, indirectLightSources } from "./indirect.ts";
+import { instanceDataRoot } from "./instance-data.ts";
+import { viewLighting } from "./lighting.ts";
+import type { MaterialBinding, MaterialLayout, MaterialType } from "./material-type.ts";
 import {
     ALPHA_PIPELINE_KEY_COUNT,
     AlphaModeCode,
@@ -75,12 +75,12 @@ import {
     rethrowMaterialError,
     varyingValueType,
     varyingValueTypes,
-} from "./material-type";
-import { prepassTextures } from "./prepass-textures";
-import { meshInstanceTable } from "./preprocess";
-import type { Draw } from "./registry";
-import { sampleSunShadow } from "./shade";
-import { ssaoTexture } from "./ssao";
+} from "./material-type.ts";
+import { prepassTextures } from "./prepass-textures.ts";
+import { meshInstanceTable } from "./preprocess.ts";
+import type { Draw } from "./registry.ts";
+import { sampleSunShadow } from "./shade.ts";
+import { ssaoTexture } from "./ssao.ts";
 
 const ALPHA_BLEND: GPUBlendState = {
     color: { srcFactor: "src-alpha", dstFactor: "one-minus-src-alpha", operation: "add" },
@@ -240,7 +240,7 @@ export interface CompiledMaterial {
  * The light's view is not exposed.
  */
 export type MaterialGroupEntry = {
-    producer: import("./producer-table").ProducerTable | null;
+    producer: import("./producer-table.ts").ProducerTable | null;
     /** exact registry spec this group was built for — resource identity alone is insufficient when a
      * same-name surface replacement carries a different layout with the same buffers. */
     owner: AnyMaterialType;

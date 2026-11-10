@@ -2,12 +2,12 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics, Shape } from "@dylanebert/shallot";
 import { shapeEdges } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { BodySamplePlugin } from "../src/bodies";
-import { CastState, moverOrigin, rayOrigin, rayTranslation } from "../src/cast";
-import { castDrawing } from "../src/cast-presentation";
-import { JOINT_DOT, JOINT_INK, JOINT_LINE } from "../src/joint-presentation";
-import { createScene } from "../src/scenes";
-import { recordDigest } from "./digest";
+import { BodySamplePlugin } from "../src/bodies.ts";
+import { CastState, moverOrigin, rayOrigin, rayTranslation } from "../src/cast.ts";
+import { castDrawing } from "../src/cast-presentation.ts";
+import { JOINT_DOT, JOINT_INK, JOINT_LINE } from "../src/joint-presentation.ts";
+import { createScene } from "../src/scenes.ts";
+import { recordDigest } from "./digest.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const bits = (n: number) =>

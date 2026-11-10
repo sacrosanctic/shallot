@@ -19,9 +19,9 @@ import {
     StandardPhysicsPlugin,
     SyncPhysicsConstraintsSystem,
 } from "@dylanebert/shallot/standard/physics";
-import { human } from "./human";
+import { human } from "./human.ts";
 import bones from "./human.json" with { type: "json" };
-import type { Controls } from "./scenes";
+import type { Controls } from "./scenes.ts";
 
 const f = Math.fround;
 type V3 = [number, number, number];

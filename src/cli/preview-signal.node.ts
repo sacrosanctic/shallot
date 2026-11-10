@@ -3,10 +3,10 @@ import { chmodSync, mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { basename, join } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { removeTestDirectory } from "../../scripts/test-directory";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
 import { nativeOutDir } from "../native";
-import { runVite } from "../project/vite-command";
-import { previewProject } from "./preview";
+import { runVite } from "../project/vite-command.ts";
+import { previewProject } from "./preview.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

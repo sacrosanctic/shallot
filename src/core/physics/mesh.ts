@@ -1,5 +1,5 @@
 import type { Resource } from "../../engine";
-import { PhysicsAssets } from "./assets";
+import { PhysicsAssets } from "./assets.ts";
 
 /**
  * Box3D's `b3MeshDef`. A solver builds it once per World and culls degenerate triangles. It

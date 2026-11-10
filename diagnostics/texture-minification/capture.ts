@@ -5,7 +5,7 @@ import { resolve } from "node:path";
 import { deflateSync } from "node:zlib";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import { createApp } from "../../src";
-import { genMipmapsLayer, registerImage } from "../../src/core/rendering/image";
+import { genMipmapsLayer, registerImage } from "../../src/core/rendering/image.ts";
 import { probeTexture } from "../../src/engine";
 import { type GltfJson, parseGltf } from "../../src/extras/gltf";
 import { MeshRenderPlugin, StandardRenderingPlugin } from "../../src/standard/rendering";

@@ -11,11 +11,11 @@ import {
 import { DiagnosticsOverlayPlugin, profilerBounds, showProfiler } from "@dylanebert/shallot/extras";
 import { PhysicsWorldDefinition } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { BenchmarkSamplePlugin } from "../src/benchmarks";
-import { EventSamplePlugin } from "../src/events";
-import { shapePresentation } from "../src/presentation";
-import { profilerFits, sceneSwitcher } from "../src/sample";
-import { categories, createScene } from "../src/scenes";
+import { BenchmarkSamplePlugin } from "../src/benchmarks.ts";
+import { EventSamplePlugin } from "../src/events.ts";
+import { shapePresentation } from "../src/presentation.ts";
+import { profilerFits, sceneSwitcher } from "../src/sample.ts";
+import { categories, createScene } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const benchmarks = categories.find((category) => category.name === "Benchmark")!.scenes;

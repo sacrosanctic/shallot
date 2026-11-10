@@ -10,7 +10,7 @@ import {
     SEAT_WINDOW_CLASS,
     type SeatMonitor,
     type SeatWindow,
-} from "./display-seat";
+} from "./display-seat.ts";
 
 // One live two-monitor desktop as the compositor reports it: the same pair whose refresh rates made one
 // 120-frame window 500 ms on DP-1 and 833 ms on DP-2.

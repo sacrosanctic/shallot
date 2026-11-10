@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import type { World } from "../../engine";
-import { acquireCanvasTexture, type View } from "./view";
+import { acquireCanvasTexture, type View } from "./view.ts";
 
 function surface() {
     const scopes: Array<GPUError | null> = [];

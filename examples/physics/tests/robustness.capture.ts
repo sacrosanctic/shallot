@@ -1,6 +1,6 @@
 import { test } from "playwright/test";
-import { robustnessScenes } from "../src/robustness";
-import { capture } from "./capture";
+import { robustnessScenes } from "../src/robustness.ts";
+import { capture } from "./capture.ts";
 
 for (const width of [1280, 390])
     for (const id of Object.keys(robustnessScenes)) {

@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
 import { attachTexture, Camera, TransparentPhases } from "../../core/rendering";
 import { Transform } from "../../core/transform";
-import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./index";
+import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const subject = gpuScene(import.meta.path, { defaults: false, plugins: [LinesPlugin] }, (world) => {

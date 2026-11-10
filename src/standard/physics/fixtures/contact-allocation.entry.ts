@@ -1,7 +1,7 @@
 import { Transform } from "../../../core/transform";
 import { createApp } from "../../../engine";
 import { contactPair } from "../contact-data.fixture";
-import { getContactData, getSensorData, StandardPhysicsPlugin } from "../index";
+import { getContactData, getSensorData, StandardPhysicsPlugin } from "../index.ts";
 import { sensorVisitors } from "../sensor-data.fixture";
 
 export let controlSink: { frame: number } | undefined;

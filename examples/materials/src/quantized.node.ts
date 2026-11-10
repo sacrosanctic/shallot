@@ -20,7 +20,7 @@ import {
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
 import { Transform } from "@dylanebert/shallot/transform";
-import { QuantizedMaterial } from "./materials";
+import { QuantizedMaterial } from "./materials.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

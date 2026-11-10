@@ -13,7 +13,7 @@ import {
     unpack2x16snorm,
     unpack4x8unorm,
 } from "typegpu/std";
-import { chunk } from "./tgsl";
+import { chunk } from "./tgsl.ts";
 
 // WGSL chunks resolve independently with strict names; each includes its own dependencies.
 

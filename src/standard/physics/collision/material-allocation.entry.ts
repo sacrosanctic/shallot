@@ -1,16 +1,16 @@
 import { createApp, StandardPhysicsPlugin } from "@dylanebert/shallot";
-import type { Vec3 } from "../common/records";
-import { BodyType, defaultSurfaceMaterial } from "../common/types";
-import { kernel } from "../kernel/kernel";
-import { physicsState } from "../runtime";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createCompound } from "../shapes/compound";
-import { createMesh } from "../shapes/mesh";
-import { createCompoundShape, createHullShape, createMeshShape } from "../shapes/shape";
-import { createTestBody, testShapeDef } from "../testing";
-import { bodySetLinearVelocity, bodySetTransform } from "../world/body";
-import { PhysicsWorldDefinition } from "../world-definition";
-import { awakeContactCount } from "./contact";
+import type { Vec3 } from "../common/records.ts";
+import { BodyType, defaultSurfaceMaterial } from "../common/types.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { physicsState } from "../runtime.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createCompound } from "../shapes/compound.ts";
+import { createMesh } from "../shapes/mesh.ts";
+import { createCompoundShape, createHullShape, createMeshShape } from "../shapes/shape.ts";
+import { createTestBody, testShapeDef } from "../testing.ts";
+import { bodySetLinearVelocity, bodySetTransform } from "../world/body.ts";
+import { PhysicsWorldDefinition } from "../world-definition.ts";
+import { awakeContactCount } from "./contact.ts";
 
 export let controlSink: { frame: number } | undefined;
 export const control = () => {

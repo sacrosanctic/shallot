@@ -1,7 +1,7 @@
 import { appendFileSync } from "node:fs";
 import { BUDGET } from "@dylanebert/shallot/testing";
 import type { JSONReport, JSONReportSuite } from "playwright/types/testReporter";
-import { normalizePath } from "../src/project/paths";
+import { normalizePath } from "../src/project/paths.ts";
 
 export type Tier = "cheap" | "gpu" | "node" | "browser";
 

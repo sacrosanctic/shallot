@@ -5,7 +5,7 @@ import {
     TransformRuntime,
 } from "../../core/transform";
 import { component, entity, not, type Plugin, type System, vec3, type World } from "../../engine";
-import { Orbit } from "./index";
+import { Orbit } from "./index.ts";
 
 // Camera-local history follows fixed placement without reading GPU presentation state.
 const Follow = component("OrbitFollow", { target: entity, previous: vec3, current: vec3 });

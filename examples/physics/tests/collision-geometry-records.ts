@@ -1,6 +1,6 @@
 import type { World } from "@dylanebert/shallot";
-import { box } from "../src/collision-debug";
-import { CollisionGeometry } from "../src/collision-geometry";
+import { box } from "../src/collision-debug.ts";
+import { CollisionGeometry } from "../src/collision-geometry.ts";
 export function collisionGeometryRecords(world: World): number[][] {
     const s = world.resource(CollisionGeometry);
     if (s.scene === "hull2D")

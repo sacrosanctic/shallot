@@ -22,7 +22,7 @@ import {
     type World,
 } from "@dylanebert/shallot";
 import { castRayClosest, emptyQueryHit } from "@dylanebert/shallot/standard/physics";
-import { LocalPlayer, Player, PlayerPlugin, UpdatePlayerControlSystem } from "./player";
+import { LocalPlayer, Player, PlayerPlugin, UpdatePlayerControlSystem } from "./player.ts";
 
 export const Action = { Lamp: 0, Button: 1, Hold: 2 } as const;
 export const Usable = component("Usable", {

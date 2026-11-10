@@ -42,9 +42,9 @@ import {
     setTargetTransform,
 } from "@dylanebert/shallot/standard/physics";
 
-import type { EventMark } from "./event-presentation";
-import type { Controls } from "./scenes";
-import { setReaction } from "./shape-color";
+import type { EventMark } from "./event-presentation.ts";
+import type { Controls } from "./scenes.ts";
+import { setReaction } from "./shape-color.ts";
 
 export const EventSample = {
     create: () => ({

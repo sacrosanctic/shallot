@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { type GltfJson, parseGltf } from "./gltf";
+import { type GltfJson, parseGltf } from "./gltf.ts";
 
 function expectVertex(v: Float32Array, base: number, exp: number[]) {
     for (let i = 0; i < 8; i++) {

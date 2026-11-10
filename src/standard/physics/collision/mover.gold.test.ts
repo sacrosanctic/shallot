@@ -5,18 +5,18 @@
 // equality, not tolerance (the README).
 
 import { expect, test } from "bun:test";
-import type { Transform, Vec3 } from "../common/records";
-import { defaultSurfaceMaterial, ShapeType } from "../common/types";
-import { transform } from "../kernel/math";
-import { createHull, makeBoxHull } from "../shapes/build-hull";
-import { type CompoundData, createCompound } from "../shapes/compound";
-import type { Capsule, Sphere } from "../shapes/geometry";
-import { createGrid } from "../shapes/heightfield";
-import type { HullData } from "../shapes/hull";
-import { createGridMesh, type Mesh } from "../shapes/mesh";
-import { type CollisionPlane, clipVector, type PlaneResult, solvePlanes } from "./mover";
+import type { Transform, Vec3 } from "../common/records.ts";
+import { defaultSurfaceMaterial, ShapeType } from "../common/types.ts";
+import { transform } from "../kernel/math.ts";
+import { createHull, makeBoxHull } from "../shapes/build-hull.ts";
+import { type CompoundData, createCompound } from "../shapes/compound.ts";
+import type { Capsule, Sphere } from "../shapes/geometry.ts";
+import { createGrid } from "../shapes/heightfield.ts";
+import type { HullData } from "../shapes/hull.ts";
+import { createGridMesh, type Mesh } from "../shapes/mesh.ts";
+import { type CollisionPlane, clipVector, type PlaneResult, solvePlanes } from "./mover.ts";
 import gold from "./mover.gold.json";
-import { kernelMover } from "./shape_query_gold";
+import { kernelMover } from "./shape_query_gold.ts";
 
 const dv = new DataView(new ArrayBuffer(4));
 function fromBits(hex: string): number {

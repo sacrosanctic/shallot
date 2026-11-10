@@ -2,7 +2,7 @@ import { expect, test } from "bun:test";
 import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { shallot } from "./vite";
+import { shallot } from "./vite.js";
 
 test("the Vite plugin only serves a project's own public assets", () => {
     const root = mkdtempSync(join(tmpdir(), "shallot-public-scope-"));

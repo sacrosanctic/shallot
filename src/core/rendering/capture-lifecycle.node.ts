@@ -1,11 +1,11 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { expectError } from "../../../scripts/test-console";
+import { expectError } from "../../../scripts/test-console.ts";
 import { World } from "../../engine";
 import { observeDevice, type WorldGpu } from "../../engine/runtime";
-import { captureFrame } from "./capture";
-import { RenderContext } from "./render";
-import { attachCanvas, detachView } from "./view";
+import { captureFrame } from "./capture.ts";
+import { RenderContext } from "./render.ts";
+import { attachCanvas, detachView } from "./view.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

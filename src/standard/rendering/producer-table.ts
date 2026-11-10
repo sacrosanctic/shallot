@@ -5,10 +5,10 @@ import type { MeshHandle } from "../../core/mesh";
 import { CullVolumes, Xform } from "../../core/rendering";
 import type { World } from "../../engine";
 import { HANDLE_INDEX_MASK } from "../../engine/utils";
-import type { MaterialHandle } from "./material";
-import { batchResolver } from "./material-batch";
-import { MeshInstanceInput } from "./material-data";
-import { ALPHA_PIPELINE_KEY_COUNT, AlphaModeCode, AlphaPipelineKey } from "./material-type";
+import type { MaterialHandle } from "./material.ts";
+import { batchResolver } from "./material-batch.ts";
+import { MeshInstanceInput } from "./material-data.ts";
+import { ALPHA_PIPELINE_KEY_COUNT, AlphaModeCode, AlphaPipelineKey } from "./material-type.ts";
 import {
     CULL_STRIDE,
     CullParams,
@@ -16,7 +16,7 @@ import {
     MeshBounds,
     scatterLayout,
     visibility,
-} from "./pack";
+} from "./pack.ts";
 
 /** World-owned GPU instance columns. The producer owns initialization, count reset and frame ordering. */
 export interface ProducerTable {

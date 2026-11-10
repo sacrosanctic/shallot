@@ -1,6 +1,6 @@
 import type { World } from "@dylanebert/shallot";
-import { BenchmarkVillageState } from "../src/benchmark-village";
-import { drawingDigest } from "./digest";
+import { BenchmarkVillageState } from "../src/benchmark-village.ts";
+import { drawingDigest } from "./digest.ts";
 export function benchmarkVillageRecord(world: World): string {
     const s = world.resource(BenchmarkVillageState);
     return drawingDigest([

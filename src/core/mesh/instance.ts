@@ -1,5 +1,5 @@
 import { component, u32, vec4 } from "../../engine";
-import { defaultMeshHandle } from "./mesh";
+import { defaultMeshHandle } from "./mesh.ts";
 
 /** Mesh handle for this entity's geometry. Defaults to the built-in cube. */
 export const MeshInstance = component(

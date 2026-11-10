@@ -3,13 +3,13 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { MeshInstance } from "../../core/mesh";
 import { attachTexture, Camera, DepthPrepass, NormalPrepass, Views } from "../../core/rendering";
-import { viewTargetsKey } from "../../core/rendering/targets";
+import { viewTargetsKey } from "../../core/rendering/targets.ts";
 import { Transform } from "../../core/transform";
 import { lookAtRotation, probeTexture, type World } from "../../engine";
-import { StandardRenderer } from "./forward";
-import { StandardRenderingPlugin } from "./index";
-import { Materials, MeshMaterial, StandardMaterial } from "./material";
-import { MeshRenderPlugin } from "./mesh-render";
+import { StandardRenderer } from "./forward.ts";
+import { StandardRenderingPlugin } from "./index.ts";
+import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";
+import { MeshRenderPlugin } from "./mesh-render.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const angle = 0.37;

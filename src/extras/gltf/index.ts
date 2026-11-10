@@ -4,8 +4,8 @@ export {
     type GltfAnimationPath,
     type GltfNode,
     type GltfNodePose,
-} from "./animation";
-export { isGlb, parseGlb } from "./glb";
+} from "./animation.ts";
+export { isGlb, parseGlb } from "./glb.ts";
 export {
     type GltfJson,
     type GltfLight,
@@ -16,8 +16,8 @@ export {
     type GltfSkeleton,
     type GltfSkin,
     parseGltf,
-} from "./gltf";
-export { loadGltf } from "./load";
+} from "./gltf.ts";
+export { loadGltf } from "./load.ts";
 export {
     type Gltf,
     type GltfPlacement,
@@ -26,7 +26,7 @@ export {
     loadGltfScene,
     poseGltfScene,
     spawnGltfScene,
-} from "./scene";
+} from "./scene.ts";
 export {
     deformationBindings,
     deformationVertex,
@@ -36,4 +36,4 @@ export {
     SkinnedMesh,
     SkinPalette,
     VertexDeformation,
-} from "./skinning";
+} from "./skinning.ts";

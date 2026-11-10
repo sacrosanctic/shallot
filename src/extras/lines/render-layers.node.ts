@@ -11,7 +11,7 @@ import {
     GizmoAsset,
     LinesPlugin,
     registerGizmo,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const subject = gpuScene(import.meta.path, { defaults: false, plugins: [LinesPlugin] }, (world) => {

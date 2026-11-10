@@ -1,10 +1,10 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { heightFieldDrawing } from "../src/height-field-presentation";
-import { MeshSamplePlugin } from "../src/mesh";
-import { type Controls, controlValues, createScene, scenes } from "../src/scenes";
-import { drawingDigest } from "./digest";
+import { heightFieldDrawing } from "../src/height-field-presentation.ts";
+import { MeshSamplePlugin } from "../src/mesh.ts";
+import { type Controls, controlValues, createScene, scenes } from "../src/scenes.ts";
+import { drawingDigest } from "./digest.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const controlled of [false, true])

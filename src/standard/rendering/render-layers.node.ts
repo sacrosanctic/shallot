@@ -18,13 +18,13 @@ import {
 import { Transform } from "../../core/transform";
 import { lookAtRotation } from "../../engine";
 import { probeBuffer } from "../../engine/runtime";
-import { StandardRenderer, StandardRenderingPlugin } from "./forward";
-import { Materials, MeshMaterial, StandardMaterial } from "./material";
-import { EntityMeshInstanceInput, MeshInstanceInput } from "./material-data";
-import { AlphaMode } from "./material-type";
-import { MeshRenderPlugin } from "./mesh-render";
-import { MeshDrawBuffers } from "./preprocess";
-import { Draws } from "./registry";
+import { StandardRenderer, StandardRenderingPlugin } from "./forward.ts";
+import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";
+import { EntityMeshInstanceInput, MeshInstanceInput } from "./material-data.ts";
+import { AlphaMode } from "./material-type.ts";
+import { MeshRenderPlugin } from "./mesh-render.ts";
+import { MeshDrawBuffers } from "./preprocess.ts";
+import { Draws } from "./registry.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const config = { defaults: false, plugins: [StandardRenderingPlugin, MeshRenderPlugin] };

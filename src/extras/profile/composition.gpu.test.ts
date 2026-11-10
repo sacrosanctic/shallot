@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { Diagnostic, DiagnosticsStore, type Plugin, precompile } from "../../engine";
 import { DEFAULT_PLUGINS } from "../../standard";
-import { DiagnosticsOverlayPlugin, ProfilePlugin } from "./index";
+import { DiagnosticsOverlayPlugin, ProfilePlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const allocate: Plugin = {

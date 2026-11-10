@@ -26,9 +26,9 @@
 import { spawn, spawnSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { rustSourceRemaps } from "../../../scripts/rust-remap";
-import { optimize, version } from "../../../scripts/wasm-opt";
-import { kernelInputHash } from "./kernel-inputs";
+import { rustSourceRemaps } from "../../../scripts/rust-remap.ts";
+import { optimize, version } from "../../../scripts/wasm-opt.ts";
+import { kernelInputHash } from "./kernel-inputs.ts";
 
 const pkgRoot = resolve(import.meta.dir, "../../..");
 const kernelDir = resolve(pkgRoot, "crates/physics");

@@ -8,8 +8,8 @@ import {
     StandardPhysicsPlugin,
 } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { DrivingState } from "../src/driving";
-import { JointSamplePlugin } from "../src/joints";
+import { DrivingState } from "../src/driving.ts";
+import { JointSamplePlugin } from "../src/joints.ts";
 import {
     type Controls,
     changeControl,
@@ -18,8 +18,8 @@ import {
     type Scene,
     scenes,
     setGravityScale,
-} from "../src/scenes";
-import { sampleGold } from "./gold";
+} from "../src/scenes.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

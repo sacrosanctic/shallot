@@ -7,8 +7,8 @@ setDefaultTimeout(TIMEOUT.node);
 import { mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, resolve } from "node:path";
-import { checkImports } from "./import-boundary";
-import { removeTestDirectory } from "./test-directory";
+import { checkImports } from "./import-boundary.ts";
+import { removeTestDirectory } from "./test-directory.ts";
 
 let repositoryFindings: string[];
 beforeAll(() => {

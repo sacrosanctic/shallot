@@ -1,17 +1,17 @@
 import { expect, test } from "bun:test";
-import type { ShapeProxy } from "../collision/distance";
-import type { Pos, Transform, WorldTransform } from "../common/records";
-import { BodyType } from "../common/types";
-import { kernel } from "../kernel/kernel";
-import { createSphereShape } from "../shapes/shape";
+import type { ShapeProxy } from "../collision/distance.ts";
+import type { Pos, Transform, WorldTransform } from "../common/records.ts";
+import { BodyType } from "../common/types.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { createSphereShape } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { bodyIsValid, destroyBody, makeBodyId } from "./body";
+} from "../testing.ts";
+import { bodyIsValid, destroyBody, makeBodyId } from "./body.ts";
 import {
     bodyCastRay,
     bodyCastShape,
@@ -20,8 +20,8 @@ import {
     bodyOverlapShape,
     worldCastRayClosest,
     worldOverlapAABB,
-} from "./query";
-import type { WorldState } from "./world";
+} from "./query.ts";
+import type { WorldState } from "./world.ts";
 
 const zero: Pos = { x: 0, y: 0, z: 0 };
 const identity: Transform = { p: zero, q: { v: zero, s: 1 } };

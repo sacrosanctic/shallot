@@ -9,23 +9,23 @@
 // RAIN_COUNT, RAIN_GROUP, ROCKS, COLORS, CACHE, PROFILE, COUNTERS, and on Node CPU (cpu.ts).
 // HASH_STEPS=0 disables hash output for timing; SAMPLE_WALL=1 reports setup and loop costs as M JSON.
 import { World } from "../../src/engine";
-import { awakeContactCount, contactBodyId, contactCapacity, contactField, ContactField } from "../../src/standard/physics/collision/contact";
-import { OVERFLOW_INDEX } from "../../src/standard/physics/common/constants";
-import { BodyType, defaultBodyDef, defaultFilter, defaultShapeDef, defaultSurfaceMaterial, type BodyDef, type ShapeDef, type WorldDef } from "../../src/standard/physics/common/types";
-import { DIR_CACHE, DIR_STRIDE } from "../../src/standard/physics/kernel/contact-layout";
-import { kernel, init, shutdown } from "../../src/standard/physics/kernel/kernel";
-import { hashWorldState } from "../../src/standard/physics/world/hash";
-import { createTestWorld, destroyTestWorld } from "../../src/standard/physics/testing";
-import { step as stepWorld } from "../../src/standard/physics/solver/step";
-import { createBody, bodySetTargetTransform, destroyBody } from "../../src/standard/physics/world/body";
-import { worldCounters, worldProfile, type WorldState } from "../../src/standard/physics/world/world";
-import { createCapsuleShape, createHullShape, createMeshShape, createSphereShape } from "../../src/standard/physics/shapes/shape";
-import { createCylinder, createRock, makeBoxHull, makeOffsetBoxHull } from "../../src/standard/physics/shapes/build-hull";
-import { createGridMesh, createTorusMesh } from "../../src/standard/physics/shapes/mesh";
-import { createFilterJoint, defaultJointDef, destroyJointInternal } from "../../src/standard/physics/solver/joint";
-import { createRevoluteJoint, defaultRevoluteJointDef } from "../../src/standard/physics/solver/revoluteJoint";
-import { createSphericalJoint, defaultSphericalJointDef } from "../../src/standard/physics/solver/sphericalJoint";
-import { PROFILE_FIELDS } from "../../src/standard/physics/world/profile";
+import { awakeContactCount, contactBodyId, contactCapacity, contactField, ContactField } from "../../src/standard/physics/collision/contact.ts";
+import { OVERFLOW_INDEX } from "../../src/standard/physics/common/constants.ts";
+import { BodyType, defaultBodyDef, defaultFilter, defaultShapeDef, defaultSurfaceMaterial, type BodyDef, type ShapeDef, type WorldDef } from "../../src/standard/physics/common/types.ts";
+import { DIR_CACHE, DIR_STRIDE } from "../../src/standard/physics/kernel/contact-layout.ts";
+import { kernel, init, shutdown } from "../../src/standard/physics/kernel/kernel.ts";
+import { hashWorldState } from "../../src/standard/physics/world/hash.ts";
+import { createTestWorld, destroyTestWorld } from "../../src/standard/physics/testing.ts";
+import { step as stepWorld } from "../../src/standard/physics/solver/step.ts";
+import { createBody, bodySetTargetTransform, destroyBody } from "../../src/standard/physics/world/body.ts";
+import { worldCounters, worldProfile, type WorldState } from "../../src/standard/physics/world/world.ts";
+import { createCapsuleShape, createHullShape, createMeshShape, createSphereShape } from "../../src/standard/physics/shapes/shape.ts";
+import { createCylinder, createRock, makeBoxHull, makeOffsetBoxHull } from "../../src/standard/physics/shapes/build-hull.ts";
+import { createGridMesh, createTorusMesh } from "../../src/standard/physics/shapes/mesh.ts";
+import { createFilterJoint, defaultJointDef, destroyJointInternal } from "../../src/standard/physics/solver/joint.ts";
+import { createRevoluteJoint, defaultRevoluteJointDef } from "../../src/standard/physics/solver/revoluteJoint.ts";
+import { createSphericalJoint, defaultSphericalJointDef } from "../../src/standard/physics/solver/sphericalJoint.ts";
+import { PROFILE_FIELDS } from "../../src/standard/physics/world/profile.ts";
 import BONE_TABLE from "../../src/standard/physics/solver/fixtures/human.json";
 
 const f = Math.fround;
@@ -425,7 +425,7 @@ const colors = env("COLORS", -1),
     cpuFrom = env("CPU", -1),
     wallFrom = env("WALL", -1),
     steps = Number(stepArg);
-const cpu = cpuFrom >= 0 ? await import("./cpu") : null;
+const cpu = cpuFrom >= 0 ? await import("./cpu.ts") : null;
 const lines: string[] = [];
 const sampleWall = process.env.SAMPLE_WALL === "1";
 const hashSteps = process.env.HASH_STEPS !== "0";

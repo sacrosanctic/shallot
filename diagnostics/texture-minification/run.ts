@@ -20,4 +20,4 @@ import { shallot } from "@dylanebert/shallot/bun";
 import { plugin } from "bun";
 
 plugin(shallot({ root: import.meta.dir }));
-await import("./capture");
+await import("./capture.ts");

@@ -9,9 +9,9 @@ import {
     shapeMesh,
 } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { BenchmarkSamplePlugin } from "../src/benchmarks";
-import { sceneSwitcher } from "../src/sample";
-import { changeControl, controlValues, enabledControls } from "../src/scenes";
+import { BenchmarkSamplePlugin } from "../src/benchmarks.ts";
+import { sceneSwitcher } from "../src/sample.ts";
+import { changeControl, controlValues, enabledControls } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

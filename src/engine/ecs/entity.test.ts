@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { Entities } from "./entity";
+import { Entities } from "./entity.ts";
 
 test("entity allocation reserves 0xFFFFFFFF and reuses freed ids after exhaustion", () => {
     const entities = new Entities();

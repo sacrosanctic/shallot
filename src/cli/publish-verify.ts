@@ -4,8 +4,8 @@ import { dirname, join } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import type { APIResponse, Browser, BrowserType, Page } from "playwright";
 import { CROSS_ORIGIN_ISOLATION, contentType } from "../project";
-import { installDev } from "./publish-dependencies";
-import { publishProgress } from "./publish-output";
+import { installDev } from "./publish-dependencies.ts";
+import { publishProgress } from "./publish-output.ts";
 
 export interface PublishAsset {
     path: string;

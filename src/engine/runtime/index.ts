@@ -1,6 +1,6 @@
 /// <reference types="@webgpu/types" />
 
-export * from "./adapter";
+export * from "./adapter.ts";
 export {
     beginComputePass,
     beginRenderPass,
@@ -24,7 +24,7 @@ export {
     setViewport,
     submissionFence,
     submitFrame,
-} from "./allocation-site";
+} from "./allocation-site.ts";
 export {
     adapterNotice,
     checkStorageBinding,
@@ -52,9 +52,9 @@ export {
     validateGpu,
     type WorldGpu,
     withPipelineOwner,
-} from "./gpu";
-export { drainLog, type GpuLog } from "./log";
-export { now, Runtime, readBinary, readFile, requestFrame } from "./platform";
+} from "./gpu.ts";
+export { drainLog, type GpuLog } from "./log.ts";
+export { now, Runtime, readBinary, readFile, requestFrame } from "./platform.ts";
 export {
     type BufferProbe,
     type BufferProbeOptions,
@@ -63,8 +63,8 @@ export {
     probeTexture,
     type TextureProbe,
     type TextureProbeOptions,
-} from "./probe";
-export { ReadbackPool, type ReadbackStamp } from "./readback";
+} from "./probe.ts";
+export { ReadbackPool, type ReadbackStamp } from "./readback.ts";
 
-export { reportStartup } from "./startup";
-export { resizeViewport, type Viewport, Viewports } from "./viewport";
+export { reportStartup } from "./startup.ts";
+export { resizeViewport, type Viewport, Viewports } from "./viewport.ts";

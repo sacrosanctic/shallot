@@ -1,5 +1,5 @@
 import * as d from "typegpu/data";
-import type { MeshData } from "./mesh";
+import type { MeshData } from "./mesh.ts";
 
 interface Kernel {
     memory: WebAssembly.Memory;

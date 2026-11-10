@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { f32, World } from "./index";
+import { f32, World } from "./index.ts";
 
 test("a world-bound scalar reader stays bound when another world resolves the same schema", () => {
     const Value = { amount: f32 };

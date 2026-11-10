@@ -11,7 +11,7 @@ import {
     LIGHT_GRID_OFFSET,
     LIGHT_POOL,
     requestLightOverflow,
-} from "./cluster";
+} from "./cluster.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

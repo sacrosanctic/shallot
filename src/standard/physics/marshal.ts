@@ -1,10 +1,10 @@
 import { Body, BodyMotionLock, type BodyType } from "../../core/physics";
 import { Transform } from "../../core/transform";
 import type { World } from "../../engine";
-import type { EntityId } from "./common/ids";
-import { defaultBodyDef } from "./common/types";
-import { createBody, makeBodyId } from "./world/body";
-import type { WorldState } from "./world/world";
+import type { EntityId } from "./common/ids.ts";
+import { defaultBodyDef } from "./common/types.ts";
+import { createBody, makeBodyId } from "./world/body.ts";
+import type { WorldState } from "./world/world.ts";
 
 /** The sole ECS-to-Box3D conversion for authored body definitions. */
 export function marshalBody(world: World, state: WorldState, eid: number): EntityId {

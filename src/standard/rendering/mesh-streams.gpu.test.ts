@@ -27,7 +27,7 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const tangent = new Float32Array([0.3, -0.4, Math.sqrt(0.75), 1]);

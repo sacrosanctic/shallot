@@ -1,12 +1,12 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import { nativeSseOutput } from "./native-evidence";
-import { BodyType } from "../../src/standard/physics/common/types";
-import { init, kernel } from "../../src/standard/physics/kernel/kernel";
-import { readStateAngularVelocity } from "../../src/standard/physics/kernel/bodycolumns";
-import { makeBoxHull } from "../../src/standard/physics/shapes/build-hull";
-import { createSphereShape, createCapsuleShape, createHullShape } from "../../src/standard/physics/shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../../src/standard/physics/testing";
-import { bodyGetLinearVelocity, getBodyState } from "../../src/standard/physics/world/body";
+import { nativeSseOutput } from "./native-evidence.ts";
+import { BodyType } from "../../src/standard/physics/common/types.ts";
+import { init, kernel } from "../../src/standard/physics/kernel/kernel.ts";
+import { readStateAngularVelocity } from "../../src/standard/physics/kernel/bodycolumns.ts";
+import { makeBoxHull } from "../../src/standard/physics/shapes/build-hull.ts";
+import { createSphereShape, createCapsuleShape, createHullShape } from "../../src/standard/physics/shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../../src/standard/physics/testing.ts";
+import { bodyGetLinearVelocity, getBodyState } from "../../src/standard/physics/world/body.ts";
 
 setDefaultTimeout(0);
 await init(undefined, { threads: 0 });

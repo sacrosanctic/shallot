@@ -9,7 +9,7 @@ import {
     instanceDataTable,
     registerInstanceData,
     uploadInstanceData,
-} from "./instance-data";
+} from "./instance-data.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const Source = component("SparseInstanceSource", { value: f32 });

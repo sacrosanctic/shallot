@@ -8,10 +8,10 @@ export {
     shadowSampler,
     sunShadowParams,
     sunShadowView,
-} from "./atlas";
-export { Clusters, clusterCell, LightClusters, LightCull } from "./cluster";
-export type { Background, BackgroundHandle } from "./contract";
-export { BackgroundContext, Backgrounds, backgroundLayout, registerBackground } from "./contract";
+} from "./atlas.ts";
+export { Clusters, clusterCell, LightClusters, LightCull } from "./cluster.ts";
+export type { Background, BackgroundHandle } from "./contract.ts";
+export { BackgroundContext, Backgrounds, backgroundLayout, registerBackground } from "./contract.ts";
 export {
     engineLayout,
     lit,
@@ -19,25 +19,25 @@ export {
     prepassNormal,
     SurfaceOcclusion,
     surfaceOcclusion,
-} from "./engine";
-export type { FogSource } from "./fog";
-export { FogInput, registerFogSource } from "./fog";
+} from "./engine.ts";
+export type { FogSource } from "./fog.ts";
+export { FogInput, registerFogSource } from "./fog.ts";
 export {
     CameraBackground,
     preparePipelines,
     ShadowMapSystem,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./forward";
-export type { IndirectLightSource } from "./indirect";
+} from "./forward.ts";
+export type { IndirectLightSource } from "./indirect.ts";
 export {
     IndirectLightInput,
     indirectLight,
     indirectLightSlot,
     indirectLightSources,
     registerIndirectLightSource,
-} from "./indirect";
-export { type InstanceData, instanceData } from "./instance-data";
+} from "./indirect.ts";
+export { type InstanceData, instanceData } from "./instance-data.ts";
 export {
     DirectionalLightGpu,
     distanceAttenuation,
@@ -46,7 +46,7 @@ export {
     MAX_DIRECTIONAL_LIGHTS,
     PointLightGpu,
     spotFactor,
-} from "./lighting";
+} from "./lighting.ts";
 export {
     AlphaMode,
     AlphaModeCode,
@@ -60,13 +60,13 @@ export {
     materialTypeId,
     StandardMaterial,
     VertexMaterialType,
-} from "./material";
+} from "./material.ts";
 export {
     BaseColor,
     MeshInstanceInput,
     StandardMaterialInput,
     type TextureTransform,
-} from "./material-data";
+} from "./material-data.ts";
 export type {
     MaterialBinding,
     MaterialFragmentFn,
@@ -76,20 +76,20 @@ export type {
     MaterialSource,
     MaterialType,
     MaterialVertexFn,
-} from "./material-type";
-export { alphaPipelineKey, MaterialAssets, materialLayout, pipelineKey } from "./material-type";
-export { MeshRenderPlugin } from "./mesh-render";
-export { MeshPreprocessSystem, meshInstanceTable } from "./preprocess";
-export { type ProducerTable, registerProducerTable } from "./producer-table";
-export type { Draw } from "./registry";
-export { DrawIndexedIndirect, Draws } from "./registry";
+} from "./material-type.ts";
+export { alphaPipelineKey, MaterialAssets, materialLayout, pipelineKey } from "./material-type.ts";
+export { MeshRenderPlugin } from "./mesh-render.ts";
+export { MeshPreprocessSystem, meshInstanceTable } from "./preprocess.ts";
+export { type ProducerTable, registerProducerTable } from "./producer-table.ts";
+export type { Draw } from "./registry.ts";
+export { DrawIndexedIndirect, Draws } from "./registry.ts";
 export {
     pointCastersSchema,
     pointShadowRef,
     SunShadow,
     sampleSunShadow,
     tileRectsSchema,
-} from "./shade";
+} from "./shade.ts";
 export {
     cascadeComboEids,
     DirectionalLightShadowMap,
@@ -97,12 +97,12 @@ export {
     MAX_POINT_CASTERS,
     PointShadows,
     pointComboEids,
-} from "./shadows";
+} from "./shadows.ts";
 export {
     ScreenSpaceAmbientOcclusion,
     ScreenSpaceAmbientOcclusionPlugin,
     ScreenSpaceAmbientOcclusionQualityLevel,
-} from "./ssao";
+} from "./ssao.ts";
 export {
     applyPbrLighting,
     type ExtensionLayout,
@@ -111,4 +111,4 @@ export {
     PbrInput,
     pbrInputFromMaterial,
     pbrInputFromStandardMaterial,
-} from "./standard-material";
+} from "./standard-material.ts";

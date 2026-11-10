@@ -1,7 +1,7 @@
 const f32 = Math.fround;
 
-import type { WorldState } from "../world/world";
-import { type Kernel, kernel } from "./kernel";
+import type { WorldState } from "../world/world.ts";
+import { type Kernel, kernel } from "./kernel.ts";
 
 export const JointField = {
     setIndex: 0,

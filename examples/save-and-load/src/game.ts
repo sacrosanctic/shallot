@@ -28,7 +28,7 @@ import {
     placement,
     readSave,
     SAVE_KEY,
-} from "./save";
+} from "./save.ts";
 
 export const Cube = component("Cube", {});
 export const Game = {

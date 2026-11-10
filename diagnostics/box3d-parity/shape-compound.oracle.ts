@@ -4,8 +4,8 @@ import { Body, BodyType, Shape, ShapeKind } from "../../src/core/physics";
 import { Transform } from "../../src/core/transform";
 import { GlobalTransform } from "../../src/core/transform";
 import { hashPhysics, StandardPhysicsPlugin } from "../../src/standard/physics";
-import { nativeSseOutput } from "./native-evidence";
-import { assertPublicOracleKernel } from "./oracle-kernel";
+import { nativeSseOutput } from "./native-evidence.ts";
+import { assertPublicOracleKernel } from "./oracle-kernel.ts";
 
 setDefaultTimeout(180_000);
 await assertPublicOracleKernel();

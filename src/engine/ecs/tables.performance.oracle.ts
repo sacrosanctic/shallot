@@ -2,9 +2,9 @@ import { expect, test } from "bun:test";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import * as d from "typegpu/data";
 import { createApp, type Plugin } from "../app";
-import { u32 } from "../index";
-import { component } from "./component";
-import type { World } from "./world";
+import { u32 } from "../index.ts";
+import { component } from "./component.ts";
+import type { World } from "./world.ts";
 
 await setupGlobals();
 

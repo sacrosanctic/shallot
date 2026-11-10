@@ -1,18 +1,18 @@
 import { expect, test } from "bun:test";
-import { restore, snapshot } from "../api/snapshot";
-import { BodyType, defaultSurfaceMaterial, ShapeType } from "../common/types";
-import { createCompound } from "../shapes/compound";
-import { createGrid } from "../shapes/heightfield";
-import { createGridMesh } from "../shapes/mesh";
+import { restore, snapshot } from "../api/snapshot.ts";
+import { BodyType, defaultSurfaceMaterial, ShapeType } from "../common/types.ts";
+import { createCompound } from "../shapes/compound.ts";
+import { createGrid } from "../shapes/heightfield.ts";
+import { createGridMesh } from "../shapes/mesh.ts";
 import {
     createCompoundShape,
     createHeightFieldShape,
     createMeshShape,
     destroyShape,
-} from "../shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing";
-import { kernel } from "./kernel";
-import { S_GEO_REFERENCE, SHAPE_STRIDE } from "./shapecolumns";
+} from "../shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
+import { kernel } from "./kernel.ts";
+import { S_GEO_REFERENCE, SHAPE_STRIDE } from "./shapecolumns.ts";
 
 test("kernel geometry uploads are caller-identity keyed, refcounted, world-local and snapshot-stable", () => {
     const source = createTestWorld();

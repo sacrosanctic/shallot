@@ -22,8 +22,8 @@ import {
     type World,
 } from "@dylanebert/shallot";
 import { Anchor, Billboard } from "@dylanebert/shallot/rendering";
-import { Action, InteractionInput, InteractPlugin, Usable } from "./interact";
-import { LocalPlayer, Player, PlayerPlugin } from "./player";
+import { Action, InteractionInput, InteractPlugin, Usable } from "./interact.ts";
+import { LocalPlayer, Player, PlayerPlugin } from "./player.ts";
 
 const GROUND = [0.085, 0.08, 0.072, 1] as const;
 const AMBER = [0.72, 0.4, 0.05, 1] as const;

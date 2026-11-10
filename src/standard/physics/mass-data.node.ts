@@ -3,7 +3,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Body, BodyType, Hulls, Shape } from "../../core/physics";
 import { GlobalTransform, Transform } from "../../core/transform";
 import { createApp } from "../../engine";
-import { getMassData, hashPhysics, StandardPhysicsPlugin, setMassData } from "./index";
+import { getMassData, hashPhysics, StandardPhysicsPlugin, setMassData } from "./index.ts";
 import gold from "./mass-data.gold.json";
 
 setDefaultTimeout(TIMEOUT.node);

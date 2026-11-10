@@ -16,8 +16,8 @@ import {
     MeshInstanceInput,
     meshInstanceTable,
 } from "../../standard/rendering";
-import type { SpriteMaterialInput, spriteOffset } from "./material";
-import { Sprite } from "./pack";
+import type { SpriteMaterialInput, spriteOffset } from "./material.ts";
+import { Sprite } from "./pack.ts";
 
 /** @internal Sprite's alpha and bounds publication uses three compute storage bindings. */
 export function spritePublicationLayout(input: typeof SpriteMaterialInput) {

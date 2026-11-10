@@ -1,6 +1,6 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { costReport } from "./cost-report";
+import { costReport } from "./cost-report.ts";
 
 const input = process.argv[2];
 if (!input) throw new Error("Usage: bun diagnostics/default-look/render-cost.ts <cost.json>");

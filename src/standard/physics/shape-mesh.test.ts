@@ -10,11 +10,11 @@ import {
     ShapeKind,
 } from "../../core/physics";
 import { createApp, World } from "../../engine";
-import { heightFieldBuild } from "./geometry-builds";
-import { StandardPhysicsPlugin, shapeEdges, shapeMesh } from "./index";
-import { physicsState } from "./runtime";
-import { getHeightFieldTriangle, HEIGHT_FIELD_HOLE } from "./shapes/heightfield";
-import { readShapeHull } from "./shapes/hull";
+import { heightFieldBuild } from "./geometry-builds.ts";
+import { StandardPhysicsPlugin, shapeEdges, shapeMesh } from "./index.ts";
+import { physicsState } from "./runtime.ts";
+import { getHeightFieldTriangle, HEIGHT_FIELD_HOLE } from "./shapes/heightfield.ts";
+import { readShapeHull } from "./shapes/hull.ts";
 
 type Point = [number, number, number];
 type Geometry = ReturnType<typeof shapeMesh>;

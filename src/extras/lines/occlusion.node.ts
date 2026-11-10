@@ -14,7 +14,7 @@ import {
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
 import { attachTexture, Camera, captureTexture, DebandDither } from "../../core/rendering";
-import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./index";
+import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const subject = gpuScene(

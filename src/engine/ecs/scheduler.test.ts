@@ -1,7 +1,7 @@
 import { expect, spyOn, test } from "bun:test";
-import { component, f32 } from "./component";
-import { Scheduler, type System } from "./scheduler";
-import { World } from "./world";
+import { component, f32 } from "./component.ts";
+import { Scheduler, type System } from "./scheduler.ts";
+import { World } from "./world.ts";
 
 for (const phase of ["update", "setup"] as const) {
     test(`a throwing ${phase} ends the step, retries next step and leaves the world disposable`, () => {

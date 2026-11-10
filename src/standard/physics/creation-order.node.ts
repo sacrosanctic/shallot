@@ -2,11 +2,11 @@ import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { Body, BodyType, RevoluteJoint, Shape, SphericalJoint } from "../../core/physics";
 import { createApp, type World } from "../../engine";
-import * as marshal from "./marshal";
-import * as shapes from "./marshal-shape";
-import { StandardPhysicsPlugin } from "./runtime";
-import * as revolute from "./solver/revoluteJoint";
-import * as spherical from "./solver/sphericalJoint";
+import * as marshal from "./marshal.ts";
+import * as shapes from "./marshal-shape.ts";
+import { StandardPhysicsPlugin } from "./runtime.ts";
+import * as revolute from "./solver/revoluteJoint.ts";
+import * as spherical from "./solver/sphericalJoint.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

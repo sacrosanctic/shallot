@@ -15,9 +15,9 @@ import {
     setAngularVelocity,
     setAwake,
     setLinearVelocity,
-} from "./index";
-import { physicsBodyIndex, physicsState } from "./runtime";
-import { bodyGetLinearVelocity } from "./world/body";
+} from "./index.ts";
+import { physicsBodyIndex, physicsState } from "./runtime.ts";
+import { bodyGetLinearVelocity } from "./world/body.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 function published(world: import("../../engine").World, eid: number) {

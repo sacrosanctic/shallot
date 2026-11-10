@@ -2,7 +2,7 @@ import { expect, test } from 'bun:test';
 import { readFileSync, writeFileSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
-import { nativeBinary, run } from './native';
+import { nativeBinary, run } from './native.ts';
 
 const root = resolve('crates/physics/tests/kernel');
 const f = (bits: string) => `F(${bits})`;

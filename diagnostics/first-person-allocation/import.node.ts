@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { resolve } from "node:path";
 
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { normalizePath } from "../../src/project/paths";
+import { normalizePath } from "../../src/project/paths.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

@@ -1,7 +1,7 @@
 import { GlobalTransform, type World } from "@dylanebert/shallot";
-import { drawInkPoint, INK } from "./ink-presentation";
-import { JOINT_LINE } from "./joint-presentation";
-import { TreeBenchmarkState } from "./tree";
+import { drawInkPoint, INK } from "./ink-presentation.ts";
+import { JOINT_LINE } from "./joint-presentation.ts";
+import { TreeBenchmarkState } from "./tree.ts";
 
 type Point = [number, number, number];
 export const TREE_VISITED = 0xd49560;

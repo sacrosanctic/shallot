@@ -3,8 +3,8 @@ import { octEncodeNormal } from "@dylanebert/shallot/utils";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { heightfield } from "./gpu-noise";
-import { capacity, type TerrainConfig } from "./terrain-data";
+import { heightfield } from "./gpu-noise.ts";
+import { capacity, type TerrainConfig } from "./terrain-data.ts";
 
 const layout = tgpu.bindGroupLayout({
     vertices: { storage: d.arrayOf(d.vec4u), access: "mutable" },

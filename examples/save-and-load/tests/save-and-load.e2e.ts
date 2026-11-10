@@ -1,7 +1,7 @@
 import { holdFrames, pipelineWarnings } from "@dylanebert/shallot/testing";
 import { expect, test } from "playwright/test";
-import { capture } from "./capture";
-import { bodyHasFocus, pointerControl, tabSkipsChrome } from "./pointer";
+import { capture } from "./capture.ts";
+import { bodyHasFocus, pointerControl, tabSkipsChrome } from "./pointer.ts";
 
 test.use(pipelineWarnings);
 

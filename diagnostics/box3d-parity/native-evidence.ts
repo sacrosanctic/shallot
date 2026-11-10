@@ -1,6 +1,6 @@
 // Set BOX3D_NATIVE_EVIDENCE=1 to also report native NEON/SSE2 differences. The returned authority
 // remains SSE2; NEON results never participate in kernel comparisons.
-import { nativeBinary } from "./native";
+import { nativeBinary } from "./native.ts";
 
 export function nativeSseOutput(sourceName: string, input: string, labels?: string[]): string {
     const sse = Bun.spawnSync(["arch", "-x86_64", nativeBinary(sourceName, "x86_64")], {

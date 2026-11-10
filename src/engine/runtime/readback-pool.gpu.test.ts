@@ -3,8 +3,8 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
 import type { createApp } from "../app";
 import type { World } from "../ecs";
-import { rawDevice } from "./gpu";
-import { probeBuffer } from "./probe";
+import { rawDevice } from "./gpu.ts";
+import { probeBuffer } from "./probe.ts";
 import { countStaging } from "./readback.fixture";
 
 setDefaultTimeout(TIMEOUT.gpu);

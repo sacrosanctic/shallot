@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 import {
     MIKKTSPACE_ARTIFACT,
     mikktspaceArtifactIsFresh,
-} from "../crates/mikktspace/scripts/inputs";
+} from "../crates/mikktspace/scripts/inputs.ts";
 
 test("checked MikkTSpace artifact matches its build inputs", () => {
     const fresh = mikktspaceArtifactIsFresh(resolve(import.meta.dir, ".."));

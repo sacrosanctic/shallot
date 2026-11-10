@@ -1,20 +1,20 @@
 import type { ScalarField, Vector4Field, World } from "../../engine";
 import type { Quat, Transform, Vec3 } from "./api";
-import { makeJointId } from "./api/config";
-import type { JointBinding, JointDef } from "./authoring";
-import { fieldMarked, JOINT_KIND_COUNT, jointDef } from "./authoring";
-import { BodyDependencies } from "./body-dependencies";
-import { froundConfig } from "./common/config";
-import { HUGE, LINEAR_SLOP } from "./common/constants";
-import type { EntityId } from "./common/ids";
+import { makeJointId } from "./api/config.ts";
+import type { JointBinding, JointDef } from "./authoring.ts";
+import { fieldMarked, JOINT_KIND_COUNT, jointDef } from "./authoring.ts";
+import { BodyDependencies } from "./body-dependencies.ts";
+import { froundConfig } from "./common/config.ts";
+import { HUGE, LINEAR_SLOP } from "./common/constants.ts";
+import type { EntityId } from "./common/ids.ts";
 import {
     clearFieldCandidates,
     createFieldCandidates,
     type FieldCandidates,
     markFieldCandidate,
     requeueFieldCandidate,
-} from "./field-candidates";
-import * as C from "./kernel/columns";
+} from "./field-candidates.ts";
+import * as C from "./kernel/columns.ts";
 import {
     DJ_LOWER_SPRING_FORCE,
     DJ_UPPER_SPRING_FORCE,
@@ -26,7 +26,7 @@ import {
     MJ_LINEAR_VELOCITY,
     SJ_MOTOR_VELOCITY,
     SJ_TARGET_ROTATION,
-} from "./kernel/columns";
+} from "./kernel/columns.ts";
 import {
     readJointFlag,
     readJointFloat,
@@ -36,16 +36,16 @@ import {
     writeJointQuat,
     writeJointTransform,
     writeJointVec3,
-} from "./kernel/jointcolumns";
+} from "./kernel/jointcolumns.ts";
 import {
     JointField,
     jointDrawScale,
     jointField,
     jointViews,
     setJointDrawScale,
-} from "./kernel/jointrecords";
-import { kernel } from "./kernel/kernel";
-import { createDistanceJoint, defaultDistanceJointDef } from "./solver/distanceJoint";
+} from "./kernel/jointrecords.ts";
+import { kernel } from "./kernel/kernel.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "./solver/distanceJoint.ts";
 import {
     createFilterJoint,
     defaultJointDef,
@@ -53,17 +53,17 @@ import {
     jointIsValid,
     setJointCollideConnected,
     wakeJointBodies,
-} from "./solver/joint";
-import { createMotorJoint, defaultMotorJointDef } from "./solver/motorJoint";
-import { createMoverJoint, defaultMoverJointDef } from "./solver/moverJoint";
-import { createParallelJoint, defaultParallelJointDef } from "./solver/parallelJoint";
-import { createPogoJoint, defaultPogoJointDef } from "./solver/pogoJoint";
-import { createPrismaticJoint, defaultPrismaticJointDef } from "./solver/prismaticJoint";
-import { createRevoluteJoint, defaultRevoluteJointDef } from "./solver/revoluteJoint";
-import { createSphericalJoint, defaultSphericalJointDef } from "./solver/sphericalJoint";
-import { createWeldJoint, defaultWeldJointDef } from "./solver/weldJoint";
-import { createWheelJoint, defaultWheelJointDef } from "./solver/wheelJoint";
-import type { WorldState } from "./world/world";
+} from "./solver/joint.ts";
+import { createMotorJoint, defaultMotorJointDef } from "./solver/motorJoint.ts";
+import { createMoverJoint, defaultMoverJointDef } from "./solver/moverJoint.ts";
+import { createParallelJoint, defaultParallelJointDef } from "./solver/parallelJoint.ts";
+import { createPogoJoint, defaultPogoJointDef } from "./solver/pogoJoint.ts";
+import { createPrismaticJoint, defaultPrismaticJointDef } from "./solver/prismaticJoint.ts";
+import { createRevoluteJoint, defaultRevoluteJointDef } from "./solver/revoluteJoint.ts";
+import { createSphericalJoint, defaultSphericalJointDef } from "./solver/sphericalJoint.ts";
+import { createWeldJoint, defaultWeldJointDef } from "./solver/weldJoint.ts";
+import { createWheelJoint, defaultWheelJointDef } from "./solver/wheelJoint.ts";
+import type { WorldState } from "./world/world.ts";
 
 export interface ConstraintCache {
     liveJoints: Map<number, Map<number, EntityId>>;

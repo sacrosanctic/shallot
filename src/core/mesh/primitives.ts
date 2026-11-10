@@ -1,5 +1,5 @@
 import type { World } from "../../engine";
-import { Meshes, type MeshHandle } from "./mesh";
+import { Meshes, type MeshHandle } from "./mesh.ts";
 
 /**
  * add the built-in default cube, unit-sized with flat per-face normals. Other primitive

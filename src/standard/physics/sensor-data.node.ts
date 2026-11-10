@@ -6,7 +6,7 @@ import {
     type PhysicsSensorData,
     StandardPhysicsPlugin,
     setTransform,
-} from "./index";
+} from "./index.ts";
 import { sensorVisitors } from "./sensor-data.fixture";
 import gold from "./sensor-data.gold.json";
 

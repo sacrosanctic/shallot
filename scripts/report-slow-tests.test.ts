@@ -5,7 +5,7 @@ import {
     slowBrowserTests,
     slowTests,
     warningAnnotation,
-} from "./report-slow-tests";
+} from "./report-slow-tests.ts";
 
 test("recorded Playwright JSON warns for a flake with trace off and XML-like stdout", async () => {
     const json = await Bun.file(new URL("./browser-flaky.json", import.meta.url)).text();

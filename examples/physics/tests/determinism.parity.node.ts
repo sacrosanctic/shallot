@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics, Shape } from "@dylanebert/shallot";
 import { setAngularVelocity } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { DeterminismPlugin, DeterminismState, determinismScenes } from "../src/determinism";
-import { sceneSwitcher } from "../src/sample";
-import { sampleGold } from "./gold";
+import { DeterminismPlugin, DeterminismState, determinismScenes } from "../src/determinism.ts";
+import { sceneSwitcher } from "../src/sample.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of Object.keys(determinismScenes) as (keyof typeof determinismScenes)[]) {

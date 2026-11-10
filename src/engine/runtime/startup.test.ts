@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { reportStartup } from "./startup";
+import { reportStartup } from "./startup.ts";
 
 test("browser startup observations reach current listeners, without replaying retained state", () => {
     const original = Object.getOwnPropertyDescriptor(globalThis, "window");

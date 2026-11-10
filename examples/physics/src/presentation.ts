@@ -8,11 +8,11 @@ import {
     shapeMesh,
     type World,
 } from "@dylanebert/shallot";
-import { largeCompound } from "./compound-presentation";
-import { controlValues, enabledControls, type Scene, scenes } from "./scenes";
-import { drivenBodies, materials, shapeRole } from "./shape-color";
-import { treeGroundHeight } from "./tree-presentation";
-import { WorldSampleState } from "./world";
+import { largeCompound } from "./compound-presentation.ts";
+import { controlValues, enabledControls, type Scene, scenes } from "./scenes.ts";
+import { drivenBodies, materials, shapeRole } from "./shape-color.ts";
+import { treeGroundHeight } from "./tree-presentation.ts";
+import { WorldSampleState } from "./world.ts";
 
 type Geometry = {
     mesh: ReturnType<typeof shapeMesh> & { name: string };

@@ -20,7 +20,7 @@ import {
     EXIT_SECONDS,
     ROAD_LENGTH,
     ROAD_START,
-} from "./delivery";
+} from "./delivery.ts";
 
 function check() {
     return createApp({

@@ -1,7 +1,7 @@
 import type { World } from "../../../engine";
-import type { AABB } from "../common/records";
-import { kernel, rethrowQueryError, setQueryCallback } from "./kernel";
-import { guardViews } from "./views";
+import type { AABB } from "../common/records.ts";
+import { kernel, rethrowQueryError, setQueryCallback } from "./kernel.ts";
+import { guardViews } from "./views.ts";
 
 export type TreeStats = { nodeVisits: number; leafVisits: number };
 export type TreeBacking = {

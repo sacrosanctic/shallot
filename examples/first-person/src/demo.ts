@@ -27,7 +27,7 @@ import {
 } from "@dylanebert/shallot";
 import { internText, Justify, Text, TextPlugin } from "@dylanebert/shallot/extras";
 import { Anchor } from "@dylanebert/shallot/rendering";
-import { LocalPlayer, Player, PlayerPlugin, TouchControls } from "./player";
+import { LocalPlayer, Player, PlayerPlugin, TouchControls } from "./player.ts";
 
 type Vec3 = readonly [number, number, number];
 type Vec4 = readonly [number, number, number, number];

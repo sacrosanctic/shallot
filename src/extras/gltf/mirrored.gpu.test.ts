@@ -8,10 +8,10 @@ import {
     Tonemapping,
     TonemappingMethod,
     Transform,
-} from "../../index";
-import { openGpuApp } from "../../project/testing-gpu";
+} from "../../index.ts";
+import { openGpuApp } from "../../project/testing-gpu.ts";
 import { MeshRenderPlugin, StandardRenderingPlugin } from "../../standard/rendering";
-import { loadGltfScene, spawnGltfScene } from "./index";
+import { loadGltfScene, spawnGltfScene } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const apps: App[] = [];

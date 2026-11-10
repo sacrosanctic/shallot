@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { globals } from "webgpu";
 import type { WorldGpu } from "../runtime";
-import { runApp } from "./index";
+import { runApp } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

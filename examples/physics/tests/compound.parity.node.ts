@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics } from "@dylanebert/shallot";
 import { StandardPhysicsPlugin } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { compoundScenes } from "../src/compound";
-import { createScene, type Scene } from "../src/scenes";
-import { sampleGold } from "./gold";
+import { compoundScenes } from "../src/compound.ts";
+import { createScene, type Scene } from "../src/scenes.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of Object.keys(compoundScenes) as (keyof typeof compoundScenes)[]) {

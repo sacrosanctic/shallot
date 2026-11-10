@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { aoDifference } from "./compare-ao";
+import { aoDifference } from "./compare-ao.ts";
 
 test("AO difference reports every pixel, including unchanged pixels, in visibility units", () => {
     expect(aoDifference(new Float32Array([0, 1, 1, 1]), new Float32Array([1, 1, 1, 1]))).toEqual({

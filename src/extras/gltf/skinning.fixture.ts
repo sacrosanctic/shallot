@@ -1,4 +1,4 @@
-import type { GltfJson } from "./gltf";
+import type { GltfJson } from "./gltf.ts";
 
 /** A triangle whose bind pose is outside the camera; its joint brings it into view at t=1. */
 export function skinningFixtureUrl(): string {

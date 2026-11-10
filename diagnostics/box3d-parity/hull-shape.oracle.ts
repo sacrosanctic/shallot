@@ -3,10 +3,10 @@ import { Body, Hulls, PhysicsPlugin, Shape } from "../../src/core/physics";
 import { TransformPlugin } from "../../src/core/transform";
 import { World } from "../../src/engine";
 import { StandardPhysicsPlugin } from "../../src/standard/physics";
-import { physicsState } from "../../src/standard/physics/runtime";
-import { hullImage } from "../../src/standard/physics/shapes/hullbytes";
-import { readShapeHull } from "../../src/standard/physics/shapes/hull";
-import { nativeBinary, run } from "./native";
+import { physicsState } from "../../src/standard/physics/runtime.ts";
+import { hullImage } from "../../src/standard/physics/shapes/hullbytes.ts";
+import { readShapeHull } from "../../src/standard/physics/shapes/hull.ts";
+import { nativeBinary, run } from "./native.ts";
 
 const SCALES = [
     [1, 1, 1],

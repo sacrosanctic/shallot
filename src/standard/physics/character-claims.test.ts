@@ -2,16 +2,16 @@ import { expect, test } from "bun:test";
 import { Body, BodyType, PhysicsPlugin, Shape, ShapeKind } from "../../core/physics";
 import { GlobalTransform, Transform, TransformPlugin } from "../../core/transform";
 import { createApp, Time, World } from "../../engine";
-import { characterScratch } from "./character";
+import { characterScratch } from "./character.ts";
 import {
     Character,
     CharacterPlugin,
     GroundState,
     StandardPhysicsPlugin,
     setLinearVelocity,
-} from "./index";
-import { shapeBodyId } from "./kernel/filtercolumns";
-import { physicsBodyIndex, physicsState } from "./runtime";
+} from "./index.ts";
+import { shapeBodyId } from "./kernel/filtercolumns.ts";
+import { physicsBodyIndex, physicsState } from "./runtime.ts";
 
 async function scene() {
     const world = new World();

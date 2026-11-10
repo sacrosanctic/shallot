@@ -12,8 +12,8 @@ import {
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import * as project from "../project";
-import { normalizePath } from "../project/paths";
-import { parseCliArgs } from "./index";
+import { normalizePath } from "../project/paths.ts";
+import { parseCliArgs } from "./index.ts";
 import {
     preflightPublish,
     publishHeaders,
@@ -21,15 +21,15 @@ import {
     publishProject,
     readPublishLink,
     savePublishLink,
-} from "./publish";
-import * as cloudflare from "./publish-cloudflare";
+} from "./publish.ts";
+import * as cloudflare from "./publish-cloudflare.ts";
 import {
     cloudflareConfig,
     cloudflareDeployment,
     WRANGLER_VERSION,
     type WranglerResult,
     workerExists,
-} from "./publish-cloudflare";
+} from "./publish-cloudflare.ts";
 
 const root = mkdtempSync(join(tmpdir(), "shallot-publish-unit-"));
 afterAll(() => rmSync(root, { recursive: true, force: true }));

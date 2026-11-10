@@ -1,6 +1,6 @@
 import { setDefaultTimeout } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { testDominoSwitches } from "./switch-dominoes";
+import { testDominoSwitches } from "./switch-dominoes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

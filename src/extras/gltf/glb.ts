@@ -1,4 +1,4 @@
-import type { GltfJson } from "./gltf";
+import type { GltfJson } from "./gltf.ts";
 
 const MAGIC = 0x46546c67; // "glTF", little-endian
 const JSON_CHUNK = 0x4e4f534a; // "JSON"

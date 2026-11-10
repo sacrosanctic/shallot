@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { getWorldCounters, PhysicsWorldDefinition } from ".";
-import { counterPile, counterRow, counterSweep } from "./fixtures/world-counters";
+import { counterPile, counterRow, counterSweep } from "./fixtures/world-counters.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const workers of [0, 1, 2])

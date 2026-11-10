@@ -2,7 +2,7 @@ import { afterAll, beforeAll, expect, setDefaultTimeout, spyOn, test } from "bun
 import { readFileSync } from "node:fs";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { attachTexture, captureTexture } from "../../core/rendering";
-import { imageTextures } from "../../core/rendering/image";
+import { imageTextures } from "../../core/rendering/image.ts";
 import {
     type App,
     Camera,
@@ -24,8 +24,8 @@ import {
     TonemappingMethod,
     Transform,
     type World,
-} from "../../index";
-import { openGpuApp as createApp } from "../../project/testing-gpu";
+} from "../../index.ts";
+import { openGpuApp as createApp } from "../../project/testing-gpu.ts";
 import { MeshRenderPlugin, StandardRenderingPlugin } from "../../standard/rendering";
 import {
     type Gltf,
@@ -34,7 +34,7 @@ import {
     loadGltfScene,
     poseGltfScene,
     spawnGltfScene,
-} from "./index";
+} from "./index.ts";
 import { morphFixture, morphFixtureUrl } from "./morph.fixture";
 
 setDefaultTimeout(TIMEOUT.gpu);

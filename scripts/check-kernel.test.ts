@@ -5,7 +5,7 @@ import {
     KERNEL_ARTIFACTS,
     KERNEL_BUILD_COMMAND,
     kernelInputHash,
-} from "../crates/physics/scripts/kernel-inputs";
+} from "../crates/physics/scripts/kernel-inputs.ts";
 
 test("checked kernel artifacts match their build inputs", () => {
     const root = resolve(import.meta.dir, "..");

@@ -1,5 +1,5 @@
 import type { Loading, Plugin, World } from "@dylanebert/shallot";
-import type { HostFrame } from "./host";
+import type { HostFrame } from "./host.ts";
 
 /** Reveal the host canvas only after the first draw has been submitted and completed. */
 export function revealAfterFirstFrame(host: HostFrame, loading: Pick<Loading, "error">): Plugin {

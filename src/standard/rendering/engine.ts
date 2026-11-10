@@ -7,10 +7,10 @@ import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import { MeshQuant } from "../../core/mesh";
 import { FrameGpu, ViewUniforms } from "../../core/rendering";
-import { clusterCell, LightClusters } from "./cluster";
-import { IndirectLightInput, indirectLight } from "./indirect";
-import { distanceAttenuation, LightingGpu, PointLightGpu, spotFactor } from "./lighting";
-import { brdf, brdfSphere, Pbr, pointShadowRef } from "./shade";
+import { clusterCell, LightClusters } from "./cluster.ts";
+import { IndirectLightInput, indirectLight } from "./indirect.ts";
+import { distanceAttenuation, LightingGpu, PointLightGpu, spotFactor } from "./lighting.ts";
+import { brdf, brdfSphere, Pbr, pointShadowRef } from "./shade.ts";
 
 /**
  * The shared group-0 layout for standard pipelines. Bindings vary by view and pass: color reads

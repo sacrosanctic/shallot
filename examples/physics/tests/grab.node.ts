@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, GlobalTransform, StandardPhysicsPlugin } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { EventSamplePlugin } from "../src/events";
-import { Grab, pick, release } from "../src/grab";
-import { createScene, type Scene, scenes } from "../src/scenes";
+import { EventSamplePlugin } from "../src/events.ts";
+import { Grab, pick, release } from "../src/grab.ts";
+import { createScene, type Scene, scenes } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

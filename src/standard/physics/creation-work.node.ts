@@ -4,7 +4,7 @@ import { Body, Hulls, Shape } from "../../core/physics";
 import { Transform } from "../../core/transform";
 import { createApp } from "../../engine/app";
 import { PhysicsWorldDefinition, StandardPhysicsPlugin } from ".";
-import { physicsCounters } from "./runtime";
+import { physicsCounters } from "./runtime.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

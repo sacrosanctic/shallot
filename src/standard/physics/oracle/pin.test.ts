@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { BOX3D_PIN } from "./pin";
+import { BOX3D_PIN } from "./pin.ts";
 
 test("every corpus lane was generated at the pinned Box3D revision and tree", () => {
     const corpus = join(import.meta.dir, "box3d");

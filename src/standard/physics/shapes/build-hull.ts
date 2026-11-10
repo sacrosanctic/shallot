@@ -1,9 +1,9 @@
 import type { World } from "../../../engine";
-import type { Transform, Vec3 } from "../common/records";
-import { type Kernel, kernel, kernelState } from "../kernel/kernel";
-import type { HullData } from "./hull";
-import { hullImage } from "./hullbytes";
-import { drawHull } from "./readgeometry";
+import type { Transform, Vec3 } from "../common/records.ts";
+import { type Kernel, kernel, kernelState } from "../kernel/kernel.ts";
+import type { HullData } from "./hull.ts";
+import { hullImage } from "./hullbytes.ts";
+import { drawHull } from "./readgeometry.ts";
 
 type Scratch = { input: Float32Array; view: DataView };
 const scratch = new WeakMap<Kernel, Scratch>();

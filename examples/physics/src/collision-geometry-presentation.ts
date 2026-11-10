@@ -1,9 +1,9 @@
 import type { World } from "@dylanebert/shallot";
 import type { Point2D } from "@dylanebert/shallot/standard/physics";
-import { box } from "./collision-debug";
-import { CollisionGeometry } from "./collision-geometry";
-import { drawInkPoint, INK } from "./ink-presentation";
-import { JOINT_LINE } from "./joint-presentation";
+import { box } from "./collision-debug.ts";
+import { CollisionGeometry } from "./collision-geometry.ts";
+import { drawInkPoint, INK } from "./ink-presentation.ts";
+import { JOINT_LINE } from "./joint-presentation.ts";
 
 type Point = [number, number, number];
 const f = Math.fround;

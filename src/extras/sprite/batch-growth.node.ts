@@ -2,12 +2,12 @@ import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { attachTexture, Camera, registerImage } from "../../core/rendering";
-import { imageTextures } from "../../core/rendering/image";
+import { imageTextures } from "../../core/rendering/image.ts";
 import { Transform } from "../../core/transform";
 import { rawDevice } from "../../engine/runtime";
 import { Draws, StandardRenderer } from "../../standard/rendering";
-import { MaterialBatches } from "../../standard/rendering/material-batch";
-import { Sprite, SpritePlugin } from "./index";
+import { MaterialBatches } from "../../standard/rendering/material-batch.ts";
+import { Sprite, SpritePlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const configs: Parameters<typeof gpuApps>[1] = [

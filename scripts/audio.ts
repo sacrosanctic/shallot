@@ -1,9 +1,9 @@
 import { existsSync, mkdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { $ } from "bun";
-import { audioInputHash } from "../crates/audio/scripts/audio-inputs";
-import { rustSourceRemaps } from "./rust-remap";
-import { optimize } from "./wasm-opt";
+import { audioInputHash } from "../crates/audio/scripts/audio-inputs.ts";
+import { rustSourceRemaps } from "./rust-remap.ts";
+import { optimize } from "./wasm-opt.ts";
 
 const pkgRoot = resolve(import.meta.dir, "..");
 const root = resolve(pkgRoot, "crates");

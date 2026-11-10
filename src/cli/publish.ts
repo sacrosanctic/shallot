@@ -16,8 +16,8 @@ import {
     runWrangler,
     WRANGLER_VERSION,
     workerExists,
-} from "./publish-cloudflare";
-import { installDev } from "./publish-dependencies";
+} from "./publish-cloudflare.ts";
+import { installDev } from "./publish-dependencies.ts";
 import {
     BUTLER_LOGIN_REQUIRED,
     BUTLER_STATUS_TIMEOUT,
@@ -35,15 +35,15 @@ import {
     runButler,
     validItchName,
     waitForItchBuild,
-} from "./publish-itch";
-import { publishProgress } from "./publish-output";
+} from "./publish-itch.ts";
+import { publishProgress } from "./publish-output.ts";
 import {
     type PublishAsset,
     type PublishVerification,
     projectChromium,
     resolveProjectPlaywright,
     verifyPublishedGame,
-} from "./publish-verify";
+} from "./publish-verify.ts";
 
 export type PublishLink = CloudflareLink | ItchLink;
 

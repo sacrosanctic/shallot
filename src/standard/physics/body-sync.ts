@@ -1,8 +1,8 @@
 import { BodyType } from "../../core/physics";
 import type { ScalarField } from "../../engine";
-import { type FieldBinding, fieldMarked } from "./authoring";
-import type { EntityId } from "./common/ids";
-import type { FieldCandidates } from "./field-candidates";
+import { type FieldBinding, fieldMarked } from "./authoring.ts";
+import type { EntityId } from "./common/ids.ts";
+import type { FieldCandidates } from "./field-candidates.ts";
 import {
     BodyProperty,
     bodyDisable,
@@ -12,8 +12,8 @@ import {
     bodyIsValid,
     bodySetProperty,
     bodySetType,
-} from "./world/body";
-import type { WorldState } from "./world/world";
+} from "./world/body.ts";
+import type { WorldState } from "./world/world.ts";
 
 function value(binding: FieldBinding, eid: number, field: string): number {
     return (binding.storage[field] as ScalarField).get(eid);

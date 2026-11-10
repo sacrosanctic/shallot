@@ -8,7 +8,7 @@ import { execFileSync } from "node:child_process";
 import { chmodSync, copyFileSync, mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
-import { removeTestDirectory } from "./test-directory";
+import { removeTestDirectory } from "./test-directory.ts";
 
 const ROOT = resolve(import.meta.dir, "..");
 

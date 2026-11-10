@@ -2,8 +2,8 @@ import { expect, test } from "bun:test";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
 import { World } from "../../engine";
-import { SEGMENT_FLOATS, triangleVertex } from "./pipeline";
-import { drawArrow, drawLine, head, lineStaging, segmentState } from "./segments";
+import { SEGMENT_FLOATS, triangleVertex } from "./pipeline.ts";
+import { drawArrow, drawLine, head, lineStaging, segmentState } from "./segments.ts";
 
 test("an arrow stages one filled triangle in its shaft's color and width, facing world up by default", () => {
     const world = new World();

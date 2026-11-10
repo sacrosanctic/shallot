@@ -10,7 +10,7 @@ import {
     samples,
     scenes,
     truckPlacement,
-} from "./scenes";
+} from "./scenes.ts";
 
 test("the picker demonstrates each promise once without shrinking the regression corpus", () => {
     const listed = categories.flatMap((category) => category.scenes.map((scene) => scene.id));

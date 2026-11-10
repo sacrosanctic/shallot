@@ -14,7 +14,7 @@ import {
     Tonemapping,
     TonemappingMethod,
 } from "../../core/rendering";
-import { imageTextures } from "../../core/rendering/image";
+import { imageTextures } from "../../core/rendering/image.ts";
 import { Transform } from "../../core/transform";
 import {
     Materials,
@@ -22,7 +22,7 @@ import {
     StandardMaterial,
     StandardRenderer,
 } from "../../standard/rendering";
-import { Sprite, SpritePlugin } from "./index";
+import { Sprite, SpritePlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 let camera = -1;

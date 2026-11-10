@@ -4,8 +4,8 @@ import { Bloom } from "@dylanebert/shallot/bloom";
 import { attachTexture, captureTexture } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp as createApp } from "@dylanebert/shallot/testing/gpu";
-import { AppPlugin } from "./app";
-import { Scene, ScenePlugin, setBloom } from "./scene";
+import { AppPlugin } from "./app.ts";
+import { Scene, ScenePlugin, setBloom } from "./scene.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("one black-clear TonyMcMapface camera blooms a grid of 100 bouncing spheres", async () => {

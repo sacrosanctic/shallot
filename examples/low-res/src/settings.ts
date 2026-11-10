@@ -1,6 +1,6 @@
 import { Resolution, type World } from "@dylanebert/shallot";
-import { Posterize } from "./posterize";
-import { Scene } from "./scene";
+import { Posterize } from "./posterize.ts";
+import { Scene } from "./scene.ts";
 export const settings = [
     { label: "Resolution height", min: 180, max: 720, value: 360 },
     { label: "Color levels", min: 2, max: 16, value: 8 },

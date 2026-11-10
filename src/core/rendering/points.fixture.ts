@@ -6,7 +6,7 @@ import {
     RenderPhases,
     SAMPLE_COUNT,
     type View,
-} from "./index";
+} from "./index.ts";
 
 export const pointsState = {
     create: () => ({

@@ -15,10 +15,10 @@ import {
 } from "../../core/rendering";
 import { Transform } from "../../core/transform";
 import { lookAtRotation, type World } from "../../engine";
-import { StandardRenderer, StandardRenderingPlugin } from "./index";
-import { Materials, MeshMaterial, StandardMaterial } from "./material";
-import { MeshRenderPlugin } from "./mesh-render";
-import { DirectionalLightShadowMap, PointShadows } from "./shadows";
+import { StandardRenderer, StandardRenderingPlugin } from "./index.ts";
+import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";
+import { MeshRenderPlugin } from "./mesh-render.ts";
+import { DirectionalLightShadowMap, PointShadows } from "./shadows.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const config = { defaults: false, plugins: [StandardRenderingPlugin, MeshRenderPlugin] };

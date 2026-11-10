@@ -1,8 +1,8 @@
 import { Body, createApp, Shape, StandardPhysicsPlugin, Transform } from "@dylanebert/shallot";
-import { BodyType } from "../common/types";
-import { PhysicsEvents } from "../events";
-import { setLinearVelocity } from "../runtime";
-import { PhysicsWorldDefinition } from "../world-definition";
+import { BodyType } from "../common/types.ts";
+import { PhysicsEvents } from "../events.ts";
+import { setLinearVelocity } from "../runtime.ts";
+import { PhysicsWorldDefinition } from "../world-definition.ts";
 
 export let controlSink: { frame: number } | undefined;
 export const control = () => {

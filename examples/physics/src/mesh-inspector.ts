@@ -14,8 +14,8 @@ import {
     PhysicsWorldDefinition,
     StandardPhysicsPlugin,
 } from "@dylanebert/shallot/standard/physics";
-import { decodeMesh } from "./mesh-data";
-import type { Controls } from "./scenes";
+import { decodeMesh } from "./mesh-data.ts";
+import type { Controls } from "./scenes.ts";
 import voxel01 from "./voxel_mesh_01.json" with { type: "json" };
 import voxel02 from "./voxel_mesh_02.json" with { type: "json" };
 import voxel03 from "./voxel_mesh_03.json" with { type: "json" };

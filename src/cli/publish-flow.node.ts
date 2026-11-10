@@ -11,10 +11,10 @@ import { tmpdir } from "node:os";
 import { delimiter, join, resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { chromium } from "playwright";
-import { bunChild } from "../../scripts/bun-child";
-import { removeTestDirectory } from "../../scripts/test-directory";
+import { bunChild } from "../../scripts/bun-child.ts";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
 import { CROSS_ORIGIN_ISOLATION } from "../project/isolation.js";
-import { WRANGLER_VERSION } from "./publish-cloudflare";
+import { WRANGLER_VERSION } from "./publish-cloudflare.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const repo = resolve(import.meta.dir, "../..");

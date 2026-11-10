@@ -1,5 +1,5 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import { nativeSseOutput } from "./native-evidence";
+import { nativeSseOutput } from "./native-evidence.ts";
 
 setDefaultTimeout(0);
 test("dynamic tree gold is Box3D's independent tree construction, rebuilds, queries, reports and scaled file load", async () => {

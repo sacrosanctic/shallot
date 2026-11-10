@@ -7,9 +7,9 @@ import {
     castTriangle,
     identity,
     type Vec,
-} from "./collision-debug";
-import { drawInkPoint, INK } from "./ink-presentation";
-import { JOINT_LINE } from "./joint-presentation";
+} from "./collision-debug.ts";
+import { drawInkPoint, INK } from "./ink-presentation.ts";
+import { JOINT_LINE } from "./joint-presentation.ts";
 
 type Point = [number, number, number];
 const CYAN = 0x38a4b5,

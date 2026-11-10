@@ -1,6 +1,6 @@
 import type { World } from "@dylanebert/shallot";
-import { EventSample } from "./events";
-import { drawInkPoint, type INK_DOT } from "./ink-presentation";
+import { EventSample } from "./events.ts";
+import { drawInkPoint, type INK_DOT } from "./ink-presentation.ts";
 
 type Point = [number, number, number];
 export function drawSensorHitViews(

@@ -1,9 +1,9 @@
 import { afterAll, beforeAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { type App, createApp } from "../../engine";
-import { hull2D, type Point2D, simplifyHull2D } from "./hull2d";
-import { kernel } from "./kernel/kernel";
-import { StandardPhysicsPlugin } from "./runtime";
+import { hull2D, type Point2D, simplifyHull2D } from "./hull2d.ts";
+import { kernel } from "./kernel/kernel.ts";
+import { StandardPhysicsPlugin } from "./runtime.ts";
 
 type Row = [number, number, number, number];
 type Case = [number, Row[], Row[], Row[]];

@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 import { parse } from "@babel/parser";
 import { WEB_SERVER_CONFIG } from "@dylanebert/shallot/testing";
 import { Glob } from "bun";
-import { normalizePath } from "../src/project/paths";
+import { normalizePath } from "../src/project/paths.ts";
 
 test("browser servers refuse to reuse existing processes", () => {
     const root = resolve(import.meta.dir, "..");

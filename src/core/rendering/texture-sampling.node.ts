@@ -23,7 +23,7 @@ import {
     RenderLayers,
     Tonemapping,
     TonemappingMethod,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 await setupGlobals();

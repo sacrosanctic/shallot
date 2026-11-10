@@ -1,5 +1,5 @@
 import type { World } from "@dylanebert/shallot";
-import { CollisionState } from "./collision";
+import { CollisionState } from "./collision.ts";
 
 type Vec = { x: number; y: number; z: number };
 const sub = (a: Vec, b: Vec): Vec => ({ x: a.x - b.x, y: a.y - b.y, z: a.z - b.z });

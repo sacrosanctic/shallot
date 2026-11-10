@@ -1,16 +1,16 @@
-import { BodyType, defaultBodyDef, defaultShapeDef } from "./common/types";
-import * as C from "./kernel/columns";
-import { writeJointFloat, writeJointQuat, writeJointVec3 } from "./kernel/jointcolumns";
-import { kernel } from "./kernel/kernel";
-import { ShapeFlags, setShapeFlag } from "./kernel/shaperecords";
-import { createSphereShape, destroyShape, setShapeFilter } from "./shapes/shape";
-import { createDistanceJoint, defaultDistanceJointDef } from "./solver/distanceJoint";
-import { defaultJointDef, setJointCollideConnected, wakeJointBodies } from "./solver/joint";
-import { createMotorJoint, defaultMotorJointDef } from "./solver/motorJoint";
-import { createSphericalJoint, defaultSphericalJointDef } from "./solver/sphericalJoint";
-import { createWheelJoint, defaultWheelJointDef } from "./solver/wheelJoint";
-import { bodySetType, createBody, destroyBody } from "./world/body";
-import type { WorldState } from "./world/world";
+import { BodyType, defaultBodyDef, defaultShapeDef } from "./common/types.ts";
+import * as C from "./kernel/columns.ts";
+import { writeJointFloat, writeJointQuat, writeJointVec3 } from "./kernel/jointcolumns.ts";
+import { kernel } from "./kernel/kernel.ts";
+import { ShapeFlags, setShapeFlag } from "./kernel/shaperecords.ts";
+import { createSphereShape, destroyShape, setShapeFilter } from "./shapes/shape.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "./solver/distanceJoint.ts";
+import { defaultJointDef, setJointCollideConnected, wakeJointBodies } from "./solver/joint.ts";
+import { createMotorJoint, defaultMotorJointDef } from "./solver/motorJoint.ts";
+import { createSphericalJoint, defaultSphericalJointDef } from "./solver/sphericalJoint.ts";
+import { createWheelJoint, defaultWheelJointDef } from "./solver/wheelJoint.ts";
+import { bodySetType, createBody, destroyBody } from "./world/body.ts";
+import type { WorldState } from "./world/world.ts";
 
 export function mutationAllocationSubject(world: WorldState): () => void {
     const k = kernel(world.ecsState);

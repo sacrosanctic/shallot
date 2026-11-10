@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import type { World } from "@dylanebert/shallot";
-import { scenes } from "../src/scenes";
-import { advanceIteration } from "./iteration";
+import { scenes } from "../src/scenes.ts";
+import { advanceIteration } from "./iteration.ts";
 
 test("a sample iteration defaults to one tick", () => {
     let ticks = 0;

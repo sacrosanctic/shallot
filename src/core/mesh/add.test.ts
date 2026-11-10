@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { runInNewContext } from "node:vm";
 import { World } from "../../engine";
-import { type Mesh, Meshes, meshResourcesKey } from "./index";
-import { cube } from "./primitives";
+import { type Mesh, Meshes, meshResourcesKey } from "./index.ts";
+import { cube } from "./primitives.ts";
 
 test("mesh removal clears every reader and index reuse appends the new mesh in insertion order", () => {
     const world = new World();

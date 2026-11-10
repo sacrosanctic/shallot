@@ -14,8 +14,8 @@ import {
 } from "../../core/rendering";
 import { Transform } from "../../core/transform";
 import { lookAtRotation } from "../../engine/utils";
-import { Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./index";
-import { drawArrow, drawLine, drawWireBox, lineCount } from "./segments";
+import { Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "./index.ts";
+import { drawArrow, drawLine, drawWireBox, lineCount } from "./segments.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const Show = { create: () => ({ value: false }) };

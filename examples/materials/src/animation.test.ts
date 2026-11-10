@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { createApp } from "@dylanebert/shallot";
-import { AnimationPlugin, Gallery } from "./gallery";
+import { AnimationPlugin, Gallery } from "./gallery.ts";
 
 test("the gallery animation clock accumulates stepped time", async () => {
     const app = await createApp({ defaults: false, plugins: [AnimationPlugin] });

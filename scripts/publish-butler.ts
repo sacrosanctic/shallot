@@ -1,6 +1,6 @@
 import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
-import { butlerPath, ensureButler } from "../src/cli/publish-itch";
+import { butlerPath, ensureButler } from "../src/cli/publish-itch.ts";
 
 /** Tests consume the butler `bun scripts/publish-butler.ts` fetched, never fetch it. */
 export function publishTestButler(): string {

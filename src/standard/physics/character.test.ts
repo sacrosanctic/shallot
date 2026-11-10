@@ -11,8 +11,8 @@ import {
     type MeshData,
     makeBoxHull,
 } from "./api";
-import { characterScratch } from "./character";
-import { defaultBodyDef } from "./common/types";
+import { characterScratch } from "./character.ts";
+import { defaultBodyDef } from "./common/types.ts";
 import {
     Character,
     CharacterPlugin,
@@ -20,24 +20,24 @@ import {
     PhysicsWorldDefinition,
     StandardPhysicsPlugin,
     StepPhysicsSystem,
-} from "./index";
-import { readStateAngularVelocity } from "./kernel/bodycolumns";
+} from "./index.ts";
+import { readStateAngularVelocity } from "./kernel/bodycolumns.ts";
 import lane from "./oracle/box3d/v7/cases.json";
-import { physicsBodyIndex, physicsState } from "./runtime";
+import { physicsBodyIndex, physicsState } from "./runtime.ts";
 import {
     createHeightFieldShape,
     createHullShape,
     createMeshShape,
     createSphereShape,
-} from "./shapes/shape";
-import { createTestWorld, destroyTestWorld, testShapeDef } from "./testing";
+} from "./shapes/shape.ts";
+import { createTestWorld, destroyTestWorld, testShapeDef } from "./testing.ts";
 import {
     bodyApplyLinearImpulse,
     bodyGetLinearVelocity,
     bodyGetTransform,
     createBody as createSolverBody,
     getBodyState,
-} from "./world/body";
+} from "./world/body.ts";
 
 // Box3D handle and oracle comparisons are internal parity coverage; ECS character claims live in character-claims.test.ts.
 

@@ -4,12 +4,12 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import {
     allocationFailure,
     sampleAllocation,
-} from "../../../diagnostics/first-person-allocation/allocation";
-import { countedKernelBytes } from "../../../scripts/counted-kernel";
+} from "../../../diagnostics/first-person-allocation/allocation.ts";
+import { countedKernelBytes } from "../../../scripts/counted-kernel.ts";
 import { jointAllocationSubject, splitAllocationSubject } from "./joint-allocation.fixture";
-import { clockImport, type Kernel, kernelState } from "./kernel/kernel";
-import { createTestWorld, destroyTestWorld } from "./testing";
-import type { WorldState } from "./world/world";
+import { clockImport, type Kernel, kernelState } from "./kernel/kernel.ts";
+import { createTestWorld, destroyTestWorld } from "./testing.ts";
+import type { WorldState } from "./world/world.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const entry = resolve(import.meta.dir, "fixtures/joint-allocation.entry.ts");

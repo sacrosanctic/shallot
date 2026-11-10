@@ -1,15 +1,15 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { allocationFailure, sampleAllocation, windowBytes } from "../first-person-allocation/allocation";
+import { allocationFailure, sampleAllocation, windowBytes } from "../first-person-allocation/allocation.ts";
 import {
     allocationWrapperFailure,
     assertAllocationWrappers,
     isAdmittedAllocationSite,
-} from "../first-person-allocation/allocation-admissions";
+} from "../first-person-allocation/allocation-admissions.ts";
 import { attribute } from "../first-person-allocation/allocation-sampler.mjs";
 
-import { gpuAllocationExpressions } from "../../src/engine/runtime/allocation-site";
+import { gpuAllocationExpressions } from "../../src/engine/runtime/allocation-site.ts";
 
 // The qualified 12,000/600-frame sample takes about 11 s on an Apple M4 Max.
 setDefaultTimeout(120_000);

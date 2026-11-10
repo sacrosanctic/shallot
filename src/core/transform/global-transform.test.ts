@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { component, f32 } from "../../engine/ecs/component";
-import { World } from "../../engine/ecs/world";
+import { component, f32 } from "../../engine/ecs/component.ts";
+import { World } from "../../engine/ecs/world.ts";
 import {
     claimTransformPose,
     deriveTransforms,
@@ -8,7 +8,7 @@ import {
     releaseTransformPose,
     Transform,
     TransformPlugin,
-} from "./index";
+} from "./index.ts";
 
 test("TransformPlugin installs processing on a bare World for frames and exact ticks", () => {
     const world = new World();

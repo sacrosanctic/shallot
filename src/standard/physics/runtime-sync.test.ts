@@ -30,17 +30,17 @@ import {
     setTransform,
 } from "@dylanebert/shallot/standard/physics";
 import { GlobalTransform, Transform, TransformPlugin } from "@dylanebert/shallot/transform";
-import { expectWarning } from "../../../scripts/test-console";
-import { makeShapeId } from "./api/config";
-import { buildPlacedHull } from "./geometry-builds";
-import { BodyField, bodyField } from "./kernel/bodyrecords";
-import { DJ_IMPULSE, RJ_MOTOR_SPEED } from "./kernel/columns";
-import { readJointFloat, writeJointFloat } from "./kernel/jointcolumns";
-import { JointField, jointField } from "./kernel/jointrecords";
-import { kernel } from "./kernel/kernel";
-import { ShapeField, ShapeFlags, shapeField, shapeFlag } from "./kernel/shaperecords";
-import { physicsBodyIndex, physicsState } from "./runtime";
-import { type HullData, readShapeHull } from "./shapes/hull";
+import { expectWarning } from "../../../scripts/test-console.ts";
+import { makeShapeId } from "./api/config.ts";
+import { buildPlacedHull } from "./geometry-builds.ts";
+import { BodyField, bodyField } from "./kernel/bodyrecords.ts";
+import { DJ_IMPULSE, RJ_MOTOR_SPEED } from "./kernel/columns.ts";
+import { readJointFloat, writeJointFloat } from "./kernel/jointcolumns.ts";
+import { JointField, jointField } from "./kernel/jointrecords.ts";
+import { kernel } from "./kernel/kernel.ts";
+import { ShapeField, ShapeFlags, shapeField, shapeFlag } from "./kernel/shaperecords.ts";
+import { physicsBodyIndex, physicsState } from "./runtime.ts";
+import { type HullData, readShapeHull } from "./shapes/hull.ts";
 import {
     getShapeDensity,
     getShapeFilter,
@@ -53,7 +53,7 @@ import {
     readShapeSphere,
     setShapeFriction,
     shapeIsValid,
-} from "./shapes/shape";
+} from "./shapes/shape.ts";
 import { jointIds } from "./solver/joint.fixture";
 import {
     BodyProperty,
@@ -62,8 +62,8 @@ import {
     bodyGetTransform,
     bodyGetType,
     bodyIsAwake,
-} from "./world/body";
-import { worldCounters } from "./world/world";
+} from "./world/body.ts";
+import { worldCounters } from "./world/world.ts";
 
 async function createPhysicsWorld(): Promise<World> {
     const world = new World();

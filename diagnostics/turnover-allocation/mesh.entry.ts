@@ -1,7 +1,7 @@
 import { cube, Meshes, MeshInstance } from "../../src/core/mesh";
 import { Transform } from "../../src/core/transform";
 import { createApp } from "../../src/engine";
-import { gpuAllocationExpressions } from "../../src/engine/runtime/allocation-site";
+import { gpuAllocationExpressions } from "../../src/engine/runtime/allocation-site.ts";
 import {
     Materials,
     MeshMaterial,

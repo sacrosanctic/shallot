@@ -2,12 +2,12 @@ import type { TgpuBindGroupLayout, TgpuFn } from "typegpu";
 import tgpu, { isTgpuFn } from "typegpu";
 import * as d from "typegpu/data";
 import type { World } from "../../engine";
-import { validateBindingLimits } from "./binding-limits";
-import { backgroundsKey } from "./contract-state";
-import { engineLayout } from "./engine";
-import { bindingEntry, type EntryFor, type MaterialBinding, refuseBindings } from "./material-type";
-import type { BindResource } from "./pipelines";
-import { shadowLayout } from "./shadow-layout";
+import { validateBindingLimits } from "./binding-limits.ts";
+import { backgroundsKey } from "./contract-state.ts";
+import { engineLayout } from "./engine.ts";
+import { bindingEntry, type EntryFor, type MaterialBinding, refuseBindings } from "./material-type.ts";
+import type { BindResource } from "./pipelines.ts";
+import { shadowLayout } from "./shadow-layout.ts";
 
 function ownEntries<B extends Record<string, MaterialBinding>>(
     bindings: B,

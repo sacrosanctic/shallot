@@ -6,8 +6,8 @@
 import { existsSync, mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
-import { PROFILE_FIELDS } from "../../src/standard/physics/world/profile";
-import { WINDOWS } from "./windows";
+import { PROFILE_FIELDS } from "../../src/standard/physics/world/profile.ts";
+import { WINDOWS } from "./windows.ts";
 
 const [scene, threadArg, fromArg, toArg, roundsArg, ...variantArgs] = process.argv.slice(2);
 const from = fromArg === "-" ? WINDOWS[scene]?.[0] : Number(fromArg);

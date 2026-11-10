@@ -1,7 +1,7 @@
 import { Camera, type World } from "@dylanebert/shallot";
 import { Orbit } from "@dylanebert/shallot/extras";
 import type { Gltf } from "@dylanebert/shallot/gltf";
-import { type Scene, truckPlacement } from "./scenes";
+import { type Scene, truckPlacement } from "./scenes.ts";
 
 // three.js examples/webgl_loader_gltf.html uses a 1.3 fit offset. Express that
 // margin as projected sphere coverage, fitting the narrower axis even on a phone.

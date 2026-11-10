@@ -18,7 +18,7 @@ import {
     StepPhysicsSystem,
 } from "@dylanebert/shallot/standard/physics";
 
-import { setReaction } from "./shape-color";
+import { setReaction } from "./shape-color.ts";
 
 export const SensorSample = {
     create: () => ({

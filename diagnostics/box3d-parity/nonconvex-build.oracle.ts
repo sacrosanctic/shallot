@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import gold from "../../crates/physics/tests/nonconvex_build.gold.json";
-import { init, kernel } from "../../src/standard/physics/kernel/kernel";
-import { nativeBinary, run } from "./native";
+import { init, kernel } from "../../src/standard/physics/kernel/kernel.ts";
+import { nativeBinary, run } from "./native.ts";
 
 for (const heightField of [false, true]) {
     test(`${heightField ? "height-field" : "mesh"} construction and generators equal native byte images`, async () => {

@@ -5,7 +5,7 @@ import * as std from "typegpu/std";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { MeshInstance } from "../../core/mesh";
 import { attachTexture, Camera, NormalPrepass } from "../../core/rendering";
-import { viewTargetsKey } from "../../core/rendering/targets";
+import { viewTargetsKey } from "../../core/rendering/targets.ts";
 import { Transform } from "../../core/transform";
 import { probeTexture } from "../../engine";
 import {
@@ -17,7 +17,7 @@ import {
     materialType,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const Tangent = materialType({

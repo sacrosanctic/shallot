@@ -1,6 +1,6 @@
 import { mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { buildProjectDeclaration } from "./project-declaration";
+import { buildProjectDeclaration } from "./project-declaration.ts";
 
 const ROOT = resolve(import.meta.dir, "..");
 const OUT = resolve(ROOT, "dist");

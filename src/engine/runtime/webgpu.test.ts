@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { loadDawn } from "./dawn-host";
-import { UnsupportedError } from "./gpu";
+import { loadDawn } from "./dawn-host.ts";
+import { UnsupportedError } from "./gpu.ts";
 
 test("a missing optional Dawn peer names its install command and preserves the resolution cause", async () => {
     const cause = Object.assign(new Error("Cannot find package 'webgpu'"), {

@@ -9,7 +9,7 @@ import {
 } from "@dylanebert/shallot";
 import { CameraViewport, RenderLayers } from "@dylanebert/shallot/rendering";
 import { PhysicsWorldDefinition } from "@dylanebert/shallot/standard/physics";
-import { Scene, ScenePlugin } from "./scene";
+import { Scene, ScenePlugin } from "./scene.ts";
 
 test("the arena's minimap follows the player and fits every viewport", async () => {
     const app = await createApp({

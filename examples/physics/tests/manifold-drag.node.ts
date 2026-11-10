@@ -14,15 +14,15 @@ import {
 import { Orbit, OrbitMode } from "@dylanebert/shallot/extras";
 import { type View, Views } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { Grab, GrabPlugin } from "../src/grab";
+import { Grab, GrabPlugin } from "../src/grab.ts";
 import {
     allManifoldNames,
     ManifoldPlugin,
     ManifoldSample,
     manifoldTransform,
     vector,
-} from "../src/manifold";
-import { createScene } from "../src/scenes";
+} from "../src/manifold.ts";
+import { createScene } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of allManifoldNames)

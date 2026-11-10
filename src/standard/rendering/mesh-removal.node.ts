@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
 import { cube, Meshes, MeshInstance } from "../../core/mesh";
-import { clearMeshes } from "../../core/mesh/mesh";
+import { clearMeshes } from "../../core/mesh/mesh.ts";
 import { attachTexture, Camera, captureTexture } from "../../core/rendering";
 import { Transform } from "../../core/transform";
 import type { World } from "../../engine";
@@ -16,9 +16,9 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./index";
-import { MeshDrawBuffers, meshPreprocessKey } from "./preprocess";
-import { DrawIndexedIndirect } from "./registry";
+} from "./index.ts";
+import { MeshDrawBuffers, meshPreprocessKey } from "./preprocess.ts";
+import { DrawIndexedIndirect } from "./registry.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const config = { defaults: false, plugins: [MeshRenderPlugin, StandardRenderingPlugin] };

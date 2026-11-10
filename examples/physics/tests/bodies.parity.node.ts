@@ -1,10 +1,10 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics, StandardPhysicsPlugin } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { BodySamplePlugin, bodyScenes } from "../src/bodies";
-import { sceneSwitcher } from "../src/sample";
-import { type Controls, changeControl, controlValues, createScene, scenes } from "../src/scenes";
-import { sampleGold } from "./gold";
+import { BodySamplePlugin, bodyScenes } from "../src/bodies.ts";
+import { sceneSwitcher } from "../src/sample.ts";
+import { type Controls, changeControl, controlValues, createScene, scenes } from "../src/scenes.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of Object.keys(bodyScenes) as (keyof typeof bodyScenes)[]) {

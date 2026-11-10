@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { cleanupOracleWorkers } from "./publish-oracle-cleanup";
+import { cleanupOracleWorkers } from "./publish-oracle-cleanup.ts";
 
 for (const passed of [true, false]) {
     test(`a ${passed ? "successful" : "failed"} trial ${passed ? "deletes" : "retains"} its Workers`, () => {

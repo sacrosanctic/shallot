@@ -1,7 +1,7 @@
 import { Shape, ShapeKind, type World } from "@dylanebert/shallot";
 import { shapeEdges } from "@dylanebert/shallot/standard/physics";
-import { DeterminismState } from "./determinism";
-import { JOINT_INK, JOINT_LINE } from "./joint-presentation";
+import { DeterminismState } from "./determinism.ts";
+import { JOINT_INK, JOINT_LINE } from "./joint-presentation.ts";
 
 type Point = [number, number, number];
 export function querySpawnDrawing(world: World): { a: Point; b: Point }[] {

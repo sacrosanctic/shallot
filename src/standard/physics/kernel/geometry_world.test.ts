@@ -1,12 +1,12 @@
 import { expect, test } from "bun:test";
-import { ContactField, ContactFlags, contactField, contactIds } from "../collision/contact";
-import { BodyType, defaultBodyDef, defaultShapeDef, defaultWorldDef } from "../common/types";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createHullShape, createSphereShape } from "../shapes/shape";
-import { step } from "../solver/step";
-import { createBody } from "../world/body";
-import { createWorld, destroyWorld, getWorld, type WorldState } from "../world/world";
-import { init, kernel } from "./kernel";
+import { ContactField, ContactFlags, contactField, contactIds } from "../collision/contact.ts";
+import { BodyType, defaultBodyDef, defaultShapeDef, defaultWorldDef } from "../common/types.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createHullShape, createSphereShape } from "../shapes/shape.ts";
+import { step } from "../solver/step.ts";
+import { createBody } from "../world/body.ts";
+import { createWorld, destroyWorld, getWorld, type WorldState } from "../world/world.ts";
+import { init, kernel } from "./kernel.ts";
 
 await init(undefined, { threads: 0 });
 

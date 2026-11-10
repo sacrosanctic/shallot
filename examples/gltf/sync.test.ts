@@ -5,8 +5,8 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 import manifest from "./assets.json";
-import { devModels, pickerModels, pickerPaths } from "./dev-assets";
-import { syncFiles } from "./sync";
+import { devModels, pickerModels, pickerPaths } from "./dev-assets.ts";
+import { syncFiles } from "./sync.ts";
 
 test("dev server syncs exactly the picker's whole manifest models", () => {
     const expected = manifest.models.filter((model) =>

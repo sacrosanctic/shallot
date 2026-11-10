@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { Meshes, MeshInstance } from "../../core/mesh";
 import {
     Anchor,
@@ -15,7 +15,7 @@ import {
     TonemappingMethod,
     TransparentPhases,
 } from "../../core/rendering";
-import { imageTextures } from "../../core/rendering/image";
+import { imageTextures } from "../../core/rendering/image.ts";
 import { Transform } from "../../core/transform";
 import type { Plugin, World } from "../../engine";
 import {
@@ -25,7 +25,7 @@ import {
     materialType,
     StandardRenderer,
 } from "../../standard/rendering";
-import { Sprite, SpriteAlphaMode, SpritePlugin } from "./index";
+import { Sprite, SpriteAlphaMode, SpritePlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const BlueInput = d.struct({ color: d.vec4f });

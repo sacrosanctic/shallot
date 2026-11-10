@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { CAPTURE_CONTRACT } from "./capture";
+import { CAPTURE_CONTRACT } from "./capture.ts";
 
 test("CAPTURE_CONTRACT is the size and scale fixtures set their viewport to", () => {
     expect(CAPTURE_CONTRACT).toEqual({

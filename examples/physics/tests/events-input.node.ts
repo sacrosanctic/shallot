@@ -10,7 +10,7 @@ import {
     Transform,
 } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { contact, EventSample, EventSamplePlugin, SampleInputPlugin } from "../src/events";
+import { contact, EventSample, EventSamplePlugin, SampleInputPlugin } from "../src/events.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

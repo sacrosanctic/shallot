@@ -4,7 +4,7 @@ import * as core from "@dylanebert/shallot/physics";
 import { StandardPhysicsPlugin } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import {
     DJ_LOWER_SPRING_FORCE,
     DJ_UPPER_SPRING_FORCE,
@@ -28,9 +28,9 @@ import {
     WHJ_UPPER_STEERING_LIMIT,
     WHJ_UPPER_SUSPENSION_LIMIT,
     WJ_ANGULAR_HERTZ,
-} from "./kernel/joint-layout";
-import { readJointFloat, readJointQuat, readJointVec3 } from "./kernel/jointcolumns";
-import { physicsState } from "./runtime";
+} from "./kernel/joint-layout.ts";
+import { readJointFloat, readJointQuat, readJointVec3 } from "./kernel/jointcolumns.ts";
+import { physicsState } from "./runtime.ts";
 import { jointIds } from "./solver/joint.fixture";
 
 setDefaultTimeout(TIMEOUT.node);

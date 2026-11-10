@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { component, f32 } from "../ecs";
-import { resolvePlugins } from "./compose";
+import { resolvePlugins } from "./compose.ts";
 
 test("different empty records under one key are refused, naming both plugins", () => {
     const Audio = { name: "Audio", components: [component("SharedTag", {})] };

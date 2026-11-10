@@ -9,8 +9,8 @@ import {
     captureTexture,
     DirectionalLight,
 } from "../../core/rendering";
-import { imageTextures } from "../../core/rendering/image";
-import { attachView, detachView, Views } from "../../core/rendering/view";
+import { imageTextures } from "../../core/rendering/image.ts";
+import { attachView, detachView, Views } from "../../core/rendering/view.ts";
 import { Transform } from "../../core/transform";
 import { lookAtRotation, precompile } from "../../engine";
 import { probeBuffer } from "../../engine/runtime";
@@ -19,7 +19,7 @@ import {
     StandardRenderer,
     sunShadowView,
 } from "../../standard/rendering";
-import { Sprite, SpriteFill, SpritePlugin } from "./index";
+import { Sprite, SpriteFill, SpritePlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const SHADOW_SIDE = 256;

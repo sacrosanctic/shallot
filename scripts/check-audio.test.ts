@@ -4,7 +4,7 @@ import {
     AUDIO_ARTIFACT,
     AUDIO_BUILD_COMMAND,
     audioArtifactIsFresh,
-} from "../crates/audio/scripts/audio-inputs";
+} from "../crates/audio/scripts/audio-inputs.ts";
 
 test("checked audio artifact matches its build inputs", () => {
     const root = resolve(import.meta.dir, "..");

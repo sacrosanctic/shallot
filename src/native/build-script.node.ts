@@ -5,7 +5,7 @@ import { tmpdir } from "node:os";
 import { resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 
-import { removeTestDirectory } from "../../scripts/test-directory";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

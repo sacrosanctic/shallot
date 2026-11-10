@@ -8,8 +8,8 @@ import {
     setRenderBindGroup,
     setRenderPipeline,
 } from "../../engine/runtime";
-import { rethrowMaterialError } from "./material-type";
-import type { Draw } from "./registry";
+import { rethrowMaterialError } from "./material-type.ts";
+import type { Draw } from "./registry.ts";
 
 // A pass program is recorded once as the raw commands TypeGPU emits for it and replayed into the pass each
 // frame, re-recorded only when a draw or resource identity changes. It is not a GPURenderBundle: WebKit

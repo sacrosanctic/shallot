@@ -1,11 +1,11 @@
 import { beforeAll, expect, setDefaultTimeout, test } from "bun:test";
 import { createHash } from "node:crypto";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { init } from "../../src/standard/physics/kernel/kernel";
-import { createMesh } from "../../src/standard/physics/shapes/build-nonconvex";
+import { init } from "../../src/standard/physics/kernel/kernel.ts";
+import { createMesh } from "../../src/standard/physics/shapes/build-nonconvex.ts";
 import building from "../../examples/physics/src/building.json" with { type: "json" };
 import conveyor from "../../examples/physics/src/conveyor.json" with { type: "json" };
-import { decodeMesh } from "../../examples/physics/src/mesh-data";
+import { decodeMesh } from "../../examples/physics/src/mesh-data.ts";
 import stairs from "../../examples/physics/src/stairs.json" with { type: "json" };
 import testMap from "../../examples/physics/src/test_map01.json" with { type: "json" };
 import voxel01 from "../../examples/physics/src/voxel_mesh_01.json" with { type: "json" };

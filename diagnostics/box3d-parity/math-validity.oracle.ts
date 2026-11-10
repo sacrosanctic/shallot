@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import gold from "../../crates/physics/tests/math_validity.gold.json";
-import { init, kernel } from "../../src/standard/physics/kernel/kernel";
-import { nativeBinary, run } from "./native";
+import { init, kernel } from "../../src/standard/physics/kernel/kernel.ts";
+import { nativeBinary, run } from "./native.ts";
 
 test("joint quaternion validity equals native Box3D at normalization boundaries and nonfinite inputs", async () => {
     const native = JSON.parse(run([nativeBinary("math-validity.c")])) as typeof gold;

@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import type { World } from "../../engine";
-import type { gradingDefaults } from "./color-grading";
+import type { gradingDefaults } from "./color-grading.ts";
 
 // Bevy b3bdd75be. Imports resolve to these verbatim modules; specializations below
 // select exactly the flags TonemappingPipeline::specialize supplies.

@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { resolve } from "node:path";
-import { sampleAllocation, siteTable, windowBytes } from "../first-person-allocation/allocation";
+import { sampleAllocation, siteTable, windowBytes } from "../first-person-allocation/allocation.ts";
 
 // Manual diagnosis of the engine's new Node-tier red. Keep the engine allocation check active.
 test("isolate native GPU-copy handle allocation against the allocation-free upload control", async () => {

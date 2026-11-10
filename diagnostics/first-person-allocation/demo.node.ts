@@ -5,8 +5,8 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 setDefaultTimeout(TIMEOUT.node);
 
 import { resolve } from "node:path";
-import { allocationFailure, prepareAllocationSampler, type PreparedAllocationSampler, windowBytes } from "./allocation";
-import { isAdmittedAllocationSite } from "./allocation-admissions";
+import { allocationFailure, prepareAllocationSampler, type PreparedAllocationSampler, windowBytes } from "./allocation.ts";
+import { isAdmittedAllocationSite } from "./allocation-admissions.ts";
 
 let sampler: PreparedAllocationSampler;
 beforeAll(async () => {

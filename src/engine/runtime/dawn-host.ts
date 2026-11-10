@@ -1,4 +1,4 @@
-import { UnsupportedError } from "./gpu";
+import { UnsupportedError } from "./gpu.ts";
 
 /** Refuse Windows hosts that Dawn cannot load before its native addon is imported. */
 function assertDawnHost(platform: string, execPath: string): void {

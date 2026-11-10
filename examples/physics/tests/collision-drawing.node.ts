@@ -2,10 +2,10 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { Body, BodyType, createApp, Shape } from "@dylanebert/shallot";
 import { emptyQueryHit, PhysicsWorldDefinition } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { CollisionPlugin, CollisionState, collisionNames } from "../src/collision";
-import { collisionDrag } from "../src/collision-drag";
-import { collisionDrawing } from "../src/collision-presentation";
-import { changeControl, controlValues, createScene, scenes } from "../src/scenes";
+import { CollisionPlugin, CollisionState, collisionNames } from "../src/collision.ts";
+import { collisionDrag } from "../src/collision-drag.ts";
+import { collisionDrawing } from "../src/collision-presentation.ts";
+import { changeControl, controlValues, createScene, scenes } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const INK = 0xeee9df,

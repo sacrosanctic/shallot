@@ -4,7 +4,7 @@ import { cpSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "nod
 import { tmpdir } from "node:os";
 import { resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { removeTestDirectory } from "../../scripts/test-directory";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
 import { cargoRuntimeDir } from "./provenance.js";
 
 setDefaultTimeout(TIMEOUT.node);

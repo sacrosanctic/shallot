@@ -9,7 +9,7 @@ import {
     createTestGpuApp,
     expectAdapterNotice,
 } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { Meshes, MeshInstance } from "../../core/mesh";
 import {
     AmbientLight,
@@ -30,28 +30,28 @@ import { PointsPlugin } from "../../core/rendering/points.fixture";
 import { Transform } from "../../core/transform";
 import { type Plugin, precompile, type World } from "../../engine";
 import { probeBuffer, stampAdapter } from "../../engine/runtime";
-import { type AdapterInfoFacts, classifyAdapter } from "../../engine/runtime/adapter";
+import { type AdapterInfoFacts, classifyAdapter } from "../../engine/runtime/adapter.ts";
 import { EffectStackPlugin, Vignette } from "../../extras/effect-stack";
-import { SkinnedMaterial } from "../../extras/gltf/skinning";
+import { SkinnedMaterial } from "../../extras/gltf/skinning.ts";
 import { drawLine, Gizmo, GizmoAsset, LinesPlugin, registerGizmo } from "../../extras/lines";
 import {
     instanceLayout as lineInstanceLayout,
     lineLayout,
     viewLayout as lineViewLayout,
-} from "../../extras/lines/pipeline";
+} from "../../extras/lines/pipeline.ts";
 import { Sprite, SpriteMaterialInput, SpriteMaterialType, SpritePlugin } from "../../extras/sprite";
-import { SpriteAlphaMode } from "../../extras/sprite/pack";
-import { spritePublicationLayout } from "../../extras/sprite/table";
+import { SpriteAlphaMode } from "../../extras/sprite/pack.ts";
+import { spritePublicationLayout } from "../../extras/sprite/table.ts";
 import { internText, registerFont, Text, TextPlugin } from "../../extras/text";
 import { isolationFont } from "../../extras/text/font.fixture";
-import { textLayout, viewLayout as textViewLayout } from "../../extras/text/pipeline";
+import { textLayout, viewLayout as textViewLayout } from "../../extras/text/pipeline.ts";
 import {
     CLUSTER_COUNT,
     LIGHT_GRID_OFFSET,
     LIGHT_INDICES_OFFSET,
     LIGHT_POOL,
     LightCull,
-} from "./cluster";
+} from "./cluster.ts";
 import {
     AlphaMode,
     AlphaPipelineKey,
@@ -71,8 +71,8 @@ import {
     StandardMaterial,
     StandardRenderer,
     VertexMaterialType,
-} from "./index";
-import { isMeshInstanceDraw } from "./preprocess";
+} from "./index.ts";
+import { isMeshInstanceDraw } from "./preprocess.ts";
 import "../../standard";
 
 const FloorParameters = d.struct({ color: d.vec4f });

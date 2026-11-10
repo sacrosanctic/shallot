@@ -11,4 +11,4 @@ export {
     Transform,
     TransformPlugin,
     TransformRuntime,
-} from "./global-transform";
+} from "./global-transform.ts";

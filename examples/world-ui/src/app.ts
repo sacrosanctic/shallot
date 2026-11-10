@@ -1,6 +1,6 @@
 import type { Plugin } from "@dylanebert/shallot";
 import { DiagnosticsOverlayPlugin } from "@dylanebert/shallot/extras";
-import { DeliveryPlugin } from "./delivery";
+import { DeliveryPlugin } from "./delivery.ts";
 
 export const AppPlugin: Plugin = {
     name: "WorldUiApp",

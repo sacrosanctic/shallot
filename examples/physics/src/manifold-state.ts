@@ -1,6 +1,6 @@
 import type { HullData, LocalManifold } from "@dylanebert/shallot/standard/physics";
-import type { CullingState, WedgeState } from "./manifold-diagnostics";
-import { pose, vector } from "./manifold-math";
+import type { CullingState, WedgeState } from "./manifold-diagnostics.ts";
+import { pose, vector } from "./manifold-math.ts";
 export const manifoldNames = [
     "sphereVsSphere",
     "capsuleVsSphere",

@@ -3,10 +3,10 @@ import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSy
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { digestMismatch, querySteps, recordDigest } from "../../examples/physics/tests/digest";
-import { queryRecords } from "./records";
-import { run } from "./native";
-import { sampleBinary } from "./sample";
+import { digestMismatch, querySteps, recordDigest } from "../../examples/physics/tests/digest.ts";
+import { queryRecords } from "./records.ts";
+import { run } from "./native.ts";
+import { sampleBinary } from "./sample.ts";
 setDefaultTimeout(0);
 for (const scene of ["heightField", "hull"] as const) {
     test(`${scene}: public release query and build digests equal every native step`, async () => {

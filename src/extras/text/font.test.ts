@@ -1,9 +1,9 @@
 import { expect, test } from "bun:test";
 import { MeshPlugin } from "../../core/mesh";
 import type { World } from "../../engine";
-import { DEFAULT_FONT, loadFont, parseFont } from "./font";
+import { DEFAULT_FONT, loadFont, parseFont } from "./font.ts";
 import { isolationFont } from "./font.fixture";
-import { Fonts, TextPlugin } from "./index";
+import { Fonts, TextPlugin } from "./index.ts";
 
 test("the bundled default Inter font loads as regular text", async () => {
     const font = await loadFont(DEFAULT_FONT);

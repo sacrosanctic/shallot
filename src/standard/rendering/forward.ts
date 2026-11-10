@@ -52,10 +52,10 @@ import {
     shadowGroup,
     shadowLayout,
     shadowReady,
-} from "./atlas";
-import { boundPipeline } from "./bound";
-import type { BundleDraw, PassBundle } from "./bundle";
-import { bundleChanged, bundleDraw, newPassBundle, recordBundle, replayBundle } from "./bundle";
+} from "./atlas.ts";
+import { boundPipeline } from "./bound.ts";
+import type { BundleDraw, PassBundle } from "./bundle.ts";
+import { bundleChanged, bundleDraw, newPassBundle, recordBundle, replayBundle } from "./bundle.ts";
 import {
     CullLightsSystem,
     initializeClusterState,
@@ -63,20 +63,20 @@ import {
     UpdateLightClustersSystem,
     warmClusters,
     warmLightCull,
-} from "./cluster";
-import { type Background, Backgrounds, initializeBackgroundState } from "./contract";
-import { engineLayout } from "./engine";
-import { fogSource, sealFogSource } from "./fog";
-import { initializeIndirectLightSources, sealIndirectLightSources } from "./indirect";
-import { instanceDataTable } from "./instance-data";
+} from "./cluster.ts";
+import { type Background, Backgrounds, initializeBackgroundState } from "./contract.ts";
+import { engineLayout } from "./engine.ts";
+import { fogSource, sealFogSource } from "./fog.ts";
+import { initializeIndirectLightSources, sealIndirectLightSources } from "./indirect.ts";
+import { instanceDataTable } from "./instance-data.ts";
 import {
     initializeLightingState,
     LIGHTING_UNIFORM_SIZE,
     Lighting,
     writeLighting,
-} from "./lighting";
-import { MaterialBatches, materialBatch } from "./material-batch";
-import { MeshMaterial } from "./material-data";
+} from "./lighting.ts";
+import { MaterialBatches, materialBatch } from "./material-batch.ts";
+import { MeshMaterial } from "./material-data.ts";
 import {
     AlphaModeCode,
     AlphaPipelineKey,
@@ -89,9 +89,9 @@ import {
     registerMaterialType,
     rethrowMaterialError,
     TransparentMeshes,
-} from "./material-type";
-import { materialAttributeError } from "./mesh-attributes";
-import { publishTransparentCounts } from "./mesh-count";
+} from "./material-type.ts";
+import { materialAttributeError } from "./mesh-attributes.ts";
+import { publishTransparentCounts } from "./mesh-count.ts";
 import {
     type BindResource,
     bgQuant,
@@ -114,24 +114,24 @@ import {
     prepareMaterialTypes,
     resetPipelineCaches,
     setGroup,
-} from "./pipelines";
+} from "./pipelines.ts";
 import {
     disposePrepassTextures,
     prepassTextures,
     ResolvePrepassTexturesSystem,
     warmPrepassTextures,
-} from "./prepass-textures";
+} from "./prepass-textures.ts";
 import {
     isMeshInstanceDraw,
     MeshDrawBuffers,
     MeshPreprocessSystem,
     meshInstanceTable,
     meshKeyCount,
-} from "./preprocess";
-import { producerCapacity } from "./producer-pack";
-import { producerTables } from "./producer-table";
-import { initializeRegatherState, prepareRegather } from "./regather";
-import { type Draw, DrawIndexedIndirect, Draws, initializeDrawState } from "./registry";
+} from "./preprocess.ts";
+import { producerCapacity } from "./producer-pack.ts";
+import { producerTables } from "./producer-table.ts";
+import { initializeRegatherState, prepareRegather } from "./regather.ts";
+import { type Draw, DrawIndexedIndirect, Draws, initializeDrawState } from "./registry.ts";
 import {
     cascadeCount,
     destroyCascades,
@@ -143,8 +143,8 @@ import {
     resetPointShadows,
     updateCascades,
     updatePointShadows,
-} from "./shadows";
-import { Materials, VertexMaterialType } from "./standard-material";
+} from "./shadows.ts";
+import { Materials, VertexMaterialType } from "./standard-material.ts";
 
 interface StandardRendererState {
     warned: Set<string>;

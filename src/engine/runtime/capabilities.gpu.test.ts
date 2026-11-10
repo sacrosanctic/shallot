@@ -2,7 +2,7 @@ import { afterAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { compileGpuFile, createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
 import type { createApp } from "../app";
-import { rawDevice } from "./gpu";
+import { rawDevice } from "./gpu.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const apps: Awaited<ReturnType<typeof createApp>>[] = [];

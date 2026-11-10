@@ -10,14 +10,14 @@ import {
     GlobalAmbientLight,
     Views,
 } from "../../core/rendering";
-import { viewTargetsKey } from "../../core/rendering/targets";
-import { offscreenTexture } from "../../core/rendering/view";
+import { viewTargetsKey } from "../../core/rendering/targets.ts";
+import { offscreenTexture } from "../../core/rendering/view.ts";
 import { Transform } from "../../core/transform";
 import { lookAtRotation, probeTexture, type World } from "../../engine";
-import { StandardRenderer, StandardRenderingPlugin } from "./forward";
-import { Materials, MeshMaterial, StandardMaterial } from "./material";
-import { MeshRenderPlugin } from "./mesh-render";
-import { ScreenSpaceAmbientOcclusion, ScreenSpaceAmbientOcclusionPlugin, ssaoState } from "./ssao";
+import { StandardRenderer, StandardRenderingPlugin } from "./forward.ts";
+import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";
+import { MeshRenderPlugin } from "./mesh-render.ts";
+import { ScreenSpaceAmbientOcclusion, ScreenSpaceAmbientOcclusionPlugin, ssaoState } from "./ssao.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 let camera = 0;

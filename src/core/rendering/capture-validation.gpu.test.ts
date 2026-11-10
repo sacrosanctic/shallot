@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { expectError } from "../../../scripts/test-console";
+import { expectError } from "../../../scripts/test-console.ts";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
-import { attachCanvas, Camera, captureFrame, RenderingPlugin } from "./index";
+import { attachCanvas, Camera, captureFrame, RenderingPlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const subject = gpuScene(

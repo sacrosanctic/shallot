@@ -1,19 +1,19 @@
 import { expect, test } from "bun:test";
-import { BodyType, defaultQueryFilter, type QueryFilter } from "../common/types";
-import { createSphereShape, getSensorData, setShapeFilter } from "../shapes/shape";
+import { BodyType, defaultQueryFilter, type QueryFilter } from "../common/types.ts";
+import { createSphereShape, getSensorData, setShapeFilter } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { bodySetAwake, bodySetLinearVelocity, bodySetTransform, destroyBody } from "../world/body";
-import { init } from "./kernel";
-import { quaternion } from "./math";
-import { queryColumns } from "./querycolumns";
-import { SHAPE_STRIDE } from "./shapecolumns";
-import { ShapeFlags, setShapeFlag } from "./shaperecords";
+} from "../testing.ts";
+import { bodySetAwake, bodySetLinearVelocity, bodySetTransform, destroyBody } from "../world/body.ts";
+import { init } from "./kernel.ts";
+import { quaternion } from "./math.ts";
+import { queryColumns } from "./querycolumns.ts";
+import { SHAPE_STRIDE } from "./shapecolumns.ts";
+import { ShapeFlags, setShapeFlag } from "./shaperecords.ts";
 
 await init(undefined, { threads: 0 });
 const origin = { x: 0, y: 0, z: 0 };

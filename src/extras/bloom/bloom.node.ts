@@ -17,7 +17,7 @@ import { EffectStackPlugin, Vignette } from "../effect-stack";
 import { compare } from "../effect-stack/parity.fixture";
 import { Bloom, BloomCompositeMode, BloomPlugin } from ".";
 import { bevyPipelines, renderBevy } from "./bevy.fixture";
-import { blendFactor, stateKey } from "./state";
+import { blendFactor, stateKey } from "./state.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const width = 64;

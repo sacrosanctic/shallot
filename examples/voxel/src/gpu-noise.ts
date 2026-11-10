@@ -1,7 +1,7 @@
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { SEED, type TerrainConfig } from "./terrain-data";
+import { SEED, type TerrainConfig } from "./terrain-data.ts";
 
 export function heightfield(config: TerrainConfig) {
     const Height = config.height;

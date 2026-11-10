@@ -6,7 +6,7 @@ import {
     disposeGpuApps,
     gpuRequirements,
 } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { MeshInstance } from "../../core/mesh";
 import {
     AmbientLight,
@@ -20,11 +20,11 @@ import {
 import { Transform } from "../../core/transform";
 import type { World } from "../../engine";
 import { rawDevice } from "../../engine/runtime";
-import { StandardRenderer } from "./forward";
-import { StandardRenderingPlugin } from "./index";
-import { Materials, MeshMaterial, StandardMaterial } from "./material";
-import { MeshRenderPlugin } from "./mesh-render";
-import { PointShadows, updatePointShadows } from "./shadows";
+import { StandardRenderer } from "./forward.ts";
+import { StandardRenderingPlugin } from "./index.ts";
+import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";
+import { MeshRenderPlugin } from "./mesh-render.ts";
+import { PointShadows, updatePointShadows } from "./shadows.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

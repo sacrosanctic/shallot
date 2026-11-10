@@ -16,22 +16,22 @@ import {
     Views,
     VolumetricLight,
 } from "../../core/rendering";
-import { tonemappingStateKey } from "../../core/rendering/tonemapping-state";
+import { tonemappingStateKey } from "../../core/rendering/tonemapping-state.ts";
 import {
     presentingViewRefusal,
     presentingViewSlot,
     viewResourcesKey,
-} from "../../core/rendering/view";
+} from "../../core/rendering/view.ts";
 import type { World } from "../../engine";
 import { Fog, FogPlugin } from "../../extras/fog";
 import { Outline, OutlinePlugin } from "../../extras/outline";
-import { CLUSTER_COUNT, CLUSTER_Z, Clusters, clusterGpuKey, LightCull } from "./cluster";
-import { engineLayout } from "./engine";
-import { StandardRenderer } from "./forward";
-import { MAX_POINT_LIGHTS } from "./lighting";
-import { Materials, MeshMaterial, StandardMaterial } from "./material";
-import { getGroup } from "./pipelines";
-import { Draws } from "./registry";
+import { CLUSTER_COUNT, CLUSTER_Z, Clusters, clusterGpuKey, LightCull } from "./cluster.ts";
+import { engineLayout } from "./engine.ts";
+import { StandardRenderer } from "./forward.ts";
+import { MAX_POINT_LIGHTS } from "./lighting.ts";
+import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";
+import { getGroup } from "./pipelines.ts";
+import { Draws } from "./registry.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

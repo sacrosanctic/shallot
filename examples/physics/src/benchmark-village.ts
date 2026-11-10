@@ -22,8 +22,8 @@ import {
     StepPhysicsSystem,
     SyncPhysicsConstraintsSystem,
 } from "@dylanebert/shallot/standard/physics";
-import { add, cross, mul, v } from "./mover";
-import type { Controls } from "./scenes";
+import { add, cross, mul, v } from "./mover.ts";
+import type { Controls } from "./scenes.ts";
 
 const f = Math.fround;
 export const BenchmarkVillageState = {

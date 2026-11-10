@@ -1,7 +1,7 @@
 import { expect, spyOn, test } from "bun:test";
-import { component } from "./component";
-import { RegisteredQuery } from "./query";
-import { World } from "./world";
+import { component } from "./component.ts";
+import { RegisteredQuery } from "./query.ts";
+import { World } from "./world.ts";
 
 function subject() {
     const query = new RegisteredQuery([]);

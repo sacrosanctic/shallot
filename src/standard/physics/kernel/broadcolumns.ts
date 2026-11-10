@@ -2,10 +2,10 @@ import type { World } from "../../../engine";
 // crates/physics/src/broad.rs owns the resident broad phase. Reserves can move its columns;
 // refresh tree views after grow-capable calls, not per iteration.
 
-import type { WorldState } from "../world/world";
-import { kernel } from "./kernel";
-import type { DynamicTree } from "./treecolumns";
-import { KernelViews } from "./views";
+import type { WorldState } from "../world/world.ts";
+import { kernel } from "./kernel.ts";
+import type { DynamicTree } from "./treecolumns.ts";
+import { KernelViews } from "./views.ts";
 
 /** Slots in broad.rs's derived inspection record, not a second simulation tree. */
 const TREE_STRIDE = 12;

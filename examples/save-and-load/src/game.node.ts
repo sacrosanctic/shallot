@@ -11,9 +11,9 @@ import {
 import { attachTexture } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { addCoin, count, Game, loadGame, newGame, saveGame, saveLabel } from "./game";
-import { COIN_CAP, COIN_DIAMETER, Coin, encode, placement, SAVE_KEY } from "./save";
-import { Scene } from "./scene";
+import { addCoin, count, Game, loadGame, newGame, saveGame, saveLabel } from "./game.ts";
+import { COIN_CAP, COIN_DIAMETER, Coin, encode, placement, SAVE_KEY } from "./save.ts";
+import { Scene } from "./scene.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 let app: Awaited<ReturnType<typeof createApp>>;

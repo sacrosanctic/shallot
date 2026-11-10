@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { frameDelta } from "./frame-delta";
+import { frameDelta } from "./frame-delta.ts";
 
 test("the first frame has no elapsed delta", () => {
     expect(frameDelta(16.7, -1)).toBe(0);

@@ -25,7 +25,7 @@ import {
     StandardRenderer,
     StandardRenderingPlugin,
     VertexMaterialType,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

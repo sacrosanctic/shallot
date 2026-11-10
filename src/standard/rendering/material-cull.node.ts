@@ -8,7 +8,7 @@ import {
     disposeGpuApps,
     gpuScene,
 } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { Meshes, type MeshHandle, MeshInstance } from "../../core/mesh";
 import {
     attachTexture,
@@ -24,7 +24,7 @@ import { Transform } from "../../core/transform";
 import { lookAtRotation, type Plugin, precompile, type World } from "../../engine";
 import { probeBuffer } from "../../engine/runtime";
 import { DEFAULT_PLUGINS } from "../../standard";
-import { sunShadowView } from "./atlas";
+import { sunShadowView } from "./atlas.ts";
 import {
     AlphaMode,
     type MaterialHandle,
@@ -35,9 +35,9 @@ import {
     registerProducerTable,
     StandardMaterial,
     StandardRenderer,
-} from "./index";
-import { MeshDrawBuffers } from "./preprocess";
-import { Draws } from "./registry";
+} from "./index.ts";
+import { MeshDrawBuffers } from "./preprocess.ts";
+import { Draws } from "./registry.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

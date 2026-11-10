@@ -4,10 +4,10 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import type { Browser } from "playwright";
 import * as build from "../project";
-import { publishProject } from "./publish";
-import * as cloudflare from "./publish-cloudflare";
-import * as itch from "./publish-itch";
-import * as verify from "./publish-verify";
+import { publishProject } from "./publish.ts";
+import * as cloudflare from "./publish-cloudflare.ts";
+import * as itch from "./publish-itch.ts";
+import * as verify from "./publish-verify.ts";
 
 for (const scenario of [
     "cloudflare",

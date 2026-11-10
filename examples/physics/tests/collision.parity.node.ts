@@ -1,18 +1,18 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { CollisionPlugin, CollisionState, collisionNames } from "../src/collision";
+import { CollisionPlugin, CollisionState, collisionNames } from "../src/collision.ts";
 import {
     CollisionDebug,
     CollisionDebugPlugin,
     debugDrag,
     debugNames,
-} from "../src/collision-debug";
-import { changeControl, controlValues, createScene } from "../src/scenes";
-import { debugRecords } from "./collision-debug-records";
-import { collisionInput } from "./collision-input";
-import { collisionRecords } from "./collision-records";
-import { recordDigest } from "./digest";
+} from "../src/collision-debug.ts";
+import { changeControl, controlValues, createScene } from "../src/scenes.ts";
+import { debugRecords } from "./collision-debug-records.ts";
+import { collisionInput } from "./collision-input.ts";
+import { collisionRecords } from "./collision-records.ts";
+import { recordDigest } from "./digest.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of collisionNames) {

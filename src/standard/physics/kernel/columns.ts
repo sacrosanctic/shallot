@@ -9,4 +9,4 @@ export const CENTER0 = 14;
 export const MIN_EXTENT = 54;
 export const BODY_ID = 61;
 export const FLAGS = 62;
-export * from "./joint-layout";
+export * from "./joint-layout.ts";

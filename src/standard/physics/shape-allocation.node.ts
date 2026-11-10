@@ -4,18 +4,18 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import {
     allocationFailure,
     sampleAllocation,
-} from "../../../diagnostics/first-person-allocation/allocation";
-import { countedKernelBytes } from "../../../scripts/counted-kernel";
-import { BodyType, defaultSurfaceMaterial, ShapeType } from "./common/types";
-import { BodyField, setBodyField } from "./kernel/bodyrecords";
-import { hullDatabaseIndex } from "./kernel/geocolumns";
-import { clockImport, type Kernel, kernelState } from "./kernel/kernel";
-import { S_GEO_REFERENCE, SHAPE_STRIDE } from "./kernel/shapecolumns";
+} from "../../../diagnostics/first-person-allocation/allocation.ts";
+import { countedKernelBytes } from "../../../scripts/counted-kernel.ts";
+import { BodyType, defaultSurfaceMaterial, ShapeType } from "./common/types.ts";
+import { BodyField, setBodyField } from "./kernel/bodyrecords.ts";
+import { hullDatabaseIndex } from "./kernel/geocolumns.ts";
+import { clockImport, type Kernel, kernelState } from "./kernel/kernel.ts";
+import { S_GEO_REFERENCE, SHAPE_STRIDE } from "./kernel/shapecolumns.ts";
 import { shapeAllocationSubject } from "./shape-allocation.fixture";
-import { makeBoxHull } from "./shapes/build-hull";
-import { createCompound } from "./shapes/compound";
-import { createGrid } from "./shapes/heightfield";
-import { createGridMesh } from "./shapes/mesh";
+import { makeBoxHull } from "./shapes/build-hull.ts";
+import { createCompound } from "./shapes/compound.ts";
+import { createGrid } from "./shapes/heightfield.ts";
+import { createGridMesh } from "./shapes/mesh.ts";
 import {
     createCompoundShape,
     createHeightFieldShape,
@@ -23,10 +23,10 @@ import {
     createMeshShape,
     createSphereShape,
     destroyShape,
-} from "./shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "./testing";
-import { bodyIsAwake, bodySetAwake, destroyBody } from "./world/body";
-import type { WorldState } from "./world/world";
+} from "./shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "./testing.ts";
+import { bodyIsAwake, bodySetAwake, destroyBody } from "./world/body.ts";
+import type { WorldState } from "./world/world.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const entry = resolve(import.meta.dir, "fixtures/shape-allocation.entry.ts");

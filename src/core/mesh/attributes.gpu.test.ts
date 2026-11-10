@@ -3,8 +3,8 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import type { TgpuBuffer } from "typegpu";
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { Meshes, type MeshHandle, MeshPlugin } from "./index";
-import { clearMeshes, flushMeshes } from "./mesh";
+import { Meshes, type MeshHandle, MeshPlugin } from "./index.ts";
+import { clearMeshes, flushMeshes } from "./mesh.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const subjects = gpuApps(import.meta.path, [{ defaults: false, plugins: [MeshPlugin] }]);

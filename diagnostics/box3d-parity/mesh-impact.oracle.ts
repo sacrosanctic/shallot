@@ -5,16 +5,16 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import gold from "../../crates/physics/tests/mesh_impact.gold.json";
 import { World } from "../../src/engine";
-import { BodyType, defaultShapeDef, defaultSurfaceMaterial } from "../../src/standard/physics/common/types";
-import { init } from "../../src/standard/physics/kernel/kernel";
-import { makeBoxHull } from "../../src/standard/physics/shapes/build-hull";
-import { createMesh } from "../../src/standard/physics/shapes/build-nonconvex";
-import { createCompound } from "../../src/standard/physics/shapes/compound";
-import { createCompoundShape, createHullShape, createMeshShape } from "../../src/standard/physics/shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld } from "../../src/standard/physics/testing";
-import { bodyGetLinearVelocity, bodyGetTransform } from "../../src/standard/physics/world/body";
-import { nativeSseOutput } from "./native-evidence";
-import { hashWorldState } from "../../src/standard/physics/world/hash";
+import { BodyType, defaultShapeDef, defaultSurfaceMaterial } from "../../src/standard/physics/common/types.ts";
+import { init } from "../../src/standard/physics/kernel/kernel.ts";
+import { makeBoxHull } from "../../src/standard/physics/shapes/build-hull.ts";
+import { createMesh } from "../../src/standard/physics/shapes/build-nonconvex.ts";
+import { createCompound } from "../../src/standard/physics/shapes/compound.ts";
+import { createCompoundShape, createHullShape, createMeshShape } from "../../src/standard/physics/shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld } from "../../src/standard/physics/testing.ts";
+import { bodyGetLinearVelocity, bodyGetTransform } from "../../src/standard/physics/world/body.ts";
+import { nativeSseOutput } from "./native-evidence.ts";
+import { hashWorldState } from "../../src/standard/physics/world/hash.ts";
 
 setDefaultTimeout(180_000);
 

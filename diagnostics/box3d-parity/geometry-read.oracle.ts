@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import gold from "../../crates/physics/tests/geometry_read.gold.json";
-import { init, kernel } from "../../src/standard/physics/kernel/kernel";
-import { nativeBinary, run } from "./native";
+import { init, kernel } from "../../src/standard/physics/kernel/kernel.ts";
+import { nativeBinary, run } from "./native.ts";
 
 test("shape AABBs, safe scale and triangle decoding equal native Box3D bits", async () => {
     const native = JSON.parse(run([nativeBinary("geometry-read.c")])) as typeof gold;

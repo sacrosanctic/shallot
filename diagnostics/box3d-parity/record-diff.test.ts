@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { compareRecords } from "./record-diff";
+import { compareRecords } from "./record-diff.ts";
 
 test("one changed event reports its record index and both values", () => {
     const native = "0000000000000001 [[[1,2,3,4],[5,6,7,8]],[],[],[],[],[]]\n";

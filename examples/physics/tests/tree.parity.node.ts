@@ -1,11 +1,11 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { changeControl, controlValues, createScene } from "../src/scenes";
-import { TreeBenchmarkPlugin, treeRecords } from "../src/tree";
-import { treeBounds, treeQueryDrawing } from "../src/tree-presentation";
-import { drawingDigest } from "./digest";
-import { sampleGold } from "./gold";
+import { changeControl, controlValues, createScene } from "../src/scenes.ts";
+import { TreeBenchmarkPlugin, treeRecords } from "../src/tree.ts";
+import { treeBounds, treeQueryDrawing } from "../src/tree-presentation.ts";
+import { drawingDigest } from "./digest.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const controlled of [false, true])

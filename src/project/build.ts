@@ -1,5 +1,5 @@
 import { resolve } from "node:path";
-import { runVite } from "./vite-command";
+import { runVite } from "./vite-command.ts";
 
 /** Build through the project's own Vite config. */
 export async function buildWeb(

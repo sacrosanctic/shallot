@@ -1,4 +1,4 @@
-import { SEED, type TerrainConfig } from "./terrain-data";
+import { SEED, type TerrainConfig } from "./terrain-data.ts";
 
 function gradient(x: number, z: number, dx: number, dz: number): number {
     let h = (Math.imul(x, 374761393) + Math.imul(z, 668265263) + SEED) >>> 0;

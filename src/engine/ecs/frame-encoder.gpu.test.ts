@@ -6,7 +6,7 @@ import * as d from "typegpu/data";
 import { createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
 import type { Plugin } from "../app";
 import { probeBuffer } from "../runtime";
-import type { World } from "./world";
+import type { World } from "./world.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 await setupGlobals();

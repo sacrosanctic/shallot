@@ -33,27 +33,27 @@ import {
     restore as restoreWorld,
     snapshotBindings,
     snapshot as snapshotWorld,
-} from "./api/snapshot";
-import { bodyBinding, jointBindings, shapeBinding } from "./authoring";
-import { BodyDependencies } from "./body-dependencies";
-import { syncBodyFields } from "./body-sync";
-import type { ShapeProxy } from "./collision/distance";
-import { DEFAULT_MASK_BITS, SetType } from "./common/constants";
-import type { EntityId } from "./common/ids";
-import { ContactDataBuffer, type PhysicsContactData } from "./contact";
-import { PhysicsCreationOrder, recordPhysicsMembership } from "./creation-order";
-import { jointIsValid, getJointLinearSeparation as jointLinearSeparation } from "./solver/joint";
+} from "./api/snapshot.ts";
+import { bodyBinding, jointBindings, shapeBinding } from "./authoring.ts";
+import { BodyDependencies } from "./body-dependencies.ts";
+import { syncBodyFields } from "./body-sync.ts";
+import type { ShapeProxy } from "./collision/distance.ts";
+import { DEFAULT_MASK_BITS, SetType } from "./common/constants.ts";
+import type { EntityId } from "./common/ids.ts";
+import { ContactDataBuffer, type PhysicsContactData } from "./contact.ts";
+import { PhysicsCreationOrder, recordPhysicsMembership } from "./creation-order.ts";
+import { jointIsValid, getJointLinearSeparation as jointLinearSeparation } from "./solver/joint.ts";
 import {
     pogoJointCurrentLength,
     pogoJointCurrentSpeed,
     pogoJointImpulse,
-} from "./solver/pogoJoint";
+} from "./solver/pogoJoint.ts";
 
 const f32 = Math.fround;
 
-import type { PlaneResult } from "./collision/mover";
-import { defaultWorldDef, type QueryFilter, type WorldDef } from "./common/types";
-import { EidColumn } from "./eid-column";
+import type { PlaneResult } from "./collision/mover.ts";
+import { defaultWorldDef, type QueryFilter, type WorldDef } from "./common/types.ts";
+import { EidColumn } from "./eid-column.ts";
 import {
     clearPhysicsEvents,
     type PhysicsContactEvent,
@@ -62,7 +62,7 @@ import {
     type PhysicsHitEvent,
     type PhysicsJointEvent,
     type PhysicsSensorEvent,
-} from "./events";
+} from "./events.ts";
 import {
     captureFieldCandidate,
     captureFieldCandidates,
@@ -72,12 +72,12 @@ import {
     type FieldCandidates,
     markFieldCandidate,
     requeueFieldCandidate,
-} from "./field-candidates";
+} from "./field-candidates.ts";
 import {
     captureGeometryBuilds,
     type GeometryBuilds,
     restoreGeometryBuilds,
-} from "./geometry-builds";
+} from "./geometry-builds.ts";
 import {
     type ConstraintCache,
     type ConstraintIds,
@@ -88,11 +88,11 @@ import {
     resetConstraints,
     restoreConstraints,
     syncJoints,
-} from "./joints";
-import { readSimInvInertiaWorld, readSimInvMass, readSimTransform } from "./kernel/bodycolumns";
-import { BodyField, bodyField } from "./kernel/bodyrecords";
-import { EventKind, eventCount } from "./kernel/eventbuffers";
-import { readJointEventUserData } from "./kernel/jointcolumns";
+} from "./joints.ts";
+import { readSimInvInertiaWorld, readSimInvMass, readSimTransform } from "./kernel/bodycolumns.ts";
+import { BodyField, bodyField } from "./kernel/bodyrecords.ts";
+import { EventKind, eventCount } from "./kernel/eventbuffers.ts";
+import { readJointEventUserData } from "./kernel/jointcolumns.ts";
 import {
     artifact,
     KernelAllocationError,
@@ -103,18 +103,18 @@ import {
     setQueryCallback,
     threads,
     writeQueryReturn,
-} from "./kernel/kernel";
-import { queryColumns } from "./kernel/querycolumns";
-import { readShapeAabb } from "./kernel/shapecolumns";
-import { ShapeField, shapeField } from "./kernel/shaperecords";
+} from "./kernel/kernel.ts";
+import { queryColumns } from "./kernel/querycolumns.ts";
+import { readShapeAabb } from "./kernel/shapecolumns.ts";
+import { ShapeField, shapeField } from "./kernel/shaperecords.ts";
 import {
     setBodyCount,
     solverSetCount,
     solverSetIndex,
     wakeSolverSet,
-} from "./kernel/solversetcolumns";
-import { marshalBody } from "./marshal";
-import { marshalShape, shapeBodyScale } from "./marshal-shape";
+} from "./kernel/solversetcolumns.ts";
+import { marshalBody } from "./marshal.ts";
+import { marshalShape, shapeBodyScale } from "./marshal-shape.ts";
 import {
     captureShapeRecreationState,
     clearShapeRecreationStates,
@@ -126,10 +126,10 @@ import {
     shapeNeedsRecreation,
     shapeRecreationState,
     syncShapeFields,
-} from "./shape-sync";
-import type { Capsule } from "./shapes/geometry";
-import { destroyShape, shapeIsValid } from "./shapes/shape";
-import { step as stepWorld } from "./solver/step";
+} from "./shape-sync.ts";
+import type { Capsule } from "./shapes/geometry.ts";
+import { destroyShape, shapeIsValid } from "./shapes/shape.ts";
+import { step as stepWorld } from "./solver/step.ts";
 import {
     bodyApplyAngularImpulse,
     bodyApplyForce,
@@ -152,11 +152,11 @@ import {
     bodySetTransform,
     bodySetType,
     destroyBody,
-} from "./world/body";
-import { type PhysicsWorldCounters, WorldCountersBuffer } from "./world/counters";
-import { type DebugDraw, worldDraw } from "./world/draw";
-import { hashWorldState } from "./world/hash";
-import { PROFILE_FIELDS, readStepProfile } from "./world/profile";
+} from "./world/body.ts";
+import { type PhysicsWorldCounters, WorldCountersBuffer } from "./world/counters.ts";
+import { type DebugDraw, worldDraw } from "./world/draw.ts";
+import { hashWorldState } from "./world/hash.ts";
+import { PROFILE_FIELDS, readStepProfile } from "./world/profile.ts";
 import {
     bindShapeEntity,
     clearShapeEntities,
@@ -166,7 +166,7 @@ import {
     retireShapeEntity,
     type ShapeEntity,
     shapeEntityAt,
-} from "./world/shape-entities";
+} from "./world/shape-entities.ts";
 import {
     createWorld,
     destroyWorld,
@@ -182,12 +182,12 @@ import {
     worldSetRestitutionIterations,
     worldSetRestitutionThreshold,
     worldStateIsValid,
-} from "./world/world";
+} from "./world/world.ts";
 import {
     copyPhysicsWorldDefinition,
     PhysicsWorldDefinition,
     type PhysicsWorldDefinitionConfig,
-} from "./world-definition";
+} from "./world-definition.ts";
 
 const fixedDeltaTime = Time.FIXED_DT;
 

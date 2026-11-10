@@ -1,12 +1,12 @@
 import { expect, test } from "bun:test";
 import { World } from "../../../engine";
-import { StandardPhysicsPlugin } from "../index";
-import { physicsState } from "../runtime";
-import { createSphereShape } from "../shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing";
-import { shapeBodyId } from "./filtercolumns";
-import { kernel } from "./kernel";
-import { queryColumns } from "./querycolumns";
+import { StandardPhysicsPlugin } from "../index.ts";
+import { physicsState } from "../runtime.ts";
+import { createSphereShape } from "../shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
+import { shapeBodyId } from "./filtercolumns.ts";
+import { kernel } from "./kernel.ts";
+import { queryColumns } from "./querycolumns.ts";
 
 test("callback-free mover planes publish the first eight records and prepare clears body exclusion", async () => {
     const world = new World();

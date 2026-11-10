@@ -16,7 +16,7 @@ import { Transform } from "../../core/transform";
 import { lookAtRotation, precompile, type World } from "../../engine";
 import { probeBuffer } from "../../engine/runtime";
 import { DEFAULT_PLUGINS } from "../../standard";
-import { sunShadowView } from "./atlas";
+import { sunShadowView } from "./atlas.ts";
 import {
     AlphaMode,
     MeshInstanceInput,
@@ -26,9 +26,9 @@ import {
     materialType,
     registerProducerTable,
     StandardRenderer,
-} from "./index";
-import { MeshDrawBuffers } from "./preprocess";
-import { Draws } from "./registry";
+} from "./index.ts";
+import { MeshDrawBuffers } from "./preprocess.ts";
+import { Draws } from "./registry.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const material = materialType({

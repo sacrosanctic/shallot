@@ -1,6 +1,6 @@
 import { holdFrames } from "@dylanebert/shallot/testing";
 import { expect, test } from "playwright/test";
-import { capture } from "./capture";
+import { capture } from "./capture.ts";
 
 for (const width of [1280, 390]) {
     test(`Dynamic Mover aiming look review at ${width}`, async ({ browser }, info) => {

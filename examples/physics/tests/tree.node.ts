@@ -1,16 +1,16 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { Body, createApp, Transform } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { INK } from "../src/ink-presentation";
-import { scenePresentation } from "../src/presentation";
-import { changeControl, controlValues, createScene, scenes } from "../src/scenes";
-import { TreeBenchmarkPlugin, TreeBenchmarkState, treeRecords } from "../src/tree";
+import { INK } from "../src/ink-presentation.ts";
+import { scenePresentation } from "../src/presentation.ts";
+import { changeControl, controlValues, createScene, scenes } from "../src/scenes.ts";
+import { TreeBenchmarkPlugin, TreeBenchmarkState, treeRecords } from "../src/tree.ts";
 import {
     drawTreeBenchmark,
     TREE_VISITED,
     treeBounds,
     treeQueryDrawing,
-} from "../src/tree-presentation";
+} from "../src/tree-presentation.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("Tree Benchmark draws query shapes in ink and distinguishes visited leaves without adding physics bodies", async () => {

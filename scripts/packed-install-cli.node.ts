@@ -12,8 +12,8 @@ import {
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { packedInstall } from "./packed-install-spawn";
-import { removeTestDirectory } from "./test-directory";
+import { packedInstall } from "./packed-install-spawn.ts";
+import { removeTestDirectory } from "./test-directory.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

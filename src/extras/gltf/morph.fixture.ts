@@ -1,5 +1,5 @@
 import { readFileSync } from "node:fs";
-import type { GltfJson } from "./gltf";
+import type { GltfJson } from "./gltf.ts";
 
 export function morphFixture() {
     const json = JSON.parse(

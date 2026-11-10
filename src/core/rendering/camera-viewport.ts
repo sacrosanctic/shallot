@@ -1,5 +1,5 @@
 import type { World } from "../../engine";
-import { CameraViewport } from "./camera";
+import { CameraViewport } from "./camera.ts";
 
 export interface CameraRect {
     x: number;

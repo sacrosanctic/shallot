@@ -3,13 +3,13 @@ import { readdirSync, existsSync, cpSync, copyFileSync, mkdirSync, mkdtempSync, 
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { run } from "./native";
-import { sampleBinary } from "./sample";
-import { nativeCompoundRecords } from "./compound-records";
-import { nativeMeshRecords } from "./mesh-records";
-import { nativeMeshFrames } from "./mesh-frames";
-import { sampleGold } from "../../examples/physics/tests/gold";
-import { digestMismatch, drawingDigest, eventDigests, querySteps, recordDigest } from "../../examples/physics/tests/digest";
+import { run } from "./native.ts";
+import { sampleBinary } from "./sample.ts";
+import { nativeCompoundRecords } from "./compound-records.ts";
+import { nativeMeshRecords } from "./mesh-records.ts";
+import { nativeMeshFrames } from "./mesh-frames.ts";
+import { sampleGold } from "../../examples/physics/tests/gold.ts";
+import { digestMismatch, drawingDigest, eventDigests, querySteps, recordDigest } from "../../examples/physics/tests/digest.ts";
 
 setDefaultTimeout(0);
 

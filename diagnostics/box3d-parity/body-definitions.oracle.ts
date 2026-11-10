@@ -3,7 +3,7 @@ import { createApp } from "../../src/engine";
 import { Body, BodyMotionLock, BodyType } from "../../src/core/physics";
 import { hashPhysics, StandardPhysicsPlugin } from "../../src/standard/physics";
 import { init } from "../../src/standard/physics/api";
-import { defaultSurfaceMaterial } from "../../src/standard/physics/common/types";
+import { defaultSurfaceMaterial } from "../../src/standard/physics/common/types.ts";
 import {
     BodyProperty,
     bodyDisable,
@@ -18,21 +18,21 @@ import {
     bodySetTransform,
     bodySetType,
     getMassData,
-} from "../../src/standard/physics/world/body";
-import { hashWorldState } from "../../src/standard/physics/world/hash";
-import { worldCounters } from "../../src/standard/physics/world/world";
-import { createHullShape, createSphereShape } from "../../src/standard/physics/shapes/shape";
-import { makeBoxHull } from "../../src/standard/physics/shapes/build-hull";
+} from "../../src/standard/physics/world/body.ts";
+import { hashWorldState } from "../../src/standard/physics/world/hash.ts";
+import { worldCounters } from "../../src/standard/physics/world/world.ts";
+import { createHullShape, createSphereShape } from "../../src/standard/physics/shapes/shape.ts";
+import { makeBoxHull } from "../../src/standard/physics/shapes/build-hull.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../../src/standard/physics/testing";
-import type { WorldState } from "../../src/standard/physics/world/world";
-import { nativeSseOutput } from "./native-evidence";
-import { assertPublicOracleKernel } from "./oracle-kernel";
+} from "../../src/standard/physics/testing.ts";
+import type { WorldState } from "../../src/standard/physics/world/world.ts";
+import { nativeSseOutput } from "./native-evidence.ts";
+import { assertPublicOracleKernel } from "./oracle-kernel.ts";
 
 setDefaultTimeout(180_000);
 await init(undefined, { threads: 0 });

@@ -9,8 +9,8 @@ import {
     MaterialBatches,
     materialBatch,
     syncMaterialBatches,
-} from "./material-batch";
-import { MaterialAssets, materialLayout, materialType } from "./material-type";
+} from "./material-batch.ts";
+import { MaterialAssets, materialLayout, materialType } from "./material-type.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const layout = tgpu.bindGroupLayout({

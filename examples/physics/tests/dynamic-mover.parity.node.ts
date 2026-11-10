@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { Body, createApp, type EntityRef, hashPhysics, Shape } from "@dylanebert/shallot";
 import { PhysicsEvents, StepPhysicsSystem } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { DynamicMoverPlugin, DynamicMoverState } from "../src/dynamic-mover-scene";
-import { changeControl, controlValues, createScene } from "../src/scenes";
-import { sampleGold } from "./gold";
+import { DynamicMoverPlugin, DynamicMoverState } from "../src/dynamic-mover-scene.ts";
+import { changeControl, controlValues, createScene } from "../src/scenes.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const controlled of [false, true])

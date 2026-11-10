@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { Diagnostic, DiagnosticPath, DiagnosticsStore } from "./index";
+import { Diagnostic, DiagnosticPath, DiagnosticsStore } from "./index.ts";
 
 test("three frame samples retain history and use time-weighted smoothing", () => {
     const store = new DiagnosticsStore();

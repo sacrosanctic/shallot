@@ -7,7 +7,7 @@ import {
     World,
 } from "@dylanebert/shallot";
 import { SkyPlugin } from "@dylanebert/shallot/extras";
-import { Room, RoomPlugin } from "./room";
+import { Room, RoomPlugin } from "./room.ts";
 
 function scene() {
     const world = new World();

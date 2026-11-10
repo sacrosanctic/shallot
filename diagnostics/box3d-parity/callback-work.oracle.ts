@@ -1,21 +1,21 @@
 import { expect, test } from "bun:test";
-import { BodyType, defaultSurfaceMaterial } from "../../src/standard/physics/common/types";
-import { createCompound } from "../../src/standard/physics/shapes/compound";
-import { createHeightField } from "../../src/standard/physics/shapes/heightfield";
-import { makeBoxHull } from "../../src/standard/physics/shapes/build-hull";
-import { createMesh } from "../../src/standard/physics/shapes/mesh";
+import { BodyType, defaultSurfaceMaterial } from "../../src/standard/physics/common/types.ts";
+import { createCompound } from "../../src/standard/physics/shapes/compound.ts";
+import { createHeightField } from "../../src/standard/physics/shapes/heightfield.ts";
+import { makeBoxHull } from "../../src/standard/physics/shapes/build-hull.ts";
+import { createMesh } from "../../src/standard/physics/shapes/mesh.ts";
 import {
     createCompoundShape,
     createHeightFieldShape,
     createHullShape,
     createMeshShape,
     createSphereShape,
-} from "../../src/standard/physics/shapes/shape";
-import { kernel } from "../../src/standard/physics/kernel/kernel";
-import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld, testShapeDef } from "../../src/standard/physics/testing";
-import { worldCounters, worldSetCustomFilterCallback, worldSetPreSolveCallback } from "../../src/standard/physics/world/world";
-import type { WorldState } from "../../src/standard/physics/world/world";
-import { assertPublicOracleKernel } from "./oracle-kernel";
+} from "../../src/standard/physics/shapes/shape.ts";
+import { kernel } from "../../src/standard/physics/kernel/kernel.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, stepTestWorld, testShapeDef } from "../../src/standard/physics/testing.ts";
+import { worldCounters, worldSetCustomFilterCallback, worldSetPreSolveCallback } from "../../src/standard/physics/world/world.ts";
+import type { WorldState } from "../../src/standard/physics/world/world.ts";
+import { assertPublicOracleKernel } from "./oracle-kernel.ts";
 
 function count(world: WorldState, lane: number): number {
     return (kernel(world.ecsState) as unknown as {

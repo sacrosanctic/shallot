@@ -1,6 +1,6 @@
-import { mixContacts } from "../collision/collide";
-import { advanceStep, kernelState } from "../kernel/kernel";
-import type { WorldState } from "../world/world";
+import { mixContacts } from "../collision/collide.ts";
+import { advanceStep, kernelState } from "../kernel/kernel.ts";
+import type { WorldState } from "../world/world.ts";
 
 /** Run serial user callbacks between kernel continuations of b3World_Step. */
 export function solve(world: WorldState): void {

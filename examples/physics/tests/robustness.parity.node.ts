@@ -1,10 +1,10 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, hashPhysics, Shape } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { RobustnessSamplePlugin, robustnessScenes } from "../src/robustness";
-import { sceneSwitcher } from "../src/sample";
-import { changeControl, controlValues, createScene, type Scene, scenes } from "../src/scenes";
-import { sampleGold } from "./gold";
+import { RobustnessSamplePlugin, robustnessScenes } from "../src/robustness.ts";
+import { sceneSwitcher } from "../src/sample.ts";
+import { changeControl, controlValues, createScene, type Scene, scenes } from "../src/scenes.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of Object.keys(robustnessScenes) as (keyof typeof robustnessScenes)[]) {

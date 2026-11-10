@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { setupGlobals } from "../runtime/webgpu";
+import { setupGlobals } from "../runtime/webgpu.ts";
 
 await setupGlobals();
 

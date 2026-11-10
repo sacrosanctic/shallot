@@ -14,12 +14,12 @@ import {
     type MeshData,
     makeBoxHull,
     makeTransformedBoxHull,
-} from "../api/index";
-import { froundConfig } from "../common/config";
-import type { Capacity, ShapeDef } from "../common/types";
-import { readStateAngularVelocity } from "../kernel/bodycolumns";
-import { EventKind, eventCount, eventId } from "../kernel/eventbuffers";
-import { quaternion as mathQuat } from "../kernel/math";
+} from "../api/index.ts";
+import { froundConfig } from "../common/config.ts";
+import type { Capacity, ShapeDef } from "../common/types.ts";
+import { readStateAngularVelocity } from "../kernel/bodycolumns.ts";
+import { EventKind, eventCount, eventId } from "../kernel/eventbuffers.ts";
+import { quaternion as mathQuat } from "../kernel/math.ts";
 import {
     createCapsuleShape,
     createCompoundShape,
@@ -28,23 +28,23 @@ import {
     createMeshShape,
     createSphereShape,
     isSensorShape,
-} from "../shapes/shape";
-import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint";
-import { createFilterJoint, defaultJointDef, type JointDef } from "../solver/joint";
-import { createMotorJoint, defaultMotorJointDef } from "../solver/motorJoint";
-import { createParallelJoint, defaultParallelJointDef } from "../solver/parallelJoint";
-import { createPrismaticJoint, defaultPrismaticJointDef } from "../solver/prismaticJoint";
-import { createRevoluteJoint, defaultRevoluteJointDef } from "../solver/revoluteJoint";
-import { createSphericalJoint, defaultSphericalJointDef } from "../solver/sphericalJoint";
-import { createWeldJoint, defaultWeldJointDef } from "../solver/weldJoint";
-import { createWheelJoint, defaultWheelJointDef } from "../solver/wheelJoint";
+} from "../shapes/shape.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint.ts";
+import { createFilterJoint, defaultJointDef, type JointDef } from "../solver/joint.ts";
+import { createMotorJoint, defaultMotorJointDef } from "../solver/motorJoint.ts";
+import { createParallelJoint, defaultParallelJointDef } from "../solver/parallelJoint.ts";
+import { createPrismaticJoint, defaultPrismaticJointDef } from "../solver/prismaticJoint.ts";
+import { createRevoluteJoint, defaultRevoluteJointDef } from "../solver/revoluteJoint.ts";
+import { createSphericalJoint, defaultSphericalJointDef } from "../solver/sphericalJoint.ts";
+import { createWeldJoint, defaultWeldJointDef } from "../solver/weldJoint.ts";
+import { createWheelJoint, defaultWheelJointDef } from "../solver/wheelJoint.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
+} from "../testing.ts";
 import {
     bodyGetLinearVelocity,
     bodyGetTransform,
@@ -53,9 +53,9 @@ import {
     bodySetTargetTransform,
     getBodyState,
     updateBodyMassData,
-} from "../world/body";
-import { hashWorldState } from "../world/hash";
-import type { WorldState } from "../world/world";
+} from "../world/body.ts";
+import { hashWorldState } from "../world/hash.ts";
+import type { WorldState } from "../world/world.ts";
 
 type Command = {
     op: string;

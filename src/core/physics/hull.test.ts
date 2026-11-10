@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { World } from "../../engine";
-import { Hulls } from "./hull";
+import { Hulls } from "./hull.ts";
 
 test("cylinder authoring refuses invalid dimensions and tessellation before allocating a handle", () => {
     const world = new World();

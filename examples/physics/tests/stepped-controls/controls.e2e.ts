@@ -1,13 +1,13 @@
 import { pipelineWarnings } from "@dylanebert/shallot/testing";
 import { expect, test } from "playwright/test";
-import { categories } from "../../src/scenes";
+import { categories } from "../../src/scenes.ts";
 import {
     bodyHasFocus,
     dragRange,
     gameKeyMovesCamera,
     pointerControl,
     tabSkipsChrome,
-} from "../pointer";
+} from "../pointer.ts";
 
 const samples = categories.flatMap((category) => category.scenes);
 const beforeWheel = samples[samples.findIndex((sample) => sample.id === "wheel") - 1]!.name;

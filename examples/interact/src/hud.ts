@@ -1,6 +1,6 @@
 import type { System, World } from "@dylanebert/shallot";
-import { Hint } from "./interact";
-import { mountTouchButton, TouchControls } from "./player";
+import { Hint } from "./interact.ts";
+import { mountTouchButton, TouchControls } from "./player.ts";
 
 export function hud(container: HTMLElement, world: World): () => void {
     mountTouchButton(container, world, "Use", "KeyE");

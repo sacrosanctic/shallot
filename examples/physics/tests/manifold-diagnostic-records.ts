@@ -1,7 +1,7 @@
 import type { World } from "@dylanebert/shallot";
 import type { HullData } from "@dylanebert/shallot/standard/physics";
-import type { Arc } from "../src/manifold-diagnostics";
-import { ManifoldSample } from "../src/manifold-state";
+import type { Arc } from "../src/manifold-diagnostics.ts";
+import { ManifoldSample } from "../src/manifold-state.ts";
 
 const xyz = (p: { x: number; y: number; z: number }) => [p.x, p.y, p.z];
 export function manifoldDiagnosticRecords(world: World): number[][] {

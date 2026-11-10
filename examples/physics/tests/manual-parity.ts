@@ -1,4 +1,4 @@
-import { categories, type Scene } from "../src/scenes";
+import { categories, type Scene } from "../src/scenes.ts";
 
 /** Scenes whose parity and switching live in the manual oracles. */
 export const manualParityScenes: ReadonlySet<Scene> = new Set([

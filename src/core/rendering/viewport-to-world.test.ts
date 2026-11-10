@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { qRotate, resizeViewport, World } from "../../engine";
-import { component } from "../../engine/ecs/component";
+import { component } from "../../engine/ecs/component.ts";
 import { GlobalTransform } from "../transform";
 import {
     Camera,
@@ -8,9 +8,9 @@ import {
     CameraViewport,
     computeClipFromWorld,
     computeViewFromWorld,
-} from "./camera";
-import { type View, Views } from "./view";
-import { viewportToWorld, worldToViewport } from "./viewport-to-world";
+} from "./camera.ts";
+import { type View, Views } from "./view.ts";
+import { viewportToWorld, worldToViewport } from "./viewport-to-world.ts";
 
 test("orthographic pixels shift ray origins by size and aspect while keeping parallel camera-forward directions", () => {
     const world = new World();

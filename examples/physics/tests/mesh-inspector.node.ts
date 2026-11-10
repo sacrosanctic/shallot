@@ -2,13 +2,13 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { Body, createApp, PhysicsMeshes } from "@dylanebert/shallot";
 import { PhysicsWorldDefinition } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { INK } from "../src/ink-presentation";
-import { JOINT_LINE } from "../src/joint-presentation";
-import { MeshSamplePlugin } from "../src/mesh";
-import { MeshCreationState, MeshInspectorState } from "../src/mesh-inspector";
-import { drawMeshViewerView, meshViewerBounds } from "../src/mesh-inspector-presentation";
-import { sceneSwitcher } from "../src/sample";
-import { changeControl, controlValues, scenes } from "../src/scenes";
+import { INK } from "../src/ink-presentation.ts";
+import { JOINT_LINE } from "../src/joint-presentation.ts";
+import { MeshSamplePlugin } from "../src/mesh.ts";
+import { MeshCreationState, MeshInspectorState } from "../src/mesh-inspector.ts";
+import { drawMeshViewerView, meshViewerBounds } from "../src/mesh-inspector-presentation.ts";
+import { sceneSwitcher } from "../src/sample.ts";
+import { changeControl, controlValues, scenes } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("Viewer draws selected node bounds in ink and restores stepping after Creation Benchmark", async () => {

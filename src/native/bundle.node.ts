@@ -1,7 +1,7 @@
 import { afterAll, beforeAll, expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { removeTestDirectory } from "../../scripts/test-directory";
-import { normalizePath } from "../project/paths";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
+import { normalizePath } from "../project/paths.ts";
 import { cargoRuntimeDir } from "./provenance.js";
 
 setDefaultTimeout(TIMEOUT.node);

@@ -5,9 +5,9 @@ import {
     disposeGpuApps,
     expectAdapterNotice,
 } from "../../../scripts/gpu.fixture";
-import { expectError } from "../../../scripts/test-console";
+import { expectError } from "../../../scripts/test-console.ts";
 import { RenderingPlugin } from "../../core/rendering";
-import { type Plugin, runApp } from "./index";
+import { type Plugin, runApp } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 
@@ -122,7 +122,7 @@ test("log-and-pause skips a failed draw system but still submits later draw work
     const broken = {
         name: "broken-draw",
         group: "draw" as const,
-        update(world: import("../ecs/world").World) {
+        update(world: import("../ecs/world.ts").World) {
             attempts++;
             world.frameEncoder()!.clearBuffer(buffer!);
             throw cause;
@@ -132,7 +132,7 @@ test("log-and-pause skips a failed draw system but still submits later draw work
         name: "healthy-draw",
         group: "draw" as const,
         after: [broken],
-        update(world: import("../ecs/world").World) {
+        update(world: import("../ecs/world.ts").World) {
             healthyFrames++;
             world.frameEncoder()!.clearBuffer(buffer!);
         },

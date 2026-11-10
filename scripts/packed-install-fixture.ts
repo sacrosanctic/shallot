@@ -11,9 +11,9 @@ import {
 import { tmpdir } from "node:os";
 import { join, relative, resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { normalizePath } from "../src/project/paths";
-import { packedInstall as runPackedInstall } from "./packed-install-spawn";
-import { removeTestDirectory } from "./test-directory";
+import { normalizePath } from "../src/project/paths.ts";
+import { packedInstall as runPackedInstall } from "./packed-install-spawn.ts";
+import { removeTestDirectory } from "./test-directory.ts";
 
 export const ROOT = resolve(import.meta.dir, "..");
 export const examples = readdirSync(join(ROOT, "examples"), { withFileTypes: true })

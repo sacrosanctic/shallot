@@ -2,8 +2,8 @@
 // Definitions are reusable creation data; length units are fixed at one per meter.
 
 import type { SurfaceMaterial } from "../../../core/physics";
-import { DEFAULT_CATEGORY_BITS, DEFAULT_MASK_BITS, LENGTH_UNITS_PER_METER } from "./constants";
-import type { Pos, Quat, Vec3 } from "./records";
+import { DEFAULT_CATEGORY_BITS, DEFAULT_MASK_BITS, LENGTH_UNITS_PER_METER } from "./constants.ts";
+import type { Pos, Quat, Vec3 } from "./records.ts";
 
 const f32 = Math.fround;
 

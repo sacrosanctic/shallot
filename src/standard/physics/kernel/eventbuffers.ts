@@ -1,6 +1,6 @@
-import type { EntityId } from "../common/ids";
-import type { WorldState } from "../world/world";
-import { kernel } from "./kernel";
+import type { EntityId } from "../common/ids.ts";
+import type { WorldState } from "../world/world.ts";
+import { kernel } from "./kernel.ts";
 
 export const EventKind = {
     SensorBegin: 0,

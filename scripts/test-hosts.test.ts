@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { existsSync } from "node:fs";
 import { resolve } from "node:path";
-import { hostFiles, ONLY } from "./test-hosts";
+import { hostFiles, ONLY } from "./test-hosts.ts";
 
 const ROOT = resolve(import.meta.dir, "..");
 

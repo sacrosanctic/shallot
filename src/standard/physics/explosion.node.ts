@@ -8,7 +8,7 @@ import {
     explode,
     PhysicsWorldDefinition,
     StandardPhysicsPlugin,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

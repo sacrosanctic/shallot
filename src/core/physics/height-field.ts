@@ -1,5 +1,5 @@
 import type { Resource } from "../../engine";
-import { PhysicsAssets } from "./assets";
+import { PhysicsAssets } from "./assets.ts";
 
 /**
  * Box3D's `b3HeightFieldDef`: a grid of `countX` by `countZ` points in the shape's xz plane, one unit

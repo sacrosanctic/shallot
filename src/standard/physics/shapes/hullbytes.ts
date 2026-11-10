@@ -1,5 +1,5 @@
-import type { Vec3 } from "../common/records";
-import type { HullData } from "./hull";
+import type { Vec3 } from "../common/records.ts";
+import type { HullData } from "./hull.ts";
 
 const align8 = (n: number): number => (n + 7) & ~7;
 

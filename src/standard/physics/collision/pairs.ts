@@ -1,5 +1,5 @@
-import { advanceStep, kernel, threads } from "../kernel/kernel";
-import type { WorldState } from "../world/world";
+import { advanceStep, kernel, threads } from "../kernel/kernel.ts";
+import type { WorldState } from "../world/world.ts";
 
 /** Run the kernel's pair pass alone for lifecycle observations. */
 export function updateBroadPhasePairs(world: WorldState): void {

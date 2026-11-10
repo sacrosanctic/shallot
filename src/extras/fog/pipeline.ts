@@ -25,8 +25,8 @@ import {
     henyeyGreenstein,
     reconstructWorld,
     WORKGROUP,
-} from "./medium";
-import { HALTON, HISTORY_WEIGHT, TEMPORAL_FRAMES } from "./temporal";
+} from "./medium.ts";
+import { HALTON, HISTORY_WEIGHT, TEMPORAL_FRAMES } from "./temporal.ts";
 
 export const FogHistory = d.struct({
     clipFromWorld: d.mat4x4f,

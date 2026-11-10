@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { World } from "@dylanebert/shallot";
-import { vec } from "../src/collision-debug";
-import { CollisionGeometry } from "../src/collision-geometry";
-import { collisionGeometryDrawing } from "../src/collision-geometry-presentation";
+import { vec } from "../src/collision-debug.ts";
+import { CollisionGeometry } from "../src/collision-geometry.ts";
+import { collisionGeometryDrawing } from "../src/collision-geometry-presentation.ts";
 
 test("Hull 2D draws every input once, both ordered outlines and lifted simplified points", () => {
     const world = new World();

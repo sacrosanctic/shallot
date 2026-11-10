@@ -13,7 +13,7 @@ import {
     CameraBackground,
     registerBackground,
     StandardRenderer,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const config = { defaults: false, plugins: [...DEFAULT_PLUGINS] };

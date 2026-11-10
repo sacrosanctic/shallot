@@ -1,8 +1,8 @@
 import type { TgpuBuffer } from "typegpu";
 import * as d from "typegpu/data";
-import type { Component, FieldType, TypedArray } from "./component";
-import { idOf, isType } from "./component";
-import type { World } from "./world";
+import type { Component, FieldType, TypedArray } from "./component.ts";
+import { idOf, isType } from "./component.ts";
+import type { World } from "./world.ts";
 
 export type TableUploadPath = "none" | "writeBuffer";
 export interface GpuTableOptions {

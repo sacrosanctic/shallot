@@ -1,19 +1,19 @@
-import { BodyField, bodyField } from "../kernel/bodyrecords";
-import { setArrayCount, setArraySnapshot } from "../kernel/solversetcolumns";
-import { ContactField, contactCapacity, contactField } from "./contact";
+import { BodyField, bodyField } from "../kernel/bodyrecords.ts";
+import { setArrayCount, setArraySnapshot } from "../kernel/solversetcolumns.ts";
+import { ContactField, contactCapacity, contactField } from "./contact.ts";
 // contact machinery: create/destroy and the solver-set placement it picks. Contacts are normally
 // born from the broad-phase collide phase (solver stage); here they're driven directly so the
 // create/destroy path is exercised now.
 
 import { expect, test } from "bun:test";
-import { NULL_INDEX } from "../common/array";
-import { SetType } from "../common/constants";
-import { BodyType, defaultBodyDef, defaultShapeDef, defaultWorldDef } from "../common/types";
-import { createSphereShape } from "../shapes/shape";
-import { createBody } from "../world/body";
-import { createWorld, getWorld, type WorldState } from "../world/world";
-import { createContact, destroyContact } from "./contact";
-import { addKey, removeKey } from "./table";
+import { NULL_INDEX } from "../common/array.ts";
+import { SetType } from "../common/constants.ts";
+import { BodyType, defaultBodyDef, defaultShapeDef, defaultWorldDef } from "../common/types.ts";
+import { createSphereShape } from "../shapes/shape.ts";
+import { createBody } from "../world/body.ts";
+import { createWorld, getWorld, type WorldState } from "../world/world.ts";
+import { createContact, destroyContact } from "./contact.ts";
+import { addKey, removeKey } from "./table.ts";
 
 function dynamicSphere(world: WorldState, radius: number) {
     const bodyId = createBody(world, { ...defaultBodyDef(), type: BodyType.Dynamic });

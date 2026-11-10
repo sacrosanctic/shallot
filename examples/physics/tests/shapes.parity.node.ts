@@ -8,9 +8,9 @@ import {
     createScene,
     type Scene,
     scenes,
-} from "../src/scenes";
-import { ShapesSamplePlugin, shapeScenes } from "../src/shapes";
-import { sampleGold } from "./gold";
+} from "../src/scenes.ts";
+import { ShapesSamplePlugin, shapeScenes } from "../src/shapes.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of Object.keys(shapeScenes) as Scene[]) {

@@ -3,7 +3,7 @@ import { MainPassSystem } from "@dylanebert/shallot/rendering";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { FIELD, groundAt } from "./hills";
+import { FIELD, groundAt } from "./hills.ts";
 
 export const RESOLUTION = 512;
 export const DEPTH = 0.45;

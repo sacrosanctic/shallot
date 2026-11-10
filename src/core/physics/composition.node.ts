@@ -11,7 +11,7 @@ import {
     ShapeKind,
     SphericalJoint,
     UNIT_CUBE_ID,
-} from "./index";
+} from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

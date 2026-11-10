@@ -1,9 +1,9 @@
 import { expect, test } from "bun:test";
 import { mkdirSync, writeFileSync } from "node:fs";
-import { Scene, ScenePlugin, setEffect } from "../../../examples/post-processing/src/scene";
+import { Scene, ScenePlugin, setEffect } from "../../../examples/post-processing/src/scene.ts";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { attachTexture, EffectPasses, TonemappingSystem, Views } from "../../core/rendering";
-import { offscreenTexture } from "../../core/rendering/view";
+import { offscreenTexture } from "../../core/rendering/view.ts";
 import type { Plugin } from "../../engine";
 import { probeTexture } from "../../engine/runtime";
 import { DEFAULT_PLUGINS } from "../../standard";

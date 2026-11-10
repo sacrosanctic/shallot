@@ -19,19 +19,19 @@ import {
 } from "../../../core/physics";
 import { Transform } from "../../../core/transform";
 import { createApp, Time } from "../../../engine";
-import { DEFAULT_MASK_BITS } from "../common/constants";
-import type { AABB, WorldTransform } from "../common/records";
-import { drawPhysics, PhysicsWorldDefinition, StandardPhysicsPlugin } from "../index";
-import { kernel } from "../kernel/kernel";
-import { quaternion } from "../kernel/math";
-import { shapeHullGeometry } from "../marshal-shape";
-import { createHull } from "../shapes/build-hull";
-import type { Sphere } from "../shapes/geometry";
-import { createHeightField } from "../shapes/heightfield";
-import { createGridMesh } from "../shapes/mesh";
-import { destroyTestWorld } from "../testing";
-import { defaultDebugDraw, worldDraw } from "./draw";
-import { drawScene, reactionScene } from "./draw-scene";
+import { DEFAULT_MASK_BITS } from "../common/constants.ts";
+import type { AABB, WorldTransform } from "../common/records.ts";
+import { drawPhysics, PhysicsWorldDefinition, StandardPhysicsPlugin } from "../index.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { quaternion } from "../kernel/math.ts";
+import { shapeHullGeometry } from "../marshal-shape.ts";
+import { createHull } from "../shapes/build-hull.ts";
+import type { Sphere } from "../shapes/geometry.ts";
+import { createHeightField } from "../shapes/heightfield.ts";
+import { createGridMesh } from "../shapes/mesh.ts";
+import { destroyTestWorld } from "../testing.ts";
+import { defaultDebugDraw, worldDraw } from "./draw.ts";
+import { drawScene, reactionScene } from "./draw-scene.ts";
 
 test("drawPhysics preserves ECS-authored sphere geometry and placement", async () => {
     const app = await createApp({ defaults: false, plugins: [StandardPhysicsPlugin] });

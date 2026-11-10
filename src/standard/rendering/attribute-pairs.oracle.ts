@@ -13,7 +13,7 @@ import {
     materialType,
     StandardMaterial,
     StandardRenderingPlugin,
-} from "./index";
+} from "./index.ts";
 
 await setupGlobals();
 const Parameters = d.struct({ unused: d.u32 });

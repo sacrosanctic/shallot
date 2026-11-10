@@ -1,12 +1,12 @@
 import { expect, test } from "bun:test";
-import { restore, snapshot } from "../api/snapshot";
-import { ContactField, ContactFlags, contactField, setContactField } from "../collision/contact";
-import { DYNAMIC_COLOR_COUNT, OVERFLOW_INDEX } from "../common/constants";
-import { BodyType } from "../common/types";
-import { BodyField, bodyField } from "../kernel/bodyrecords";
-import { kernel } from "../kernel/kernel";
-import { createTestBody, createTestWorld, destroyTestWorld } from "../testing";
-import type { WorldState } from "../world/world";
+import { restore, snapshot } from "../api/snapshot.ts";
+import { ContactField, ContactFlags, contactField, setContactField } from "../collision/contact.ts";
+import { DYNAMIC_COLOR_COUNT, OVERFLOW_INDEX } from "../common/constants.ts";
+import { BodyType } from "../common/types.ts";
+import { BodyField, bodyField } from "../kernel/bodyrecords.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { createTestBody, createTestWorld, destroyTestWorld } from "../testing.ts";
+import type { WorldState } from "../world/world.ts";
 
 function graphKernel(world: WorldState) {
     const k = kernel(world.ecsState);

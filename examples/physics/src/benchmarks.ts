@@ -28,12 +28,12 @@ import {
     setTargetTransform,
     stepPhysics,
 } from "@dylanebert/shallot/standard/physics";
-import { BenchmarkVillagePlugin, benchmarkVillageScene } from "./benchmark-village";
-import { human } from "./human";
-import { QuerySamplePlugin, queryScenes } from "./queries";
-import { MotorizedJoint } from "./roles";
-import { benchmarkSensor, SensorSamplePlugin } from "./sensor";
-import { fallingTrees, TreeSamplePlugin, treeControls } from "./trees";
+import { BenchmarkVillagePlugin, benchmarkVillageScene } from "./benchmark-village.ts";
+import { human } from "./human.ts";
+import { QuerySamplePlugin, queryScenes } from "./queries.ts";
+import { MotorizedJoint } from "./roles.ts";
+import { benchmarkSensor, SensorSamplePlugin } from "./sensor.ts";
+import { fallingTrees, TreeSamplePlugin, treeControls } from "./trees.ts";
 
 const f = Math.fround;
 function box(world: World, halfExtents: [number, number, number]): number {

@@ -10,7 +10,7 @@ import {
 } from "../../../core/physics";
 import { GlobalTransform, Transform, TransformPlugin } from "../../../core/transform";
 import { type EntityRef, Time, World } from "../../../engine";
-import { PhysicsEvents, PhysicsWorldDefinition, StandardPhysicsPlugin, setAwake } from "../index";
+import { PhysicsEvents, PhysicsWorldDefinition, StandardPhysicsPlugin, setAwake } from "../index.ts";
 import claims from "./ecs-event-claims.gold.json";
 
 type Names = Map<EntityRef, string>;

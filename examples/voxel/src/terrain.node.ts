@@ -12,10 +12,10 @@ import { Orbit } from "@dylanebert/shallot/extras";
 import { attachTexture } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { columnHash, DetailKind, detailCount, detailKind } from "./detail";
-import { faces, height } from "./noise";
-import { Terrain, terrainPlugin } from "./terrain";
-import { inRing, radii, slotCount, type TerrainConfig, voxelScale } from "./terrain-data";
+import { columnHash, DetailKind, detailCount, detailKind } from "./detail.ts";
+import { faces, height } from "./noise.ts";
+import { Terrain, terrainPlugin } from "./terrain.ts";
+import { inRing, radii, slotCount, type TerrainConfig, voxelScale } from "./terrain-data.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const config: TerrainConfig = { chunkSize: 8, viewDistance: 1, height: 16, relief: 4 };

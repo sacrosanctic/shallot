@@ -1,16 +1,16 @@
 import { expect, test } from "bun:test";
-import { BodyType, defaultSurfaceMaterial, ShapeType } from "../common/types";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createCompound } from "../shapes/compound";
-import { createGrid } from "../shapes/heightfield";
-import { hash64NonZero } from "../shapes/hullbytes";
-import { createBoxMesh, createGridMesh } from "../shapes/mesh";
-import { createCompoundShape, createHeightFieldShape, createMeshShape } from "../shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing";
-import type { WorldState } from "../world/world";
-import { transform } from "./math";
-import { S_GEO_REFERENCE, SHAPE_STRIDE } from "./shapecolumns";
-import { ShapeField, shapeField } from "./shaperecords";
+import { BodyType, defaultSurfaceMaterial, ShapeType } from "../common/types.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createCompound } from "../shapes/compound.ts";
+import { createGrid } from "../shapes/heightfield.ts";
+import { hash64NonZero } from "../shapes/hullbytes.ts";
+import { createBoxMesh, createGridMesh } from "../shapes/mesh.ts";
+import { createCompoundShape, createHeightFieldShape, createMeshShape } from "../shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
+import type { WorldState } from "../world/world.ts";
+import { transform } from "./math.ts";
+import { S_GEO_REFERENCE, SHAPE_STRIDE } from "./shapecolumns.ts";
+import { ShapeField, shapeField } from "./shaperecords.ts";
 
 function image(world: WorldState, shape: number): Uint8Array {
     const store = world.shapeStore;

@@ -1,26 +1,26 @@
 import { expect, test } from "bun:test";
 import gold from "../../../../crates/physics/tests/reader_regressions.gold.json";
-import { BodyType, defaultSurfaceMaterial, type SurfaceMaterial } from "../common/types";
-import { kernel } from "../kernel/kernel";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createCompound } from "../shapes/compound";
-import { createMesh } from "../shapes/mesh";
+import { BodyType, defaultSurfaceMaterial, type SurfaceMaterial } from "../common/types.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createCompound } from "../shapes/compound.ts";
+import { createMesh } from "../shapes/mesh.ts";
 import {
     createCompoundShape,
     createHullShape,
     createMeshShape,
     destroyShape,
-} from "../shapes/shape";
+} from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { hashWorldState } from "../world/hash";
-import { ContactField, contactField, contactIds } from "./contact";
-import { readContactMaterial } from "./manifoldstore";
+} from "../testing.ts";
+import { hashWorldState } from "../world/hash.ts";
+import { ContactField, contactField, contactIds } from "./contact.ts";
+import { readContactMaterial } from "./manifoldstore.ts";
 
 test("numeric default material mixing matches native Box3D callback bits", () => {
     const k = kernel(undefined);

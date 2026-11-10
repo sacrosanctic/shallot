@@ -1,6 +1,6 @@
 import type { World } from "../../engine";
-import type { Vec3 } from "./common/records";
-import { kernel } from "./kernel/kernel";
+import type { Vec3 } from "./common/records.ts";
+import { kernel } from "./kernel/kernel.ts";
 
 /** Box3D's deterministic cosine and sine of an angle in radians.
  * Requires an initialized StandardPhysicsPlugin. The returned tuple belongs to the caller. */

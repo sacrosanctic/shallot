@@ -1,32 +1,32 @@
-import { shapeSensorIndex, writeShapeFilterValue } from "../kernel/filtercolumns";
-import { acquireCompoundData, acquireHeightFieldData, acquireMeshData } from "../kernel/geocolumns";
-import { ShapeField, shapeField, shapeScalar } from "../kernel/shaperecords";
+import { shapeSensorIndex, writeShapeFilterValue } from "../kernel/filtercolumns.ts";
+import { acquireCompoundData, acquireHeightFieldData, acquireMeshData } from "../kernel/geocolumns.ts";
+import { ShapeField, shapeField, shapeScalar } from "../kernel/shaperecords.ts";
 // Shape API and authoring bridge to Box3D's shape.c operations in the kernel (Erin Catto, MIT).
 
-import { NULL_INDEX } from "../common/array";
-import { hi32, lo32 } from "../common/bits";
-import type { EntityId } from "../common/ids";
-import type { AABB, Transform, Vec3, WorldTransform } from "../common/records";
+import { NULL_INDEX } from "../common/array.ts";
+import { hi32, lo32 } from "../common/bits.ts";
+import type { EntityId } from "../common/ids.ts";
+import type { AABB, Transform, Vec3, WorldTransform } from "../common/records.ts";
 
 const f32 = Math.fround;
 
-import { type Filter, type ShapeDef, ShapeType, type SurfaceMaterial } from "../common/types";
-import { kernel } from "../kernel/kernel";
+import { type Filter, type ShapeDef, ShapeType, type SurfaceMaterial } from "../common/types.ts";
+import { kernel } from "../kernel/kernel.ts";
 import {
     createShapeSlot,
     readShapeMaterials,
     S_GEO_REFERENCE,
     SHAPE_STRIDE,
     shapeMaterialCount,
-} from "../kernel/shapecolumns";
-import { releaseGeometryIdentities } from "../world/body";
-import type { Visitor } from "../world/sensor";
-import { addHullToDatabase, type WorldState } from "../world/world";
-import { type CompoundData, getCompoundMaterials } from "./compound";
-import type { Capsule, MassData, Sphere } from "./geometry";
-import type { HeightFieldData } from "./heightfield";
-import type { HullData } from "./hull";
-import type { MeshData } from "./mesh";
+} from "../kernel/shapecolumns.ts";
+import { releaseGeometryIdentities } from "../world/body.ts";
+import type { Visitor } from "../world/sensor.ts";
+import { addHullToDatabase, type WorldState } from "../world/world.ts";
+import { type CompoundData, getCompoundMaterials } from "./compound.ts";
+import type { Capsule, MassData, Sphere } from "./geometry.ts";
+import type { HeightFieldData } from "./heightfield.ts";
+import type { HullData } from "./hull.ts";
+import type { MeshData } from "./mesh.ts";
 
 /** Min extent (smallest sphere fitting inside) and max extent per axis, for sleeping (b3ShapeExtent). */
 export type ShapeExtent = { minExtent: number; maxExtent: Vec3 };

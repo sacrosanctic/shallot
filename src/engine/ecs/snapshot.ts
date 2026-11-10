@@ -1,4 +1,4 @@
-import type { Resource, World } from "./world";
+import type { Resource, World } from "./world.ts";
 
 /** Paired simulation ownership. Images are local, reusable and independent of subsequent writes. */
 export interface Recovery<S = unknown> {

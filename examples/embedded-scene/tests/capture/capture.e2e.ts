@@ -1,7 +1,7 @@
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { holdFrames } from "@dylanebert/shallot/testing";
-import { expect, test } from "../browser-fixture";
+import { expect, test } from "../browser-fixture.ts";
 
 test("the host heading and body remain selectable page content", async ({ page }) => {
     await holdFrames(page, "#scene.visible");

@@ -8,14 +8,14 @@ import { Billboard, globalTransformTable, RenderingPlugin } from "../../core/ren
 import {
     prepareGlobalTransformFrame,
     GlobalTransformHistory as TransformRuntime,
-} from "../../core/rendering/global-transform";
-import { VIEW_BYTES } from "../../core/rendering/view";
+} from "../../core/rendering/global-transform.ts";
+import { VIEW_BYTES } from "../../core/rendering/view.ts";
 import { Transform } from "../../core/transform";
 import { precompile } from "../../engine";
 import { probeTexture } from "../../engine/runtime";
-import { maskLayoutPlain, maskVertex } from "../outline/passes";
-import { GLYPH_AT, GLYPH_BYTES } from "./glyph";
-import { TextVertex } from "./pipeline";
+import { maskLayoutPlain, maskVertex } from "../outline/passes.ts";
+import { GLYPH_AT, GLYPH_BYTES } from "./glyph.ts";
+import { TextVertex } from "./pipeline.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const subject = compileGpuFile(import.meta.path, async () => {

@@ -9,9 +9,9 @@ import {
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { snapshot } from "./api/snapshot";
-import { physicsBodyIndex, physicsState } from "./runtime";
-import { worldCounters } from "./world/world";
+import { snapshot } from "./api/snapshot.ts";
+import { physicsBodyIndex, physicsState } from "./runtime.ts";
+import { worldCounters } from "./world/world.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 await setupGlobals();

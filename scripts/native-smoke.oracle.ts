@@ -32,8 +32,8 @@ import {
     windowsOutput,
     windowsSmokePids,
     withoutProject,
-} from "./native-smoke";
-import { removeTestDirectory } from "./test-directory";
+} from "./native-smoke.ts";
+import { removeTestDirectory } from "./test-directory.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

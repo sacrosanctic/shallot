@@ -1,5 +1,5 @@
-import { kernel } from "../kernel/kernel";
-import type { WorldState } from "./world";
+import { kernel } from "../kernel/kernel.ts";
+import type { WorldState } from "./world.ts";
 
 /** One step's kernel-measured timings in milliseconds (Box3D b3Profile), diagnostic only.
  * Resolution follows the platform clock, coarsened in pages without cross-origin isolation. */

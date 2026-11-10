@@ -14,9 +14,9 @@ import { Orbit } from "@dylanebert/shallot/extras";
 import { GltfPlugin, loadGltf, loadGltfScene } from "@dylanebert/shallot/gltf";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { selectScene, Viewer } from "../src/app";
-import { modelPath, type Scene, scenes } from "../src/scenes";
-import { assets, fileFetch, syncAssets } from "./setup";
+import { selectScene, Viewer } from "../src/app.ts";
+import { modelPath, type Scene, scenes } from "../src/scenes.ts";
+import { assets, fileFetch, syncAssets } from "./setup.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const frameShare = 1 / 1.3;

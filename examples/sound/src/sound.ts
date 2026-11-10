@@ -15,7 +15,7 @@ import {
     type World,
 } from "@dylanebert/shallot";
 import { castRayClosest, emptyQueryHit } from "@dylanebert/shallot/standard/physics";
-import { LocalPlayer, Player, PlayerPlugin, UpdatePlayerControlSystem } from "./player";
+import { LocalPlayer, Player, PlayerPlugin, UpdatePlayerControlSystem } from "./player.ts";
 
 export const Usable = component("Usable", { bell: u8, clip: f32 });
 export const Sliding = component("Sliding", { phase: f32 });

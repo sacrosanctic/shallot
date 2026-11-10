@@ -15,7 +15,7 @@ import {
     type View,
 } from "@dylanebert/shallot/rendering";
 import tgpu from "typegpu";
-import { RoomPlugin } from "./room";
+import { RoomPlugin } from "./room.ts";
 
 export const MOTE_COUNT = 512;
 export const Motes: Resource<{

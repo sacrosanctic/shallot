@@ -3,8 +3,8 @@ import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { resolve } from "node:path";
 import manifest from "../../examples/gltf/assets.json";
-import { syncFiles } from "../../examples/gltf/sync";
-import { assets, models, primitives } from "./inputs";
+import { syncFiles } from "../../examples/gltf/sync.ts";
+import { assets, models, primitives } from "./inputs.ts";
 
 const revision = "3e895b49d05ea07e4c2133156cfa94369e19e409";
 const checkout = process.env.MIKKTSPACE;

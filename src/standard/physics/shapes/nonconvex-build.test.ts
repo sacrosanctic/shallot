@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import gold from "../../../../crates/physics/tests/nonconvex_build.gold.json";
-import { createGrid, createHeightField, createWave } from "./heightfield";
+import { createGrid, createHeightField, createWave } from "./heightfield.ts";
 import {
     createBoxMesh,
     createGridMesh,
@@ -8,8 +8,8 @@ import {
     createMesh,
     createTorusMesh,
     createWaveMesh,
-} from "./mesh";
-import { drawHeightField, drawMesh } from "./readgeometry";
+} from "./mesh.ts";
+import { drawHeightField, drawMesh } from "./readgeometry.ts";
 
 for (const c of gold) {
     test(`nonconvex authoring equals native Box3D: ${c.name}`, () => {

@@ -20,8 +20,8 @@ import {
     SyncPhysicsConstraintsSystem,
 } from "@dylanebert/shallot/standard/physics";
 
-import { SceneRestart } from "./scene-restart";
-import type { Controls } from "./scenes";
+import { SceneRestart } from "./scene-restart.ts";
+import type { Controls } from "./scenes.ts";
 
 const f = Math.fround;
 type V3 = [number, number, number];

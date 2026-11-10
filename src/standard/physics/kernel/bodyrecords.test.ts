@@ -1,21 +1,21 @@
 import { expect, test } from "bun:test";
-import { restore, snapshot } from "../api/snapshot";
-import { SetType } from "../common/constants";
-import { BodyType } from "../common/types";
-import { makeBoxHull } from "../shapes/build-hull";
-import { createHullShape } from "../shapes/shape";
-import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint";
-import { defaultJointDef } from "../solver/joint";
+import { restore, snapshot } from "../api/snapshot.ts";
+import { SetType } from "../common/constants.ts";
+import { BodyType } from "../common/types.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { createHullShape } from "../shapes/shape.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint.ts";
+import { defaultJointDef } from "../solver/joint.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { bodySetAwake, bodySetType, destroyBody, getMassData } from "../world/body";
-import { BODY_RECORD_STRIDE, BodyField, bodyField, setBodyField } from "./bodyrecords";
-import { kernel } from "./kernel";
+} from "../testing.ts";
+import { bodySetAwake, bodySetType, destroyBody, getMassData } from "../world/body.ts";
+import { BODY_RECORD_STRIDE, BodyField, bodyField, setBodyField } from "./bodyrecords.ts";
+import { kernel } from "./kernel.ts";
 
 function words(world: ReturnType<typeof createTestWorld>): number[] {
     const k = kernel(world.ecsState);

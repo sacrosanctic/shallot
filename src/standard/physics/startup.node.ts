@@ -1,8 +1,8 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { World } from "../../engine";
-import { init, shutdown } from "./kernel/kernel";
-import { StandardPhysicsPlugin } from "./runtime";
+import { init, shutdown } from "./kernel/kernel.ts";
+import { StandardPhysicsPlugin } from "./runtime.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

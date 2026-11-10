@@ -30,10 +30,10 @@ import {
 } from "@dylanebert/shallot/rendering";
 import { StandardPhysicsPlugin, StepPhysicsSystem } from "@dylanebert/shallot/standard/physics";
 import type { MaterialHandle } from "@dylanebert/shallot/standard/rendering";
-import { GrabPlugin, UNGRABBABLE } from "./grab";
-import { FIELD, groundAt, HIGH, HILL_SIZE, heights, LOW } from "./hills";
-import { SnowMaterial, SnowPlugin, StampMaterial, snowPlane } from "./snow";
-import { DEPTH, RESOLUTION, Trail } from "./trail";
+import { GrabPlugin, UNGRABBABLE } from "./grab.ts";
+import { FIELD, groundAt, HIGH, HILL_SIZE, heights, LOW } from "./hills.ts";
+import { SnowMaterial, SnowPlugin, StampMaterial, snowPlane } from "./snow.ts";
+import { DEPTH, RESOLUTION, Trail } from "./trail.ts";
 
 export const RADIUS = DEPTH * 2;
 export const SnowTrails = {

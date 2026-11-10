@@ -1,12 +1,12 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { bunChild } from "../../../../scripts/bun-child";
-import { BodyType } from "../common/types";
-import { createSphereShape } from "../shapes/shape";
-import { createTestBody, createTestWorld, stepTestWorld, testShapeDef } from "../testing";
-import { init, kernel, kernelState, shutdown } from "./kernel";
+import { bunChild } from "../../../../scripts/bun-child.ts";
+import { BodyType } from "../common/types.ts";
+import { createSphereShape } from "../shapes/shape.ts";
+import { createTestBody, createTestWorld, stepTestWorld, testShapeDef } from "../testing.ts";
+import { init, kernel, kernelState, shutdown } from "./kernel.ts";
 import { KERNEL_SHARED_WASM_BASE64, SHARED_STACK_SIZE } from "./kernel.shared.wasm";
-import { createPool } from "./pool";
+import { createPool } from "./pool.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

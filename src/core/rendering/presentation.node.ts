@@ -16,7 +16,7 @@ import {
     captureTexture,
     EffectPasses,
     Views,
-} from "./index";
+} from "./index.ts";
 import { PointsPlugin } from "./points.fixture";
 
 setDefaultTimeout(TIMEOUT.node);

@@ -2,7 +2,7 @@ import { Body, createApp, Hulls, Shape, StandardPhysicsPlugin, Transform, Meshes
 import { hashPhysics, PhysicsWorldDefinition } from "@dylanebert/shallot/standard/physics";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
 import { Gizmo, GizmoAsset, drawLine, registerGizmo } from "@dylanebert/shallot/extras";
-import { AppPlugin, Viewer } from "../../examples/physics/src/app";
+import { AppPlugin, Viewer } from "../../examples/physics/src/app.ts";
 
 // Bundle for Node, then run with a grid count (1000 is the release sample) and optional "draw".
 const grid = Number(process.argv[2] ?? 1000);

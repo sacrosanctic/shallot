@@ -1,7 +1,7 @@
-import { BodyType } from "../common/types";
-import { kernel } from "../kernel/kernel";
-import { createTestBody, createTestWorld, destroyTestWorld } from "../testing";
-import { bodySetTransform } from "../world/body";
+import { BodyType } from "../common/types.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { createTestBody, createTestWorld, destroyTestWorld } from "../testing.ts";
+import { bodySetTransform } from "../world/body.ts";
 import {
     createJoint,
     defaultJointDef,
@@ -9,10 +9,10 @@ import {
     getJointAngularSeparation,
     getJointLinearSeparation,
     type JointType,
-} from "./joint";
-import { revoluteJointAngle } from "./revoluteJoint";
-import { sphericalJointConeAngle, sphericalJointTwistAngle } from "./sphericalJoint";
-import { wheelJointSteeringAngle } from "./wheelJoint";
+} from "./joint.ts";
+import { revoluteJointAngle } from "./revoluteJoint.ts";
+import { sphericalJointConeAngle, sphericalJointTwistAngle } from "./sphericalJoint.ts";
+import { wheelJointSteeringAngle } from "./wheelJoint.ts";
 export type JointReadCase = {
     kind: number;
     sample: number;

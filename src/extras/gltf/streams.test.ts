@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { generateTangents } from "../../core/mesh";
-import { type GltfJson, generateSceneTangents, parseGltf } from "./gltf";
-import { loadGltf } from "./load";
+import { type GltfJson, generateSceneTangents, parseGltf } from "./gltf.ts";
+import { loadGltf } from "./load.ts";
 
 async function load(json: GltfJson) {
     return loadGltf("https://fixture.test/model.gltf", (async (url) =>

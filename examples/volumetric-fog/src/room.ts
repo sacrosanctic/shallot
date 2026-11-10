@@ -26,7 +26,7 @@ import {
 } from "@dylanebert/shallot";
 import { DiagnosticsOverlayPlugin, Fog, FogPlugin } from "@dylanebert/shallot/extras";
 import { PointShadows } from "@dylanebert/shallot/standard/rendering";
-import { LocalPlayer, Player, PlayerPlugin } from "./player";
+import { LocalPlayer, Player, PlayerPlugin } from "./player.ts";
 
 type Color = readonly [number, number, number, number];
 type Vec3 = readonly [number, number, number];

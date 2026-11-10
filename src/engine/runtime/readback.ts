@@ -1,5 +1,5 @@
 import type { World } from "../ecs";
-import { deviceFailure, deviceLost } from "./gpu";
+import { deviceFailure, deviceLost } from "./gpu.ts";
 
 interface Slot {
     buffer: GPUBuffer;

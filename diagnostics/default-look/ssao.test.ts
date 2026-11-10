@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { Camera, ScreenSpaceAmbientOcclusion, World } from "@dylanebert/shallot";
-import { AO_LEVELS, addAmbientOcclusion } from "./ssao";
+import { AO_LEVELS, addAmbientOcclusion } from "./ssao.ts";
 
 test("capture quality selection applies Bevy's presets to every camera and leaves Off unrequested", () => {
     for (const [index, level] of AO_LEVELS.entries()) {

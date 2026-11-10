@@ -5,11 +5,11 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import {
     allocationFailure,
     sampleAllocation,
-} from "../first-person-allocation/allocation";
+} from "../first-person-allocation/allocation.ts";
 import {
     assertAllocationWrappers,
     isAdmittedAllocationSite,
-} from "../first-person-allocation/allocation-admissions";
+} from "../first-person-allocation/allocation-admissions.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("runApp without a fence-wait reader allocates no fence-reaction heap per frame", async () => {

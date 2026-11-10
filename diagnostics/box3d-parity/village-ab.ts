@@ -1,11 +1,11 @@
 // Village's composed sample, with the hash and phase records ab.ts consumes.
 import { createApp, hashPhysics } from "../../src";
-import { PhysicsWorldDefinition } from "../../src/standard/physics/world-definition";
-import { physicsState } from "../../src/standard/physics/runtime";
-import { worldProfile } from "../../src/standard/physics/world/world";
-import { PROFILE_FIELDS } from "../../src/standard/physics/world/profile";
-import { VillagePlugin } from "../../examples/physics/src/village";
-import { createScene } from "../../examples/physics/src/scenes";
+import { PhysicsWorldDefinition } from "../../src/standard/physics/world-definition.ts";
+import { physicsState } from "../../src/standard/physics/runtime.ts";
+import { worldProfile } from "../../src/standard/physics/world/world.ts";
+import { PROFILE_FIELDS } from "../../src/standard/physics/world/profile.ts";
+import { VillagePlugin } from "../../examples/physics/src/village.ts";
+import { createScene } from "../../examples/physics/src/scenes.ts";
 
 const [, threadArg, stepArg] = process.argv.slice(2);
 const from = Number(process.env.PROFILE);

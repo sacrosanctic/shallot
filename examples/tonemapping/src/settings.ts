@@ -5,7 +5,7 @@ import {
     TonemappingMethod,
     type World,
 } from "@dylanebert/shallot";
-import { Scene } from "./scene";
+import { Scene } from "./scene.ts";
 
 export const methods = Object.entries(TonemappingMethod);
 export function setMethod(world: World, method: number): void {

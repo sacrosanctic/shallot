@@ -9,7 +9,7 @@ import {
     packQuatSnorm16x4,
     packUnorm2,
     unpackQuatSnorm16x4,
-} from "./encode";
+} from "./encode.ts";
 
 // The plain-JS mirrors are the only duplicated logic in encode.ts, so each is pinned against the TGSL
 // function it mirrors: bit-identical on the packed word, over a sweep dense enough to reach both

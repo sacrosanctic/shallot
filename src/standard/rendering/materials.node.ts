@@ -16,9 +16,9 @@ import {
 import { Transform } from "../../core/transform";
 import { lookAtRotation } from "../../engine";
 import { probeBuffer } from "../../engine/runtime";
-import { DEFAULT_PLUGINS, MeshRenderPlugin, StandardRenderingPlugin } from "../index";
-import { StandardRenderer } from "./forward";
-import { Materials, MeshMaterial, StandardMaterial, StandardMaterialInput } from "./material";
+import { DEFAULT_PLUGINS, MeshRenderPlugin, StandardRenderingPlugin } from "../index.ts";
+import { StandardRenderer } from "./forward.ts";
+import { Materials, MeshMaterial, StandardMaterial, StandardMaterialInput } from "./material.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const subjects = gpuApps(import.meta.path, [

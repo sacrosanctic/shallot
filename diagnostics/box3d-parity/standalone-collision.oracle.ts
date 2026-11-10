@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "../../src/project/testing.js";
 import { nativeEdgeInput } from "../../src/standard/physics/standalone-collision-edge.fixture";
 import { nativeCollisionInput } from "../../src/standard/physics/standalone-collision.fixture";
-import { nativeSseOutput } from "./native-evidence";
+import { nativeSseOutput } from "./native-evidence.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("standalone collision records equal native Box3D including GJK history", async () => {

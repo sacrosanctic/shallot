@@ -16,9 +16,9 @@ import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import {
     GeometricMoverPlugin,
     GeometricMoverState,
-} from "../../../examples/physics/src/geometric-mover";
-import { createScene } from "../../../examples/physics/src/scenes";
-import { setSceneCamera } from "../../../examples/physics/src/view";
+} from "../../../examples/physics/src/geometric-mover.ts";
+import { createScene } from "../../../examples/physics/src/scenes.ts";
+import { setSceneCamera } from "../../../examples/physics/src/view.ts";
 import { createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
 

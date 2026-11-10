@@ -3,9 +3,9 @@ import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { createApp, hashPhysics, StandardPhysicsPlugin } from "@dylanebert/shallot";
-import { rainGround, rainSpawner } from "./creation-order-rain";
-import { run } from "./native";
-import { sampleBinary } from "./sample";
+import { rainGround, rainSpawner } from "./creation-order-rain.ts";
+import { run } from "./native.ts";
+import { sampleBinary } from "./sample.ts";
 
 setDefaultTimeout(0);
 

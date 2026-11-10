@@ -1,7 +1,7 @@
-import { MeshMaterial, StandardMaterial, StandardMaterialInput } from "./material-data";
-import { Materials, VertexMaterialType } from "./standard-material";
+import { MeshMaterial, StandardMaterial, StandardMaterialInput } from "./material-data.ts";
+import { Materials, VertexMaterialType } from "./standard-material.ts";
 
-export type { MaterialHandle, MaterialType } from "./material-type";
+export type { MaterialHandle, MaterialType } from "./material-type.ts";
 export {
     AlphaMode,
     AlphaModeCode,
@@ -11,5 +11,5 @@ export {
     MaterialTypes,
     materialType,
     materialTypeId,
-} from "./material-type";
+} from "./material-type.ts";
 export { Materials, MeshMaterial, StandardMaterial, StandardMaterialInput, VertexMaterialType };

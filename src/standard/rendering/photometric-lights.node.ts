@@ -2,7 +2,7 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { MeshInstance } from "../../core/mesh";
 import {
     AmbientLight,
@@ -21,7 +21,7 @@ import {
 import { Transform } from "../../core/transform";
 import type { World } from "../../engine";
 import { probeBuffer } from "../../engine/runtime";
-import { clusterGpuKey } from "./cluster";
+import { clusterGpuKey } from "./cluster.ts";
 import {
     Materials,
     MeshMaterial,
@@ -29,7 +29,7 @@ import {
     StandardMaterial,
     StandardRenderer,
     StandardRenderingPlugin,
-} from "./index";
+} from "./index.ts";
 import {
     DirectionalLightGpu,
     Lighting,
@@ -38,7 +38,7 @@ import {
     shadowDirectionalLight,
     spotParams,
     writeLighting,
-} from "./lighting";
+} from "./lighting.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

@@ -2,10 +2,10 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp } from "@dylanebert/shallot";
 import { PhysicsWorldDefinition } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { Geometry, GeometryPlugin, geometryNames } from "../src/geometry";
-import { drawGeometry, geometryDrawing } from "../src/geometry-presentation";
-import { JOINT_INK, JOINT_LINE } from "../src/joint-presentation";
-import { changeControl, controlValues, createScene, scenes } from "../src/scenes";
+import { Geometry, GeometryPlugin, geometryNames } from "../src/geometry.ts";
+import { drawGeometry, geometryDrawing } from "../src/geometry-presentation.ts";
+import { JOINT_INK, JOINT_LINE } from "../src/joint-presentation.ts";
+import { changeControl, controlValues, createScene, scenes } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of geometryNames)

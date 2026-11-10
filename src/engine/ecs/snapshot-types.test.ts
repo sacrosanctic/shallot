@@ -1,5 +1,5 @@
 import type { World, WorldSnapshot } from "@dylanebert/shallot";
-import type { WorldSnapshot as EngineSnapshot } from "./world";
+import type { WorldSnapshot as EngineSnapshot } from "./world.ts";
 
 // The public name must identify its owner's return type, not only exist in a barrel.
 type Assert<T extends true> = T;

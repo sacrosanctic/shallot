@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, test } from "bun:test";
 import { Camera, createApp, GlobalTransform, resizeViewport, Shape } from "@dylanebert/shallot";
 import { type View, Views, worldToViewport } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { CharacterSample, CharacterSamplePlugin } from "../src/character";
-import { characterDrawing, drawCharacterView } from "../src/character-presentation";
-import { createScene, scenes } from "../src/scenes";
+import { CharacterSample, CharacterSamplePlugin } from "../src/character.ts";
+import { characterDrawing, drawCharacterView } from "../src/character-presentation.ts";
+import { createScene, scenes } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of ["capsulePlane", "moverOverlap"] as const)

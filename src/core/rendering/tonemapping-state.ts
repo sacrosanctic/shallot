@@ -8,7 +8,7 @@ import {
     setRenderBindGroup,
     setRenderPipeline,
 } from "../../engine/runtime";
-import { ColorGrading, GradingConfig } from "./color-grading";
+import { ColorGrading, GradingConfig } from "./color-grading.ts";
 import {
     BeginFrameSystem,
     Camera,
@@ -18,11 +18,11 @@ import {
     RenderingPlugin,
     type View,
     Views,
-} from "./substrate";
-import { composite } from "./tonemapping";
+} from "./substrate.ts";
+import { composite } from "./tonemapping.ts";
 
-export { ColorGrading } from "./color-grading";
-export { TonemappingMethod } from "./tonemap";
+export { ColorGrading } from "./color-grading.ts";
+export { TonemappingMethod } from "./tonemap.ts";
 
 /** Per-camera presentation; absent cameras use TonyMcMapface. None only display-encodes
  * linear input, bypassing grading, exposure and dither. Linear keeps them with an identity curve. */

@@ -11,9 +11,9 @@ import {
 import { StandardPhysicsPlugin } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { createTestGpuApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
-import { physicsBodyIndex, physicsState } from "./runtime";
-import { worldCounters } from "./world/world";
+import { expectWarning } from "../../../scripts/test-console.ts";
+import { physicsBodyIndex, physicsState } from "./runtime.ts";
+import { worldCounters } from "./world/world.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

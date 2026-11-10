@@ -13,7 +13,7 @@ import {
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
 import * as std from "typegpu/std";
-import { Room, RoomPlugin } from "./room";
+import { Room, RoomPlugin } from "./room.ts";
 
 export const MOTE_COUNT = 8192;
 const layout = tgpu.bindGroupLayout({

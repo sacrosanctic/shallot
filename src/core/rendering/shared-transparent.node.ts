@@ -26,7 +26,7 @@ import {
     TransparentPhases,
     type View,
 } from ".";
-import { computeClipFromWorld } from "./camera";
+import { computeClipFromWorld } from "./camera.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

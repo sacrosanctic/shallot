@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { nativeBinary } from "./native";
+import { nativeBinary } from "./native.ts";
 
 /** Compile the selected upstream classes verbatim, without the samples app's graphics dependencies. */
 export function sampleBinary(samples = join(process.env.BOX3D ?? "", "samples")): string {

@@ -1,4 +1,4 @@
-import { buildArtifactIsFresh, buildInputHash } from "../../build-inputs";
+import { buildArtifactIsFresh, buildInputHash } from "../../build-inputs.ts";
 
 export const MIKKTSPACE_ARTIFACT = "src/core/mesh/mikktspace.wasm.ts";
 

@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import type { World } from "@dylanebert/shallot";
-import { mountHost } from "./host";
-import { revealAfterFirstFrame } from "./reveal";
+import { mountHost } from "./host.ts";
+import { revealAfterFirstFrame } from "./reveal.ts";
 
 const styles = readFileSync(new URL("./style.css", import.meta.url), "utf8");
 function themeColor(token: string): string {

@@ -1,7 +1,7 @@
 import type { World } from "@dylanebert/shallot";
-import { INK } from "./ink-presentation";
-import { JOINT_LINE } from "./joint-presentation";
-import { MeshInspectorState } from "./mesh-inspector";
+import { INK } from "./ink-presentation.ts";
+import { JOINT_LINE } from "./joint-presentation.ts";
+import { MeshInspectorState } from "./mesh-inspector.ts";
 
 type Point = [number, number, number];
 export function meshViewerBounds(world: World): number[][] {

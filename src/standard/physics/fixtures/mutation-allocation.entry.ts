@@ -1,6 +1,6 @@
 import { createApp, StandardPhysicsPlugin } from "@dylanebert/shallot";
 import { mutationAllocationSubject } from "../mutation-allocation.fixture";
-import { physicsState } from "../runtime";
+import { physicsState } from "../runtime.ts";
 
 export let controlSink: object | undefined;
 export const control = () => {

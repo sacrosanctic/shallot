@@ -1,5 +1,5 @@
-import { kernel } from "../kernel/kernel";
-import type { WorldState } from "./world";
+import { kernel } from "../kernel/kernel.ts";
+import type { WorldState } from "./world.ts";
 
 const FNV_INIT = 14695981039346656037n;
 

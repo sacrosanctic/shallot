@@ -13,7 +13,7 @@ import {
     PhysicsWorldDefinition,
     StandardPhysicsPlugin,
 } from "@dylanebert/shallot/standard/physics";
-import type { Controls } from "./scenes";
+import type { Controls } from "./scenes.ts";
 
 const f = Math.fround;
 type V3 = [number, number, number];

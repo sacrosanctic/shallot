@@ -10,10 +10,10 @@ import {
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { publishTestChromium } from "../../scripts/publish-browser";
-import { removeTestDirectory } from "../../scripts/test-directory";
+import { publishTestChromium } from "../../scripts/publish-browser.ts";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
 import { buildWeb, CROSS_ORIGIN_ISOLATION, contentType } from "../project";
-import { verifyPublishedGame } from "./publish-verify";
+import { verifyPublishedGame } from "./publish-verify.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const repo = resolve(import.meta.dir, "../..");

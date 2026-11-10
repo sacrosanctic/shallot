@@ -3,10 +3,10 @@ import { mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSy
 import { tmpdir } from "node:os";
 import { join, relative } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { expectError } from "../../scripts/test-console";
+import { expectError } from "../../scripts/test-console.ts";
 import { normalizePath } from "../project";
-import { publishHeaders, publishProject, readPublishLink } from "./publish";
-import { projectChromium } from "./publish-verify";
+import { publishHeaders, publishProject, readPublishLink } from "./publish.ts";
+import { projectChromium } from "./publish-verify.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

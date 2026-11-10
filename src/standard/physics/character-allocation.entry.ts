@@ -4,12 +4,12 @@ import {
     CharacterPlugin,
     PhysicsWorldDefinition,
 } from "@dylanebert/shallot/standard/physics";
-import { characterScratch } from "./character";
-import { BodyType } from "./common/types";
-import { physicsBodyIndex, physicsState } from "./runtime";
-import { createSphereShape } from "./shapes/shape";
-import { createTestBody, testShapeDef } from "./testing";
-import { bodySetLinearVelocity } from "./world/body";
+import { characterScratch } from "./character.ts";
+import { BodyType } from "./common/types.ts";
+import { physicsBodyIndex, physicsState } from "./runtime.ts";
+import { createSphereShape } from "./shapes/shape.ts";
+import { createTestBody, testShapeDef } from "./testing.ts";
+import { bodySetLinearVelocity } from "./world/body.ts";
 
 export let controlSink: { frame: number } | undefined;
 export const control = () => {

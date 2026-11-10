@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { ScreenSpaceAmbientOcclusion, World } from "@dylanebert/shallot";
-import { Scene, setOcclusion } from "./scene";
-import { setQuality, setSetting, settings } from "./settings";
+import { Scene, setOcclusion } from "./scene.ts";
+import { setQuality, setSetting, settings } from "./settings.ts";
 
 function scene(): World {
     const world = new World();

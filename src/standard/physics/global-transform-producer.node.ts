@@ -5,9 +5,9 @@ import { Body, BodyType, Shape } from "../../core/physics";
 import { GlobalTransform, Transform } from "../../core/transform";
 import { Time } from "../../engine";
 import { PhysicsWorldDefinition, StandardPhysicsPlugin } from ".";
-import { BodyField, setBodyField } from "./kernel/bodyrecords";
-import { physicsBodyIndex, physicsState, setAwake, setLinearVelocity } from "./runtime";
-import { bodyGetLinearVelocity, bodyIsAwake } from "./world/body";
+import { BodyField, setBodyField } from "./kernel/bodyrecords.ts";
+import { physicsBodyIndex, physicsState, setAwake, setLinearVelocity } from "./runtime.ts";
+import { bodyGetLinearVelocity, bodyIsAwake } from "./world/body.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

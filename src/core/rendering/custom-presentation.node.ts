@@ -14,8 +14,8 @@ import {
     Tonemapping,
     TonemappingMethod,
     Views,
-} from "./index";
-import { tonemappingStateKey } from "./tonemapping-state";
+} from "./index.ts";
+import { tonemappingStateKey } from "./tonemapping-state.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

@@ -1,12 +1,12 @@
-import { updateBroadPhasePairs } from "./collision/pairs";
-import { BodyType, defaultShapeDef } from "./common/types";
-import { hullDatabaseIndex } from "./kernel/geocolumns";
-import { matrix, transform, vector } from "./kernel/math";
-import { queryColumns } from "./kernel/querycolumns";
-import { makeBoxHull } from "./shapes/build-hull";
-import { createCompound } from "./shapes/compound";
-import { createGrid } from "./shapes/heightfield";
-import { createGridMesh } from "./shapes/mesh";
+import { updateBroadPhasePairs } from "./collision/pairs.ts";
+import { BodyType, defaultShapeDef } from "./common/types.ts";
+import { hullDatabaseIndex } from "./kernel/geocolumns.ts";
+import { matrix, transform, vector } from "./kernel/math.ts";
+import { queryColumns } from "./kernel/querycolumns.ts";
+import { makeBoxHull } from "./shapes/build-hull.ts";
+import { createCompound } from "./shapes/compound.ts";
+import { createGrid } from "./shapes/heightfield.ts";
+import { createGridMesh } from "./shapes/mesh.ts";
 import {
     computeShapeAABBOut,
     computeShapeExtent,
@@ -20,10 +20,10 @@ import {
     destroyShape,
     getShapeCentroid,
     setShapeFilter,
-} from "./shapes/shape";
-import { createTestBody, stepTestWorld } from "./testing";
-import { bodyDisable, bodyEnable, bodySetAwake } from "./world/body";
-import type { WorldState } from "./world/world";
+} from "./shapes/shape.ts";
+import { createTestBody, stepTestWorld } from "./testing.ts";
+import { bodyDisable, bodyEnable, bodySetAwake } from "./world/body.ts";
+import type { WorldState } from "./world/world.ts";
 
 export function shapeAllocationSubject(
     world: WorldState,

@@ -15,7 +15,7 @@ import {
     PrepareGlobalTransformSystem,
     TransformPlugin,
 } from "../transform";
-import { Anchor } from "./anchor";
+import { Anchor } from "./anchor.ts";
 
 import {
     Camera,
@@ -25,15 +25,15 @@ import {
     EXPOSURE_EV100_BLENDER,
     Exposure,
     Resolution,
-} from "./camera";
-import { FRAME_UNIFORM_SIZE, Frame, initializeFrameState, writeFrame } from "./frame";
+} from "./camera.ts";
+import { FRAME_UNIFORM_SIZE, Frame, initializeFrameState, writeFrame } from "./frame.ts";
 import {
     EndFrameSystem,
     initializeRenderFrameState,
     renderFrameKey,
     VIEW_KEY_FLOATS,
-} from "./frame-state";
-import { CULL_VOLUME_FLOATS, frustumVolume } from "./frustum";
+} from "./frame-state.ts";
+import { CULL_VOLUME_FLOATS, frustumVolume } from "./frustum.ts";
 import {
     GlobalTransformHistory,
     GlobalTransformHistoryEndSystem,
@@ -42,8 +42,8 @@ import {
     PrepareGlobalTransformHistorySystem,
     prepareGlobalTransformFrame,
     recoverGlobalTransformHistory,
-} from "./global-transform";
-import { initializeImageState, warmImages } from "./image";
+} from "./global-transform.ts";
+import { initializeImageState, warmImages } from "./image.ts";
 import {
     AmbientLight,
     DirectionalLight,
@@ -55,11 +55,11 @@ import {
     SpotLight,
     SunDisk,
     VolumetricLight,
-} from "./lighting";
-import { initializeRenderState, RenderContext } from "./render";
-import { ShadowFilteringMethod, ShadowFilteringMethodMode } from "./shadow-filtering";
-import { SAMPLE_COUNT } from "./targets";
-import { warmUpscaling } from "./upscaling";
+} from "./lighting.ts";
+import { initializeRenderState, RenderContext } from "./render.ts";
+import { ShadowFilteringMethod, ShadowFilteringMethodMode } from "./shadow-filtering.ts";
+import { SAMPLE_COUNT } from "./targets.ts";
+import { warmUpscaling } from "./upscaling.ts";
 
 import {
     acquireCanvasTexture,
@@ -80,7 +80,7 @@ import {
     type View as ViewSlot,
     Views,
     ViewUniforms,
-} from "./view";
+} from "./view.ts";
 
 /** @internal This frame's presenting views indexed by shading slot, filled by BeginFrameSystem;
  * the array is retained and refilled every frame. */
@@ -115,8 +115,8 @@ function bindSlotMatrices(world: World, capacity: number): void {
     frame.clipFromViews = slotMatrices(staging, capacity, CLIP_FROM_VIEW_F32);
 }
 
-export { Camera, CameraMode, CameraViewport, Exposure, Resolution } from "./camera";
-export { CAPTURE_CONTRACT, type Capture, captureFrame, captureTexture } from "./capture";
+export { Camera, CameraMode, CameraViewport, Exposure, Resolution } from "./camera.ts";
+export { CAPTURE_CONTRACT, type Capture, captureFrame, captureTexture } from "./capture.ts";
 export {
     AmbientLight,
     DirectionalLight,
@@ -129,8 +129,8 @@ export {
     SUN_DISK_EARTH_ANGULAR_SIZE,
     SunDisk,
     VolumetricLight,
-} from "./lighting";
-export { ShadowFilteringMethod, ShadowFilteringMethodMode } from "./shadow-filtering";
+} from "./lighting.ts";
+export { ShadowFilteringMethod, ShadowFilteringMethodMode } from "./shadow-filtering.ts";
 export {
     DEPTH_FORMAT,
     DepthPrepass,
@@ -140,7 +140,7 @@ export {
     NormalPrepass,
     NormalPrepassRequests,
     SAMPLE_COUNT,
-} from "./targets";
+} from "./targets.ts";
 
 const SLOT_FLOATS = VIEW_BYTES / 4;
 const CAMERAS = [Camera];
@@ -684,12 +684,12 @@ export const RenderingPlugin: Plugin = {
 
 // Extension consumers read the packed cull table; they must not repack it independently.
 
-export { computeClipFromWorld, computeViewFromWorld } from "./camera";
-export { Frame, FrameGpu } from "./frame";
-export { CULL_FRUSTUM, CULL_VOLUME_FLOATS } from "./frustum";
-export { Images, prepareImages, registerImage } from "./image";
+export { computeClipFromWorld, computeViewFromWorld } from "./camera.ts";
+export { Frame, FrameGpu } from "./frame.ts";
+export { CULL_FRUSTUM, CULL_VOLUME_FLOATS } from "./frustum.ts";
+export { Images, prepareImages, registerImage } from "./image.ts";
 
-export { RenderContext } from "./render";
+export { RenderContext } from "./render.ts";
 export {
     attachCanvas,
     attachTexture,
@@ -705,4 +705,4 @@ export {
     type View,
     Views,
     ViewUniforms,
-} from "./view";
+} from "./view.ts";

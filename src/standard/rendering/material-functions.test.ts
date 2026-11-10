@@ -1,7 +1,7 @@
 import { expect, expectTypeOf, test } from "bun:test";
 import tgpu from "typegpu";
 import * as d from "typegpu/data";
-import { materialLayout, materialType } from "./material-type";
+import { materialLayout, materialType } from "./material-type.ts";
 
 test("plain material shaders infer parameters and varyings and close over owned bindings", () => {
     const Parameters = d.struct({ tint: d.vec4f, scale: d.f32 });

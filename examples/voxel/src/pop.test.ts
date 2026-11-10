@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { chunks, chunkX, radii, type TerrainConfig, voxelScale } from "./terrain-data";
+import { chunks, chunkX, radii, type TerrainConfig, voxelScale } from "./terrain-data.ts";
 
 test("wrapped chunks are completely shrunk at both their dropped and newly loaded positions", () => {
     const config: TerrainConfig = { chunkSize: 8, viewDistance: 4, height: 16, relief: 4 };

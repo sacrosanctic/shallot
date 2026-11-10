@@ -1,19 +1,19 @@
 import { expect, test } from "bun:test";
-import { ContactField, contactField } from "../collision/contact";
-import { BodyType } from "../common/types";
-import { BodyField, bodyField } from "../kernel/bodyrecords";
-import { setArraySnapshot, solverSetIndex } from "../kernel/solversetcolumns";
-import { createSphereShape } from "../shapes/shape";
-import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint";
-import { defaultJointDef } from "../solver/joint";
+import { ContactField, contactField } from "../collision/contact.ts";
+import { BodyType } from "../common/types.ts";
+import { BodyField, bodyField } from "../kernel/bodyrecords.ts";
+import { setArraySnapshot, solverSetIndex } from "../kernel/solversetcolumns.ts";
+import { createSphereShape } from "../shapes/shape.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint.ts";
+import { defaultJointDef } from "../solver/joint.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { bodyIsAwake, bodySetAwake } from "./body";
+} from "../testing.ts";
+import { bodyIsAwake, bodySetAwake } from "./body.ts";
 
 test("sleeping-set merge appends contacts and fixes their set and local indices without waking", () => {
     const world = createTestWorld({ gravity: { x: 0, y: 0, z: 0 } });

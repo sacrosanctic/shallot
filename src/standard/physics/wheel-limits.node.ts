@@ -1,10 +1,10 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { Body, BodyType, createApp, Shape, Transform, WheelJoint } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { StandardPhysicsPlugin, StepPhysicsSystem, SyncPhysicsConstraintsSystem } from "./index";
-import { WHJ_LOWER_SUSPENSION_IMPULSE, WHJ_UPPER_SUSPENSION_IMPULSE } from "./kernel/joint-layout";
-import { readJointFloat, writeJointFloat } from "./kernel/jointcolumns";
-import { physicsState } from "./runtime";
+import { StandardPhysicsPlugin, StepPhysicsSystem, SyncPhysicsConstraintsSystem } from "./index.ts";
+import { WHJ_LOWER_SUSPENSION_IMPULSE, WHJ_UPPER_SUSPENSION_IMPULSE } from "./kernel/joint-layout.ts";
+import { readJointFloat, writeJointFloat } from "./kernel/jointcolumns.ts";
+import { physicsState } from "./runtime.ts";
 import { jointIds } from "./solver/joint.fixture";
 
 setDefaultTimeout(TIMEOUT.node);

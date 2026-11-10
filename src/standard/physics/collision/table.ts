@@ -1,5 +1,5 @@
-import type { BroadStore } from "../kernel/broadcolumns";
-import { kernel } from "../kernel/kernel";
+import type { BroadStore } from "../kernel/broadcolumns.ts";
+import { kernel } from "../kernel/kernel.ts";
 
 export type HashSet = {
     store: BroadStore;

@@ -2,9 +2,9 @@ import { expect, setDefaultTimeout, spyOn, test } from "bun:test";
 import { createApp } from "@dylanebert/shallot";
 import * as physics from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { MeshSamplePlugin } from "../src/mesh";
-import { createScene, scenes } from "../src/scenes";
-import { drawingDigest } from "./digest";
+import { MeshSamplePlugin } from "../src/mesh.ts";
+import { createScene, scenes } from "../src/scenes.ts";
+import { drawingDigest } from "./digest.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("Creation Benchmark's one-frame triangle count and build work equal native without automatic stepping", async () => {

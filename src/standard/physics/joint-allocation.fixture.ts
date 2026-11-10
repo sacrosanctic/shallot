@@ -1,26 +1,26 @@
-import { bufferMove } from "./collision/broadphase";
-import { contactCount } from "./collision/contact";
-import { updateBroadPhasePairs } from "./collision/pairs";
-import { BodyType } from "./common/types";
-import { BodyField, bodyField } from "./kernel/bodyrecords";
-import { DJ_LENGTH } from "./kernel/columns";
-import { EventKind, eventCount } from "./kernel/eventbuffers";
-import { collectJointEvents, readJointFloat, writeJointFloat } from "./kernel/jointcolumns";
-import { JointField, jointDrawScale, jointField, setJointDrawScale } from "./kernel/jointrecords";
-import { kernel } from "./kernel/kernel";
-import { ShapeField, shapeField } from "./kernel/shaperecords";
-import { createSphereShape } from "./shapes/shape";
-import { createDistanceJoint, defaultDistanceJointDef } from "./solver/distanceJoint";
+import { bufferMove } from "./collision/broadphase.ts";
+import { contactCount } from "./collision/contact.ts";
+import { updateBroadPhasePairs } from "./collision/pairs.ts";
+import { BodyType } from "./common/types.ts";
+import { BodyField, bodyField } from "./kernel/bodyrecords.ts";
+import { DJ_LENGTH } from "./kernel/columns.ts";
+import { EventKind, eventCount } from "./kernel/eventbuffers.ts";
+import { collectJointEvents, readJointFloat, writeJointFloat } from "./kernel/jointcolumns.ts";
+import { JointField, jointDrawScale, jointField, setJointDrawScale } from "./kernel/jointrecords.ts";
+import { kernel } from "./kernel/kernel.ts";
+import { ShapeField, shapeField } from "./kernel/shaperecords.ts";
+import { createSphereShape } from "./shapes/shape.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "./solver/distanceJoint.ts";
 import {
     createFilterJoint,
     createJointRecord,
     defaultJointDef,
     destroyJointInternal,
     JointType,
-} from "./solver/joint";
-import { step as stepWorld } from "./solver/step";
-import { createTestBody, testShapeDef } from "./testing";
-import type { WorldState } from "./world/world";
+} from "./solver/joint.ts";
+import { step as stepWorld } from "./solver/step.ts";
+import { createTestBody, testShapeDef } from "./testing.ts";
+import type { WorldState } from "./world/world.ts";
 
 export function splitAllocationSubject(state: WorldState): () => void {
     const a = createTestBody(state, { type: BodyType.Dynamic, enableSleep: false });

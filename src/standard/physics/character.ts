@@ -10,9 +10,9 @@ import {
     vec3,
     type World,
 } from "../../engine";
-import { BodyType } from "./common/types";
-import { BodyField, setBodyField } from "./kernel/bodyrecords";
-import { queryColumns } from "./kernel/querycolumns";
+import { BodyType } from "./common/types.ts";
+import { BodyField, setBodyField } from "./kernel/bodyrecords.ts";
+import { queryColumns } from "./kernel/querycolumns.ts";
 import {
     applyTransformPose,
     physicsBodyIndex,
@@ -20,13 +20,13 @@ import {
     StandardPhysicsPlugin,
     StepPhysicsSystem,
     SyncPhysicsConstraintsSystem,
-} from "./runtime";
+} from "./runtime.ts";
 import {
     bodyGetTransform,
     bodySetAwake,
     bodySetLinearVelocity,
     bodySetTransform,
-} from "./world/body";
+} from "./world/body.ts";
 
 export const GroundState = { InAir: 0, OnGround: 1, OnSteepGround: 2 } as const;
 /** A kinematic capsule Body. Write velocity in a fixed system ordered before `CharacterPlugin.systems`; movement runs after body synchronization and before the rigid solver. Resolved velocity is written back, without gravity or input policy. Ground velocity is reported, never added to motion. */

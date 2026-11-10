@@ -4,12 +4,12 @@
 // so single-thread consumers never parse it.
 
 import type { EntityRef, World } from "../../../engine";
-import { makeShapeId } from "../api/config";
-import type { EntityId } from "../common/ids";
-import { type ShapeEntity, shapeEntityAt } from "../world/shape-entities";
-import type { WorldState } from "../world/world";
+import { makeShapeId } from "../api/config.ts";
+import type { EntityId } from "../common/ids.ts";
+import { type ShapeEntity, shapeEntityAt } from "../world/shape-entities.ts";
+import type { WorldState } from "../world/world.ts";
 import { KERNEL_WASM_BASE64 } from "./kernel.wasm";
-import { createPool, maxWorkers, type Pool, solverPause } from "./pool";
+import { createPool, maxWorkers, type Pool, solverPause } from "./pool.ts";
 
 /** Physics kernel ABI. */
 export type Kernel = {

@@ -8,7 +8,7 @@ import {
     World,
 } from "@dylanebert/shallot";
 import { Fog, Sky } from "@dylanebert/shallot/extras";
-import { atmosphere, Clock, CycleScene, CycleSystem } from "./index";
+import { atmosphere, Clock, CycleScene, CycleSystem } from "./index.ts";
 
 test("noon has the highest and brightest sun", () => {
     const noon = atmosphere(12);

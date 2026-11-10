@@ -1,10 +1,10 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { createApp, StandardPhysicsPlugin } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { BenchmarkSamplePlugin } from "../src/benchmarks";
-import { drawingBounds, drawSet } from "../src/draw-set";
-import { shapePresentation } from "../src/presentation";
-import { createScene } from "../src/scenes";
+import { BenchmarkSamplePlugin } from "../src/benchmarks.ts";
+import { drawingBounds, drawSet } from "../src/draw-set.ts";
+import { shapePresentation } from "../src/presentation.ts";
+import { createScene } from "../src/scenes.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

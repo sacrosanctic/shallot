@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import gold from "../../../../crates/physics/tests/math.gold.json";
-import type { Mat3, Quat, Vec3 } from "../common/records";
-import { kernel } from "./kernel";
-import { matrix, quaternion, vector } from "./math";
+import type { Mat3, Quat, Vec3 } from "../common/records.ts";
+import { kernel } from "./kernel.ts";
+import { matrix, quaternion, vector } from "./math.ts";
 
 const v = (a: number[], i = 0): Vec3 => ({ x: a[i], y: a[i + 1], z: a[i + 2] });
 const q = (a: number[], i = 0): Quat => ({ v: v(a, i), s: a[i + 3] });

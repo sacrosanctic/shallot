@@ -19,23 +19,23 @@ import {
 import { Transform } from "../../core/transform";
 import { lookAtRotation, type World } from "../../engine";
 import { rawDevice } from "../../engine/runtime";
-import { StandardRenderer } from "./forward";
-import { StandardRenderingPlugin } from "./index";
-import { Materials, MeshMaterial, StandardMaterial } from "./material";
-import { MeshRenderPlugin } from "./mesh-render";
+import { StandardRenderer } from "./forward.ts";
+import { StandardRenderingPlugin } from "./index.ts";
+import { Materials, MeshMaterial, StandardMaterial } from "./material.ts";
+import { MeshRenderPlugin } from "./mesh-render.ts";
 import {
     cascadeCount,
     cascadeMeta,
     cascadeRecvVP,
     cascadeTileRects,
     DirectionalLightShadowMap,
-} from "./shadows";
+} from "./shadows.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 
 const BASE_3X3_SUBTEXEL_LUMINANCE_CHANGE = 1991.3080000000002;
 
-const renderingExports = (await import("./index")) as unknown as Record<string, unknown>;
+const renderingExports = (await import("./index.ts")) as unknown as Record<string, unknown>;
 const shadowFilteringMethod = renderingExports["ShadowFilteringMethod"] as any;
 const shadowFilteringMode = renderingExports["ShadowFilteringMethodMode"] as
     | Record<string, number>

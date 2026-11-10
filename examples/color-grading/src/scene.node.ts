@@ -3,7 +3,7 @@ import { Camera, ColorGrading, DirectionalLight, Transform } from "@dylanebert/s
 import { Orbit } from "@dylanebert/shallot/extras";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { Scene, ScenePlugin } from "./scene";
+import { Scene, ScenePlugin } from "./scene.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("Bevy camera and shadowed sun illuminate the plane, five-part cube and six spheres", async () => {

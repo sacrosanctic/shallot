@@ -2,7 +2,7 @@ import { copyFileSync, mkdtempSync, symlinkSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { shallot } from "@dylanebert/shallot/bun";
-import { removeTestDirectory } from "../../scripts/test-directory";
+import { removeTestDirectory } from "../../scripts/test-directory.ts";
 
 const root = resolve(import.meta.dir, "../..");
 const directory = mkdtempSync(join(tmpdir(), "shallot-benchmark-profile-"));

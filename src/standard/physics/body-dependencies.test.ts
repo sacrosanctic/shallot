@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { BodyDependencies } from "./body-dependencies";
+import { BodyDependencies } from "./body-dependencies.ts";
 
 function dependents(index: BodyDependencies, body: number): number[] {
     const result: number[] = [];

@@ -1,7 +1,7 @@
 import { execFileSync } from "node:child_process";
 import { resolve } from "node:path";
 import { chromium } from "playwright/test";
-import { assertChromiumInstalled } from "./browser-install";
+import { assertChromiumInstalled } from "./browser-install.ts";
 
 const root = resolve(import.meta.dirname, "..");
 

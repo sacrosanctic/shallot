@@ -8,7 +8,7 @@ import {
 } from "@dylanebert/shallot/standard/physics";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import gold from "../../../crates/physics/tests/nonconvex_build.gold.json";
-import { drawMeshData } from "./shapes/readgeometry";
+import { drawMeshData } from "./shapes/readgeometry.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

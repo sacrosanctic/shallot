@@ -1,6 +1,6 @@
-import { kernel } from "../kernel/kernel";
-import type { WorldState } from "../world/world";
-import { finishJointCreation, type Joint, type JointDef, writeJointDefinition } from "./joint";
+import { kernel } from "../kernel/kernel.ts";
+import type { WorldState } from "../world/world.ts";
+import { finishJointCreation, type Joint, type JointDef, writeJointDefinition } from "./joint.ts";
 
 /** Prismatic joint definition (b3PrismaticJointDef), body handles resolved to a base JointDef. */
 export type PrismaticJointDef = {

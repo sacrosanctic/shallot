@@ -1,19 +1,19 @@
 import { expect, test } from "bun:test";
-import { contactIds } from "../collision/contact";
+import { contactIds } from "../collision/contact.ts";
 import gold from "../collision/recycle.gold.json";
-import { BodyType } from "../common/types";
-import { createSphereShape } from "../shapes/shape";
+import { BodyType } from "../common/types.ts";
+import { createSphereShape } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { BodyField, bodyField } from "./bodyrecords";
-import { SIM_STRIDE } from "./columns";
-import * as layout from "./contact-layout";
-import { kernel } from "./kernel";
+} from "../testing.ts";
+import { BodyField, bodyField } from "./bodyrecords.ts";
+import { SIM_STRIDE } from "./columns.ts";
+import * as layout from "./contact-layout.ts";
+import { kernel } from "./kernel.ts";
 
 const scratch = new Uint32Array(1);
 const float = new Float32Array(scratch.buffer);

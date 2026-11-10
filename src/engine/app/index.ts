@@ -17,10 +17,10 @@ import {
     validateGpu,
     withPipelineOwner,
 } from "../runtime";
-import { resolvePlugins } from "./compose";
-import { frameDelta } from "./frame-delta";
+import { resolvePlugins } from "./compose.ts";
+import { frameDelta } from "./frame-delta.ts";
 
-export * from "./compose";
+export * from "./compose.ts";
 
 /**
  * bundle of components, systems, and lifecycle hooks: the unit of behavior a project enables.

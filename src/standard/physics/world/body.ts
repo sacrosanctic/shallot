@@ -1,26 +1,26 @@
 // body.c bindings (Box3D, Erin Catto, MIT).
 
-import { NULL_INDEX } from "../common/array";
-import { BODY_NAME_LENGTH, SetType } from "../common/constants";
-import type { EntityId } from "../common/ids";
-import type { Mat3, Pos, Quat, Vec3, WorldTransform } from "../common/records";
+import { NULL_INDEX } from "../common/array.ts";
+import { BODY_NAME_LENGTH, SetType } from "../common/constants.ts";
+import type { EntityId } from "../common/ids.ts";
+import type { Mat3, Pos, Quat, Vec3, WorldTransform } from "../common/records.ts";
 
 const f32 = Math.fround;
 
-import type { BodyDef, BodyType } from "../common/types";
+import type { BodyDef, BodyType } from "../common/types.ts";
 import {
     readSimLocalCenter,
     readSimTransform,
     readStateAngularVelocity,
     readStateLinearVelocity,
-} from "../kernel/bodycolumns";
-import { BodyField, bodyField, bodyInertia } from "../kernel/bodyrecords";
-import { bodyType } from "../kernel/filtercolumns";
-import { JointField, jointField } from "../kernel/jointrecords";
-import { kernel } from "../kernel/kernel";
-import { ShapeField, shapeField } from "../kernel/shaperecords";
-import type { MassData } from "../shapes/geometry";
-import type { WorldState } from "./world";
+} from "../kernel/bodycolumns.ts";
+import { BodyField, bodyField, bodyInertia } from "../kernel/bodyrecords.ts";
+import { bodyType } from "../kernel/filtercolumns.ts";
+import { JointField, jointField } from "../kernel/jointrecords.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { ShapeField, shapeField } from "../kernel/shaperecords.ts";
+import type { MassData } from "../shapes/geometry.ts";
+import type { WorldState } from "./world.ts";
 
 export const BodyFlags = {
     lockLinearX: 0x00000001,

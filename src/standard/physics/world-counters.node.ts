@@ -10,8 +10,8 @@ import {
 } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { getWorldCounters, PhysicsWorldDefinition, StandardPhysicsPlugin } from ".";
-import { counterPile } from "./fixtures/world-counters";
-import { kernel } from "./kernel/kernel";
+import { counterPile } from "./fixtures/world-counters.ts";
+import { kernel } from "./kernel/kernel.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("world counter records and arrays are borrowed independently; reads do not allocate kernel bytes", async () => {

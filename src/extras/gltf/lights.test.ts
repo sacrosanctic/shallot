@@ -3,8 +3,8 @@ import { readFileSync } from "node:fs";
 import { DirectionalLight, PointLight, SpotLight } from "../../core/rendering";
 import { Transform } from "../../core/transform";
 import { World } from "../../engine/ecs";
-import { type GltfJson, parseGltf } from "./gltf";
-import { loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene";
+import { type GltfJson, parseGltf } from "./gltf.ts";
+import { loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene.ts";
 
 const document: GltfJson = JSON.parse(
     readFileSync(

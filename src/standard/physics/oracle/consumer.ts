@@ -1,13 +1,13 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { makeJointId } from "../api/config";
-import { ContactField, ContactFlags, contactField, contactIds } from "../collision/contact";
-import { readContactManifolds } from "../collision/manifoldstore";
-import { type CollisionPlane, clipVector, solvePlanes } from "../collision/mover";
-import { kernelRay } from "../collision/shape_query_gold";
-import type { AABB, Vec3 as PhysicsVec3, Quat, Transform, Vec3 } from "../common/records";
-import { BodyType, ShapeType } from "../common/types";
-import { readStateAngularVelocity } from "../kernel/bodycolumns";
+import { makeJointId } from "../api/config.ts";
+import { ContactField, ContactFlags, contactField, contactIds } from "../collision/contact.ts";
+import { readContactManifolds } from "../collision/manifoldstore.ts";
+import { type CollisionPlane, clipVector, solvePlanes } from "../collision/mover.ts";
+import { kernelRay } from "../collision/shape_query_gold.ts";
+import type { AABB, Vec3 as PhysicsVec3, Quat, Transform, Vec3 } from "../common/records.ts";
+import { BodyType, ShapeType } from "../common/types.ts";
+import { readStateAngularVelocity } from "../kernel/bodycolumns.ts";
 import {
     DJ_LENGTH,
     MJ_LINEAR_VELOCITY,
@@ -15,22 +15,22 @@ import {
     PLJ_HERTZ,
     SJ_MOTOR_VELOCITY,
     WJ_LINEAR_HERTZ,
-} from "../kernel/columns";
-import { hullDatabaseIndex } from "../kernel/geocolumns";
-import { readJointFloat, readJointVec3 } from "../kernel/jointcolumns";
-import { JointField, jointField } from "../kernel/jointrecords";
-import { kernel } from "../kernel/kernel";
-import { createProxy, createTree, destroyTree, query } from "../kernel/treecolumns";
-import { makeBoxHull } from "../shapes/build-hull";
-import { type Capsule, computeSphereAABB, type Sphere } from "../shapes/geometry";
-import { createBoxMesh } from "../shapes/mesh";
+} from "../kernel/columns.ts";
+import { hullDatabaseIndex } from "../kernel/geocolumns.ts";
+import { readJointFloat, readJointVec3 } from "../kernel/jointcolumns.ts";
+import { JointField, jointField } from "../kernel/jointrecords.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { createProxy, createTree, destroyTree, query } from "../kernel/treecolumns.ts";
+import { makeBoxHull } from "../shapes/build-hull.ts";
+import { type Capsule, computeSphereAABB, type Sphere } from "../shapes/geometry.ts";
+import { createBoxMesh } from "../shapes/mesh.ts";
 import {
     createCapsuleShape,
     createHullShape,
     createMeshShape,
     createSphereShape,
-} from "../shapes/shape";
-import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint";
+} from "../shapes/shape.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "../solver/distanceJoint.ts";
 import {
     createFilterJoint,
     defaultJointDef,
@@ -40,40 +40,40 @@ import {
     type Joint,
     getJointConstraintForce as jointConstraintForce,
     jointIsValid,
-} from "../solver/joint";
-import { createMotorJoint, defaultMotorJointDef } from "../solver/motorJoint";
-import { createParallelJoint, defaultParallelJointDef } from "../solver/parallelJoint";
+} from "../solver/joint.ts";
+import { createMotorJoint, defaultMotorJointDef } from "../solver/motorJoint.ts";
+import { createParallelJoint, defaultParallelJointDef } from "../solver/parallelJoint.ts";
 import {
     createPrismaticJoint,
     defaultPrismaticJointDef,
     prismaticJointTranslation,
-} from "../solver/prismaticJoint";
+} from "../solver/prismaticJoint.ts";
 import {
     createRevoluteJoint,
     defaultRevoluteJointDef,
     revoluteJointAngle,
-} from "../solver/revoluteJoint";
+} from "../solver/revoluteJoint.ts";
 import {
     createSphericalJoint,
     defaultSphericalJointDef,
     sphericalJointConeAngle,
-} from "../solver/sphericalJoint";
-import { createWeldJoint, defaultWeldJointDef } from "../solver/weldJoint";
+} from "../solver/sphericalJoint.ts";
+import { createWeldJoint, defaultWeldJointDef } from "../solver/weldJoint.ts";
 import {
     createWheelJoint,
     defaultWheelJointDef,
     wheelJointSteeringAngle,
-} from "../solver/wheelJoint";
+} from "../solver/wheelJoint.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { bodyGetLinearVelocity, bodyGetTransform, getBodyState, getMassData } from "../world/body";
-import { hashWorldStateOracleSentinel } from "../world/hash";
-import { loadScenarioCorpus, runScenario, type ScenarioOutput } from "./scenario";
+} from "../testing.ts";
+import { bodyGetLinearVelocity, bodyGetTransform, getBodyState, getMassData } from "../world/body.ts";
+import { hashWorldStateOracleSentinel } from "../world/hash.ts";
+import { loadScenarioCorpus, runScenario, type ScenarioOutput } from "./scenario.ts";
 
 export type OracleCase = {
     id: string;

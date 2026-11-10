@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { World } from "@dylanebert/shallot";
 import { emptyQueryHit } from "@dylanebert/shallot/standard/physics";
-import { BenchmarkVillageState, benchmarkVillageDrawing } from "../src/benchmark-village";
-import { changeControl, controlValues } from "../src/scenes";
+import { BenchmarkVillageState, benchmarkVillageDrawing } from "../src/benchmark-village.ts";
+import { changeControl, controlValues } from "../src/scenes.ts";
 
 test("Village Benchmark draw controls retain casts while hiding their presentation", () => {
     const world = new World();

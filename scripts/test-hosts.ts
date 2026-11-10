@@ -1,4 +1,4 @@
-import { normalizePath } from "../src/project/paths";
+import { normalizePath } from "../src/project/paths.ts";
 
 /**
  * Test files and browser subjects hosted CI runs on only the listed platforms, keyed by repository-relative path;

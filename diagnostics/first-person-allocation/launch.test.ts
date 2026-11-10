@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import type { AdapterFacts } from "../../src/engine/runtime";
-import { launchPlan } from "./launch";
-import { resolveSeat, type SeatResolution } from "./seat";
+import { launchPlan } from "./launch.ts";
+import { resolveSeat, type SeatResolution } from "./seat.ts";
 
 test("the display launch plan reports Chromium and leaves adapter verdict to the observed run", () => {
     for (const host of ["darwin", "linux", "win32"]) {

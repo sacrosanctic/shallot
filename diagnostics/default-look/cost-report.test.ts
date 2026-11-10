@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { type CostRow, costCells, costReport } from "./cost-report";
+import { type CostRow, costCells, costReport } from "./cost-report.ts";
 
 const row: CostRow = {
     scene: "<scene>",

@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { Body, BodyType, GlobalTransform, HeightFields, Shape, ShapeKind, Transform, createApp } from "../../src";
 import { castRayClosest, emptyQueryHit, hashPhysics, isAwake, StandardPhysicsPlugin } from "../../src/standard/physics";
-import { physicsState } from "../../src/standard/physics/runtime";
-import { worldCounters } from "../../src/standard/physics/world/world";
-import { nativeBinary, run } from "./native";
+import { physicsState } from "../../src/standard/physics/runtime.ts";
+import { worldCounters } from "../../src/standard/physics/world/world.ts";
+import { nativeBinary, run } from "./native.ts";
 
 setDefaultTimeout(0);
 const bits = (value: number) => new Uint32Array(new Float32Array([value]).buffer)[0]!;

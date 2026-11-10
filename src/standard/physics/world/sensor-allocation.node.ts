@@ -4,7 +4,7 @@ import { TIMEOUT } from "@dylanebert/shallot/testing";
 import {
     allocationFailure,
     sampleAllocation,
-} from "../../../../diagnostics/first-person-allocation/allocation";
+} from "../../../../diagnostics/first-person-allocation/allocation.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

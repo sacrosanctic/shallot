@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { createApp, Resolution } from "@dylanebert/shallot";
-import { Posterize } from "./posterize";
-import { Scene } from "./scene";
-import { setDither, setSetting } from "./settings";
+import { Posterize } from "./posterize.ts";
+import { Scene } from "./scene.ts";
+import { setDither, setSetting } from "./settings.ts";
 
 test("settings write resolution height, color levels and dither on the camera", async () => {
     const app = await createApp({

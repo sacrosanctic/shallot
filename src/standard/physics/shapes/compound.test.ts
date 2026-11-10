@@ -1,30 +1,30 @@
 import { expect, test } from "bun:test";
-import type { ShapeProxy } from "../collision/distance";
-import { kernelCast, kernelMover, kernelOverlap, kernelRay } from "../collision/shape_query_gold";
-import type { Quat, Transform, Vec3 } from "../common/records";
-import { bounds, quaternion, transform, vector } from "../kernel/math";
+import type { ShapeProxy } from "../collision/distance.ts";
+import { kernelCast, kernelMover, kernelOverlap, kernelRay } from "../collision/shape_query_gold.ts";
+import type { Quat, Transform, Vec3 } from "../common/records.ts";
+import { bounds, quaternion, transform, vector } from "../kernel/math.ts";
 
 const f32 = Math.fround;
 const PI = Math.fround(Math.PI);
 
-import { BodyType, defaultSurfaceMaterial, ShapeType, type SurfaceMaterial } from "../common/types";
-import { assertQueryWorld, kernel, rethrowQueryError, setQueryCallback } from "../kernel/kernel";
-import { ShapeField, shapeField } from "../kernel/shaperecords";
-import { readNode } from "../kernel/treecolumns";
-import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing";
-import { makeBoxHull } from "./build-hull";
+import { BodyType, defaultSurfaceMaterial, ShapeType, type SurfaceMaterial } from "../common/types.ts";
+import { assertQueryWorld, kernel, rethrowQueryError, setQueryCallback } from "../kernel/kernel.ts";
+import { ShapeField, shapeField } from "../kernel/shaperecords.ts";
+import { readNode } from "../kernel/treecolumns.ts";
+import { createTestBody, createTestWorld, destroyTestWorld, testShapeDef } from "../testing.ts";
+import { makeBoxHull } from "./build-hull.ts";
 import {
     type CompoundData,
     type CompoundDef,
     createCompound,
     getCompoundChild,
     getCompoundMaterials,
-} from "./compound";
-import { type Capsule, computeCapsuleAABB, computeSphereAABB, type Sphere } from "./geometry";
+} from "./compound.ts";
+import { type Capsule, computeCapsuleAABB, computeSphereAABB, type Sphere } from "./geometry.ts";
 import gold from "./geometry.gold.json";
-import { computeHullAABB, type HullData } from "./hull";
-import { computeMeshAABB, createBoxMesh, type MeshData } from "./mesh";
-import { computeShapeAABB, createCompoundShape, destroyShape, shapeIsValid } from "./shape";
+import { computeHullAABB, type HullData } from "./hull.ts";
+import { computeMeshAABB, createBoxMesh, type MeshData } from "./mesh.ts";
+import { computeShapeAABB, createCompoundShape, destroyShape, shapeIsValid } from "./shape.ts";
 
 const dv = new DataView(new ArrayBuffer(4));
 function fromBits(hex: string): number {

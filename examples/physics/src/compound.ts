@@ -16,7 +16,7 @@ import {
     rotationFromAxisAngle,
 } from "@dylanebert/shallot/standard/physics";
 import boxMesh from "./compound-box.json" with { type: "json" };
-import { decodeMesh } from "./mesh-data";
+import { decodeMesh } from "./mesh-data.ts";
 
 const f = Math.fround;
 type V3 = [number, number, number];

@@ -1,4 +1,4 @@
-import { type FrameTimings, TIMING_HISTORY, TIMING_SMOOTHING } from "./frames";
+import { type FrameTimings, TIMING_HISTORY, TIMING_SMOOTHING } from "./frames.ts";
 
 /** Empty frames behind a pending readback. Only the retained history needs individual timestamps;
  * older zeros compose as an EMA decay product, even with irregular frame intervals.

@@ -5,10 +5,10 @@ import * as std from "typegpu/std";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import { MeshInstance } from "../../core/mesh";
 import { attachTexture, Camera, NormalPrepass } from "../../core/rendering";
-import { viewTargetsKey } from "../../core/rendering/targets";
+import { viewTargetsKey } from "../../core/rendering/targets.ts";
 import { Transform } from "../../core/transform";
 import { probeTexture, type World } from "../../engine";
-import { StandardRenderer } from "./forward";
+import { StandardRenderer } from "./forward.ts";
 import {
     AlphaMode,
     applyPbrLighting,
@@ -22,8 +22,8 @@ import {
     pbrInputFromStandardMaterial,
     StandardMaterial,
     StandardRenderingPlugin,
-} from "./index";
-import { MeshRenderPlugin } from "./mesh-render";
+} from "./index.ts";
+import { MeshRenderPlugin } from "./mesh-render.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 // Each material lights its +Z face with normalize(n + y), which is (0, √½, √½) there.

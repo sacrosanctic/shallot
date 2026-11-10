@@ -5,10 +5,10 @@ import {
     ScreenSpaceAmbientOcclusionPlugin,
 } from "@dylanebert/shallot";
 import { ProfilePlugin } from "@dylanebert/shallot/extras";
-import { type CostRow, costCells } from "./cost-report";
-import { PALETTES } from "./palette";
-import { DIAGNOSTIC_PLUGINS, SCENES, type SceneDefinition } from "./scenes";
-import { AO_LEVELS, addAmbientOcclusion } from "./ssao";
+import { type CostRow, costCells } from "./cost-report.ts";
+import { PALETTES } from "./palette.ts";
+import { DIAGNOSTIC_PLUGINS, SCENES, type SceneDefinition } from "./scenes.ts";
+import { AO_LEVELS, addAmbientOcclusion } from "./ssao.ts";
 
 const status = document.querySelector("#status")!;
 const output = document.querySelector("#results")!;

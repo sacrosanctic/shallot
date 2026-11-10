@@ -7,13 +7,13 @@ import {
     defaultShapeDef,
     defaultWorldDef,
     type ShapeDef,
-} from "../common/types";
-import { kernel } from "../kernel/kernel";
-import { createSphereShape } from "../shapes/shape";
-import { createFilterJoint, defaultJointDef } from "../solver/joint";
-import { bodyGetLinearVelocity, bodySetLinearVelocity, createBody } from "../world/body";
-import { createWorld, destroyWorld, getWorld } from "../world/world";
-import { restore, snapshot } from "./snapshot";
+} from "../common/types.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { createSphereShape } from "../shapes/shape.ts";
+import { createFilterJoint, defaultJointDef } from "../solver/joint.ts";
+import { bodyGetLinearVelocity, bodySetLinearVelocity, createBody } from "../world/body.ts";
+import { createWorld, destroyWorld, getWorld } from "../world/world.ts";
+import { restore, snapshot } from "./snapshot.ts";
 
 function makeWorld(owner?: World) {
     const id = createWorld(owner, defaultWorldDef());

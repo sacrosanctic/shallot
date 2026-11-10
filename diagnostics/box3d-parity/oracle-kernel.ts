@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { run } from "./native";
+import { run } from "./native.ts";
 
 const target = join(tmpdir(), "shallot-box3d-functions-wasm");
 run(
@@ -25,7 +25,7 @@ export const oracleWasm = new Uint8Array(
 );
 
 export async function assertPublicOracleKernel(): Promise<void> {
-    const { kernel } = await import("../../src/standard/physics/kernel/kernel");
+    const { kernel } = await import("../../src/standard/physics/kernel/kernel.ts");
     const k = kernel(undefined) as unknown as { box3dOracleRun?: unknown };
     if (typeof k.box3dOracleRun !== "function") {
         throw new Error(

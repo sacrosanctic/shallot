@@ -17,8 +17,8 @@ import {
     SyncPhysicsConstraintsSystem,
     setLinearVelocity,
 } from "@dylanebert/shallot/standard/physics";
-import { SceneRestart } from "./scene-restart";
-import type { Controls } from "./scenes";
+import { SceneRestart } from "./scene-restart.ts";
+import type { Controls } from "./scenes.ts";
 
 const f = Math.fround;
 const TreeSample = { create: () => ({ bodies: [] as number[], ready: false }) };

@@ -2,7 +2,7 @@ import { afterAll, beforeAll, describe, expect, setDefaultTimeout, test } from "
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join, relative } from "node:path";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { normalizePath } from "../src/project/paths";
+import { normalizePath } from "../src/project/paths.ts";
 import {
     assertCopiedNodeCase,
     assertCreatedExample,
@@ -14,7 +14,7 @@ import {
     ROOT,
     removeExample,
     run,
-} from "./packed-install-fixture";
+} from "./packed-install-fixture.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

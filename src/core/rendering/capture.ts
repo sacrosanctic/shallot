@@ -1,6 +1,6 @@
 import type { World } from "../../engine";
 import { deviceFailure, observedDeviceError, probeTexture } from "../../engine/runtime";
-import { cameraView, canvasFrameBinding, type View } from "./view";
+import { cameraView, canvasFrameBinding, type View } from "./view.ts";
 
 interface CaptureIdentity {
     width: number;

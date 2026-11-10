@@ -1,6 +1,6 @@
 import { holdFrames, pipelineWarnings } from "@dylanebert/shallot/testing";
 import { expect, type Page, test } from "playwright/test";
-import { dragRange, tabSkipsChrome } from "./pointer";
+import { dragRange, tabSkipsChrome } from "./pointer.ts";
 
 test.use(pipelineWarnings);
 

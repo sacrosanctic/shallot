@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { SCENES } from "./scenes";
-import { AO_LEVELS } from "./ssao";
+import { SCENES } from "./scenes.ts";
+import { AO_LEVELS } from "./ssao.ts";
 
 export function aoDifference(before: Float32Array, after: Float32Array) {
     if (!before.length || before.length !== after.length)

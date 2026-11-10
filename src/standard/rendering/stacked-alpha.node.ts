@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { gpuScene } from "../../../scripts/gpu.fixture";
-import { expectWarning } from "../../../scripts/test-console";
+import { expectWarning } from "../../../scripts/test-console.ts";
 import { MeshInstance } from "../../core/mesh";
 import {
     attachTexture,
@@ -11,7 +11,7 @@ import {
     Tonemapping,
     TonemappingMethod,
 } from "../../core/rendering";
-import { offscreenTexture } from "../../core/rendering/view";
+import { offscreenTexture } from "../../core/rendering/view.ts";
 import { Transform } from "../../core/transform";
 import type { World } from "../../engine";
 import { probeTexture } from "../../engine/runtime";

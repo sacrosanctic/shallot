@@ -10,8 +10,8 @@ import {
     resetInterpolation,
     TransformRuntime,
 } from "../transform";
-import { PointLight, SpotLight } from "./lighting";
-import { Xform } from "./xform";
+import { PointLight, SpotLight } from "./lighting.ts";
+import { Xform } from "./xform.ts";
 
 type LightHistory = {
     eid: number;

@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { existsSync, readdirSync } from "node:fs";
 import { join, resolve } from "node:path";
-import { packageManifest, testWorkflow } from "./create";
+import { packageManifest, testWorkflow } from "./create.ts";
 
 const repo = resolve(import.meta.dir, "../..");
 const examples = join(repo, "examples");

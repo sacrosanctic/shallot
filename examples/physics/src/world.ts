@@ -16,9 +16,9 @@ import {
     StandardPhysicsPlugin,
     StepPhysicsSystem,
 } from "@dylanebert/shallot/standard/physics";
-import { human } from "./human";
-import { SceneRestart } from "./scene-restart";
-import type { Controls } from "./scenes";
+import { human } from "./human.ts";
+import { SceneRestart } from "./scene-restart.ts";
+import type { Controls } from "./scenes.ts";
 
 const f = Math.fround;
 type V3 = [number, number, number];

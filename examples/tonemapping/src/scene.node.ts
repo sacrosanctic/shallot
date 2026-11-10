@@ -10,9 +10,9 @@ import { Orbit } from "@dylanebert/shallot/extras";
 import { attachTexture, captureTexture } from "@dylanebert/shallot/rendering";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { openGpuApp } from "@dylanebert/shallot/testing/gpu";
-import { AppPlugin } from "./app";
-import { Scene, ScenePlugin } from "./scene";
-import { methods, setMethod, setScene } from "./settings";
+import { AppPlugin } from "./app.ts";
+import { Scene, ScenePlugin } from "./scene.ts";
+import { methods, setMethod, setScene } from "./settings.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 test("Bevy camera and shadowed sun illuminate the plane, five-part cube and six spheres", async () => {

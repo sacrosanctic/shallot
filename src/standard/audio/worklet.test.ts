@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { runInNewContext } from "node:vm";
-import { WORKLET_CODE } from "./worklet";
+import { WORKLET_CODE } from "./worklet.ts";
 
 const FRAME = 128;
 const BATCH_LENGTH = 2 + 128 * 9 + 64;

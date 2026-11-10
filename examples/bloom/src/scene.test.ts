@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { World } from "@dylanebert/shallot";
 import { Bloom } from "@dylanebert/shallot/bloom";
-import { Scene, setBloom } from "./scene";
-import { setMode, setSetting, settings } from "./settings";
+import { Scene, setBloom } from "./scene.ts";
+import { setMode, setSetting, settings } from "./settings.ts";
 
 function scene(): World {
     const world = new World();

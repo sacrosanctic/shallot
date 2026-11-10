@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { World } from "./world";
+import { World } from "./world.ts";
 
 test("no system updates after its world disposes", () => {
     const world = new World();

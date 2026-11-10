@@ -4,7 +4,7 @@ import { attachCanvas, Camera, PointLight } from "../../core/rendering";
 import { Transform } from "../../core/transform";
 import { createApp } from "../../engine/app";
 import { CanvasContext } from "../../engine/app/canvas.fixture";
-import { StandardRenderer, StandardRenderingPlugin } from "./index";
+import { StandardRenderer, StandardRenderingPlugin } from "./index.ts";
 
 await setupGlobals();
 

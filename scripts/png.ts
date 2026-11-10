@@ -1,5 +1,5 @@
 import { deflateSync } from "node:zlib";
-import type { Grid, Palette } from "../src/standard/loading/brand";
+import type { Grid, Palette } from "../src/standard/loading/brand.ts";
 
 // Pixel-art exports use unfiltered RGBA in one IDAT.
 

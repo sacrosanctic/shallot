@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import * as d from "typegpu/data";
-import { ripple, waveVector } from "./materials";
+import { ripple, waveVector } from "./materials.ts";
 
 const radius = 0.65;
 function sample(position: d.v3f, time: number) {

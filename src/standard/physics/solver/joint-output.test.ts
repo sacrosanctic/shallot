@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
-import { makeJointId } from "../api/config";
-import { restore, snapshot } from "../api/snapshot";
-import { BodyType } from "../common/types";
+import { makeJointId } from "../api/config.ts";
+import { restore, snapshot } from "../api/snapshot.ts";
+import { BodyType } from "../common/types.ts";
 import {
     J_CONSTRAINT_DAMPING,
     J_CONSTRAINT_HERTZ,
@@ -9,27 +9,27 @@ import {
     J_LOCAL_FRAME_A,
     J_LOCAL_FRAME_B,
     J_TORQUE_THRESHOLD,
-} from "../kernel/columns";
-import { EventKind, eventCount, eventId } from "../kernel/eventbuffers";
+} from "../kernel/columns.ts";
+import { EventKind, eventCount, eventId } from "../kernel/eventbuffers.ts";
 import {
     collectJointEvents,
     readJointEventUserData,
     readJointFloat,
     readJointTransform,
     writeJointFloat,
-} from "../kernel/jointcolumns";
-import { JointField, jointField } from "../kernel/jointrecords";
-import { kernel } from "../kernel/kernel";
-import { createSphereShape } from "../shapes/shape";
+} from "../kernel/jointcolumns.ts";
+import { JointField, jointField } from "../kernel/jointrecords.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { createSphereShape } from "../shapes/shape.ts";
 import {
     createTestBody,
     createTestWorld,
     destroyTestWorld,
     stepTestWorld,
     testShapeDef,
-} from "../testing";
-import { destroyBody } from "../world/body";
-import { createDistanceJoint, defaultDistanceJointDef } from "./distanceJoint";
+} from "../testing.ts";
+import { destroyBody } from "../world/body.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "./distanceJoint.ts";
 import {
     createFilterJoint,
     defaultJointDef,
@@ -37,7 +37,7 @@ import {
     getJointConstraintForce,
     getJointConstraintTorque,
     jointIsValid,
-} from "./joint";
+} from "./joint.ts";
 
 function distanceJoint(
     world: ReturnType<typeof createTestWorld>,

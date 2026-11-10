@@ -1,10 +1,10 @@
 import { expect, test } from "bun:test";
 import { World } from "../../src/engine";
 import { StandardPhysicsPlugin } from "../../src/standard/physics";
-import { cloneAndTransformHull } from "../../src/standard/physics/shapes/build-hull";
-import { hullImage } from "../../src/standard/physics/shapes/hullbytes";
-import { drawHull } from "../../src/standard/physics/shapes/readgeometry";
-import { nativeBinary, run } from "./native";
+import { cloneAndTransformHull } from "../../src/standard/physics/shapes/build-hull.ts";
+import { hullImage } from "../../src/standard/physics/shapes/hullbytes.ts";
+import { drawHull } from "../../src/standard/physics/shapes/readgeometry.ts";
+import { nativeBinary, run } from "./native.ts";
 
 test("cloned hull images equal native through placements, nonuniform scales and reflections", async () => {
     const cases = JSON.parse(run([nativeBinary("hull-transform.c")])) as { source: number[]; args: number[]; result: number[] }[];

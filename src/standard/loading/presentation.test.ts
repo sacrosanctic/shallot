@@ -3,7 +3,7 @@ import {
     initialPresentation,
     type PresentationState,
     transitionPresentation,
-} from "./presentation";
+} from "./presentation.ts";
 
 function step(
     state: PresentationState,

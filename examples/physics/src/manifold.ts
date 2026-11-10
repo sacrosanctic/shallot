@@ -16,8 +16,8 @@ import {
     StandardPhysicsPlugin,
     StepPhysicsSystem,
 } from "@dylanebert/shallot/standard/physics";
-import { stepManifoldDiagnostics } from "./manifold-diagnostics";
-import { manifoldTransform, pose, relative, type Vec, vector } from "./manifold-math";
+import { stepManifoldDiagnostics } from "./manifold-diagnostics.ts";
+import { manifoldTransform, pose, relative, type Vec, vector } from "./manifold-math.ts";
 import {
     type CollisionManifoldScene,
     ManifoldSample,
@@ -25,17 +25,17 @@ import {
     manifoldPointLimits,
     sat,
     simplex,
-} from "./manifold-state";
-import type { Controls } from "./scenes";
+} from "./manifold-state.ts";
+import type { Controls } from "./scenes.ts";
 
-export { type ManifoldPose, manifoldRotate, manifoldTransform, vector } from "./manifold-math";
+export { type ManifoldPose, manifoldRotate, manifoldTransform, vector } from "./manifold-math.ts";
 export {
     allManifoldNames,
     ManifoldSample,
     type ManifoldScene,
     manifoldNames,
     manifoldPointLimits,
-} from "./manifold-state";
+} from "./manifold-state.ts";
 
 const f = Math.fround;
 export function stepManifold(w: World): void {

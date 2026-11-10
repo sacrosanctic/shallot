@@ -1,11 +1,11 @@
 import { expect, test } from "bun:test";
-import { BodyType } from "../../src/standard/physics/common/types";
-import { kernel } from "../../src/standard/physics/kernel/kernel";
-import { createDistanceJoint, defaultDistanceJointDef } from "../../src/standard/physics/solver/distanceJoint";
-import { createFilterJoint, defaultJointDef, destroyJointInternal } from "../../src/standard/physics/solver/joint";
-import { createTestBody, createTestWorld, destroyTestWorld } from "../../src/standard/physics/testing";
-import { bodySetAwake } from "../../src/standard/physics/world/body";
-import { assertPublicOracleKernel } from "./oracle-kernel";
+import { BodyType } from "../../src/standard/physics/common/types.ts";
+import { kernel } from "../../src/standard/physics/kernel/kernel.ts";
+import { createDistanceJoint, defaultDistanceJointDef } from "../../src/standard/physics/solver/distanceJoint.ts";
+import { createFilterJoint, defaultJointDef, destroyJointInternal } from "../../src/standard/physics/solver/joint.ts";
+import { createTestBody, createTestWorld, destroyTestWorld } from "../../src/standard/physics/testing.ts";
+import { bodySetAwake } from "../../src/standard/physics/world/body.ts";
+import { assertPublicOracleKernel } from "./oracle-kernel.ts";
 
 test("split acquires component-sized scratch and ids only after the no-split return", async () => {
     await assertPublicOracleKernel();

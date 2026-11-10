@@ -4,7 +4,7 @@ import * as d from "typegpu/data";
 import { gpuApps } from "../../../scripts/gpu.fixture";
 import type { createApp } from "../app";
 import { probeBuffer } from "../runtime";
-import type { World } from "./world";
+import type { World } from "./world.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

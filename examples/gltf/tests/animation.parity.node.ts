@@ -22,9 +22,9 @@ import {
 } from "@dylanebert/shallot/gltf";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { setupGlobals } from "@dylanebert/shallot/webgpu";
-import { animateScene, Viewer } from "../src/app";
+import { animateScene, Viewer } from "../src/app.ts";
 import gold from "./animations.gold.json";
-import { fileFetch, syncAssets } from "./setup";
+import { fileFetch, syncAssets } from "./setup.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 await syncAssets();

@@ -1,9 +1,9 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { Body, createApp, hashPhysics } from "@dylanebert/shallot";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { RestitutionPlugin, RestitutionState, restitutionScenes } from "../src/restitution";
-import { type Controls, changeControl, controlValues, createScene, scenes } from "../src/scenes";
-import { sampleGold } from "./gold";
+import { RestitutionPlugin, RestitutionState, restitutionScenes } from "../src/restitution.ts";
+import { type Controls, changeControl, controlValues, createScene, scenes } from "../src/scenes.ts";
+import { sampleGold } from "./gold.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 for (const scene of Object.keys(restitutionScenes) as (keyof typeof restitutionScenes)[])

@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { Scheduler, Time } from "./scheduler";
-import { World } from "./world";
+import { Scheduler, Time } from "./scheduler.ts";
+import { World } from "./world.ts";
 
 test("scheduler fixed and frame paths require no placement or other world domain", () => {
     const scheduler = new Scheduler();

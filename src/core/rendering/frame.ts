@@ -1,6 +1,6 @@
 import * as d from "typegpu/data";
 import type { World } from "../../engine";
-import { GlobalTransformHistory } from "./global-transform";
+import { GlobalTransformHistory } from "./global-transform.ts";
 
 /** Per-frame uniform schema shared by GPU bindings and CPU staging offsets. */
 export const FrameGpu = d

@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { categories, scenes } from "./scenes";
+import { categories, scenes } from "./scenes.ts";
 
 test("each picker label selects its scene in its category, exactly once", () => {
     expect(categories).toEqual([

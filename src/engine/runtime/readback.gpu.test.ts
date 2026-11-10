@@ -1,7 +1,7 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
 import { disposeGpuApps, gpuApps } from "../../../scripts/gpu.fixture";
-import { probeBuffer, probeTexture } from "./probe";
+import { probeBuffer, probeTexture } from "./probe.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const subjects = gpuApps(

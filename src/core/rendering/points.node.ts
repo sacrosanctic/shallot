@@ -4,7 +4,7 @@ import { gpuApps, gpuScene } from "../../../scripts/gpu.fixture";
 import { MeshInstance } from "../../core/mesh";
 import type { Resource, System } from "../../engine";
 import { ClearChangeMarksSystem } from "../../engine/app";
-import { precompileState, typegpuRoot } from "../../engine/runtime/gpu";
+import { precompileState, typegpuRoot } from "../../engine/runtime/gpu.ts";
 import {
     MaterialTypes,
     MeshRenderPlugin,
@@ -18,28 +18,28 @@ import {
     LightCull,
     lightInputKey,
     UpdateLightClustersSystem,
-} from "../../standard/rendering/cluster";
-import { Backgrounds } from "../../standard/rendering/contract";
-import { backgroundsKey } from "../../standard/rendering/contract-state";
-import { Lighting, lightingKey } from "../../standard/rendering/lighting";
-import { Draws, drawsKey } from "../../standard/rendering/registry";
-import { Meshes, meshResourcesKey } from "../mesh/mesh";
+} from "../../standard/rendering/cluster.ts";
+import { Backgrounds } from "../../standard/rendering/contract.ts";
+import { backgroundsKey } from "../../standard/rendering/contract-state.ts";
+import { Lighting, lightingKey } from "../../standard/rendering/lighting.ts";
+import { Draws, drawsKey } from "../../standard/rendering/registry.ts";
+import { Meshes, meshResourcesKey } from "../mesh/mesh.ts";
 import {
     GlobalTransformTickEndSystem,
     GlobalTransformTickStartSystem,
     PrepareGlobalTransformSystem,
     Transform,
 } from "../transform";
-import { TransformRuntime } from "../transform/global-transform";
-import { Frame, frameKey } from "./frame";
-import { EndFrameSystem, renderFrameKey } from "./frame-state";
+import { TransformRuntime } from "../transform/global-transform.ts";
+import { Frame, frameKey } from "./frame.ts";
+import { EndFrameSystem, renderFrameKey } from "./frame-state.ts";
 import {
     GlobalTransformHistory,
     GlobalTransformHistoryEndSystem,
     GlobalTransformHistoryStartSystem,
     PrepareGlobalTransformHistorySystem,
-} from "./global-transform";
-import { blitPipelinesKey, DataImages, Images, imageTextures } from "./image";
+} from "./global-transform.ts";
+import { blitPipelinesKey, DataImages, Images, imageTextures } from "./image.ts";
 import {
     attachTexture,
     BeginFrameSystem,
@@ -59,15 +59,15 @@ import {
     RenderPhases,
     Tonemapping,
     TonemappingMethod,
-} from "./index";
-import { GlobalAmbientLight } from "./lighting";
+} from "./index.ts";
+import { GlobalAmbientLight } from "./lighting.ts";
 import { PointsPlugin, pointsState } from "./points.fixture";
-import { RenderContext, renderKey } from "./render";
-import { viewTargetsKey } from "./targets";
-import { compositeCacheKey } from "./tonemapping";
-import { TonemappingSystem, tonemappingStateKey } from "./tonemapping-state";
-import { upscalingKey } from "./upscaling";
-import { Views, viewResourcesKey } from "./view";
+import { RenderContext, renderKey } from "./render.ts";
+import { viewTargetsKey } from "./targets.ts";
+import { compositeCacheKey } from "./tonemapping.ts";
+import { TonemappingSystem, tonemappingStateKey } from "./tonemapping-state.ts";
+import { upscalingKey } from "./upscaling.ts";
+import { Views, viewResourcesKey } from "./view.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 const subjects = gpuApps(

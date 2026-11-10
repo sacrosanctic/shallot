@@ -5,20 +5,20 @@ import {
     type RayCastInput,
     type ShapeCastInput,
     type ShapeProxy,
-} from "../collision/distance";
+} from "../collision/distance.ts";
 import {
     kernelCast,
     kernelCastResident,
     kernelOverlap,
     kernelRay,
-} from "../collision/shape_query_gold";
-import type { Vec3 } from "../common/records";
-import { defaultBodyDef, defaultShapeDef, defaultWorldDef, ShapeType } from "../common/types";
-import { kernel } from "../kernel/kernel";
-import { intersectRayTriangle, transform } from "../kernel/math";
-import { queryColumns } from "../kernel/querycolumns";
-import { createBody } from "../world/body";
-import { createWorld, destroyWorld, getWorld, type WorldState } from "../world/world";
+} from "../collision/shape_query_gold.ts";
+import type { Vec3 } from "../common/records.ts";
+import { defaultBodyDef, defaultShapeDef, defaultWorldDef, ShapeType } from "../common/types.ts";
+import { kernel } from "../kernel/kernel.ts";
+import { intersectRayTriangle, transform } from "../kernel/math.ts";
+import { queryColumns } from "../kernel/querycolumns.ts";
+import { createBody } from "../world/body.ts";
+import { createWorld, destroyWorld, getWorld, type WorldState } from "../world/world.ts";
 import gold from "./geometry.gold.json";
 import {
     createGrid,
@@ -28,9 +28,9 @@ import {
     getHeightFieldTriangle,
     HEIGHT_FIELD_HOLE,
     type HeightFieldData,
-} from "./heightfield";
-import { createMesh } from "./mesh";
-import { createHeightFieldShape, createMeshShape } from "./shape";
+} from "./heightfield.ts";
+import { createMesh } from "./mesh.ts";
+import { createHeightFieldShape, createMeshShape } from "./shape.ts";
 
 const dv = new DataView(new ArrayBuffer(4));
 function fromBits(hex: string): number {

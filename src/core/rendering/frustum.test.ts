@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { composeMat4, perspective } from "../../engine/utils/math";
-import { CULL_VOLUME_FLOATS, frustumPlanes, frustumVolume } from "./frustum";
+import { composeMat4, perspective } from "../../engine/utils/math.ts";
+import { CULL_VOLUME_FLOATS, frustumPlanes, frustumVolume } from "./frustum.ts";
 
 /** A pure frustum whose left plane passes exactly through `boundary`. */
 const FRUSTUM_FIXTURE = {

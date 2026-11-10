@@ -1,5 +1,5 @@
 import { test } from "bun:test";
-import { expectSwitchesEqualFresh } from "./switch";
+import { expectSwitchesEqualFresh } from "./switch.ts";
 
 export const dominoSwitchRanges = {
     first: { start: 0, end: 150 },

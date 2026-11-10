@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import * as d from "typegpu/data";
-import { gradingWeights } from "./color-grading";
+import { gradingWeights } from "./color-grading.ts";
 
 test("lower crossover weighs shadows, not highlights; both crossovers are continuous", () => {
     const range = d.vec2f(0.2, 0.7);

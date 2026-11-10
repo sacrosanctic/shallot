@@ -1,14 +1,14 @@
 import { expect, setDefaultTimeout, test } from "bun:test";
-import { BodyType, defaultShapeDef, defaultSurfaceMaterial } from "../../src/standard/physics/common/types";
-import { createCompound } from "../../src/standard/physics/shapes/compound";
-import { createCompoundShape } from "../../src/standard/physics/shapes/shape";
-import { createTestBody, createTestWorld, destroyTestWorld } from "../../src/standard/physics/testing";
-import { bodyGetTransform } from "../../src/standard/physics/world/body";
-import { BodyField, bodyField } from "../../src/standard/physics/kernel/bodyrecords";
-import { setQueryCallback } from "../../src/standard/physics/kernel/kernel";
-import { queryColumns } from "../../src/standard/physics/kernel/querycolumns";
-import { nativeSseOutput } from "./native-evidence";
-import { assertPublicOracleKernel } from "./oracle-kernel";
+import { BodyType, defaultShapeDef, defaultSurfaceMaterial } from "../../src/standard/physics/common/types.ts";
+import { createCompound } from "../../src/standard/physics/shapes/compound.ts";
+import { createCompoundShape } from "../../src/standard/physics/shapes/shape.ts";
+import { createTestBody, createTestWorld, destroyTestWorld } from "../../src/standard/physics/testing.ts";
+import { bodyGetTransform } from "../../src/standard/physics/world/body.ts";
+import { BodyField, bodyField } from "../../src/standard/physics/kernel/bodyrecords.ts";
+import { setQueryCallback } from "../../src/standard/physics/kernel/kernel.ts";
+import { queryColumns } from "../../src/standard/physics/kernel/querycolumns.ts";
+import { nativeSseOutput } from "./native-evidence.ts";
+import { assertPublicOracleKernel } from "./oracle-kernel.ts";
 
 setDefaultTimeout(180_000);
 await assertPublicOracleKernel();

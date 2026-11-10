@@ -2,7 +2,7 @@ import { expect, test } from "bun:test";
 import { existsSync, readFileSync, realpathSync, statSync } from "node:fs";
 import { Glob } from "bun";
 import { dirname, isAbsolute, relative, resolve } from "path";
-import { normalizePath } from "../src/project/paths";
+import { normalizePath } from "../src/project/paths.ts";
 
 async function readScripts(pkgPath: string): Promise<Record<string, string>> {
     const pkg = (await Bun.file(pkgPath).json()) as { scripts?: Record<string, string> };

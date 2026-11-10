@@ -18,8 +18,8 @@ import {
 } from "@dylanebert/shallot";
 import { Orbit, OrbitMode, OrbitPlugin } from "@dylanebert/shallot/extras";
 import { TIMEOUT } from "@dylanebert/shallot/testing";
-import { Grab, GrabPlugin } from "../src/grab";
-import { readPlayerControls } from "../src/player-controls";
+import { Grab, GrabPlugin } from "../src/grab.ts";
+import { readPlayerControls } from "../src/player-controls.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 

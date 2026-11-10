@@ -15,7 +15,7 @@ import {
     Tonemapping,
     TonemappingMethod,
 } from "../../core/rendering";
-import { imageTextures } from "../../core/rendering/image";
+import { imageTextures } from "../../core/rendering/image.ts";
 import { Transform } from "../../core/transform";
 import { lookAtRotation } from "../../engine/utils";
 import {
@@ -23,9 +23,9 @@ import {
     StandardRenderer,
     StandardRenderingPlugin,
 } from "../../standard/rendering";
-import { brdf, Pbr } from "../../standard/rendering/shade";
-import { loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene";
-import { GltfPlugin } from "./skinning";
+import { brdf, Pbr } from "../../standard/rendering/shade.ts";
+import { loadGltfScene, poseGltfScene, spawnGltfScene } from "./scene.ts";
+import { GltfPlugin } from "./skinning.ts";
 
 setDefaultTimeout(TIMEOUT.gpu);
 const light = std.normalize(d.vec3f(0.7, 0.3, 1));

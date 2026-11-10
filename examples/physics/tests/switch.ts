@@ -22,14 +22,14 @@ import {
     type World,
 } from "@dylanebert/shallot";
 import { PhysicsEvents, PhysicsWorldDefinition } from "@dylanebert/shallot/standard/physics";
-import { DeterminismPlugin } from "../src/determinism";
-import { DynamicMoverPlugin, DynamicMoverState } from "../src/dynamic-mover-scene";
-import { EventSample, EventSamplePlugin } from "../src/events";
-import { Grab, GrabPlugin, pick } from "../src/grab";
-import { sceneSwitcher } from "../src/sample";
-import { changeControl, controlValues, createScene, type Scene } from "../src/scenes";
-import { TreeBenchmarkPlugin, TreeBenchmarkState, treeRecords } from "../src/tree";
-import { advanceIteration } from "./iteration";
+import { DeterminismPlugin } from "../src/determinism.ts";
+import { DynamicMoverPlugin, DynamicMoverState } from "../src/dynamic-mover-scene.ts";
+import { EventSample, EventSamplePlugin } from "../src/events.ts";
+import { Grab, GrabPlugin, pick } from "../src/grab.ts";
+import { sceneSwitcher } from "../src/sample.ts";
+import { changeControl, controlValues, createScene, type Scene } from "../src/scenes.ts";
+import { TreeBenchmarkPlugin, TreeBenchmarkState, treeRecords } from "../src/tree.ts";
+import { advanceIteration } from "./iteration.ts";
 
 function observations(world: World, controls: Record<string, number>) {
     return {

@@ -1,9 +1,9 @@
 import { expect, test } from "bun:test";
-import type { ShapeProxy } from "../collision/distance";
-import type { EntityId } from "../common/ids";
-import type { AABB, Pos, Transform, WorldTransform } from "../common/records";
-import { createTestBody, createTestWorld, destroyTestWorld } from "../testing";
-import { makeBodyId } from "./body";
+import type { ShapeProxy } from "../collision/distance.ts";
+import type { EntityId } from "../common/ids.ts";
+import type { AABB, Pos, Transform, WorldTransform } from "../common/records.ts";
+import { createTestBody, createTestWorld, destroyTestWorld } from "../testing.ts";
+import { makeBodyId } from "./body.ts";
 import {
     bodyCastRay,
     bodyCastShape,
@@ -17,7 +17,7 @@ import {
     worldCollideMover,
     worldOverlapAABB,
     worldOverlapShape,
-} from "./query";
+} from "./query.ts";
 
 const zero: Pos = { x: 0, y: 0, z: 0 };
 const transform: Transform = { p: zero, q: { v: zero, s: 1 } };

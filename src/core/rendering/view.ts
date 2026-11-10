@@ -4,11 +4,11 @@ import * as std from "typegpu/std";
 import type { EntityRef, World } from "../../engine";
 import { resizeViewport, Viewports } from "../../engine";
 import { rawDevice } from "../../engine/runtime";
-import { Camera, CameraViewport, Resolution } from "./camera";
-import { type CameraRect, cameraRect } from "./camera-viewport";
-import { CULL_VOLUME_FLOATS } from "./frustum";
-import { RenderContext } from "./render";
-import { releaseViewTargets } from "./targets";
+import { Camera, CameraViewport, Resolution } from "./camera.ts";
+import { type CameraRect, cameraRect } from "./camera-viewport.ts";
+import { CULL_VOLUME_FLOATS } from "./frustum.ts";
+import { RenderContext } from "./render.ts";
+import { releaseViewTargets } from "./targets.ts";
 
 /**
  * Per-shading-slot uniform schema shared by GPU bindings and CPU staging offsets.

@@ -4,7 +4,7 @@ import { setupGlobals } from "@dylanebert/shallot/webgpu";
 import { createTestGpuApp as createApp, disposeGpuApps } from "../../../scripts/gpu.fixture";
 import { PhysicsPlugin } from "../physics";
 import { globalTransformTable, RenderingPlugin } from "../rendering";
-import { GlobalTransform, Transform, TransformPlugin } from "./index";
+import { GlobalTransform, Transform, TransformPlugin } from "./index.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 await setupGlobals();

@@ -1,7 +1,7 @@
 import type { World } from "@dylanebert/shallot";
 import type { HullData } from "@dylanebert/shallot/standard/physics";
-import { type ManifoldPose, ManifoldSample } from "../src/manifold";
-import { manifoldDrawing } from "../src/manifold-presentation";
+import { type ManifoldPose, ManifoldSample } from "../src/manifold.ts";
+import { manifoldDrawing } from "../src/manifold-presentation.ts";
 export function manifoldRecords(w: World): number[][] {
     const s = w.resource(ManifoldSample),
         m = s.manifold;

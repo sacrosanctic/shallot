@@ -12,7 +12,7 @@ import {
     writeFileSync,
 } from "node:fs";
 import { basename, resolve } from "node:path";
-import { tryPrebuilt } from "./prebuilt";
+import { tryPrebuilt } from "./prebuilt.ts";
 import { cargoRuntimeDir, requireRuntimeDir } from "./provenance.js";
 
 const RUST_CRATE = resolve(import.meta.dirname, "../../crates/native");

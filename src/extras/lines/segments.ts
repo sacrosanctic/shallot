@@ -2,7 +2,7 @@ import type { StorageFlag, TgpuBuffer } from "typegpu";
 import * as d from "typegpu/data";
 import type { World } from "../../engine";
 import { packColor } from "../../engine/utils";
-import { SEGMENT_BYTES, SEGMENT_FLOATS, Segment } from "./pipeline";
+import { SEGMENT_BYTES, SEGMENT_FLOATS, Segment } from "./pipeline.ts";
 
 // initial segment capacity; the CPU staging + GPU buffer double on demand for large wireframe workloads
 const INITIAL = 1 << 14;
