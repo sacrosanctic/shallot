@@ -103,7 +103,7 @@ type FrameCount = { __shallotFrames: number };
 // The page's run frame: the engine's frame loop, `runApp`'s `frame` method in the app module. A method keeps its
 // property name through minification, so a production build's profile still names it.
 const FRAME_LOOP = {
-    source: resolve(import.meta.dir, "../../src/engine/app/index.ts"),
+    source: resolve(import.meta.dirname, "../../src/engine/app/index.ts"),
     name: "frame",
 };
 

@@ -4,6 +4,6 @@ import { resolve } from "node:path";
 import { renderBrandData } from "./branding.ts";
 
 test("generated loading mark data matches its branding assets", () => {
-    const generated = resolve(import.meta.dir, "../src/standard/loading/brand-data.ts");
+    const generated = resolve(import.meta.dirname, "../src/standard/loading/brand-data.ts");
     expect(readFileSync(generated, "utf8")).toBe(renderBrandData());
 });

@@ -13,7 +13,7 @@ setDefaultTimeout(TIMEOUT.node);
 for (const count of [64, 128]) {
     test(`a warm step of ${count} awake boxes resting inside one static sensor allocates no JavaScript heap in overlap tracking`, async () => {
         const sample = await sampleAllocation(
-            resolve(import.meta.dir, "sensor-allocation.entry.ts"),
+            resolve(import.meta.dirname, "sensor-allocation.entry.ts"),
             {
                 warm: 6000,
                 frames: 600,

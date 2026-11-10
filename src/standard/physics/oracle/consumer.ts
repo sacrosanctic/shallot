@@ -649,7 +649,7 @@ function runBaseCase(item: OracleCase): unknown {
 
 export type ConsumerCorpus = { schema: string; cases: OracleCase[] };
 export function loadConsumerCorpus(
-    path = join(import.meta.dir, "box3d", "v6", "cases.json"),
+    path = join(import.meta.dirname, "box3d", "v6", "cases.json"),
 ): ConsumerCorpus {
     const value = JSON.parse(readFileSync(path, "utf8")) as ConsumerCorpus;
     if (

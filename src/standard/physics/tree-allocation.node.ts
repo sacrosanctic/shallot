@@ -14,7 +14,7 @@ let kernelBytes: ArrayBuffer;
 beforeAll(async () => {
     kernelBytes = await countedKernelBytes();
 }, TIMEOUT.startup);
-const entry = resolve(import.meta.dir, "fixtures/tree-allocation.entry.ts");
+const entry = resolve(import.meta.dirname, "fixtures/tree-allocation.entry.ts");
 test("tree queries allocate no WASM heap and destroying trees returns live bytes to baseline", async () => {
     const built = await WebAssembly.instantiate(kernelBytes, {
         env: {

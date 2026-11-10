@@ -11,7 +11,7 @@ import { resolve } from "node:path";
 import { Glob } from "bun";
 import { normalizePath } from "../../../src/project/paths.ts";
 
-const owner = resolve(import.meta.dir, "../../..");
+const owner = resolve(import.meta.dirname, "../../..");
 const files = Array.from(
     new Glob("src/standard/physics/**/*.fixture.ts").scanSync(owner),
     normalizePath,

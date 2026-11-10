@@ -14,7 +14,7 @@ import { gpuAllocationExpressions } from "../../src/engine/runtime/allocation-si
 // The qualified 12,000/600-frame sample takes about 11 s on an Apple M4 Max.
 setDefaultTimeout(120_000);
 
-const allocationSourcePath = resolve(import.meta.dir, "../../src/engine/runtime/allocation-site.ts");
+const allocationSourcePath = resolve(import.meta.dirname, "../../src/engine/runtime/allocation-site.ts");
 const allocationSource = () => readFileSync(allocationSourcePath, "utf8");
 const bindingWrappers = [
     "setComputePipeline",
@@ -245,7 +245,7 @@ async function steadyAllocation(composition: string) {
     // Session setup and post-idle work land together on it, so timing cannot separate them;
     // one bounded allocation per gap is not the per-frame allocation that drives GC hitches.
     assertAllocationWrappers(allocationSource());
-    const sample = await sampleAllocation(resolve(import.meta.dir, "render.entry.ts"), {
+    const sample = await sampleAllocation(resolve(import.meta.dirname, "render.entry.ts"), {
         // The composed gizmo and shadow paths finish optimizing after 12,000 frames.
         warm: 24_000,
         frames: 600,

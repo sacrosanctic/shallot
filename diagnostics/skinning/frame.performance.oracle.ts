@@ -97,7 +97,7 @@ const VIEWS = [
 type View = (typeof VIEWS)[number];
 const SPACING = 1.25;
 
-const ROOT = join(import.meta.dir, "../..");
+const ROOT = join(import.meta.dirname, "../..");
 const ASSETS = join(ROOT, "test-results/skinning-assets");
 
 function median(values: number[]): number {

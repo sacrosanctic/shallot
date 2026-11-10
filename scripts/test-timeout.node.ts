@@ -10,7 +10,7 @@ import { join, resolve } from "node:path";
 
 import { removeTestDirectory } from "./test-directory.ts";
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 
 test("the test script's default rejects a cheap test that runs longer than 250 ms", () => {
     const packageJson = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as {

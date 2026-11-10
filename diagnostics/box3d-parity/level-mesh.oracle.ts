@@ -15,7 +15,7 @@ for (const name of [...Object.keys(gold), "voxel_mesh_03", "voxel_mesh_04"]) {
         const bytes = input.stdout;
         const verticesEnd = 12 + 12 * bytes.readInt32LE(0);
         const indicesEnd = verticesEnd + 4 * bytes.readInt32LE(4);
-        const encoded = JSON.parse(readFileSync(join(import.meta.dir, `../../examples/physics/src/${name}.json`), "utf8"));
+        const encoded = JSON.parse(readFileSync(join(import.meta.dirname, `../../examples/physics/src/${name}.json`), "utf8"));
         expect(encoded).toEqual({
             vertices: bytes.subarray(12, verticesEnd).toString("base64"),
             indices: bytes.subarray(verticesEnd, indicesEnd).toString("base64"),

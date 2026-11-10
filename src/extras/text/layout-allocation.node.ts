@@ -10,7 +10,7 @@ setDefaultTimeout(TIMEOUT.node);
 
 test("1,000 unchanged labels allocate no JavaScript heap while maintaining their layouts", async () => {
     const sample = await sampleAllocation(
-        `${import.meta.dir}/fixtures/layout-allocation.entry.ts`,
+        `${import.meta.dirname}/fixtures/layout-allocation.entry.ts`,
         {
             warm: 6000,
             frames: 600,

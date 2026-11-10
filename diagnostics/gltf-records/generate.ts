@@ -22,7 +22,7 @@ const checkout = process.env.THREE;
 if (!checkout) throw new Error(`set THREE to a three.js checkout at ${revision}`);
 const head = Bun.spawnSync(["git", "-C", checkout, "rev-parse", "HEAD"]).stdout.toString().trim();
 if (head !== revision) throw new Error(`THREE is at ${head || "no git revision"}, not ${revision}`);
-if (example) await syncFiles(manifest.models.flatMap(model => model.files), new URL(`${manifest.commit}/`, manifest.source), resolve(import.meta.dir, "../../examples/gltf/public/assets"));
+if (example) await syncFiles(manifest.models.flatMap(model => model.files), new URL(`${manifest.commit}/`, manifest.source), resolve(import.meta.dirname, "../../examples/gltf/public/assets"));
 const { GLTFLoader } = await import(pathToFileURL(resolve(checkout, "examples/jsm/loaders/GLTFLoader.js")).href);
 const { LoadingManager, Mesh, MeshBasicMaterial, DoubleSide, BufferAttribute } = await import(pathToFileURL(resolve(checkout, "build/three.module.js")).href);
 
@@ -34,7 +34,7 @@ const wrap = (value: number) => ({ 1000: 1, 1001: 0, 1002: 2 })[value];
 const filter = (value: number) => [1003, 1004, 1005].includes(value) ? 0 : 1;
 const records = [];
 for (const fixture of subjects) {
-    const path = resolve(import.meta.dir, example ? "../../examples/gltf/public/assets" : "../../src/extras/gltf/fixtures", fixture);
+    const path = resolve(import.meta.dirname, example ? "../../examples/gltf/public/assets" : "../../src/extras/gltf/fixtures", fixture);
     const manager = new LoadingManager();
     manager.setURLModifier((url: string) => url.startsWith("data:") || url.startsWith("blob:") ? url :
         `data:application/octet-stream;base64,${readFileSync(resolve(dirname(path), url)).toString("base64")}`);
@@ -180,7 +180,7 @@ for (const fixture of subjects) {
 }
 // JSON's -0 number retains the float32 sign bit in small exact arrays.
 const json = JSON as typeof JSON & { rawJSON(text: string): unknown };
-writeFileSync(resolve(import.meta.dir, quantization ? "../../examples/gltf/tests/quantization.gold.json" : example ? "../../examples/gltf/tests/models.gold.json" : "../../src/extras/gltf/fixtures/records.json"), `${JSON.stringify({
+writeFileSync(resolve(import.meta.dirname, quantization ? "../../examples/gltf/tests/quantization.gold.json" : example ? "../../examples/gltf/tests/models.gold.json" : "../../src/extras/gltf/fixtures/records.json"), `${JSON.stringify({
     specification: "a55d8458c1e82720413acd3b420fd09e73b8e40b", generator: revision,
     arrayFormat: quantization ? "Exact float32 attributes and uint32 indices as JSON arrays, before mesh registration." : example ? "At most 128 components: exact JSON values. Otherwise: element count, per-component min/max, SHA-256 of little-endian float32 attributes or uint32 indices. Attributes are stored as float32 after the clause's arithmetic, before mesh registration." : "At most 128 components: exact JSON values. Otherwise: element count, per-component min/max, SHA-256 of little-endian float32 attributes or uint32 indices, without rounding.",
     ...(example ? { generatedNormalZeros: "Generated flat-normal zeros use +0: the specification leaves their zero sign unspecified. Authored float32 bits are retained." } : {}),

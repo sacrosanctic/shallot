@@ -9,7 +9,7 @@ import {
 setDefaultTimeout(TIMEOUT.node);
 test("all nine warm manifold calls and caches allocate no JavaScript heap, with an allocating control", async () => {
     const sample = await sampleAllocation(
-        resolve(import.meta.dir, "standalone-manifold-allocation.fixture.ts"),
+        resolve(import.meta.dirname, "standalone-manifold-allocation.fixture.ts"),
         { warm: 2400 },
     );
     expect(sample.control.length).toBeGreaterThan(0);

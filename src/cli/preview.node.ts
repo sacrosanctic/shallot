@@ -104,7 +104,7 @@ test("native preview streams the shell's output while the shell runs", async () 
         stderr: "pipe",
     });
     expect(compiled.exitCode, compiled.stderr.toString()).toBe(0);
-    const preview = resolve(import.meta.dir, "preview.ts");
+    const preview = resolve(import.meta.dirname, "preview.ts");
     const cli = Bun.spawn({
         ...bunChild([
             "-e",

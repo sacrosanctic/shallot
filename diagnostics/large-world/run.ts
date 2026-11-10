@@ -8,7 +8,7 @@ import { nativeBinary, run } from "../box3d-parity/native.ts";
 // bun diagnostics/large-world/run.ts [grid count, default 1000] [cpu|draw|shared] [workerCount: 1 shared, 0 unshared]
 // At Box3D's grid of 1000, with BOX3D set, native.c runs the same scene first and each phase is
 // reported as a ratio of Shallot to native.
-const root = resolve(import.meta.dir, "../..");
+const root = resolve(import.meta.dirname, "../..");
 const grid = Number(process.argv[2] ?? 1000);
 type Line = { phase: string; milliseconds: number };
 const lines = (text: string): Line[] =>
@@ -23,7 +23,7 @@ if (grid === 1000 && process.env.BOX3D) {
 const dir = mkdtempSync(join(tmpdir(), "shallot-large-world-"));
 try {
     const built = await Bun.build({
-        entrypoints: [join(import.meta.dir, "cost.ts")],
+        entrypoints: [join(import.meta.dirname, "cost.ts")],
         target: "node", format: "esm", outdir: dir, naming: "cost.mjs",
         external: ["webgpu"], plugins: [shallot({ root })],
     });

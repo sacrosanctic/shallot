@@ -10,7 +10,7 @@ import {
 setDefaultTimeout(TIMEOUT.node);
 
 test("a warm GPU-backed step moving kinematic proxies outside their fat AABBs allocates no JavaScript heap", async () => {
-    const sample = await sampleAllocation(resolve(import.meta.dir, "tree-allocation.entry.ts"), {
+    const sample = await sampleAllocation(resolve(import.meta.dirname, "tree-allocation.entry.ts"), {
         warm: 6000,
         frames: 600,
     });

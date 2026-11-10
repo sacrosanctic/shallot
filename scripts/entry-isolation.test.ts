@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { resolve } from "node:path";
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 const BUILTINS = /^(?:node:|bun:|fs$|path$|os$|child_process$)/;
 
 function checkBuild(result: Awaited<ReturnType<typeof Bun.build>>, label: string) {

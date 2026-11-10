@@ -15,7 +15,7 @@ import { importsIn, resolveRelative } from "./example-imports.ts";
 
 // Check actual pack output so ignored manifest negations cannot pass.
 test("the npm package contains only declared files and required consumers", async () => {
-    const pkgDir = resolve(import.meta.dir, "..");
+    const pkgDir = resolve(import.meta.dirname, "..");
     const packageManifest = JSON.parse(readFileSync(resolve(pkgDir, "package.json"), "utf8"));
 
     const proc = Bun.spawn(["bun", "pm", "pack", "--dry-run"], {

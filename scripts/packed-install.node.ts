@@ -63,7 +63,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 test("the packed engine exposes no harness source or capture helpers", () => {
-    expect(existsSync(resolve(import.meta.dir, "node_modules/@dylanebert/shallot/src/harness"))).toBe(false);
+    expect(existsSync(resolve(import.meta.dirname, "node_modules/@dylanebert/shallot/src/harness"))).toBe(false);
     expect("captureArtifact" in Rendering).toBe(false);
     expect("captureIdentityLabel" in Rendering).toBe(false);
     expect("captureIdentityMatches" in Rendering).toBe(false);
@@ -71,7 +71,7 @@ test("the packed engine exposes no harness source or capture helpers", () => {
 });
 
 test("the packed TextPlugin font ships with its license and resolves from the package", async () => {
-    const packageRoot = resolve(import.meta.dir, "node_modules/@dylanebert/shallot");
+    const packageRoot = resolve(import.meta.dirname, "node_modules/@dylanebert/shallot");
     const fontPath = resolve(packageRoot, "src/extras/text/Inter-Regular.ttf");
     const licensePath = resolve(packageRoot, "src/extras/text/Inter-OFL.txt");
     expect(existsSync(fontPath)).toBe(true);
@@ -89,7 +89,7 @@ test("the packed TextPlugin font ships with its license and resolves from the pa
                 JSON.stringify(fontModule) +
                 '))); if (font.readUInt32BE(0) !== 0x00010000) throw new Error("packed font did not resolve in Node");',
         ],
-        { cwd: import.meta.dir, stdout: "pipe", stderr: "pipe" },
+        { cwd: import.meta.dirname, stdout: "pipe", stderr: "pipe" },
     );
     expect(node.exitCode, node.stderr.toString()).toBe(0);
 });
@@ -102,7 +102,7 @@ test("the packed Vite entry imports in Node and exposes only shallot", () => {
             "-e",
             'const names = Object.keys(await import("@dylanebert/shallot/vite")).sort(); if (names.length !== 1 || names[0] !== "shallot") throw new Error("unexpected Vite exports: " + names.join(", "));',
         ],
-        { cwd: import.meta.dir, stdout: "pipe", stderr: "pipe" },
+        { cwd: import.meta.dirname, stdout: "pipe", stderr: "pipe" },
     );
     expect(node.exitCode, node.stderr.toString()).toBe(0);
 });

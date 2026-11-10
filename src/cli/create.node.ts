@@ -18,7 +18,7 @@ import { basename, join, resolve } from "node:path";
 import { expectError } from "../../scripts/test-console.ts";
 import { runCreate } from "./create.ts";
 
-const ROOT = resolve(import.meta.dir, "../..");
+const ROOT = resolve(import.meta.dirname, "../..");
 const SCRATCH = mkdtempSync(join(tmpdir(), "shallot-create-"));
 const ENGINE = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8"));
 const WRITTEN_FILES = [
@@ -166,7 +166,7 @@ function assertProject(
         '[test]\npreload = ["./tests/preload.ts"]\n',
     );
     expect(readFileSync(join(destination, "tests/preload.ts"), "utf8")).toBe(
-        'import { shallot } from "@dylanebert/shallot/bun";\nimport { plugin } from "bun";\n\nplugin(shallot({ root: import.meta.dir }));\n',
+        'import { shallot } from "@dylanebert/shallot/bun";\nimport { plugin } from "bun";\n\nplugin(shallot({ root: import.meta.dirname }));\n',
     );
 
     const readme = readFileSync(join(destination, "README.md"), "utf8");

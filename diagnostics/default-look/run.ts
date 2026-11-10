@@ -79,7 +79,7 @@ if (!width || !height || !Number.isInteger(width) || !Number.isInteger(height)) 
     throw new Error("Expected --resolution=<width>x<height> in device pixels");
 }
 
-const root = resolve(import.meta.dir, "../..");
+const root = resolve(import.meta.dirname, "../..");
 const outputRoot = resolve(root, "test-results/default-look");
 const pageHtml = `<!doctype html>
 <html lang="en">

@@ -8,7 +8,7 @@ import { resolve } from "node:path";
 import { removeTestDirectory } from "../../../scripts/test-directory.ts";
 
 test("a mesh import without tangent generation bundles no MikkTSpace bytes", async () => {
-    const scratch = mkdtempSync(resolve(import.meta.dir, ".tangent-bundle-"));
+    const scratch = mkdtempSync(resolve(import.meta.dirname, ".tangent-bundle-"));
     try {
         const entry = resolve(scratch, "entry.ts");
         writeFileSync(

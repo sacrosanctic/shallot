@@ -17,7 +17,7 @@ if (
 if (browserName === "firefox" && !process.env.SHALLOT_DISPLAY_SEAT)
     throw new Error("Firefox requires SHALLOT_DISPLAY_SEAT identifying the physical monitor.");
 const output = resolve(directory);
-const root = resolve(import.meta.dir, "../..");
+const root = resolve(import.meta.dirname, "../..");
 if (output === root || output.startsWith(`${root}/`))
     throw new Error("Frame and report output must be outside the checkout.");
 mkdirSync(output, { recursive: true });

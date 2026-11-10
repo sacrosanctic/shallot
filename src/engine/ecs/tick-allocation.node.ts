@@ -8,7 +8,7 @@ import {
 
 setDefaultTimeout(TIMEOUT.node);
 test("steady exact ticks allocate no JavaScript heap", async () => {
-    const sample = await sampleAllocation(resolve(import.meta.dir, "tick-allocation.entry.ts"), {
+    const sample = await sampleAllocation(resolve(import.meta.dirname, "tick-allocation.entry.ts"), {
         warm: 12000,
     });
     expect(sample.control.length).toBeGreaterThan(0);

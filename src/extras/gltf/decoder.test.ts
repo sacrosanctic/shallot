@@ -25,7 +25,7 @@ function array(
 }
 for (const { fixture, textures, instances } of records.records) {
     test(`${fixture}: geometry, world placement and mapped material match specification records`, async () => {
-        const path = resolve(import.meta.dir, "fixtures", fixture);
+        const path = resolve(import.meta.dirname, "fixtures", fixture);
         const result = await loadGltf(new URL(`file://${path}`), localFetch);
         expect<unknown>(result.textures).toEqual(textures);
         expect(result.instances.length).toBe(instances.length);
@@ -77,7 +77,7 @@ for (const { fixture, textures, instances } of records.records) {
 }
 test("required cut extension refuses by name; optional cuts are listed and normal maps are supported", () => {
     const required = JSON.parse(
-        readFileSync(resolve(import.meta.dir, "fixtures/required-draco.gltf"), "utf8"),
+        readFileSync(resolve(import.meta.dirname, "fixtures/required-draco.gltf"), "utf8"),
     );
     expect(() => parseGltf(required, [])).toThrow("KHR_draco_mesh_compression");
     const scene = parseGltf(

@@ -60,7 +60,7 @@ test("warmed type, filter, joint, event-flag and destroy/create mutations match 
 });
 test("warmed type, filter, joint, event-flag and destroy/create mutations allocate no JavaScript heap", async () => {
     const sample = await sampleAllocation(
-        resolve(import.meta.dir, "fixtures/mutation-allocation.entry.ts"),
+        resolve(import.meta.dirname, "fixtures/mutation-allocation.entry.ts"),
         { warm: 1200, frames: 600 },
     );
     expect(sample.control.length).toBeGreaterThan(0);

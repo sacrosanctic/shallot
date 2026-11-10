@@ -19,5 +19,5 @@ the engine's importer and compares its render with direct registration byte for 
 import { shallot } from "@dylanebert/shallot/bun";
 import { plugin } from "bun";
 
-plugin(shallot({ root: import.meta.dir }));
+plugin(shallot({ root: import.meta.dirname }));
 await import("./capture.ts");

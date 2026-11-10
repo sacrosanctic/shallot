@@ -30,7 +30,7 @@ import { rustSourceRemaps } from "../../../scripts/rust-remap.ts";
 import { optimize, version } from "../../../scripts/wasm-opt.ts";
 import { kernelInputHash } from "./kernel-inputs.ts";
 
-const pkgRoot = resolve(import.meta.dir, "../../..");
+const pkgRoot = resolve(import.meta.dirname, "../../..");
 const kernelDir = resolve(pkgRoot, "crates/physics");
 const engineDir = resolve(pkgRoot, "src/standard/physics/kernel");
 

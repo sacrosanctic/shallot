@@ -35,7 +35,7 @@ function correctedNative(): string[] {
         run(["cmake", "-S", source, "-B", build, "-DCMAKE_BUILD_TYPE=Release", "-DCMAKE_OSX_ARCHITECTURES=x86_64", "-DBOX3D_BENCHMARKS=OFF", "-DBOX3D_SAMPLES=OFF", "-DBOX3D_UNIT_TESTS=OFF"]);
         run(["cmake", "--build", build, "-j", "8", "--target", "box3d"]);
         const binary = join(directory, "wind");
-        run(["cc", "-arch", "x86_64", "-O2", "-ffp-contract=off", `-I${join(source, "include")}`, join(import.meta.dir, "wind.c"), join(build, "src/libbox3d.a"), "-lm", "-o", binary]);
+        run(["cc", "-arch", "x86_64", "-O2", "-ffp-contract=off", `-I${join(source, "include")}`, join(import.meta.dirname, "wind.c"), join(build, "src/libbox3d.a"), "-lm", "-o", binary]);
         return run(["arch", "-x86_64", binary]).trim().split("\n");
     } finally { rmSync(directory, { recursive: true, force: true }); }
 }

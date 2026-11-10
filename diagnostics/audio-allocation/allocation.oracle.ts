@@ -23,7 +23,7 @@ function printSites(label: string, sites: readonly AllocationSite[]): void {
     }
 }
 
-const sample = await sampleAllocation(resolve(import.meta.dir, "allocation.entry.ts"), {
+const sample = await sampleAllocation(resolve(import.meta.dirname, "allocation.entry.ts"), {
     warm: WARM_FRAMES,
     frames: SAMPLE_FRAMES,
 });

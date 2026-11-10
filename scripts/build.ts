@@ -5,7 +5,7 @@ import { gltfArtifactIsFresh } from "../crates/gltf/scripts/inputs.ts";
 import { mikktspaceArtifactIsFresh } from "../crates/mikktspace/scripts/inputs.ts";
 import { kernelArtifactsAreFresh } from "../crates/physics/scripts/kernel-inputs.ts";
 
-const root = resolve(import.meta.dir, "..");
+const root = resolve(import.meta.dirname, "..");
 if (!audioArtifactIsFresh(root)) await $`bun scripts/audio.ts`.cwd(root);
 if (!gltfArtifactIsFresh(root)) await $`bun crates/gltf/scripts/build.ts`.cwd(root);
 if (!mikktspaceArtifactIsFresh(root)) await $`bun crates/mikktspace/scripts/build.ts`.cwd(root);

@@ -3,7 +3,7 @@ import { existsSync, readdirSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { packageManifest, testWorkflow } from "./create.ts";
 
-const repo = resolve(import.meta.dir, "../..");
+const repo = resolve(import.meta.dirname, "../..");
 const examples = join(repo, "examples");
 const templates = readdirSync(examples, { withFileTypes: true }).filter(
     (entry) => entry.isDirectory() && existsSync(join(examples, entry.name, "index.html")),

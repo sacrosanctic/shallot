@@ -25,7 +25,7 @@ test("a missing or malformed browser JUnit report fails instead of losing the wa
             if (content !== undefined) writeFileSync(report, content);
             const child = Bun.spawnSync({
                 ...bunChild([
-                    join(import.meta.dir, "report-slow-tests.ts"),
+                    join(import.meta.dirname, "report-slow-tests.ts"),
                     report,
                     "",
                     "examples/embedded-scene",
@@ -42,7 +42,7 @@ test("a missing or malformed browser JUnit report fails instead of losing the wa
         );
         const child = Bun.spawnSync({
             ...bunChild([
-                join(import.meta.dir, "report-slow-tests.ts"),
+                join(import.meta.dirname, "report-slow-tests.ts"),
                 report,
                 "",
                 "examples/embedded-scene",
@@ -58,11 +58,11 @@ test("a missing or malformed browser JUnit report fails instead of losing the wa
         writeFileSync(output, "existing=value\n");
         const flaky = Bun.spawnSync({
             ...bunChild([
-                join(import.meta.dir, "report-slow-tests.ts"),
+                join(import.meta.dirname, "report-slow-tests.ts"),
                 report,
                 "",
                 "examples/minimal",
-                join(import.meta.dir, "browser-flaky.json"),
+                join(import.meta.dirname, "browser-flaky.json"),
             ]),
             env: { ...process.env, GITHUB_OUTPUT: output },
             stdout: "pipe",

@@ -27,9 +27,9 @@ import {
 import { verifyPublishedGame } from "./publish-verify.ts";
 
 setDefaultTimeout(TIMEOUT.node);
-const repo = resolve(import.meta.dir, "../..");
+const repo = resolve(import.meta.dirname, "../..");
 const recorded = JSON.parse(
-    readFileSync(join(import.meta.dir, "fixtures/publish-itch.json"), "utf8"),
+    readFileSync(join(import.meta.dirname, "fixtures/publish-itch.json"), "utf8"),
 );
 const headers = recorded.cdnHeaders as Record<
     "document" | "asset" | "missing",

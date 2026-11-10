@@ -10,7 +10,7 @@ setDefaultTimeout(TIMEOUT.node);
 for (const input of ["walk", "buffer", "nested-buffer"]) {
     test(`warmed debug draw ${input} allocates nothing beyond fresh callback arguments`, async () => {
         const sample = await sampleAllocation(
-            resolve(import.meta.dir, "draw-allocation.entry.ts"),
+            resolve(import.meta.dirname, "draw-allocation.entry.ts"),
             { warm: 12000, input },
         );
         expect(sample.control.length).toBeGreaterThan(0);
@@ -19,7 +19,7 @@ for (const input of ["walk", "buffer", "nested-buffer"]) {
     });
 }
 test("draw allocation gate rejects an allocating Set control", async () => {
-    const sample = await sampleAllocation(resolve(import.meta.dir, "draw-allocation.entry.ts"), {
+    const sample = await sampleAllocation(resolve(import.meta.dirname, "draw-allocation.entry.ts"), {
         warm: 12000,
         input: "leak",
     });

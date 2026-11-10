@@ -5,7 +5,7 @@ import { $ } from "bun";
 // One optimizer for every shipped WASM (audio and both physics kernels): the `binaryen` devDependency
 // pins its version, so the emitted bytes don't depend on whatever wasm-opt a seat has on PATH.
 
-const bin = resolve(import.meta.dir, "../node_modules/.bin/wasm-opt");
+const bin = resolve(import.meta.dirname, "../node_modules/.bin/wasm-opt");
 
 /** Enables the union of features the shipped modules use; enabling one a module lacks is a no-op. */
 export const FLAGS = [

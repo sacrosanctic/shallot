@@ -12,7 +12,7 @@ import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { resolve } from "node:path";
 
-const PKG_ROOT = resolve(import.meta.dir, "../../..");
+const PKG_ROOT = resolve(import.meta.dirname, "../../..");
 const ENGINE = resolve(PKG_ROOT, "src/standard/physics/api/index.ts");
 
 // node can't run the .ts engine source, so bundle a self-contained consumer that inits the auto path,

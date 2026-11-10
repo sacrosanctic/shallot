@@ -10,7 +10,7 @@ import { isAdmittedAllocationSite } from "./allocation-admissions.ts";
 
 let sampler: PreparedAllocationSampler;
 beforeAll(async () => {
-    sampler = await prepareAllocationSampler(resolve(import.meta.dir, "allocation.entry.ts"));
+    sampler = await prepareAllocationSampler(resolve(import.meta.dirname, "allocation.entry.ts"));
 }, TIMEOUT.startup);
 afterAll(() => sampler?.dispose());
 

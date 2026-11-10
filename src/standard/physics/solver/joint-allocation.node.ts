@@ -15,7 +15,7 @@ setDefaultTimeout(TIMEOUT.node);
 for (const count of [0, 2]) {
     test(`a warm GPU-backed scene with every joint type allocates no JavaScript heap at ${count} requested threads`, async () => {
         const sample = await sampleAllocation(
-            resolve(import.meta.dir, "joint-allocation.entry.ts"),
+            resolve(import.meta.dirname, "joint-allocation.entry.ts"),
             { warm: 6000, frames: 600, input: String(count) },
         );
         if (sample.control.length === 0 || windowBytes({ sites: sample.control }) <= 0)

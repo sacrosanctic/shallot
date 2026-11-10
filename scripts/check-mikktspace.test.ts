@@ -6,7 +6,7 @@ import {
 } from "../crates/mikktspace/scripts/inputs.ts";
 
 test("checked MikkTSpace artifact matches its build inputs", () => {
-    const fresh = mikktspaceArtifactIsFresh(resolve(import.meta.dir, ".."));
+    const fresh = mikktspaceArtifactIsFresh(resolve(import.meta.dirname, ".."));
     if (!fresh)
         throw new Error(
             `${MIKKTSPACE_ARTIFACT}: build-input stamp missing or stale. Regenerate: bun crates/mikktspace/scripts/build.ts`,

@@ -15,7 +15,7 @@ import { normalizePath } from "../src/project/paths.ts";
 import { packedInstall as runPackedInstall } from "./packed-install-spawn.ts";
 import { removeTestDirectory } from "./test-directory.ts";
 
-export const ROOT = resolve(import.meta.dir, "..");
+export const ROOT = resolve(import.meta.dirname, "..");
 export const examples = readdirSync(join(ROOT, "examples"), { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name)

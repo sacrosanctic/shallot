@@ -9,7 +9,7 @@ import { spawnPackedInstall } from "./packed-install-spawn.ts";
 import { removeTestDirectory } from "./test-directory.ts";
 
 setDefaultTimeout(TIMEOUT.node);
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 const TYPEGPU_RANGE = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")).peerDependencies
     .typegpu;
 function run(command: string[], cwd: string, label: string): string {

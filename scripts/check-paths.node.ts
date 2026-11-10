@@ -8,7 +8,7 @@ import { normalizePath } from "../src/project/paths.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 type AstNode = Record<string, any>;
 type UrlOrigin = "file" | "http" | "other";
 

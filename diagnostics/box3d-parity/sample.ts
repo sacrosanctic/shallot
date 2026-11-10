@@ -51,8 +51,8 @@ export function sampleBinary(samples = join(process.env.BOX3D ?? "", "samples"))
         '#undef acosf',
         ...[["SphereAndSphere","sampleCollideSpheres"],["CapsuleAndSphere","sampleSphereAndCapsule"],["HullAndSphere","sampleSphereAndHull"],["TriangleAndSphere","sampleSphereAndTriangle"],["CapsuleAndCapsule","sampleCapsuleAndCapsule"],["CapsuleAndHull","sampleCapsuleAndHull"],["TriangleAndCapsule","sampleCapsuleAndTriangle"],["HullAndHull","sampleCollideHulls"],["TriangleAndHull","sampleHullAndTriangle"]].map(([name,end])=>section(manifold,`class ${name} :`,`static int ${end}`)),
         "}",
-        readFileSync(join(import.meta.dir,"sample-manifold.h"),"utf8"),
-        readFileSync(join(import.meta.dir,"sample-manifold-diagnostics.h"),"utf8"),
+        readFileSync(join(import.meta.dirname,"sample-manifold.h"),"utf8"),
+        readFileSync(join(import.meta.dirname,"sample-manifold-diagnostics.h"),"utf8"),
         "namespace Geometry {\n#define b3ComputeHullMass RecordedHullMass\n#define b3ComputeCapsuleMass RecordedCapsuleMass",
         ...["BoxHull", "Hull", "HullReduction", "HullTransform", "CapsuleMass"].map(name => section(geometry, `class ${name} :`, `static int sample${name}`)),
         "#undef b3ComputeHullMass\n#undef b3ComputeCapsuleMass\n}",
@@ -122,7 +122,7 @@ export function sampleBinary(samples = join(process.env.BOX3D ?? "", "samples"))
         section(events, "class JointEvent :", "static int sampleJointEvent"),
         section(events, "struct BodyUserData", "static int sampleContactEvent"),
         "#undef b3World_CastRayClosest\n#undef b3World_CastShape\n#undef b3Body_CastRay",
-        readFileSync(join(import.meta.dir, "sample-collision.h"), "utf8"),
+        readFileSync(join(import.meta.dirname, "sample-collision.h"), "utf8"),
         "namespace Collision {\n#define b3World_CastRay Ray\n#define b3World_CastRayClosest Closest\n#define b3World_CastShape Shape\n#define b3World_OverlapShape Overlap\n#define b3Body_CastRay BodyRay\n#define b3ShapeDistance Distance\n#define b3ShapeCast Cast\n#define b3TimeOfImpact TOI",
         section(collision, "class RayCurtain :", "static int sampleRayCurtain"),
         section(collision, "struct CastContext", "static int sampleCastWorld"),
@@ -142,15 +142,15 @@ export function sampleBinary(samples = join(process.env.BOX3D ?? "", "samples"))
             .replace('#include "tiny_obj_loader.h"', '')
             .replace('reader.ParseFromFile( path, readerConfig )', 'reader.ParseFromFile( (std::string(getenv("BOX3D")) + "/" + path), readerConfig )'),
     ].join("\n");
-    const source = readFileSync(join(import.meta.dir, "sample.cpp"), "utf8")
+    const source = readFileSync(join(import.meta.dirname, "sample.cpp"), "utf8")
         .replace("// SAMPLE_EARCUT", readFileSync(join(process.env.BOX3D ?? "", "samples/earcut.h"), "utf8"))
         .replace("// SAMPLE_MESH_LOADER", meshLoader)
         .replace("// SAMPLE_MOVER_INPUT", section(readFileSync(join(samples, "sample.h"), "utf8"), "struct MoverInput", "struct SampleContext"))
         .replace("// SAMPLE_GRAB", grab)
         .replace("// SAMPLE_UP", up.slice(up.indexOf("{")))
-        .replace("// SAMPLE_TREE_RECORDS", readFileSync(join(import.meta.dir, "sample-tree.h"), "utf8"))
-        .replace("// SAMPLE_EVENTS", readFileSync(join(import.meta.dir, "sample-events.h"), "utf8"))
-        .replace("// SAMPLE_SOURCES", readFileSync(join(import.meta.dir, "sample-compounds.h"), "utf8") + "\n" + readFileSync(join(import.meta.dir, "sample-meshes.h"), "utf8") + "\n" + readFileSync(join(import.meta.dir, "sample-mesh-frames.h"), "utf8") + "\n" + sources);
+        .replace("// SAMPLE_TREE_RECORDS", readFileSync(join(import.meta.dirname, "sample-tree.h"), "utf8"))
+        .replace("// SAMPLE_EVENTS", readFileSync(join(import.meta.dirname, "sample-events.h"), "utf8"))
+        .replace("// SAMPLE_SOURCES", readFileSync(join(import.meta.dirname, "sample-compounds.h"), "utf8") + "\n" + readFileSync(join(import.meta.dirname, "sample-meshes.h"), "utf8") + "\n" + readFileSync(join(import.meta.dirname, "sample-mesh-frames.h"), "utf8") + "\n" + sources);
     const path = join(tmpdir(), `box3d-sample-${Bun.hash(source).toString(16)}.cpp`);
     writeFileSync(path, source);
     const shared = ["benchmarks.c", "determinism.c", "stability.c"].map(name => {

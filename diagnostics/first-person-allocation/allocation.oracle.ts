@@ -65,7 +65,7 @@ test("a warm requestAnimationFrame frame of the production first-person web buil
     // and 120-frame windows fit the build, headed launch and six profiled spans inside the budget on a page
     // presenting at its display's rate. A host that cannot sustain the frame budget fails by name rather
     // than trimming the warm.
-    const sample = await samplePage(resolve(import.meta.dir, "../../examples/first-person"), {
+    const sample = await samplePage(resolve(import.meta.dirname, "../../examples/first-person"), {
         warm: 5400,
         frames: 120,
         deadline: performance.now() + 110_000,

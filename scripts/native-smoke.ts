@@ -23,7 +23,7 @@ import { classifyAdapter } from "../src/engine/runtime/adapter.ts";
 import { normalizePath } from "../src/project/paths.ts";
 import { CEILING } from "../src/project/testing.js";
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 const SETUP_COMMAND = "bash scripts/native-linux-setup.sh";
 const BUN_INSTALL = "curl -fsSL https://bun.sh/install | bash";
 const RUSTUP_INSTALL = "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh";

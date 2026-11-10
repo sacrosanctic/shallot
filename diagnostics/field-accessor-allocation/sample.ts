@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 import { sampleAllocation, windowBytes } from "../first-person-allocation/allocation.ts";
 import create, { ENTITIES, ROWS } from "./subject.entry.ts";
 
-const entry = resolve(import.meta.dir, "subject.entry.ts");
+const entry = resolve(import.meta.dirname, "subject.entry.ts");
 for (const row of ROWS) {
     const sample = await sampleAllocation(entry, { warm: 600, frames: 600, input: row });
     if (windowBytes({ sites: sample.control }) === 0) throw new Error("allocation control was invisible");

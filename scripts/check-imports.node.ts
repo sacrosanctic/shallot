@@ -12,7 +12,7 @@ import { removeTestDirectory } from "./test-directory.ts";
 
 let repositoryFindings: string[];
 beforeAll(() => {
-    repositoryFindings = checkImports(resolve(import.meta.dir, ".."));
+    repositoryFindings = checkImports(resolve(import.meta.dirname, ".."));
 });
 
 test("repository imports have no violations", () => {

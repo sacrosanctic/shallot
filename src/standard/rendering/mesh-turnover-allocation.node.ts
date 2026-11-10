@@ -13,7 +13,7 @@ setDefaultTimeout(TIMEOUT.node);
 let sampler: PreparedAllocationSampler;
 beforeAll(async () => {
     sampler = await prepareAllocationSampler(
-        resolve(import.meta.dir, "../../../diagnostics/turnover-allocation/mesh.entry.ts"),
+        resolve(import.meta.dirname, "../../../diagnostics/turnover-allocation/mesh.entry.ts"),
     );
 }, TIMEOUT.startup);
 afterAll(() => sampler?.dispose());

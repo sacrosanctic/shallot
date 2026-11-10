@@ -5,7 +5,7 @@ import { resolve } from "path";
 setDefaultTimeout(TIMEOUT.node);
 
 test("documented dependency and Bun pins match their manifests", async () => {
-    const root = resolve(import.meta.dir, "..");
+    const root = resolve(import.meta.dirname, "..");
     const packageJson = await Bun.file(resolve(root, "package.json")).json();
     const bun = (await Bun.file(resolve(root, ".bun-version")).text()).trim();
     expect(packageJson.packageManager).toBe(`bun@${bun}`);

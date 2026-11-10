@@ -21,7 +21,7 @@ await syncFiles(manifest.models.filter(model => models.includes(model.name)).fla
 const temporary = mkdtempSync(resolve(tmpdir(), "shallot-mikktspace-records-"));
 try {
     const executable = resolve(temporary, "reference");
-    run([process.env.CC ?? "clang", "-O3", "-ffp-contract=off", "-I", checkout, resolve(import.meta.dir, "reference.c"), resolve(checkout, "mikktspace.c"), "-lm", "-o", executable]);
+    run([process.env.CC ?? "clang", "-O3", "-ffp-contract=off", "-I", checkout, resolve(import.meta.dirname, "reference.c"), resolve(checkout, "mikktspace.c"), "-lm", "-o", executable]);
     const records = [];
     for (const name of models) for (const p of primitives(name)) {
         const count = p.vertices.length / 8;
@@ -36,11 +36,11 @@ try {
         run([executable, input, output]);
         const file = `${name}-${p.mesh}-${p.primitive}.bin`;
         const bytes = readFileSync(output);
-        writeFileSync(resolve(import.meta.dir, "../../src/core/mesh/fixtures", file.replace(".bin", ".input.bin")), Buffer.concat([Buffer.from(new Uint32Array([count, p.indices.length]).buffer), Buffer.from(p.vertices.buffer), Buffer.from(p.indices.buffer)]));
-        writeFileSync(resolve(import.meta.dir, "../../src/core/mesh/fixtures", file), bytes);
+        writeFileSync(resolve(import.meta.dirname, "../../src/core/mesh/fixtures", file.replace(".bin", ".input.bin")), Buffer.concat([Buffer.from(new Uint32Array([count, p.indices.length]).buffer), Buffer.from(p.vertices.buffer), Buffer.from(p.indices.buffer)]));
+        writeFileSync(resolve(import.meta.dirname, "../../src/core/mesh/fixtures", file), bytes);
         records.push({ name, mesh: p.mesh, primitive: p.primitive, corners: p.indices.length, file });
     }
-    writeFileSync(resolve(import.meta.dir, "../../src/core/mesh/fixtures/mikktspace.json"), `${JSON.stringify({ revision, assetsCommit: manifest.commit, format: "Little-endian float32 xyzw per triangle corner; MikkTSpace w negated for glTF.", records }, null, 4)}\n`);
+    writeFileSync(resolve(import.meta.dirname, "../../src/core/mesh/fixtures/mikktspace.json"), `${JSON.stringify({ revision, assetsCommit: manifest.commit, format: "Little-endian float32 xyzw per triangle corner; MikkTSpace w negated for glTF.", records }, null, 4)}\n`);
     console.log(`Recorded ${records.length} triangle primitives from MikkTSpace ${revision}`);
 } finally {
     rmSync(temporary, { recursive: true, force: true });

@@ -8,7 +8,7 @@ setDefaultTimeout(240_000);
 const membershipOwners = /^(writeMeshBounds|registerDraws|publishMeshInstanceDraws|publishProducerDraws|rebuildMeshCounts|syncBuffers) src\/standard\/rendering\//;
 
 test("warm voxel turnover allocates nothing outside the admitted wrappers", async () => {
-    const result = await sampleAllocation(resolve(import.meta.dir, "turnover.entry.ts"), {
+    const result = await sampleAllocation(resolve(import.meta.dirname, "turnover.entry.ts"), {
         warm: 2_400,
         frames: 60,
         retainOptimizedSites: true,

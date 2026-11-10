@@ -5,7 +5,7 @@ import { sampleAllocation } from "../first-person-allocation/allocation.ts";
 import { isAdmittedAllocationSite } from "../first-person-allocation/allocation-admissions.ts";
 
 const words = process.argv.slice(2);
-const sample = await sampleAllocation(resolve(import.meta.dir, "probe.entry.ts"), {
+const sample = await sampleAllocation(resolve(import.meta.dirname, "probe.entry.ts"), {
     warm: 2_400,
     frames: 60,
     input: words.filter((word) => word !== "all").join(" "),

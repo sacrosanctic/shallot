@@ -10,7 +10,7 @@ import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { removeTestDirectory } from "./test-directory.ts";
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 
 test("every CI job declares its timeout budget", async () => {
     for (const workflow of ["test.yml", "release.yml"]) {

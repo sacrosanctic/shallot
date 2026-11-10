@@ -7,7 +7,7 @@ setDefaultTimeout(TIMEOUT.node);
 
 function run(followed: boolean) {
     const child = Bun.spawnSync({
-        ...bunChild(["test", join(import.meta.dir, "fixtures/device-error/device-error.ts")]),
+        ...bunChild(["test", join(import.meta.dirname, "fixtures/device-error/device-error.ts")]),
         env: { ...process.env, SHALLOT_DEVICE_ERROR_FOLLOWED: followed ? "1" : "0" },
         stdout: "pipe",
         stderr: "pipe",

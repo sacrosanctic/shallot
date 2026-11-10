@@ -70,7 +70,7 @@ if (
 )
     throw new Error(USAGE);
 
-const root = resolve(import.meta.dir, "../..");
+const root = resolve(import.meta.dirname, "../..");
 const vite = resolve(root, "node_modules/vite/bin/vite.js");
 const examples = only.length
     ? only

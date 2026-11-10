@@ -10,7 +10,7 @@ import {
 setDefaultTimeout(TIMEOUT.node);
 
 const entry = resolve(
-    import.meta.dir,
+    import.meta.dirname,
     "../../../diagnostics/first-person-allocation/shared-transparent.entry.ts",
 );
 const WARM_FRAMES = 360;

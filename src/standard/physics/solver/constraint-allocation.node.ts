@@ -23,7 +23,7 @@ const scenes = {
 for (const [input, scene] of Object.entries(scenes)) {
     test(`a warm step of ${scene} allocates no JavaScript heap`, async () => {
         const sample = await sampleAllocation(
-            resolve(import.meta.dir, "constraint-allocation.entry.ts"),
+            resolve(import.meta.dirname, "constraint-allocation.entry.ts"),
             { warm: 6000, frames: 600, input },
         );
         expect(sample.control.length).toBeGreaterThan(0);

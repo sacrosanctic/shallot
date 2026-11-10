@@ -29,7 +29,7 @@ import { bodyIsAwake, bodySetAwake, destroyBody } from "./world/body.ts";
 import type { WorldState } from "./world/world.ts";
 
 setDefaultTimeout(TIMEOUT.node);
-const entry = resolve(import.meta.dir, "fixtures/shape-allocation.entry.ts");
+const entry = resolve(import.meta.dirname, "fixtures/shape-allocation.entry.ts");
 let kernelBytes: ArrayBuffer | undefined;
 
 beforeAll(async () => {

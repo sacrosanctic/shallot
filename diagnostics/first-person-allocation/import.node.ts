@@ -22,7 +22,7 @@ test("a non-page allocation row can import the allocation instrument without loa
                     });
                 },
             });
-            const { allocationFailure } = await import(${JSON.stringify(resolve(import.meta.dir, "allocation.ts"))});
+            const { allocationFailure } = await import(${JSON.stringify(resolve(import.meta.dirname, "allocation.ts"))});
             if (allocationFailure({ warm: 1, windows: [] }) === undefined)
                 throw new Error("allocation export did not evaluate");
             if (globalThis.viteLoads.length !== 0)
@@ -42,7 +42,7 @@ test("a non-page allocation row can import the allocation instrument without loa
 
 test("a Node allocation import does not load the display-only oracle or Hyprland instrument", async () => {
     const built = await Bun.build({
-        entrypoints: [resolve(import.meta.dir, "allocation.ts")],
+        entrypoints: [resolve(import.meta.dirname, "allocation.ts")],
         metafile: true,
         external: ["playwright", "webgpu", "chromium-bidi"],
         target: "bun",
@@ -54,7 +54,7 @@ test("a Node allocation import does not load the display-only oracle or Hyprland
     expect(inputs.some((path) => path.endsWith("/diagnostics/first-person-allocation/display-seat.ts"))).toBe(false);
 
     const node = await Bun.build({
-        entrypoints: [resolve(import.meta.dir, "allocation-sampler.mjs")],
+        entrypoints: [resolve(import.meta.dirname, "allocation-sampler.mjs")],
         metafile: true,
         target: "node",
         external: ["webgpu"],

@@ -27,7 +27,7 @@ for (const record of records.records)
             (p) => p.mesh === record.mesh && p.primitive === record.primitive,
         )!;
         const result = await generateTangents({ ...input, name: record.name });
-        const bytes = readFileSync(resolve(import.meta.dir, "fixtures", record.file));
+        const bytes = readFileSync(resolve(import.meta.dirname, "fixtures", record.file));
         const reference = new Uint32Array(bytes.buffer, bytes.byteOffset, bytes.byteLength / 4);
         const bits = new Uint32Array(result.tangent.buffer);
         const corners = new Uint32Array(result.indices.length * 4);

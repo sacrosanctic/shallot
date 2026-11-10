@@ -4,7 +4,7 @@ import manifest from "../../examples/gltf/assets.json" with { type: "json" };
 import { adversarial, adversarialNames } from "./adversarial.ts";
 
 export const models = [...manifest.models.map(model => model.name), ...adversarialNames];
-export const assets = resolve(import.meta.dir, "../../examples/gltf/public/assets");
+export const assets = resolve(import.meta.dirname, "../../examples/gltf/public/assets");
 
 /** Reads the pinned fixtures' dense float attributes and unsigned triangle indices. */
 export function primitives(name: string): { mesh: number; primitive: number; vertices: Float32Array; indices: Uint32Array }[] {

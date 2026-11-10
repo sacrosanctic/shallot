@@ -53,7 +53,7 @@ test("shallot dev preserves Vite flags and values in their original order", () =
 });
 
 test("native dev refuses a project with no resolvable Vite and names the devDependency fix without fetching", () => {
-    const root = resolve(import.meta.dir, "../..");
+    const root = resolve(import.meta.dirname, "../..");
     const project = mkdtempSync(join(tmpdir(), "shallot-no-vite-"));
     writeFileSync(
         join(project, "index.html"),
@@ -80,7 +80,7 @@ test("native dev refuses a project with no resolvable Vite and names the devDepe
 });
 
 test("native dev in a bun-linked Shallot consumer without Vite names the devDependency fix", () => {
-    const root = resolve(import.meta.dir, "../..");
+    const root = resolve(import.meta.dirname, "../..");
     const consumer = mkdtempSync(join(tmpdir(), "shallot-linked-consumer-"));
     const nodeModules = join(consumer, "node_modules");
     const linkedPackage = join(nodeModules, "@dylanebert", "shallot");
@@ -118,7 +118,7 @@ test("Vite CLI argument mapping preserves project command arguments", () => {
 });
 
 test("Vite resolution finds a dependency hoisted above a workspace app reached through a symlink", () => {
-    const root = resolve(import.meta.dir, "../..");
+    const root = resolve(import.meta.dirname, "../..");
     const fixture = mkdtempSync(join(tmpdir(), "shallot-workspace-symlink-"));
     const workspace = join(fixture, "workspace");
     const projectPath = join(workspace, "packages", "game");
@@ -153,7 +153,7 @@ test("native dev keeps the complete reported Local URL and can use a Network URL
 });
 
 test("native dev loads the complete local Vite URL when the project uses a base path", async () => {
-    const root = resolve(import.meta.dir, "../..");
+    const root = resolve(import.meta.dirname, "../..");
     const project = mkdtempSync(join(tmpdir(), "shallot-vite-base-path-"));
     symlinkSync(join(root, "node_modules"), join(project, "node_modules"), "dir");
     writeFileSync(join(project, "package.json"), JSON.stringify({ type: "module" }));
@@ -177,7 +177,7 @@ test("native dev loads the complete local Vite URL when the project uses a base 
 });
 
 test("native dev receives the actual local URL reported by the project's Vite server", async () => {
-    const root = resolve(import.meta.dir, "../..");
+    const root = resolve(import.meta.dirname, "../..");
     const project = mkdtempSync(join(tmpdir(), "shallot-vite-native-url-"));
     symlinkSync(join(root, "node_modules"), join(project, "node_modules"), "dir");
     writeFileSync(join(project, "index.html"), "<!doctype html><title>VITE URL</title>\n");

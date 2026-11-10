@@ -20,7 +20,7 @@ import {
 } from "./testing.ts";
 
 setDefaultTimeout(TIMEOUT.node);
-const entry = resolve(import.meta.dir, "fixtures/contact-allocation.entry.ts");
+const entry = resolve(import.meta.dirname, "fixtures/contact-allocation.entry.ts");
 let kernelBytes: ArrayBuffer | undefined;
 beforeAll(async () => {
     kernelBytes = await countedKernelBytes();

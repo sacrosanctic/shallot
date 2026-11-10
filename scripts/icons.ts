@@ -4,7 +4,7 @@ import { compose, fromBlocks, toSvg } from "../src/standard/loading/brand.ts";
 import { readBranding } from "./branding.ts";
 import { toPng } from "./png.ts";
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 
 // Every default icon a shallot project ships is a render of the one bitmap mark, so the shape
 // can't drift between the boot splash, a scaffolded project's favicon and the native window.

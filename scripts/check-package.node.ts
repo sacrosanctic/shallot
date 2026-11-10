@@ -12,7 +12,7 @@ import { removeTestDirectory } from "./test-directory.ts";
 
 test("the packed package passes size, publint and declaration checks", () => {
     const MaxUnpackedBytes = 12_950_000;
-    const root = resolve(import.meta.dir, "..");
+    const root = resolve(import.meta.dirname, "..");
     const manifest = JSON.parse(readFileSync(resolve(root, "package.json"), "utf8"));
     const packageFile = `${manifest.name.replace(/^@/, "").replace("/", "-")}-${manifest.version}.tgz`;
     const scratch = mkdtempSync(join(tmpdir(), "shallot-package-lint-"));

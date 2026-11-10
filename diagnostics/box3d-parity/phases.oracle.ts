@@ -51,7 +51,7 @@ const timing = process.env.PHASE_TIMING === "1";
 const native = nativeBinary();
 const dir = mkdtempSync(join(tmpdir(), "box3d-parity-phases-"));
 const built = await Bun.build({
-    entrypoints: [join(import.meta.dir, "scenes.ts")],
+    entrypoints: [join(import.meta.dirname, "scenes.ts")],
     outdir: dir,
     target: "node",
     format: "esm",

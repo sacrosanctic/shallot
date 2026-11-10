@@ -9,7 +9,7 @@ import {
 setDefaultTimeout(TIMEOUT.node);
 
 test("body velocity, transform, force, impulse, sleep, wake and contact churn allocate no steady JavaScript heap", async () => {
-    const entry = resolve(import.meta.dir, "body-allocation.entry.ts");
+    const entry = resolve(import.meta.dirname, "body-allocation.entry.ts");
     const sample = await sampleAllocation(entry, { warm: 600, frames: 600 });
     expect(sample.control.length).toBeGreaterThan(0);
     const failure = allocationFailure(sample);

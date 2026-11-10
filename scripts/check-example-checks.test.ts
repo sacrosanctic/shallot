@@ -3,7 +3,7 @@ import { readdirSync } from "node:fs";
 import { relative, resolve } from "node:path";
 import { normalizePath } from "../src/project/paths.ts";
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 
 function exampleFiles(directory: string): string[] {
     return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {

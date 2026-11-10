@@ -17,7 +17,7 @@ import {
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 
 function run(command: string[], cwd: string, label: string): string {
     const [program, ...args] = command;
@@ -73,7 +73,7 @@ beforeAll(() => {
         );
         writeFileSync(
             join(project, "preload.ts"),
-            'import { plugin } from "bun";\nimport { shallot } from "@dylanebert/shallot/bun";\nplugin(shallot({ root: import.meta.dir }));\n',
+            'import { plugin } from "bun";\nimport { shallot } from "@dylanebert/shallot/bun";\nplugin(shallot({ root: import.meta.dirname }));\n',
         );
         writeFileSync(join(project, "bunfig.toml"), '[test]\npreload = ["./preload.ts"]\n');
         writeFileSync(

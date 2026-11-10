@@ -78,7 +78,7 @@ for (const scenario of [
                 spyOn(itch, "ensureButler").mockResolvedValue("fixture-butler"),
                 spyOn(itch, "runButler").mockImplementation((_butler, args) => {
                     const recorded = JSON.parse(
-                        readFileSync(join(import.meta.dir, "fixtures/publish-itch.json"), "utf8"),
+                        readFileSync(join(import.meta.dirname, "fixtures/publish-itch.json"), "utf8"),
                     );
                     return {
                         ...recorded[args[0] === "push" ? "pushCreated" : "statusCompleted"],

@@ -2,7 +2,7 @@ import { mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { buildProjectDeclaration } from "./project-declaration.ts";
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 const OUT = resolve(ROOT, "dist");
 
 // Recreate dist/ so a retired declaration cannot survive a later prepare.

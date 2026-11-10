@@ -4,7 +4,7 @@ import { tmpdir } from "node:os";
 import { resolve } from "node:path";
 import { buildInputHash, cargoLockClosure } from "./build-inputs";
 
-const lock = readFileSync(resolve(import.meta.dir, "../Cargo.lock"), "utf8");
+const lock = readFileSync(resolve(import.meta.dirname, "../Cargo.lock"), "utf8");
 // abf54055: adding cef-dll-sys to shallot-native staled both WASM stamps with identical bytes.
 const unrelated = lock.replace(
     /(name = "shallot-native"\nversion = "[^"]+"\ndependencies = \[\n)/,

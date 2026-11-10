@@ -7,7 +7,7 @@ import { buildProjectDeclaration } from "./project-declaration.ts";
 setDefaultTimeout(TIMEOUT.node);
 
 test("published project-tooling declarations are current", () => {
-    const root = resolve(import.meta.dir, "..");
+    const root = resolve(import.meta.dirname, "..");
     for (const entry of ["testing", "vite"] as const) {
         const built = resolve(root, `dist/${entry}.d.ts`);
         const fresh = buildProjectDeclaration(entry);

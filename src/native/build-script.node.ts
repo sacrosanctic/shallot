@@ -9,7 +9,7 @@ import { removeTestDirectory } from "../../scripts/test-directory.ts";
 
 setDefaultTimeout(TIMEOUT.node);
 
-const repo = resolve(import.meta.dir, "../..");
+const repo = resolve(import.meta.dirname, "../..");
 const crate = resolve(repo, "crates/native");
 let temp: string;
 let script: string;

@@ -22,7 +22,7 @@ const PUBLIC_ENTRIES = new Map([
     ["@dylanebert/shallot/webgpu", "engine/runtime/webgpu.ts"],
 ]);
 const SOURCE_ROOT = "src";
-const TSC = resolve(import.meta.dir, "../node_modules/.bin/tsc");
+const TSC = resolve(import.meta.dirname, "../node_modules/.bin/tsc");
 const RUNTIME_MODULES = new Set([
     ...builtinModules.flatMap((name) => [name, name.startsWith("node:") ? name : `node:${name}`]),
     "bun:ffi",

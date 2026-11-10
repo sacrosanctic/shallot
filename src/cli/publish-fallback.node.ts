@@ -16,7 +16,7 @@ import { buildWeb, CROSS_ORIGIN_ISOLATION, contentType } from "../project/index.
 import { verifyPublishedGame } from "./publish-verify.ts";
 
 setDefaultTimeout(TIMEOUT.node);
-const repo = resolve(import.meta.dir, "../..");
+const repo = resolve(import.meta.dirname, "../..");
 const root = mkdtempSync(join(tmpdir(), "shallot-publish-fallback-"));
 const project = join(root, "physics-fallback");
 const directory = join(project, "dist");

@@ -1,6 +1,6 @@
 import { resolve } from "node:path";
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 // Its own target directory, so the feature build and the plain build never replace each other's artifact.
 const TARGET = resolve(ROOT, "target/count-allocations");
 

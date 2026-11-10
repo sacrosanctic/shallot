@@ -4,7 +4,7 @@ import type { BunPlugin } from "bun";
 import typegpu from "unplugin-typegpu/bun";
 import { normalizePath } from "./paths.ts";
 
-const PACKAGE_ROOT = resolve(import.meta.dir, "../..");
+const PACKAGE_ROOT = resolve(import.meta.dirname, "../..");
 const SHALLOT = JSON.parse(readFileSync(join(PACKAGE_ROOT, "package.json"), "utf8"));
 const TYPEGPU_RANGE = SHALLOT.peerDependencies.typegpu as string;
 const TYPEGPU_INCLUDE =

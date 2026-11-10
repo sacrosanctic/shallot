@@ -119,7 +119,7 @@ async function checkRealization(root: string): Promise<string[]> {
 // Consumer commands use the installed bin; repository commands must resolve in this tree,
 // without a global link or bunx downloading an unrelated registry version.
 test("documented commands resolve and package files are realizable", async () => {
-    const root = resolve(import.meta.dir, "..");
+    const root = resolve(import.meta.dirname, "..");
     const commandErrors = await checkRealization(root);
     const entry = (await Bun.file(resolve(root, "CONTRIBUTING.md")).text())
         .split("## Commands\n")[1]

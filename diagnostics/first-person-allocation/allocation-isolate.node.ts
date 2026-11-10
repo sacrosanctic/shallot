@@ -12,7 +12,7 @@ setDefaultTimeout(TIMEOUT.node);
 test("a worker isolate's optimization inside a window does not refuse it, and the measured isolate's still does", async () => {
     const dir = mkdtempSync(join(tmpdir(), "shallot-isolate-trace-"));
     try {
-        const sampler = pathToFileURL(resolve(import.meta.dir, "allocation-sampler.mjs")).href;
+        const sampler = pathToFileURL(resolve(import.meta.dirname, "allocation-sampler.mjs")).href;
         writeFileSync(
             join(dir, "subject.mjs"),
             `import { Worker } from "node:worker_threads";

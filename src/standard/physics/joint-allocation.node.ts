@@ -12,13 +12,13 @@ import { createTestWorld, destroyTestWorld } from "./testing.ts";
 import type { WorldState } from "./world/world.ts";
 
 setDefaultTimeout(TIMEOUT.node);
-const entry = resolve(import.meta.dir, "fixtures/joint-allocation.entry.ts");
+const entry = resolve(import.meta.dirname, "fixtures/joint-allocation.entry.ts");
 let kernelBytes: ArrayBuffer | undefined;
 
 beforeAll(async () => {
     kernelBytes = await countedKernelBytes();
 }, TIMEOUT.startup);
-const fieldEntry = resolve(import.meta.dir, "fixtures/joint-field-allocation.entry.ts");
+const fieldEntry = resolve(import.meta.dirname, "fixtures/joint-field-allocation.entry.ts");
 
 test("a public ECS motor-speed write allocates no steady JavaScript heap", async () => {
     const sample = await sampleAllocation(fieldEntry, { warm: 6000, frames: 600 });

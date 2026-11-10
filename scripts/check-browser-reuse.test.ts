@@ -7,7 +7,7 @@ import { Glob } from "bun";
 import { normalizePath } from "../src/project/paths.ts";
 
 test("browser servers refuse to reuse existing processes", () => {
-    const root = resolve(import.meta.dir, "..");
+    const root = resolve(import.meta.dirname, "..");
     const configs = [
         ...Array.from(
             new Glob("examples/**/playwright.config.ts").scanSync({ cwd: root }),

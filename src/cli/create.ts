@@ -17,7 +17,7 @@ const PROJECT_GITIGNORE = PROJECT_OUTPUT.map((directory) => `${directory}/\n`).j
 const PROJECT_PRELOAD = `import { shallot } from "@dylanebert/shallot/bun";
 import { plugin } from "bun";
 
-plugin(shallot({ root: import.meta.dir }));
+plugin(shallot({ root: import.meta.dirname }));
 `;
 const CREATE_USAGE = `
   shallot create <name> [--template <example>]

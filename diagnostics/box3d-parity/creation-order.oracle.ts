@@ -15,9 +15,9 @@ test("Rain's direct and public authoring order equals native and rejects reverse
     const hashes = (text: string) => text.trim().split("\n").map(line => line.split("0x").at(-1)!);
     const directory = mkdtempSync(join(tmpdir(), "rain-creation-order-"));
     try {
-        const original = readFileSync(join(import.meta.dir, "scenes.ts"), "utf8")
+        const original = readFileSync(join(import.meta.dirname, "scenes.ts"), "utf8")
             .replace(/(from\s+|import\()("|')(\.\.?\/[^"']+)\2/g,
-                (_match, prefix, _quote, path) => `${prefix}${JSON.stringify(resolve(import.meta.dir, path))}`);
+                (_match, prefix, _quote, path) => `${prefix}${JSON.stringify(resolve(import.meta.dirname, path))}`);
         const reference = join(directory, "reference.ts");
         writeFileSync(reference, original);
         expect(hashes(run([process.execPath, reference, "rain", "1", String(steps)]))).toEqual(native);

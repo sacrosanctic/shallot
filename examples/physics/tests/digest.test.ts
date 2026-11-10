@@ -71,7 +71,7 @@ test("Cast digests hold each invocation including its mover planes", () => {
 });
 
 test("every physics gold is at most 100 KB", () => {
-    for (const file of readdirSync(import.meta.dir).filter((file) => file.endsWith(".gold.txt"))) {
-        expect(statSync(`${import.meta.dir}/${file}`).size, file).toBeLessThanOrEqual(100000);
+    for (const file of readdirSync(import.meta.dirname).filter((file) => file.endsWith(".gold.txt"))) {
+        expect(statSync(`${import.meta.dirname}/${file}`).size, file).toBeLessThanOrEqual(100000);
     }
 });

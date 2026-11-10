@@ -291,7 +291,7 @@ test("native Windows overrides the cross linker even when LLVM is not installed"
     const target = "x86_64-pc-windows-msvc";
     const key = "CARGO_TARGET_X86_64_PC_WINDOWS_MSVC_LINKER";
     const config = Bun.TOML.parse(
-        readFileSync(resolve(import.meta.dir, "../crates/native/.cargo/config.toml"), "utf8"),
+        readFileSync(resolve(import.meta.dirname, "../crates/native/.cargo/config.toml"), "utf8"),
     ) as { target: Record<string, { linker: string }> };
     for (const portable of [false, true]) {
         const invocation = resolveCargoInvocation(target, false, portable, false, "win32");

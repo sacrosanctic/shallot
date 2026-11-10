@@ -19,7 +19,7 @@ import { isRangeSubset, isValidRange } from "verkit";
 import { normalizePath } from "../src/project/paths.ts";
 import { removeTestDirectory } from "./test-directory.ts";
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 const ENGINE = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8"));
 const TYPEGPU_RANGE = ENGINE.peerDependencies.typegpu as string;
 
@@ -95,7 +95,7 @@ function installTypegpu(nodeModules: string): void {
 function writePreload(path: string): void {
     writeFileSync(
         path,
-        'import { plugin } from "bun";\nimport { shallot } from "@dylanebert/shallot/bun";\nplugin(shallot({ root: import.meta.dir }));\n',
+        'import { plugin } from "bun";\nimport { shallot } from "@dylanebert/shallot/bun";\nplugin(shallot({ root: import.meta.dirname }));\n',
     );
 }
 

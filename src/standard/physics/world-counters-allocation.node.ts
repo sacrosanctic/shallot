@@ -7,7 +7,7 @@ import {
 } from "../../../diagnostics/first-person-allocation/allocation.ts";
 
 setDefaultTimeout(TIMEOUT.node);
-const entry = resolve(import.meta.dir, "fixtures/world-counters-allocation.entry.ts");
+const entry = resolve(import.meta.dirname, "fixtures/world-counters-allocation.entry.ts");
 test("warmed world counter reads reuse their record and arrays without allocating", async () => {
     const sample = await sampleAllocation(entry, { warm: 12000 });
     expect(sample.control.length).toBeGreaterThan(0);

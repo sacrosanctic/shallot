@@ -25,7 +25,7 @@ import {
 import * as verify from "./publish-verify.ts";
 
 const recorded = JSON.parse(
-    readFileSync(join(import.meta.dir, "fixtures/publish-itch.json"), "utf8"),
+    readFileSync(join(import.meta.dirname, "fixtures/publish-itch.json"), "utf8"),
 ) as Record<string, ButlerResult> & {};
 const answer = (name: string): ButlerResult => ({ ...recorded[name]!, stderr: "" });
 const project = "individualkex/shallot-publish-test";

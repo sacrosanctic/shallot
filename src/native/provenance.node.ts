@@ -9,7 +9,7 @@ import { cargoRuntimeDir } from "./provenance.js";
 
 setDefaultTimeout(TIMEOUT.node);
 
-const repo = resolve(import.meta.dir, "../..");
+const repo = resolve(import.meta.dirname, "../..");
 let cargoRoot: string;
 let firstRuntime: string;
 let changedRuntime: string;

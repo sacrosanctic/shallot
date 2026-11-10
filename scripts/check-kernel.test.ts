@@ -8,7 +8,7 @@ import {
 } from "../crates/physics/scripts/kernel-inputs.ts";
 
 test("checked kernel artifacts match their build inputs", () => {
-    const root = resolve(import.meta.dir, "..");
+    const root = resolve(import.meta.dirname, "..");
     const stamp = `// Build inputs: sha256:${kernelInputHash(root)}`;
     let failed = false;
     for (const artifact of KERNEL_ARTIFACTS) {
@@ -23,7 +23,7 @@ test("checked kernel artifacts match their build inputs", () => {
 });
 
 test("committed WASM contains no host paths", () => {
-    const root = resolve(import.meta.dir, "..");
+    const root = resolve(import.meta.dirname, "..");
     const inlinedKernels = KERNEL_ARTIFACTS.map((artifact) => {
         const contents = readFileSync(resolve(root, artifact), "utf8");
         const base64 = contents.match(

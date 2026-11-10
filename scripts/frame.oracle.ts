@@ -2,7 +2,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { shallot } from "@dylanebert/shallot/bun";
 import { plugin } from "bun";
 
-plugin(shallot({ root: import.meta.dir }));
+plugin(shallot({ root: import.meta.dirname }));
 const { createApp } = await import("@dylanebert/shallot");
 const { attachTexture, captureTexture, Camera, Anchor, imageTextures } = await import(
     "@dylanebert/shallot/rendering"

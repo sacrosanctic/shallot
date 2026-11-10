@@ -18,7 +18,7 @@ import { nativeBinary, run } from "./native.ts";
 
 setDefaultTimeout(180_000);
 
-const here = import.meta.dir;
+const here = import.meta.dirname;
 const native = nativeBinary();
 
 type Side = { native: string[]; shallot: string[] };

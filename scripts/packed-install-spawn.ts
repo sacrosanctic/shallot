@@ -39,7 +39,7 @@ export function spawnPackedInstall(
                 stdout: "pipe",
                 stderr: "pipe",
             });
-            remedy = `\nBun cache (bun pm cache): ${cache.stdout.toString().trim() || cache.stderr.toString().trim()}\nFill this cache by running bun install --force in the checkout: ${resolve(import.meta.dir, "..")}\n`;
+            remedy = `\nBun cache (bun pm cache): ${cache.stdout.toString().trim() || cache.stderr.toString().trim()}\nFill this cache by running bun install --force in the checkout: ${resolve(import.meta.dirname, "..")}\n`;
         }
         throw new Error(`${label} failed:\n${output}${remedy}`);
     }
@@ -48,7 +48,7 @@ export function spawnPackedInstall(
 
 export function packedInstall(args: string[], cwd: string, label: string): string {
     const manifest = JSON.parse(readFileSync(join(cwd, "package.json"), "utf8"));
-    const lock = Bun.JSONC.parse(readFileSync(join(import.meta.dir, "../bun.lock"), "utf8")) as {
+    const lock = Bun.JSONC.parse(readFileSync(join(import.meta.dirname, "../bun.lock"), "utf8")) as {
         lockfileVersion: number;
         workspaces: Record<string, unknown>;
         packages: Record<string, unknown>;

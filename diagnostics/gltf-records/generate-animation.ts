@@ -17,10 +17,10 @@ globalThis.self = globalThis as typeof self;
 globalThis.ProgressEvent = class extends Event {} as unknown as typeof ProgressEvent;
 globalThis.createImageBitmap = (async () => ({ width: 1, height: 1, close() {} })) as typeof createImageBitmap;
 await syncFiles(manifest.models.filter(model => animationFixtures.some(name => name === model.name)).flatMap(model => model.files),
-    new URL(`${manifest.commit}/`, manifest.source), resolve(import.meta.dir, "../../examples/gltf/public/assets"));
+    new URL(`${manifest.commit}/`, manifest.source), resolve(import.meta.dirname, "../../examples/gltf/public/assets"));
 const records = [];
 for (const fixture of [...animationFixtures.map(name => `../../examples/gltf/public/assets/Models/${name}/glTF/${name}.gltf`), ...writtenAnimationFixtures, accessorFixture]) {
-    const path = resolve(import.meta.dir, fixture);
+    const path = resolve(import.meta.dirname, fixture);
     const manager = new LoadingManager();
     manager.setURLModifier((url: string) => url.startsWith("data:") || url.startsWith("blob:") ? url
         : `data:application/octet-stream;base64,${readFileSync(resolve(dirname(path), url)).toString("base64")}`);
@@ -86,7 +86,7 @@ for (const fixture of [...animationFixtures.map(name => `../../examples/gltf/pub
     }
     records.push({ fixture, clauses: json.skins?.length ? "transformations; joint-hierarchy; skinned-mesh-primitives: joint globals use parent global * local T * R * S; mesh-node transform is not a skin placement. Sampling bounded to before/start/midpoint/end/after each animation, rather than every key, to bound record size." : "animations; transformations", nodes: nodes.map(({ object, ...node }) => node), animations });
 }
-writeFileSync(resolve(import.meta.dir, "../../examples/gltf/tests/animations.gold.json"), `${JSON.stringify({
+writeFileSync(resolve(import.meta.dirname, "../../examples/gltf/tests/animations.gold.json"), `${JSON.stringify({
     specification: "a55d8458c1e82720413acd3b420fd09e73b8e40b", generator: revision,
     clauses: { values: "animations (independent sampler clamping; unchanged non-animated properties); appendix-c-interpolation (exact keys, STEP, lerp, shortest-path slerp, Hermite with duration-scaled tangents, normalized interpolated cubic quaternions); accessor-data-types; sparse-accessors",
         nodes: "nodes-and-hierarchy; transformations (default scene, authored local TRS and morph defaults)",

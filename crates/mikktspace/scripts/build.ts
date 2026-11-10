@@ -5,7 +5,7 @@ import { rustSourceRemaps } from "../../../scripts/rust-remap";
 import { optimize, version } from "../../../scripts/wasm-opt";
 import { MIKKTSPACE_ARTIFACT, mikktspaceInputHash } from "./inputs";
 
-const root = resolve(import.meta.dir, "../../..");
+const root = resolve(import.meta.dirname, "../../..");
 const flags = ["-C target-feature=+simd128", "--remap-path-prefix=crates/mikktspace/=", ...rustSourceRemaps()].join(" ");
 await $`cargo build --locked -p shallot-mikktspace --target wasm32-unknown-unknown --release`.cwd(root).env({ ...process.env, RUSTFLAGS: flags });
 const raw = resolve(root, "target/wasm32-unknown-unknown/release/shallot_mikktspace.wasm");

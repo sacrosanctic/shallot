@@ -6,7 +6,7 @@ import { join, resolve } from "node:path";
 export function rustSourceRemaps(toolchain?: string): string[] {
     const args = toolchain ? [`+${toolchain}`, "--print", "sysroot"] : ["--print", "sysroot"];
     const result = spawnSync("rustc", args, {
-        cwd: resolve(import.meta.dir, ".."),
+        cwd: resolve(import.meta.dirname, ".."),
         encoding: "utf8",
     });
     if (result.status !== 0)

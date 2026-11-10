@@ -31,7 +31,7 @@ await syncAssets();
 
 const subjects = gold.records.map((record) => {
     // Fixture identifiers are relative to the record generator's directory.
-    const path = resolve(import.meta.dir, "../../../diagnostics/gltf-records", record.fixture);
+    const path = resolve(import.meta.dirname, "../../../diagnostics/gltf-records", record.fixture);
     const json = JSON.parse(readFileSync(path, "utf8")) as GltfJson;
     const buffers = (json.buffers ?? []).map((buffer) => {
         const bytes = buffer.uri!.startsWith("data:")

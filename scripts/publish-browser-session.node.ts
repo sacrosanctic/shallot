@@ -41,7 +41,7 @@ test("POSIX desktop opener uses the person's session while Wrangler config stays
         });
         const wrangler =
             process.env.SHALLOT_TEST_WRANGLER ??
-            resolve(import.meta.dir, "../node_modules/wrangler/bin/wrangler.js");
+            resolve(import.meta.dirname, "../node_modules/wrangler/bin/wrangler.js");
         const result = Bun.spawnSync(["node", wrangler, "telemetry", "disable"], { env });
         expect(result.exitCode, result.stderr.toString()).toBe(0);
         expect(

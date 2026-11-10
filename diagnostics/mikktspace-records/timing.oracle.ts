@@ -17,18 +17,18 @@ const temporary = mkdtempSync(resolve(tmpdir(), "shallot-mikktspace-timing-"));
 try {
     // An independent Cargo root: bevy_mikktspace never enters Shallot's workspace or lockfile.
     writeFileSync(resolve(temporary, "Cargo.toml"), `[package]\nname="mikktspace-timing"\nversion="0.0.0"\nedition="2021"\n[workspace]\n[dependencies]\nbevy_mikktspace="=1.0.0"\n[[bin]]\nname="timing"\npath="main.rs"\n[profile.release]\nopt-level=3\n`);
-    copyFileSync(resolve(import.meta.dir, "timing.rs"), resolve(temporary, "main.rs"));
-    copyFileSync(resolve(import.meta.dir, "../../crates/mikktspace/src/tangent.rs"), resolve(temporary, "tangent.rs"));
+    copyFileSync(resolve(import.meta.dirname, "timing.rs"), resolve(temporary, "main.rs"));
+    copyFileSync(resolve(import.meta.dirname, "../../crates/mikktspace/src/tangent.rs"), resolve(temporary, "tangent.rs"));
     run(["cargo", "build", "--release", "--manifest-path", resolve(temporary, "Cargo.toml")]);
     const rust = resolve(temporary, "target/release/timing");
     const c = resolve(temporary, "reference");
-    run([process.env.CC ?? "clang", "-O3", "-ffp-contract=off", "-I", checkout, resolve(import.meta.dir, "reference.c"), resolve(checkout, "mikktspace.c"), "-lm", "-o", c]);
+    run([process.env.CC ?? "clang", "-O3", "-ffp-contract=off", "-I", checkout, resolve(import.meta.dirname, "reference.c"), resolve(checkout, "mikktspace.c"), "-lm", "-o", c]);
     console.log(run(["sysctl", "-n", "machdep.cpu.brand_string"]));
     console.log(run(["rustc", "--version"]));
     console.log(run([process.env.CC ?? "clang", "--version"]).split("\n")[0]);
     console.log("Native release kernels, same triangle meshes; I/O, decode and remapping excluded. Five warmups; seven alternating samples; medians in microseconds. Rust includes output allocation/free; C reuses its output buffer. No timing assertion.");
     for (const record of records.records) {
-        const path = resolve(import.meta.dir, "../../src/core/mesh/fixtures", record.file.replace(".bin", ".input.bin"));
+        const path = resolve(import.meta.dirname, "../../src/core/mesh/fixtures", record.file.replace(".bin", ".input.bin"));
         const bytes = readFileSync(path);
         const words = new Uint32Array(bytes.buffer, bytes.byteOffset, bytes.byteLength / 4);
         const [nv, nc] = words;

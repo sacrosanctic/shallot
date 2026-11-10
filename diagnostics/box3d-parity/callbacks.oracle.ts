@@ -7,7 +7,7 @@ import { nativeBinary, run } from "./native.ts";
 
 setDefaultTimeout(180_000);
 const dir = mkdtempSync(join(tmpdir(), "box3d-callbacks-"));
-const build = await Bun.build({ entrypoints: [join(import.meta.dir, "callbacks-scene.ts")], outdir: dir, target: "node", format: "esm" });
+const build = await Bun.build({ entrypoints: [join(import.meta.dirname, "callbacks-scene.ts")], outdir: dir, target: "node", format: "esm" });
 if (!build.success) throw new Error(build.logs.join("\n"));
 process.on("exit", () => removeTestDirectory(dir));
 for (const mode of ["filter", "pre", "pressure"]) {

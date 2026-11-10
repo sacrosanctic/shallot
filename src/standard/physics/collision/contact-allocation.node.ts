@@ -20,7 +20,7 @@ const materialMixingScenes = [
 for (const { label, input, warm } of materialMixingScenes) {
     test(`warm ${label} with custom material mixing allocate no JavaScript heap`, async () => {
         const sample = await sampleAllocation(
-            resolve(import.meta.dir, "material-allocation.entry.ts"),
+            resolve(import.meta.dirname, "material-allocation.entry.ts"),
             { warm, frames: 300, input },
         );
         expect(sample.control.length).toBeGreaterThan(0);
@@ -31,7 +31,7 @@ for (const { label, input, warm } of materialMixingScenes) {
 
 test("warm hit events carrying nonzero 64-bit user material ids allocate no JavaScript heap", async () => {
     const sample = await sampleAllocation(
-        resolve(import.meta.dir, "hit-event-allocation.entry.ts"),
+        resolve(import.meta.dirname, "hit-event-allocation.entry.ts"),
         {
             warm: 2400,
             frames: 300,
@@ -47,7 +47,7 @@ test("warm hit events carrying nonzero 64-bit user material ids allocate no Java
 for (const count of [64, 128]) {
     test(`a warm step of ${count} awake boxes sliding on a kinematic platform allocates no JavaScript heap in the contact path`, async () => {
         const sample = await sampleAllocation(
-            resolve(import.meta.dir, "contact-allocation.entry.ts"),
+            resolve(import.meta.dirname, "contact-allocation.entry.ts"),
             {
                 warm: 6000,
                 frames: 300,

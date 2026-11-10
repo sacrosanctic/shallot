@@ -12,7 +12,7 @@ let results: { exit: number; stdout: string; stderr: string }[] = [];
 beforeAll(async () => {
     cache = mkdtempSync(join(tmpdir(), "box3d-native-cache-"));
     const source = `
-        import { nativeBinary, run } from ${JSON.stringify(join(import.meta.dir, "native.ts"))};
+        import { nativeBinary, run } from ${JSON.stringify(join(import.meta.dirname, "native.ts"))};
         import { join } from "node:path";
         const binary = nativeBinary("world-mover.c", undefined, join(process.env.BOX3D, "shared/benchmarks.c"));
         process.stdout.write(run([binary]));

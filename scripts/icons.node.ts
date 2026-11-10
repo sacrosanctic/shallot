@@ -7,7 +7,7 @@ import { readBranding } from "./branding.ts";
 import { toPng } from "./png.ts";
 
 setDefaultTimeout(TIMEOUT.node);
-const root = resolve(import.meta.dir, "..");
+const root = resolve(import.meta.dirname, "..");
 test("every example owns an editable base-correct standard favicon", () => {
     const branding = readBranding();
     const standard = Buffer.from(

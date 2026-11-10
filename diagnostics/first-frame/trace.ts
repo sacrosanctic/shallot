@@ -19,7 +19,7 @@ const HANDOFF_SECONDS = 1;
 const SAMPLE_INTERVAL_MS = 2;
 
 function tool(outDir: string): string {
-    const source = resolve(import.meta.dir, "cputrace.c");
+    const source = resolve(import.meta.dirname, "cputrace.c");
     const binary = join(outDir, "cputrace");
     if (!existsSync(binary) || statSync(binary).mtimeMs < statSync(source).mtimeMs) {
         const built = Bun.spawnSync(["clang", "-O2", source, "-o", binary], { stderr: "pipe" });

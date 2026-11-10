@@ -11,7 +11,7 @@ import { parse } from "@babel/parser";
 import { normalizePath } from "../src/project/paths.ts";
 import { removeTestDirectory } from "./test-directory.ts";
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 const PACKAGE = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as {
     exports: Record<string, string | Record<string, string>>;
 };

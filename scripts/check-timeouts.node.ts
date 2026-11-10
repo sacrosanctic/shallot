@@ -8,7 +8,7 @@ import { browserCommandErrors, packageTimeoutErrors, timeoutErrors } from "./tim
 setDefaultTimeout(TIMEOUT.node);
 
 test("test tiers and browser subjects follow the shared timeouts", async () => {
-    const root = resolve(import.meta.dir, "..");
+    const root = resolve(import.meta.dirname, "..");
     const errors = packageTimeoutErrors(await Bun.file(resolve(root, "package.json")).text());
     errors.push(
         ...browserCommandErrors(await Bun.file(resolve(root, "scripts/browser.sh")).text()),

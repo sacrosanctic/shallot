@@ -4,7 +4,7 @@ import { sampleAllocation, siteTable, windowBytes } from "../first-person-alloca
 
 // Manual diagnosis of the engine's new Node-tier red. Keep the engine allocation check active.
 test("isolate native GPU-copy handle allocation against the allocation-free upload control", async () => {
-    const entry = resolve(import.meta.dir, "copy.entry.ts");
+    const entry = resolve(import.meta.dirname, "copy.entry.ts");
     const upload = await sampleAllocation(entry, { warm: 6000, frames: 600, input: "upload" });
     const copy = await sampleAllocation(entry, { warm: 6000, frames: 600, input: "copy" });
     expect(windowBytes({ sites: upload.control })).toBeGreaterThan(0);

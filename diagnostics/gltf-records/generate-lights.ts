@@ -16,10 +16,10 @@ globalThis.ProgressEvent = class extends Event {} as unknown as typeof ProgressE
 globalThis.createImageBitmap = (async () => ({ width: 1, height: 1, close() {} })) as typeof createImageBitmap;
 const names = ["LightsPunctualLamp", "PointLightIntensityTest", "DirectionalLight"];
 await syncFiles(manifest.models.filter(model => names.includes(model.name)).flatMap(model => model.files),
-    new URL(`${manifest.commit}/`, manifest.source), resolve(import.meta.dir, "../../examples/gltf/public/assets"));
+    new URL(`${manifest.commit}/`, manifest.source), resolve(import.meta.dirname, "../../examples/gltf/public/assets"));
 const records = [];
 for (const name of [...names, "PunctualLights"]) {
-    const path = resolve(import.meta.dir, name === "PunctualLights" ? "../../examples/gltf/public/models/PunctualLights.gltf" : `../../examples/gltf/public/assets/Models/${name}/glTF/${name}.gltf`);
+    const path = resolve(import.meta.dirname, name === "PunctualLights" ? "../../examples/gltf/public/models/PunctualLights.gltf" : `../../examples/gltf/public/assets/Models/${name}/glTF/${name}.gltf`);
     const manager = new LoadingManager();
     manager.setURLModifier((url: string) => url.startsWith("data:") || url.startsWith("blob:") ? url
         : `data:application/octet-stream;base64,${readFileSync(resolve(dirname(path), url)).toString("base64")}`);
@@ -53,4 +53,4 @@ for (const name of [...names, "PunctualLights"]) {
     });
     records.push({ name, nodes, animations });
 }
-writeFileSync(resolve(import.meta.dir, "../../examples/gltf/tests/lights.gold.json"), `${JSON.stringify({ revision, records }, null, 2)}\n`);
+writeFileSync(resolve(import.meta.dirname, "../../examples/gltf/tests/lights.gold.json"), `${JSON.stringify({ revision, records }, null, 2)}\n`);

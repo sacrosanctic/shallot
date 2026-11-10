@@ -106,8 +106,8 @@ test("source-map sites resolve Windows-shaped file URLs as filesystem paths", ()
     ).toBe(true);
 });
 
-const ENTRY = resolve(import.meta.dir, "allocation.entry.ts");
-const ROOT = resolve(import.meta.dir, "../..");
+const ENTRY = resolve(import.meta.dirname, "allocation.entry.ts");
+const ROOT = resolve(import.meta.dirname, "../..");
 /** A bundle input's absolute path with `/` separators, so suffix checks hold on Windows. */
 const absolute = (path: string) => normalizePath(resolve(path));
 /** A bundle input's root-relative path with `/` separators. */

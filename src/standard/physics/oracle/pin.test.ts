@@ -4,7 +4,7 @@ import { join } from "node:path";
 import { BOX3D_PIN } from "./pin.ts";
 
 test("every corpus lane was generated at the pinned Box3D revision and tree", () => {
-    const corpus = join(import.meta.dir, "box3d");
+    const corpus = join(import.meta.dirname, "box3d");
     const lanes = readdirSync(corpus).sort();
     expect(lanes).toEqual(["v1", "v2", "v3", "v6", "v7", "v8"]);
     for (const lane of lanes) {

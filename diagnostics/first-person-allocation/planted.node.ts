@@ -5,7 +5,7 @@ import { allocatesNothing, allocationFailure, sampleAllocation, windowBytes } fr
 
 setDefaultTimeout(TIMEOUT.node);
 
-const PLANTED = resolve(import.meta.dir, "planted.entry.ts");
+const PLANTED = resolve(import.meta.dirname, "planted.entry.ts");
 
 test("a first optimization inside a window refuses its byte reading and names the function", async () => {
     const sample = await sampleAllocation(PLANTED, { warm: 120, frames: 120, input: "compile" });

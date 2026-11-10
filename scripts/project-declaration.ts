@@ -4,7 +4,7 @@ import { join, resolve } from "node:path";
 
 import { removeTestDirectory } from "./test-directory.ts";
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 type ProjectTool = "testing" | "vite";
 
 export function buildProjectDeclaration(entry: ProjectTool): string {

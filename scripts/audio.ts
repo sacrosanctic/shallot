@@ -5,7 +5,7 @@ import { audioInputHash } from "../crates/audio/scripts/audio-inputs.ts";
 import { rustSourceRemaps } from "./rust-remap.ts";
 import { optimize } from "./wasm-opt.ts";
 
-const pkgRoot = resolve(import.meta.dir, "..");
+const pkgRoot = resolve(import.meta.dirname, "..");
 const root = resolve(pkgRoot, "crates");
 
 // audio (cargo → wasm-opt). A workspace member, so cargo writes to the root target/.

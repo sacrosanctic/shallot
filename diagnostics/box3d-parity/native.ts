@@ -6,7 +6,7 @@ import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { BOX3D_PIN } from "../../src/standard/physics/oracle/pin.ts";
 
-const here = import.meta.dir;
+const here = import.meta.dirname;
 
 /** Run `cmd` from the repository root; its stdout, or a throw naming its stderr. */
 export function run(cmd: string[], env: Record<string, string> = {}): string {

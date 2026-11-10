@@ -28,7 +28,7 @@ import {
 import { verifyPublishedGame } from "./publish-verify.ts";
 
 setDefaultTimeout(TIMEOUT.node);
-const repo = resolve(import.meta.dir, "../..");
+const repo = resolve(import.meta.dirname, "../..");
 
 async function freePort(): Promise<number> {
     const server = createServer();

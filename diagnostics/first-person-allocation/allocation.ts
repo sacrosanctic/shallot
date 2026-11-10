@@ -62,13 +62,13 @@ export interface TransitionSample extends AllocationSample {
     survivors: readonly AllocationSite[];
 }
 
-const SAMPLER = resolve(import.meta.dir, "allocation-sampler.mjs");
+const SAMPLER = resolve(import.meta.dirname, "allocation-sampler.mjs");
 /**
  * Files copied beside every bundle under their own names, because Bun.build does not emit
  * `new URL(asset, import.meta.url)` assets: Text's default font.
  */
 const ALLOCATION_BUNDLE_ASSETS: readonly string[] = [
-    resolve(import.meta.dir, "../../src/extras/text/Inter-Regular.ttf"),
+    resolve(import.meta.dirname, "../../src/extras/text/Inter-Regular.ttf"),
 ];
 
 /**

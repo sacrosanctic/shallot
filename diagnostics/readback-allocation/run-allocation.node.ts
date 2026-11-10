@@ -14,10 +14,10 @@ import {
 setDefaultTimeout(TIMEOUT.node);
 test("runApp without a fence-wait reader allocates no fence-reaction heap per frame", async () => {
     assertAllocationWrappers(
-        readFileSync(resolve(import.meta.dir, "../../src/engine/runtime/allocation-site.ts"), "utf8"),
+        readFileSync(resolve(import.meta.dirname, "../../src/engine/runtime/allocation-site.ts"), "utf8"),
     );
     // MAX_FRAMES_IN_FLIGHT admits only six frames per 60-frame sampler chunk; the remaining callbacks are skipped.
-    const sample = await sampleAllocation(resolve(import.meta.dir, "run.entry.ts"), {
+    const sample = await sampleAllocation(resolve(import.meta.dirname, "run.entry.ts"), {
         warm: 12_000,
     });
     expect(sample.control.length).toBeGreaterThan(0);

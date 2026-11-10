@@ -26,7 +26,7 @@ for (const [claim, path, input] of [
     ],
 ]) {
     test(claim, async () => {
-        const sample = await sampleAllocation(resolve(import.meta.dir, path), {
+        const sample = await sampleAllocation(resolve(import.meta.dirname, path), {
             // Pose-driven collider refits need a longer warmup than the isolated solvers.
             warm: path === "collision/mover-allocation.entry.ts" ? 1800 : 12000,
             input,

@@ -4,7 +4,7 @@ import { join, resolve } from "node:path";
 import { shallot } from "@dylanebert/shallot/bun";
 import { removeTestDirectory } from "../../scripts/test-directory.ts";
 
-const root = resolve(import.meta.dir, "../..");
+const root = resolve(import.meta.dirname, "../..");
 const directory = mkdtempSync(join(tmpdir(), "shallot-benchmark-profile-"));
 try {
     const built = await Bun.build({

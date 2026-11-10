@@ -3,7 +3,7 @@ import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 import { hostFiles, ONLY } from "./test-hosts.ts";
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 
 test("every host-limited test file exists", () => {
     expect(Object.keys(ONLY).filter((path) => !existsSync(resolve(ROOT, path)))).toEqual([]);

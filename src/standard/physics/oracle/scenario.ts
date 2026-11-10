@@ -131,9 +131,9 @@ const corpusDigest = (bytes: Uint8Array): string =>
 // local oracle generation and are only fallbacks when an explicit corpus is not vendored.
 const defaultCorpusPaths = [
     process.env.BOX3D_SCENARIO_CORPUS,
-    join(import.meta.dir, "scenario-command-v1.json.gz"),
-    join(import.meta.dir, "../../../../../projects/box3d-oracle/scenarios/commands-v1.json"),
-    join(import.meta.dir, "../../../../../../kex/projects/box3d-oracle/scenarios/commands-v1.json"),
+    join(import.meta.dirname, "scenario-command-v1.json.gz"),
+    join(import.meta.dirname, "../../../../../projects/box3d-oracle/scenarios/commands-v1.json"),
+    join(import.meta.dirname, "../../../../../../kex/projects/box3d-oracle/scenarios/commands-v1.json"),
 ].filter((candidate): candidate is string => candidate !== undefined);
 
 export function loadScenarioCorpus(
@@ -814,7 +814,7 @@ export function runScenario(
 
 export function runCorpus(
     path = process.env.BOX3D_SCENARIO_CORPUS ??
-        join(import.meta.dir, "../../../../../projects/box3d-oracle/scenarios/commands-v1.json"),
+        join(import.meta.dirname, "../../../../../projects/box3d-oracle/scenarios/commands-v1.json"),
     mutateAngularVelocity = false,
 ): ScenarioOutput[] {
     const { corpus, digest } = loadScenarioCorpus(path);

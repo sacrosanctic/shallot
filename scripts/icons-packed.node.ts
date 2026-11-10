@@ -16,7 +16,7 @@ import { packedInstall } from "./packed-install-spawn.ts";
 import { removeTestDirectory } from "./test-directory.ts";
 
 setDefaultTimeout(TIMEOUT.node);
-const repo = resolve(import.meta.dir, "..");
+const repo = resolve(import.meta.dirname, "..");
 
 const root = realpathSync.native(mkdtempSync(resolve(tmpdir(), "shallot-icons-packed-")));
 const installer = resolve(root, "cli");

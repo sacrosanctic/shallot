@@ -210,7 +210,7 @@ if (pooled) {
             ...bunChild([
                 "test",
                 "--preload",
-                `${import.meta.dir}/step.pool.ts`,
+                `${import.meta.dirname}/step.pool.ts`,
                 import.meta.filename,
             ]),
             env: { ...process.env, PHYSICS_CORPUS_POOL: "1" },

@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 const SOURCE = resolve(ROOT, "assets/branding");
 const GENERATED = resolve(ROOT, "src/standard/loading/brand-data.ts");
 

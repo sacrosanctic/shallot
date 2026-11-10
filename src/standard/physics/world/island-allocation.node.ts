@@ -9,7 +9,7 @@ import {
 setDefaultTimeout(TIMEOUT.node);
 
 test("steady contact touch-link churn inside an island and merging two islands allocates no JavaScript heap", async () => {
-    const sample = await sampleAllocation(resolve(import.meta.dir, "island-allocation.entry.ts"), {
+    const sample = await sampleAllocation(resolve(import.meta.dirname, "island-allocation.entry.ts"), {
         warm: 600,
         frames: 600,
     });

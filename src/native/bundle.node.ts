@@ -21,7 +21,7 @@ import {
 import { tmpdir } from "node:os";
 import { delimiter, resolve } from "node:path";
 
-const repo = resolve(import.meta.dir, "../..");
+const repo = resolve(import.meta.dirname, "../..");
 let packedPackageDir: string;
 let packageArchive: string;
 beforeAll(async () => {

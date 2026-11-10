@@ -7,7 +7,7 @@ import {
 } from "../../../diagnostics/first-person-allocation/allocation.ts";
 
 setDefaultTimeout(TIMEOUT.node);
-const entry = resolve(import.meta.dir, "fixtures/standalone-collision-allocation.entry.ts");
+const entry = resolve(import.meta.dirname, "fixtures/standalone-collision-allocation.entry.ts");
 test("standalone collision calls, cache and simplex records allocate nothing after warmup", async () => {
     const sample = await sampleAllocation(entry, { warm: 12000 });
     expect(sample.control.length).toBeGreaterThan(0);

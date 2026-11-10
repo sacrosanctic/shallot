@@ -14,7 +14,7 @@ import {
     resolveRelative,
 } from "./example-imports.ts";
 
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dirname, "..");
 const EXAMPLES = resolve(ROOT, "examples");
 const ENGINE_MANIFEST = JSON.parse(readFileSync(resolve(ROOT, "package.json"), "utf8")) as {
     name: string;

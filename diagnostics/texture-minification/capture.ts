@@ -27,7 +27,7 @@ import {
 } from "../../src/standard/rendering/receding-plane.fixture.ts";
 
 const label = process.argv[2] ?? "current";
-const out = resolve(import.meta.dir, "../../test-results/texture-minification", label);
+const out = resolve(import.meta.dirname, "../../test-results/texture-minification", label);
 const SIZES = [
     { width: 1280, height: 720 },
     { width: 320, height: 180 },

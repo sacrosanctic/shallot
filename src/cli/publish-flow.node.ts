@@ -17,7 +17,7 @@ import { CROSS_ORIGIN_ISOLATION } from "../project/isolation.js";
 import { WRANGLER_VERSION } from "./publish-cloudflare.ts";
 
 setDefaultTimeout(TIMEOUT.node);
-const repo = resolve(import.meta.dir, "../..");
+const repo = resolve(import.meta.dirname, "../..");
 const accountA = "a".repeat(32),
     accountB = "b".repeat(32);
 
@@ -44,7 +44,7 @@ record({command:'install'});const p=path.join(process.cwd(),'package.json'),m=JS
 const state=JSON.parse(fs.readFileSync(path.join(root,'answers.json')));
 const config=JSON.parse(fs.readFileSync(args[args.indexOf('--config')+1]));
 record({command:args[0],config,linked:JSON.parse(fs.readFileSync(path.join(process.cwd(),'package.json'))).shallot.publish});
-const replies=JSON.parse(fs.readFileSync(${JSON.stringify(join(import.meta.dir, "fixtures/publish-wrangler.json"))}));
+const replies=JSON.parse(fs.readFileSync(${JSON.stringify(join(import.meta.dirname, "fixtures/publish-wrangler.json"))}));
 const replay=(reply)=>{for(const entry of reply.entries??[])fs.appendFileSync(process.env.WRANGLER_OUTPUT_FILE_PATH,JSON.stringify(entry)+'\\n');process.stdout.write(reply.stdout??'');process.stderr.write(reply.stderr??'');process.exit(reply.status);};
 if(args[0]==='whoami')replay(state.account==='${accountA}'?replies.accountA:replies.accountB);
 if(args[0]==='versions')replay(state.collision?replies.exists:replies.absent);

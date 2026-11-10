@@ -45,7 +45,7 @@ for (const trial of ["personal", "CI"] as const) {
                     if (!process.env[name]) throw new Error(`Set ${name} for the CI trial.`);
             }
             const root = mkdtempSync(join(tmpdir(), "shallot-publish-oracle-"));
-            const repo = resolve(import.meta.dir, "../..");
+            const repo = resolve(import.meta.dirname, "../..");
             const installer = join(root, "installer");
             const project = join(root, "game");
             const home = join(root, "home");
@@ -391,7 +391,7 @@ for (const trial of ["personal", "CI"] as const) {
                 };
                 const archive = run(
                     ["pm", "pack", "--ignore-scripts", "--quiet", "--destination", root],
-                    resolve(import.meta.dir, "../.."),
+                    resolve(import.meta.dirname, "../.."),
                 );
                 const spec = `file:../${basename(archive)}`;
                 writeFileSync(
