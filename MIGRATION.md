@@ -189,3 +189,7 @@ A successful CPU-only `World.tick` now clears field-change marks before returnin
 ## Orbit follows interpolated targets
 
 `Orbit.target` now follows interpolated fixed placement at display refresh, snapping the whole follow pose on between-tick teleports. Remove game-side target interpolation that would apply it twice; review camera captures taken between ticks.
+
+## The `shallot` bin runs its TypeScript source
+
+The `shallot` command is now the TypeScript source `bin/shallot.ts`, executed by node ≥ 22.18's built-in type stripping; the minimized bundle `dist/cli/shallot.js` is no longer built or shipped. Invoking the bin with node < 22.18 fails, so a game or script that calls the bin under node must raise its node floor; bun-installed consumers keep working without change. A node-installed consumer that reports `ERR_UNSUPPORTED_NODE_MODULES_TYPE_STRIPPING` (node refuses type stripping inside `node_modules`) hits the known fallback: the shebang is then revisited or a small committed javascript launcher becomes the bin.

@@ -321,7 +321,7 @@ A choice the pillars leave open is taste, and goes to the person.
 - Released: `bun add @dylanebert/shallot`
 - Staged: `bun pm pack` here, then `bun add --no-save <tarball>` in the project; add `--dev` for dev dependencies, or the overlay silently targets the wrong section
 - Live: run `bun run prepare`, then `bun link` here. In the consumer, use a published Shallot dependency range, run `bun install`, then `bun link @dylanebert/shallot`. A created scaffold may pin an unpublished version; replace it before installing
-- The `shallot` bin runs `dist/cli/shallot.js`, not the TypeScript source; `bun run prepare` rebuilds it after CLI source changes
+- The `shallot` bin runs the TypeScript source (`bin/shallot.ts`) through node ≥ 22.18's type stripping; CLI source edits launch immediately under a link, and `bun run prepare` only refreshes the `./testing` and `./vite` declarations. A node-installed consumer reporting `ERR_UNSUPPORTED_NODE_MODULES_TYPE_STRIPPING` (node refuses type stripping under `node_modules`) is the known fallback trigger: revisit the shebang or introduce a small committed JS launcher as the bin
 - `./testing` and `./vite` source edits are live under a link; refresh their declarations with `bun run prepare`
 - `bun install` restores the manifest pin only if its range resolves on npm: an unpublished `^0.10.0` neither restores nor matches `0.10.0-next.1`, so staged overlays and restores use a published range
 

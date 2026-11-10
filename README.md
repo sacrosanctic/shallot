@@ -24,6 +24,8 @@ bun run dev
 
 open the url in a [supported browser](https://caniuse.com/webgpu).
 
+requires bun ≥ 1.4.3 (or node ≥ 22.18 for the `shallot` cli, which runs its typescript source through node's type stripping).
+
 ## examples
 
 get started by exploring [examples](https://dylanebert.com/shallot/). start from one:
